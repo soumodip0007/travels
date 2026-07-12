@@ -25,12 +25,18 @@ export default function TourPlan({ tour }) {
 
           <div className="absolute left-8 top-0 hidden h-full w-1 rounded-full bg-sky-100 md:block"></div>
 
-          {tour.itinerary.map((day) => (
-            <TourDayCard
-              key={day.day}
-              day={day}
-            />
-          ))}
+          {tour.itinerary.map((day, index) => (
+  <div
+    key={day.day}
+    data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
+    data-aos-delay={index * 100}
+    data-aos-duration="900"
+    data-aos-offset="120"
+    data-aos-easing="ease-in-out"
+  >
+    <TourDayCard day={day} />
+  </div>
+))}
 
         </div>
 

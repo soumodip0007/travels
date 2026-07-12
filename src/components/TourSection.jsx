@@ -3,7 +3,7 @@ import TourCard from "./TourCard";
 
 export default function TourSection() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-white via-sky-50 to-white py-24">
+    <section className="relative overflow-hidden bg-gradient-to-b from-white via-sky-50 to-white py-10">
 
       {/* Background Decorations */}
 
@@ -16,12 +16,6 @@ export default function TourSection() {
         {/* Heading */}
 
         <div className="mx-auto mb-16 max-w-3xl text-center">
-
-          <span className="rounded-full bg-orange-100 px-5 py-2 text-sm font-semibold uppercase tracking-[3px] text-orange-500">
-
-            Best Selling Packages
-
-          </span>
 
           <h2 className="mt-6 text-4xl font-black leading-tight text-slate-800 md:text-6xl">
 

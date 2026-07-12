@@ -3,8 +3,8 @@ import {
   Hotel,
   Map,
   Compass,
-  Camera,
-  Ship,
+  Train,
+  Bus,
 } from "lucide-react";
 
 const features = [
@@ -33,14 +33,14 @@ const features = [
     color: "from-indigo-500 to-blue-700",
   },
   {
-    title: "Photography",
-    icon: Camera,
+    title: "Train Booking",
+    icon: Train,
     link: "#",
     color: "from-orange-400 to-red-500",
   },
   {
-    title: "Cruises",
-    icon: Ship,
+    title: "Bus Booking",
+    icon: Bus,
     link: "#",
     color: "from-cyan-500 to-blue-500",
   },
@@ -48,7 +48,7 @@ const features = [
 
 export default function FeatureCards() {
   return (
-    <section className="relative z-40 -mt-24 pb-20">
+    <section className="relative z-40 -mt-24">
       <div className="mx-auto w-[92%] max-w-7xl">
 
         <div className="grid grid-cols-2 gap-6 rounded-[35px] border border-white/30 bg-white/80 p-8 shadow-[0_25px_80px_rgba(0,0,0,0.12)] backdrop-blur-3xl md:grid-cols-3 lg:grid-cols-6">
