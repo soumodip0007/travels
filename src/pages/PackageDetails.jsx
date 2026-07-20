@@ -1,7 +1,4 @@
-import { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 import packages from "../data/packages";
 
@@ -16,10 +13,6 @@ export default function PackageDetails() {
   const { slug } = useParams();
 
   const tour = packages.find((pkg) => pkg.slug === slug);
-
-  useEffect(() => {
-    AOS.refresh();
-  }, [slug]);
 
   if (!tour) {
     return <h1 className="py-40 text-center text-3xl font-bold">Package Not Found</h1>;

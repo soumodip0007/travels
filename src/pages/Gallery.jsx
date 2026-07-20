@@ -1,11 +1,29 @@
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   Camera,
   MapPin,
+  Maximize2,
+  Minimize2,
+  X,
 } from "lucide-react";
 
 import gallery from '../data/gallery'
 
 const Gallery = () => {
+  const [selected, setSelected] = useState(null); // the clicked item
+  const [isMaximized, setIsMaximized] = useState(false);
+
+  const openImage = (item) => {
+    setSelected(item);
+    setIsMaximized(false); // always open at 50% size first
+  };
+
+  const closeImage = () => {
+    setSelected(null);
+    setIsMaximized(false);
+  };
+
   return (
     <section className="bg-gradient-to-b from-sky-50 to-white py-20">
 
@@ -40,7 +58,8 @@ const Gallery = () => {
 
             <div
               key={item.id}
-              className="group relative overflow-hidden rounded-3xl shadow-xl"
+              onClick={() => openImage(item)}
+              className="group relative cursor-pointer overflow-hidden rounded-3xl shadow-xl"
             >
 
               <img
@@ -89,6 +108,92 @@ const Gallery = () => {
         </div>
 
       </div>
+
+      {/* Lightbox Modal */}
+
+      <AnimatePresence>
+        {selected && (
+          <motion.div
+            className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 backdrop-blur-sm"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={closeImage}
+          >
+            <motion.div
+              layout
+              onClick={(e) => e.stopPropagation()}
+              initial={{ opacity: 0, scale: 0.85 }}
+              animate={{
+                opacity: 1,
+                scale: 1,
+                width: isMaximized ? "95vw" : "80vw",
+                height: isMaximized ? "95vh" : "80vh",
+              }}
+              exit={{ opacity: 0, scale: 0.85 }}
+              transition={{ duration: 0.35, ease: "easeInOut" }}
+              className="relative overflow-hidden rounded-2xl bg-black shadow-2xl"
+            >
+
+              {/* Control icons */}
+
+              {/* Control icons */}
+
+              <div className="absolute right-4 top-4 z-10 flex gap-2">
+
+                <button
+                  onClick={() => setIsMaximized(true)}
+                  disabled={isMaximized}
+                  className="rounded-full bg-slate-800/90 p-2.5 text-white shadow-lg transition hover:bg-sky-500 disabled:cursor-not-allowed disabled:bg-slate-800/40 disabled:text-white/40"
+                  aria-label="Maximize"
+                >
+                  <Maximize2 size={18} />
+                </button>
+
+                <button
+                  onClick={() => setIsMaximized(false)}
+                  disabled={!isMaximized}
+                  className="rounded-full bg-slate-800/90 p-2.5 text-white shadow-lg transition hover:bg-orange-500 disabled:cursor-not-allowed disabled:bg-slate-800/40 disabled:text-white/40"
+                  aria-label="Minimize"
+                >
+                  <Minimize2 size={18} />
+                </button>
+
+                <button
+                  onClick={closeImage}
+                  className="rounded-full bg-slate-800/90 p-2.5 text-white shadow-lg transition hover:bg-red-600"
+                  aria-label="Close"
+                >
+                  <X size={18} />
+                </button>
+
+              </div>
+
+              {/* Image */}
+
+              <img
+                src={selected.image}
+                alt={selected.title}
+                className="h-full w-full object-cover"
+              />
+
+              {/* Caption */}
+
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+                <h3 className="text-2xl font-bold text-white">
+                  {selected.title}
+                </h3>
+                <div className="mt-2 flex items-center gap-2 text-white/90">
+                  <MapPin size={16} />
+                  <span>Explore Destination</span>
+                </div>
+              </div>
+
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
     </section>
   );
 };
