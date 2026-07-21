@@ -22,7 +22,7 @@ export default function Navbar() {
           <div className="relative mx-auto flex w-[95%] max-w-7xl items-center justify-between px-4 py-4 lg:px-8">
 
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-3 cursor-pointer group">
+            <Link to="/" className="flex items-center gap-3 group">
               <div className="relative">
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 to-orange-400 blur-md opacity-60 group-hover:opacity-100 transition duration-500"></div>
                 <div className="relative h-14 w-14 rounded-full bg-gradient-to-r from-blue-600 to-orange-500 flex items-center justify-center shadow-xl group-hover:rotate-12 transition duration-500">
@@ -46,7 +46,7 @@ export default function Navbar() {
                 <Link
                   key={index}
                   to={item.path}
-                  className="relative text-gray-700 font-semibold group transition duration-300"
+                  className="relative text-gray-700 font-semibold group"
                 >
                   {item.name}
                   <span className="absolute left-0 -bottom-2 w-0 h-[3px] rounded-full bg-gradient-to-r from-blue-600 to-orange-500 group-hover:w-full transition-all duration-500"></span>
@@ -74,25 +74,18 @@ export default function Navbar() {
             </button>
           </div>
 
-          {/* ================= Animated Bottom Accent ================= */}
+          {/* Animated Bottom Accent */}
           <div className="relative h-[3px] w-full overflow-hidden">
-
-            {/* Glow layer — blurred duplicate for a neon bleed effect */}
             <div className="absolute inset-x-0 -top-1 h-3 blur-md opacity-70 bg-[length:300%_100%] animate-flow bg-gradient-to-r from-blue-500 via-orange-400 to-blue-500"></div>
-
-            {/* Crisp core line */}
             <div className="absolute inset-0 bg-[length:300%_100%] animate-flow bg-gradient-to-r from-blue-500 via-orange-400 to-blue-500"></div>
-
-            {/* Traveling light comet — width & travel distance are both % based, so it scales with any screen width */}
             <div className="absolute inset-y-0 w-1/4 animate-comet bg-gradient-to-r from-transparent via-white/90 to-transparent"></div>
-
           </div>
         </div>
       </nav>
 
       {/* Mobile Menu */}
       <div
-        className={`fixed top-0 right-0 h-screen w-[280px] bg-white shadow-2xl z-40 transition-all duration-500 ${
+        className={`fixed top-0 right-0 h-screen w-[280px] bg-white shadow-2xl z-40 transition-transform duration-500 ${
           mobileOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
