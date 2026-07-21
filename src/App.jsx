@@ -17,50 +17,40 @@ import Error404 from "./pages/Error404";
 
 const App = () => {
   const location = useLocation();
-
   const [loading, setLoading] = useState(true);
 
-  // Initialize AOS ONCE for the whole app lifetime
   useEffect(() => {
     AOS.init({
       duration: 800,
-      once: true, // set to false if you want animations to replay on scroll back
+      once: true,
     });
   }, []);
 
-  // Loader on route change
   useEffect(() => {
     setLoading(true);
-
     const timer = setTimeout(() => {
       setLoading(false);
     }, 1500);
-
     return () => clearTimeout(timer);
   }, [location.pathname]);
 
-  // Re-scan DOM for AOS elements whenever the route changes
-  // (needed because new elements mount on every page navigation)
   useEffect(() => {
     AOS.refreshHard();
   }, [location.pathname]);
 
   return (
     <>
-      {/* Loader overlays everything */}
       <PageLoader loading={loading} />
 
-      {/* App stays mounted */}
       <Navbar />
-
-      <Routes location={location}>
-        <Route path="/" element={<Home />} />
-        <Route path="/gallery" element={<Gallery />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/packages/:slug" element={<PackageDetails />} />
-        <Route path="*" element={<Error404 />} />
-      </Routes>
+        <Routes location={location}>
+          <Route path="/" element={<Home />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/packages/:slug" element={<PackageDetails />} />
+          <Route path="*" element={<Error404 />} />
+        </Routes>
 
       <Footer />
       <ScrollTop />
