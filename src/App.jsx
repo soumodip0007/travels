@@ -14,6 +14,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import PackageDetails from "./pages/PackageDetails";
 import Error404 from "./pages/Error404";
+import ChatBot from "./components/ChatBot/ChatBot";
 
 const App = () => {
   const location = useLocation();
@@ -53,6 +54,7 @@ const App = () => {
         </Routes>
 
       <Footer />
+      {!loading && <ChatBot/>}
       <ScrollTop />
     </>
   );

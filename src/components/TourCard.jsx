@@ -29,13 +29,27 @@ export default function TourCard({ tour }) {
 
                 {/* Gradient Overlay */}
 
-                <div className="absolute left-3 top-3 flex items-center gap-1 rounded-full bg-white/90 px-3 py-1 text-sm font-semibold text-slate-800 shadow-lg">
-                    <Star
-                        size={15}
-                        className="fill-yellow-400 text-yellow-400"
-                    />
-                    {tour.rating}
-                </div>
+                {/* Rating */}
+
+<div className="absolute left-3 top-3 flex items-center gap-1 rounded-full bg-white/95 px-3 py-1 text-sm font-semibold text-slate-800 shadow-lg">
+  <Star
+    size={15}
+    className="fill-yellow-400 text-yellow-400"
+  />
+  {tour.rating}
+</div>
+
+{/* Category */}
+
+<div
+  className={`absolute left-3 top-14 rounded-full px-3 py-1 text-xs font-bold text-white shadow-lg ${
+    tour.category === "International"
+      ? "bg-gradient-to-r from-purple-600 to-pink-600"
+      : "bg-gradient-to-r from-sky-600 to-blue-700"
+  }`}
+>
+  {tour.category} Tour
+</div>
 
                 {/* Share Button */}
 

@@ -5,6 +5,7 @@ import TourSection from "../components/TourSection";
 import RatingBar from "../components/RatingBar";
 import Testimonials from "../components/Testimonial";
 import Certification from "../components/Certification";
+import Reviews from "../components/Reviews";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -41,6 +42,10 @@ const Home = () => {
 
       <div data-aos="fade-up" data-aos-delay="250">
         <Testimonials />
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="250">
+        <Reviews />
       </div>
 
       <div data-aos="fade-up" data-aos-delay="300">
