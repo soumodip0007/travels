@@ -521,6 +521,72 @@
   display: block;
 }
 
+/* Mobile */
+.feature-card {
+  clip-path: none;
+}
+
+@keyframes scrollArrow {
+  0% {
+    transform: translateY(0);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(10px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0.3;
+  }
+}
+
+.scroll-arrow {
+  animation: scrollArrow 1.4s ease-in-out infinite;
+}
+
+@keyframes mouseFloat {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes mouseWheel {
+  0% {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+.mouse-scroll {
+  animation: mouseFloat 2s ease-in-out infinite;
+}
+
+.mouse-wheel {
+  animation: mouseWheel 1.5s ease-in-out infinite;
+}
+
+/* Desktop */
+
 /* =========================================================
    RESPONSIVE
 ========================================================= */
@@ -599,5 +665,13 @@
 
   .hero-buttons {
     width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .feature-card {
+    clip-path: url(#topHillClip);
+    border-radius: 0;
+    padding-top: 8rem;
   }
 }
