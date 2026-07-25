@@ -167,7 +167,7 @@ export default function TourCard({ tour }) {
                     {/* Enquiry */}
                     <Link
                         to={`/packages/${tour.slug}`}
-                        className="flex-grow flex h-12 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#6957DF] via-[#7C3AED] to-[#A855F7] px-4 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105"
+                        className="flex-grow flex h-12 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-sky-500 to-sky-700 px-4 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105"
                     >
                         <Send size={16} />
                         <span>Enquiry</span>

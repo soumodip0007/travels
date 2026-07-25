@@ -6,7 +6,28 @@ import {
   Share2,
 } from "lucide-react";
 
-export default function PackageHero({ tour }) {
+export default function PackageHero({
+  tour,
+  selectedPackage,
+}) {
+  // Current selected package
+  const currentPackage = tour?.packages?.[selectedPackage];
+
+  // Fallback to first available package if nothing is selected
+  const firstAvailablePackage = Object.values(tour.packages || {}).find(
+    (pkg) => pkg?.price
+  );
+
+  const displayPrice =
+    currentPackage?.price ??
+    firstAvailablePackage?.price ??
+    0;
+
+  const displayDuration =
+    currentPackage?.duration ??
+    firstAvailablePackage?.duration ??
+    tour.duration;
+
   const handleShare = async () => {
     if (navigator.share) {
       await navigator.share({
@@ -21,7 +42,42 @@ export default function PackageHero({ tour }) {
   };
 
   return (
-    <section className="relative h-[70vh] overflow-hidden">
+    <section className="ph-root relative h-[70vh] overflow-hidden">
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap');
+
+        .ph-root { font-family: 'Inter', sans-serif; }
+        .ph-serif { font-family: 'Fraunces', serif; font-variant-numeric: tabular-nums; }
+
+        @keyframes ph-rise {
+          from { opacity: 0; transform: translateY(24px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+        .ph-rise-1 { animation: ph-rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.05s both; }
+        .ph-rise-2 { animation: ph-rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.18s both; }
+        .ph-rise-3 { animation: ph-rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both; }
+
+        @keyframes ph-glow {
+          0%, 100% { box-shadow: 0 0 0 0 rgba(227, 162, 61, 0.45); }
+          50% { box-shadow: 0 0 0 8px rgba(227, 162, 61, 0); }
+        }
+        .ph-badge { animation: ph-glow 2.6s ease-in-out infinite; }
+
+        .ph-share {
+          position: relative;
+          overflow: hidden;
+        }
+        .ph-share::after {
+          content: "";
+          position: absolute;
+          top: 0; left: -60%;
+          width: 40%; height: 100%;
+          background: linear-gradient(120deg, transparent, rgba(255,255,255,0.5), transparent);
+          transform: skewX(-20deg);
+          transition: left 0.6s ease;
+        }
+        .ph-share:hover::after { left: 130%; }
+      `}</style>
 
       {/* Background Image */}
 
@@ -33,13 +89,13 @@ export default function PackageHero({ tour }) {
 
       {/* Overlay */}
 
-      <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-sky-900/60 to-black/40"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-[#1E2A47]/95 via-[#1E2A47]/60 to-black/40"></div>
 
       {/* Decorative Blur */}
 
-      <div className="absolute left-0 top-10 h-80 w-80 rounded-full bg-sky-500/20 blur-[120px]"></div>
+      <div className="absolute left-0 top-10 h-80 w-80 rounded-full bg-[#E3A23D]/20 blur-[120px]"></div>
 
-      <div className="absolute right-0 bottom-10 h-80 w-80 rounded-full bg-orange-500/20 blur-[120px]"></div>
+      <div className="absolute right-0 bottom-10 h-80 w-80 rounded-full bg-[#C2185B]/20 blur-[120px]"></div>
 
       {/* Content */}
 
@@ -53,7 +109,7 @@ export default function PackageHero({ tour }) {
 
             {/* Rating */}
 
-            <div className="mb-5 inline-flex items-center gap-2 rounded-full bg-orange-500 px-4 py-2 font-semibold text-white shadow-xl">
+            <div className="ph-badge ph-rise-1 mb-5 inline-flex items-center gap-2 rounded-full bg-[#E3A23D] px-4 py-2 font-semibold text-white shadow-xl">
 
               <Star
                 size={18}
@@ -66,7 +122,7 @@ export default function PackageHero({ tour }) {
 
             {/* Title */}
 
-            <h1 className="text-5xl font-black leading-tight text-white md:text-6xl">
+            <h1 className="ph-serif ph-rise-2 text-5xl font-bold leading-tight text-white md:text-6xl">
 
               {tour.title}
 
@@ -74,18 +130,20 @@ export default function PackageHero({ tour }) {
 
             {/* Info */}
 
-            <div className="mt-8 flex flex-wrap gap-8 text-white">
+            <div className="ph-rise-3 mt-8 flex flex-wrap gap-8 text-white">
+
+              {/* Price */}
 
               <div className="flex items-center gap-2">
 
                 <IndianRupee
                   size={22}
-                  className="text-orange-400"
+                  className="text-[#E3A23D]"
                 />
 
-                <span className="text-3xl font-black">
+                <span className="ph-serif text-3xl font-bold">
 
-                  {tour.price.toLocaleString()}
+                  {displayPrice.toLocaleString()}
 
                 </span>
 
@@ -97,22 +155,26 @@ export default function PackageHero({ tour }) {
 
               </div>
 
+              {/* Duration */}
+
               <div className="flex items-center gap-2">
 
                 <Clock3
                   size={20}
-                  className="text-orange-400"
+                  className="text-[#E3A23D]"
                 />
 
-                <span>{tour.duration}</span>
+                <span>{displayDuration}</span>
 
               </div>
+
+              {/* Location */}
 
               <div className="flex items-center gap-2">
 
                 <MapPin
                   size={20}
-                  className="text-orange-400"
+                  className="text-[#E3A23D]"
                 />
 
                 <span>{tour.location}</span>
@@ -125,13 +187,13 @@ export default function PackageHero({ tour }) {
 
           {/* Right */}
 
-          <div className="hidden lg:block">
+          <div className="ph-rise-3 hidden lg:block">
 
             <div className="rounded-3xl border border-white/20 bg-white/10 p-6 backdrop-blur-xl">
 
               <button
                 onClick={handleShare}
-                className="flex items-center gap-3 rounded-full bg-sky-600 px-6 py-4 font-semibold text-white transition-all duration-300 hover:scale-105 hover:bg-orange-500"
+                className="ph-share flex items-center gap-3 rounded-full bg-gradient-to-r from-[#E3A23D] to-[#C2185B] px-6 py-4 font-semibold text-white transition-transform duration-300 hover:scale-105"
               >
                 <Share2 size={20} />
 
