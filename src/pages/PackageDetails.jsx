@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import packages from "../data/packages";
 import PackageHero from "../components/PackageDetails/PackageHero";
@@ -13,18 +14,42 @@ export default function PackageDetails() {
 
   const tour = packages.find((pkg) => pkg.slug === slug);
 
+  const [selectedPackage, setSelectedPackage] = useState("");
+
+  useEffect(() => {
+    if (!tour?.packages) return;
+
+    const firstAvailable = Object.keys(tour.packages).find(
+      (key) => tour.packages[key]?.itinerary?.length > 0
+    );
+
+    if (firstAvailable) {
+      setSelectedPackage(firstAvailable);
+    }
+  }, [tour]);
+
   if (!tour) {
-    return <h1 className="py-40 text-center text-3xl font-bold">Package Not Found</h1>;
+    return (
+      <h1 className="py-40 text-center text-3xl font-bold">
+        Package Not Found
+      </h1>
+    );
   }
 
   return (
     <>
       <div data-aos="fade">
-        <PackageHero tour={tour} />
+        <PackageHero
+          tour={tour}
+          selectedPackage={selectedPackage}
+        />
       </div>
 
       <div data-aos="fade-up" data-aos-delay="100">
-        <PackageOverview tour={tour} />
+        <PackageOverview
+          tour={tour}
+          selectedPackage={selectedPackage}
+        />
       </div>
 
       <div data-aos="zoom-in" data-aos-delay="150">
@@ -32,11 +57,18 @@ export default function PackageDetails() {
       </div>
 
       <div data-aos="fade-up" data-aos-delay="200">
-        <TourPlan tour={tour} />
+        <TourPlan
+          tour={tour}
+          selectedPackage={selectedPackage}
+          setSelectedPackage={setSelectedPackage}
+        />
       </div>
 
       <div data-aos="fade-up" data-aos-delay="300">
-        <IncludedExcluded tour={tour} />
+        <IncludedExcluded
+          tour={tour}
+          selectedPackage={selectedPackage}
+        />
       </div>
 
       <div data-aos="fade-up" data-aos-delay="300">

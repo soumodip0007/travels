@@ -6,7 +6,28 @@ import {
   Share2,
 } from "lucide-react";
 
-export default function PackageHero({ tour }) {
+export default function PackageHero({
+  tour,
+  selectedPackage,
+}) {
+  // Current selected package
+  const currentPackage = tour?.packages?.[selectedPackage];
+
+  // Fallback to first available package if nothing is selected
+  const firstAvailablePackage = Object.values(tour.packages || {}).find(
+    (pkg) => pkg?.price
+  );
+
+  const displayPrice =
+    currentPackage?.price ??
+    firstAvailablePackage?.price ??
+    0;
+
+  const displayDuration =
+    currentPackage?.duration ??
+    firstAvailablePackage?.duration ??
+    tour.duration;
+
   const handleShare = async () => {
     if (navigator.share) {
       await navigator.share({
@@ -76,6 +97,8 @@ export default function PackageHero({ tour }) {
 
             <div className="mt-8 flex flex-wrap gap-8 text-white">
 
+              {/* Price */}
+
               <div className="flex items-center gap-2">
 
                 <IndianRupee
@@ -85,7 +108,7 @@ export default function PackageHero({ tour }) {
 
                 <span className="text-3xl font-black">
 
-                  {tour.price.toLocaleString()}
+                  {displayPrice.toLocaleString()}
 
                 </span>
 
@@ -97,6 +120,8 @@ export default function PackageHero({ tour }) {
 
               </div>
 
+              {/* Duration */}
+
               <div className="flex items-center gap-2">
 
                 <Clock3
@@ -104,9 +129,11 @@ export default function PackageHero({ tour }) {
                   className="text-orange-400"
                 />
 
-                <span>{tour.duration}</span>
+                <span>{displayDuration}</span>
 
               </div>
+
+              {/* Location */}
 
               <div className="flex items-center gap-2">
 
