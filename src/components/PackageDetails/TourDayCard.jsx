@@ -1,26 +1,33 @@
+import { motion } from "framer-motion";
 import { CalendarDays, MapPin } from "lucide-react";
 
 export default function TourDayCard({ day, circleRef }) {
   return (
-    <div className="relative mb-16 md:pl-24">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      className="relative mb-16 md:pl-24"
+    >
       {/* Timeline Circle */}
 
       <div
         ref={circleRef}
-        className="absolute left-0 top-2 hidden h-16 w-16 items-center justify-center rounded-full bg-gradient-to-r from-sky-600 to-orange-500 text-xl font-bold text-white shadow-xl md:flex"
+        className="absolute left-0 top-2 hidden h-16 w-16 items-center justify-center rounded-full bg-gradient-to-r from-[#6957DF] to-[#9F7AEA] text-xl font-bold text-white shadow-xl md:flex"
       >
         {day.day}
       </div>
 
       {/* Card */}
 
-      <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
+      <div className="overflow-hidden rounded-3xl border border-purple-100 bg-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
         {/* Top */}
 
-        <div className="border-b border-slate-100 p-8">
+        <div className="border-b border-purple-50 p-8">
           <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
             <div>
-              <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-orange-100 px-4 py-1 text-sm font-semibold text-orange-600">
+              <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-purple-100 px-4 py-1 text-sm font-semibold text-[#6957DF]">
                 <CalendarDays size={16} />
                 Day {day.day}
               </div>
@@ -28,7 +35,7 @@ export default function TourDayCard({ day, circleRef }) {
               <h3 className="text-2xl font-bold text-slate-900">{day.title}</h3>
             </div>
 
-            <div className="flex items-center gap-2 rounded-full bg-sky-50 px-5 py-2 text-sky-700">
+            <div className="flex items-center gap-2 rounded-full bg-purple-50 px-5 py-2 text-[#6957DF]">
               <MapPin size={18} />
               <span className="font-medium">{day.distance}</span>
             </div>
@@ -56,6 +63,6 @@ export default function TourDayCard({ day, circleRef }) {
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

@@ -54,13 +54,13 @@ export default function PackageHero({
 
       {/* Overlay */}
 
-      <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-sky-900/60 to-black/40"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-[#4B3AA8]/60 to-black/40"></div>
 
       {/* Decorative Blur */}
 
-      <div className="absolute left-0 top-10 h-80 w-80 rounded-full bg-sky-500/20 blur-[120px]"></div>
+      <div className="absolute left-0 top-10 h-80 w-80 rounded-full bg-[#6957DF]/20 blur-[120px]"></div>
 
-      <div className="absolute right-0 bottom-10 h-80 w-80 rounded-full bg-orange-500/20 blur-[120px]"></div>
+      <div className="absolute right-0 bottom-10 h-80 w-80 rounded-full bg-[#9F7AEA]/20 blur-[120px]"></div>
 
       {/* Content */}
 
@@ -74,7 +74,7 @@ export default function PackageHero({
 
             {/* Rating */}
 
-            <div className="mb-5 inline-flex items-center gap-2 rounded-full bg-orange-500 px-4 py-2 font-semibold text-white shadow-xl">
+            <div className="mb-5 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#6957DF] to-[#9F7AEA] px-4 py-2 font-semibold text-white shadow-xl">
 
               <Star
                 size={18}
@@ -103,7 +103,7 @@ export default function PackageHero({
 
                 <IndianRupee
                   size={22}
-                  className="text-orange-400"
+                  className="text-[#B9A6FF]"
                 />
 
                 <span className="text-3xl font-black">
@@ -126,7 +126,7 @@ export default function PackageHero({
 
                 <Clock3
                   size={20}
-                  className="text-orange-400"
+                  className="text-[#B9A6FF]"
                 />
 
                 <span>{displayDuration}</span>
@@ -139,7 +139,7 @@ export default function PackageHero({
 
                 <MapPin
                   size={20}
-                  className="text-orange-400"
+                  className="text-[#B9A6FF]"
                 />
 
                 <span>{tour.location}</span>
@@ -158,7 +158,7 @@ export default function PackageHero({
 
               <button
                 onClick={handleShare}
-                className="flex items-center gap-3 rounded-full bg-sky-600 px-6 py-4 font-semibold text-white transition-all duration-300 hover:scale-105 hover:bg-orange-500"
+                className="flex items-center gap-3 rounded-full bg-[#6957DF] px-6 py-4 font-semibold text-white transition-all duration-300 hover:scale-105 hover:bg-gradient-to-r hover:from-[#6957DF] hover:to-[#9F7AEA]"
               >
                 <Share2 size={20} />
 

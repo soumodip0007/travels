@@ -1,14 +1,9 @@
 import {
   IndianRupee,
-  CalendarDays,
   MapPin,
   Star,
-  Phone,
-  MessageCircle,
   Clock3
 } from "lucide-react";
-
-import { FaWhatsapp } from "react-icons/fa";
 
 export default function BookingCard({
   tour,
@@ -30,7 +25,7 @@ export default function BookingCard({
   return (
     <div>
 
-      <div className="sticky top-28 rounded-3xl border border-slate-200 bg-white p-7 shadow-xl">
+      <div className="sticky top-28 rounded-3xl border border-purple-100 bg-white p-7 shadow-[0_30px_80px_rgba(105,87,223,0.14)]">
 
         {/* Rating */}
         <div className="mb-5 flex items-center justify-between">
@@ -39,7 +34,7 @@ export default function BookingCard({
             Rating
           </span>
 
-          <div className="flex items-center gap-2 rounded-full bg-green-100 px-4 py-2 font-bold text-green-700">
+          <div className="flex items-center gap-2 rounded-full bg-purple-100 px-4 py-2 font-bold text-[#6957DF]">
 
             <Star
               size={18}
@@ -79,9 +74,25 @@ export default function BookingCard({
         </div>
 
         {/* Duration */}
-        <div className="mb-4 flex items-center gap-3 rounded-xl bg-slate-50 p-4">
+        <div className="group mb-4 flex items-center gap-3 rounded-xl bg-purple-50 p-4 transition-all duration-500 hover:-translate-y-1 hover:shadow-lg">
 
-          <Clock3 className="text-orange-500" />
+          <div
+            className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl
+            border-2 border-[#6957DF]
+            bg-white
+            text-[#6957DF]
+            shadow-sm
+            transition-all duration-500
+            group-hover:scale-110
+            group-hover:rotate-6
+            group-hover:border-transparent
+            group-hover:bg-gradient-to-br
+            group-hover:from-[#6957DF]
+            group-hover:to-[#9F7AEA]
+            group-hover:text-white"
+          >
+            <Clock3 size={20} />
+          </div>
 
           <div>
 
@@ -89,7 +100,7 @@ export default function BookingCard({
               Duration
             </p>
 
-            <p className="font-semibold">
+            <p className="font-semibold text-slate-800">
               {displayDuration}
             </p>
 
@@ -98,9 +109,25 @@ export default function BookingCard({
         </div>
 
         {/* Destination */}
-        <div className="mb-8 flex items-center gap-3 rounded-xl bg-slate-50 p-4">
+        <div className="group mb-8 flex items-center gap-3 rounded-xl bg-purple-50 p-4 transition-all duration-500 hover:-translate-y-1 hover:shadow-lg">
 
-          <MapPin className="text-sky-600" />
+          <div
+            className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl
+            border-2 border-[#6957DF]
+            bg-white
+            text-[#6957DF]
+            shadow-sm
+            transition-all duration-500
+            group-hover:scale-110
+            group-hover:rotate-6
+            group-hover:border-transparent
+            group-hover:bg-gradient-to-br
+            group-hover:from-[#6957DF]
+            group-hover:to-[#9F7AEA]
+            group-hover:text-white"
+          >
+            <MapPin size={20} />
+          </div>
 
           <div>
 
@@ -108,7 +135,7 @@ export default function BookingCard({
               Destination
             </p>
 
-            <p className="font-semibold">
+            <p className="font-semibold text-slate-800">
               {tour.location}
             </p>
 
@@ -117,7 +144,9 @@ export default function BookingCard({
         </div>
 
         {/* CTA */}
-        <button className="w-full rounded-full bg-gradient-to-r from-sky-600 to-orange-500 py-4 text-lg font-bold text-white shadow-lg transition hover:scale-105">
+        <button
+          className="w-full rounded-full bg-gradient-to-r from-[#6957DF] to-[#9F7AEA] py-4 text-lg font-bold text-white shadow-[0_20px_40px_rgba(147,51,234,0.35)] transition-all duration-500 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_25px_50px_rgba(147,51,234,0.45)]"
+        >
           Book Now
         </button>
 

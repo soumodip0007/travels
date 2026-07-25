@@ -35,7 +35,7 @@ export default function PackageGallery({ tour }) {
 
           <div>
 
-            <h2 className="text-4xl font-black text-sky-700">
+            <h2 className="text-4xl font-black text-[#6957DF]">
               Package Gallery
             </h2>
 
@@ -45,7 +45,7 @@ export default function PackageGallery({ tour }) {
 
           </div>
 
-          <div className="hidden rounded-full bg-sky-50 px-5 py-2 text-sm font-semibold text-sky-700 md:block">
+          <div className="hidden rounded-full bg-purple-100 px-5 py-2 text-sm font-semibold text-[#6957DF] md:block">
             {images.length} Photos
           </div>
 
@@ -98,7 +98,7 @@ export default function PackageGallery({ tour }) {
 
                   <button
                     onClick={() => setPreview(img)}
-                    className="absolute bottom-5 right-5 flex h-12 w-12 items-center justify-center rounded-full bg-white text-sky-600 shadow-xl transition hover:scale-110"
+                    className="absolute bottom-5 right-5 flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#6957DF] shadow-xl transition hover:scale-110"
                   >
                     <Expand size={20} />
                   </button>
@@ -140,7 +140,7 @@ export default function PackageGallery({ tour }) {
                   onClick={() => setPage(i + 1)}
                   className={`transition-all duration-300 ${
                     page === i + 1
-                      ? "h-3 w-10 rounded-full bg-gradient-to-r from-sky-600 to-orange-500"
+                      ? "h-3 w-10 rounded-full bg-gradient-to-r from-[#6957DF] to-[#9F7AEA]"
                       : "h-3 w-3 rounded-full bg-slate-300 hover:bg-slate-400"
                   }`}
                 />
@@ -157,7 +157,7 @@ export default function PackageGallery({ tour }) {
               className={`flex h-11 w-11 items-center justify-center rounded-full transition ${
                 page === totalPages
                   ? "cursor-not-allowed bg-slate-200 text-slate-400"
-                  : "bg-gradient-to-r from-sky-600 to-orange-500 text-white shadow-lg hover:scale-110"
+                  : "bg-gradient-to-r from-[#6957DF] to-[#9F7AEA] text-white shadow-lg hover:scale-110"
               }`}
             >
               <ChevronRight size={20} />
