@@ -147,12 +147,9 @@ export default function TourSection() {
 
         <div className="mx-auto mb-20 max-w-3xl text-center">
 
-          <h2 className="mt-6 text-4xl font-black leading-tight text-slate-800 md:text-6xl">
-            Our Popular Tours
-            <span className="block text-sky-600">
-              & Packages
-            </span>
-          </h2>
+          <h2 className="mt-6 whitespace-nowrap text-4xl font-black leading-tight text-slate-800 md:text-6xl">
+  Our Popular <span className="bg-gradient-to-r from-[#6957DF] via-[#7C3AED] to-[#A855F7] bg-clip-text text-transparent">Tour Packages</span>
+</h2>
 
           <p className="mt-6 text-lg leading-8 text-slate-500">
             Discover hand-picked travel experiences crafted with comfort,
@@ -181,7 +178,7 @@ export default function TourSection() {
 
         <div className="flex justify-center">
 
-          <button className="rounded-full bg-gradient-to-r from-sky-600 to-orange-500 px-10 py-4 text-lg font-bold text-white shadow-xl transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-2xl">
+          <button className="rounded-full bg-gradient-to-r from-[#6957DF] via-[#7C3AED] to-[#A855F7] px-10 py-4 text-lg font-bold text-white shadow-xl transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-2xl">
             View All Packages
           </button>
 

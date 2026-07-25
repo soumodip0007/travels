@@ -34,9 +34,9 @@ export default function Partnerships() {
         {/* Heading */}
         <div className="mb-8 text-center">
           <h2 className=" text-5xl font-black text-slate-800">
-            <span className="bg-gradient-to-r from-sky-600 to-orange-500 bg-clip-text text-transparent">
-              {" "}Certifications
-            </span>
+            <span className="bg-gradient-to-r from-[#6957DF] via-[#7C3AED] to-[#A855F7] bg-clip-text text-transparent">
+  {" "}Certifications
+</span>
           </h2>
 
           <p className="mx-auto mt-5 max-w-2xl text-lg text-slate-600">

@@ -5,32 +5,32 @@ const features = [
   {
     title: "Flight Booking",
     icon: Plane,
-    color: "from-blue-500 to-cyan-500",
+    color: "from-purple-600 to-purple-400",
   },
   {
     title: "Train Booking",
     icon: Train,
-    color: "from-orange-400 to-red-500",
+    color: "from-purple-600 to-purple-400",
   },
   {
     title: "Bus & Car",
     icon: Bus,
-    color: "from-cyan-500 to-blue-500",
+    color: "from-purple-600 to-purple-400",
   },
   {
     title: "International Tour Plan",
     icon: Globe,
-    color: "from-indigo-500 to-blue-700",
+    color: "from-purple-600 to-purple-400",
   },
   {
     title: "Domestic Tour Plan",
     icon: MapPin,
-    color: "from-sky-500 to-blue-600",
+    color: "from-purple-600 to-purple-400",
   },
   {
     title: "Hotel & Resort",
     icon: Hotel,
-    color: "from-orange-500 to-amber-500",
+    color: "from-purple-600 to-purple-400",
   },
 ];
 
@@ -38,30 +38,27 @@ export default function FeatureCards() {
   return (
     <section className="relative z-40 -mt-30 mb-20">
       <div className="mx-auto w-[92%] max-w-7xl">
-        {/* Main Card */}
         <div className="relative rounded-[38px] bg-white py-10 shadow-[0_30px_80px_rgba(0,0,0,.12)]">
           {/* Top Curve */}
           <div className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-[44%] z-20">
             <div className="relative w-[360px]">
-              {/* SVG */}
               <img src={trapSVG} alt="" className="w-full h-auto" />
 
-              {/* Content */}
               <div className="absolute inset-0 flex flex-col items-center justify-center -mt-2">
                 <div className="mouse-scroll flex items-center justify-center">
-                  <div className="relative h-12 w-7 rounded-full border-2 border-[#5D5FEF]">
-                    <div className="mouse-wheel absolute left-1/2 top-2 h-2.5 w-1 -translate-x-1/2 rounded-full bg-[#5D5FEF]" />
+                  <div className="relative h-12 w-7 rounded-full border-2 border-purple-600">
+                    <div className="mouse-wheel absolute left-1/2 top-2 h-2.5 w-1 -translate-x-1/2 rounded-full bg-purple-600" />
                   </div>
                 </div>
 
-                <h4 className="mt-3 text-[18px] font-semibold text-[#5D5FEF]">
+                <h4 className="mt-3 text-[18px] font-semibold text-purple-600">
                   Scroll Down
                 </h4>
               </div>
             </div>
           </div>
 
-          {/* Features */}
+          {/* Feature Cards */}
           <div className="grid grid-cols-2 gap-6 px-8 md:grid-cols-3 lg:grid-cols-6">
             {features.map((item, index) => {
               const Icon = item.icon;
@@ -70,27 +67,49 @@ export default function FeatureCards() {
                 <a
                   key={index}
                   href="#"
-                  className="group flex flex-col items-center rounded-3xl p-5 transition-all duration-500 hover:-translate-y-4 hover:bg-white hover:shadow-2xl"
+                  className="group flex flex-col items-center rounded-3xl border border-transparent p-5 transition-all duration-500 hover:-translate-y-4 hover:border-purple-200 hover:bg-purple-50 hover:shadow-2xl"
                 >
-                  <div
+                  {/* <div
                     className={`flex h-20 w-20 shrink-0 items-center justify-center rounded-3xl bg-gradient-to-br ${item.color}
-  text-white shadow-xl transition-all duration-500
-  group-hover:-translate-y-2
-  group-hover:scale-110
-  group-hover:rotate-6
-  group-hover:shadow-[0_20px_40px_rgba(59,130,246,0.35)]`}
+                    text-white shadow-xl transition-all duration-500
+                    group-hover:-translate-y-2
+                    group-hover:scale-110
+                    group-hover:rotate-6
+                    group-hover:shadow-[0_20px_40px_rgba(147,51,234,0.45)]`}
                   >
                     <Icon
                       size={34}
                       className="transition-transform duration-500 group-hover:scale-110"
                     />
+                  </div> */}
+                  <div
+                    className="flex h-20 w-20 shrink-0 items-center justify-center rounded-3xl
+                    border-2 border-[#6957DF]
+                    bg-white
+                    text-[#6957DF]
+                    shadow-lg
+                    transition-all duration-500
+                    group-hover:-translate-y-2
+                    group-hover:scale-110
+                    group-hover:rotate-6
+                    group-hover:border-transparent
+                    group-hover:bg-gradient-to-br
+                    group-hover:from-[#6957DF]
+                    group-hover:to-[#9F7AEA]
+                    group-hover:text-white
+                    group-hover:shadow-[0_20px_40px_rgba(147,51,234,0.45)]"
+                  >
+                    <Icon
+                      size={34}
+                      className="transition-all duration-500"
+                    />
                   </div>
 
-                  <h3 className="mt-5 flex h-12 items-center justify-center text-center text-lg font-bold leading-snug text-slate-800 transition-all duration-300 group-hover:text-blue-700">
+                  <h3 className="mt-5 flex h-12 items-center justify-center text-center text-lg font-bold leading-snug text-slate-800 transition-all duration-300 group-hover:text-purple-700">
                     {item.title}
                   </h3>
 
-                  <span className="mt-2 inline-flex items-center gap-1 text-sm font-semibold uppercase tracking-wide text-gray-400 transition-all duration-300 group-hover:gap-2 group-hover:text-orange-500">
+                  <span className="mt-2 inline-flex items-center gap-1 text-sm font-semibold uppercase tracking-wide text-gray-400 transition-all duration-300 group-hover:gap-2 group-hover:text-purple-600">
                     Explore
                     <span className="transition-transform duration-300 group-hover:translate-x-1">
                       →
