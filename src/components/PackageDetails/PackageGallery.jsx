@@ -25,19 +25,7 @@ export default function PackageGallery({ tour }) {
   if (!images.length) return null;
 
   return (
-    <section className="pg-root mt-20">
-      <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap');
-
-        .pg-root { font-family: 'Inter', sans-serif; }
-        .pg-serif { font-family: 'Fraunces', serif; }
-
-        @keyframes pg-glow {
-          0%, 100% { box-shadow: 0 0 0 0 rgba(15, 110, 102, 0.3); }
-          50% { box-shadow: 0 0 0 6px rgba(15, 110, 102, 0); }
-        }
-        .pg-count { animation: pg-glow 2.6s ease-in-out infinite; }
-      `}</style>
+    <section className="mt-20">
 
       <div className="mx-auto w-[92%] max-w-7xl">
 
@@ -47,7 +35,7 @@ export default function PackageGallery({ tour }) {
 
           <div>
 
-            <h2 className="pg-serif text-4xl font-bold text-[#1E2A47]">
+            <h2 className="text-4xl font-black text-sky-700">
               Package Gallery
             </h2>
 
@@ -57,7 +45,7 @@ export default function PackageGallery({ tour }) {
 
           </div>
 
-          <div className="pg-count hidden rounded-full bg-[#0F6E66] px-5 py-2 text-sm font-semibold text-white md:block">
+          <div className="hidden rounded-full bg-sky-50 px-5 py-2 text-sm font-semibold text-sky-700 md:block">
             {images.length} Photos
           </div>
 
@@ -110,7 +98,7 @@ export default function PackageGallery({ tour }) {
 
                   <button
                     onClick={() => setPreview(img)}
-                    className="absolute bottom-5 right-5 flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#C2185B] shadow-xl transition hover:scale-110"
+                    className="absolute bottom-5 right-5 flex h-12 w-12 items-center justify-center rounded-full bg-white text-sky-600 shadow-xl transition hover:scale-110"
                   >
                     <Expand size={20} />
                   </button>
@@ -137,7 +125,7 @@ export default function PackageGallery({ tour }) {
               className={`flex h-11 w-11 items-center justify-center rounded-full transition ${
                 page === 1
                   ? "cursor-not-allowed bg-slate-200 text-slate-400"
-                  : "bg-white text-[#1E2A47] shadow-lg hover:scale-110"
+                  : "bg-white shadow-lg hover:scale-110"
               }`}
             >
               <ChevronLeft size={20} />
@@ -152,7 +140,7 @@ export default function PackageGallery({ tour }) {
                   onClick={() => setPage(i + 1)}
                   className={`transition-all duration-300 ${
                     page === i + 1
-                      ? "h-3 w-10 rounded-full bg-gradient-to-r from-[#E3A23D] to-[#C2185B]"
+                      ? "h-3 w-10 rounded-full bg-gradient-to-r from-sky-600 to-orange-500"
                       : "h-3 w-3 rounded-full bg-slate-300 hover:bg-slate-400"
                   }`}
                 />
@@ -169,7 +157,7 @@ export default function PackageGallery({ tour }) {
               className={`flex h-11 w-11 items-center justify-center rounded-full transition ${
                 page === totalPages
                   ? "cursor-not-allowed bg-slate-200 text-slate-400"
-                  : "bg-gradient-to-r from-[#E3A23D] to-[#C2185B] text-white shadow-lg hover:scale-110"
+                  : "bg-gradient-to-r from-sky-600 to-orange-500 text-white shadow-lg hover:scale-110"
               }`}
             >
               <ChevronRight size={20} />
@@ -197,7 +185,7 @@ export default function PackageGallery({ tour }) {
 
             <button
               onClick={() => setPreview(null)}
-              className="absolute right-8 top-8 rounded-full bg-white p-3 text-[#1E2A47] shadow-xl"
+              className="absolute right-8 top-8 rounded-full bg-white p-3 shadow-xl"
             >
               <X />
             </button>

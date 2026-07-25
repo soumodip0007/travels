@@ -59,57 +59,16 @@ export default function TourPlan({
   }, [selectedPackage, currentItinerary]);
 
   return (
-    <section className="tp-root bg-[#FBF8F2] py-16">
-      <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap');
-
-        .tp-root { font-family: 'Inter', sans-serif; }
-        .tp-serif { font-family: 'Fraunces', serif; font-variant-numeric: tabular-nums; }
-
-        @keyframes tp-glow {
-          0%, 100% { box-shadow: 0 0 0 0 rgba(15, 110, 102, 0.3); }
-          50% { box-shadow: 0 0 0 6px rgba(15, 110, 102, 0); }
-        }
-        .tp-eyebrow { animation: tp-glow 2.6s ease-in-out infinite; }
-
-        .tp-pkg-btn {
-          transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
-        }
-        .tp-pkg-btn:not(:disabled):hover { transform: translateY(-2px); }
-
-        .tp-stub {
-          position: relative;
-        }
-        .tp-notch {
-          background: #FBF8F2;
-        }
-
-        @keyframes tp-count-fade {
-          from { opacity: 0; transform: translateY(6px); }
-          to   { opacity: 1; transform: translateY(0); }
-        }
-        .tp-stat-value { animation: tp-count-fade 0.5s ease both; }
-
-        .tp-timeline-track {
-          background: repeating-linear-gradient(
-            to bottom,
-            #E3A23D 0px,
-            #E3A23D 6px,
-            transparent 6px,
-            transparent 14px
-          );
-        }
-      `}</style>
-
+    <section className="bg-white py-6">
       <div className="mx-auto w-[92%] max-w-7xl">
 
         {/* Heading */}
-        <div className="mb-10 text-center">
-          <span className="tp-eyebrow inline-flex items-center gap-2 rounded-full bg-[#0F6E66] px-4 py-2 text-sm font-semibold text-white">
+        <div className="mb-8 text-center">
+          <span className="rounded-full bg-sky-100 px-4 py-2 text-sm font-semibold text-sky-700">
             Tour Itinerary
           </span>
 
-          <h2 className="tp-serif mt-5 text-4xl font-bold text-[#1E2A47] md:text-5xl">
+          <h2 className="mt-5 text-4xl font-bold text-slate-900">
             Day Wise Tour Plan
           </h2>
 
@@ -118,55 +77,51 @@ export default function TourPlan({
           </p>
         </div>
 
-        {/* Current Package Details — ticket stub */}
+        {/* Current Package Details */}
         {currentPackage && (
-          <div className="tp-stub mx-auto mb-12 flex max-w-xl overflow-hidden rounded-3xl bg-white shadow-[0_16px_40px_-16px_rgba(30,42,71,0.25)]">
-            <div className="flex-1 px-8 py-6 text-center">
-              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#9A9078]">
+          <div className="mb-10 flex flex-wrap justify-center gap-6">
+
+            <div className="rounded-2xl bg-sky-50 px-8 py-5 shadow">
+              <p className="text-sm text-gray-500">
                 Duration
               </p>
-              <h3 className="tp-serif tp-stat-value mt-1 text-2xl font-bold text-[#1E2A47]">
+
+              <h3 className="text-xl font-bold text-sky-700">
                 {currentDuration}
               </h3>
             </div>
 
-            {/* perforated divider */}
-            <div className="relative w-0 border-l-2 border-dashed border-[#E4DFD1]">
-              <div className="tp-notch absolute -top-3.5 left-1/2 h-7 w-7 -translate-x-1/2 rounded-full" />
-              <div className="tp-notch absolute -bottom-3.5 left-1/2 h-7 w-7 -translate-x-1/2 rounded-full" />
-            </div>
-
-            <div className="flex-1 px-8 py-6 text-center">
-              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#9A9078]">
+            <div className="rounded-2xl bg-sky-50 px-8 py-5 shadow">
+              <p className="text-sm text-gray-500">
                 Starting From
               </p>
-              <h3 className="tp-serif tp-stat-value mt-1 text-2xl font-bold text-[#C2185B]">
+
+              <h3 className="text-xl font-bold text-sky-700">
                 ₹{currentPrice?.toLocaleString()}
               </h3>
             </div>
+
           </div>
         )}
 
         {/* Package Buttons */}
-        <div className="mb-14 flex flex-wrap justify-center gap-3">
+        <div className="mb-12 flex flex-wrap justify-center gap-4">
           {packageOptions.map((pkg) => {
 
             const isAvailable =
               tour?.packages?.[pkg.key]?.itinerary?.length > 0;
-
-            const isSelected = selectedPackage === pkg.key;
 
             return (
               <button
                 key={pkg.key}
                 disabled={!isAvailable}
                 onClick={() => setSelectedPackage(pkg.key)}
-                className={`tp-pkg-btn rounded-full px-6 py-3 text-sm font-semibold ${
-                  isSelected
-                    ? "bg-gradient-to-r from-[#E3A23D] to-[#C2185B] text-white shadow-lg shadow-[#C2185B]/25"
+                className={`rounded-full px-6 py-3 text-sm font-semibold transition-all duration-300 ${
+                  selectedPackage === pkg.key
+                    ? "bg-sky-600 text-white shadow-lg"
                     : isAvailable
-                    ? "bg-[#F7F4EC] text-[#1E2A47] hover:bg-[#EFE9D8]"
-                    : "cursor-not-allowed bg-gray-100 text-gray-400 opacity-60"
+                    ? "bg-sky-100 text-sky-700 hover:bg-sky-200"
+                    : "cursor-not-allowed bg-gray-200 text-gray-400 opacity-60"
                 }`}
               >
                 {pkg.label}
@@ -180,7 +135,7 @@ export default function TourPlan({
           <div ref={containerRef} className="relative">
 
             <div
-              className="tp-timeline-track absolute left-8 hidden w-[3px] rounded-full md:block"
+              className="absolute left-8 hidden w-1 rounded-full bg-sky-100 md:block"
               style={{
                 top: lineStyle.top,
                 height: lineStyle.height,
