@@ -1,4 +1,5 @@
 import { useLayoutEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
 import TourDayCard from "./TourDayCard";
 
 const packageOptions = [
@@ -64,7 +65,7 @@ export default function TourPlan({
 
         {/* Heading */}
         <div className="mb-8 text-center">
-          <span className="rounded-full bg-sky-100 px-4 py-2 text-sm font-semibold text-sky-700">
+          <span className="rounded-full bg-purple-100 px-4 py-2 text-sm font-semibold text-[#6957DF]">
             Tour Itinerary
           </span>
 
@@ -81,22 +82,22 @@ export default function TourPlan({
         {currentPackage && (
           <div className="mb-10 flex flex-wrap justify-center gap-6">
 
-            <div className="rounded-2xl bg-sky-50 px-8 py-5 shadow">
+            <div className="rounded-2xl bg-purple-50 px-8 py-5 shadow">
               <p className="text-sm text-gray-500">
                 Duration
               </p>
 
-              <h3 className="text-xl font-bold text-sky-700">
+              <h3 className="text-xl font-bold text-[#6957DF]">
                 {currentDuration}
               </h3>
             </div>
 
-            <div className="rounded-2xl bg-sky-50 px-8 py-5 shadow">
+            <div className="rounded-2xl bg-purple-50 px-8 py-5 shadow">
               <p className="text-sm text-gray-500">
                 Starting From
               </p>
 
-              <h3 className="text-xl font-bold text-sky-700">
+              <h3 className="text-xl font-bold text-[#6957DF]">
                 ₹{currentPrice?.toLocaleString()}
               </h3>
             </div>
@@ -111,21 +112,31 @@ export default function TourPlan({
             const isAvailable =
               tour?.packages?.[pkg.key]?.itinerary?.length > 0;
 
+            const isSelected = selectedPackage === pkg.key;
+
             return (
-              <button
+              <motion.button
                 key={pkg.key}
                 disabled={!isAvailable}
                 onClick={() => setSelectedPackage(pkg.key)}
-                className={`rounded-full px-6 py-3 text-sm font-semibold transition-all duration-300 ${
-                  selectedPackage === pkg.key
-                    ? "bg-sky-600 text-white shadow-lg"
+                whileHover={isAvailable ? { scale: 1.06, y: -2 } : {}}
+                whileTap={isAvailable ? { scale: 0.96 } : {}}
+                animate={
+                  isSelected
+                    ? { scale: [1, 1.08, 1] }
+                    : { scale: 1 }
+                }
+                transition={{ duration: 0.35, ease: "easeOut" }}
+                className={`rounded-full px-6 py-3 text-sm font-semibold transition-colors duration-300 ${
+                  isSelected
+                    ? "bg-gradient-to-r from-[#6957DF] to-[#9F7AEA] text-white shadow-lg"
                     : isAvailable
-                    ? "bg-sky-100 text-sky-700 hover:bg-sky-200"
+                    ? "bg-purple-100 text-[#6957DF] hover:bg-purple-200"
                     : "cursor-not-allowed bg-gray-200 text-gray-400 opacity-60"
                 }`}
               >
                 {pkg.label}
-              </button>
+              </motion.button>
             );
           })}
         </div>
@@ -135,7 +146,7 @@ export default function TourPlan({
           <div ref={containerRef} className="relative">
 
             <div
-              className="absolute left-8 hidden w-1 rounded-full bg-sky-100 md:block"
+              className="absolute left-8 hidden w-1 rounded-full bg-purple-100 md:block"
               style={{
                 top: lineStyle.top,
                 height: lineStyle.height,

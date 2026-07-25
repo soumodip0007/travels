@@ -33,7 +33,7 @@ export default function PackageOverview({
 
         {/* Section Heading */}
         <div className="mb-10">
-          <span className="rounded-full bg-sky-100 px-4 py-2 text-sm font-semibold text-sky-700">
+          <span className="rounded-full bg-purple-100 px-4 py-2 text-sm font-semibold text-[#6957DF]">
             Tour Overview
           </span>
 
@@ -47,9 +47,9 @@ export default function PackageOverview({
           {/* Left */}
           <div className="lg:col-span-3">
 
-            <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
+            <div className="rounded-3xl border border-purple-100 bg-white p-8 shadow-sm">
 
-              <h3 className="mb-3 text-2xl font-bold text-sky-700">
+              <h3 className="mb-3 text-2xl font-bold text-[#6957DF]">
                 Overview
               </h3>
 

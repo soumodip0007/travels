@@ -5,14 +5,14 @@ import {
 
 export default function IncludedExcluded({ tour }) {
   return (
-    <section className="bg-slate-50 py-16">
+    <section className="bg-purple-50/40 py-16">
       <div className="mx-auto w-[92%] max-w-7xl">
 
         {/* Heading */}
 
         <div className="mb-12 text-center">
 
-          <span className="rounded-full bg-orange-100 px-4 py-2 text-sm font-semibold text-orange-600">
+          <span className="rounded-full bg-purple-100 px-4 py-2 text-sm font-semibold text-[#6957DF]">
             Package Details
           </span>
 
@@ -30,16 +30,28 @@ export default function IncludedExcluded({ tour }) {
 
           {/* ================= Included ================= */}
 
-          <div className="rounded-3xl border border-green-100 bg-white p-8 shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+          <div className="group rounded-3xl border border-purple-100 bg-white p-8 shadow-[0_20px_60px_rgba(105,87,223,0.10)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_30px_80px_rgba(105,87,223,0.16)]">
 
             <div className="mb-8 flex items-center gap-4">
 
-              <div className="flex h-14 w-14 items-center justify-center rounded-full bg-green-100">
+              <div
+                className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl
+                border-2 border-green-500
+                bg-white
+                text-green-600
+                shadow-sm
+                transition-all duration-500
+                group-hover:scale-110
+                group-hover:rotate-6
+                group-hover:border-transparent
+                group-hover:bg-gradient-to-br
+                group-hover:from-green-500
+                group-hover:to-emerald-400
+                group-hover:text-white
+                group-hover:shadow-[0_15px_30px_rgba(34,197,94,0.35)]"
+              >
 
-                <CheckCircle2
-                  size={30}
-                  className="text-green-600"
-                />
+                <CheckCircle2 size={28} />
 
               </div>
 
@@ -63,7 +75,7 @@ export default function IncludedExcluded({ tour }) {
 
                 <div
                   key={index}
-                  className="flex items-start gap-4 rounded-2xl bg-green-50 p-4 transition hover:bg-green-100"
+                  className="flex items-start gap-4 rounded-2xl bg-green-50 p-4 transition-all duration-300 hover:-translate-y-0.5 hover:bg-green-100 hover:shadow-md"
                 >
 
                   <CheckCircle2
@@ -85,16 +97,28 @@ export default function IncludedExcluded({ tour }) {
 
           {/* ================= Excluded ================= */}
 
-          <div className="rounded-3xl border border-red-100 bg-white p-8 shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+          <div className="group rounded-3xl border border-purple-100 bg-white p-8 shadow-[0_20px_60px_rgba(105,87,223,0.10)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_30px_80px_rgba(105,87,223,0.16)]">
 
             <div className="mb-8 flex items-center gap-4">
 
-              <div className="flex h-14 w-14 items-center justify-center rounded-full bg-red-100">
+              <div
+                className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl
+                border-2 border-red-500
+                bg-white
+                text-red-600
+                shadow-sm
+                transition-all duration-500
+                group-hover:scale-110
+                group-hover:rotate-6
+                group-hover:border-transparent
+                group-hover:bg-gradient-to-br
+                group-hover:from-red-500
+                group-hover:to-rose-400
+                group-hover:text-white
+                group-hover:shadow-[0_15px_30px_rgba(239,68,68,0.35)]"
+              >
 
-                <XCircle
-                  size={30}
-                  className="text-red-600"
-                />
+                <XCircle size={28} />
 
               </div>
 
@@ -118,7 +142,7 @@ export default function IncludedExcluded({ tour }) {
 
                 <div
                   key={index}
-                  className="flex items-start gap-4 rounded-2xl bg-red-50 p-4 transition hover:bg-red-100"
+                  className="flex items-start gap-4 rounded-2xl bg-red-50 p-4 transition-all duration-300 hover:-translate-y-0.5 hover:bg-red-100 hover:shadow-md"
                 >
 
                   <XCircle
