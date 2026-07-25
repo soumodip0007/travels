@@ -1,5 +1,5 @@
-import { useLayoutEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { animate, motion } from "framer-motion";
 import TourDayCard from "./TourDayCard";
 
 const packageOptions = [
@@ -28,6 +28,24 @@ export default function TourPlan({
   const currentItinerary = currentPackage?.itinerary || [];
   const currentPrice = currentPackage?.price;
   const currentDuration = currentPackage?.duration;
+
+  // Animated (counting) price
+  const [animatedPrice, setAnimatedPrice] = useState(currentPrice ?? 0);
+  const previousPrice = useRef(currentPrice ?? 0);
+
+  useEffect(() => {
+    if (currentPrice == null) return;
+
+    const controls = animate(previousPrice.current, currentPrice, {
+      duration: 0.6,
+      ease: "easeOut",
+      onUpdate: (value) => setAnimatedPrice(Math.round(value)),
+    });
+
+    previousPrice.current = currentPrice;
+
+    return () => controls.stop();
+  }, [currentPrice]);
 
   useLayoutEffect(() => {
     const calculateLine = () => {
@@ -97,8 +115,8 @@ export default function TourPlan({
                 Starting From
               </p>
 
-              <h3 className="text-xl font-bold text-[#6957DF]">
-                ₹{currentPrice?.toLocaleString()}
+              <h3 className="text-xl font-bold text-[#6957DF] tabular-nums">
+                ₹{animatedPrice.toLocaleString()}
               </h3>
             </div>
 

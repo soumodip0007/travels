@@ -1,3 +1,5 @@
+import { useEffect, useRef, useState } from "react";
+import { animate } from "framer-motion";
 import {
   IndianRupee,
   MapPin,
@@ -22,6 +24,23 @@ export default function BookingCard({
   const displayDuration =
     currentPackage?.duration ||
     tour.duration;
+
+  // Animated (counting) price
+  const [animatedPrice, setAnimatedPrice] = useState(displayPrice);
+  const previousPrice = useRef(displayPrice);
+
+  useEffect(() => {
+    const controls = animate(previousPrice.current, displayPrice, {
+      duration: 0.6,
+      ease: "easeOut",
+      onUpdate: (value) => setAnimatedPrice(Math.round(value)),
+    });
+
+    previousPrice.current = displayPrice;
+
+    return () => controls.stop();
+  }, [displayPrice]);
+
   return (
     <div>
 
@@ -61,8 +80,8 @@ export default function BookingCard({
               className="text-slate-900"
             />
 
-            <span className="text-4xl font-black text-slate-900">
-              {displayPrice.toLocaleString()}
+            <span className="text-4xl font-black text-slate-900 tabular-nums">
+              {animatedPrice.toLocaleString()}
             </span>
 
           </div>
