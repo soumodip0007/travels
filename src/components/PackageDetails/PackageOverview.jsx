@@ -28,16 +28,37 @@ export default function PackageOverview({
     tour.duration;
 
   return (
-    <section className="bg-white py-14">
+    <section className="po-root bg-white py-6">
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap');
+
+        .po-root { font-family: 'Inter', sans-serif; }
+        .po-serif { font-family: 'Fraunces', serif; }
+
+        @keyframes po-glow {
+          0%, 100% { box-shadow: 0 0 0 0 rgba(15, 110, 102, 0.3); }
+          50% { box-shadow: 0 0 0 6px rgba(15, 110, 102, 0); }
+        }
+        .po-eyebrow { animation: po-glow 2.6s ease-in-out infinite; }
+
+        .po-corner {
+          position: absolute;
+          width: 26px;
+          height: 26px;
+          border-radius: 9999px;
+          background: white;
+        }
+      `}</style>
+
       <div className="mx-auto w-[92%] max-w-7xl">
 
         {/* Section Heading */}
         <div className="mb-10">
-          <span className="rounded-full bg-sky-100 px-4 py-2 text-sm font-semibold text-sky-700">
+          <span className="po-eyebrow inline-flex rounded-full bg-[#0F6E66] px-4 py-2 text-sm font-semibold text-white">
             Tour Overview
           </span>
 
-          <h2 className="mt-5 text-4xl font-bold text-slate-900">
+          <h2 className="po-serif mt-5 text-4xl font-bold text-[#1E2A47]">
             {tour.title}
           </h2>
         </div>
@@ -45,115 +66,21 @@ export default function PackageOverview({
         <div className="grid gap-10 lg:grid-cols-3">
 
           {/* Left */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-3">
 
-            <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
+            <div className="relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
 
-              <h3 className="mb-5 text-2xl font-bold text-sky-700">
+              {/* die-cut corners, echoing the ticket motif */}
+              <span className="po-corner -left-3.5 -top-3.5" />
+              <span className="po-corner -right-3.5 -top-3.5" />
+
+              <h3 className="po-serif mb-3 text-2xl font-bold text-[#C2185B]">
                 Overview
               </h3>
 
               <p className="leading-8 text-gray-600">
                 {tour.overview}
               </p>
-
-            </div>
-
-          </div>
-
-          {/* Right */}
-          <div>
-
-            <div className="sticky top-28 rounded-3xl border border-slate-200 bg-white p-7 shadow-xl">
-
-              {/* Rating */}
-              <div className="mb-5 flex items-center justify-between">
-
-                <span className="text-lg font-semibold text-slate-700">
-                  Rating
-                </span>
-
-                <div className="flex items-center gap-2 rounded-full bg-green-100 px-4 py-2 font-bold text-green-700">
-
-                  <Star
-                    size={18}
-                    className="fill-yellow-400 text-yellow-400"
-                  />
-
-                  {tour.rating}
-
-                </div>
-
-              </div>
-
-              {/* Price */}
-              <div className="mb-6">
-
-                <p className="text-sm text-gray-500">
-                  Starting From
-                </p>
-
-                <div className="mt-2 flex items-center">
-
-                  <IndianRupee
-                    size={28}
-                    className="text-slate-900"
-                  />
-
-                  <span className="text-4xl font-black text-slate-900">
-                    {displayPrice.toLocaleString()}
-                  </span>
-
-                </div>
-
-                <p className="text-gray-500">
-                  / Per Person
-                </p>
-
-              </div>
-
-              {/* Duration */}
-              <div className="mb-4 flex items-center gap-3 rounded-xl bg-slate-50 p-4">
-
-                <Clock3 className="text-orange-500" />
-
-                <div>
-
-                  <p className="text-sm text-gray-500">
-                    Duration
-                  </p>
-
-                  <p className="font-semibold">
-                    {displayDuration}
-                  </p>
-
-                </div>
-
-              </div>
-
-              {/* Destination */}
-              <div className="mb-8 flex items-center gap-3 rounded-xl bg-slate-50 p-4">
-
-                <MapPin className="text-sky-600" />
-
-                <div>
-
-                  <p className="text-sm text-gray-500">
-                    Destination
-                  </p>
-
-                  <p className="font-semibold">
-                    {tour.location}
-                  </p>
-
-                </div>
-
-              </div>
-
-              {/* CTA */}
-              <button className="w-full rounded-full bg-gradient-to-r from-sky-600 to-orange-500 py-4 text-lg font-bold text-white shadow-lg transition hover:scale-105">
-                Book Now
-              </button>
 
             </div>
 

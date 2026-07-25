@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+
 import packages from "../data/packages";
+
 import PackageHero from "../components/PackageDetails/PackageHero";
 import PackageOverview from "../components/PackageDetails/PackageOverview";
 import PackageGallery from "../components/PackageDetails/PackageGallery";
 import TourPlan from "../components/PackageDetails/TourPlan";
 import IncludedExcluded from "../components/PackageDetails/IncludedExcluded";
+import BookingCard from "../components/PackageDetails/BookingCard";
 import SimilarPackages from "../components/PackageDetails/SimilarPackages";
 import Reviews from "../components/Reviews";
 
@@ -38,6 +41,7 @@ export default function PackageDetails() {
 
   return (
     <>
+      {/* Hero */}
       <div data-aos="fade">
         <PackageHero
           tour={tour}
@@ -45,34 +49,60 @@ export default function PackageDetails() {
         />
       </div>
 
-      <div data-aos="fade-up" data-aos-delay="100">
-        <PackageOverview
-          tour={tour}
-          selectedPackage={selectedPackage}
-        />
-      </div>
+      {/* Main Content */}
+      <div className="mx-auto w-[92%] max-w-7xl py-14">
+        <div className="grid gap-10 lg:grid-cols-3">
 
-      <div data-aos="zoom-in" data-aos-delay="150">
-        <PackageGallery tour={tour} />
-      </div>
+          {/* ================= LEFT COLUMN ================= */}
+          <div className="lg:col-span-2">
 
-      <div data-aos="fade-up" data-aos-delay="200">
-        <TourPlan
-          tour={tour}
-          selectedPackage={selectedPackage}
-          setSelectedPackage={setSelectedPackage}
-        />
-      </div>
+            <div data-aos="fade-up" data-aos-delay="100">
+              <PackageOverview
+                tour={tour}
+                selectedPackage={selectedPackage}
+              />
+            </div>
 
-      <div data-aos="fade-up" data-aos-delay="300">
-        <IncludedExcluded
-          tour={tour}
-          selectedPackage={selectedPackage}
-        />
-      </div>
+            <div data-aos="fade-up" data-aos-delay="200">
+              <TourPlan
+                tour={tour}
+                selectedPackage={selectedPackage}
+                setSelectedPackage={setSelectedPackage}
+              />
+            </div>
 
-      <div data-aos="fade-up" data-aos-delay="300">
-        <Reviews />
+            <div data-aos="zoom-in" data-aos-delay="250">
+              <PackageGallery tour={tour} />
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="300">
+              <IncludedExcluded
+                tour={tour}
+                selectedPackage={selectedPackage}
+              />
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="350">
+              <Reviews />
+            </div>
+
+          </div>
+
+          {/* ================= RIGHT COLUMN ================= */}
+          <div className="lg:col-span-1">
+
+            <div className="sticky top-28">
+
+              <BookingCard
+                tour={tour}
+                selectedPackage={selectedPackage}
+              />
+
+            </div>
+
+          </div>
+
+        </div>
       </div>
 
       {/*
