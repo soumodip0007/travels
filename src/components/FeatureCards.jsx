@@ -38,7 +38,7 @@ export default function FeatureCards() {
   return (
     <section className="relative z-40 -mt-30 mb-20">
       <div className="mx-auto w-[92%] max-w-7xl">
-        <div className="relative rounded-[38px] bg-white py-10 shadow-[0_30px_80px_rgba(0,0,0,.12)]">
+        <div className="relative rounded-[38px] bg-purple-100 py-10 shadow-[0_30px_80px_rgba(0,0,0,.12)]">
           {/* Top Curve */}
           <div className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-[44%] z-20">
             <div className="relative w-[360px]">
@@ -84,7 +84,7 @@ export default function FeatureCards() {
                   </div> */}
                   <div
                     className="flex h-20 w-20 shrink-0 items-center justify-center rounded-3xl
-                    border-2 border-[#6957DF]
+                    border-3 border-[#6957DF]
                     bg-white
                     text-[#6957DF]
                     shadow-lg

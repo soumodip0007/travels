@@ -69,11 +69,11 @@ export default function Testimonials() {
           {testimonials.map((item) => (
             <SwiperSlide key={item.id}>
 
-              <div className="group relative h-full rounded-3xl border border-slate-200 bg-white p-8 shadow-lg shadow-slate-200/50 transition-all duration-500 hover:-translate-y-3 hover:border-orange-400 hover:shadow-xl">
+              <div className="group relative h-full rounded-3xl border border-purple-100 bg-purple-100 p-8 shadow-lg shadow-purple-200/30 transition-all duration-500 hover:-translate-y-3 hover:border-[#6957DF] hover:bg-white hover:shadow-xl">
 
                 {/* Quote */}
 
-                <div className="absolute left-0 top-0 flex h-24 w-24 items-center justify-center rounded-br-full rounded-tl-3xl bg-gradient-to-br from-sky-600 to-orange-500">
+                <div className="absolute left-0 top-0 flex h-24 w-24 items-center justify-center rounded-br-full rounded-tl-3xl bg-gradient-to-br from-[#6957DF] via-[#7C3AED] to-[#A855F7]">
 
                   <Quote
                     size={42}
