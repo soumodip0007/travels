@@ -105,7 +105,7 @@ export default function TourSection() {
         <div className="mb-12 text-center">
 
           <span
-            className={`ts-eyebrow inline-block rounded-full px-5 py-2 text-sm font-semibold text-white ${color === "orange" ? "bg-[#E3A23D]" : "bg-[#0F6E66]"
+            className={`ts-eyebrow inline-block rounded-full px-5 py-2 text-sm font-semibold text-white ${color === "orange" ? "bg-[#6957DF]" : "bg-[#6957DF]"
               }`}
           >
             {subtitle}
@@ -146,7 +146,7 @@ export default function TourSection() {
 
                 <button
                   onClick={handleToggle}
-                  className="ts-cta rounded-full bg-gradient-to-r from-[#E3A23D] to-[#C2185B] px-8 py-3 font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:scale-105"
+                  className="ts-cta rounded-full bg-gradient-to-r from-[#6957DF] via-[#7C3AED] to-[#A855F7] px-8 py-3 font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:scale-105"
                 >
                   {showAll ? "Show Less" : "View All Packages"}
                 </button>
@@ -209,7 +209,7 @@ export default function TourSection() {
 
           <h2 className="ts-serif mt-6 whitespace-nowrap text-4xl font-bold leading-tight text-[#1E2A47] md:text-6xl">
             Our Popular{" "}
-            <span className="bg-gradient-to-r from-[#E3A23D] to-[#C2185B] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#6957DF] via-[#7C3AED] to-[#A855F7] bg-clip-text text-transparent">
               Tour Packages
             </span>
           </h2>

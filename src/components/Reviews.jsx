@@ -195,7 +195,7 @@ export default function Reviews() {
             Traveler Stories
           </span>
           <h2 className="mt-5 text-4xl font-extrabold text-slate-800 md:text-5xl">
-            Loved by <span className="text-blue-600">thousands</span> of
+            Loved by <span className="text-[#6957DF]">thousands</span> of
             travelers
           </h2>
           <p className="mt-4 text-gray-500">
@@ -271,7 +271,7 @@ export default function Reviews() {
               {review.type === "video" && (
                 <button
                   onClick={() => setActiveVideo(review.videoUrl)}
-                  className="relative mt-4 inline-flex items-center gap-2 text-sm font-semibold text-blue-600 transition group-hover:gap-3 hover:text-orange-500"
+                  className="relative mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#6957DF] transition group-hover:gap-3 hover:text-orange-500"
                 >
                   Watch full review
                   <span className="transition-transform group-hover:translate-x-1">

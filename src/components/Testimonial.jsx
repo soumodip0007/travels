@@ -69,7 +69,7 @@ export default function Testimonials() {
           {testimonials.map((item) => (
             <SwiperSlide key={item.id}>
 
-              <div className="group relative h-full rounded-3xl border border-purple-100 bg-purple-100 p-8 shadow-lg shadow-purple-200/30 transition-all duration-500 hover:-translate-y-3 hover:border-[#6957DF] hover:bg-white hover:shadow-xl">
+              <div className="group relative flex-full min-h-[430px] flex-col rounded-3xl border border-purple-100 bg-purple-100 p-8 shadow-lg shadow-purple-200/30 transition-all duration-500 hover:-translate-y-3 hover:border-[#6957DF] hover:bg-white hover:shadow-xl">
 
                 {/* Quote */}
 

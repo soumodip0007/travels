@@ -34,7 +34,7 @@ export default function Navbar() {
               </div>
 
               <div>
-                <h1 className="text-2xl font-extrabold bg-gradient-to-r from-[#6957DF] via-[#7C3AED] to-[#A855F7]0 bg-clip-text text-transparent">
+                <h1 className="text-2xl font-extrabold bg-gradient-to-r from-[#6957DF] via-[#7C3AED] to-[#A855F7] bg-clip-text text-transparent">
                   TravelX
                 </h1>
 
