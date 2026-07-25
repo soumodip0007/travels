@@ -3,7 +3,7 @@ import packages from "../data/packages";
 import TourCard from "./TourCard";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const CARDS_PER_PAGE = 3;
+const CARDS_PER_PAGE = 4;
 
 export default function TourSection() {
   const domesticPackages = useMemo(
@@ -19,10 +19,10 @@ export default function TourSection() {
   const [domesticPage, setDomesticPage] = useState(1);
   const [internationalPage, setInternationalPage] = useState(1);
 
-  const paginate = (data, page) => {
-    const start = (page - 1) * CARDS_PER_PAGE;
-    return data.slice(start, start + CARDS_PER_PAGE);
-  };
+  const [showAllDomestic, setShowAllDomestic] = useState(false);
+  const [showAllInternational, setShowAllInternational] = useState(false);
+
+
 
   const renderPagination = (page, totalPages, setPage) => (
     <div className="mt-14 flex items-center justify-center gap-5">
@@ -32,11 +32,10 @@ export default function TourSection() {
       <button
         onClick={() => setPage((prev) => Math.max(prev - 1, 1))}
         disabled={page === 1}
-        className={`flex h-14 w-14 items-center justify-center rounded-full transition-all duration-300 ${
-          page === 1
+        className={`flex h-14 w-14 items-center justify-center rounded-full transition-all duration-300 ${page === 1
             ? "cursor-not-allowed bg-slate-200 text-slate-400"
-            : "bg-gradient-to-r from-sky-600 to-sky-500 text-white shadow-lg hover:scale-110"
-        }`}
+            : "bg-gradient-to-r from-[#0F6E66] to-[#14877D] text-white shadow-lg hover:scale-110"
+          }`}
       >
         <ChevronLeft size={22} />
       </button>
@@ -48,11 +47,10 @@ export default function TourSection() {
           <button
             key={index}
             onClick={() => setPage(index + 1)}
-            className={`transition-all duration-300 ${
-              page === index + 1
-                ? "h-3 w-14 rounded-full bg-gradient-to-r from-sky-600 to-orange-500"
+            className={`transition-all duration-300 ${page === index + 1
+                ? "h-3 w-14 rounded-full bg-gradient-to-r from-[#E3A23D] to-[#C2185B]"
                 : "h-3 w-3 rounded-full bg-slate-300 hover:bg-slate-400"
-            }`}
+              }`}
           />
         ))}
       </div>
@@ -64,11 +62,10 @@ export default function TourSection() {
           setPage((prev) => Math.min(prev + 1, totalPages))
         }
         disabled={page === totalPages}
-        className={`flex h-14 w-14 items-center justify-center rounded-full transition-all duration-300 ${
-          page === totalPages
+        className={`flex h-14 w-14 items-center justify-center rounded-full transition-all duration-300 ${page === totalPages
             ? "cursor-not-allowed bg-slate-200 text-slate-400"
-            : "bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg hover:scale-110"
-        }`}
+            : "bg-gradient-to-r from-[#E3A23D] to-[#C2185B] text-white shadow-lg hover:scale-110"
+          }`}
       >
         <ChevronRight size={22} />
       </button>
@@ -82,9 +79,23 @@ export default function TourSection() {
     data,
     page,
     setPage,
+    showAll,
+    setShowAll,
     color
   ) => {
     const totalPages = Math.ceil(data.length / CARDS_PER_PAGE);
+
+    const visiblePackages = showAll
+      ? data
+      : data.slice(0, CARDS_PER_PAGE);
+
+    const handleToggle = () => {
+      if (showAll) {
+        // Collapsing back: reset to the first page of pagination
+        setPage(1);
+      }
+      setShowAll(!showAll);
+    };
 
     return (
       <div className="mb-24">
@@ -94,16 +105,13 @@ export default function TourSection() {
         <div className="mb-12 text-center">
 
           <span
-            className={`inline-block rounded-full ${
-              color === "orange"
-                ? "bg-orange-100 text-orange-600"
-                : "bg-sky-100 text-sky-700"
-            } px-5 py-2 text-sm font-semibold`}
+            className={`ts-eyebrow inline-block rounded-full px-5 py-2 text-sm font-semibold text-white ${color === "orange" ? "bg-[#E3A23D]" : "bg-[#0F6E66]"
+              }`}
           >
             {subtitle}
           </span>
 
-          <h3 className="mt-5 text-4xl font-black text-slate-800">
+          <h3 className="ts-serif mt-5 text-4xl font-bold text-[#1E2A47]">
             {title}
           </h3>
 
@@ -115,17 +123,36 @@ export default function TourSection() {
           </div>
         ) : (
           <>
-            <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-              {paginate(data, page).map((tour) => (
-                <TourCard
+            <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+              {visiblePackages.map((tour, index) => (
+                <div
                   key={tour.id}
-                  tour={tour}
-                />
+                  style={{ animationDelay: `${(index % CARDS_PER_PAGE) * 80}ms` }}
+                  className="ts-card-in"
+                >
+                  <TourCard tour={tour} />
+                </div>
               ))}
             </div>
 
-            {totalPages > 1 &&
+            {/* Pagination — only while collapsed */}
+            {!showAll &&
+              totalPages > 1 &&
               renderPagination(page, totalPages, setPage)}
+
+            {/* View All / Show Less toggle */}
+            {data.length > CARDS_PER_PAGE && (
+              <div className="mt-10 flex justify-center">
+
+                <button
+                  onClick={handleToggle}
+                  className="ts-cta rounded-full bg-gradient-to-r from-[#E3A23D] to-[#C2185B] px-8 py-3 font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:scale-105"
+                >
+                  {showAll ? "Show Less" : "View All Packages"}
+                </button>
+
+              </div>
+            )}
           </>
         )}
       </div>
@@ -133,23 +160,59 @@ export default function TourSection() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-white via-sky-50 to-white py-10">
+    <section className="ts-root relative overflow-hidden bg-gradient-to-b from-white via-[#FBF8F2] to-white py-10">
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap');
+
+        .ts-root { font-family: 'Inter', sans-serif; }
+        .ts-serif { font-family: 'Fraunces', serif; }
+
+        @keyframes ts-glow {
+          0%, 100% { box-shadow: 0 0 0 0 rgba(15, 110, 102, 0.3); }
+          50% { box-shadow: 0 0 0 6px rgba(15, 110, 102, 0); }
+        }
+        .ts-eyebrow { animation: ts-glow 2.6s ease-in-out infinite; }
+
+        @keyframes ts-card-rise {
+          from { opacity: 0; transform: translateY(18px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+        .ts-card-in { animation: ts-card-rise 0.5s cubic-bezier(0.22, 1, 0.36, 1) both; }
+
+        .ts-cta {
+          position: relative;
+          overflow: hidden;
+        }
+        .ts-cta::after {
+          content: "";
+          position: absolute;
+          top: 0; left: -60%;
+          width: 40%; height: 100%;
+          background: linear-gradient(120deg, transparent, rgba(255,255,255,0.5), transparent);
+          transform: skewX(-20deg);
+          transition: left 0.6s ease;
+        }
+        .ts-cta:hover::after { left: 130%; }
+      `}</style>
 
       {/* Background */}
 
-      <div className="absolute left-0 top-20 h-72 w-72 rounded-full bg-blue-300/20 blur-3xl"></div>
+      <div className="absolute left-0 top-20 h-72 w-72 rounded-full bg-[#E3A23D]/15 blur-3xl"></div>
 
-      <div className="absolute bottom-20 right-0 h-72 w-72 rounded-full bg-orange-300/20 blur-3xl"></div>
+      <div className="absolute bottom-20 right-0 h-72 w-72 rounded-full bg-[#C2185B]/15 blur-3xl"></div>
 
-      <div className="relative mx-auto w-[92%] max-w-7xl">
+      <div className="relative mx-auto w-[96%] max-w-[1700px]">
 
         {/* Main Heading */}
 
         <div className="mx-auto mb-20 max-w-3xl text-center">
 
-          <h2 className="mt-6 whitespace-nowrap text-4xl font-black leading-tight text-slate-800 md:text-6xl">
-  Our Popular <span className="bg-gradient-to-r from-[#6957DF] via-[#7C3AED] to-[#A855F7] bg-clip-text text-transparent">Tour Packages</span>
-</h2>
+          <h2 className="ts-serif mt-6 whitespace-nowrap text-4xl font-bold leading-tight text-[#1E2A47] md:text-6xl">
+            Our Popular{" "}
+            <span className="bg-gradient-to-r from-[#E3A23D] to-[#C2185B] bg-clip-text text-transparent">
+              Tour Packages
+            </span>
+          </h2>
 
           <p className="mt-6 text-lg leading-8 text-slate-500">
             Discover hand-picked travel experiences crafted with comfort,
@@ -164,6 +227,8 @@ export default function TourSection() {
           domesticPackages,
           domesticPage,
           setDomesticPage,
+          showAllDomestic,
+          setShowAllDomestic,
           "sky"
         )}
 
@@ -173,16 +238,10 @@ export default function TourSection() {
           internationalPackages,
           internationalPage,
           setInternationalPage,
+          showAllInternational,
+          setShowAllInternational,
           "orange"
         )}
-
-        <div className="flex justify-center">
-
-          <button className="rounded-full bg-gradient-to-r from-[#6957DF] via-[#7C3AED] to-[#A855F7] px-10 py-4 text-lg font-bold text-white shadow-xl transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-2xl">
-            View All Packages
-          </button>
-
-        </div>
 
       </div>
 
