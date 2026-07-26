@@ -5,10 +5,10 @@ import {
   Clock3,
   MapPin,
   IndianRupee,
-  Eye,
   Send,
   Phone,
   Star,
+  ArrowRight,
 } from "lucide-react";
 
 import { FaWhatsapp } from "react-icons/fa";
@@ -22,8 +22,8 @@ export default function TourCard({ tour }) {
   const cheapestPackage =
     availablePackages.length > 0
       ? availablePackages.reduce((prev, current) =>
-          current.price < prev.price ? current : prev
-        )
+        current.price < prev.price ? current : prev
+      )
       : null;
 
   const startingPrice = cheapestPackage?.price || 0;
@@ -44,7 +44,7 @@ export default function TourCard({ tour }) {
     if (navigator.share) {
       try {
         await navigator.share(shareData);
-      } catch {}
+      } catch { }
     } else {
       navigator.clipboard.writeText(shareData.url);
       alert("Package link copied!");
@@ -52,11 +52,11 @@ export default function TourCard({ tour }) {
   };
 
   return (
-    <div className="group flex h-full flex-col overflow-hidden rounded-[24px] border border-slate-100 bg-white shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+    <div className="group flex h-full flex-col rounded-[28px] bg-gradient-to-br from-[#000] via-[#6D53E1] to-[#261B57] text-white shadow-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
 
       {/* ================= IMAGE ================= */}
 
-      <div className="relative overflow-hidden">
+      <div className="relative overflow-hidden rounded-t-[28px]">
 
         <img
           src={tour.image}
@@ -77,7 +77,7 @@ export default function TourCard({ tour }) {
             className="fill-yellow-400 text-yellow-400"
           />
 
-          <span className="text-sm font-bold">
+          <span className="text-sm font-bold text-slate-900">
             {tour.rating}
           </span>
 
@@ -86,11 +86,10 @@ export default function TourCard({ tour }) {
         {/* Category */}
 
         <div
-          className={`absolute left-4 top-16 rounded-full px-4 py-1.5 text-xs font-bold text-white shadow-lg ${
-            tour.category === "international"
-              ? "bg-gradient-to-r from-purple-600 to-pink-600"
-              : "bg-gradient-to-r from-sky-600 to-blue-700"
-          }`}
+          className={`absolute left-4 top-16 rounded-full px-4 py-1.5 text-xs font-bold text-white shadow-lg ${tour.category === "international"
+            ? "bg-gradient-to-r from-purple-600 to-pink-600"
+            : "bg-gradient-to-r from-sky-600 to-blue-700"
+            }`}
         >
           {tour.category} Tour
         </div>
@@ -99,156 +98,155 @@ export default function TourCard({ tour }) {
 
         <button
           onClick={handleShare}
-          className="absolute right-4 top-4 flex h-11 w-11 items-center justify-center rounded-full bg-white text-sky-700 shadow-lg transition-all duration-300 hover:rotate-12 hover:bg-sky-600 hover:text-white"
+          className="absolute right-4 top-4 flex h-11 w-11 items-center justify-center rounded-full bg-white text-[#5B4BD6] shadow-lg transition-all duration-300 hover:rotate-12 hover:bg-[#5B4BD6] hover:text-white"
         >
           <Share2 size={18} />
         </button>
+
       </div>
 
       {/* ================= CONTENT ================= */}
 
-      <div className="flex flex-1 flex-col p-5">
+      <div className="relative flex flex-1 flex-col overflow-hidden p-6">
 
-        {/* Title */}
+        {/* Decorative background glows */}
+        <div className="pointer-events-none absolute -right-14 -top-20 h-64 w-64 rounded-full bg-fuchsia-300/20 blur-1xl animate-[float-a_8s_ease-in-out_infinite]"></div>
+        <div className="pointer-events-none absolute -bottom-4 left-14 h-116 w-116 rounded-full bg-indigo-900/50 blur-1xl animate-[float-b_10s_ease-in-out_infinite]"></div>
+        <div className="pointer-events-none absolute -right-18 -top-20 bg-transparent h-44 w-44 rounded-full border-2 border-white/40 animate-[breathe_4s_ease-in-out_infinite]"></div>
+        {/* <div className="bg-transparent pointer-events-none absolute -right-6 top-10 h-16 w-16 rounded-full border border-white/10"></div> */}
+        {/* <div
+  className="pointer-events-none absolute inset-0 opacity-[0.07]"
+  style={{
+    backgroundImage:
+      "radial-gradient(circle, #ffffff 3px, transparent 1px)",
+    backgroundSize: "18px 18px",
+  }}
+></div> */}
 
-        <h3 className="line-clamp-2 text-lg font-bold leading-snug text-sky-700 transition-colors duration-300 group-hover:text-orange-500">
-          {tour.title}
-        </h3>
+        <div className="relative z-10 flex flex-1 flex-col">
+          {/* content */}
+        </div>
 
-        {/* Price */}
+        <style>{`
+  @keyframes float-a {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(-14px, 16px) scale(1.08); }
+  }
+  @keyframes float-b {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(12px, -14px) scale(1.05); }
+  }
+  @keyframes breathe {
+    0%, 100% { opacity: 0.4; transform: scale(1); }
+    50% { opacity: 0.9; transform: scale(1.06); }
+  }
+  @keyframes sweep {
+    0% { transform: translateX(-30%); }
+    100% { transform: translateX(30%); }
+  }
+`}</style>
 
-        <div className="mt-4">
+        <div className="relative z-10 flex flex-1 flex-col">
 
-          <div className="flex items-center">
+          {/* Title */}
+          <h3 className="line-clamp-2 text-xl font-bold leading-snug text-white">
+            {tour.title}
+          </h3>
 
-            <IndianRupee
-              size={18}
-              className="mr-1 text-slate-900"
-            />
-
-            <span className="text-3xl font-black text-slate-900">
+          {/* Price */}
+          <div className="mt-3 flex items-center">
+            <IndianRupee size={17} className="mr-1 text-white" />
+            <span className="text-2xl font-black text-white">
               {startingPrice.toLocaleString()}
             </span>
-
-          </div>
-
-          <p className="mt-1 text-xs font-medium uppercase tracking-wide text-gray-500">
-            Starting From / Person
-          </p>
-
-        </div>
-
-        {/* Duration & Destination */}
-
-        <div className="mt-5 space-y-3 text-sm">
-
-          <div className="flex items-center gap-2">
-
-            <Clock3
-              size={16}
-              className="text-orange-500"
-            />
-
-            <span className="font-medium text-slate-700">
-              {startingDuration}
+            <span className="ml-2 text-xs font-medium uppercase tracking-wide text-white/90">
+              / person
             </span>
+          </div>
+
+          {/* Duration & Destination */}
+          <div className="mt-4 space-y-2.5 text-sm text-white/90">
+
+            <div className="flex items-center gap-2">
+              <Clock3 size={16} className="text-white/90" />
+              <span className="font-medium">{startingDuration}</span>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <MapPin size={16} className="flex-shrink-0 text-white/90" />
+              <span className="truncate font-medium">{tour.location}</span>
+            </div>
 
           </div>
 
-          <div className="flex items-center gap-2">
+          {/* Divider */}
+          <div className="my-5 h-px bg-white/45"></div>
 
-            <MapPin
-              size={16}
-              className="flex-shrink-0 text-sky-600"
-            />
+          {/* ================= Facilities ================= */}
 
-            <span className="truncate font-medium text-slate-700">
-              {tour.location}
-            </span>
-
+          <div className="grid grid-cols-5 gap-2">
+            {tour.facilities.slice(0, 5).map((facility) => {
+              const Icon = facility.icon;
+              return (
+                <div
+                  key={facility.id}
+                  title={facility.label}
+                  className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-white bg-white/10 text-white transition-all duration-300 group-hover:bg-white group-hover:text-[#5B4BD6]"
+                >
+                  <Icon size={18} />
+                </div>
+              );
+            })}
           </div>
 
         </div>
 
-        {/* Divider */}
+      </div>
 
-        <div className="my-5 h-px bg-slate-200"></div>
+      {/* ================= FOOTER: actions ================= */}
 
-                {/* ================= Facilities ================= */}
+      <div className="relative flex items-center justify-between gap-4 px-4 py-3">
 
-        <div className="grid grid-cols-5 gap-2">
+        {/* View Details — primary text CTA */}
+        <Link
+          to={`/packages/${tour.slug}`}
+          className="flex h-11 items-center gap-2 rounded-full border-2 border-white bg-white px-5 font-semibold text-[#5B4BD6] shadow-lg transition-all duration-300 hover:scale-[1.03] hover:bg-slate-50"
+        >
+          <span className="whitespace-nowrap">View Details</span>
+        </Link>
 
-          {tour.facilities.slice(0, 5).map((facility) => {
+        <div className="flex items-center gap-2">
 
-            const Icon = facility.icon;
+          {/* Enquiry */}
+          <Link
+            to={`/packages/${tour.slug}`}
+            title="Enquiry"
+            className="flex h-11 w-11 items-center justify-center rounded-full border-2 border-white bg-white/15 text-white transition-all duration-300 hover:scale-110 hover:bg-white hover:text-[#5B4BD6]"
+          >
+            <Send size={17} />
+          </Link>
 
-            return (
-              <div
-                key={facility.id}
-                title={facility.label}
-                className="group/icon flex h-11 w-11 items-center justify-center rounded-full border border-sky-100 bg-sky-50 text-sky-600 transition-all duration-300 hover:scale-110 hover:border-orange-400 hover:bg-orange-500 hover:text-white"
-              >
-                <Icon size={20} />
-              </div>
-            );
+          {/* WhatsApp */}
+          <a
+            href={tour.whatsapp}
+            target="_blank"
+            rel="noopener noreferrer"
+            title="WhatsApp"
+            className="flex h-11 w-11 items-center justify-center rounded-full border-2 border-white bg-white/15 text-white transition-all duration-300 hover:scale-110 hover:bg-white hover:text-green-600"
+          >
+            <FaWhatsapp size={18} />
+          </a>
 
-          })}
+          {/* Call */}
+          <a
+            href={tour.phone}
+            title="Call"
+            className="flex h-11 w-11 items-center justify-center rounded-full border-2 border-white bg-white/15 text-white transition-all duration-300 hover:scale-110 hover:bg-white hover:text-[#5B4BD6]"
+          >
+            <Phone size={16} />
+          </a>
 
         </div>
-
-        {/* Push buttons to bottom */}
-
-        {/* Buttons */}
-
-<div className="mt-auto pt-6">
-
-  <div className="flex items-center gap-2">
-
-    {/* View Details */}
-
-    <Link
-      to={`/packages/${tour.slug}`}
-      className="flex-[3] flex h-11 items-center justify-center gap-2 rounded-full border-2 border-orange-500 bg-white px-3 font-semibold text-orange-500 shadow-sm transition-all duration-300 hover:scale-[1.02] hover:bg-orange-500 hover:text-white hover:shadow-lg"
-    >
-      <Eye size={18} />
-      <span className="whitespace-nowrap">View Details</span>
-    </Link>
-
-    {/* Enquiry */}
-
-    <Link
-      to={`/packages/${tour.slug}`}
-      title="Enquiry"
-      className="flex-1 flex h-10 items-center justify-center rounded-full bg-gradient-to-r from-sky-500 to-sky-700 text-white shadow-md transition-all duration-300 hover:scale-110 hover:shadow-lg"
-    >
-      <Send size={18} />
-    </Link>
-
-    {/* WhatsApp */}
-
-    <a
-      href={tour.whatsapp}
-      target="_blank"
-      rel="noopener noreferrer"
-      title="WhatsApp"
-      className="flex-1 flex h-11 items-center justify-center rounded-full bg-green-500 text-white shadow-md transition-all duration-300 hover:scale-110 hover:bg-green-600 hover:shadow-lg"
-    >
-      <FaWhatsapp size={20} />
-    </a>
-
-    {/* Call */}
-
-    <a
-      href={tour.phone}
-      title="Call"
-      className="flex-1 flex h-11 items-center justify-center rounded-full bg-slate-800 text-white shadow-md transition-all duration-300 hover:scale-110 hover:bg-slate-900 hover:shadow-lg"
-    >
-      <Phone size={18} />
-    </a>
-
-  </div>
-
-</div>
 
       </div>
 

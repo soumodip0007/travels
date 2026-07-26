@@ -34,7 +34,7 @@ export default function TourSection() {
         disabled={page === 1}
         className={`flex h-14 w-14 items-center justify-center rounded-full transition-all duration-300 ${page === 1
           ? "cursor-not-allowed bg-slate-200 text-slate-400"
-          : "bg-gradient-to-r from-[#0F6E66] to-[#14877D] text-white shadow-lg hover:scale-110"
+          : "bg-gradient-to-r from-[#6957DF] to-[#8471F2] text-white shadow-lg hover:scale-110"
           }`}
       >
         <ChevronLeft size={22} />
@@ -48,7 +48,7 @@ export default function TourSection() {
             key={index}
             onClick={() => setPage(index + 1)}
             className={`transition-all duration-300 ${page === index + 1
-              ? "h-3 w-14 rounded-full bg-gradient-to-r from-[#E3A23D] to-[#C2185B]"
+              ? "h-3 w-14 rounded-full bg-gradient-to-r from-[#7C3AED] to-[#A855F7]"
               : "h-3 w-3 rounded-full bg-slate-300 hover:bg-slate-400"
               }`}
           />
@@ -64,7 +64,7 @@ export default function TourSection() {
         disabled={page === totalPages}
         className={`flex h-14 w-14 items-center justify-center rounded-full transition-all duration-300 ${page === totalPages
           ? "cursor-not-allowed bg-slate-200 text-slate-400"
-          : "bg-gradient-to-r from-[#E3A23D] to-[#C2185B] text-white shadow-lg hover:scale-110"
+          : "bg-gradient-to-r from-[#7C3AED] to-[#A855F7] text-white shadow-lg hover:scale-110"
           }`}
       >
         <ChevronRight size={22} />
@@ -157,7 +157,7 @@ export default function TourSection() {
   };
 
   return (
-    <section className="ts-root relative overflow-hidden bg-gradient-to-b from-white via-[#FBF8F2] to-white py-10">
+    <section className="ts-root relative overflow-hidden bg-gradient-to-b from-white via-[#FBF8F2] to-white mt-20 py-4">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap');
 
@@ -165,8 +165,8 @@ export default function TourSection() {
         .ts-serif { font-family: 'Fraunces', serif; }
 
         @keyframes ts-glow {
-          0%, 100% { box-shadow: 0 0 0 0 rgba(15, 110, 102, 0.3); }
-          50% { box-shadow: 0 0 0 6px rgba(15, 110, 102, 0); }
+          0%, 100% { box-shadow: 0 0 0 0 rgba(124, 58, 237, 0.3); }
+          50% { box-shadow: 0 0 0 6px rgba(124, 58, 237, 0); }
         }
         .ts-eyebrow { animation: ts-glow 2.6s ease-in-out infinite; }
 
@@ -190,15 +190,57 @@ export default function TourSection() {
           transition: left 0.6s ease;
         }
         .ts-cta:hover::after { left: 130%; }
+
+        @keyframes ts-drift-slow {
+          0%, 100% { transform: translate(0, 0) rotate(0deg); }
+          50% { transform: translate(20px, -25px) rotate(8deg); }
+        }
+        @keyframes ts-drift-slow-rev {
+          0%, 100% { transform: translate(0, 0) rotate(0deg); }
+          50% { transform: translate(-25px, 20px) rotate(-6deg); }
+        }
+        .ts-drift-a { animation: ts-drift-slow 14s ease-in-out infinite; }
+        .ts-drift-b { animation: ts-drift-slow-rev 17s ease-in-out infinite; }
       `}</style>
 
-      {/* Background */}
+      {/* ================= Background: large, prominent, color-themed shapes ================= */}
 
-      <div className="absolute left-0 top-20 h-72 w-72 rounded-full bg-[#E3A23D]/15 blur-3xl"></div>
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
 
-      <div className="absolute bottom-20 right-0 h-72 w-72 rounded-full bg-[#C2185B]/15 blur-3xl"></div>
+        {/* Top-left mega blob */}
+        <div className="ts-drift-a absolute -left-40 -top-40 h-[34rem] w-[34rem] rounded-full bg-gradient-to-br from-[#8471F2]/50 to-[#6957DF]/25 blur-3xl"></div>
 
-      <div className="relative mx-auto w-[96%] max-w-[1700px]">
+        {/* Top-right mega blob */}
+        <div className="ts-drift-b absolute -right-32 -top-24 h-[28rem] w-[28rem] rounded-full bg-gradient-to-bl from-[#A855F7]/45 to-[#7C3AED]/20 blur-3xl"></div>
+
+        {/* Mid-left accent blob */}
+        <div className="ts-drift-b absolute left-[8%] top-1/2 h-72 w-72 -translate-y-1/2 rounded-full bg-[#6E56E8]/35 blur-3xl"></div>
+
+        {/* Center-bottom large blob */}
+        <div className="ts-drift-a absolute bottom-[-6rem] left-1/2 h-96 w-96 -translate-x-1/2 rounded-full bg-gradient-to-t from-[#7C3AED]/40 to-transparent blur-3xl"></div>
+
+        {/* Bottom-right mega blob */}
+        <div className="ts-drift-a absolute -right-28 bottom-0 h-[30rem] w-[30rem] rounded-full bg-gradient-to-tl from-[#C2185B]/35 to-[#E3A23D]/25 blur-3xl"></div>
+
+        {/* Soft rotated square outline, top area */}
+        <div className="ts-drift-b absolute right-[18%] top-16 h-40 w-40 rotate-12 rounded-[2rem] border-2 border-[#7C3AED]/25"></div>
+
+        {/* Soft rotated ring, lower-left */}
+        <div className="ts-drift-a absolute left-[6%] bottom-24 h-56 w-56 rounded-full border-2 border-[#A855F7]/20"></div>
+
+        {/* Dot-grid texture over everything */}
+        <div
+          className="absolute inset-0 opacity-[0.08]"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle, #6957DF 1.5px, transparent 1.5px)",
+            backgroundSize: "26px 26px",
+          }}
+        ></div>
+
+      </div>
+
+      <div className="relative z-10 mx-auto w-[96%] max-w-[1700px]">
 
         {/* Main Heading */}
 
