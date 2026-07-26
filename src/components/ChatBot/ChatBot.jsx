@@ -34,7 +34,7 @@ export default function ChatBot({ loading }) {
             transition={{
               duration: 0.3,
             }}
-            className="fixed bottom-24 right-4 z-[9999]"
+            className="fixed bottom-28 right-6 z-[9999]"
           >
             <ChatWindow />
           </motion.div>
@@ -50,7 +50,7 @@ export default function ChatBot({ loading }) {
           scale: 0.92,
         }}
         onClick={() => setOpen(!open)}
-        className="fixed bottom-8 right-6 z-[9999] flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-r from-sky-600 to-orange-500 text-white shadow-[0_10px_40px_rgba(14,165,233,0.4)]"
+        className="fixed bottom-6 right-6 z-[9999] flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-r from-sky-600 to-orange-500 text-white shadow-[0_10px_40px_rgba(14,165,233,0.4)]"
       >
         {open ? <X size={28} /> : <MessageCircle size={28} />}
       </motion.button>

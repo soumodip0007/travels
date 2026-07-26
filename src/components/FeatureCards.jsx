@@ -36,7 +36,7 @@ const features = [
 
 export default function FeatureCards() {
   return (
-    <section className="relative z-40 -mt-30 mb-20">
+    <section className="relative z-40 -mt-30">
       <div className="mx-auto w-[92%] max-w-7xl">
         <div className="relative rounded-[38px] bg-purple-100 py-10 shadow-[0_30px_80px_rgba(0,0,0,.12)]">
           {/* Top Curve */}

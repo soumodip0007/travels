@@ -7,7 +7,6 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer/Footer";
 import ScrollTop from "./components/ScrollTop";
 import PageLoader from "./components/PageLoader";
-
 import Home from "./pages/Home";
 import Gallery from "./pages/Gallery";
 import About from "./pages/About";
@@ -15,6 +14,8 @@ import Contact from "./pages/Contact";
 import PackageDetails from "./pages/PackageDetails";
 import Error404 from "./pages/Error404";
 import ChatBot from "./components/ChatBot/ChatBot";
+import WhatsAppButton from "./components/WhatsAppButton";
+import PhoneButton from "./components/PhoneButton";
 
 const App = () => {
   const location = useLocation();
@@ -44,17 +45,24 @@ const App = () => {
       <PageLoader loading={loading} />
 
       <Navbar />
-        <Routes location={location}>
-          <Route path="/" element={<Home />} />
-          <Route path="/gallery" element={<Gallery />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/packages/:slug" element={<PackageDetails />} />
-          <Route path="*" element={<Error404 />} />
-        </Routes>
+      <Routes location={location}>
+        <Route path="/" element={<Home />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/packages/:slug" element={<PackageDetails />} />
+        <Route path="*" element={<Error404 />} />
+      </Routes>
 
       <Footer />
-      {!loading && <ChatBot/>}
+      
+      {!loading && (
+        <>
+          <ChatBot />
+          <PhoneButton />
+          <WhatsAppButton />
+        </>
+      )}
       <ScrollTop />
     </>
   );

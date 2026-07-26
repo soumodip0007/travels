@@ -33,8 +33,8 @@ export default function TourSection() {
         onClick={() => setPage((prev) => Math.max(prev - 1, 1))}
         disabled={page === 1}
         className={`flex h-14 w-14 items-center justify-center rounded-full transition-all duration-300 ${page === 1
-            ? "cursor-not-allowed bg-slate-200 text-slate-400"
-            : "bg-gradient-to-r from-[#0F6E66] to-[#14877D] text-white shadow-lg hover:scale-110"
+          ? "cursor-not-allowed bg-slate-200 text-slate-400"
+          : "bg-gradient-to-r from-[#0F6E66] to-[#14877D] text-white shadow-lg hover:scale-110"
           }`}
       >
         <ChevronLeft size={22} />
@@ -48,8 +48,8 @@ export default function TourSection() {
             key={index}
             onClick={() => setPage(index + 1)}
             className={`transition-all duration-300 ${page === index + 1
-                ? "h-3 w-14 rounded-full bg-gradient-to-r from-[#E3A23D] to-[#C2185B]"
-                : "h-3 w-3 rounded-full bg-slate-300 hover:bg-slate-400"
+              ? "h-3 w-14 rounded-full bg-gradient-to-r from-[#E3A23D] to-[#C2185B]"
+              : "h-3 w-3 rounded-full bg-slate-300 hover:bg-slate-400"
               }`}
           />
         ))}
@@ -63,8 +63,8 @@ export default function TourSection() {
         }
         disabled={page === totalPages}
         className={`flex h-14 w-14 items-center justify-center rounded-full transition-all duration-300 ${page === totalPages
-            ? "cursor-not-allowed bg-slate-200 text-slate-400"
-            : "bg-gradient-to-r from-[#E3A23D] to-[#C2185B] text-white shadow-lg hover:scale-110"
+          ? "cursor-not-allowed bg-slate-200 text-slate-400"
+          : "bg-gradient-to-r from-[#E3A23D] to-[#C2185B] text-white shadow-lg hover:scale-110"
           }`}
       >
         <ChevronRight size={22} />
@@ -98,18 +98,15 @@ export default function TourSection() {
     };
 
     return (
-      <div className="mb-24">
+      <div className="mb-15">
 
         {/* Heading */}
 
         <div className="mb-12 text-center">
 
-          <span
-            className={`ts-eyebrow inline-block rounded-full px-5 py-2 text-sm font-semibold text-white ${color === "orange" ? "bg-[#6957DF]" : "bg-[#6957DF]"
-              }`}
-          >
+          {/* <p className="mx-auto max-w-3xl text-lg leading-8 text-slate-500 md:text-xl">
             {subtitle}
-          </span>
+          </p> */}
 
           <h3 className="ts-serif mt-5 text-4xl font-bold text-[#1E2A47]">
             {title}
@@ -205,7 +202,7 @@ export default function TourSection() {
 
         {/* Main Heading */}
 
-        <div className="mx-auto mb-20 max-w-3xl text-center">
+        <div className="mx-auto max-w-3xl text-center">
 
           <h2 className="ts-serif mt-6 whitespace-nowrap text-4xl font-bold leading-tight text-[#1E2A47] md:text-6xl">
             Our Popular{" "}
