@@ -14,18 +14,18 @@ export default function TourDayCard({ day, circleRef }) {
 
       <div
         ref={circleRef}
-        className="absolute left-0 top-2 hidden h-16 w-16 items-center justify-center rounded-full bg-gradient-to-r from-[#6957DF] to-[#9F7AEA] text-xl font-bold text-white shadow-xl md:flex"
+        className="absolute left-0 top-2 hidden h-16 w-16 items-center justify-center rounded-full bg-gradient-to-r from-[#6957DF] to-[#9F7AEA] text-xl font-bold text-white shadow-[0_0_30px_rgba(107,90,225,0.8)] md:flex"
       >
         {day.day}
       </div>
 
       {/* Card */}
 
-      <div className="overflow-hidden rounded-3xl border border-purple-100 bg-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
+      <div className="overflow-hidden rounded-3xl border border-purple-100 bg-gradient-to-br from-[#6957DF]/15 via-[#9F7AEA]/10 to-purple-100 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
         {/* Top */}
 
-        <div className="border-b border-purple-50 p-8">
-          <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+        <div className="border-b border-purple-50 p-8 bg-gradient-to-br from-[#7C3AED] via-purple-300 to-purple-400 ">
+          <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between ">
             <div>
               <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-purple-100 px-4 py-1 text-sm font-semibold text-[#6957DF]">
                 <CalendarDays size={16} />

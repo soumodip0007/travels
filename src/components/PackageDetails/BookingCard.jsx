@@ -44,7 +44,8 @@ export default function BookingCard({
   return (
     <div>
 
-      <div className="sticky top-28 rounded-3xl border border-purple-100 bg-white p-7 shadow-[0_30px_80px_rgba(105,87,223,0.14)]">
+      <div className="sticky top-28 rounded-3xl border border-purple-100 bg-gradient-to-br from-purple-200 via-purple-50 to-purple-100 p-7 shadow-[0_30px_80px_rgba(105,87,223,0.14)]">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(159,122,234,0.18),transparent_45%),radial-gradient(circle_at_bottom_left,rgba(105,87,223,0.12),transparent_50%)]"></div>
 
         {/* Rating */}
         <div className="mb-5 flex items-center justify-between">
