@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { Menu, X, MapPinned, Plane } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useEnquiry } from "../context/EnquiryContext";
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { openEnquiry } = useEnquiry();
 
   const navItems = [
     { name: "Home", path: "/" },
@@ -73,9 +75,11 @@ export default function Navbar() {
               </button>
 
               {/* Book Button */}
-              <button className="relative overflow-hidden rounded-full bg-gradient-to-r from-[#6957DF] via-[#7C3AED] to-[#A855F7] px-7 py-3 font-semibold text-white shadow-xl transition-all duration-500 hover:scale-105 hover:shadow-purple-500/40">
+              <button className="relative overflow-hidden rounded-full bg-gradient-to-r from-[#6957DF] via-[#7C3AED] to-[#A855F7] px-7 py-3 font-semibold text-white shadow-xl transition-all duration-500 hover:scale-105 hover:shadow-purple-500/40"
+              onClick={() => openEnquiry()}
+              >
                 <span className="absolute inset-0 bg-white opacity-0 hover:opacity-20 transition duration-500"></span>
-                Book Now
+                Enquire Now
               </button>
             </div>
 

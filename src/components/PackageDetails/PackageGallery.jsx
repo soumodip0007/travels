@@ -25,9 +25,9 @@ export default function PackageGallery({ tour }) {
   if (!images.length) return null;
 
   return (
-    <section className="mt-20">
+    <section className="mt-12">
 
-      <div className="mx-auto w-[92%] max-w-7xl">
+      <div className="mx-auto w-[100%] max-w-7xl">
 
         <div
           className="
@@ -39,14 +39,15 @@ export default function PackageGallery({ tour }) {
               bg-white/80
               backdrop-blur-1xl
               shadow-[0_25px_60px_rgba(105,87,223,0.12)]
-              p-8
+              px-8
+              py-4
               md:p-10
             "
         >
 
           {/* Heading */}
 
-          <div className="mb-8 flex items-end justify-between">
+          <div className="mb-6 flex items-end justify-between">
 
             <div>
 
@@ -54,9 +55,9 @@ export default function PackageGallery({ tour }) {
                 Package Gallery
               </h2>
 
-              <p className="mt-2 text-slate-500">
+              {/* <p className="mt-2 text-slate-500">
                 Beautiful memories captured during this journey.
-              </p>
+              </p> */}
 
             </div>
 

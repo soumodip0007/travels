@@ -12,7 +12,7 @@ const slides = [
     title: "Discover Paradise",
     description:
       "Escape into breathtaking destinations where turquoise waters, golden beaches and unforgettable adventures await.",
-    button1: "Book Now",
+    button1: "Enquire Now",
     button2: "Explore Tours",
   },
   {

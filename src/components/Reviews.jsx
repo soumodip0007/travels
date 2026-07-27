@@ -187,20 +187,24 @@ export default function Reviews() {
   };
 
   return (
-    <section ref={sectionRef} className="relative scroll-mt-24 bg-gradient-to-b from-white via-sky-50/50 to-white py-24">
+    <section ref={sectionRef} className="relative scroll-mt-24 border-white/70
+    rounded-[36px]
+              bg-white/80
+              backdrop-blur-1xl
+              shadow-[0_25px_60px_rgba(105,87,223,0.12)]
+              mt-12
+              p-8
+              md:p-10">
       <div className="mx-auto w-[92%] max-w-7xl">
         {/* Header */}
-        <div className="mx-auto mb-16 max-w-2xl text-center">
+        <div className="mx-auto mb-8 max-w-2xl text-center">
           <span className="inline-block rounded-full bg-gradient-to-r from-[#6957DF] via-[#7C3AED] to-[#A855F7] px-4 py-1 text-xs font-bold uppercase tracking-widest text-white">
             Traveler Stories
           </span>
-          <h2 className="mt-5 text-4xl font-extrabold text-slate-800 md:text-5xl">
+          <h2 className="mt-4 text-4xl font-extrabold text-slate-800 md:text-5xl">
             Loved by <span className="text-[#6957DF]">thousands</span> of
             travelers
           </h2>
-          <p className="mt-4 text-gray-500">
-            Real trips, real feedback — in their own words and on camera.
-          </p>
         </div>
 
         {/* Grid */}
@@ -284,38 +288,45 @@ export default function Reviews() {
         </div>
 
         {/* Pagination */}
-        {/* Pagination */}
 
         {totalPages > 1 && (
 
-          <div className="mt-14 flex items-center justify-center gap-5">
+          <div className="mt-14 flex items-center justify-center gap-6">
 
             {/* Previous */}
 
             <button
-              onClick={() => goToPage(page - 1)}
+              onClick={() => page > 1 && setPage(page - 1)}
               disabled={page === 1}
-              className={`flex h-14 w-14 items-center justify-center rounded-full text-2xl transition-all duration-300 ${page === 1
-                  ? "cursor-not-allowed bg-slate-200 text-slate-400"
-                  : "bg-gradient-to-r from-sky-600 to-sky-500 text-white shadow-lg hover:scale-110"
-                }`}
+              className={`
+      flex h-16 w-16 items-center justify-center
+      rounded-full
+      transition-all duration-300
+      ${page === 1
+                  ? "bg-[#EAEAF4] text-[#94A3B8]"
+                  : "bg-[#EEF0F8] text-[#7C87A3] hover:scale-110 hover:shadow-xl"
+                }
+    `}
             >
-              <ChevronLeft size={22} />
+              <ChevronLeft size={26} strokeWidth={2.4} />
             </button>
 
-            {/* Dots */}
+            {/* Indicators */}
 
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-4">
 
               {Array.from({ length: totalPages }).map((_, index) => (
 
                 <button
                   key={index}
-                  onClick={() => goToPage(index + 1)}
-                  className={`transition-all duration-300 ${page === index + 1
-                      ? "h-3 w-14 rounded-full bg-gradient-to-r from-sky-600 to-orange-500"
-                      : "h-3 w-3 rounded-full bg-slate-300 hover:bg-slate-400"
-                    }`}
+                  onClick={() => setPage(index + 1)}
+                  className={`
+          transition-all duration-500
+          ${page === index + 1
+                      ? "h-4 w-20 rounded-full bg-gradient-to-r from-[#6957DF] to-[#9B5CF7] shadow-[0_6px_18px_rgba(105,87,223,.35)]"
+                      : "h-4 w-4 rounded-full bg-[#C7D2E2] hover:scale-125 hover:bg-[#9B5CF7]"
+                    }
+        `}
                 />
 
               ))}
@@ -325,14 +336,19 @@ export default function Reviews() {
             {/* Next */}
 
             <button
-              onClick={() => goToPage(page + 1)}
+              onClick={() => page < totalPages && setPage(page + 1)}
               disabled={page === totalPages}
-              className={`flex h-14 w-14 items-center justify-center rounded-full text-2xl transition-all duration-300 ${page === totalPages
-                  ? "cursor-not-allowed bg-slate-200 text-slate-400"
-                  : "bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg hover:scale-110"
-                }`}
+              className={`
+      flex h-16 w-16 items-center justify-center
+      rounded-full
+      transition-all duration-300
+      ${page === totalPages
+                  ? "bg-[#EAEAF4] text-[#94A3B8]"
+                  : "bg-gradient-to-br from-[#7B4DFF] to-[#9A56FF] text-white shadow-[0_12px_30px_rgba(123,77,255,.45)] hover:scale-110 hover:shadow-[0_18px_40px_rgba(123,77,255,.55)]"
+                }
+    `}
             >
-              <ChevronRight size={22} />
+              <ChevronRight size={26} strokeWidth={2.4} />
             </button>
 
           </div>

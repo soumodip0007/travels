@@ -16,6 +16,7 @@ import Error404 from "./pages/Error404";
 import ChatBot from "./components/ChatBot/ChatBot";
 import WhatsAppButton from "./components/WhatsAppButton";
 import PhoneButton from "./components/PhoneButton";
+import EnquiryProvider from "./context/EnquiryContext";
 
 const App = () => {
   const location = useLocation();
@@ -42,28 +43,30 @@ const App = () => {
 
   return (
     <>
-      <PageLoader loading={loading} />
+      <EnquiryProvider>
+        <PageLoader loading={loading} />
 
-      <Navbar />
-      <Routes location={location}>
-        <Route path="/" element={<Home />} />
-        <Route path="/gallery" element={<Gallery />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/packages/:slug" element={<PackageDetails />} />
-        <Route path="*" element={<Error404 />} />
-      </Routes>
+        <Navbar />
+        <Routes location={location}>
+          <Route path="/" element={<Home />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/packages/:slug" element={<PackageDetails />} />
+          <Route path="*" element={<Error404 />} />
+        </Routes>
 
-      <Footer />
-      
-      {!loading && (
-        <>
-          <ChatBot />
-          <PhoneButton />
-          <WhatsAppButton />
-        </>
-      )}
-      <ScrollTop />
+        <Footer />
+
+        {!loading && (
+          <>
+            <ChatBot />
+            <PhoneButton />
+            <WhatsAppButton />
+          </>
+        )}
+        <ScrollTop />
+      </EnquiryProvider>
     </>
   );
 };

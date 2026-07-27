@@ -193,7 +193,7 @@ export default function BookingCard({
             <button
               className="w-1/2 flex justify-center rounded-full bg-gradient-to-r from-fuchsia-500 via-purple-500 to-violet-600 py-4 text-lg font-bold text-white shadow-[0_20px_50px_rgba(168,85,247,.45)] transition-all duration-500 hover:scale-105 hover:shadow-[0_30px_70px_rgba(168,85,247,.6)]"
             >
-              Book Now
+              Enquire Now
             </button>
           </div>
 

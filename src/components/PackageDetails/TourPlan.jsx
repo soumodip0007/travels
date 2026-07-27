@@ -78,27 +78,31 @@ export default function TourPlan({
   }, [selectedPackage, currentItinerary]);
 
   return (
-    <section className="bg-white py-6">
+    <section className="rounded-[36px]
+              border
+              border-white/70
+              bg-white/80
+              backdrop-blur-1xl
+              shadow-[0_25px_60px_rgba(105,87,223,0.12)]
+              mt-12
+              ">
       <div className="mx-auto w-[92%] max-w-7xl">
 
         {/* Heading */}
-        <div className="mb-8 text-center">
+        <div className="mt-8 text-center">
           <span className="rounded-full bg-purple-100 px-4 py-2 text-sm font-semibold text-[#6957DF]">
             Tour Itinerary
           </span>
 
-          <h2 className="mt-5 text-4xl font-bold text-slate-900">
+          <h2 className="mt-3 text-4xl font-bold text-slate-900">
             Day Wise Tour Plan
           </h2>
 
-          <p className="mt-3 text-gray-600">
-            Explore every destination with our carefully designed itinerary.
-          </p>
         </div>
 
         {/* Current Package Details */}
         {currentPackage && (
-          <div className="mb-10 flex flex-wrap justify-center gap-6">
+          <div className="mb-8 mt-6 flex flex-wrap justify-center gap-6">
 
             <div className="rounded-2xl bg-purple-50 px-8 py-5 shadow">
               <p className="text-sm text-gray-500">
@@ -124,7 +128,7 @@ export default function TourPlan({
         )}
 
         {/* Package Buttons */}
-        <div className="mb-12 flex flex-wrap justify-center gap-4">
+        <div className="mb-8 flex flex-wrap justify-center gap-4">
           {packageOptions.map((pkg) => {
 
             const isAvailable =
@@ -145,13 +149,12 @@ export default function TourPlan({
                     : { scale: 1 }
                 }
                 transition={{ duration: 0.35, ease: "easeOut" }}
-                className={`rounded-full px-6 py-3 text-sm font-semibold transition-colors duration-300 ${
-                  isSelected
+                className={`rounded-full px-6 py-3 text-sm font-semibold transition-colors duration-300 ${isSelected
                     ? "bg-gradient-to-r from-[#6957DF] to-[#9F7AEA] text-white shadow-lg"
                     : isAvailable
-                    ? "bg-purple-100 text-[#6957DF] hover:bg-purple-200"
-                    : "cursor-not-allowed bg-gray-200 text-gray-400 opacity-60"
-                }`}
+                      ? "bg-purple-100 text-[#6957DF] hover:bg-purple-200"
+                      : "cursor-not-allowed bg-gray-200 text-gray-400 opacity-60"
+                  }`}
               >
                 {pkg.label}
               </motion.button>
@@ -164,7 +167,7 @@ export default function TourPlan({
           <div ref={containerRef} className="relative">
 
             <div
-              className="absolute left-8 hidden w-1 rounded-full bg-purple-100 md:block"
+              className="absolute left-8 hidden w-1 rounded-full bg-purple-300 md:block"
               style={{
                 top: lineStyle.top,
                 height: lineStyle.height,

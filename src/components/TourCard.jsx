@@ -220,7 +220,7 @@ export default function TourCard({ tour }) {
           {/* Enquiry */}
           <Link
             to={`/packages/${tour.slug}`}
-            title="Enquiry"
+            title="Enquire Now"
             className="flex h-11 w-11 items-center justify-center rounded-full border-2 border-white bg-white/15 text-white transition-all duration-300 hover:scale-110 hover:bg-white hover:text-[#5B4BD6]"
           >
             <Send size={17} />

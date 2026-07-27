@@ -25,7 +25,7 @@ const Gallery = () => {
   };
 
   return (
-    <section className="bg-gradient-to-b from-sky-50 to-white py-20">
+    <section className="bg-gradient-to-b from-[#F7F5FF] to-white py-20">
 
       <div className="mx-auto w-[92%] max-w-7xl">
 
@@ -33,7 +33,7 @@ const Gallery = () => {
 
         <div className="mb-16 text-center">
 
-          <span className="inline-flex items-center gap-2 rounded-full bg-orange-100 px-5 py-2 text-sm font-semibold text-orange-600">
+          <span className="inline-flex items-center gap-2 rounded-full bg-[#EDE9FE] px-5 py-2 text-sm font-semibold text-[#6957DF]">
             <Camera size={16} />
             Travel Memories
           </span>
@@ -144,7 +144,7 @@ const Gallery = () => {
                 <button
                   onClick={() => setIsMaximized(true)}
                   disabled={isMaximized}
-                  className="rounded-full bg-slate-800/90 p-2.5 text-white shadow-lg transition hover:bg-sky-500 disabled:cursor-not-allowed disabled:bg-slate-800/40 disabled:text-white/40"
+                  className="rounded-full bg-slate-800/90 p-2.5 text-white shadow-lg transition hover:bg-[#6957DF] disabled:cursor-not-allowed disabled:bg-slate-800/40 disabled:text-white/40"
                   aria-label="Maximize"
                 >
                   <Maximize2 size={18} />
@@ -153,7 +153,7 @@ const Gallery = () => {
                 <button
                   onClick={() => setIsMaximized(false)}
                   disabled={!isMaximized}
-                  className="rounded-full bg-slate-800/90 p-2.5 text-white shadow-lg transition hover:bg-orange-500 disabled:cursor-not-allowed disabled:bg-slate-800/40 disabled:text-white/40"
+                  className="rounded-full bg-slate-800/90 p-2.5 text-white shadow-lg transition hover:bg-[#A855F7] disabled:cursor-not-allowed disabled:bg-slate-800/40 disabled:text-white/40"
                   aria-label="Minimize"
                 >
                   <Minimize2 size={18} />

@@ -5,7 +5,16 @@ import {
 
 export default function IncludedExcluded({ tour }) {
   return (
-    <section className="bg-purple-50/40 py-16">
+    <section className="rounded-[36px]
+              border
+              border-white/70
+              bg-white/80
+              backdrop-blur-1xl
+              shadow-[0_25px_60px_rgba(105,87,223,0.12)]
+              mt-12
+              p-8
+              md:p-10
+              ">
       <div className="mx-auto w-[92%] max-w-7xl">
 
         {/* Heading */}
