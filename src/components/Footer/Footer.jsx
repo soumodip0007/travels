@@ -7,7 +7,7 @@ import FooterBottom from "./FooterBottom";
 
 export default function Footer() {
   return (
-    <footer className="relative mt-20 overflow-hidden bg-slate-950 text-white">
+    <footer className="relative overflow-hidden bg-slate-950 text-white">
 
       {/* Background Image */}
       <div
