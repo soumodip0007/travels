@@ -29,146 +29,158 @@ export default function PackageGallery({ tour }) {
 
       <div className="mx-auto w-[92%] max-w-7xl">
 
-        {/* Heading */}
+        <div
+          className="
+              relative
+              overflow-hidden
+              rounded-[36px]
+              border
+              border-white/70
+              bg-white/80
+              backdrop-blur-1xl
+              shadow-[0_25px_60px_rgba(105,87,223,0.12)]
+              p-8
+              md:p-10
+            "
+        >
 
-        <div className="mb-8 flex items-end justify-between">
+          {/* Heading */}
 
-          <div>
+          <div className="mb-8 flex items-end justify-between">
 
-            <h2 className="text-4xl font-black text-[#6957DF]">
-              Package Gallery
-            </h2>
+            <div>
 
-            <p className="mt-2 text-slate-500">
-              Beautiful memories captured during this journey.
-            </p>
+              <h2 className="text-4xl font-black text-[#6957DF]">
+                Package Gallery
+              </h2>
 
-          </div>
-
-          <div className="hidden rounded-full bg-purple-100 px-5 py-2 text-sm font-semibold text-[#6957DF] md:block">
-            {images.length} Photos
-          </div>
-
-        </div>
-
-        {/* Images */}
-
-        <AnimatePresence mode="wait">
-
-          <motion.div
-            key={page}
-            initial={{
-              opacity: 0,
-              y: 20,
-            }}
-            animate={{
-              opacity: 1,
-              y: 0,
-            }}
-            exit={{
-              opacity: 0,
-              y: -20,
-            }}
-            transition={{
-              duration: .35,
-            }}
-            className="grid gap-7 md:grid-cols-2 lg:grid-cols-3"
-          >
-
-            {currentImages.map((img, index) => (
-
-              <motion.div
-                key={index}
-                whileHover={{
-                  y: -8,
-                }}
-                className="group relative overflow-hidden rounded-[28px] shadow-xl"
-              >
-
-                <img
-                  src={img}
-                  alt=""
-                  onClick={() => setPreview(img)}
-                  className="h-[260px] w-full cursor-pointer object-cover transition duration-700 group-hover:scale-110"
-                />
-
-                {/* Overlay */}
-
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent opacity-0 transition duration-300 group-hover:opacity-100">
-
-                  <button
-                    onClick={() => setPreview(img)}
-                    className="absolute bottom-5 right-5 flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#6957DF] shadow-xl transition hover:scale-110"
-                  >
-                    <Expand size={20} />
-                  </button>
-
-                </div>
-
-              </motion.div>
-
-            ))}
-
-          </motion.div>
-
-        </AnimatePresence>
-
-        {/* Pagination */}
-
-        {totalPages > 1 && (
-
-          <div className="mt-8 flex items-center justify-center gap-5">
-
-            <button
-              onClick={() => page > 1 && setPage(page - 1)}
-              disabled={page === 1}
-              className={`flex h-11 w-11 items-center justify-center rounded-full transition ${
-                page === 1
-                  ? "cursor-not-allowed bg-slate-200 text-slate-400"
-                  : "bg-white shadow-lg hover:scale-110"
-              }`}
-            >
-              <ChevronLeft size={20} />
-            </button>
-
-            <div className="flex items-center gap-3">
-
-              {Array.from({ length: totalPages }).map((_, i) => (
-
-                <button
-                  key={i}
-                  onClick={() => setPage(i + 1)}
-                  className={`transition-all duration-300 ${
-                    page === i + 1
-                      ? "h-3 w-10 rounded-full bg-gradient-to-r from-[#6957DF] to-[#9F7AEA]"
-                      : "h-3 w-3 rounded-full bg-slate-300 hover:bg-slate-400"
-                  }`}
-                />
-
-              ))}
+              <p className="mt-2 text-slate-500">
+                Beautiful memories captured during this journey.
+              </p>
 
             </div>
 
-            <button
-              onClick={() =>
-                page < totalPages && setPage(page + 1)
-              }
-              disabled={page === totalPages}
-              className={`flex h-11 w-11 items-center justify-center rounded-full transition ${
-                page === totalPages
-                  ? "cursor-not-allowed bg-slate-200 text-slate-400"
-                  : "bg-gradient-to-r from-[#6957DF] to-[#9F7AEA] text-white shadow-lg hover:scale-110"
-              }`}
-            >
-              <ChevronRight size={20} />
-            </button>
+            <div className="hidden rounded-full bg-purple-100 px-5 py-2 text-sm font-semibold text-[#6957DF] md:block">
+              {images.length} Photos
+            </div>
 
           </div>
 
-        )}
+          {/* Images */}
 
+          <AnimatePresence mode="wait">
+
+            <motion.div
+              key={page}
+              initial={{
+                opacity: 0,
+                y: 20,
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+              }}
+              exit={{
+                opacity: 0,
+                y: -20,
+              }}
+              transition={{
+                duration: .35,
+              }}
+              className="grid gap-7 md:grid-cols-2 lg:grid-cols-3"
+            >
+
+              {currentImages.map((img, index) => (
+
+                <motion.div
+                  key={index}
+                  whileHover={{
+                    y: -8,
+                  }}
+                  className="group relative overflow-hidden rounded-[28px] shadow-xl"
+                >
+
+                  <img
+                    src={img}
+                    alt=""
+                    onClick={() => setPreview(img)}
+                    className="h-[260px] w-full cursor-pointer object-cover transition duration-700 group-hover:scale-110"
+                  />
+
+                  {/* Overlay */}
+
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent opacity-0 transition duration-300 group-hover:opacity-100">
+
+                    <button
+                      onClick={() => setPreview(img)}
+                      className="absolute bottom-5 right-5 flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#6957DF] shadow-xl transition hover:scale-110"
+                    >
+                      <Expand size={20} />
+                    </button>
+
+                  </div>
+
+                </motion.div>
+
+              ))}
+
+            </motion.div>
+
+          </AnimatePresence>
+
+          {/* Pagination */}
+
+          {totalPages > 1 && (
+
+            <div className="mt-8 flex items-center justify-center gap-5">
+
+              <button
+                onClick={() => page > 1 && setPage(page - 1)}
+                disabled={page === 1}
+                className={`flex h-11 w-11 items-center justify-center rounded-full transition ${page === 1
+                  ? "cursor-not-allowed bg-slate-200 text-slate-400"
+                  : "bg-white shadow-lg hover:scale-110"
+                  }`}
+              >
+                <ChevronLeft size={20} />
+              </button>
+
+              <div className="flex items-center gap-3">
+
+                {Array.from({ length: totalPages }).map((_, i) => (
+
+                  <button
+                    key={i}
+                    onClick={() => setPage(i + 1)}
+                    className={`transition-all duration-300 ${page === i + 1
+                      ? "h-3 w-10 rounded-full bg-gradient-to-r from-[#6957DF] to-[#9F7AEA]"
+                      : "h-3 w-3 rounded-full bg-slate-300 hover:bg-slate-400"
+                      }`}
+                  />
+
+                ))}
+
+              </div>
+
+              <button
+                onClick={() =>
+                  page < totalPages && setPage(page + 1)
+                }
+                disabled={page === totalPages}
+                className={`flex h-11 w-11 items-center justify-center rounded-full transition ${page === totalPages
+                  ? "cursor-not-allowed bg-slate-200 text-slate-400"
+                  : "bg-gradient-to-r from-[#6957DF] to-[#9F7AEA] text-white shadow-lg hover:scale-110"
+                  }`}
+              >
+                <ChevronRight size={20} />
+              </button>
+
+            </div>
+
+          )}
+
+        </div>
       </div>
-
       {/* Preview */}
 
       <AnimatePresence>
