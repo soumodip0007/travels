@@ -11,7 +11,7 @@ const clientsData = [
 
 function LogoCard({ item }) {
   return (
-    <div className="mx-5 flex h-28 w-52 shrink-0 items-center justify-center rounded-xl border border-slate-200 bg-white shadow-md transition-all duration-300 hover:-translate-y-2 hover:border-sky-500 hover:shadow-xl">
+    <div className="mx-5 flex h-28 w-52 shrink-0 items-center justify-center rounded-xl border border-purple-200 bg-white/90 backdrop-blur-sm shadow-lg transition-all duration-500 hover:-translate-y-2 hover:border-[#6957DF] hover:shadow-[0_15px_35px_rgba(105,87,223,0.35)]">
       <img
         src={item.url}
         alt={item.name}

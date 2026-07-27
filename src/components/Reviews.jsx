@@ -191,7 +191,7 @@ export default function Reviews() {
       <div className="mx-auto w-[92%] max-w-7xl">
         {/* Header */}
         <div className="mx-auto mb-16 max-w-2xl text-center">
-          <span className="inline-block rounded-full bg-gradient-to-r from-sky-500 to-blue-600 px-4 py-1 text-xs font-bold uppercase tracking-widest text-white">
+          <span className="inline-block rounded-full bg-gradient-to-r from-[#6957DF] via-[#7C3AED] to-[#A855F7] px-4 py-1 text-xs font-bold uppercase tracking-widest text-white">
             Traveler Stories
           </span>
           <h2 className="mt-5 text-4xl font-extrabold text-slate-800 md:text-5xl">

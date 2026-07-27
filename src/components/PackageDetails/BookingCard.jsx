@@ -44,133 +44,160 @@ export default function BookingCard({
   return (
     <div>
 
-      <div className="sticky top-28 rounded-3xl border border-purple-100 bg-gradient-to-br from-purple-200 via-purple-50 to-purple-100 p-7 shadow-[0_30px_80px_rgba(105,87,223,0.14)]">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(159,122,234,0.18),transparent_45%),radial-gradient(circle_at_bottom_left,rgba(105,87,223,0.12),transparent_50%)]"></div>
+      <div className="relative sticky top-28 overflow-hidden rounded-[32px] border border-purple-400/20 bg-gradient-to-br from-[#6D28D9] via-[#4C1D95] to-[#2E1065] p-7 shadow-[0_40px_80px_rgba(109,40,217,.35)]">
+  
+  {/* ================= BACKGROUND DESIGN ================= */}
 
-        {/* Rating */}
-        <div className="mb-5 flex items-center justify-between">
+  {/* Top Glow */}
+  <div className="absolute -top-32 -left-24 h-72 w-72 rounded-full bg-fuchsia-400/40 blur-[120px]" />
 
-          <span className="text-lg font-semibold text-slate-700">
-            Rating
-          </span>
+  {/* Right Glow */}
+  <div className="absolute -right-24 top-10 h-72 w-72 rounded-full bg-violet-500/30 blur-[120px]" />
 
-          <div className="flex items-center gap-2 rounded-full bg-purple-100 px-4 py-2 font-bold text-[#6957DF]">
+  {/* Bottom Glow */}
+  <div className="absolute -bottom-32 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-purple-300/20 blur-[120px]" />
 
-            <Star
-              size={18}
-              className="fill-yellow-400 text-yellow-400"
-            />
+  {/* Large Wave */}
+  <div className="absolute bottom-0 left-0 h-60 w-full rounded-t-[100%] bg-gradient-to-r from-fuchsia-500/25 via-purple-400/15 to-violet-500/25 blur-md" />
 
-            {tour.rating}
+  {/* Second Wave */}
+  <div className="absolute bottom-6 left-0 h-48 w-full rounded-t-[100%] border-t border-white/20 bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-70" />
 
-          </div>
+  {/* Third Wave */}
+  <div className="absolute bottom-12 left-0 h-36 w-full rounded-t-[100%] border-t border-fuchsia-300/20 opacity-60" />
 
-        </div>
+  {/* Thin Curve 1 */}
+  <div className="absolute bottom-16 left-[-10%] h-52 w-[120%] rounded-t-[100%] border-t border-white/10" />
 
-        {/* Price */}
-        <div className="mb-6">
+  {/* Thin Curve 2 */}
+  <div className="absolute bottom-24 left-[-10%] h-64 w-[120%] rounded-t-[100%] border-t border-fuchsia-300/20" />
 
-          <p className="text-sm text-gray-500">
-            Starting From
-          </p>
+  {/* Thin Curve 3 */}
+  <div className="absolute bottom-32 left-[-10%] h-80 w-[120%] rounded-t-[100%] border-t border-purple-300/10" />
 
-          <div className="mt-2 flex items-center">
+  {/* Vertical Glow */}
+  <div className="absolute left-1/2 top-10 h-60 w-px -translate-x-1/2 bg-gradient-to-b from-transparent via-fuchsia-300/80 to-transparent blur-sm" />
 
-            <IndianRupee
-              size={28}
-              className="text-slate-900"
-            />
+  {/* Shine */}
+  <div className="absolute inset-0 bg-[linear-gradient(130deg,transparent_35%,rgba(255,255,255,.12)_50%,transparent_65%)]" />
 
-            <span className="text-4xl font-black text-slate-900 tabular-nums">
-              {animatedPrice.toLocaleString()}
-            </span>
+  {/* Noise Overlay */}
+  <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,#fff_1px,transparent_1px)] [background-size:18px_18px]" />
 
-          </div>
+  {/* ================= CONTENT ================= */}
 
-          <p className="text-gray-500">
-            / Per Person
-          </p>
+  <div className="relative z-10">
 
-        </div>
+    {/* Rating */}
+    <div className="mb-5 flex items-center justify-between">
 
-        {/* Duration */}
-        <div className="group mb-4 flex items-center gap-3 rounded-xl bg-purple-50 p-4 transition-all duration-500 hover:-translate-y-1 hover:shadow-lg">
+      <span className="text-lg font-semibold text-white">
+        Rating
+      </span>
 
-          <div
-            className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl
-            border-2 border-[#6957DF]
-            bg-white
-            text-[#6957DF]
-            shadow-sm
-            transition-all duration-500
-            group-hover:scale-110
-            group-hover:rotate-6
-            group-hover:border-transparent
-            group-hover:bg-gradient-to-br
-            group-hover:from-[#6957DF]
-            group-hover:to-[#9F7AEA]
-            group-hover:text-white"
-          >
-            <Clock3 size={20} />
-          </div>
+      <div className="flex items-center gap-2 rounded-full bg-white/15 backdrop-blur-md px-4 py-2 font-bold text-white border border-white/20">
 
-          <div>
+        <Star
+          size={18}
+          className="fill-yellow-400 text-yellow-400"
+        />
 
-            <p className="text-sm text-gray-500">
-              Duration
-            </p>
-
-            <p className="font-semibold text-slate-800">
-              {displayDuration}
-            </p>
-
-          </div>
-
-        </div>
-
-        {/* Destination */}
-        <div className="group mb-8 flex items-center gap-3 rounded-xl bg-purple-50 p-4 transition-all duration-500 hover:-translate-y-1 hover:shadow-lg">
-
-          <div
-            className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl
-            border-2 border-[#6957DF]
-            bg-white
-            text-[#6957DF]
-            shadow-sm
-            transition-all duration-500
-            group-hover:scale-110
-            group-hover:rotate-6
-            group-hover:border-transparent
-            group-hover:bg-gradient-to-br
-            group-hover:from-[#6957DF]
-            group-hover:to-[#9F7AEA]
-            group-hover:text-white"
-          >
-            <MapPin size={20} />
-          </div>
-
-          <div>
-
-            <p className="text-sm text-gray-500">
-              Destination
-            </p>
-
-            <p className="font-semibold text-slate-800">
-              {tour.location}
-            </p>
-
-          </div>
-
-        </div>
-
-        {/* CTA */}
-        <button
-          className="w-full rounded-full bg-gradient-to-r from-[#6957DF] to-[#9F7AEA] py-4 text-lg font-bold text-white shadow-[0_20px_40px_rgba(147,51,234,0.35)] transition-all duration-500 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_25px_50px_rgba(147,51,234,0.45)]"
-        >
-          Book Now
-        </button>
+        {tour.rating}
 
       </div>
+
+    </div>
+
+    {/* Price */}
+
+    <div className="mb-6">
+
+      <p className="text-purple-100">
+        Starting From
+      </p>
+
+      <div className="mt-2 flex items-center">
+
+        <IndianRupee
+          size={28}
+          className="text-white"
+        />
+
+        <span className="text-4xl font-black text-white">
+          {animatedPrice.toLocaleString()}
+        </span>
+
+      </div>
+
+      <p className="text-purple-200">
+        / Per Person
+      </p>
+
+    </div>
+
+    {/* Duration */}
+
+    <div className="group mb-4 flex items-center gap-3 rounded-2xl border border-white/15 bg-white/10 backdrop-blur-xl p-4 transition-all duration-500 hover:bg-white/15">
+
+      <div
+        className="flex h-11 w-11 items-center justify-center rounded-2xl
+        bg-gradient-to-br from-[#8B5CF6] to-[#C084FC]
+        text-white shadow-xl"
+      >
+        <Clock3 size={20} />
+      </div>
+
+      <div>
+
+        <p className="text-purple-100 text-sm">
+          Duration
+        </p>
+
+        <p className="font-semibold text-white">
+          {displayDuration}
+        </p>
+
+      </div>
+
+    </div>
+
+    {/* Destination */}
+
+    <div className="group mb-8 flex items-center gap-3 rounded-2xl border border-white/15 bg-white/10 backdrop-blur-xl p-4 transition-all duration-500 hover:bg-white/15">
+
+      <div
+        className="flex h-11 w-11 items-center justify-center rounded-2xl
+        bg-gradient-to-br from-[#8B5CF6] to-[#C084FC]
+        text-white shadow-xl"
+      >
+        <MapPin size={20} />
+      </div>
+
+      <div>
+
+        <p className="text-purple-100 text-sm">
+          Destination
+        </p>
+
+        <p className="font-semibold text-white">
+          {tour.location}
+        </p>
+
+      </div>
+
+    </div>
+
+    {/* Button */}
+
+    <button
+      className="w-full rounded-full bg-gradient-to-r from-fuchsia-500 via-purple-500 to-violet-600 py-4 text-lg font-bold text-white shadow-[0_20px_50px_rgba(168,85,247,.45)] transition-all duration-500 hover:scale-105 hover:shadow-[0_30px_70px_rgba(168,85,247,.6)]"
+    >
+      Book Now
+    </button>
+
+  </div>
+
+</div>
 
     </div>
 

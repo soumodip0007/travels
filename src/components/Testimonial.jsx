@@ -108,7 +108,7 @@ export default function Testimonials() {
                       {item.name}
                     </h3>
 
-                    <p className="text-orange-500">
+                    <p className="text-[#6957DF]">
                       {item.designation}
                     </p>
 
