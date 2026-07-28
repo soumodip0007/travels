@@ -1,5 +1,16 @@
 import { useState } from "react";
-import { X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  X,
+  User,
+  Phone,
+  Mail,
+  Compass,
+  CalendarDays,
+  MessageSquare,
+  PlaneTakeoff,
+  ChevronDown,
+} from "lucide-react";
 import { submitEnquiry } from "../utils/submitEnquiry";
 import LoadingSpinner from "./LoadingSpinner";
 
@@ -56,180 +67,327 @@ export default function EnquiryModal({
     setLoading(false);
   };
 
+  // Purely decorative "ticket number" — cosmetic only, no functional role
+  const ticketCode = `TE-${new Date().getFullYear().toString().slice(2)}${String(
+    new Date().getMonth() + 1
+  ).padStart(2, "0")}${String(new Date().getDate()).padStart(2, "0")}`;
+
   return (
     <div className="fixed inset-0 z-[99999] flex items-center justify-center p-4">
+
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=JetBrains+Mono:wght@500&display=swap');
+
+        .enquiry-display {
+          font-family: 'Fraunces', serif;
+          font-optical-sizing: auto;
+        }
+
+        .enquiry-mono {
+          font-family: 'JetBrains Mono', monospace;
+          letter-spacing: 0.08em;
+        }
+
+        .enquiry-stub-bg {
+          background-image:
+            radial-gradient(circle at 20% 15%, rgba(255,255,255,0.14) 0, transparent 45%),
+            radial-gradient(circle at 85% 85%, rgba(255,255,255,0.10) 0, transparent 40%);
+        }
+
+        .enquiry-input {
+          transition: border-color 200ms ease, box-shadow 200ms ease, background-color 200ms ease;
+        }
+
+        .enquiry-input:focus {
+          box-shadow: 0 0 0 4px rgba(105, 87, 223, 0.14);
+        }
+
+        .enquiry-submit {
+          position: relative;
+          overflow: hidden;
+        }
+
+        .enquiry-submit::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: -60%;
+          width: 40%;
+          height: 100%;
+          background: linear-gradient(120deg, transparent, rgba(255,255,255,0.35), transparent);
+          transform: skewX(-20deg);
+          transition: left 700ms ease;
+        }
+
+        .enquiry-submit:hover::before {
+          left: 130%;
+        }
+      `}</style>
 
       {/* Background Blur */}
 
       <div
         onClick={close}
-        className="absolute inset-0 bg-black/40 backdrop-blur-md"
+        className="absolute inset-0 bg-[#241c4b]/50 backdrop-blur-md"
       />
 
       {/* Modal */}
 
-      <div className="relative z-10 w-full max-w-3xl rounded-3xl bg-white p-8 shadow-2xl md:p-10">
+      <motion.div
+        initial={{ opacity: 0, y: 24, scale: 0.97 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        transition={{ duration: 0.35, ease: "easeOut" }}
+        className="relative z-10 grid w-full max-w-4xl overflow-hidden rounded-[28px] bg-[#FBFAFF] shadow-[0_40px_100px_rgba(36,28,75,0.35)] md:grid-cols-[220px_1fr]"
+      >
 
-        {/* Close Button */}
+        {/* ================= Ticket Stub ================= */}
 
-        <button
-          onClick={close}
-          className="absolute right-5 top-5 rounded-full p-2 hover:bg-slate-100"
-        >
-          <X size={22} />
-        </button>
-
-        {/* Heading */}
-
-        <h2 className="mb-2 text-3xl font-bold text-[#6957DF]">
-          Travel Enquiry
-        </h2>
-
-        <p className="mb-8 text-slate-500">
-          Tell us about your travel plan and we will contact you shortly.
-        </p>
-
-        <form onSubmit={submit} className="grid grid-cols-1 gap-5 md:grid-cols-2">
-
-          {/* Name */}
+        <div className="enquiry-stub-bg relative hidden flex-col justify-between bg-gradient-to-br from-[#6957DF] to-[#443381] p-7 text-white md:flex">
 
           <div>
-            <label className="mb-2 block text-sm font-semibold text-slate-700">
-              Full Name
-            </label>
+            <PlaneTakeoff size={26} className="text-white/90" />
 
-            <input
-              required
-              name="name"
-              value={form.name}
-              onChange={handleChange}
-              placeholder="Enter your name"
-              className="w-full rounded-xl border border-slate-200 p-4 outline-none transition focus:border-[#6957DF]"
-            />
+            <p className="enquiry-mono mt-6 text-[11px] uppercase text-white/60">
+              Boarding Pass
+            </p>
+
+            <h3 className="enquiry-display mt-2 text-2xl leading-snug">
+              Travel<br />Enquiry
+            </h3>
           </div>
-
-          {/* Phone */}
 
           <div>
-            <label className="mb-2 block text-sm font-semibold text-slate-700">
-              Phone Number
-            </label>
-
-            <input
-              required
-              name="phone"
-              value={form.phone}
-              onChange={handleChange}
-              placeholder="Enter phone number"
-              className="w-full rounded-xl border border-slate-200 p-4 outline-none transition focus:border-[#6957DF]"
-            />
+            <p className="enquiry-mono text-[11px] text-white/50">Ref No.</p>
+            <p className="enquiry-mono text-sm text-white/85">{ticketCode}</p>
           </div>
 
-          {/* Email */}
+          {/* Perforated edge */}
+          <div className="pointer-events-none absolute right-0 top-0 h-full w-px border-r-2 border-dashed border-white/25" />
+          <div className="pointer-events-none absolute -right-3 -top-3 h-6 w-6 rounded-full bg-[#FBFAFF]" />
+          <div className="pointer-events-none absolute -bottom-3 -right-3 h-6 w-6 rounded-full bg-[#FBFAFF]" />
+        </div>
 
-          <div>
-            <label className="mb-2 block text-sm font-semibold text-slate-700">
-              Email Address
-            </label>
+        {/* ================= Form Side ================= */}
 
-            <input
-              required
-              type="email"
-              name="email"
-              value={form.email}
-              onChange={handleChange}
-              placeholder="Enter email address"
-              className="w-full rounded-xl border border-slate-200 p-4 outline-none transition focus:border-[#6957DF]"
-            />
-          </div>
+        <div className="max-h-[90vh] overflow-y-auto p-7 md:p-10">
 
-          {/* Tour Type Question */}
-
-          <div>
-            <label className="mb-2 block text-sm font-semibold text-slate-700">
-              Which type of tour are you interested in?
-            </label>
-
-            <select
-              required
-              name="package"
-              value={form.package}
-              onChange={handleChange}
-              className="w-full rounded-xl border border-slate-200 bg-white p-4 outline-none transition focus:border-[#6957DF]"
-            >
-              <option value="">Select Tour Type</option>
-              <option value="Domestic Tour">Domestic Tour</option>
-              <option value="International Tour">International Tour</option>
-            </select>
-          </div>
-
-          {/* Start Date */}
-
-          <div>
-            <label className="mb-2 block text-sm font-semibold text-slate-700">
-              Start Date
-            </label>
-
-            <input
-              required
-              type="date"
-              name="startDate"
-              value={form.startDate}
-              onChange={handleChange}
-              className="w-full rounded-xl border border-slate-200 p-4 outline-none transition focus:border-[#6957DF]"
-            />
-          </div>
-
-          {/* End Date */}
-
-          <div>
-            <label className="mb-2 block text-sm font-semibold text-slate-700">
-              End Date
-            </label>
-
-            <input
-              required
-              type="date"
-              name="endDate"
-              value={form.endDate}
-              onChange={handleChange}
-              className="w-full rounded-xl border border-slate-200 p-4 outline-none transition focus:border-[#6957DF]"
-            />
-          </div>
-
-          {/* Message */}
-
-          <div className="md:col-span-2">
-            <label className="mb-2 block text-sm font-semibold text-slate-700">
-              Message
-            </label>
-
-            <textarea
-              name="message"
-              rows="5"
-              value={form.message}
-              onChange={handleChange}
-              placeholder="Tell us your destination, number of travellers, budget, etc."
-              className="w-full rounded-xl border border-slate-200 p-4 outline-none transition focus:border-[#6957DF]"
-            />
-          </div>
-
-          {/* Submit Button */}
+          {/* Close Button */}
 
           <button
-            type="submit"
-            disabled={loading}
-            className="md:col-span-2 flex items-center justify-center rounded-full bg-gradient-to-r from-[#6957DF] to-[#9F7AEA] py-4 font-bold text-white shadow-lg transition-all hover:scale-[1.01] disabled:opacity-70"
+            onClick={close}
+            className="absolute right-5 top-5 rounded-full p-2 text-[#241c4b] transition hover:bg-purple-50 hover:text-[#6957DF]"
           >
-            {loading ? (
-              <LoadingSpinner />
-            ) : (
-              "Submit Enquiry"
-            )}
+            <X size={22} />
           </button>
 
-        </form>
-      </div>
+          {/* Heading (mobile only, stub hidden) */}
+
+          <div className="mb-7 md:hidden">
+            <p className="enquiry-mono text-[11px] uppercase text-[#6957DF]/70">
+              Boarding Pass · {ticketCode}
+            </p>
+            <h2 className="enquiry-display mt-1 text-3xl text-[#241c4b]">
+              Travel Enquiry
+            </h2>
+          </div>
+
+          <p className="mb-8 hidden text-slate-500 md:block">
+            Tell us about your travel plan and we will contact you shortly.
+          </p>
+
+          <form onSubmit={submit} className="grid grid-cols-1 gap-5 md:grid-cols-2">
+
+            {/* Name */}
+
+            <div>
+              <label className="mb-2 block text-sm font-semibold text-slate-700">
+                Full Name
+              </label>
+
+              <div className="relative">
+                <User
+                  size={18}
+                  className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-[#6957DF]/50"
+                />
+                <input
+                  required
+                  name="name"
+                  value={form.name}
+                  onChange={handleChange}
+                  placeholder="Enter your name"
+                  className="enquiry-input w-full rounded-xl border border-slate-200 bg-white p-4 pl-11 outline-none focus:border-[#6957DF]"
+                />
+              </div>
+            </div>
+
+            {/* Phone */}
+
+            <div>
+              <label className="mb-2 block text-sm font-semibold text-slate-700">
+                Phone Number
+              </label>
+
+              <div className="relative">
+                <Phone
+                  size={18}
+                  className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-[#6957DF]/50"
+                />
+                <input
+                  required
+                  name="phone"
+                  value={form.phone}
+                  onChange={handleChange}
+                  placeholder="Enter phone number"
+                  className="enquiry-input w-full rounded-xl border border-slate-200 bg-white p-4 pl-11 outline-none focus:border-[#6957DF]"
+                />
+              </div>
+            </div>
+
+            {/* Email */}
+
+            <div>
+              <label className="mb-2 block text-sm font-semibold text-slate-700">
+                Email Address
+              </label>
+
+              <div className="relative">
+                <Mail
+                  size={18}
+                  className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-[#6957DF]/50"
+                />
+                <input
+                  required
+                  type="email"
+                  name="email"
+                  value={form.email}
+                  onChange={handleChange}
+                  placeholder="Enter email address"
+                  className="enquiry-input w-full rounded-xl border border-slate-200 bg-white p-4 pl-11 outline-none focus:border-[#6957DF]"
+                />
+              </div>
+            </div>
+
+            {/* Tour Type Question */}
+
+            <div>
+              <label className="mb-2 block text-sm font-semibold text-slate-700">
+                Which type of tour are you interested in?
+              </label>
+
+              <div className="relative">
+                <Compass
+                  size={18}
+                  className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-[#6957DF]/50"
+                />
+                <select
+                  required
+                  name="package"
+                  value={form.package}
+                  onChange={handleChange}
+                  className="enquiry-input w-full appearance-none rounded-xl border border-slate-200 bg-white p-4 pl-11 pr-10 outline-none focus:border-[#6957DF]"
+                >
+                  <option value="">Select Tour Type</option>
+                  <option value="Domestic Tour">Domestic Tour</option>
+                  <option value="International Tour">International Tour</option>
+                </select>
+                <ChevronDown
+                  size={18}
+                  className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-slate-400"
+                />
+              </div>
+            </div>
+
+            {/* Start Date */}
+
+            <div>
+              <label className="mb-2 block text-sm font-semibold text-slate-700">
+                Start Date
+              </label>
+
+              <div className="relative">
+                <CalendarDays
+                  size={18}
+                  className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-[#6957DF]/50"
+                />
+                <input
+                  required
+                  type="date"
+                  name="startDate"
+                  value={form.startDate}
+                  onChange={handleChange}
+                  className="enquiry-input w-full rounded-xl border border-slate-200 bg-white p-4 pl-11 outline-none focus:border-[#6957DF]"
+                />
+              </div>
+            </div>
+
+            {/* End Date */}
+
+            <div>
+              <label className="mb-2 block text-sm font-semibold text-slate-700">
+                End Date
+              </label>
+
+              <div className="relative">
+                <CalendarDays
+                  size={18}
+                  className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-[#6957DF]/50"
+                />
+                <input
+                  required
+                  type="date"
+                  name="endDate"
+                  value={form.endDate}
+                  onChange={handleChange}
+                  className="enquiry-input w-full rounded-xl border border-slate-200 bg-white p-4 pl-11 outline-none focus:border-[#6957DF]"
+                />
+              </div>
+            </div>
+
+            {/* Message */}
+
+            <div className="md:col-span-2">
+              <label className="mb-2 block text-sm font-semibold text-slate-700">
+                Message
+              </label>
+
+              <div className="relative">
+                <MessageSquare
+                  size={18}
+                  className="pointer-events-none absolute left-4 top-4 text-[#6957DF]/50"
+                />
+                <textarea
+                  name="message"
+                  rows="5"
+                  value={form.message}
+                  onChange={handleChange}
+                  placeholder="Tell us your destination, number of travellers, budget, etc."
+                  className="enquiry-input w-full rounded-xl border border-slate-200 bg-white p-4 pl-11 outline-none focus:border-[#6957DF]"
+                />
+              </div>
+            </div>
+
+            {/* Submit Button */}
+
+            <button
+              type="submit"
+              disabled={loading}
+              className="enquiry-submit md:col-span-2 flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#6957DF] to-[#9F7AEA] py-4 font-bold text-white shadow-[0_20px_45px_rgba(105,87,223,0.35)] transition-all hover:scale-[1.01] hover:shadow-[0_25px_55px_rgba(105,87,223,0.45)] disabled:opacity-70 disabled:hover:scale-100"
+            >
+              {loading ? (
+                <LoadingSpinner />
+              ) : (
+                <>
+                  Submit Enquiry
+                  <PlaneTakeoff size={18} className="-rotate-45" />
+                </>
+              )}
+            </button>
+
+          </form>
+        </div>
+
+      </motion.div>
+
     </div>
   );
 }
