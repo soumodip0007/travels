@@ -4,168 +4,232 @@ import { submitEnquiry } from "../utils/submitEnquiry";
 import LoadingSpinner from "./LoadingSpinner";
 
 export default function EnquiryModal({
-    open,
-    close,
-    packageName
+  open,
+  close,
 }) {
+  const [loading, setLoading] = useState(false);
 
-    const [loading, setLoading] = useState(false);
+  const [form, setForm] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    startDate: "",
+    endDate: "",
+    package: "",
+    message: "",
+  });
 
-    const [form, setForm] = useState({
+  if (!open) return null;
 
+  const handleChange = (e) => {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const submit = async (e) => {
+    e.preventDefault();
+
+    setLoading(true);
+
+    try {
+      await submitEnquiry(form);
+
+      alert("Enquiry Sent Successfully!");
+
+      setForm({
         name: "",
         phone: "",
         email: "",
         startDate: "",
         endDate: "",
-        package: packageName,
-        message: ""
+        package: "",
+        message: "",
+      });
 
-    });
+      close();
+    } catch {
+      alert("Something went wrong.");
+    }
 
-    if (!open) return null;
+    setLoading(false);
+  };
 
-    const handleChange = (e) => {
+  return (
+    <div className="fixed inset-0 z-[99999] flex items-center justify-center p-4">
 
-        setForm({
+      {/* Background Blur */}
 
-            ...form,
+      <div
+        onClick={close}
+        className="absolute inset-0 bg-black/40 backdrop-blur-md"
+      />
 
-            [e.target.name]: e.target.value
+      {/* Modal */}
 
-        });
+      <div className="relative z-10 w-full max-w-3xl rounded-3xl bg-white p-8 shadow-2xl md:p-10">
 
-    };
+        {/* Close Button */}
 
-    const submit = async (e) => {
+        <button
+          onClick={close}
+          className="absolute right-5 top-5 rounded-full p-2 hover:bg-slate-100"
+        >
+          <X size={22} />
+        </button>
 
-        e.preventDefault();
+        {/* Heading */}
 
-        setLoading(true);
+        <h2 className="mb-2 text-3xl font-bold text-[#6957DF]">
+          Travel Enquiry
+        </h2>
 
-        try {
+        <p className="mb-8 text-slate-500">
+          Tell us about your travel plan and we will contact you shortly.
+        </p>
 
-            await submitEnquiry(form);
+        <form onSubmit={submit} className="grid grid-cols-1 gap-5 md:grid-cols-2">
 
-            alert("Enquiry Sent Successfully!");
+          {/* Name */}
 
-            close();
+          <div>
+            <label className="mb-2 block text-sm font-semibold text-slate-700">
+              Full Name
+            </label>
 
-        } catch {
-
-            alert("Something went wrong.");
-
-        }
-
-        setLoading(false);
-
-    };
-
-    return (
-
-        <div className="fixed inset-0 z-[99999] flex items-center justify-center">
-
-            <div
-                onClick={close}
-                className="absolute inset-0 backdrop-blur-md bg-black/40"
+            <input
+              required
+              name="name"
+              value={form.name}
+              onChange={handleChange}
+              placeholder="Enter your name"
+              className="w-full rounded-xl border border-slate-200 p-4 outline-none transition focus:border-[#6957DF]"
             />
+          </div>
 
-            <div className="relative z-10 w-[60%] rounded-3xl bg-white p-10 shadow-2xl">
+          {/* Phone */}
 
-                <button
-                    onClick={close}
-                    className="absolute right-6 top-6"
-                >
+          <div>
+            <label className="mb-2 block text-sm font-semibold text-slate-700">
+              Phone Number
+            </label>
 
-                    <X />
+            <input
+              required
+              name="phone"
+              value={form.phone}
+              onChange={handleChange}
+              placeholder="Enter phone number"
+              className="w-full rounded-xl border border-slate-200 p-4 outline-none transition focus:border-[#6957DF]"
+            />
+          </div>
 
-                </button>
+          {/* Email */}
 
-                <h2 className="mb-8 text-3xl font-bold text-[#6957DF]">
+          <div>
+            <label className="mb-2 block text-sm font-semibold text-slate-700">
+              Email Address
+            </label>
 
-                    Travel Enquiry
+            <input
+              required
+              type="email"
+              name="email"
+              value={form.email}
+              onChange={handleChange}
+              placeholder="Enter email address"
+              className="w-full rounded-xl border border-slate-200 p-4 outline-none transition focus:border-[#6957DF]"
+            />
+          </div>
 
-                </h2>
+          {/* Tour Type Question */}
 
-                <form
-                    onSubmit={submit}
-                    className="grid grid-cols-2 gap-5"
-                >
+          <div>
+            <label className="mb-2 block text-sm font-semibold text-slate-700">
+              Which type of tour are you interested in?
+            </label>
 
-                    <input
-                        required
-                        name="name"
-                        placeholder="Name"
-                        onChange={handleChange}
-                        className="rounded-xl border p-4"
-                    />
+            <select
+              required
+              name="package"
+              value={form.package}
+              onChange={handleChange}
+              className="w-full rounded-xl border border-slate-200 bg-white p-4 outline-none transition focus:border-[#6957DF]"
+            >
+              <option value="">Select Tour Type</option>
+              <option value="Domestic Tour">Domestic Tour</option>
+              <option value="International Tour">International Tour</option>
+            </select>
+          </div>
 
-                    <input
-                        required
-                        name="phone"
-                        placeholder="Phone"
-                        onChange={handleChange}
-                        className="rounded-xl border p-4"
-                    />
+          {/* Start Date */}
 
-                    <input
-                        required
-                        name="email"
-                        placeholder="Email"
-                        type="email"
-                        onChange={handleChange}
-                        className="rounded-xl border p-4"
-                    />
+          <div>
+            <label className="mb-2 block text-sm font-semibold text-slate-700">
+              Start Date
+            </label>
 
-                    <input
-                        required
-                        type="date"
-                        name="startDate"
-                        onChange={handleChange}
-                        className="rounded-xl border p-4"
-                    />
+            <input
+              required
+              type="date"
+              name="startDate"
+              value={form.startDate}
+              onChange={handleChange}
+              className="w-full rounded-xl border border-slate-200 p-4 outline-none transition focus:border-[#6957DF]"
+            />
+          </div>
 
-                    <input
-                        required
-                        type="date"
-                        name="endDate"
-                        onChange={handleChange}
-                        className="rounded-xl border p-4"
-                    />
+          {/* End Date */}
 
-                    <input
-                        readOnly
-                        value={packageName}
-                        name="package"
-                        className="rounded-xl border bg-slate-100 p-4"
-                    />
+          <div>
+            <label className="mb-2 block text-sm font-semibold text-slate-700">
+              End Date
+            </label>
 
-                    <textarea
-                        name="message"
-                        rows="5"
-                        placeholder="Message"
-                        onChange={handleChange}
-                        className="col-span-2 rounded-xl border p-4"
-                    />
+            <input
+              required
+              type="date"
+              name="endDate"
+              value={form.endDate}
+              onChange={handleChange}
+              className="w-full rounded-xl border border-slate-200 p-4 outline-none transition focus:border-[#6957DF]"
+            />
+          </div>
 
-                    <button
-                        type="submit"
-                        disabled={loading}
-                        className="col-span-2 flex items-center justify-center rounded-full bg-gradient-to-r from-[#6957DF] to-[#9F7AEA] py-4 font-bold text-white transition-all disabled:opacity-70"
-                    >
-                        {loading ? (
-                            <LoadingSpinner />
-                        ) : (
-                            "Submit Enquiry"
-                        )}
-                    </button>
+          {/* Message */}
 
-                </form>
+          <div className="md:col-span-2">
+            <label className="mb-2 block text-sm font-semibold text-slate-700">
+              Message
+            </label>
 
-            </div>
+            <textarea
+              name="message"
+              rows="5"
+              value={form.message}
+              onChange={handleChange}
+              placeholder="Tell us your destination, number of travellers, budget, etc."
+              className="w-full rounded-xl border border-slate-200 p-4 outline-none transition focus:border-[#6957DF]"
+            />
+          </div>
 
-        </div>
+          {/* Submit Button */}
 
-    );
+          <button
+            type="submit"
+            disabled={loading}
+            className="md:col-span-2 flex items-center justify-center rounded-full bg-gradient-to-r from-[#6957DF] to-[#9F7AEA] py-4 font-bold text-white shadow-lg transition-all hover:scale-[1.01] disabled:opacity-70"
+          >
+            {loading ? (
+              <LoadingSpinner />
+            ) : (
+              "Submit Enquiry"
+            )}
+          </button>
 
+        </form>
+      </div>
+    </div>
+  );
 }

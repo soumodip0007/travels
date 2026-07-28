@@ -1,11 +1,26 @@
 import { useState } from "react";
 import { Menu, X, MapPinned, Plane } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useEnquiry } from "../context/EnquiryContext";
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const { openEnquiry } = useEnquiry();
+
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleExplore = () => {
+    if (location.pathname === "/") {
+      // Already on home page
+      document.getElementById("tours")?.scrollIntoView({
+        behavior: "smooth",
+      });
+    } else {
+      // Go to home page first, then scroll
+      navigate("/#tours");
+    }
+  };
 
   const navItems = [
     { name: "Home", path: "/" },
@@ -66,7 +81,10 @@ export default function Navbar() {
             {/* Desktop Buttons */}
             <div className="hidden lg:flex items-center gap-4">
               {/* Explore Button */}
-              <button className="group flex items-center gap-2 rounded-full bg-gradient-to-r from-[#6957DF] via-[#7C3AED] to-[#A855F7] px-5 py-2 text-white shadow-xl transition-all duration-500 hover:scale-105 hover:shadow-purple-500/40">
+              <button
+                onClick={handleExplore}
+                className="group flex items-center gap-2 rounded-full bg-gradient-to-r from-[#6957DF] via-[#7C3AED] to-[#A855F7] px-5 py-2 text-white shadow-xl transition-all duration-500 hover:scale-105 hover:shadow-purple-500/40"
+              >
                 <MapPinned
                   className="text-white transition-transform duration-300 group-hover:scale-110"
                   size={18}
@@ -76,7 +94,7 @@ export default function Navbar() {
 
               {/* Book Button */}
               <button className="relative overflow-hidden rounded-full bg-gradient-to-r from-[#6957DF] via-[#7C3AED] to-[#A855F7] px-7 py-3 font-semibold text-white shadow-xl transition-all duration-500 hover:scale-105 hover:shadow-purple-500/40"
-              onClick={() => openEnquiry()}
+                onClick={() => openEnquiry()}
               >
                 <span className="absolute inset-0 bg-white opacity-0 hover:opacity-20 transition duration-500"></span>
                 Enquire Now
@@ -120,8 +138,10 @@ export default function Navbar() {
             </Link>
           ))}
 
-          <button className="w-full mt-8 rounded-full bg-gradient-to-r from-purple-700 via-purple-600 to-fuchsia-500 py-3 font-bold text-white shadow-xl transition-all duration-500 hover:scale-105 hover:shadow-purple-500/40">
-            Book Your Trip
+          <button className="w-full mt-8 rounded-full bg-gradient-to-r from-purple-700 via-purple-600 to-fuchsia-500 py-3 font-bold text-white shadow-xl transition-all duration-500 hover:scale-105 hover:shadow-purple-500/40"
+          onClick={handleExplore}
+          >
+            Explore
           </button>
         </div>
       </div>

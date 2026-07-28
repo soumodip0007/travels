@@ -41,6 +41,18 @@ const App = () => {
     AOS.refreshHard();
   }, [location.pathname]);
 
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace("#", "");
+
+      setTimeout(() => {
+        document.getElementById(id)?.scrollIntoView({
+          behavior: "smooth",
+        });
+      }, 100);
+    }
+  }, [location]);
+
   return (
     <>
       <EnquiryProvider>
