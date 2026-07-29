@@ -13,11 +13,7 @@ export default function ChatWindow() {
   const bottomRef = useRef(null);
 
   const [messages, setMessages] = useState([
-    {
-      id: 1,
-      sender: "bot",
-      text: "👋 Hello! Welcome to TravelX.",
-    },
+    { id: 1, sender: "bot", text: "👋 Hello! Welcome to TravelX." },
     {
       id: 2,
       sender: "bot",
@@ -26,16 +22,10 @@ export default function ChatWindow() {
   ]);
 
   const [typing, setTyping] = useState(false);
-
-  // Tracks the last topic the bot successfully answered, so short
-  // follow-ups like "yes" / "no" can be understood in context.
   const [lastTopic, setLastTopic] = useState(null);
 
-  // Auto Scroll
   useEffect(() => {
-    bottomRef.current?.scrollIntoView({
-      behavior: "smooth",
-    });
+    bottomRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, typing]);
 
   const isAffirmation = (text) =>
@@ -51,13 +41,11 @@ export default function ChatWindow() {
       item.keywords.some((keyword) => text.includes(keyword.toLowerCase()))
     );
 
-    // 1. Direct keyword match — answer normally and remember the topic.
     if (matched) {
       setLastTopic(matched);
       return matched.answer;
     }
 
-    // 2. Short affirmation ("yes") following a known topic.
     if (isAffirmation(text) && lastTopic) {
       if (lastTopic.followUp) {
         return lastTopic.followUp;
@@ -65,65 +53,126 @@ export default function ChatWindow() {
       return `Great! 😊 Could you tell me a bit more about what you'd like to know regarding ${lastTopic.topic || "that"}? For example, dates, budget, or number of travelers.`;
     }
 
-    // 3. Short negation ("no") following a known topic.
     if (isNegation(text) && lastTopic) {
       setLastTopic(null);
       return "No worries! Is there something else I can help you with? You can ask about Tour Packages, Flights, Hotels, Bus & Car, Domestic or International Tours, Pricing, or Contact Details.";
     }
 
-    // 4. Nothing matched and no context to fall back on.
     setLastTopic(null);
+
     return "😔 Sorry, I couldn't understand that.\n\nPlease ask me about:\n\n• Tour Packages\n• Flights\n• Hotels\n• Bus & Car\n• Domestic Tours\n• International Tours\n• Pricing\n• Contact Details";
   };
 
   const handleSend = (text) => {
     if (!text.trim()) return;
 
-    const userMessage = {
-      id: Date.now(),
-      sender: "user",
-      text,
-    };
-
+    const userMessage = { id: Date.now(), sender: "user", text };
     setMessages((prev) => [...prev, userMessage]);
-
     setTyping(true);
 
     setTimeout(() => {
-      const botReply = {
-        id: Date.now() + 1,
-        sender: "bot",
-        text: getBotReply(text),
-      };
-
+      const botReply = { id: Date.now() + 1, sender: "bot", text: getBotReply(text) };
       setTyping(false);
-
       setMessages((prev) => [...prev, botReply]);
     }, 900);
   };
 
   return (
-    <div className="flex h-[min(650px,80vh)] w-[min(390px,90vw)] flex-col overflow-hidden rounded-[30px] border border-sky-100 bg-white shadow-[0_20px_60px_rgba(0,0,0,0.18)]">
-      {/* Header */}
-      <div className="relative overflow-hidden bg-gradient-to-r from-sky-600 via-sky-500 to-orange-500 p-5">
-        <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-white/10"></div>
+    <div
+      className="relative flex h-[min(650px,80vh)] w-[min(390px,90vw)] flex-col overflow-hidden rounded-[30px] border border-white/60 bg-white"
+      style={{
+        boxShadow:
+          "0 24px 70px rgba(105,87,223,0.28), 0 4px 16px rgba(124,58,237,0.12), inset 0 0 0 1px rgba(255,255,255,0.4)",
+      }}
+    >
+      <style>{`
+        @keyframes cw-drift {
+          0% { transform: translateX(-6%); }
+          100% { transform: translateX(6%); }
+        }
+        @keyframes cw-header-shift {
+          0%, 100% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+        }
+        @keyframes cw-orb-float {
+          0%, 100% { transform: translate(0, 0) scale(1); }
+          50% { transform: translate(-8px, 10px) scale(1.08); }
+        }
+        @keyframes cw-orb-float-2 {
+          0%, 100% { transform: translate(0, 0) scale(1); }
+          50% { transform: translate(10px, -6px) scale(0.95); }
+        }
+        @keyframes cw-shadow-breathe {
+          0%, 100% { box-shadow: 0 24px 70px rgba(105,87,223,0.28), 0 4px 16px rgba(124,58,237,0.12); }
+          50% { box-shadow: 0 26px 80px rgba(124,58,237,0.36), 0 6px 20px rgba(168,85,247,0.16); }
+        }
+        .cw-shell { animation: cw-shadow-breathe 5s ease-in-out infinite; }
+      `}</style>
 
-        <div className="flex items-center gap-4">
+      <div className="cw-shell absolute inset-0 rounded-[30px] pointer-events-none" />
+
+      {/* Header */}
+      <div
+        className="relative z-10 overflow-hidden px-5 pb-5 pt-5"
+        style={{
+          background:
+            "linear-gradient(120deg, #6957DF 0%, #7C3AED 35%, #A855F7 65%, #7C3AED 100%)",
+          backgroundSize: "220% 220%",
+          animation: "cw-header-shift 7s ease-in-out infinite",
+        }}
+      >
+        {/* Floating ambient orbs */}
+        <div
+          className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-white/10 blur-md"
+          style={{ animation: "cw-orb-float 6s ease-in-out infinite" }}
+        />
+        <div
+          className="absolute -left-6 bottom-0 h-20 w-20 rounded-full bg-[#22D3EE]/20 blur-xl"
+          style={{ animation: "cw-orb-float-2 8s ease-in-out infinite" }}
+        />
+
+        {/* Faint drifting flight-path arc */}
+        <svg
+          viewBox="0 0 400 100"
+          className="pointer-events-none absolute inset-x-0 top-2 h-full w-[112%] opacity-25"
+          style={{ animation: "cw-drift 9s ease-in-out infinite alternate" }}
+        >
+          <path
+            d="M -20 70 Q 200 -10 420 60"
+            fill="none"
+            stroke="white"
+            strokeWidth="1.4"
+            strokeDasharray="1 9"
+            strokeLinecap="round"
+          />
+        </svg>
+
+        <div className="relative z-10 flex items-center gap-4">
           <BotAvatar />
 
           <div>
-            <h2 className="text-lg font-bold text-white">Travel Assistant</h2>
+            <h2 className="text-lg font-bold tracking-tight text-white">Travel Assistant</h2>
 
-            <div className="mt-1 flex items-center gap-2">
-              <span className="h-2.5 w-2.5 rounded-full bg-green-400 animate-pulse"></span>
-              <span className="text-sm text-white/90">Online</span>
+            <div className="mt-1.5 inline-flex items-center gap-1.5 rounded-full bg-white/15 px-2.5 py-0.5 backdrop-blur-sm">
+              <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-400 shadow-[0_0_6px_rgba(52,211,153,0.9)]" />
+              <span className="text-xs font-medium tracking-wide text-white/90">Online now</span>
             </div>
           </div>
         </div>
       </div>
 
+      {/* Seam between header and messages — a clean shadow line, nothing that can clip */}
+      <div className="relative z-10 h-px w-full bg-gradient-to-r from-transparent via-purple-200 to-transparent" />
+
       {/* Messages */}
-      <div className="flex-1 space-y-4 overflow-y-auto bg-slate-50 p-5">
+      <div
+        className="relative z-10 flex-1 space-y-4 overflow-y-auto p-5"
+        style={{
+          background:
+            "linear-gradient(180deg, #FBFAFF 0%, #F5F2FF 100%), radial-gradient(circle, rgba(124,58,237,0.10) 1px, transparent 1px)",
+          backgroundSize: "auto, 22px 22px",
+        }}
+      >
         {messages.map((msg) => (
           <ChatMessage key={msg.id} message={msg} />
         ))}
@@ -134,12 +183,18 @@ export default function ChatWindow() {
       </div>
 
       {/* Quick Replies */}
-      <div className="border-t border-slate-200 bg-white px-4 py-3">
+      <div
+        className="relative z-10"
+        style={{ background: "rgba(255,255,255,0.92)", borderTop: "1px solid #EDE9FE" }}
+      >
         <QuickReplies onSelect={handleSend} />
       </div>
 
       {/* Input */}
-      <div className="border-t border-slate-200 bg-white p-4">
+      <div
+        className="relative z-10 p-4 backdrop-blur-md"
+        style={{ background: "rgba(255,255,255,0.97)", borderTop: "1px solid #EDE9FE" }}
+      >
         <ChatInput onSend={handleSend} />
       </div>
     </div>

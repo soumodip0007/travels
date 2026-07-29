@@ -38,6 +38,74 @@ const slides = [
 export default function HeroSlider() {
   return (
     <section className="hero-section">
+
+      {/* Only theme colors changed */}
+      <style>{`
+        .hero-badge {
+          background: rgba(255, 255, 255, 0.12);
+          border: 1px solid rgba(255, 255, 255, 0.16);
+          color: #E9D5FF;
+          backdrop-filter: blur(12px);
+        }
+
+        .hero-title {
+          color: #FFFFFF;
+        }
+
+        .hero-description {
+          color: rgba(243, 232, 255, 0.92);
+        }
+
+        .primary-btn {
+          background: linear-gradient(90deg, #6957DF 0%, #7C3AED 50%, #A855F7 100%);
+          color: white;
+          box-shadow: 0 22px 45px rgba(147, 51, 234, 0.35);
+        }
+
+        .primary-btn:hover {
+          box-shadow: 0 28px 55px rgba(147, 51, 234, 0.45);
+        }
+
+        .secondary-btn {
+          background: rgba(255, 255, 255, 0.12);
+          border: 1px solid rgba(255, 255, 255, 0.22);
+          color: white;
+          backdrop-filter: blur(12px);
+        }
+
+        .secondary-btn:hover {
+          border-color: rgba(192, 132, 252, 0.55);
+          background: rgba(255, 255, 255, 0.18);
+        }
+
+        .stats-card {
+          background: rgba(255, 255, 255, 0.12);
+          border: 1px solid rgba(255, 255, 255, 0.16);
+          color: white;
+          backdrop-filter: blur(18px);
+          box-shadow: 0 35px 80px rgba(0, 0, 0, 0.35);
+        }
+
+        .stats-card p {
+          color: rgba(243, 232, 255, 0.82);
+        }
+
+        .swiper-pagination-bullet {
+          width: 12px;
+          height: 12px;
+          background: rgba(255, 255, 255, 0.45);
+          opacity: 1;
+          transition: all .3s ease;
+        }
+
+        .swiper-pagination-bullet-active {
+          width: 42px;
+          border-radius: 999px;
+          background: linear-gradient(90deg, #6957DF, #A855F7);
+          box-shadow: 0 0 18px rgba(168, 85, 247, .55);
+        }
+      `}</style>
+
       <Swiper
         modules={[Pagination, Autoplay]}
         slidesPerView={1}
@@ -51,8 +119,11 @@ export default function HeroSlider() {
           clickable: true,
         }}
       >
+
         {slides.map((slide, index) => (
+
           <SwiperSlide key={index}>
+
             <div className="hero-slide">
 
               {/* Background */}
@@ -63,15 +134,6 @@ export default function HeroSlider() {
                 className="hero-image"
               />
 
-              {/* Overlay */}
-
-              <div className="hero-overlay"></div>
-
-              {/* Decorative Glow */}
-
-              <div className="hero-glow hero-glow-blue"></div>
-              <div className="hero-glow hero-glow-orange"></div>
-
               {/* Content */}
 
               <div className="hero-content">
@@ -81,10 +143,6 @@ export default function HeroSlider() {
                   {/* Left */}
 
                   <div className="hero-left">
-
-                    <span className="hero-badge">
-                      ✈ Explore The World
-                    </span>
 
                     <h1 className="hero-title">
                       {slide.title}
@@ -128,8 +186,11 @@ export default function HeroSlider() {
               </div>
 
             </div>
+
           </SwiperSlide>
+
         ))}
+
       </Swiper>
 
       {/* Bottom Wave */}

@@ -25,7 +25,7 @@ export default function Footer() {
       <div className="relative z-10">
 
         {/* Top Section */}
-        <div className="mx-auto grid w-[92%] max-w-7xl gap-12 py-20 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mx-auto grid w-[92%] max-w-7xl gap-8 py-12 md:grid-cols-2 lg:grid-cols-4">
 
           <FooterBrand />
 
@@ -38,9 +38,9 @@ export default function Footer() {
         </div>
 
         {/* Newsletter */}
-        <div className="mx-auto w-[92%] max-w-7xl">
+        {/* <div className="mx-auto w-[92%] max-w-7xl">
           <Newsletter />
-        </div>
+        </div> */}
 
         {/* Bottom */}
         <FooterBottom />

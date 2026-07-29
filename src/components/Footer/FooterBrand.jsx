@@ -13,9 +13,9 @@ export default function FooterBrand() {
       {/* Logo */}
 
       <img
-        src="/logo.png" // Replace with your logo
+        src="/logo.png"
         alt="Travel Logo"
-        className="h-24 w-auto rounded-lg bg-white p-2 shadow-lg"
+        className="h-24 w-auto rounded-2xl border border-white/10 bg-white p-3 shadow-[0_20px_45px_rgba(105,87,223,0.25)]"
       />
 
       {/* Description */}
@@ -34,7 +34,14 @@ export default function FooterBrand() {
 
         <a
           href="#"
-          className="group flex h-12 w-12 items-center justify-center rounded-lg bg-sky-600 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-orange-500"
+          className="group flex h-12 w-12 items-center justify-center rounded-2xl
+          border border-white/10
+          bg-gradient-to-br from-[#6957DF] via-[#7C3AED] to-[#A855F7]
+          text-white
+          shadow-[0_14px_30px_rgba(147,51,234,0.28)]
+          transition-all duration-300
+          hover:-translate-y-1 hover:scale-105
+          hover:shadow-[0_20px_40px_rgba(147,51,234,0.42)]"
         >
           <FaFacebookF
             size={18}
@@ -46,7 +53,14 @@ export default function FooterBrand() {
 
         <a
           href="#"
-          className="group flex h-12 w-12 items-center justify-center rounded-lg bg-sky-600 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-orange-500"
+          className="group flex h-12 w-12 items-center justify-center rounded-2xl
+          border border-white/10
+          bg-gradient-to-br from-[#6957DF] via-[#7C3AED] to-[#A855F7]
+          text-white
+          shadow-[0_14px_30px_rgba(147,51,234,0.28)]
+          transition-all duration-300
+          hover:-translate-y-1 hover:scale-105
+          hover:shadow-[0_20px_40px_rgba(147,51,234,0.42)]"
         >
           <FaXTwitter
             size={18}
@@ -58,7 +72,14 @@ export default function FooterBrand() {
 
         <a
           href="#"
-          className="group flex h-12 w-12 items-center justify-center rounded-lg bg-sky-600 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-orange-500"
+          className="group flex h-12 w-12 items-center justify-center rounded-2xl
+          border border-white/10
+          bg-gradient-to-br from-[#6957DF] via-[#7C3AED] to-[#A855F7]
+          text-white
+          shadow-[0_14px_30px_rgba(147,51,234,0.28)]
+          transition-all duration-300
+          hover:-translate-y-1 hover:scale-105
+          hover:shadow-[0_20px_40px_rgba(147,51,234,0.42)]"
         >
           <FaInstagram
             size={18}
@@ -70,7 +91,14 @@ export default function FooterBrand() {
 
         <a
           href="#"
-          className="group flex h-12 w-12 items-center justify-center rounded-lg bg-sky-600 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-orange-500"
+          className="group flex h-12 w-12 items-center justify-center rounded-2xl
+          border border-white/10
+          bg-gradient-to-br from-[#6957DF] via-[#7C3AED] to-[#A855F7]
+          text-white
+          shadow-[0_14px_30px_rgba(147,51,234,0.28)]
+          transition-all duration-300
+          hover:-translate-y-1 hover:scale-105
+          hover:shadow-[0_20px_40px_rgba(147,51,234,0.42)]"
         >
           <FaLinkedinIn
             size={18}
@@ -82,7 +110,14 @@ export default function FooterBrand() {
 
         <a
           href="#"
-          className="group flex h-12 w-12 items-center justify-center rounded-lg bg-sky-600 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-orange-500"
+          className="group flex h-12 w-12 items-center justify-center rounded-2xl
+          border border-white/10
+          bg-gradient-to-br from-[#6957DF] via-[#7C3AED] to-[#A855F7]
+          text-white
+          shadow-[0_14px_30px_rgba(147,51,234,0.28)]
+          transition-all duration-300
+          hover:-translate-y-1 hover:scale-105
+          hover:shadow-[0_20px_40px_rgba(147,51,234,0.42)]"
         >
           <FaYoutube
             size={18}

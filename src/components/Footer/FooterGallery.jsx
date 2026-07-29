@@ -48,12 +48,13 @@ const destinations = [
 export default function FooterGallery() {
   return (
     <div>
+
       {/* Heading */}
 
       <h3 className="relative mb-8 inline-block text-2xl font-bold text-white">
         Popular Destinations
 
-        <span className="absolute -bottom-2 left-0 h-1 w-20 rounded-full bg-gradient-to-r from-sky-500 to-orange-500"></span>
+        <span className="absolute -bottom-2 left-0 h-1 w-20 rounded-full bg-gradient-to-r from-[#6957DF] via-[#7C3AED] to-[#A855F7]"></span>
       </h3>
 
       {/* Gallery */}
@@ -61,11 +62,13 @@ export default function FooterGallery() {
       <div className="grid grid-cols-3 gap-3">
 
         {destinations.map((place) => (
+
           <Link
             key={place.id}
             to={place.slug}
-            className="group relative overflow-hidden rounded-xl shadow-lg"
+            className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] shadow-[0_12px_30px_rgba(0,0,0,0.25)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-purple-300/30 hover:shadow-[0_18px_40px_rgba(147,51,234,0.18)]"
           >
+
             {/* Image */}
 
             <img
@@ -76,19 +79,20 @@ export default function FooterGallery() {
 
             {/* Overlay */}
 
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent transition-all duration-300 group-hover:from-orange-600/80"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-[#12071F]/80 via-[#2A1150]/25 to-transparent transition-all duration-300 group-hover:from-[#7C3AED]/75"></div>
 
             {/* Destination Name */}
 
             <div className="absolute inset-0 flex items-end justify-center p-2">
 
-              <span className="text-center text-xs font-semibold text-white transition-all duration-300 group-hover:translate-y-[-2px]">
+              <span className="text-center text-xs font-semibold text-white transition-all duration-300 group-hover:-translate-y-0.5">
                 {place.title}
               </span>
 
             </div>
 
           </Link>
+
         ))}
 
       </div>
@@ -96,11 +100,12 @@ export default function FooterGallery() {
       {/* Explore Button */}
 
       <Link
-        to="/packages"
-        className="mt-6 flex h-11 items-center justify-center rounded-full border border-sky-500 bg-sky-600 font-semibold text-white transition-all duration-300 hover:border-orange-500 hover:bg-orange-500"
+        to="/#tours"
+        className="mt-6 flex h-11 items-center justify-center rounded-full border border-purple-200 bg-gradient-to-r from-[#6957DF] via-[#7C3AED] to-[#A855F7] font-semibold text-white shadow-[0_14px_30px_rgba(147,51,234,0.28)] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_20px_40px_rgba(147,51,234,0.38)]"
       >
         Explore All Packages
       </Link>
+
     </div>
   );
 }

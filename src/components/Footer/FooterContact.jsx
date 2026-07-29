@@ -15,7 +15,7 @@ export default function FooterContact() {
       <h3 className="relative inline-block text-2xl font-bold text-white">
         Contact Us
 
-        <span className="absolute -bottom-2 left-0 h-1 w-16 rounded-full bg-gradient-to-r from-sky-500 to-orange-500"></span>
+        <span className="absolute -bottom-2 left-0 h-1 w-16 rounded-full bg-gradient-to-r from-[#6957DF] via-[#7C3AED] to-[#A855F7]"></span>
       </h3>
 
       {/* Contact List */}
@@ -24,9 +24,9 @@ export default function FooterContact() {
 
         {/* Address */}
 
-        <div className="group flex items-start gap-4">
+        <div className="group flex items-start gap-4 rounded-2xl border border-white/5 bg-white/[0.03] p-4 backdrop-blur-sm transition-all duration-300 hover:border-purple-300/20 hover:bg-white/[0.06] hover:shadow-[0_18px_40px_rgba(147,51,234,0.12)]">
 
-          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-sky-600 text-white shadow-lg transition-all duration-300 group-hover:bg-orange-500 group-hover:rotate-6">
+          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-gradient-to-br from-[#6957DF] via-[#7C3AED] to-[#A855F7] text-white shadow-[0_12px_28px_rgba(147,51,234,0.28)] transition-all duration-300 group-hover:-translate-y-1 group-hover:scale-105 group-hover:shadow-[0_18px_40px_rgba(147,51,234,0.38)]">
 
             <MapPin size={20} />
 
@@ -52,9 +52,9 @@ export default function FooterContact() {
 
         {/* Phone */}
 
-        <div className="group flex items-center gap-4">
+        <div className="group flex items-center gap-4 rounded-2xl border border-white/5 bg-white/[0.03] p-4 backdrop-blur-sm transition-all duration-300 hover:border-purple-300/20 hover:bg-white/[0.06] hover:shadow-[0_18px_40px_rgba(147,51,234,0.12)]">
 
-          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-sky-600 text-white shadow-lg transition-all duration-300 group-hover:bg-orange-500 group-hover:rotate-6">
+          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-gradient-to-br from-[#6957DF] via-[#7C3AED] to-[#A855F7] text-white shadow-[0_12px_28px_rgba(147,51,234,0.28)] transition-all duration-300 group-hover:-translate-y-1 group-hover:scale-105 group-hover:shadow-[0_18px_40px_rgba(147,51,234,0.38)]">
 
             <Phone size={20} />
 
@@ -68,7 +68,7 @@ export default function FooterContact() {
 
             <a
               href="tel:+919999999999"
-              className="text-sm text-slate-300 transition hover:text-orange-400"
+              className="text-sm text-slate-300 transition hover:text-[#C084FC]"
             >
               +91 99999 99999
             </a>
@@ -79,9 +79,9 @@ export default function FooterContact() {
 
         {/* Email */}
 
-        <div className="group flex items-center gap-4">
+        <div className="group flex items-center gap-4 rounded-2xl border border-white/5 bg-white/[0.03] p-4 backdrop-blur-sm transition-all duration-300 hover:border-purple-300/20 hover:bg-white/[0.06] hover:shadow-[0_18px_40px_rgba(147,51,234,0.12)]">
 
-          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-sky-600 text-white shadow-lg transition-all duration-300 group-hover:bg-orange-500 group-hover:rotate-6">
+          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-gradient-to-br from-[#6957DF] via-[#7C3AED] to-[#A855F7] text-white shadow-[0_12px_28px_rgba(147,51,234,0.28)] transition-all duration-300 group-hover:-translate-y-1 group-hover:scale-105 group-hover:shadow-[0_18px_40px_rgba(147,51,234,0.38)]">
 
             <Mail size={20} />
 
@@ -95,7 +95,7 @@ export default function FooterContact() {
 
             <a
               href="mailto:info@riyatravels.com"
-              className="text-sm text-slate-300 transition hover:text-orange-400"
+              className="text-sm text-slate-300 transition hover:text-[#C084FC]"
             >
               info@riyatravels.com
             </a>
