@@ -61,6 +61,8 @@ export default function TourCard({ tour }) {
         <img
           src={tour.image}
           alt={tour.title}
+          loading="lazy"
+          decoding="async"
           className="h-60 w-full object-cover transition-transform duration-700 group-hover:scale-110"
         />
 

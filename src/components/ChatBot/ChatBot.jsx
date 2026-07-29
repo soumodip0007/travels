@@ -31,7 +31,7 @@ export default function ChatBot({ loading }) {
         }
       `}</style>
 
-      {/* Chat Window */}
+      {/* Chat Window — sits just above the launcher, no overlap */}
       <AnimatePresence>
         {open && (
           <motion.div
@@ -39,7 +39,7 @@ export default function ChatBot({ loading }) {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 16, scale: 0.94 }}
             transition={{ type: "spring", stiffness: 340, damping: 28 }}
-            className="fixed bottom-[15rem] right-6 z-[9999] origin-bottom-right"
+            className="fixed bottom-28 right-5 z-[9999] origin-bottom-right"
           >
             {/* Soft aurora glow behind the panel */}
             <div
@@ -56,7 +56,7 @@ export default function ChatBot({ loading }) {
 
       {/* Launcher */}
       <div
-        className="fixed bottom-71 right-5 z-[9999]"
+        className="fixed bottom-5 right-5 z-[9999]"
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
       >
@@ -78,11 +78,6 @@ export default function ChatBot({ loading }) {
 
         <div className="relative flex h-[76px] w-[76px] items-center justify-center">
           <svg viewBox="0 0 100 100" className="pointer-events-none absolute inset-0 h-full w-full">
-            {/* <circle
-              cx="50" cy="50" r={R}
-              fill="none" stroke="#C4B5FD" strokeOpacity="0.2"
-              strokeWidth="1.3" strokeDasharray="1.5 5"
-            /> */}
             <g className="cb-orbit-group">
               <circle
                 cx="50" cy="50" r={R}

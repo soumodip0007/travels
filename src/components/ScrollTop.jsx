@@ -25,14 +25,32 @@ export default function ScrollTop() {
     <button
       onClick={scrollToTop}
       aria-label="Scroll to Top"
-      className={`fixed bottom-8 right-8 z-[999] flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-r from-sky-600 to-orange-500 text-white shadow-2xl transition-all duration-500 hover:scale-110 hover:shadow-[0_15px_40px_rgba(14,165,233,0.45)]
+      className={`fixed bottom-6 left-6 z-[999] flex h-16 w-16 items-center justify-center rounded-full text-white border border-white/10 transition-all duration-500 hover:scale-110
       ${
         visible
           ? "translate-y-0 opacity-100"
           : "pointer-events-none translate-y-10 opacity-0"
       }`}
+      style={{
+        background:
+          "linear-gradient(135deg, #3B1E7A 0%, #6957DF 45%, #A855F7 100%)",
+        boxShadow:
+          "0 14px 38px rgba(105,87,223,0.38), inset 0 1px 1px rgba(255,255,255,0.18)",
+      }}
     >
-      <ChevronUp size={28} strokeWidth={2.5} />
+      <div
+        className="absolute inset-0 rounded-full blur-md opacity-50"
+        style={{
+          background:
+            "linear-gradient(135deg, #7C3AED, #C084FC)",
+        }}
+      />
+
+      <ChevronUp
+        size={38}
+        strokeWidth={2.6}
+        className="relative z-10"
+      />
     </button>
   );
 }
