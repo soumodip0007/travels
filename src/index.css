@@ -1,8 +1,9 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=JetBrains+Mono:wght@500&display=swap');
 
-* {
+*, body {
   font-family: 'Fraunces', serif;
+  font-optical-sizing: auto;
 }
 
 /* =========================================================
@@ -59,12 +60,10 @@
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(5, 30, 75, 0.88),
-    rgba(12, 74, 110, 0.45),
-    rgba(0, 0, 0, 0.55)
-  );
+  background: linear-gradient(90deg,
+      rgba(5, 30, 75, 0.88),
+      rgba(12, 74, 110, 0.45),
+      rgba(0, 0, 0, 0.55));
   z-index: 2;
 }
 
@@ -536,10 +535,12 @@
     transform: translateY(0);
     opacity: 0.3;
   }
+
   50% {
     transform: translateY(10px);
     opacity: 1;
   }
+
   100% {
     transform: translateY(0);
     opacity: 0.3;
@@ -554,9 +555,11 @@
   0% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(6px);
   }
+
   100% {
     transform: translateY(0);
   }

@@ -4,27 +4,116 @@ import {
   MapPin,
   Clock,
   Send,
+  User,
+  MessageSquare,
+  Tag,
+  PlaneTakeoff,
 } from "lucide-react";
 
+const contactDetails = [
+  {
+    icon: Phone,
+    label: "Phone",
+    value: "+91 98765 43210",
+  },
+  {
+    icon: Mail,
+    label: "Email",
+    value: "info@travelx.com",
+  },
+  {
+    icon: MapPin,
+    label: "Office",
+    value: "Kolkata, West Bengal, India",
+  },
+  {
+    icon: Clock,
+    label: "Working Hours",
+    value: "Mon - Sat : 9:00 AM - 7:00 PM",
+  },
+];
+
 const Contact = () => {
+  // Purely decorative reference tag, mirrors the enquiry ticket motif
+  const refCode = `CX-${new Date().getFullYear().toString().slice(2)}${String(
+    new Date().getMonth() + 1
+  ).padStart(2, "0")}`;
+
   return (
-    <section className="bg-gradient-to-b from-sky-50 via-white to-white">
+    <section className="bg-gradient-to-b from-purple-50/60 via-white to-white">
+
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=JetBrains+Mono:wght@500&display=swap');
+
+        .contact-display {
+          font-family: 'Fraunces', serif;
+          font-optical-sizing: auto;
+        }
+
+        .contact-mono {
+          font-family: 'JetBrains Mono', monospace;
+          letter-spacing: 0.08em;
+        }
+
+        .contact-input {
+          transition: border-color 200ms ease, box-shadow 200ms ease;
+        }
+
+        .contact-input:focus {
+          box-shadow: 0 0 0 4px rgba(105, 87, 223, 0.14);
+        }
+
+        .contact-submit {
+          position: relative;
+          overflow: hidden;
+        }
+
+        .contact-submit::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: -60%;
+          width: 40%;
+          height: 100%;
+          background: linear-gradient(120deg, transparent, rgba(255,255,255,0.35), transparent);
+          transform: skewX(-20deg);
+          transition: left 700ms ease;
+        }
+
+        .contact-submit:hover::before {
+          left: 130%;
+        }
+
+        @keyframes contactFadeUp {
+          from {
+            opacity: 0;
+            transform: translateY(18px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .contact-fade-up {
+          animation: contactFadeUp 0.6s ease-out both;
+        }
+      `}</style>
 
       {/* ================= Hero ================= */}
 
-      <div className="bg-gradient-to-r from-sky-700 to-sky-500 py-20 text-white">
+      <div className="relative overflow-hidden bg-gradient-to-br from-[#6957DF] to-[#3D2E77] py-24 text-white">
 
-        <div className="mx-auto w-[92%] max-w-7xl text-center">
+        <div className="pointer-events-none absolute -left-10 top-0 h-72 w-72 rounded-full bg-white/10 blur-[100px]" />
+        <div className="pointer-events-none absolute -right-10 bottom-0 h-72 w-72 rounded-full bg-[#9F7AEA]/30 blur-[100px]" />
 
-          <span className="rounded-full bg-white/20 px-5 py-2 text-sm font-semibold backdrop-blur">
-            Contact Us
-          </span>
+        <div className="contact-fade-up relative mx-auto w-[92%] max-w-7xl text-center">
 
-          <h1 className="mt-6 text-5xl font-extrabold">
-            Let's Plan Your Next Journey
+          <h1 className="contact-display mt-7 text-5xl leading-tight md:text-6xl">
+            Let's Plan Your<br className="hidden md:block" /> Next Journey
           </h1>
 
-          <p className="mx-auto mt-5 max-w-3xl text-lg text-sky-100">
+          <p className="mx-auto mt-5 max-w-2xl text-lg text-white/75">
             Have questions about our tour packages? Need a customized itinerary?
             Get in touch with our travel experts today.
           </p>
@@ -39,83 +128,51 @@ const Contact = () => {
 
         {/* Left */}
 
-        <div className="space-y-6 lg:col-span-2">
+        <div className="contact-fade-up space-y-6 lg:col-span-2">
 
-          <div className="rounded-3xl bg-white p-8 shadow-xl">
+          <div className="rounded-3xl border border-purple-100 bg-white p-8 shadow-[0_30px_80px_rgba(105,87,223,0.14)]">
 
-            <h2 className="mb-8 text-3xl font-bold text-slate-800">
+            <p className="contact-mono text-[11px] uppercase text-[#6957DF]/70">
+              Reach Us
+            </p>
+            <h2 className="contact-display mt-2 mb-8 text-3xl text-slate-800">
               Contact Information
             </h2>
 
             <div className="space-y-6">
 
-              <div className="flex gap-5">
+              {contactDetails.map(({ icon: Icon, label, value }, index) => (
+                <div key={index} className="group flex gap-5">
 
-                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-sky-100 text-sky-600">
-                  <Phone />
+                  <div
+                    className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl
+                    border-2 border-[#6957DF]
+                    bg-white
+                    text-[#6957DF]
+                    shadow-sm
+                    transition-all duration-500
+                    group-hover:scale-110
+                    group-hover:rotate-6
+                    group-hover:border-transparent
+                    group-hover:bg-gradient-to-br
+                    group-hover:from-[#6957DF]
+                    group-hover:to-[#9F7AEA]
+                    group-hover:text-white"
+                  >
+                    <Icon size={22} />
+                  </div>
+
+                  <div>
+                    <h3 className="font-semibold text-slate-800">
+                      {label}
+                    </h3>
+                    <p className="text-gray-600">
+                      {value}
+                    </p>
+                  </div>
+
                 </div>
-
-                <div>
-                  <h3 className="font-semibold text-slate-800">
-                    Phone
-                  </h3>
-                  <p className="text-gray-600">
-                    +91 98765 43210
-                  </p>
-                </div>
-
-              </div>
-
-              <div className="flex gap-5">
-
-                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-orange-100 text-orange-500">
-                  <Mail />
-                </div>
-
-                <div>
-                  <h3 className="font-semibold text-slate-800">
-                    Email
-                  </h3>
-                  <p className="text-gray-600">
-                    info@travelx.com
-                  </p>
-                </div>
-
-              </div>
-
-              <div className="flex gap-5">
-
-                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-sky-100 text-sky-600">
-                  <MapPin />
-                </div>
-
-                <div>
-                  <h3 className="font-semibold text-slate-800">
-                    Office
-                  </h3>
-                  <p className="text-gray-600">
-                    Kolkata, West Bengal, India
-                  </p>
-                </div>
-
-              </div>
-
-              <div className="flex gap-5">
-
-                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-orange-100 text-orange-500">
-                  <Clock />
-                </div>
-
-                <div>
-                  <h3 className="font-semibold text-slate-800">
-                    Working Hours
-                  </h3>
-                  <p className="text-gray-600">
-                    Mon - Sat : 9:00 AM - 7:00 PM
-                  </p>
-                </div>
-
-              </div>
+              ))}
 
             </div>
 
@@ -125,9 +182,12 @@ const Contact = () => {
 
         {/* Right */}
 
-        <div className="rounded-3xl bg-white p-10 shadow-xl lg:col-span-3">
+        <div className="contact-fade-up rounded-3xl border border-purple-100 bg-white p-10 shadow-[0_30px_80px_rgba(105,87,223,0.14)] lg:col-span-3">
 
-          <h2 className="mb-8 text-3xl font-bold text-slate-800">
+          <p className="contact-mono text-[11px] uppercase text-[#6957DF]/70">
+            Drop A Line
+          </p>
+          <h2 className="contact-display mt-2 mb-8 text-3xl text-slate-800">
             Send Us A Message
           </h2>
 
@@ -135,35 +195,59 @@ const Contact = () => {
 
             <div className="grid gap-6 md:grid-cols-2">
 
-              <input
-                type="text"
-                placeholder="Your Name"
-                className="rounded-xl border border-slate-200 px-5 py-4 outline-none transition focus:border-sky-500"
-              />
+              <div className="relative">
+                <User
+                  size={18}
+                  className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-[#6957DF]/50"
+                />
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  className="contact-input w-full rounded-xl border border-slate-200 px-5 py-4 pl-11 outline-none focus:border-[#6957DF]"
+                />
+              </div>
 
-              <input
-                type="email"
-                placeholder="Email Address"
-                className="rounded-xl border border-slate-200 px-5 py-4 outline-none transition focus:border-sky-500"
-              />
+              <div className="relative">
+                <Mail
+                  size={18}
+                  className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-[#6957DF]/50"
+                />
+                <input
+                  type="email"
+                  placeholder="Email Address"
+                  className="contact-input w-full rounded-xl border border-slate-200 px-5 py-4 pl-11 outline-none focus:border-[#6957DF]"
+                />
+              </div>
 
             </div>
 
-            <input
-              type="text"
-              placeholder="Subject"
-              className="w-full rounded-xl border border-slate-200 px-5 py-4 outline-none transition focus:border-sky-500"
-            />
+            <div className="relative">
+              <Tag
+                size={18}
+                className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-[#6957DF]/50"
+              />
+              <input
+                type="text"
+                placeholder="Subject"
+                className="contact-input w-full rounded-xl border border-slate-200 px-5 py-4 pl-11 outline-none focus:border-[#6957DF]"
+              />
+            </div>
 
-            <textarea
-              rows="6"
-              placeholder="Write your message..."
-              className="w-full rounded-xl border border-slate-200 px-5 py-4 outline-none transition focus:border-sky-500"
-            ></textarea>
+            <div className="relative">
+              <MessageSquare
+                size={18}
+                className="pointer-events-none absolute left-4 top-4 text-[#6957DF]/50"
+              />
+              <textarea
+                rows="6"
+                placeholder="Write your message..."
+                className="contact-input w-full rounded-xl border border-slate-200 px-5 py-4 pl-11 outline-none focus:border-[#6957DF]"
+              ></textarea>
+            </div>
 
             <button
               type="submit"
-              className="flex items-center gap-3 rounded-full bg-gradient-to-r from-sky-600 to-orange-500 px-8 py-4 font-semibold text-white shadow-lg transition duration-300 hover:scale-105"
+              className="contact-submit flex items-center gap-3 rounded-full bg-gradient-to-r from-[#6957DF] to-[#9F7AEA] px-8 py-4 font-semibold text-white shadow-[0_20px_45px_rgba(105,87,223,0.35)] transition-all duration-300 hover:scale-105 hover:shadow-[0_25px_55px_rgba(105,87,223,0.45)]"
             >
               <Send size={18} />
               Send Message
@@ -177,7 +261,7 @@ const Contact = () => {
 
       {/* ================= Google Map ================= */}
 
-      <div className="mx-auto mb-20 w-[92%] max-w-7xl overflow-hidden rounded-3xl shadow-xl">
+      <div className="contact-fade-up mx-auto mb-20 w-[92%] max-w-7xl overflow-hidden rounded-3xl border border-purple-100 shadow-[0_30px_80px_rgba(105,87,223,0.14)]">
 
         <iframe
           title="Google Map"

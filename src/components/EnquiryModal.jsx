@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import {
   X,
   User,
@@ -90,6 +90,7 @@ export default function EnquiryModal({
 
         .enquiry-stub-bg {
           background-image:
+            linear-gradient(135deg, #6957DF 0%, #443381 100%),
             radial-gradient(circle at 20% 15%, rgba(255,255,255,0.14) 0, transparent 45%),
             radial-gradient(circle at 85% 85%, rgba(255,255,255,0.10) 0, transparent 40%);
         }
@@ -100,6 +101,14 @@ export default function EnquiryModal({
 
         .enquiry-input:focus {
           box-shadow: 0 0 0 4px rgba(105, 87, 223, 0.14);
+        }
+
+        .enquiry-scroll {
+          scrollbar-width: none;
+        }
+
+        .enquiry-scroll::-webkit-scrollbar {
+          display: none;
         }
 
         .enquiry-submit {
@@ -137,28 +146,19 @@ export default function EnquiryModal({
         initial={{ opacity: 0, y: 24, scale: 0.97 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 0.35, ease: "easeOut" }}
-        className="relative z-10 grid w-full max-w-4xl overflow-hidden rounded-[28px] bg-[#FBFAFF] shadow-[0_40px_100px_rgba(36,28,75,0.35)] md:grid-cols-[220px_1fr]"
+        className="relative z-10 grid max-h-[94vh] w-full max-w-4xl overflow-hidden rounded-[28px] bg-[#FBFAFF] shadow-[0_40px_100px_rgba(36,28,75,0.35)] md:grid-cols-[200px_1fr]"
       >
 
         {/* ================= Ticket Stub ================= */}
 
-        <div className="enquiry-stub-bg relative hidden flex-col justify-between bg-gradient-to-br from-[#6957DF] to-[#443381] p-7 text-white md:flex">
+        <div className="enquiry-stub-bg relative hidden flex-col justify-between p-6 text-white md:flex">
 
           <div>
-            <PlaneTakeoff size={26} className="text-white/90" />
+            <PlaneTakeoff size={22} className="text-white/90" />
 
-            <p className="enquiry-mono mt-6 text-[11px] uppercase text-white/60">
-              Boarding Pass
-            </p>
-
-            <h3 className="enquiry-display mt-2 text-2xl leading-snug">
+            <h3 className="enquiry-display mt-1.5 text-xl leading-snug">
               Travel<br />Enquiry
             </h3>
-          </div>
-
-          <div>
-            <p className="enquiry-mono text-[11px] text-white/50">Ref No.</p>
-            <p className="enquiry-mono text-sm text-white/85">{ticketCode}</p>
           </div>
 
           {/* Perforated edge */}
@@ -169,45 +169,42 @@ export default function EnquiryModal({
 
         {/* ================= Form Side ================= */}
 
-        <div className="max-h-[90vh] overflow-y-auto p-7 md:p-10">
+        <div className="enquiry-scroll overflow-y-auto p-5 md:p-7">
 
           {/* Close Button */}
 
           <button
             onClick={close}
-            className="absolute right-5 top-5 rounded-full p-2 text-[#241c4b] transition hover:bg-purple-50 hover:text-[#6957DF]"
+            className="absolute right-4 top-4 rounded-full p-1.5 text-[#241c4b] transition hover:bg-purple-50 hover:text-[#6957DF]"
           >
-            <X size={22} />
+            <X size={20} />
           </button>
 
           {/* Heading (mobile only, stub hidden) */}
 
-          <div className="mb-7 md:hidden">
-            <p className="enquiry-mono text-[11px] uppercase text-[#6957DF]/70">
-              Boarding Pass · {ticketCode}
-            </p>
-            <h2 className="enquiry-display mt-1 text-3xl text-[#241c4b]">
+          <div className="mb-4 md:hidden">
+            <h2 className="enquiry-display mt-1 text-2xl text-[#241c4b]">
               Travel Enquiry
             </h2>
           </div>
 
-          <p className="mb-8 hidden text-slate-500 md:block">
+          <p className="mb-4 hidden pr-8 text-sm text-slate-500 md:block">
             Tell us about your travel plan and we will contact you shortly.
           </p>
 
-          <form onSubmit={submit} className="grid grid-cols-1 gap-5 md:grid-cols-2">
+          <form onSubmit={submit} className="grid grid-cols-1 gap-3.5 md:grid-cols-2">
 
             {/* Name */}
 
             <div>
-              <label className="mb-2 block text-sm font-semibold text-slate-700">
+              <label className="mb-1.5 block text-sm font-semibold text-slate-700">
                 Full Name
               </label>
 
               <div className="relative">
                 <User
-                  size={18}
-                  className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-[#6957DF]/50"
+                  size={17}
+                  className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-[#6957DF]/50"
                 />
                 <input
                   required
@@ -215,7 +212,7 @@ export default function EnquiryModal({
                   value={form.name}
                   onChange={handleChange}
                   placeholder="Enter your name"
-                  className="enquiry-input w-full rounded-xl border border-slate-200 bg-white p-4 pl-11 outline-none focus:border-[#6957DF]"
+                  className="enquiry-input w-full rounded-xl border border-slate-200 bg-white p-3 pl-10 outline-none focus:border-[#6957DF]"
                 />
               </div>
             </div>
@@ -223,14 +220,14 @@ export default function EnquiryModal({
             {/* Phone */}
 
             <div>
-              <label className="mb-2 block text-sm font-semibold text-slate-700">
+              <label className="mb-1.5 block text-sm font-semibold text-slate-700">
                 Phone Number
               </label>
 
               <div className="relative">
                 <Phone
-                  size={18}
-                  className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-[#6957DF]/50"
+                  size={17}
+                  className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-[#6957DF]/50"
                 />
                 <input
                   required
@@ -238,7 +235,7 @@ export default function EnquiryModal({
                   value={form.phone}
                   onChange={handleChange}
                   placeholder="Enter phone number"
-                  className="enquiry-input w-full rounded-xl border border-slate-200 bg-white p-4 pl-11 outline-none focus:border-[#6957DF]"
+                  className="enquiry-input w-full rounded-xl border border-slate-200 bg-white p-3 pl-10 outline-none focus:border-[#6957DF]"
                 />
               </div>
             </div>
@@ -246,14 +243,14 @@ export default function EnquiryModal({
             {/* Email */}
 
             <div>
-              <label className="mb-2 block text-sm font-semibold text-slate-700">
+              <label className="mb-1.5 block text-sm font-semibold text-slate-700">
                 Email Address
               </label>
 
               <div className="relative">
                 <Mail
-                  size={18}
-                  className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-[#6957DF]/50"
+                  size={17}
+                  className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-[#6957DF]/50"
                 />
                 <input
                   required
@@ -262,7 +259,7 @@ export default function EnquiryModal({
                   value={form.email}
                   onChange={handleChange}
                   placeholder="Enter email address"
-                  className="enquiry-input w-full rounded-xl border border-slate-200 bg-white p-4 pl-11 outline-none focus:border-[#6957DF]"
+                  className="enquiry-input w-full rounded-xl border border-slate-200 bg-white p-3 pl-10 outline-none focus:border-[#6957DF]"
                 />
               </div>
             </div>
@@ -270,29 +267,29 @@ export default function EnquiryModal({
             {/* Tour Type Question */}
 
             <div>
-              <label className="mb-2 block text-sm font-semibold text-slate-700">
+              <label className="mb-1.5 block text-sm font-semibold text-slate-700">
                 Which type of tour are you interested in?
               </label>
 
               <div className="relative">
                 <Compass
-                  size={18}
-                  className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-[#6957DF]/50"
+                  size={17}
+                  className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-[#6957DF]/50"
                 />
                 <select
                   required
                   name="package"
                   value={form.package}
                   onChange={handleChange}
-                  className="enquiry-input w-full appearance-none rounded-xl border border-slate-200 bg-white p-4 pl-11 pr-10 outline-none focus:border-[#6957DF]"
+                  className="enquiry-input w-full appearance-none rounded-xl border border-slate-200 bg-white p-3 pl-10 pr-9 outline-none focus:border-[#6957DF]"
                 >
                   <option value="">Select Tour Type</option>
                   <option value="Domestic Tour">Domestic Tour</option>
                   <option value="International Tour">International Tour</option>
                 </select>
                 <ChevronDown
-                  size={18}
-                  className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-slate-400"
+                  size={17}
+                  className="pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400"
                 />
               </div>
             </div>
@@ -300,14 +297,14 @@ export default function EnquiryModal({
             {/* Start Date */}
 
             <div>
-              <label className="mb-2 block text-sm font-semibold text-slate-700">
+              <label className="mb-1.5 block text-sm font-semibold text-slate-700">
                 Start Date
               </label>
 
               <div className="relative">
                 <CalendarDays
-                  size={18}
-                  className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-[#6957DF]/50"
+                  size={17}
+                  className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-[#6957DF]/50"
                 />
                 <input
                   required
@@ -315,7 +312,7 @@ export default function EnquiryModal({
                   name="startDate"
                   value={form.startDate}
                   onChange={handleChange}
-                  className="enquiry-input w-full rounded-xl border border-slate-200 bg-white p-4 pl-11 outline-none focus:border-[#6957DF]"
+                  className="enquiry-input w-full rounded-xl border border-slate-200 bg-white p-3 pl-10 outline-none focus:border-[#6957DF]"
                 />
               </div>
             </div>
@@ -323,14 +320,14 @@ export default function EnquiryModal({
             {/* End Date */}
 
             <div>
-              <label className="mb-2 block text-sm font-semibold text-slate-700">
+              <label className="mb-1.5 block text-sm font-semibold text-slate-700">
                 End Date
               </label>
 
               <div className="relative">
                 <CalendarDays
-                  size={18}
-                  className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-[#6957DF]/50"
+                  size={17}
+                  className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-[#6957DF]/50"
                 />
                 <input
                   required
@@ -338,7 +335,7 @@ export default function EnquiryModal({
                   name="endDate"
                   value={form.endDate}
                   onChange={handleChange}
-                  className="enquiry-input w-full rounded-xl border border-slate-200 bg-white p-4 pl-11 outline-none focus:border-[#6957DF]"
+                  className="enquiry-input w-full rounded-xl border border-slate-200 bg-white p-3 pl-10 outline-none focus:border-[#6957DF]"
                 />
               </div>
             </div>
@@ -346,42 +343,43 @@ export default function EnquiryModal({
             {/* Message */}
 
             <div className="md:col-span-2">
-              <label className="mb-2 block text-sm font-semibold text-slate-700">
+              <label className="mb-1.5 block text-sm font-semibold text-slate-700">
                 Message
               </label>
 
               <div className="relative">
                 <MessageSquare
-                  size={18}
-                  className="pointer-events-none absolute left-4 top-4 text-[#6957DF]/50"
+                  size={17}
+                  className="pointer-events-none absolute left-3.5 top-3.5 text-[#6957DF]/50"
                 />
                 <textarea
                   name="message"
-                  rows="5"
+                  rows="2"
                   value={form.message}
                   onChange={handleChange}
                   placeholder="Tell us your destination, number of travellers, budget, etc."
-                  className="enquiry-input w-full rounded-xl border border-slate-200 bg-white p-4 pl-11 outline-none focus:border-[#6957DF]"
+                  className="enquiry-input w-full rounded-xl border border-slate-200 bg-white p-3 pl-10 outline-none focus:border-[#6957DF]"
                 />
               </div>
             </div>
 
             {/* Submit Button */}
 
-            <button
-              type="submit"
-              disabled={loading}
-              className="enquiry-submit md:col-span-2 flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#6957DF] to-[#9F7AEA] py-4 font-bold text-white shadow-[0_20px_45px_rgba(105,87,223,0.35)] transition-all hover:scale-[1.01] hover:shadow-[0_25px_55px_rgba(105,87,223,0.45)] disabled:opacity-70 disabled:hover:scale-100"
-            >
-              {loading ? (
-                <LoadingSpinner />
-              ) : (
-                <>
-                  Submit Enquiry
-                  <PlaneTakeoff size={18} className="-rotate-45" />
-                </>
-              )}
-            </button>
+            <div className="md:col-span-2 flex justify-end">
+              <button
+                type="submit"
+                disabled={loading}
+                className="enquiry-submit flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#6957DF] to-[#9F7AEA] px-10 py-3.5 font-bold text-white shadow-[0_20px_45px_rgba(105,87,223,0.35)] transition-all hover:scale-[1.01] hover:shadow-[0_25px_55px_rgba(105,87,223,0.45)] disabled:opacity-70 disabled:hover:scale-100"
+              >
+                {loading ? (
+                  <LoadingSpinner />
+                ) : (
+                  <>
+                    Submit
+                  </>
+                )}
+              </button>
+            </div>
 
           </form>
         </div>
