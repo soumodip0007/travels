@@ -31,7 +31,11 @@ export default function ChatBot({ loading }) {
         }
       `}</style>
 
+<<<<<<< HEAD
       {/* Chat Window — bounded size, sits directly above the launcher */}
+=======
+      {/* Chat Window — sits just above the launcher, no overlap */}
+>>>>>>> e87a54627b69eaad22aea437bcf528f0222f1fde
       <AnimatePresence>
         {open && (
           <motion.div

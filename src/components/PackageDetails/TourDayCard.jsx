@@ -55,6 +55,8 @@ export default function TourDayCard({ day, circleRef }) {
               <img
                 src={image}
                 alt={`${day.title} ${index + 1}`}
+                loading="lazy"
+                decoding="async"
                 className="h-72 w-full object-cover transition duration-500 group-hover:scale-110"
               />
 
