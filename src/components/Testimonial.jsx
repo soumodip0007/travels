@@ -17,23 +17,23 @@ export default function Testimonials() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section className="relative overflow-hidden bg-slate-50 py-10">
+    <section className="relative overflow-hidden bg-transparent backdrop-blur-xs py-10 -mb-12">
 
       {/* Background */}
 
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,#0ea5e915,transparent_40%),radial-gradient(circle_at_bottom_right,#f9731615,transparent_40%)]" />
+      <div className="absolute" />
 
       <div className="relative mx-auto w-[92%] max-w-7xl">
 
         {/* Heading */}
 
-        <div className="mb-16 text-center">
+        <div className="mb-12 text-center">
 
           <h2 className="mt-5 text-5xl font-black text-slate-900">
             What Our Travelers Say
           </h2>
 
-          <p className="mx-auto mt-5 max-w-2xl text-lg text-slate-600">
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-600">
             Thousands of happy customers have explored beautiful destinations
             with us.
           </p>
@@ -69,46 +69,48 @@ export default function Testimonials() {
           {testimonials.map((item) => (
             <SwiperSlide key={item.id}>
 
-              <div className="group relative flex-full min-h-[430px] flex-col rounded-3xl border border-purple-100 bg-purple-100 p-8 shadow-lg shadow-purple-200/30 transition-all duration-500 hover:-translate-y-3 hover:border-[#6957DF] hover:bg-white hover:shadow-xl">
+              <div className="group relative overflow-hidden flex-full min-h-[430px] flex-col rounded-3xl border border-[#8B5CF6]/30 bg-gradient-to-br from-[#8B5CF6] to-[#6D28D9] p-8 transition-all duration-[1800ms] ease-[cubic-bezier(0.19,1,0.22,1)] hover:-translate-y-2 hover:border-[#7C3AED] hover:bg-white hover:bg-none">
+
+                {/* Decorative circles */}
+                <div className="absolute -left-12 -top-12 h-44 w-44 rounded-full bg-white/10 transition-all duration-[1800ms] ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:bg-[#8B5CF6]/12 group-hover:scale-105"></div>
+
+                <div className="absolute -bottom-20 -right-20 h-56 w-56 rounded-full bg-white/10 transition-all duration-[1800ms] ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:bg-[#8B5CF6]/10 group-hover:scale-105"></div>
 
                 {/* Quote */}
-
-                <div className="absolute left-0 top-0 flex h-24 w-24 items-center justify-center rounded-br-full rounded-tl-3xl bg-gradient-to-br from-[#6957DF] via-[#7C3AED] to-[#A855F7]">
+                <div className="absolute left-0 top-0 flex h-24 w-24 items-center justify-center rounded-br-full rounded-tl-3xl bg-white/15 transition-all duration-[1800ms] ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:bg-gradient-to-br group-hover:from-[#8B5CF6] group-hover:to-[#6D28D9]">
 
                   <Quote
                     size={42}
-                    className="text-white"
+                    className="text-white transition-all duration-[1800ms] ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:scale-105"
                   />
 
                 </div>
 
                 {/* Review */}
+                <div className="relative z-10 pt-20">
 
-                <div className="pt-20">
-
-                  <p className="text-lg leading-9 text-slate-600">
+                  <p className="text-lg leading-9 text-white transition-colors duration-[1800ms] ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:text-slate-700">
                     "{item.review}"
                   </p>
 
                 </div>
 
                 {/* User */}
-
-                <div className="mt-12 flex items-center gap-5">
+                <div className="relative z-10 mt-12 flex items-center gap-5">
 
                   <img
                     src={item.image}
                     alt={item.name}
-                    className="h-20 w-20 rounded-full border-4 border-slate-100 object-cover"
+                    className="h-20 w-20 rounded-full border-4 border-white/30 object-cover transition-all duration-[1800ms] ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:border-slate-200 group-hover:scale-105"
                   />
 
                   <div>
 
-                    <h3 className="text-2xl font-bold text-slate-900">
+                    <h3 className="text-2xl font-bold text-white transition-colors duration-[1800ms] ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:text-slate-900">
                       {item.name}
                     </h3>
 
-                    <p className="text-[#6957DF]">
+                    <p className="text-white/85 transition-colors duration-[1800ms] ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:text-[#6D28D9]">
                       {item.designation}
                     </p>
 

@@ -2,12 +2,13 @@ import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { animate, motion } from "framer-motion";
 import TourDayCard from "./TourDayCard";
 
+// Updated package keys
 const packageOptions = [
-  { key: "3", label: "3 Day Package" },
-  { key: "5", label: "5 Day Package" },
-  { key: "7", label: "7 Day Package" },
-  { key: "10", label: "10 Day Package" },
-  { key: "13", label: "13 Day Package" },
+  { key: "package1", label: "Package 1" },
+  { key: "package2", label: "Package 2" },
+  { key: "package3", label: "Package 3" },
+  { key: "package4", label: "Package 4" },
+  { key: "package5", label: "Package 5" },
 ];
 
 export default function TourPlan({
@@ -23,13 +24,14 @@ export default function TourPlan({
     height: 0,
   });
 
+  // Current package object
   const currentPackage = tour?.packages?.[selectedPackage];
 
   const currentItinerary = currentPackage?.itinerary || [];
   const currentPrice = currentPackage?.price;
   const currentDuration = currentPackage?.duration;
 
-  // Animated (counting) price
+  // Animated price
   const [animatedPrice, setAnimatedPrice] = useState(currentPrice ?? 0);
   const previousPrice = useRef(currentPrice ?? 0);
 
@@ -78,14 +80,14 @@ export default function TourPlan({
   }, [selectedPackage, currentItinerary]);
 
   return (
-    <section className="rounded-[36px]
-              border
-              border-white/70
-              bg-white/80
-              backdrop-blur-1xl
-              shadow-[0_25px_60px_rgba(105,87,223,0.12)]
-              mt-12
-              ">
+    <section
+      className="rounded-[36px]
+      border border-white/70
+      bg-white/80
+      backdrop-blur-1xl
+      shadow-[0_25px_60px_rgba(105,87,223,0.12)]
+      mt-12"
+    >
       <div className="mx-auto w-[92%] max-w-7xl">
 
         {/* Heading */}
@@ -97,7 +99,6 @@ export default function TourPlan({
           <h2 className="mt-3 text-4xl font-bold text-slate-900">
             Day Wise Tour Plan
           </h2>
-
         </div>
 
         {/* Current Package Details */}
@@ -105,20 +106,14 @@ export default function TourPlan({
           <div className="mb-8 mt-6 flex flex-wrap justify-center gap-6">
 
             <div className="rounded-2xl bg-purple-50 px-8 py-5 shadow">
-              <p className="text-sm text-gray-500">
-                Duration
-              </p>
-
+              <p className="text-sm text-gray-500">Duration</p>
               <h3 className="text-xl font-bold text-[#6957DF]">
                 {currentDuration}
               </h3>
             </div>
 
             <div className="rounded-2xl bg-purple-50 px-8 py-5 shadow">
-              <p className="text-sm text-gray-500">
-                Starting From
-              </p>
-
+              <p className="text-sm text-gray-500">Starting From</p>
               <h3 className="text-xl font-bold text-[#6957DF] tabular-nums">
                 ₹{animatedPrice.toLocaleString()}
               </h3>
@@ -149,12 +144,13 @@ export default function TourPlan({
                     : { scale: 1 }
                 }
                 transition={{ duration: 0.35, ease: "easeOut" }}
-                className={`rounded-full px-6 py-3 text-sm font-semibold transition-colors duration-300 ${isSelected
+                className={`rounded-full px-6 py-3 text-sm font-semibold transition-colors duration-300 ${
+                  isSelected
                     ? "bg-gradient-to-r from-[#6957DF] to-[#9F7AEA] text-white shadow-lg"
                     : isAvailable
-                      ? "bg-purple-100 text-[#6957DF] hover:bg-purple-200"
-                      : "cursor-not-allowed bg-gray-200 text-gray-400 opacity-60"
-                  }`}
+                    ? "bg-purple-100 text-[#6957DF] hover:bg-purple-200"
+                    : "cursor-not-allowed bg-gray-200 text-gray-400 opacity-60"
+                }`}
               >
                 {pkg.label}
               </motion.button>

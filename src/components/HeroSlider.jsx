@@ -167,20 +167,6 @@ export default function HeroSlider() {
 
                   </div>
 
-                  {/* Right Floating Card */}
-
-                  <div className="hero-right">
-
-                    <div className="stats-card">
-
-                      <h2>1000+</h2>
-
-                      <p>Destinations Worldwide</p>
-
-                    </div>
-
-                  </div>
-
                 </div>
 
               </div>
@@ -202,7 +188,7 @@ export default function HeroSlider() {
         >
           <path
             d="M321.39,56.44C184.06,95.11,0,23.87,0,23.87V120H1200V0S1050.68,93.28,863.91,74.63C706.89,58.88,570.86-12.6,321.39,56.44Z"
-            className="fill-white"
+            className="fill-[#EAE6FC]"
           />
         </svg>
       </div>

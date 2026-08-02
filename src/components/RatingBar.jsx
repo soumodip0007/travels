@@ -72,7 +72,7 @@ function StatItem({ number, title, icon: Icon }) {
 
 export default function RatingBar() {
   return (
-    <section className="bg-gradient-to-tr from-fuchsia-700 via-purple-400 to-purple-700 py-16">
+    <section className="bg-gradient-to-tr from-fuchsia-700 via-purple-400 to-purple-700 py-16 -mt-4">
       <div className="mx-auto grid w-[92%] max-w-6xl grid-cols-2 gap-y-12 md:grid-cols-4">
         {stats.map((item, index) => (
           <StatItem

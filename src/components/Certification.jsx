@@ -23,23 +23,19 @@ function LogoCard({ item }) {
 
 export default function Partnerships() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-white via-sky-50 to-white py-10">
-
-      {/* Background Blur */}
-      <div className="absolute -left-24 top-10 h-72 w-72 rounded-full bg-sky-200/30 blur-3xl"></div>
-      <div className="absolute -right-24 bottom-10 h-72 w-72 rounded-full bg-orange-200/30 blur-3xl"></div>
+    <section className="relative overflow-hidden bg-transparent py-20">
 
       <div className="relative mx-auto w-[92%] max-w-7xl">
 
         {/* Heading */}
         <div className="mb-8 text-center">
           <h2 className=" text-5xl font-black text-slate-800">
-            <span className="bg-gradient-to-r from-[#6957DF] via-[#7C3AED] to-[#A855F7] bg-clip-text text-transparent">
-  {" "}Certifications
-</span>
+            <span className="bg-gradient-to-r from-[#6957DF] via-[#7C3AED] to-[#A855F7] bg-clip-text text-transparent backdrop-blur-xs">
+              {" "}Certifications
+            </span>
           </h2>
 
-          <p className="mx-auto mt-5 max-w-2xl text-lg text-slate-600">
+          <p className="mx-auto mt-5 max-w-2xl text-lg text-slate-600 backdrop-blur-xs">
             We proudly collaborate with trusted organizations and global
             partners to deliver unforgettable travel experiences.
           </p>

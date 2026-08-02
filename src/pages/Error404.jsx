@@ -6,111 +6,143 @@ import {
   MapPinned,
   Home,
 } from "lucide-react";
+import ParticlesBackground from "../components/ParticlesBackground";
 
 export default function Error404() {
   return (
-    <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-gradient-to-br from-sky-600 via-sky-500 to-orange-500 px-6">
 
-      {/* Background Blurs */}
+    <div className="relative z-0">
+      <div className="fixed inset-0 -z-10 overflow-hidden">
+        <ParticlesBackground />
+      </div>
 
-      <div className="absolute -left-40 -top-40 h-96 w-96 rounded-full bg-white/15 blur-3xl"></div>
+      <style>{`
+        .error-cta {
+          position: relative;
+          overflow: hidden;
+        }
 
-      <div className="absolute -right-32 bottom-0 h-96 w-96 rounded-full bg-orange-300/30 blur-3xl"></div>
+        .error-cta::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: -60%;
+          width: 40%;
+          height: 100%;
+          background: linear-gradient(120deg, transparent, rgba(255,255,255,0.35), transparent);
+          transform: skewX(-20deg);
+          transition: left 700ms ease;
+        }
 
-      {/* Floating Plane */}
+        .error-cta:hover::before {
+          left: 130%;
+        }
+      `}</style>
 
-      <motion.div
-        animate={{
-          y: [0, -20, 0],
-          rotate: [0, 10, -10, 0],
-        }}
-        transition={{
-          duration: 5,
-          repeat: Infinity,
-        }}
-        className="absolute left-12 top-20 hidden lg:block"
-      >
-        <Plane
-          size={80}
-          className="text-white/20"
-        />
-      </motion.div>
+      <section className="relative flex min-h-[85vh] items-center justify-center overflow-hidden px-6">
 
-      <motion.div
-        animate={{
-          y: [0, 20, 0],
-          rotate: [0, -10, 10, 0],
-        }}
-        transition={{
-          duration: 6,
-          repeat: Infinity,
-        }}
-        className="absolute right-20 bottom-20 hidden lg:block"
-      >
-        <Compass
-          size={70}
-          className="text-white/20"
-        />
-      </motion.div>
+        {/* Background Blurs */}
 
-      {/* Card */}
+        <div className="absolute -left-40 -top-40 h-96 w-96 rounded-full bg-[#9F7AEA]/25 blur-3xl"></div>
 
-      <motion.div
-        initial={{
-          opacity: 0,
-          y: 60,
-          scale: 0.9,
-        }}
-        animate={{
-          opacity: 1,
-          y: 0,
-          scale: 1,
-        }}
-        transition={{
-          duration: 0.7,
-        }}
-        className="relative max-w-2xl rounded-[35px] border border-white/20 bg-white/15 p-12 text-center shadow-2xl backdrop-blur-xl"
-      >
+        <div className="absolute -right-32 bottom-0 h-96 w-96 rounded-full bg-[#6957DF]/20 blur-3xl"></div>
+
+        {/* Floating Plane */}
 
         <motion.div
           animate={{
-            y: [0, -12, 0],
+            y: [0, -20, 0],
+            rotate: [0, 10, -10, 0],
           }}
           transition={{
-            duration: 2,
+            duration: 5,
             repeat: Infinity,
           }}
-          className="mx-auto mb-8 flex h-28 w-28 items-center justify-center rounded-full bg-white shadow-xl"
+          className="absolute left-12 top-20 hidden lg:block"
         >
-          <MapPinned
-            size={55}
-            className="text-sky-600"
+          <Plane
+            size={80}
+            className="text-[#6957DF]/20"
           />
         </motion.div>
 
-        <h1 className="bg-gradient-to-r from-white to-orange-200 bg-clip-text text-8xl font-black text-transparent">
-          404
-        </h1>
-
-        <h2 className="mt-6 text-4xl font-black text-white">
-          Destination Not Found
-        </h2>
-
-        <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-white/90">
-          Oops! It looks like the destination you're trying to explore has
-          wandered off the map. Let's get you back to planning your next
-          unforgettable journey.
-        </p>
-
-        <Link
-          to="/"
-          className="mt-10 inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 text-lg font-bold text-sky-600 shadow-xl transition-all duration-300 hover:-translate-y-1 hover:bg-orange-500 hover:text-white"
+        <motion.div
+          animate={{
+            y: [0, 20, 0],
+            rotate: [0, -10, 10, 0],
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+          }}
+          className="absolute right-20 bottom-20 hidden lg:block"
         >
-          <Home size={22} />
-          Back to Home
-        </Link>
+          <Compass
+            size={70}
+            className="text-[#6957DF]/20"
+          />
+        </motion.div>
 
-      </motion.div>
-    </section>
+        {/* Card */}
+
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 60,
+            scale: 0.9,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+            scale: 1,
+          }}
+          transition={{
+            duration: 0.7,
+          }}
+          className="relative max-w-2xl rounded-[55px] border border-purple-100 bg-transparent/60 p-10 text-center shadow-[0_30px_90px_rgba(105,87,223,0.25)] backdrop-blur-xs"
+        >
+
+          <motion.div
+            animate={{
+              y: [0, -12, 0],
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+            }}
+            className="mx-auto mb-2 flex h-28 w-28 items-center justify-center rounded-full bg-gradient-to-br from-[#6957DF] to-[#9F7AEA] shadow-[0_20px_45px_rgba(105,87,223,0.35)]"
+          >
+            <MapPinned
+              size={55}
+              className="text-white"
+            />
+          </motion.div>
+
+          <h1 className="bg-gradient-to-r from-[#6957DF] to-[#9F7AEA] bg-clip-text text-8xl font-black text-transparent">
+            404
+          </h1>
+
+          <h2 className="text-4xl font-black text-slate-800">
+            Destination Not Found
+          </h2>
+
+          <p className="mx-auto mt-2 max-w-xl text-lg leading-8 text-slate-500">
+            Oops! It looks like the destination you're trying to explore has
+            wandered off the map. Let's get you back to planning your next
+            unforgettable journey.
+          </p>
+
+          <Link
+            to="/"
+            className="error-cta mt-4 inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-[#6957DF] to-[#9F7AEA] px-8 py-4 text-lg font-bold text-white shadow-[0_20px_45px_rgba(105,87,223,0.35)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_25px_55px_rgba(105,87,223,0.45)]"
+          >
+            <Home size={22} />
+            Back to Home
+          </Link>
+
+        </motion.div>
+      </section>
+    </div>
+
   );
 }

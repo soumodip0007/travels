@@ -5,13 +5,9 @@ import {
   Clock3,
   MapPin,
   IndianRupee,
-  Send,
-  Phone,
   Star,
   ArrowRight,
 } from "lucide-react";
-
-import { FaWhatsapp } from "react-icons/fa";
 
 export default function TourCard({ tour }) {
   // Find the cheapest available package
@@ -184,7 +180,7 @@ export default function TourCard({ tour }) {
 
           {/* ================= Facilities ================= */}
 
-          <div className="grid grid-cols-5 gap-2">
+          <div className="flex justify-center gap-6 flex-wrap">
             {tour.facilities.slice(0, 5).map((facility) => {
               const Icon = facility.icon;
               return (
@@ -205,48 +201,23 @@ export default function TourCard({ tour }) {
 
       {/* ================= FOOTER: actions ================= */}
 
-      <div className="relative flex items-center justify-between gap-4 px-4 py-3">
+      <div className="relative flex items-center justify-between gap-3 px-4 py-4 -mt-4">
 
-        {/* View Details — primary text CTA */}
+        {/* View Details */}
         <Link
           to={`/packages/${tour.slug}`}
-          className="flex h-11 items-center gap-2 rounded-full border-2 border-white bg-white px-5 font-semibold text-[#5B4BD6] shadow-lg transition-all duration-300 hover:scale-[1.03] hover:bg-slate-50"
+          className="flex-1 flex h-11 items-center justify-center rounded-full border-2 border-white bg-white px-5 font-semibold text-[#5B4BD6] shadow-lg transition-all duration-300 hover:scale-[1.02] hover:bg-slate-50"
         >
-          <span className="whitespace-nowrap">View Details</span>
+          View Details
         </Link>
 
-        <div className="flex items-center gap-2">
-
-          {/* Enquiry */}
-          <Link
-            to={`/packages/${tour.slug}`}
-            title="Enquire Now"
-            className="flex h-11 w-11 items-center justify-center rounded-full border-2 border-white bg-white/15 text-white transition-all duration-300 hover:scale-110 hover:bg-white hover:text-[#5B4BD6]"
-          >
-            <Send size={17} />
-          </Link>
-
-          {/* WhatsApp */}
-          <a
-            href={tour.whatsapp}
-            target="_blank"
-            rel="noopener noreferrer"
-            title="WhatsApp"
-            className="flex h-11 w-11 items-center justify-center rounded-full border-2 border-white bg-white/15 text-white transition-all duration-300 hover:scale-110 hover:bg-white hover:text-green-600"
-          >
-            <FaWhatsapp size={18} />
-          </a>
-
-          {/* Call */}
-          <a
-            href={tour.phone}
-            title="Call"
-            className="flex h-11 w-11 items-center justify-center rounded-full border-2 border-white bg-white/15 text-white transition-all duration-300 hover:scale-110 hover:bg-white hover:text-[#5B4BD6]"
-          >
-            <Phone size={16} />
-          </a>
-
-        </div>
+        {/* Enquire Now */}
+        <Link
+          to={`/packages/${tour.slug}`}
+          className="flex-1 flex h-11 items-center justify-center rounded-full border-2 border-white bg-white/15 px-5 font-semibold text-white transition-all duration-300 hover:scale-[1.02] hover:bg-white hover:text-[#5B4BD6]"
+        >
+          Enquire Now
+        </Link>
 
       </div>
 

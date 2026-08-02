@@ -139,7 +139,7 @@ export default function TourSection() {
 
             {/* View All / Show Less toggle */}
             {data.length > CARDS_PER_PAGE && (
-              <div className="mt-10 flex justify-center">
+              <div className="mt-8 flex justify-center">
 
                 <button
                   onClick={handleToggle}
@@ -157,88 +157,10 @@ export default function TourSection() {
   };
 
   return (
-    <section id="tours" className="ts-root relative overflow-hidden bg-gradient-to-b from-white via-[#FBF8F2] to-white mt-20 py-4">
-      <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap');
-
-        .ts-root { font-family: 'Inter', sans-serif; }
-        .ts-serif { font-family: 'Fraunces', serif; }
-
-        @keyframes ts-glow {
-          0%, 100% { box-shadow: 0 0 0 0 rgba(124, 58, 237, 0.3); }
-          50% { box-shadow: 0 0 0 6px rgba(124, 58, 237, 0); }
-        }
-        .ts-eyebrow { animation: ts-glow 2.6s ease-in-out infinite; }
-
-        @keyframes ts-card-rise {
-          from { opacity: 0; transform: translateY(18px); }
-          to   { opacity: 1; transform: translateY(0); }
-        }
-        .ts-card-in { animation: ts-card-rise 0.5s cubic-bezier(0.22, 1, 0.36, 1) both; }
-
-        .ts-cta {
-          position: relative;
-          overflow: hidden;
-        }
-        .ts-cta::after {
-          content: "";
-          position: absolute;
-          top: 0; left: -60%;
-          width: 40%; height: 100%;
-          background: linear-gradient(120deg, transparent, rgba(255,255,255,0.5), transparent);
-          transform: skewX(-20deg);
-          transition: left 0.6s ease;
-        }
-        .ts-cta:hover::after { left: 130%; }
-
-        @keyframes ts-drift-slow {
-          0%, 100% { transform: translate(0, 0) rotate(0deg); }
-          50% { transform: translate(20px, -25px) rotate(8deg); }
-        }
-        @keyframes ts-drift-slow-rev {
-          0%, 100% { transform: translate(0, 0) rotate(0deg); }
-          50% { transform: translate(-25px, 20px) rotate(-6deg); }
-        }
-        .ts-drift-a { animation: ts-drift-slow 14s ease-in-out infinite; }
-        .ts-drift-b { animation: ts-drift-slow-rev 17s ease-in-out infinite; }
-      `}</style>
+    <section id="tours" className="ts-root relative overflow-hidden bg-transparent py-4">
 
       {/* ================= Background: large, prominent, color-themed shapes ================= */}
 
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
-
-        {/* Top-left mega blob */}
-        <div className="ts-drift-a absolute -left-40 -top-40 h-[34rem] w-[34rem] rounded-full bg-gradient-to-br from-[#8471F2]/50 to-[#6957DF]/25 blur-3xl"></div>
-
-        {/* Top-right mega blob */}
-        <div className="ts-drift-b absolute -right-32 -top-24 h-[28rem] w-[28rem] rounded-full bg-gradient-to-bl from-[#A855F7]/45 to-[#7C3AED]/20 blur-3xl"></div>
-
-        {/* Mid-left accent blob */}
-        <div className="ts-drift-b absolute left-[8%] top-1/2 h-72 w-72 -translate-y-1/2 rounded-full bg-[#6E56E8]/35 blur-3xl"></div>
-
-        {/* Center-bottom large blob */}
-        <div className="ts-drift-a absolute bottom-[-6rem] left-1/2 h-96 w-96 -translate-x-1/2 rounded-full bg-gradient-to-t from-[#7C3AED]/40 to-transparent blur-3xl"></div>
-
-        {/* Bottom-right mega blob */}
-        <div className="ts-drift-a absolute -right-28 bottom-0 h-[30rem] w-[30rem] rounded-full bg-gradient-to-tl from-[#C2185B]/35 to-[#E3A23D]/25 blur-3xl"></div>
-
-        {/* Soft rotated square outline, top area */}
-        <div className="ts-drift-b absolute right-[18%] top-16 h-40 w-40 rotate-12 rounded-[2rem] border-2 border-[#7C3AED]/25"></div>
-
-        {/* Soft rotated ring, lower-left */}
-        <div className="ts-drift-a absolute left-[6%] bottom-24 h-56 w-56 rounded-full border-2 border-[#A855F7]/20"></div>
-
-        {/* Dot-grid texture over everything */}
-        <div
-          className="absolute inset-0 opacity-[0.08]"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle, #6957DF 1.5px, transparent 1.5px)",
-            backgroundSize: "26px 26px",
-          }}
-        ></div>
-
-      </div>
 
       <div className="relative z-10 mx-auto w-[96%] max-w-[1700px]">
 
@@ -253,7 +175,7 @@ export default function TourSection() {
             </span>
           </h2>
 
-          <p className="mt-6 text-lg leading-8 text-slate-500">
+          <p className="mt-6 text-lg leading-8 text-slate-600 backdrop-blur-xs">
             Discover hand-picked travel experiences crafted with comfort,
             adventure and unforgettable memories across India and the world.
           </p>
