@@ -85,13 +85,17 @@ export default function TourSection() {
   ) => {
     const totalPages = Math.ceil(data.length / CARDS_PER_PAGE);
 
+    // Correct pagination logic
+    const startIndex = (page - 1) * CARDS_PER_PAGE;
+    const endIndex = startIndex + CARDS_PER_PAGE;
+
     const visiblePackages = showAll
       ? data
-      : data.slice(0, CARDS_PER_PAGE);
+      : data.slice(startIndex, endIndex);
 
     const handleToggle = () => {
       if (showAll) {
-        // Collapsing back: reset to the first page of pagination
+        // when collapsing back, go to first page
         setPage(1);
       }
       setShowAll(!showAll);
@@ -99,19 +103,11 @@ export default function TourSection() {
 
     return (
       <div className="mb-15">
-
         {/* Heading */}
-
         <div className="mb-12 text-center">
-
-          {/* <p className="mx-auto max-w-3xl text-lg leading-8 text-slate-500 md:text-xl">
-            {subtitle}
-          </p> */}
-
           <h3 className="ts-serif mt-5 text-4xl font-bold text-[#1E2A47]">
             {title}
           </h3>
-
         </div>
 
         {data.length === 0 ? (
@@ -124,7 +120,9 @@ export default function TourSection() {
               {visiblePackages.map((tour, index) => (
                 <div
                   key={tour.id}
-                  style={{ animationDelay: `${(index % CARDS_PER_PAGE) * 80}ms` }}
+                  style={{
+                    animationDelay: `${(index % CARDS_PER_PAGE) * 80}ms`,
+                  }}
                   className="ts-card-in"
                 >
                   <TourCard tour={tour} />
@@ -132,22 +130,20 @@ export default function TourSection() {
               ))}
             </div>
 
-            {/* Pagination — only while collapsed */}
+            {/* Pagination */}
             {!showAll &&
               totalPages > 1 &&
               renderPagination(page, totalPages, setPage)}
 
-            {/* View All / Show Less toggle */}
+            {/* View All / Show Less */}
             {data.length > CARDS_PER_PAGE && (
               <div className="mt-8 flex justify-center">
-
                 <button
                   onClick={handleToggle}
                   className="ts-cta rounded-full bg-gradient-to-r from-[#6957DF] via-[#7C3AED] to-[#A855F7] px-8 py-3 font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:scale-105"
                 >
                   {showAll ? "Show Less" : "View All Packages"}
                 </button>
-
               </div>
             )}
           </>

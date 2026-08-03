@@ -42,7 +42,7 @@ export default function PackageHero({
   };
 
   return (
-    <section className="relative h-[70vh] overflow-hidden">
+    <section className="relative h-[70vh] overflow-hidden rounded-b-[48px] md:rounded-b-[64px]">
 
       {/* Background Image */}
 
@@ -130,7 +130,7 @@ export default function PackageHero({
         </div>
 
       </div>
-
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-30 h-[4px] rounded-full bg-gradient-to-r from-transparent via-[#A855F7] to-transparent shadow-[0_0_18px_rgba(168,85,247,0.85)]" />
     </section>
   );
 }

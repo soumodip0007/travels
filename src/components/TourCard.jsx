@@ -6,26 +6,29 @@ import {
   MapPin,
   IndianRupee,
   Star,
-  ArrowRight,
 } from "lucide-react";
 
 export default function TourCard({ tour }) {
-  // Find the cheapest available package
+  // Find all available packages
   const availablePackages = Object.values(tour.packages || {}).filter(
     (pkg) => pkg?.price
   );
 
+  // Find the cheapest package
   const cheapestPackage =
     availablePackages.length > 0
       ? availablePackages.reduce((prev, current) =>
-        current.price < prev.price ? current : prev
-      )
+          current.price < prev.price ? current : prev
+        )
       : null;
 
   const startingPrice = cheapestPackage?.price || 0;
 
   const startingDuration =
     cheapestPackage?.duration || tour.duration || "";
+
+  // Check if multiple packages exist
+  const hasMultiplePackages = availablePackages.length > 1;
 
   const handleShare = async (e) => {
     e.preventDefault();
@@ -40,7 +43,7 @@ export default function TourCard({ tour }) {
     if (navigator.share) {
       try {
         await navigator.share(shareData);
-      } catch { }
+      } catch {}
     } else {
       navigator.clipboard.writeText(shareData.url);
       alert("Package link copied!");
@@ -84,10 +87,11 @@ export default function TourCard({ tour }) {
         {/* Category */}
 
         <div
-          className={`absolute left-4 top-16 rounded-full px-4 py-1.5 text-xs font-bold text-white shadow-lg ${tour.category === "international"
-            ? "bg-gradient-to-r from-purple-600 to-pink-600"
-            : "bg-gradient-to-r from-sky-600 to-blue-700"
-            }`}
+          className={`absolute left-4 top-16 rounded-full px-4 py-1.5 text-xs font-bold text-white shadow-lg ${
+            tour.category === "international"
+              ? "bg-gradient-to-r from-purple-600 to-pink-600"
+              : "bg-gradient-to-r from-sky-600 to-blue-700"
+          }`}
         >
           {tour.category} Tour
         </div>
@@ -111,38 +115,21 @@ export default function TourCard({ tour }) {
         <div className="pointer-events-none absolute -right-14 -top-20 h-64 w-64 rounded-full bg-fuchsia-300/20 blur-1xl animate-[float-a_8s_ease-in-out_infinite]"></div>
         <div className="pointer-events-none absolute -bottom-4 left-14 h-116 w-116 rounded-full bg-indigo-900/50 blur-1xl animate-[float-b_10s_ease-in-out_infinite]"></div>
         <div className="pointer-events-none absolute -right-18 -top-20 bg-transparent h-44 w-44 rounded-full border-2 border-white/40 animate-[breathe_4s_ease-in-out_infinite]"></div>
-        {/* <div className="bg-transparent pointer-events-none absolute -right-6 top-10 h-16 w-16 rounded-full border border-white/10"></div> */}
-        {/* <div
-  className="pointer-events-none absolute inset-0 opacity-[0.07]"
-  style={{
-    backgroundImage:
-      "radial-gradient(circle, #ffffff 3px, transparent 1px)",
-    backgroundSize: "18px 18px",
-  }}
-></div> */}
-
-        <div className="relative z-10 flex flex-1 flex-col">
-          {/* content */}
-        </div>
 
         <style>{`
-  @keyframes float-a {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    50% { transform: translate(-14px, 16px) scale(1.08); }
-  }
-  @keyframes float-b {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    50% { transform: translate(12px, -14px) scale(1.05); }
-  }
-  @keyframes breathe {
-    0%, 100% { opacity: 0.4; transform: scale(1); }
-    50% { opacity: 0.9; transform: scale(1.06); }
-  }
-  @keyframes sweep {
-    0% { transform: translateX(-30%); }
-    100% { transform: translateX(30%); }
-  }
-`}</style>
+          @keyframes float-a {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(-14px, 16px) scale(1.08); }
+          }
+          @keyframes float-b {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(12px, -14px) scale(1.05); }
+          }
+          @keyframes breathe {
+            0%, 100% { opacity: 0.4; transform: scale(1); }
+            50% { opacity: 0.9; transform: scale(1.06); }
+          }
+        `}</style>
 
         <div className="relative z-10 flex flex-1 flex-col">
 
@@ -152,14 +139,26 @@ export default function TourCard({ tour }) {
           </h3>
 
           {/* Price */}
-          <div className="mt-3 flex items-center">
-            <IndianRupee size={17} className="mr-1 text-white" />
-            <span className="text-2xl font-black text-white">
-              {startingPrice.toLocaleString()}
-            </span>
-            <span className="ml-2 text-xs font-medium uppercase tracking-wide text-white/90">
-              / person
-            </span>
+          <div className="mt-3">
+
+            {hasMultiplePackages && (
+              <p className="text-sm font-medium text-white/80">
+                Starting from
+              </p>
+            )}
+
+            <div className="flex items-center">
+              <IndianRupee size={17} className="mr-1 text-white" />
+
+              <span className="text-2xl font-black text-white">
+                {startingPrice.toLocaleString()}
+              </span>
+
+              <span className="ml-2 text-xs font-medium uppercase tracking-wide text-white/90">
+                / person
+              </span>
+            </div>
+
           </div>
 
           {/* Duration & Destination */}
@@ -178,13 +177,13 @@ export default function TourCard({ tour }) {
           </div>
 
           {/* Divider */}
-          <div className="my-5 h-px bg-white/45"></div>
+          <div className="mt-auto mb-5 h-px bg-white/45"></div>
 
-          {/* ================= Facilities ================= */}
-
-          <div className="flex justify-center gap-6 flex-wrap">
+          {/* Facilities */}
+          <div className="flex flex-wrap justify-center gap-6">
             {tour.facilities.slice(0, 5).map((facility) => {
               const Icon = facility.icon;
+
               return (
                 <div
                   key={facility.id}
@@ -201,14 +200,14 @@ export default function TourCard({ tour }) {
 
       </div>
 
-      {/* ================= FOOTER: actions ================= */}
+      {/* ================= FOOTER ================= */}
 
       <div className="relative flex items-center justify-between gap-3 px-4 py-4 -mt-4">
 
         {/* View Details */}
         <Link
           to={`/packages/${tour.slug}`}
-          className="flex-1 flex h-11 items-center justify-center rounded-full border-2 border-white bg-white px-5 font-semibold text-[#5B4BD6] shadow-lg transition-all duration-300 hover:scale-[1.02] hover:bg-slate-50"
+          className="flex h-11 flex-1 items-center justify-center rounded-full border-2 border-white bg-white px-5 font-semibold text-[#5B4BD6] shadow-lg transition-all duration-300 hover:scale-[1.02] hover:bg-slate-50"
         >
           View Details
         </Link>
@@ -216,7 +215,7 @@ export default function TourCard({ tour }) {
         {/* Enquire Now */}
         <Link
           to={`/packages/${tour.slug}`}
-          className="flex-1 flex h-11 items-center justify-center rounded-full border-2 border-white bg-white/15 px-5 font-semibold text-white transition-all duration-300 hover:scale-[1.02] hover:bg-white hover:text-[#5B4BD6]"
+          className="flex h-11 flex-1 items-center justify-center rounded-full bg-[#4C3AA0] px-5 font-bold text-white shadow-lg transition-all duration-300 hover:scale-[1.02] hover:bg-[#41338C]"
         >
           Enquire Now
         </Link>
