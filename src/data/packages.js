@@ -9,6 +9,8 @@ import {
 } from "lucide-react";
 
 const packages = [
+  // domestic
+  
   {
     id: 1,
 
@@ -4262,6 +4264,1002 @@ const packages = [
     enquiryLink: "#",
 
     detailsLink: "/packages/goa-tour"
+  },
+  {
+    id: 22,
+
+    category: "domestic",
+
+    slug: "karnataka-tour",
+
+    title: "Karnataka",
+
+    image: null,
+
+    gallery: [null, null, null, null, null],
+
+    perPerson: true,
+
+    rating: 9.1,
+
+    location: "Udupi • Coorg • Mysuru • Hampi • Hospet • Badami • Gokarna • Bengaluru",
+
+    facilities: [
+      { id: 1, icon: Hotel, label: "Deluxe Hotel Stay" },
+      { id: 2, icon: Utensils, label: "Meals Included" },
+      { id: 3, icon: Car, label: "AC Transportation" },
+      { id: 4, icon: Camera, label: "Sightseeing" },
+      { id: 5, icon: MapPinned, label: "Temple & Heritage Tour" },
+      { id: 6, icon: Plane, label: "Train Included" }
+    ],
+
+    overview:
+      "Explore the cultural, spiritual, and scenic wonders of Karnataka including Udupi, Coorg, Mysuru, Hampi, Hospet, Badami, Gokarna, and Bengaluru. Experience ancient temples, UNESCO heritage sites, waterfalls, beaches, monasteries, palaces, and the timeless charm of South India.",
+
+    packages: {
+      package1: {
+        duration: "11 Nights / 12 Days",
+        price: 28500,
+        itinerary: [
+          {
+            day: 1,
+            title: "Kolkata → Mangaluru",
+            distance: "Train journey",
+            description:
+              "Board train (22851) from Santragachi Railway Station for Mangaluru. Overnight stay in train.",
+            images: [null, null]
+          },
+          {
+            day: 2,
+            title: "Train Journey",
+            distance: "Train journey",
+            description:
+              "Full day train journey. Overnight stay in train.",
+            images: [null, null]
+          },
+          {
+            day: 3,
+            title: "Arrival at Udupi",
+            distance: "Mangaluru → Udupi",
+            description:
+              "Arrive at Mangaluru Railway Station and transfer to Udupi hotel. Overnight stay at Udupi.",
+            images: [null, null]
+          },
+          {
+            day: 4,
+            title: "Udupi Sightseeing",
+            distance: "Local sightseeing",
+            description:
+              "Visit Shri Krishna Math, Shri Anantheshwara Temple, Pajaka Kshetra, Corporation Bank Heritage Museum, Koodlutheertha Falls, and Shri Indrani Panchadurga Parameshwari Temple. Overnight stay at Udupi.",
+            images: [null, null]
+          },
+          {
+            day: 5,
+            title: "Udupi → Coorg",
+            distance: "Approx. 190 km",
+            description:
+              "After breakfast proceed to Coorg. Overnight stay at Coorg.",
+            images: [null, null]
+          },
+          {
+            day: 6,
+            title: "Coorg Sightseeing",
+            distance: "Local sightseeing",
+            description:
+              "Visit Abbey Falls, Namdroling Monastery (Golden Temple), Iruppu Falls, and nearby attractions. Overnight stay at Coorg.",
+            images: [null, null]
+          },
+          {
+            day: 7,
+            title: "Coorg → Mysuru",
+            distance: "Approx. 120 km",
+            description:
+              "Proceed to Mysuru via Buddhist Monastery and Brindavan Gardens. Visit Mysore Palace. Overnight stay at Mysuru.",
+            images: [null, null]
+          },
+          {
+            day: 8,
+            title: "Mysuru → Hospet",
+            distance: "Approx. 340 km",
+            description:
+              "After breakfast drive to Hospet. Overnight stay at Hospet.",
+            images: [null, null]
+          },
+          {
+            day: 9,
+            title: "Hampi Excursion",
+            distance: "Local excursion",
+            description:
+              "Explore Virupaksha Temple, Hampi, Stone Chariot, Hampi Archaeological Museum, Tungabhadra Dam, Shri Huligemma Devi Temple, TB Dam Zoo & Park, and Hazara Rama Temple. Overnight stay at Hospet.",
+            images: [null, null]
+          },
+          {
+            day: 10,
+            title: "Hospet → Bengaluru",
+            distance: "Approx. 340 km",
+            description:
+              "Drive to Bengaluru and check in to hotel. Evening free for leisure. Overnight stay at Bengaluru.",
+            images: [null, null]
+          },
+          {
+            day: 11,
+            title: "Bengaluru Departure",
+            distance: "Railway station transfer",
+            description:
+              "After breakfast transfer to Bengaluru Railway Station and board train for Kolkata. Overnight stay in train.",
+            images: [null, null]
+          },
+          {
+            day: 12,
+            title: "Arrival at Kolkata",
+            distance: "Train arrival",
+            description:
+              "Arrive at Howrah Railway Station with sweet memories of Karnataka.",
+            images: [null, null]
+          }
+        ]
+      },
+
+      package2: {
+        duration: "14 Nights / 15 Days",
+        price: 35500,
+        itinerary: [
+          {
+            day: 1,
+            title: "Kolkata → Hospet",
+            distance: "Train journey",
+            description:
+              "Board Amravati Express (18047) from Shalimar Railway Station for Hospet. Overnight stay in train.",
+            images: [null, null]
+          },
+          {
+            day: 2,
+            title: "Train Journey",
+            distance: "Train journey",
+            description:
+              "Full day train journey. Overnight stay in train.",
+            images: [null, null]
+          },
+          {
+            day: 3,
+            title: "Arrival at Hospet",
+            distance: "Railway station transfer",
+            description:
+              "Arrive at Hospet Railway Station and transfer to hotel. Overnight stay at Hospet.",
+            images: [null, null]
+          },
+          {
+            day: 4,
+            title: "Hampi Sightseeing",
+            distance: "Local sightseeing",
+            description:
+              "Visit Virupaksha Temple, Hampi, Stone Chariot, Hampi Archaeological Museum, Tungabhadra Dam, Shri Huligemma Devi Temple, Anjanadri Betta, TB Dam Zoo & Park, and Hazara Rama Temple. Overnight stay at Hospet.",
+            images: [null, null]
+          },
+          {
+            day: 5,
+            title: "Hospet → Badami",
+            distance: "Approx. 140 km",
+            description:
+              "Drive to Badami and visit Badami Cave Temples, Badami Fort, and Agastya Lake. Overnight stay at Badami.",
+            images: [null, null]
+          },
+          {
+            day: 6,
+            title: "Badami → Gokarna",
+            distance: "Approx. 255 km",
+            description:
+              "Proceed to Gokarna via Hubballi. Overnight stay at Gokarna.",
+            images: [null, null]
+          },
+          {
+            day: 7,
+            title: "Gokarna Sightseeing",
+            distance: "Local sightseeing",
+            description:
+              "Visit Om Beach, Gokarna Main Beach, Belekan Beach, and Gorabha Shiva Cave. Overnight stay at Gokarna.",
+            images: [null, null]
+          },
+          {
+            day: 8,
+            title: "Gokarna → Udupi via Jog Falls",
+            distance: "Approx. 280 km",
+            description:
+              "Drive to Udupi via Jog Falls. Overnight stay at Udupi.",
+            images: [null, null]
+          },
+          {
+            day: 9,
+            title: "Udupi Sightseeing",
+            distance: "Local sightseeing",
+            description:
+              "Visit Shri Krishna Math, Shri Anantheshwara Temple, Pajaka Kshetra, Corporation Bank Heritage Museum, Koodlutheertha Falls, and Shri Indrani Panchadurga Parameshwari Temple. Overnight stay at Udupi.",
+            images: [null, null]
+          },
+          {
+            day: 10,
+            title: "Udupi → Coorg",
+            distance: "Approx. 190 km",
+            description:
+              "Proceed to Coorg. Overnight stay at Coorg.",
+            images: [null, null]
+          },
+          {
+            day: 11,
+            title: "Coorg Sightseeing",
+            distance: "Local sightseeing",
+            description:
+              "Visit Abbey Falls, Namdroling Monastery (Golden Temple), Iruppu Falls, and nearby attractions. Overnight stay at Coorg.",
+            images: [null, null]
+          },
+          {
+            day: 12,
+            title: "Coorg → Mysuru",
+            distance: "Approx. 120 km",
+            description:
+              "Drive to Mysuru via Buddhist Monastery and Brindavan Gardens. Overnight stay at Mysuru.",
+            images: [null, null]
+          },
+          {
+            day: 13,
+            title: "Mysuru Sightseeing & Departure",
+            distance: "Local sightseeing + train",
+            description:
+              "Visit Mysuru Palace and Chamundeshwari Temple. After lunch transfer to Mysuru Railway Station and board train (22818) for Kolkata. Overnight stay in train.",
+            images: [null, null]
+          },
+          {
+            day: 14,
+            title: "Train Journey",
+            distance: "Train journey",
+            description:
+              "Full day train journey. Overnight stay in train.",
+            images: [null, null]
+          },
+          {
+            day: 15,
+            title: "Arrival at Kolkata",
+            distance: "Train arrival",
+            description:
+              "Arrive at Howrah Railway Station with sweet memories of Karnataka.",
+            images: [null, null]
+          }
+        ]
+      }
+    },
+
+    included: [
+      "Deluxe accommodation",
+      "Train ticket (Sleeper Class)",
+      "Train meals (Lunch & Dinner)",
+      "Breakfast",
+      "Lunch",
+      "Evening tea & snacks",
+      "Dinner",
+      "AC transportation",
+      "Parking charges",
+      "Toll tax",
+      "Pick-up & drop",
+      "All possible sightseeing as per itinerary"
+    ],
+
+    excluded: [
+      "Flight ticket",
+      "Single supplement cost",
+      "Mineral water / soft drinks / hard drinks",
+      "Guide charges",
+      "Porter charges",
+      "Entry fees",
+      "Camera charges",
+      "Forest permits",
+      "Personal activities",
+      "Any ride or safari",
+      "Any item not mentioned above"
+    ],
+
+    whatsapp: "https://wa.me/918910555711",
+
+    phone: "tel:+918910555711",
+
+    enquiryLink: "#",
+
+    detailsLink: "/packages/karnataka-tour"
+  },
+  {
+    id: 23,
+
+    category: "domestic",
+
+    slug: "goa-lakshadweep-tour",
+
+    title: "Goa with Lakshadweep",
+
+    image: null,
+
+    gallery: [null, null, null, null, null],
+
+    perPerson: true,
+
+    rating: 9.4,
+
+    location: "Goa • Kochi • Agatti • Bangaram • Thinnakara • Kalpitty",
+
+    facilities: [
+      { id: 1, icon: Hotel, label: "Beach Resort Stay" },
+      { id: 2, icon: Utensils, label: "Meals Included" },
+      { id: 3, icon: Car, label: "Airport Transfers" },
+      { id: 4, icon: Camera, label: "Island Excursions" },
+      { id: 5, icon: MapPinned, label: "Beach & Lagoon Tour" },
+      { id: 6, icon: Plane, label: "Flight Included" }
+    ],
+
+    overview:
+      "Experience a unique tropical getaway combining the beaches of Goa with the turquoise lagoons of Lakshadweep. Explore Agatti Island, Bangaram Sandbank, Thinnakara Island, Kalpitty Island, coral reefs, snorkeling spots, and breathtaking sunset views while enjoying comfortable beach resort stays and island hospitality.",
+
+    packages: {
+      package1: {
+        duration: "4 Nights / 5 Days",
+        price: 60000,
+        itinerary: [
+          {
+            day: 1,
+            title: "Arrival at Goa / Kochi",
+            distance: "Airport transfer",
+            description:
+              "Arrive at Goa or Kochi Airport and transfer to hotel. Overnight stay at Goa / Kochi.",
+            images: [null, null]
+          },
+          {
+            day: 2,
+            title: "Goa / Kochi → Agatti Island",
+            distance: "Flight + island transfer",
+            description:
+              "Fly to Agatti, receive a traditional welcome, transfer to beach resort, enjoy lunch, and explore Agatti lagoon beaches, Andan Beach, Western Jetty, Eastern Jetty, and local island life. Overnight stay at Agatti.",
+            images: [null, null]
+          },
+          {
+            day: 3,
+            title: "Bangaram & Thinnakara Excursion",
+            distance: "Boat excursion",
+            description:
+              "Boat trip to Bangaram Island and Thinnakara Island. Enjoy dolphin watching, sea turtle spotting, beach exploration, snorkeling at Bangaram Lagoon and the shipwreck site, and lunch on board. Return to Agatti by evening. Alternative deep-sea snorkeling trip may operate if island access is restricted.",
+            images: [null, null]
+          },
+          {
+            day: 4,
+            title: "Kalpitty Island & Lagoon Activities",
+            distance: "Local island excursion",
+            description:
+              "Enjoy lagoon kayaking in the morning. Optional scuba diving available at extra cost. Evening glass-bottom boat ride to Kalpitty Island to view corals, marine life, green turtles, and hawksbill turtles, followed by sunset viewing. Overnight stay at Agatti.",
+            images: [null, null]
+          },
+          {
+            day: 5,
+            title: "Departure from Agatti",
+            distance: "Airport transfer",
+            description:
+              "Breakfast at resort, transfer to Agatti Airport, and board return flight with unforgettable Lakshadweep memories.",
+            images: [null, null]
+          }
+        ]
+      },
+
+      package2: {
+        duration: "6 Nights / 7 Days",
+        price: 70000,
+        itinerary: [
+          {
+            day: 1,
+            title: "Kolkata → Goa",
+            distance: "Flight journey",
+            description:
+              "Fly from Kolkata to Goa, transfer to hotel, enjoy an evening cruise program, and stay overnight in Goa.",
+            images: [null, null]
+          },
+          {
+            day: 2,
+            title: "North Goa Sightseeing",
+            distance: "Local sightseeing",
+            description:
+              "Visit Dolphin Point, Aguada Fort, Baga Beach, Calangute Beach, and Miramar Beach. Overnight stay at Goa.",
+            images: [null, null]
+          },
+          {
+            day: 3,
+            title: "South Goa Sightseeing",
+            distance: "Local sightseeing",
+            description:
+              "Visit St. Xavier's Church, Mangesh Temple, Santadurga Temple, and Colva Beach. Overnight stay at Goa.",
+            images: [null, null]
+          },
+          {
+            day: 4,
+            title: "Goa → Agatti Island",
+            distance: "Flight + island transfer",
+            description:
+              "Transfer to Goa Airport, fly to Agatti, receive welcome assistance, transfer to beach resort, enjoy lunch, and explore Agatti lagoon beaches and island attractions. Overnight stay at Agatti.",
+            images: [null, null]
+          },
+          {
+            day: 5,
+            title: "Bangaram & Thinnakara Excursion",
+            distance: "Boat excursion",
+            description:
+              "Boat trip to Bangaram Sandbank and Thinnakara Island with dolphin watching, snorkeling, beach exploration, and lunch on board. Alternative deep-sea snorkeling trip may operate if island access is restricted.",
+            images: [null, null]
+          },
+          {
+            day: 6,
+            title: "Kalpitty Island & Lagoon Activities",
+            distance: "Local island excursion",
+            description:
+              "Enjoy kayaking, optional scuba diving, glass-bottom boat ride, coral viewing, turtle spotting, and sunset at Kalpitty Island. Overnight stay at Agatti.",
+            images: [null, null]
+          },
+          {
+            day: 7,
+            title: "Agatti → Kolkata",
+            distance: "Flight journey",
+            description:
+              "Breakfast at resort, transfer to Agatti Airport, take return flight via Goa, and arrive in Kolkata with beautiful island memories.",
+            images: [null, null]
+          }
+        ]
+      }
+    },
+
+    included: [
+      "Flight ticket as per selected package",
+      "Beach resort accommodation (AC)",
+      "Welcome drink",
+      "Breakfast",
+      "Lunch",
+      "Evening tea",
+      "Dinner",
+      "Agatti Island sightseeing",
+      "Bangaram Sandbank excursion (subject to permission and weather)",
+      "Thinnakara Island visit (subject to permission and weather)",
+      "Glass-bottom boat ride",
+      "Kalpitty Island excursion",
+      "Turtle watching",
+      "Kayaking",
+      "Snorkeling",
+      "Airport pick-up & drop",
+      "Guide assistance throughout the trip"
+    ],
+
+    excluded: [
+      "Scuba diving (₹3,500 per person)",
+      "Personal expenses",
+      "Additional beverages",
+      "Extra activities not mentioned in inclusions",
+      "Any item not mentioned above"
+    ],
+
+    whatsapp: "https://wa.me/918910555711",
+
+    phone: "tel:+918910555711",
+
+    enquiryLink: "#",
+
+    detailsLink: "/packages/goa-lakshadweep-tour"
+  },
+  {
+    id: 24,
+
+    category: "domestic",
+
+    slug: "kerala-kanyakumari-tour",
+
+    title: "Kerala with Kanyakumari",
+
+    image: null,
+
+    gallery: [null, null, null, null, null],
+
+    perPerson: true,
+
+    rating: 9.1,
+
+    location:
+      "Kanyakumari • Kovalam • Alleppey • Thekkady • Munnar • Kochi (Ernakulam)",
+
+    facilities: [
+      { id: 1, icon: Hotel, label: "Deluxe Hotel Stay" },
+      { id: 2, icon: Utensils, label: "Meals Included" },
+      { id: 3, icon: Car, label: "Transportation" },
+      { id: 4, icon: Camera, label: "Sightseeing" },
+      { id: 5, icon: MapPinned, label: "Hill & Backwater Tour" },
+      { id: 6, icon: Plane, label: "Train Included" }
+    ],
+
+    overview:
+      "Explore the scenic beauty of South India with this Kerala and Kanyakumari tour covering Kanyakumari, Kovalam, Alleppey, Thekkady, Munnar, and Kochi. Experience sunrise and sunset at Kanyakumari, serene beaches, backwaters, wildlife, tea gardens, waterfalls, and the colonial charm of Kochi.",
+
+    packages: {
+      package1: {
+        duration: "11 Nights / 14 Days",
+        price: 28500,
+        itinerary: [
+          {
+            day: 1,
+            title: "Kolkata → Kanyakumari",
+            distance: "Train journey",
+            description:
+              "Board Train 12665 from Howrah Railway Station at 4:15 PM for Kanyakumari. Overnight stay in train.",
+            images: [null, null]
+          },
+          {
+            day: 2,
+            title: "Train Journey",
+            distance: "Train journey",
+            description:
+              "Full day train journey towards Kanyakumari. Overnight stay in train.",
+            images: [null, null]
+          },
+          {
+            day: 3,
+            title: "Arrival at Kanyakumari",
+            distance: "Railway station transfer",
+            description:
+              "Arrive at Kanyakumari Railway Station and transfer to hotel. Overnight stay at Kanyakumari.",
+            images: [null, null]
+          },
+          {
+            day: 4,
+            title: "Kanyakumari Sightseeing",
+            distance: "Local sightseeing",
+            description:
+              "Visit Kanyakumari Temple, Vivekananda Rock Memorial, and enjoy the famous sunset at the seashore. Overnight stay at Kanyakumari.",
+            images: [null, null]
+          },
+          {
+            day: 5,
+            title: "Kanyakumari → Kovalam",
+            distance: "90 km",
+            description:
+              "Proceed to Kovalam. Visit Padmanabhaswamy Temple and Kovalam Beach. Overnight stay at Kovalam.",
+            images: [null, null]
+          },
+          {
+            day: 6,
+            title: "Kovalam → Alleppey",
+            distance: "160 km",
+            description:
+              "Drive to Alleppey. Optional backwater boat cruise in the afternoon at own cost. Overnight stay at Alleppey.",
+            images: [null, null]
+          },
+          {
+            day: 7,
+            title: "Alleppey → Thekkady",
+            distance: "140 km",
+            description:
+              "Travel to Thekkady, famous for spice plantations and wildlife. Overnight stay at Thekkady.",
+            images: [null, null]
+          },
+          {
+            day: 8,
+            title: "Thekkady Sightseeing",
+            distance: "Local sightseeing",
+            description:
+              "Visit Periyar Lake, Periyar National Park, and Kadathanadan Kalari Centre (optional, own cost). Overnight stay at Thekkady.",
+            images: [null, null]
+          },
+          {
+            day: 9,
+            title: "Thekkady → Munnar",
+            distance: "95 km",
+            description:
+              "Proceed to Munnar through beautiful hill roads and tea plantations. Overnight stay at Munnar.",
+            images: [null, null]
+          },
+          {
+            day: 10,
+            title: "Munnar Sightseeing",
+            distance: "Local sightseeing",
+            description:
+              "Visit Rajamalai (Eravikulam area), Mattupetty Dam, Spice Garden, coffee plantation, and surrounding viewpoints. Overnight stay at Munnar.",
+            images: [null, null]
+          },
+          {
+            day: 11,
+            title: "Munnar → Kochi (Ernakulam)",
+            distance: "130 km",
+            description:
+              "Travel to Kochi / Ernakulam and check in to hotel. Overnight stay at Kochi.",
+            images: [null, null]
+          },
+          {
+            day: 12,
+            title: "Kochi Sightseeing & Departure",
+            distance: "Local sightseeing + train",
+            description:
+              "After breakfast visit Chinese Fishing Nets and Portuguese Church (boat ride optional, own cost). In the evening transfer to Ernakulam Railway Station and board train for Kolkata. Overnight stay in train.",
+            images: [null, null]
+          },
+          {
+            day: 13,
+            title: "Train Journey",
+            distance: "Train journey",
+            description:
+              "Full day train journey back to Kolkata. Overnight stay in train.",
+            images: [null, null]
+          },
+          {
+            day: 14,
+            title: "Arrival at Kolkata",
+            distance: "Train arrival",
+            description:
+              "Arrive at Howrah Railway Station with sweet memories of Kerala and Kanyakumari.",
+            images: [null, null]
+          }
+        ]
+      }
+    },
+
+    included: [
+      "Deluxe accommodation",
+      "Up & down train fare (Sleeper Class)",
+      "Train meals (Lunch & Dinner)",
+      "Breakfast",
+      "Lunch",
+      "Evening tea & snacks",
+      "Dinner",
+      "Transportation (AC)",
+      "Parking charges",
+      "Toll tax",
+      "Pick-up & drop",
+      "All possible sightseeing as per itinerary"
+    ],
+
+    excluded: [
+      "Flight tickets",
+      "Single supplement cost",
+      "Mineral water / soft drinks / hard drinks",
+      "Guide charges",
+      "Porter charges",
+      "Entry fees",
+      "Camera charges",
+      "Forest permits",
+      "Backwater boat ride",
+      "Periyar boating charges",
+      "Personal activities",
+      "Any ride or safari",
+      "Any item not mentioned above"
+    ],
+
+    whatsapp: "https://wa.me/918910555711",
+
+    phone: "tel:+918910555711",
+
+    enquiryLink: "#",
+
+    detailsLink: "/packages/kerala-kanyakumari-tour"
+  },
+  {
+    id: 25,
+
+    category: "domestic",
+
+    slug: "gujarat-tour",
+
+    title: "Gujarat",
+
+    image: null,
+
+    gallery: [null, null, null, null, null],
+
+    perPerson: true,
+
+    rating: 9.0,
+
+    location: "Ahmedabad • Bhuj • Dwarka • Gir • Diu • Somnath • Veraval",
+
+    facilities: [
+      { id: 1, icon: Hotel, label: "Deluxe Hotel Stay" },
+      { id: 2, icon: Utensils, label: "Meals Included" },
+      { id: 3, icon: Car, label: "Transportation" },
+      { id: 4, icon: Camera, label: "Sightseeing" },
+      { id: 5, icon: MapPinned, label: "Temple & Heritage Tour" },
+      { id: 6, icon: Plane, label: "Train Included" }
+    ],
+
+    overview:
+      "Explore the rich cultural heritage and spiritual wonders of Gujarat with visits to Ahmedabad, Bhuj, Dwarka, Gir, Diu, and Somnath. Experience the White Rann of Kutch, ancient temples, wildlife, beaches, and historic monuments on this memorable western India journey.",
+
+    packages: {
+      package1: {
+        duration: "12 Nights / 15 Days",
+        price: 31500,
+        itinerary: [
+          {
+            day: 1,
+            title: "Kolkata → Ahmedabad",
+            distance: "Train journey",
+            description:
+              "Board train from Shalimar Railway Station for Ahmedabad. Overnight stay in train.",
+            images: [null, null]
+          },
+          {
+            day: 2,
+            title: "Train Journey",
+            distance: "Train journey",
+            description:
+              "Full day train journey. Overnight stay in train.",
+            images: [null, null]
+          },
+          {
+            day: 3,
+            title: "Arrival at Ahmedabad",
+            distance: "Railway station transfer",
+            description:
+              "Arrive at Ahmedabad Railway Station and transfer to hotel. Overnight stay at Ahmedabad.",
+            images: [null, null]
+          },
+          {
+            day: 4,
+            title: "Lothal Excursion & Ahmedabad Sightseeing",
+            distance: "Local excursion",
+            description:
+              "Visit Lothal, the rediscovered Harappan site, followed by local sightseeing in Ahmedabad. Overnight stay at Ahmedabad.",
+            images: [null, null]
+          },
+          {
+            day: 5,
+            title: "Ahmedabad → Bhuj",
+            distance: "330 km",
+            description:
+              "After breakfast proceed to Bhuj. Overnight stay at Bhuj.",
+            images: [null, null]
+          },
+          {
+            day: 6,
+            title: "Rann of Kutch Excursion",
+            distance: "Local excursion",
+            description:
+              "Visit the famous White Rann of Kutch and return to Bhuj. Overnight stay at Bhuj.",
+            images: [null, null]
+          },
+          {
+            day: 7,
+            title: "Bhuj → Dwarka",
+            distance: "450 km",
+            description:
+              "Proceed to the sacred city of Dwarka. Overnight stay at Dwarka.",
+            images: [null, null]
+          },
+          {
+            day: 8,
+            title: "Dwarka Sightseeing",
+            distance: "Local sightseeing",
+            description:
+              "Visit Bet Dwarka, Nageshwar Temple, and Dwarkadhish Temple. Overnight stay at Dwarka.",
+            images: [null, null]
+          },
+          {
+            day: 9,
+            title: "Dwarka → Gir",
+            distance: "240 km",
+            description:
+              "Proceed to Gir National Park region. Overnight stay at Gir.",
+            images: [null, null]
+          },
+          {
+            day: 10,
+            title: "Gir Safari → Diu",
+            distance: "100 km",
+            description:
+              "Optional morning Gir Forest safari (own cost). Later transfer to Diu. Overnight stay at Diu.",
+            images: [null, null]
+          },
+          {
+            day: 11,
+            title: "Diu Sightseeing → Somnath",
+            distance: "90 km",
+            description:
+              "Visit Nagoa Beach, Diu Fort, and historic churches before proceeding to Somnath / Veraval. Overnight stay at Somnath / Veraval.",
+            images: [null, null]
+          },
+          {
+            day: 12,
+            title: "Somnath Sightseeing",
+            distance: "Local sightseeing",
+            description:
+              "Visit Somnath Temple, Prabhas Patan, and Gangeshwar Mahadev. Overnight stay at Somnath / Veraval.",
+            images: [null, null]
+          },
+          {
+            day: 13,
+            title: "Veraval → Ahmedabad → Kolkata",
+            distance: "Train journey",
+            description:
+              "Take train from Veraval to Ahmedabad and board onward train for Kolkata. Overnight stay in train.",
+            images: [null, null]
+          },
+          {
+            day: 14,
+            title: "Train Journey",
+            distance: "Train journey",
+            description:
+              "Full day train journey back to Kolkata. Overnight stay in train.",
+            images: [null, null]
+          },
+          {
+            day: 15,
+            title: "Arrival at Kolkata",
+            distance: "Train arrival",
+            description:
+              "Arrive at Shalimar / Howrah Railway Station with sweet memories of Gujarat.",
+            images: [null, null]
+          }
+        ]
+      },
+
+      package2: {
+        duration: "12 Nights / 15 Days",
+        price: 31500,
+        itinerary: [
+          {
+            day: 1,
+            title: "Kolkata → Ahmedabad",
+            distance: "Train journey",
+            description:
+              "Board train from Shalimar Railway Station for Ahmedabad. Overnight stay in train.",
+            images: [null, null]
+          },
+          {
+            day: 2,
+            title: "Train Journey",
+            distance: "Train journey",
+            description:
+              "Full day train journey. Overnight stay in train.",
+            images: [null, null]
+          },
+          {
+            day: 3,
+            title: "Arrival at Ahmedabad",
+            distance: "Railway station transfer",
+            description:
+              "Arrive at Ahmedabad Railway Station and transfer to hotel. Overnight stay at Ahmedabad.",
+            images: [null, null]
+          },
+          {
+            day: 4,
+            title: "Statue of Unity Excursion",
+            distance: "Local excursion",
+            description:
+              "Visit the world-famous Statue of Unity and return to Ahmedabad. Overnight stay at Ahmedabad.",
+            images: [null, null]
+          },
+          {
+            day: 5,
+            title: "Ahmedabad → Bhuj",
+            distance: "330 km",
+            description:
+              "Proceed to Bhuj. Overnight stay at Bhuj.",
+            images: [null, null]
+          },
+          {
+            day: 6,
+            title: "Rann of Kutch Excursion",
+            distance: "Local excursion",
+            description:
+              "Visit the White Rann of Kutch and return to Bhuj. Overnight stay at Bhuj.",
+            images: [null, null]
+          },
+          {
+            day: 7,
+            title: "Bhuj → Dwarka",
+            distance: "450 km",
+            description:
+              "Proceed to Dwarka. Overnight stay at Dwarka.",
+            images: [null, null]
+          },
+          {
+            day: 8,
+            title: "Dwarka Sightseeing",
+            distance: "Local sightseeing",
+            description:
+              "Visit Bet Dwarka, Nageshwar Temple, and Dwarkadhish Temple. Overnight stay at Dwarka.",
+            images: [null, null]
+          },
+          {
+            day: 9,
+            title: "Dwarka → Gir",
+            distance: "240 km",
+            description:
+              "Proceed to Gir National Park region. Overnight stay at Gir.",
+            images: [null, null]
+          },
+          {
+            day: 10,
+            title: "Gir Safari → Diu",
+            distance: "100 km",
+            description:
+              "Optional morning Gir Forest safari (own cost). Later transfer to Diu. Overnight stay at Diu.",
+            images: [null, null]
+          },
+          {
+            day: 11,
+            title: "Diu Sightseeing → Somnath",
+            distance: "90 km",
+            description:
+              "Visit Nagoa Beach, Diu Fort, and churches before proceeding to Somnath / Veraval. Overnight stay at Somnath / Veraval.",
+            images: [null, null]
+          },
+          {
+            day: 12,
+            title: "Somnath Sightseeing",
+            distance: "Local sightseeing",
+            description:
+              "Visit Somnath Temple, Prabhas Patan, and Gangeshwar Mahadev. Overnight stay at Somnath / Veraval.",
+            images: [null, null]
+          },
+          {
+            day: 13,
+            title: "Veraval → Ahmedabad → Kolkata",
+            distance: "Train journey",
+            description:
+              "Take train from Veraval to Ahmedabad and board onward train for Kolkata. Overnight stay in train.",
+            images: [null, null]
+          },
+          {
+            day: 14,
+            title: "Train Journey",
+            distance: "Train journey",
+            description:
+              "Full day train journey back to Kolkata. Overnight stay in train.",
+            images: [null, null]
+          },
+          {
+            day: 15,
+            title: "Arrival at Kolkata",
+            distance: "Train arrival",
+            description:
+              "Arrive at Shalimar / Howrah Railway Station with sweet memories of Gujarat.",
+            images: [null, null]
+          }
+        ]
+      }
+    },
+
+    included: [
+      "Deluxe accommodation",
+      "Train ticket (Sleeper Class)",
+      "Train food (Lunch & Dinner)",
+      "Breakfast",
+      "Lunch",
+      "Evening tea & snacks",
+      "Dinner",
+      "AC transportation",
+      "Parking charges",
+      "Toll tax",
+      "Pick-up & drop",
+      "All possible sightseeing as per itinerary"
+    ],
+
+    excluded: [
+      "Flight ticket",
+      "Single supplement cost",
+      "Mineral water / soft drinks / hard drinks",
+      "Guide charges",
+      "Porter charges",
+      "Entry fees",
+      "Camera charges",
+      "Forest permits",
+      "Any ride",
+      "Personal activities",
+      "Any safari",
+      "Any item not mentioned above"
+    ],
+
+    whatsapp: "https://wa.me/918910555711",
+
+    phone: "tel:+918910555711",
+
+    enquiryLink: "#",
+
+    detailsLink: "/packages/gujarat-tour"
   },
 
   // international
