@@ -10,7 +10,6 @@ import {
 
 const packages = [
   // domestic
-  
   {
     id: 1,
 
@@ -5596,8 +5595,1291 @@ const packages = [
     enquiryLink: "#",
 
     detailsLink: "/packages/nepal-tour"
-  }
+  },
+  {
+    id: 101,
 
+    category: "international",
+
+    slug: "bangkok-pattaya-phuket-tour",
+
+    title: "Bangkok Pattaya Phuket",
+
+    image: null,
+
+    gallery: [null, null, null, null, null],
+
+    perPerson: true,
+
+    rating: 9.3,
+
+    location: "Bangkok • Pattaya • Phuket • Phi Phi Island",
+
+    facilities: [
+      { id: 1, icon: Hotel, label: "4 Star Hotel Stay" },
+      { id: 2, icon: Utensils, label: "Indian Meals Included" },
+      { id: 3, icon: Car, label: "AC Transportation" },
+      { id: 4, icon: Camera, label: "Sightseeing Included" },
+      { id: 5, icon: MapPinned, label: "Island & City Tour" },
+      { id: 6, icon: Plane, label: "Flight Included" }
+    ],
+
+    overview:
+      "Enjoy an exciting international holiday across Bangkok, Pattaya, and Phuket. Experience Coral Island, Safari World, Chaophraya Cruise Dinner, Phi Phi Island, temples, beaches, nightlife, and island adventures with flights, meals, accommodation, sightseeing, and tour manager included.",
+
+    packages: {
+      package1: {
+        duration: "6 Nights / 7 Days",
+        price: 92000,
+        itinerary: [
+          {
+            day: 1,
+            title: "Kolkata → Bangkok → Pattaya",
+            distance: "Flight + road transfer",
+            description:
+              "Fly from Kolkata to Bangkok. Transfer to Pattaya. Visit Sriracha Tiger Zoo and Big Buddha. Evening Alcazar Show and Walking Street. Overnight stay at Pattaya.",
+            images: [null, null]
+          },
+          {
+            day: 2,
+            title: "Coral Island Excursion",
+            distance: "Speed boat excursion",
+            description:
+              "Visit Coral Island by speed boat and enjoy beach activities. Lunch at Indian restaurant and local market visit. Overnight stay at Pattaya.",
+            images: [null, null]
+          },
+          {
+            day: 3,
+            title: "Pattaya → Bangkok",
+            distance: "150 km",
+            description:
+              "Travel to Bangkok via Gems Gallery. Visit Golden Buddha Temple and Marble Temple. Overnight stay at Bangkok.",
+            images: [null, null]
+          },
+          {
+            day: 4,
+            title: "Safari World & Chaophraya Cruise",
+            distance: "Local sightseeing",
+            description:
+              "Enjoy Safari World and Marine Park with buffet lunch. Evening Chaophraya Princess Cruise dinner. Overnight stay at Bangkok.",
+            images: [null, null]
+          },
+          {
+            day: 5,
+            title: "Bangkok → Phuket",
+            distance: "Domestic flight",
+            description:
+              "Fly from Bangkok to Phuket and transfer to hotel. Overnight stay at Phuket.",
+            images: [null, null]
+          },
+          {
+            day: 6,
+            title: "Phi Phi Island Tour",
+            distance: "Boat excursion",
+            description:
+              "Full-day Phi Phi Island tour with buffet lunch. Return to hotel for overnight stay at Phuket.",
+            images: [null, null]
+          },
+          {
+            day: 7,
+            title: "Phuket → Bangkok → Kolkata",
+            distance: "Flight journey",
+            description:
+              "Visit Chalong Temple, Phuket Old Town, and Promthep Cape. Fly to Bangkok and board return flight to Kolkata with wonderful memories.",
+            images: [null, null]
+          }
+        ]
+      }
+    },
+
+    included: [
+      "4-star accommodation",
+      "Breakfast",
+      "Lunch",
+      "Dinner",
+      "Indian buffet meals",
+      "AC luxury transportation",
+      "Drinking water bottle",
+      "Ex-Kolkata tour manager",
+      "Return international air ticket",
+      "Domestic flights (Bangkok–Phuket–Bangkok)",
+      "English-speaking guide",
+      "Entry fees",
+      "Alcazar Show",
+      "Coral Island tour",
+      "Safari World & Marine Park",
+      "Chaophraya Princess Cruise dinner",
+      "Phi Phi Island tour"
+    ],
+
+    excluded: [
+      "Personal expenses",
+      "Tips and porter charges",
+      "Travel insurance",
+      "Scuba diving or optional water sports",
+      "Anything not mentioned in inclusions"
+    ],
+
+    hotelDetails: {
+      Pattaya: "The Beverly Hotel Pattaya (4 Star)",
+      Bangkok: "Bangkok Palace (4 Star)",
+      Phuket: "The Fishermen Harbour Beach Resort (4 Star)"
+    },
+
+    departureDates: [
+      "16/08/2026",
+      "17/09/2026",
+      "18/09/2026",
+      "19/10/2026",
+      "27/10/2026",
+      "14/11/2026",
+      "21/11/2026",
+      "12/12/2026",
+      "22/12/2026",
+      "22/01/2027"
+    ],
+
+    whatsapp: "https://wa.me/918910555711",
+
+    phone: "tel:+918910555711",
+
+    enquiryLink: "#",
+
+    detailsLink: "/packages/bangkok-pattaya-phuket-tour"
+  },
+  {
+    id: 102,
+
+    category: "international",
+
+    slug: "bangkok-pattaya-phuket-krabi-tour",
+
+    title: "Bangkok, Pattaya, Phuket & Krabi",
+
+    image: null,
+
+    gallery: [null, null, null, null, null],
+
+    perPerson: true,
+
+    rating: 9.2,
+
+    location: "Bangkok • Pattaya • Phuket • Krabi",
+
+    facilities: [
+      { id: 1, icon: Hotel, label: "4 Star Hotel Stay" },
+      { id: 2, icon: Utensils, label: "Meals Included" },
+      { id: 3, icon: Car, label: "Luxury AC Transport" },
+      { id: 4, icon: Camera, label: "Sightseeing Included" },
+      { id: 5, icon: MapPinned, label: "Island & City Tour" },
+      { id: 6, icon: Plane, label: "Flights Included" }
+    ],
+
+    overview:
+      "Experience the best of Thailand with Bangkok, Pattaya, Phuket, and Krabi. Enjoy Coral Island, Phi Phi Island, Safari World, Chao Phraya Dinner Cruise, Phuket city tour, Krabi 4 Island tour, beaches, temples, nightlife, and tropical island beauty.",
+
+    packages: {
+      package1: {
+        duration: "7 Nights / 8 Days",
+        price: 92000,
+        itinerary: [
+          {
+            day: 1,
+            title: "Kolkata → Pattaya",
+            distance: "Flight + road transfer",
+            description:
+              "Fly from Kolkata to Bangkok, transfer to Pattaya, visit Sriracha Tiger Zoo and Big Buddha, enjoy Alcazar Show and Walking Street. Overnight stay at Pattaya.",
+            images: [null, null]
+          },
+          {
+            day: 2,
+            title: "Coral Island Excursion",
+            distance: "Speed boat excursion",
+            description:
+              "Visit Coral Island by speed boat, enjoy beach activities, buffet lunch, local market sightseeing, dinner, and overnight stay at Pattaya.",
+            images: [null, null]
+          },
+          {
+            day: 3,
+            title: "Pattaya → Bangkok",
+            distance: "150 km",
+            description:
+              "Travel to Bangkok via Gems Gallery, enjoy Bangkok city tour covering Golden Temple and Marble Temple. Overnight stay at Bangkok.",
+            images: [null, null]
+          },
+          {
+            day: 4,
+            title: "Safari World & Chao Phraya Cruise",
+            distance: "Local sightseeing",
+            description:
+              "Visit Safari World with Marine Park and buffet lunch. Evening Chao Phraya Princess Dinner Cruise. Overnight stay at Bangkok.",
+            images: [null, null]
+          },
+          {
+            day: 5,
+            title: "Bangkok → Phuket",
+            distance: "Flight transfer",
+            description:
+              "Fly to Phuket and visit Chalong Temple, Phuket Old Town, and Promthep Cape. Overnight stay at Phuket.",
+            images: [null, null]
+          },
+          {
+            day: 6,
+            title: "Phi Phi Island Tour",
+            distance: "Boat excursion",
+            description:
+              "Full day Phi Phi Island tour with buffet lunch on boat. Return to Phuket for overnight stay.",
+            images: [null, null]
+          },
+          {
+            day: 7,
+            title: "Phuket → Krabi",
+            distance: "Approx. 160 km by road",
+            description:
+              "Transfer to Krabi by road and enjoy 4 Island tour with lunch. Overnight stay at Krabi.",
+            images: [null, null]
+          },
+          {
+            day: 8,
+            title: "Krabi → Kolkata",
+            distance: "Flight transfer",
+            description:
+              "Visit Krabi local sightseeing spots and transfer to Krabi International Airport for return flight to India.",
+            images: [null, null]
+          }
+        ]
+      }
+    },
+
+    hotels: [
+      "Pattaya: The Beverly Hotel Pattaya (4 Star)",
+      "Bangkok: Bangkok Palace (4 Star)",
+      "Phuket: The Fisherman's Harbour Beach Resort (4 Star)",
+      "Krabi: Ibis Styles Ao Nang (4 Star)"
+    ],
+
+    departureDates: [
+      "22/12/2026"
+    ],
+
+    included: [
+      "4 Star accommodation",
+      "Breakfast, lunch & dinner (Indian buffet meals)",
+      "Luxury AC transportation",
+      "Water bottle",
+      "Tour manager from Kolkata",
+      "Up & down air tickets",
+      "English speaking guide",
+      "Entry fees as per itinerary",
+      "Airport transfers",
+      "All sightseeing mentioned in itinerary"
+    ],
+
+    excluded: [
+      "Personal expenses",
+      "Travel insurance",
+      "Tips & porter charges",
+      "Additional water sports",
+      "Extra meals not mentioned",
+      "Anything not mentioned in inclusions"
+    ],
+
+    whatsapp: "https://wa.me/918910555711",
+
+    phone: "tel:+918910555711",
+
+    enquiryLink: "#",
+
+    detailsLink: "/packages/bangkok-pattaya-phuket-krabi-tour"
+  },
+  {
+    id: 103,
+
+    category: "international",
+
+    slug: "kazakhstan-uzbekistan-tour",
+
+    title: "Kazakhstan & Uzbekistan",
+
+    image: null,
+
+    gallery: [null, null, null, null, null],
+
+    perPerson: true,
+
+    rating: 9.3,
+
+    location: "Almaty • Charyn Canyon • Kolsai Lake • Kok Tobe • Medeu • Shymbulak • Tashkent • Amirsoy • Samarkand",
+
+    facilities: [
+      { id: 1, icon: Hotel, label: "4 Star Hotel Stay" },
+      { id: 2, icon: Utensils, label: "All Meals Included" },
+      { id: 3, icon: Car, label: "Airport Transfers" },
+      { id: 4, icon: Camera, label: "Sightseeing" },
+      { id: 5, icon: MapPinned, label: "Mountain & Heritage Tour" },
+      { id: 6, icon: Plane, label: "Flight Included" }
+    ],
+
+    overview:
+      "Experience the best of Central Asia with this 10-day Kazakhstan & Uzbekistan tour covering Almaty, Charyn Canyon, Kolsai Lake, Tashkent, Amirsoy Mountains, and the historic city of Samarkand. Enjoy breathtaking mountain landscapes, Silk Route architecture, vibrant bazaars, cable car rides, and authentic cultural experiences with comfortable 4-star accommodation and all meals included.",
+
+    packages: {
+      package1: {
+        duration: "9 Nights / 10 Days",
+        price: 188000,
+        itinerary: [
+          {
+            day: 1,
+            title: "Kolkata → Almaty",
+            distance: "Flight journey",
+            description:
+              "Arrive at Almaty International Airport, transfer to hotel, check in, and relax. Overnight stay at Almaty.",
+            images: [null, null]
+          },
+          {
+            day: 2,
+            title: "Almaty City Tour",
+            distance: "Local sightseeing",
+            description:
+              "Visit Golden Square, Park of 28 Panfilov Guardsmen, Eternal Flame, Ascension Cathedral, Green Bazaar, Arbat Shopping Street, and Rakhat Chocolate Factory. Overnight stay at Almaty.",
+            images: [null, null]
+          },
+          {
+            day: 3,
+            title: "Charyn Canyon & Kolsai Lake",
+            distance: "Excursion",
+            description:
+              "Explore Charyn Canyon, Valley of Castles, and Kolsai Lake surrounded by stunning mountain scenery. Overnight stay at Almaty.",
+            images: [null, null]
+          },
+          {
+            day: 4,
+            title: "Kok Tobe • Medeu • Shymbulak",
+            distance: "Local sightseeing",
+            description:
+              "Enjoy Kok Tobe cable car, visit Medeu Ice Skating Rink, and spend time at Shymbulak Mountain Resort. Overnight stay at Almaty.",
+            images: [null, null]
+          },
+          {
+            day: 5,
+            title: "Almaty → Tashkent",
+            distance: "Flight journey",
+            description:
+              "Fly to Tashkent and visit Magic City Park in the evening. Overnight stay at Tashkent.",
+            images: [null, null]
+          },
+          {
+            day: 6,
+            title: "Amirsoy Mountain Tour",
+            distance: "Excursion",
+            description:
+              "Visit Amirsoy Mountain Resort, Chimgan Mountains, and Charvak Lake with panoramic mountain views. Overnight stay at Tashkent.",
+            images: [null, null]
+          },
+          {
+            day: 7,
+            title: "Samarkand Day Excursion",
+            distance: "Bullet train excursion",
+            description:
+              "Travel by bullet train to Samarkand and visit Gur-e-Amir Mausoleum, Registan Square, Ulug Beg Madrasa, Sher-Dor Madrasa, Tilla-Kari Madrasa, Bibi Khanum Mosque, Siab Bazaar, Konigil Village, Shahi Zinda (outside), and Hazrati Hizir Mosque. Return to Tashkent for overnight stay.",
+            images: [null, null]
+          },
+          {
+            day: 8,
+            title: "Tashkent City Tour",
+            distance: "Local sightseeing",
+            description:
+              "Visit Hazrati Imam Complex, Barak Khan Madrasa, Minor Mosque, Monument of Courage, Tashkent Metro, TV Tower (outside), and Memorial Complex of Repression. Overnight stay at Tashkent.",
+            images: [null, null]
+          },
+          {
+            day: 9,
+            title: "Tashkent Shopping Tour",
+            distance: "Local sightseeing",
+            description:
+              "Explore Chorsu Bazaar, Tashkent City Mall, and Tashkent City Park for shopping and leisure. Overnight stay at Tashkent.",
+            images: [null, null]
+          },
+          {
+            day: 10,
+            title: "Departure from Tashkent",
+            distance: "Airport transfer",
+            description:
+              "After breakfast transfer to the airport for your return flight with unforgettable memories of Kazakhstan and Uzbekistan.",
+            images: [null, null]
+          }
+        ]
+      }
+    },
+
+    included: [
+      "4 Nights accommodation in Almaty (4 Star)",
+      "5 Nights accommodation in Tashkent (4 Star)",
+      "All meals throughout the tour",
+      "English-speaking guide",
+      "Airport transfers",
+      "Luxury coach transportation",
+      "Kok Tobe cable car",
+      "Shymbulak cable car",
+      "Charyn Canyon tour",
+      "Kolsai Lake tour",
+      "Amirsoy chair lift",
+      "Konigil Village entry",
+      "Registan entrance ticket",
+      "Samarkand bullet train ticket",
+      "Uzbekistan visa",
+      "Tips",
+      "2 bottles of water per person per day"
+    ],
+
+    excluded: [
+      "Personal expenses",
+      "Travel insurance",
+      "Additional snacks and beverages",
+      "Optional activities not mentioned in the itinerary",
+      "Any item not specifically mentioned in the inclusions"
+    ],
+
+    departureDates: [],
+
+    whatsapp: "https://wa.me/918910555711",
+
+    phone: "tel:+918910555711",
+
+    enquiryLink: "#",
+
+    detailsLink: "/packages/kazakhstan-uzbekistan-tour"
+  },
+  {
+    id: 104,
+
+    category: "international",
+
+    slug: "vietnam-tour",
+
+    title: "Vietnam",
+
+    image: null,
+
+    gallery: [null, null, null, null, null],
+
+    perPerson: true,
+
+    rating: 9.4,
+
+    location:
+      "Hanoi • Ninh Binh • Halong Bay • Danang • Hoi An • Ba Na Hills • Ho Chi Minh City • Mekong Delta",
+
+    facilities: [
+      { id: 1, icon: Hotel, label: "4★ Hotel Stay" },
+      { id: 2, icon: Utensils, label: "Meals Included" },
+      { id: 3, icon: Car, label: "AC Coach Transfers" },
+      { id: 4, icon: Camera, label: "Sightseeing Included" },
+      { id: 5, icon: MapPinned, label: "Heritage & Island Tour" },
+      { id: 6, icon: Plane, label: "Flights & Visa Included" }
+    ],
+
+    overview:
+      "Experience the best of Vietnam with this 8-day journey covering Hanoi, Halong Bay cruise, Danang, Hoi An, Ba Na Hills, Ho Chi Minh City, Cu Chi Tunnels, and the Mekong Delta. Enjoy cultural landmarks, scenic mountains, island landscapes, historic sites, local markets, and Vietnamese hospitality with guided sightseeing throughout the tour.",
+
+    packages: {
+      package1: {
+        duration: "7 Nights / 8 Days",
+        price: 126000,
+        itinerary: [
+          {
+            day: 1,
+            title: "Kolkata → Hanoi",
+            distance: "Flight journey",
+            description:
+              "Board flight from Netaji Subhash Chandra Bose International Airport, arrive in Hanoi, transfer to hotel, and overnight stay at Hanoi.",
+            images: [null, null]
+          },
+          {
+            day: 2,
+            title: "Ninh Binh • Hoa Lu • Trang An",
+            distance: "Approx. 120 km excursion",
+            description:
+              "Visit Hoa Lu Ancient Capital, King Dinh Temple, King Le Temple, and enjoy a scenic Trang An boat ride through caves and limestone landscapes before returning to Hanoi.",
+            images: [null, null]
+          },
+          {
+            day: 3,
+            title: "Hanoi → Halong Bay Cruise",
+            distance: "Road transfer to Halong Bay",
+            description:
+              "Transfer to Halong Bay, board the cruise, visit limestone caves, enjoy cruising through emerald waters, and overnight stay on the cruise with meals onboard.",
+            images: [null, null]
+          },
+          {
+            day: 4,
+            title: "Halong Bay → Hanoi City Tour",
+            distance: "Cruise + road transfer",
+            description:
+              "Enjoy morning at Halong Bay, return to Hanoi, and visit Hoa Lo Prison Museum, Hanoi Old Quarter, Hoan Kiem Lake, and Turtle Tower before overnight stay in Hanoi.",
+            images: [null, null]
+          },
+          {
+            day: 5,
+            title: "Hanoi → Danang → Hoi An",
+            distance: "Flight + local transfer",
+            description:
+              "Fly to Danang, transfer to Hoi An, explore Hoi An Ancient Town, Phuc Kien Assembly Hall, Japanese Bridge, traditional houses, and enjoy a lantern boat ride in the evening.",
+            images: [null, null]
+          },
+          {
+            day: 6,
+            title: "Ba Na Hills & Golden Bridge",
+            distance: "Excursion from Danang",
+            description:
+              "Visit Ba Na Hills by cable car, see Golden Bridge, Linh Ung Pagoda, French Village, Le Jardin D’amour, and enjoy leisure time at Fantasy Park before returning to Danang.",
+            images: [null, null]
+          },
+          {
+            day: 7,
+            title: "Danang → Ho Chi Minh City • Cu Chi Tunnels",
+            distance: "Flight + excursion",
+            description:
+              "Fly to Ho Chi Minh City and visit the historic Cu Chi Tunnels to learn about Vietnam’s wartime underground network before overnight stay in Ho Chi Minh City.",
+            images: [null, null]
+          },
+          {
+            day: 8,
+            title: "Mekong Delta • Ho Chi Minh City • Departure",
+            distance: "Day excursion + airport transfer",
+            description:
+              "Visit My Tho and the Mekong Delta, enjoy a boat ride, local village experience, honey tea, coconut candy workshop, and city shopping before airport transfer for the return flight.",
+            images: [null, null]
+          }
+        ]
+      }
+    },
+
+    included: [
+      "4★ hotel accommodation on twin/double sharing basis",
+      "1 night Halong Bay cruise accommodation",
+      "Airfare ex-Kolkata",
+      "Vietnam visa",
+      "Breakfast, lunch & dinner as per itinerary",
+      "AC coach transportation",
+      "English-speaking guide",
+      "Tour manager from Kolkata",
+      "Halong Bay cruise with meals",
+      "Trang An boat ride",
+      "Hoi An lantern boat ride",
+      "Ba Na Hills cable car",
+      "Cu Chi Tunnels excursion",
+      "Mekong Delta boat excursion",
+      "Entry fees as mentioned in itinerary",
+      "2 bottles of water per person per day"
+    ],
+
+    excluded: [
+      "Personal expenses",
+      "Travel insurance",
+      "Laundry, telephone & minibar charges",
+      "Optional activities not mentioned",
+      "Additional meals other than specified",
+      "Early check-in / late check-out charges",
+      "Expenses due to weather, flight delays, strikes, natural calamities, or force majeure",
+      "Any item not mentioned under inclusions"
+    ],
+
+    hotels: [
+      "Hanoi: Muong Thanh Grand Hanoi Centre Hotel / La Casa Hanoi Hotel",
+      "Halong Bay: Dragon Bay Cruise",
+      "Danang: Bluesun Hotel Danang",
+      "Ho Chi Minh City: Ramana Hotel Saigon"
+    ],
+
+    departureDates: [],
+
+    whatsapp: "https://wa.me/919163569695",
+
+    phone: "tel:+919163569695",
+
+    enquiryLink: "#",
+
+    detailsLink: "/packages/vietnam-tour"
+  },
+  {
+    id: 105,
+
+    category: "international",
+
+    slug: "vietnam-phu-quoc-tour",
+
+    title: "Vietnam Phu Quoc",
+
+    image: null,
+
+    gallery: [null, null, null, null, null],
+
+    perPerson: true,
+
+    rating: 9.5,
+
+    location:
+      "Hanoi • Ninh Binh • Halong Bay • Da Nang • Hoi An • Ba Na Hills • Phu Quoc",
+
+    facilities: [
+      { id: 1, icon: Hotel, label: "4★ Hotel Stay" },
+      { id: 2, icon: Utensils, label: "Meals Included" },
+      { id: 3, icon: Car, label: "AC Transfers" },
+      { id: 4, icon: Camera, label: "Sightseeing Included" },
+      { id: 5, icon: MapPinned, label: "Island & Heritage Tour" },
+      { id: 6, icon: Plane, label: "Flights & Visa Included" }
+    ],
+
+    overview:
+      "Explore the cultural and natural wonders of Vietnam on this 8-day journey covering Hanoi, Ninh Binh, Halong Bay, Da Nang, Hoi An, Ba Na Hills, and the tropical paradise of Phu Quoc. Enjoy scenic cruises, UNESCO heritage sites, mountain resorts, lantern streets, island hopping, cable car rides, and beachside relaxation with guided sightseeing throughout the tour.",
+
+    packages: {
+      package1: {
+        duration: "7 Nights / 8 Days",
+        price: 130000,
+        itinerary: [
+          {
+            day: 1,
+            title: "Kolkata → Hanoi",
+            distance: "Flight journey",
+            description:
+              "Board flight from Netaji Subhash Chandra Bose International Airport, arrive in Hanoi, transfer to hotel, and overnight stay at Hanoi.",
+            images: [null, null]
+          },
+          {
+            day: 2,
+            title: "Ninh Binh Excursion",
+            distance: "Approx. 120 km excursion",
+            description:
+              "Visit Hoa Lu Ancient Capital, King Dinh Temple, King Le Temple, and enjoy a scenic Trang An boat ride through limestone mountains, caves, and rivers before returning to Hanoi.",
+            images: [null, null]
+          },
+          {
+            day: 3,
+            title: "Halong Bay Day Cruise",
+            distance: "Day excursion from Hanoi",
+            description:
+              "Enjoy a Halong Bay cruise with Sung Sot Cave, Luon Cave, kayaking or bamboo boat ride, Titop Island, swimming, hiking, sunset party, and buffet lunch before returning to Hanoi.",
+            images: [null, null]
+          },
+          {
+            day: 4,
+            title: "Hanoi → Da Nang → Hoi An",
+            distance: "Flight + local transfer",
+            description:
+              "Fly to Da Nang and visit Hoi An Ancient Town including Japanese Covered Bridge, Pottery Museum, Tam Ky Ancient House, Chua Ong Pagoda, local market, and lantern streets before returning to Da Nang.",
+            images: [null, null]
+          },
+          {
+            day: 5,
+            title: "Ba Na Hills & Golden Bridge",
+            distance: "Excursion from Da Nang",
+            description:
+              "Visit Sun World Ba Na Hills by cable car, see the famous Golden Bridge, French Village, Fantasy Park, mountain viewpoints, and landscaped gardens before returning to Da Nang.",
+            images: [null, null]
+          },
+          {
+            day: 6,
+            title: "Da Nang → Phu Quoc",
+            distance: "Flight + local transfer",
+            description:
+              "Fly to Phu Quoc, check in to hotel, visit Vinpearl Safari, and enjoy free time with an optional visit to Grand World in the evening.",
+            images: [null, null]
+          },
+          {
+            day: 7,
+            title: "Phu Quoc Island Tour & Hon Thom",
+            distance: "Island hopping excursion",
+            description:
+              "Visit Coconut Prison, Mong Tay Island, Gam Ghi Island, May Rut Island, Hon Thom Island, ride the world’s longest sea cable car, and enjoy Aquatopia Water Park and theme park activities.",
+            images: [null, null]
+          },
+          {
+            day: 8,
+            title: "Phu Quoc Departure",
+            distance: "Airport transfer",
+            description:
+              "After breakfast, enjoy free time until transfer to Phu Quoc Airport for your onward flight. Tour ends with wonderful memories.",
+            images: [null, null]
+          }
+        ]
+      }
+    },
+
+    included: [
+      "International airfare from Kolkata",
+      "Domestic flights within Vietnam",
+      "Vietnam visa",
+      "7 nights accommodation in 4★ hotels",
+      "Daily breakfast",
+      "Daily lunch",
+      "Daily dinner",
+      "Private airport transfers",
+      "Private air-conditioned vehicle throughout the tour",
+      "English-speaking guide",
+      "All sightseeing as per itinerary",
+      "Halong Bay day cruise",
+      "Trang An boat ride",
+      "Hoi An lantern tour",
+      "Ba Na Hills cable car",
+      "Vinpearl Safari visit",
+      "Phu Quoc island hopping tour",
+      "Hon Thom cable car ride",
+      "Entrance fees as per itinerary",
+      "2 bottles of mineral water per person per sightseeing day"
+    ],
+
+    excluded: [
+      "Personal expenses",
+      "Travel insurance",
+      "Laundry, telephone & minibar charges",
+      "Optional activities not mentioned",
+      "Additional meals other than specified",
+      "Early check-in / late check-out charges",
+      "Expenses due to weather, flight delays, strikes, natural calamities, political disturbances, or force majeure",
+      "Any item not mentioned under inclusions"
+    ],
+
+    hotels: [
+      "Hanoi: Muong Thanh Centre Hotel / Similar",
+      "Da Nang: Eden Ocean Hotel / Similar",
+      "Phu Quoc: Sunset Beach Resort & Spa / Similar"
+    ],
+
+    departureDates: [],
+
+    whatsapp: "https://wa.me/919163569695",
+
+    phone: "tel:+919163569695",
+
+    enquiryLink: "#",
+
+    detailsLink: "/packages/vietnam-phu-quoc-tour"
+  },
+  {
+    id: 106,
+
+    category: "international",
+
+    slug: "srilanka-tour",
+
+    title: "Srilanka",
+
+    image: null,
+
+    gallery: [null, null, null, null, null],
+
+    perPerson: true,
+
+    rating: 9.2,
+
+    location:
+      "Colombo • Pinnawala • Kandy • Nuwara Eliya • Bentota",
+
+    facilities: [
+      { id: 1, icon: Hotel, label: "3★ Hotel Stay" },
+      { id: 2, icon: Utensils, label: "Meals Included" },
+      { id: 3, icon: Car, label: "AC Transportation" },
+      { id: 4, icon: Camera, label: "Sightseeing Included" },
+      { id: 5, icon: MapPinned, label: "Cultural & Nature Tour" },
+      { id: 6, icon: Plane, label: "Flight Included" }
+    ],
+
+    overview:
+      "Discover the tropical beauty and cultural heritage of Sri Lanka with this 7-day journey covering Colombo, Pinnawala, Kandy, Nuwara Eliya, and Bentota. Experience ancient temples, tea plantations, waterfalls, elephant encounters, scenic hill stations, river cruises, and golden beaches with guided sightseeing throughout the tour.",
+
+    packages: {
+      package1: {
+        duration: "6 Nights / 7 Days",
+        price: null,
+        itinerary: [
+          {
+            day: 1,
+            title: "Kolkata → Colombo",
+            distance: "Flight journey",
+            description:
+              "Board flight from Netaji Subhash Chandra Bose International Airport, arrive in Colombo, transfer to hotel, and overnight stay at Colombo.",
+            images: [null, null]
+          },
+          {
+            day: 2,
+            title: "Colombo → Pinnawala → Kandy",
+            distance: "Approx. 120 km",
+            description:
+              "Visit Pinnawala Elephant Orphanage and continue to Kandy. Explore Kandy city including Temple of the Tooth Relic, Gem Museum, and enjoy a traditional cultural dance show. Overnight stay at Kandy.",
+            images: [null, null]
+          },
+          {
+            day: 3,
+            title: "Kandy → Nuwara Eliya",
+            distance: "Approx. 80 km",
+            description:
+              "Visit Peradeniya Botanical Garden, Ramboda Waterfall, Hanuman Temple, and a tea factory before proceeding to Nuwara Eliya. Enjoy a city tour covering Gregory Lake, Victoria Park, golf course area, and tea plantation surroundings. Overnight stay at Nuwara Eliya.",
+            images: [null, null]
+          },
+          {
+            day: 4,
+            title: "Nuwara Eliya → Bentota",
+            distance: "Approx. 210 km",
+            description:
+              "Drive through scenic hill country to Bentota and relax on the beach. Overnight stay at Bentota.",
+            images: [null, null]
+          },
+          {
+            day: 5,
+            title: "Bentota Sightseeing",
+            distance: "Local sightseeing",
+            description:
+              "Enjoy a Madhu River boat safari through mangrove islands and visit a Turtle Hatchery to learn about sea turtle conservation. Overnight stay at Bentota.",
+            images: [null, null]
+          },
+          {
+            day: 6,
+            title: "Bentota → Colombo",
+            distance: "Approx. 85 km",
+            description:
+              "Transfer to Colombo for a city tour covering Galle Face Green, Viharamahadevi Park, National Museum, Independence Square, Fort area, and shopping districts. Overnight stay at Colombo.",
+            images: [null, null]
+          },
+          {
+            day: 7,
+            title: "Colombo Departure",
+            distance: "Airport transfer",
+            description:
+              "After breakfast transfer to the airport for your return flight to India. Tour ends with sweet memories of Sri Lanka.",
+            images: [null, null]
+          }
+        ]
+      }
+    },
+
+    included: [
+      "Flight fare from Kolkata",
+      "3★ hotel accommodation on twin/double sharing basis",
+      "Daily breakfast",
+      "Lunch",
+      "Dinner",
+      "AC transportation throughout the tour",
+      "Airport transfers",
+      "English-speaking guide",
+      "Entrance fees as per itinerary",
+      "Colombo city tour",
+      "Pinnawala Elephant Orphanage visit",
+      "Kandy city tour & cultural show",
+      "Peradeniya Botanical Garden visit",
+      "Tea factory visit",
+      "Nuwara Eliya sightseeing",
+      "Madhu River boat ride",
+      "Turtle Hatchery visit"
+    ],
+
+    excluded: [
+      "Optional excursions and activities",
+      "Meals other than mentioned",
+      "Beverages and drinks",
+      "Personal expenses",
+      "Laundry and telephone charges",
+      "Additional mineral water beyond supplied quantity",
+      "Travel insurance",
+      "Any item not mentioned under inclusions"
+    ],
+
+    hotels: [
+      "Colombo: Ocean Edge Suite / Courtyard by Marriott Colombo",
+      "Kandy: Swiss Residence Kandy",
+      "Nuwara Eliya: Ramboda Falls Hotel",
+      "Bentota: Rockside Beach Hotel"
+    ],
+
+    departureDates: [],
+
+    notes: [
+      "Sri Lanka follows GMT+5:30, the same time zone as India.",
+      "Sri Lankan Rupee (LKR) is the local currency.",
+      "Itinerary may change depending on road, traffic, weather, or operational conditions."
+    ],
+
+    whatsapp: "https://wa.me/919163569695",
+
+    phone: "tel:+919163569695",
+
+    enquiryLink: "#",
+
+    detailsLink: "/packages/sri-lanka-tour"
+  },
+  {
+    id: 107,
+
+    category: "international",
+
+    slug: "singapore-malaysia-tour",
+
+    title: "Singapore Malaysia, Genting",
+
+    image: null,
+
+    gallery: [null, null, null, null, null],
+
+    perPerson: true,
+
+    rating: 9.1,
+
+    location:
+      "Singapore • Sentosa • Universal Studios • Kuala Lumpur • Genting Highlands • Batu Caves",
+
+    facilities: [
+      { id: 1, icon: Hotel, label: "4★ Hotel Stay" },
+      { id: 2, icon: Utensils, label: "Meals Included" },
+      { id: 3, icon: Car, label: "AC Transportation" },
+      { id: 4, icon: Camera, label: "Sightseeing Included" },
+      { id: 5, icon: MapPinned, label: "Theme Park & City Tour" },
+      { id: 6, icon: Plane, label: "Flights Included" }
+    ],
+
+    overview:
+      "Experience the best of Singapore and Malaysia with this exciting 7-day international holiday covering Singapore, Sentosa Island, Universal Studios, Kuala Lumpur, Genting Highlands, and Batu Caves. Enjoy iconic attractions, theme parks, cable cars, city tours, shopping, entertainment, and comfortable 4-star accommodation throughout the journey.",
+
+    packages: {
+      package1: {
+        duration: "6 Nights / 7 Days",
+        price: 120000,
+        itinerary: [
+          {
+            day: 1,
+            title: "Arrival in Singapore – Night Safari",
+            distance: "Airport transfer",
+            description:
+              "Arrive at Singapore Airport, transfer to hotel, and in the evening visit Night Safari with Thumbuakar tribal performance, tram safari, and Creatures of the Night show. Overnight stay at Singapore.",
+            images: [null, null]
+          },
+          {
+            day: 2,
+            title: "Singapore Flyer & Sentosa Island",
+            distance: "Local sightseeing",
+            description:
+              "Visit Singapore Flyer photo point and Marina Bay Sands SkyPark area, then proceed to Sentosa Island for cable car ride, Images of Singapore LIVE, Madame Tussauds, Luge & Sky Ride, and Wings of Time show. Overnight stay at Singapore.",
+            images: [null, null]
+          },
+          {
+            day: 3,
+            title: "Universal Studios Singapore",
+            distance: "Local sightseeing",
+            description:
+              "After breakfast enjoy a full day at Universal Studios Singapore with thrilling rides, movie-themed attractions, entertainment zones, and shows. Overnight stay at Singapore.",
+            images: [null, null]
+          },
+          {
+            day: 4,
+            title: "Singapore → Kuala Lumpur",
+            distance: "Coach transfer",
+            description:
+              "Travel by coach from Singapore to Kuala Lumpur, check in to hotel, and spend the evening at leisure. Overnight stay at Kuala Lumpur.",
+            images: [null, null]
+          },
+          {
+            day: 5,
+            title: "Genting Highlands & Batu Caves",
+            distance: "Approx. 55 km",
+            description:
+              "Excursion to Genting Highlands with cable car ride, Snow World, gaming and entertainment complex, and en-route stop at Batu Caves. Overnight stay at Genting/Kuala Lumpur.",
+            images: [null, null]
+          },
+          {
+            day: 6,
+            title: "Kuala Lumpur City Tour",
+            distance: "Local sightseeing",
+            description:
+              "Visit Petronas Twin Towers photo stop, Cocoa Centre, King’s Palace photo stop, National Monument, National Mosque, Independence Square, and enjoy local city attractions. Overnight stay at Kuala Lumpur.",
+            images: [null, null]
+          },
+          {
+            day: 7,
+            title: "Kuala Lumpur Departure",
+            distance: "Airport transfer",
+            description:
+              "After breakfast check out, enjoy free time for shopping and local markets, lunch at Indian restaurant, and transfer to Kuala Lumpur Airport for your return flight to India.",
+            images: [null, null]
+          }
+        ]
+      }
+    },
+
+    included: [
+      "Return flight tickets",
+      "Singapore visa",
+      "Malaysia visa",
+      "4★ hotel accommodation on twin sharing basis",
+      "Daily breakfast",
+      "Lunch",
+      "Dinner",
+      "AC push-back coach transportation",
+      "2 bottles of water per person per day",
+      "Travel insurance",
+      "Experienced tour manager from Kolkata",
+      "English-speaking guide",
+      "Night Safari with tram ride",
+      "Sentosa Island tour",
+      "Cable car ride",
+      "Madame Tussauds Singapore",
+      "Wings of Time show",
+      "Universal Studios Singapore entry",
+      "Genting Highlands excursion",
+      "Snow World entry",
+      "Batu Caves visit",
+      "Kuala Lumpur city tour"
+    ],
+
+    excluded: [
+      "Personal expenses",
+      "Laundry charges",
+      "Telephone charges",
+      "Additional beverages",
+      "Optional activities not mentioned",
+      "Tips not specified",
+      "Anything not mentioned in inclusions"
+    ],
+
+    hotels: [
+      "Singapore: Hilton Garden Inn Singapore (4★)",
+      "Kuala Lumpur: Ramada Kuala Lumpur (4★)",
+      "Genting: First World Hotel Genting Highlands"
+    ],
+
+    departureDates: [
+      "17/10/2026",
+      "27/10/2026",
+      "20/11/2026",
+      "22/12/2026",
+      "22/01/2027"
+    ],
+
+    notes: [
+      "All sightseeing is subject to operational schedules and weather conditions.",
+      "Hotel check-in/check-out timings are as per hotel policy.",
+      "No hidden costs as per package inclusions."
+    ],
+
+    whatsapp: "https://wa.me/919163569695",
+
+    phone: "tel:+919163569695",
+
+    enquiryLink: "#",
+
+    detailsLink: "/packages/singapore-malaysia-tour"
+  },
+  {
+    id: 108,
+
+    category: "international",
+
+    slug: "thailand-singapore-malyasia",
+
+    title: "Thailand Singapore Malyasia",
+
+    image: null,
+
+    gallery: [null, null, null, null, null],
+
+    perPerson: true,
+
+    rating: 9.3,
+
+    location:
+      "Bangkok • Pattaya • Phuket • Kuala Lumpur • Genting Highlands • Singapore",
+
+    facilities: [
+      { id: 1, icon: Hotel, label: "4★ / 5★ Hotel Stay" },
+      { id: 2, icon: Utensils, label: "Meals Included" },
+      { id: 3, icon: Car, label: "Transportation Included" },
+      { id: 4, icon: Camera, label: "Sightseeing Included" },
+      { id: 5, icon: MapPinned, label: "Theme Park & City Tour" },
+      { id: 6, icon: Plane, label: "Flights Included" }
+    ],
+
+    overview:
+      "Enjoy an unforgettable Southeast Asia holiday covering Thailand, Malaysia, and Singapore. Explore Pattaya beaches, Bangkok city attractions, Phuket islands, Genting Highlands, Kuala Lumpur landmarks, and Singapore’s iconic attractions including Sentosa Island and Night Safari.",
+
+    packages: {
+      package1: {
+        duration: "12 Nights / 13 Days",
+        price: "Not Available",
+        itinerary: [
+          {
+            day: 1,
+            title: "Arrival Bangkok → Pattaya",
+            distance: "Airport transfer",
+            description:
+              "Arrive at Suvarnabhumi Airport, transfer to Pattaya hotel with guaranteed early check-in. Visit Pattaya Beach area, enjoy Indian buffet lunch, Alcazar Show, Walking Street, dinner, and overnight stay at Pattaya.",
+            images: [null, null]
+          },
+          {
+            day: 2,
+            title: "Pattaya Coral Island Tour",
+            distance: "Speed boat excursion",
+            description:
+              "Proceed to Coral Island by speed boat, enjoy beach activities, buffet lunch at Indian restaurant, Pattaya local market sightseeing, dinner, and overnight stay at Pattaya.",
+            images: [null, null]
+          },
+          {
+            day: 3,
+            title: "Pattaya → Bangkok City Tour",
+            distance: "Approx. 150 km",
+            description:
+              "Check out and transfer to Bangkok. Visit Golden Temple, Marble Temple, and city attractions. Enjoy shopping at Indira Market, dinner, and overnight stay at Bangkok.",
+            images: [null, null]
+          },
+          {
+            day: 4,
+            title: "Safari World & Chao Phraya Cruise",
+            distance: "Local sightseeing",
+            description:
+              "Visit Safari World with Marine Park including buffet lunch. In the evening enjoy Chao Phraya Princess Cruise dinner and overnight stay at Bangkok.",
+            images: [null, null]
+          },
+          {
+            day: 5,
+            title: "Bangkok → Phuket",
+            distance: "Flight transfer",
+            description:
+              "Fly from Bangkok to Phuket, transfer to hotel, enjoy buffet lunch at Indian restaurant, leisure time, dinner, and overnight stay at Phuket.",
+            images: [null, null]
+          },
+          {
+            day: 6,
+            title: "Phi Phi Island Excursion",
+            distance: "Boat excursion",
+            description:
+              "Full-day Phi Phi Island tour with beach visit and buffet lunch. Return to hotel for dinner and overnight stay at Phuket.",
+            images: [null, null]
+          },
+          {
+            day: 7,
+            title: "Phuket → Kuala Lumpur",
+            distance: "Flight transfer",
+            description:
+              "Fly to Kuala Lumpur, transfer to hotel, leisure evening, and overnight stay at Kuala Lumpur.",
+            images: [null, null]
+          },
+          {
+            day: 8,
+            title: "Genting Highlands & Batu Caves",
+            distance: "Approx. 55 km",
+            description:
+              "Excursion to Genting Highlands with cable car, Snow World, gaming complex, Batu Caves visit, photo stops, dinner, and overnight stay at Genting/Kuala Lumpur.",
+            images: [null, null]
+          },
+          {
+            day: 9,
+            title: "Kuala Lumpur City Tour",
+            distance: "Local sightseeing",
+            description:
+              "Visit Petronas Twin Towers photo stop, Cocoa Centre, King’s Palace, National Monument, National Mosque, Independence Square, and overnight stay at Kuala Lumpur.",
+            images: [null, null]
+          },
+          {
+            day: 10,
+            title: "Kuala Lumpur → Singapore & Night Safari",
+            distance: "Road transfer",
+            description:
+              "Travel by road to Singapore, check in to hotel, and in the evening enjoy Night Safari with tram ride and wildlife experience. Overnight stay at Singapore.",
+            images: [null, null]
+          },
+          {
+            day: 11,
+            title: "Singapore City & Sentosa Island",
+            distance: "Local sightseeing",
+            description:
+              "Visit Marina Bay, SkyPark area, Sentosa Island, Mount Faber, Merlion Tower, Sky Ride, light and sound show, dinner, and overnight stay at Singapore.",
+            images: [null, null]
+          },
+          {
+            day: 12,
+            title: "Singapore Leisure / Universal Studios",
+            distance: "Free day",
+            description:
+              "Free day for leisure, shopping, or optional Universal Studios Singapore visit. Overnight stay at Singapore.",
+            images: [null, null]
+          },
+          {
+            day: 13,
+            title: "Singapore Departure",
+            distance: "Airport transfer",
+            description:
+              "Early morning check out and transfer to Singapore Airport for return flight to India with sweet memories of the tour.",
+            images: [null, null]
+          }
+        ]
+      }
+    },
+
+    included: [
+      "4★ / 5★ hotel accommodation",
+      "Daily breakfast",
+      "Lunch",
+      "Dinner",
+      "Transportation throughout the tour",
+      "Parking charges",
+      "Toll tax",
+      "Thailand visa (if applicable as per package)",
+      "Malaysia visa",
+      "Singapore visa",
+      "Experienced tour manager",
+      "Return air tickets",
+      "Sightseeing as per itinerary",
+      "English-speaking guide",
+      "Entry fees as per itinerary",
+      "Night Safari Singapore",
+      "Sentosa Island tour",
+      "Safari World Bangkok",
+      "Phi Phi Island tour",
+      "Genting Highlands excursion"
+    ],
+
+    excluded: [
+      "Personal expenses",
+      "Laundry charges",
+      "Telephone charges",
+      "Additional beverages",
+      "Optional tours not mentioned",
+      "Travel insurance if not included by airline/package",
+      "Any item not mentioned under inclusions"
+    ],
+
+    hotels: [
+      "Bangkok: Bangkok Palace Hotel (4★)",
+      "Pattaya: Beverly Plaza Hotel (4★)",
+      "Phuket: The Fisherman Harbour Beach Resort (5★)",
+      "Singapore: Hilton Garden Inn Singapore (4★)",
+      "Kuala Lumpur: Ramada Kuala Lumpur (4★)",
+      "Genting Highlands: First World Hotel"
+    ],
+
+    departureDates: [
+      "16/08/2026",
+      "18/09/2026",
+      "17/10/2026",
+      "25/10/2026",
+      "20/11/2026",
+      "22/12/2026",
+      "22/01/2027"
+    ],
+
+    notes: [
+      "Flights, hotel rooms, and transportation are subject to availability at the time of booking.",
+      "Tour schedule may change due to operational, weather, or local conditions.",
+      "Package price to be confirmed at the time of booking."
+    ],
+
+    whatsapp: "https://wa.me/918910555711",
+
+    phone: "tel:+918910555711",
+
+    enquiryLink: "#",
+
+    detailsLink:
+      "/packages/bangkok-pattaya-phuket-kuala-lumpur-singapore-tour"
+  }
 ];
 
 export default packages;

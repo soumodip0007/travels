@@ -1,6 +1,7 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { animate, motion } from "framer-motion";
 import TourDayCard from "./TourDayCard";
+import { CalendarDays, CheckCircle2, Clock3, ArrowRight } from "lucide-react";
 
 // Updated package keys
 const packageOptions = [
@@ -144,19 +145,67 @@ export default function TourPlan({
                     : { scale: 1 }
                 }
                 transition={{ duration: 0.35, ease: "easeOut" }}
-                className={`rounded-full px-6 py-3 text-sm font-semibold transition-colors duration-300 ${
-                  isSelected
-                    ? "bg-gradient-to-r from-[#6957DF] to-[#9F7AEA] text-white shadow-lg"
-                    : isAvailable
+                className={`rounded-full px-6 py-3 text-sm font-semibold transition-colors duration-300 ${isSelected
+                  ? "bg-gradient-to-r from-[#6957DF] to-[#9F7AEA] text-white shadow-lg"
+                  : isAvailable
                     ? "bg-purple-100 text-[#6957DF] hover:bg-purple-200"
                     : "cursor-not-allowed bg-gray-200 text-gray-400 opacity-60"
-                }`}
+                  }`}
               >
                 {pkg.label}
               </motion.button>
             );
           })}
         </div>
+
+        {/* Departure Dates */}
+        {tour?.departureDates?.length > 0 && (
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.35 }}
+            className="mb-8 flex justify-center"
+          >
+            <div
+              className="relative w-full max-w-4xl overflow-hidden rounded-[30px]
+           border border-purple-100/70
+           bg-gradient-to-br from-[#FCFAFF] via-[#F7F2FF] to-[#F3EDFF]
+           px-6 py-6 backdrop-blur-xl md:px-8 md:py-7
+           shadow-[0_12px_28px_rgba(109,40,217,0.10),0_28px_60px_rgba(109,40,217,0.16),inset_0_1px_0_rgba(255,255,255,0.75)]"
+            >
+              {/* soft decorative circles */}
+              <div className="absolute -top-16 -left-16 h-44 w-44 rounded-full bg-[#8B5CF6]/8 blur-2xl" />
+              <div className="absolute -bottom-20 -right-16 h-52 w-52 rounded-full bg-[#A78BFA]/10 blur-2xl" />
+
+              <div className="relative z-10 text-center">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#6D28D9]">
+                  Departure Dates
+                </p>
+
+                <div className="mx-auto mt-3 h-[3px] w-16 rounded-full bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA]" />
+
+                <div className="mt-6 flex flex-wrap justify-center gap-3">
+                  {tour.departureDates.map((date, idx) => (
+                    <motion.span
+                      key={idx}
+                      whileHover={{ y: -2, scale: 1.03 }}
+                      whileTap={{ scale: 0.98 }}
+                      className="rounded-full border border-purple-200/70
+                         bg-white/80 px-5 py-2.5 text-sm font-semibold
+                         text-[#6D28D9] shadow-sm backdrop-blur-sm
+                         transition-all duration-300
+                         hover:border-[#8B5CF6]/60
+                         hover:bg-white
+                         hover:shadow-[0_10px_24px_rgba(109,40,217,0.14)]"
+                    >
+                      {date}
+                    </motion.span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        )}
 
         {/* Timeline */}
         {currentItinerary.length > 0 && (
