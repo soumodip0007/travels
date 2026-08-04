@@ -6392,7 +6392,7 @@ const packages = [
     packages: {
       package1: {
         duration: "6 Nights / 7 Days",
-        price: null,
+        price: "Not Available",
         itinerary: [
           {
             day: 1,
