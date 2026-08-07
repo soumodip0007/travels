@@ -8,11 +8,15 @@ import {
   Star,
 } from "lucide-react";
 
+import { useEnquiry } from "../context/EnquiryContext";
+
 export default function TourCard({ tour }) {
   // Find all available packages
   const availablePackages = Object.values(tour.packages || {}).filter(
     (pkg) => pkg?.price
   );
+
+  const { openEnquiry } = useEnquiry();
 
   // Find the cheapest package
   const cheapestPackage =
@@ -207,15 +211,15 @@ export default function TourCard({ tour }) {
         {/* View Details */}
         <Link
           to={`/packages/${tour.slug}`}
-          className="flex h-11 flex-1 items-center justify-center rounded-full border-2 border-white bg-white px-5 font-semibold text-[#5B4BD6] shadow-lg transition-all duration-300 hover:scale-[1.02] hover:bg-slate-50"
+          className="cta-shimmer rounded-full bg-[#fff] px-6 py-2 text-[#6957DF] shadow-[0_20px_45px_rgba(105,87,223,0.35)] transition-all duration-500 hover:scale-105 hover:border-transparent hover:bg-gradient-to-l hover:from-[#fff] hover:to-[#fff] hover:text-[#6957DF] hover:shadow-[0_20px_45px_rgba(105,87,223,0.40)] cursor-pointer border-2 border-[#6957DF]"
         >
           View Details
         </Link>
 
         {/* Enquire Now */}
         <Link
-          to={`/packages/${tour.slug}`}
-          className="flex h-11 flex-1 items-center justify-center rounded-full bg-[#4C3AA0] px-5 font-bold text-white shadow-lg transition-all duration-300 hover:scale-[1.02] hover:bg-[#41338C]"
+          onClick={() => openEnquiry()}
+          className="cta-shimmer rounded-full bg-gradient-to-r from-[#6957DF] to-[#9F7AEA] px-6 py-2 text-white shadow-[0_20px_45px_rgba(105,87,223,0.35)] transition-all duration-500 hover:scale-105 hover:shadow-[0_25px_55px_rgba(105,87,223,0.45)] cursor-pointer border-2"
         >
           Enquire Now
         </Link>

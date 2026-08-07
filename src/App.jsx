@@ -33,7 +33,7 @@ const App = () => {
     setLoading(true);
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 1500);
+    }, 2000);
     return () => clearTimeout(timer);
   }, [location.pathname]);
 

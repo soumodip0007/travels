@@ -6,10 +6,13 @@ import {
   Star,
   Clock3
 } from "lucide-react";
+import { useEnquiry } from "../../context/EnquiryContext";
 
 export default function BookingCard({
   tour,
   selectedPackage, }) {
+
+  const { openEnquiry } = useEnquiry();
 
   const currentPackage = tour?.packages?.[selectedPackage];
 
@@ -162,27 +165,24 @@ export default function BookingCard({
           </div>
 
           {/* Destination */}
-
-          <div className="group mb-8 flex items-center gap-3 rounded-2xl border border-white/15 bg-white/10 backdrop-blur-xl p-4 transition-all duration-500 hover:bg-white/15">
+          <div className="group mb-8 flex items-start gap-3 rounded-2xl border border-white/15 bg-white/10 backdrop-blur-xl p-4 transition-all duration-500 hover:bg-white/15">
 
             <div
-              className="flex h-11 w-11 items-center justify-center rounded-2xl
-        bg-gradient-to-br from-[#8B5CF6] to-[#C084FC]
-        text-white shadow-xl"
+              className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl
+    bg-gradient-to-br from-[#8B5CF6] to-[#C084FC]
+    text-white shadow-xl mt-1"
             >
               <MapPin size={20} />
             </div>
 
-            <div>
-
-              <p className="text-purple-100 text-sm">
+            <div className="min-w-0">
+              <p className="text-purple-100 text-sm mb-1">
                 Destination
               </p>
 
-              <p className="font-semibold text-white">
+              <p className="font-semibold text-white leading-relaxed break-words">
                 {tour.location}
               </p>
-
             </div>
 
           </div>
@@ -191,6 +191,7 @@ export default function BookingCard({
 
           <div className="flex justify-center">
             <button
+              onClick={openEnquiry}
               className="w-1/2 flex justify-center rounded-full bg-gradient-to-r from-fuchsia-500 via-purple-500 to-violet-600 py-4 text-lg font-bold text-white shadow-[0_20px_50px_rgba(168,85,247,.45)] transition-all duration-500 hover:scale-105 hover:shadow-[0_30px_70px_rgba(168,85,247,.6)]"
             >
               Enquire Now

@@ -140,7 +140,7 @@ export default function TourSection() {
               <div className="mt-8 flex justify-center">
                 <button
                   onClick={handleToggle}
-                  className="ts-cta rounded-full bg-gradient-to-r from-[#6957DF] via-[#7C3AED] to-[#A855F7] px-8 py-3 font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:scale-105"
+                  className="cta-shimmer rounded-full bg-gradient-to-r from-[#6957DF] to-[#9F7AEA] px-7 py-3 font-bold text-white shadow-[0_20px_45px_rgba(105,87,223,0.35)] transition-all duration-500 hover:scale-105 hover:shadow-[0_25px_55px_rgba(105,87,223,0.45)] cursor-pointer"
                 >
                   {showAll ? "Show Less" : "View All Packages"}
                 </button>

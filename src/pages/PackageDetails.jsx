@@ -20,6 +20,14 @@ export default function PackageDetails() {
 
   const [selectedPackage, setSelectedPackage] = useState("");
 
+  // Scroll to top whenever package changes
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "instant",
+    });
+  }, [slug]);
+
   useEffect(() => {
     if (!tour?.packages) return;
 
@@ -100,7 +108,7 @@ export default function PackageDetails() {
             {/* ================= RIGHT COLUMN ================= */}
             <div className="lg:col-span-1">
 
-              <div className="sticky top-28">
+              <div className="sticky top-25">
 
                 <BookingCard
                   tour={tour}

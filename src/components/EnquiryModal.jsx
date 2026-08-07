@@ -5,12 +5,13 @@ import {
   User,
   Phone,
   Mail,
+  MapPin,
   Compass,
   CalendarDays,
-  MessageSquare,
   PlaneTakeoff,
   ChevronDown,
 } from "lucide-react";
+
 import { submitEnquiry } from "../utils/submitEnquiry";
 import LoadingSpinner from "./LoadingSpinner";
 
@@ -24,19 +25,63 @@ export default function EnquiryModal({
     name: "",
     phone: "",
     email: "",
+    address: "",
     startDate: "",
     endDate: "",
-    package: "",
-    message: "",
+    tourType: "",
+    tourPackage: ""
   });
+
+  const domestic = [
+    "Ajanta Ellora Mumbai Goa",
+    "Madhya Pradesh",
+    "Andaman",
+    "Arunachal Pradesh",
+    "Ayodhya",
+    "Five Joytirlinga",
+    "Himachal Pradesh",
+    "Koraput",
+    "Nagaland Tripura",
+    "Offbeat Kashmir",
+    "Pelling Ravangla Darjeeling",
+    "Rajasthan",
+    "South India",
+    "Valley of Leh Ladakh",
+    "Vizag Hyderabad",
+    "Kashmir",
+    "Kinnaur La Hul Spiti",
+    "Meghalaya",
+    "North India",
+    "North Sikkim",
+    "Goa",
+    "Karnataka",
+    "Goa with Lakshadweep",
+    "Kerala with Kanyakumari",
+    "Gujarat"
+  ];
+
+  const international = [
+    "Nepal",
+    "Bangkok Pattaya Phuket",
+    "Bangkok, Pattaya, Phuket & Krabi",
+    "Kazakhstan & Uzbekistan",
+    "Vietnam",
+    "Vietnam Phu Quoc",
+    "Srilanka",
+    "Singapore Malaysia, Genting",
+    "Thailand Singapore Malyasia"
+  ];
 
   if (!open) return null;
 
   const handleChange = (e) => {
-    setForm({
-      ...form,
-      [e.target.name]: e.target.value,
-    });
+    const { name, value } = e.target;
+
+    setForm((prev) => ({
+      ...prev,
+      [name]: value,
+      ...(name === "tourType" ? { tourPackage: "" } : {}),
+    }));
   };
 
   const submit = async (e) => {
@@ -53,10 +98,11 @@ export default function EnquiryModal({
         name: "",
         phone: "",
         email: "",
+        address: "",
         startDate: "",
         endDate: "",
-        package: "",
-        message: "",
+        tourType: "",
+        tourPackage: ""
       });
 
       close();
@@ -66,6 +112,13 @@ export default function EnquiryModal({
 
     setLoading(false);
   };
+
+  const packageOptions =
+    form.tourType === "Domestic Tour"
+      ? domestic
+      : form.tourType === "International Tour"
+        ? international
+        : [];
 
   // Purely decorative "ticket number" — cosmetic only, no functional role
   const ticketCode = `TE-${new Date().getFullYear().toString().slice(2)}${String(
@@ -264,11 +317,38 @@ export default function EnquiryModal({
               </div>
             </div>
 
-            {/* Tour Type Question */}
+            {/* Address */}
+            <div className="md:col-span-2">
+              <label className="mb-1.5 block text-sm font-semibold text-slate-700">
+                Address
+              </label>
 
+              <div className="relative">
+                <MapPin
+                  size={17}
+                  className="pointer-events-none absolute left-3.5 top-3.5 text-[#6957DF]/50"
+                />
+
+                <textarea
+                  required
+                  name="address"
+                  rows={3}
+                  value={form.address}
+                  onChange={handleChange}
+                  placeholder="Enter your full address (Street, Area, City, State, PIN Code)"
+                  className="enquiry-input w-full rounded-2xl border border-slate-200 bg-white p-3 pl-10 text-[15px] text-[#241C4B] outline-none focus:border-[#6957DF] focus:ring-4 focus:ring-[#6957DF]/10 resize-none"
+                />
+              </div>
+
+              <p className="mt-1 text-xs text-slate-500">
+                This helps us provide region-specific travel assistance.
+              </p>
+            </div>
+
+            {/* Tour Type */}
             <div>
               <label className="mb-1.5 block text-sm font-semibold text-slate-700">
-                Which type of tour are you interested in?
+                Tour Type
               </label>
 
               <div className="relative">
@@ -276,10 +356,11 @@ export default function EnquiryModal({
                   size={17}
                   className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-[#6957DF]/50"
                 />
+
                 <select
                   required
-                  name="package"
-                  value={form.package}
+                  name="tourType"
+                  value={form.tourType}
                   onChange={handleChange}
                   className="enquiry-input w-full appearance-none rounded-xl border border-slate-200 bg-white p-3 pl-10 pr-9 outline-none focus:border-[#6957DF]"
                 >
@@ -287,11 +368,62 @@ export default function EnquiryModal({
                   <option value="Domestic Tour">Domestic Tour</option>
                   <option value="International Tour">International Tour</option>
                 </select>
+
                 <ChevronDown
                   size={17}
                   className="pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400"
                 />
               </div>
+            </div>
+
+            {/* Tour Package */}
+            <div>
+              <label className="mb-1.5 block text-sm font-semibold text-slate-700">
+                Select Tour Package
+              </label>
+
+              <div className="relative">
+                <PlaneTakeoff
+                  size={17}
+                  className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-[#6957DF]/50"
+                />
+
+                <select
+                  required
+                  name="tourPackage"
+                  value={form.tourPackage}
+                  onChange={handleChange}
+                  disabled={!form.tourType}
+                  className={`enquiry-input w-full appearance-none rounded-xl border p-3 pl-10 pr-9 outline-none transition-all
+        ${!form.tourType
+                      ? "border-slate-200 bg-slate-100 text-slate-400 cursor-not-allowed"
+                      : "border-slate-200 bg-white text-slate-700 focus:border-[#6957DF]"
+                    }`}
+                >
+                  <option value="">
+                    {form.tourType
+                      ? "Select Tour Package"
+                      : "Select tour type first"}
+                  </option>
+
+                  {packageOptions.map((pkg) => (
+                    <option key={pkg} value={pkg}>
+                      {pkg}
+                    </option>
+                  ))}
+                </select>
+
+                <ChevronDown
+                  size={17}
+                  className="pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400"
+                />
+              </div>
+
+              {!form.tourType && (
+                <p className="mt-1 text-xs text-slate-500">
+                  Please select a tour type first.
+                </p>
+              )}
             </div>
 
             {/* Start Date */}
@@ -335,29 +467,6 @@ export default function EnquiryModal({
                   name="endDate"
                   value={form.endDate}
                   onChange={handleChange}
-                  className="enquiry-input w-full rounded-xl border border-slate-200 bg-white p-3 pl-10 outline-none focus:border-[#6957DF]"
-                />
-              </div>
-            </div>
-
-            {/* Message */}
-
-            <div className="md:col-span-2">
-              <label className="mb-1.5 block text-sm font-semibold text-slate-700">
-                Message
-              </label>
-
-              <div className="relative">
-                <MessageSquare
-                  size={17}
-                  className="pointer-events-none absolute left-3.5 top-3.5 text-[#6957DF]/50"
-                />
-                <textarea
-                  name="message"
-                  rows="2"
-                  value={form.message}
-                  onChange={handleChange}
-                  placeholder="Tell us your destination, number of travellers, budget, etc."
                   className="enquiry-input w-full rounded-xl border border-slate-200 bg-white p-3 pl-10 outline-none focus:border-[#6957DF]"
                 />
               </div>
