@@ -116,7 +116,10 @@ export default function TourSection() {
           </div>
         ) : (
           <>
-            <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+            <div
+  key={`${title}-${showAll ? "all" : page}`}
+  className="animate-page-fade grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4"
+>
               {visiblePackages.map((tour, index) => (
                 <div
                   key={tour.id}

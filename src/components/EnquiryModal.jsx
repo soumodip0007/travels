@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import {
   X,
@@ -10,67 +10,130 @@ import {
   CalendarDays,
   PlaneTakeoff,
   ChevronDown,
+  ChevronRight,
+  AlertCircle,
 } from "lucide-react";
 
 import { submitEnquiry } from "../utils/submitEnquiry";
 import LoadingSpinner from "./LoadingSpinner";
 
-export default function EnquiryModal({
-  open,
-  close,
-}) {
+const DOMESTIC = [
+  "Ajanta Ellora Mumbai Goa",
+  "Madhya Pradesh",
+  "Andaman",
+  "Arunachal Pradesh",
+  "Ayodhya",
+  "Five Joytirlinga",
+  "Himachal Pradesh",
+  "Koraput",
+  "Nagaland Tripura",
+  "Offbeat Kashmir",
+  "Pelling Ravangla Darjeeling",
+  "Rajasthan",
+  "South India",
+  "Valley of Leh Ladakh",
+  "Vizag Hyderabad",
+  "Kashmir",
+  "Kinnaur La Hul Spiti",
+  "Meghalaya",
+  "North India",
+  "North Sikkim",
+  "Goa",
+  "Karnataka",
+  "Goa with Lakshadweep",
+  "Kerala with Kanyakumari",
+  "Gujarat",
+];
+
+const INTERNATIONAL = [
+  "Nepal",
+  "Bangkok Pattaya Phuket",
+  "Bangkok, Pattaya, Phuket & Krabi",
+  "Kazakhstan & Uzbekistan",
+  "Vietnam",
+  "Vietnam Phu Quoc",
+  "Srilanka",
+  "Singapore Malaysia, Genting",
+  "Thailand Singapore Malyasia",
+];
+
+const EMPTY_FORM = {
+  name: "",
+  phone: "",
+  email: "",
+  address: "",
+  startDate: "",
+  endDate: "",
+  tourType: "",
+  tourPackage: "",
+};
+
+const todayISO = () => new Date().toISOString().split("T")[0];
+
+export default function EnquiryModal({ open, close }) {
   const [loading, setLoading] = useState(false);
+  const [form, setForm] = useState(EMPTY_FORM);
+  const [touched, setTouched] = useState({});
+  const [attempted, setAttempted] = useState(false);
 
-  const [form, setForm] = useState({
-    name: "",
-    phone: "",
-    email: "",
-    address: "",
-    startDate: "",
-    endDate: "",
-    tourType: "",
-    tourPackage: ""
-  });
+  // Lock background scroll + close on Escape while the modal is open
+  useEffect(() => {
+    if (!open) return;
 
-  const domestic = [
-    "Ajanta Ellora Mumbai Goa",
-    "Madhya Pradesh",
-    "Andaman",
-    "Arunachal Pradesh",
-    "Ayodhya",
-    "Five Joytirlinga",
-    "Himachal Pradesh",
-    "Koraput",
-    "Nagaland Tripura",
-    "Offbeat Kashmir",
-    "Pelling Ravangla Darjeeling",
-    "Rajasthan",
-    "South India",
-    "Valley of Leh Ladakh",
-    "Vizag Hyderabad",
-    "Kashmir",
-    "Kinnaur La Hul Spiti",
-    "Meghalaya",
-    "North India",
-    "North Sikkim",
-    "Goa",
-    "Karnataka",
-    "Goa with Lakshadweep",
-    "Kerala with Kanyakumari",
-    "Gujarat"
-  ];
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
 
-  const international = [
-    "Nepal",
-    "Bangkok Pattaya Phuket",
-    "Bangkok, Pattaya, Phuket & Krabi",
-    "Kazakhstan & Uzbekistan",
-    "Vietnam",
-    "Vietnam Phu Quoc",
-    "Srilanka",
-    "Singapore Malaysia, Genting",
-    "Thailand Singapore Malyasia"
-  ];
+    const onKeyDown = (e) => {
+      if (e.key === "Escape") close();
+    };
+    window.addEventListener("keydown", onKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", onKeyDown);
+    };
+  }, [open, close]);
+
+  const packageOptions =
+    form.tourType === "Domestic Tour"
+      ? DOMESTIC
+      : form.tourType === "International Tour"
+        ? INTERNATIONAL
+        : [];
+
+  // Field-level validation, computed fresh from current form state
+  const errors = useMemo(() => {
+    const e = {};
+
+    if (!form.name.trim()) e.name = "Enter your full name.";
+
+    if (!form.phone.trim()) {
+      e.phone = "Enter a phone number.";
+    } else if (!/^\d{10}$/.test(form.phone.replace(/\D/g, ""))) {
+      e.phone = "Enter a valid 10-digit phone number.";
+    }
+
+    if (!form.email.trim()) {
+      e.email = "Enter an email address.";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
+      e.email = "Enter a valid email address.";
+    }
+
+    if (!form.address.trim()) e.address = "Enter your address.";
+    if (!form.tourType) e.tourType = "Select a tour type.";
+    if (!form.tourPackage) e.tourPackage = "Select a package.";
+    if (!form.startDate) e.startDate = "Choose a start date.";
+
+    if (!form.endDate) {
+      e.endDate = "Choose an end date.";
+    } else if (form.startDate && form.endDate < form.startDate) {
+      e.endDate = "End date can't be before the start date.";
+    }
+
+    return e;
+  }, [form]);
+
+  const isValid = Object.keys(errors).length === 0;
 
   if (!open) return null;
 
@@ -81,53 +144,55 @@ export default function EnquiryModal({
       ...prev,
       [name]: value,
       ...(name === "tourType" ? { tourPackage: "" } : {}),
+      ...(name === "startDate" && prev.endDate && value > prev.endDate
+        ? { endDate: "" }
+        : {}),
     }));
   };
 
+  const handleBlur = (e) => {
+    setTouched((prev) => ({ ...prev, [e.target.name]: true }));
+  };
+
+  const showError = (field) => (touched[field] || attempted) && errors[field];
+
   const submit = async (e) => {
     e.preventDefault();
+    setAttempted(true);
+
+    if (!isValid) {
+      // Focus the first invalid field for a faster fix
+      const firstInvalid = Object.keys(errors)[0];
+      document.getElementsByName(firstInvalid)[0]?.focus();
+      return;
+    }
 
     setLoading(true);
 
     try {
       await submitEnquiry(form);
-
-      alert("Enquiry Sent Successfully!");
-
-      setForm({
-        name: "",
-        phone: "",
-        email: "",
-        address: "",
-        startDate: "",
-        endDate: "",
-        tourType: "",
-        tourPackage: ""
-      });
-
+      alert("Enquiry sent successfully!");
+      setForm(EMPTY_FORM);
+      setTouched({});
+      setAttempted(false);
       close();
     } catch {
-      alert("Something went wrong.");
+      alert("Something went wrong. Please try again.");
     }
 
     setLoading(false);
   };
 
-  const packageOptions =
-    form.tourType === "Domestic Tour"
-      ? domestic
-      : form.tourType === "International Tour"
-        ? international
-        : [];
+  const inputBase =
+    "enquiry-input w-full rounded-xl border bg-white p-3 pl-10 text-[15px] text-[#241C4B] outline-none placeholder:text-slate-400";
 
-  // Purely decorative "ticket number" — cosmetic only, no functional role
-  const ticketCode = `TE-${new Date().getFullYear().toString().slice(2)}${String(
-    new Date().getMonth() + 1
-  ).padStart(2, "0")}${String(new Date().getDate()).padStart(2, "0")}`;
+  const inputState = (field) =>
+    showError(field)
+      ? "border-red-300 focus:border-red-400 focus:ring-4 focus:ring-red-100"
+      : "border-slate-200 focus:border-[#6957DF] focus:ring-4 focus:ring-[#6957DF]/10";
 
   return (
-    <div className="fixed inset-0 z-[99999] flex items-center justify-center p-4">
-
+    <div className="fixed inset-0 z-[99999] flex items-end justify-center sm:items-center sm:p-4">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=JetBrains+Mono:wght@500&display=swap');
 
@@ -150,10 +215,6 @@ export default function EnquiryModal({
 
         .enquiry-input {
           transition: border-color 200ms ease, box-shadow 200ms ease, background-color 200ms ease;
-        }
-
-        .enquiry-input:focus {
-          box-shadow: 0 0 0 4px rgba(105, 87, 223, 0.14);
         }
 
         .enquiry-scroll {
@@ -184,33 +245,38 @@ export default function EnquiryModal({
         .enquiry-submit:hover::before {
           left: 130%;
         }
+
+        @media (max-width: 639px) {
+          input[type="date"] {
+            min-height: 44px;
+          }
+        }
       `}</style>
 
-      {/* Background Blur */}
-
+      {/* Background overlay */}
       <div
         onClick={close}
         className="absolute inset-0 bg-[#241c4b]/50 backdrop-blur-md"
       />
 
-      {/* Modal */}
-
+      {/* Modal — bottom sheet on mobile, centered card from sm+ */}
       <motion.div
-        initial={{ opacity: 0, y: 24, scale: 0.97 }}
-        animate={{ opacity: 1, y: 0, scale: 1 }}
-        transition={{ duration: 0.35, ease: "easeOut" }}
-        className="relative z-10 grid max-h-[94vh] w-full max-w-4xl overflow-hidden rounded-[28px] bg-[#FBFAFF] shadow-[0_40px_100px_rgba(36,28,75,0.35)] md:grid-cols-[200px_1fr]"
+        initial={{ opacity: 0, y: 48 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.32, ease: "easeOut" }}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="enquiry-title"
+        className="relative z-10 flex h-[92dvh] sm:h-[42rem] w-full max-h-[92dvh] sm:max-h-[94vh] max-w-4xl flex-col overflow-hidden rounded-t-[28px] sm:rounded-[28px] bg-[#FBFAFF] shadow-[0_40px_100px_rgba(36,28,75,0.35)] sm:flex-row"
       >
-
-        {/* ================= Ticket Stub ================= */}
-
-        <div className="enquiry-stub-bg relative hidden flex-col justify-between p-6 text-white md:flex">
-
+        {/* ================= Ticket Stub (desktop only) ================= */}
+        <div className="enquiry-stub-bg relative hidden w-[200px] shrink-0 flex-col justify-between p-6 text-white sm:flex">
           <div>
             <PlaneTakeoff size={22} className="text-white/90" />
-
             <h3 className="enquiry-display mt-1.5 text-xl leading-snug">
-              Travel<br />Enquiry
+              Travel
+              <br />
+              Enquiry
             </h3>
           </div>
 
@@ -221,280 +287,308 @@ export default function EnquiryModal({
         </div>
 
         {/* ================= Form Side ================= */}
+        <div className="flex min-h-0 flex-1 flex-col">
+          {/* Sticky header */}
+          <div className="flex shrink-0 items-start justify-between border-b border-slate-100 px-5 pb-3 pt-4 sm:px-7 sm:pt-6">
+            <div>
+              <h2
+                id="enquiry-title"
+                className="enquiry-display text-xl text-[#241c4b] sm:text-2xl"
+              >
+                Travel Enquiry
+              </h2>
+            </div>
 
-        <div className="enquiry-scroll overflow-y-auto p-5 md:p-7">
-
-          {/* Close Button */}
-
-          <button
-            onClick={close}
-            className="absolute right-4 top-4 rounded-full p-1.5 text-[#241c4b] transition hover:bg-purple-50 hover:text-[#6957DF]"
-          >
-            <X size={20} />
-          </button>
-
-          {/* Heading (mobile only, stub hidden) */}
-
-          <div className="mb-4 md:hidden">
-            <h2 className="enquiry-display mt-1 text-2xl text-[#241c4b]">
-              Travel Enquiry
-            </h2>
+            <button
+              type="button"
+              onClick={close}
+              aria-label="Close enquiry form"
+              className="-mr-1.5 -mt-1 shrink-0 rounded-full p-2 text-[#241c4b] transition hover:bg-purple-50 hover:text-[#6957DF]"
+            >
+              <X size={20} />
+            </button>
           </div>
 
-          <p className="mb-4 hidden pr-8 text-sm text-slate-500 md:block">
-            Tell us about your travel plan and we will contact you shortly.
-          </p>
-
-          <form onSubmit={submit} className="grid grid-cols-1 gap-3.5 md:grid-cols-2">
-
-            {/* Name */}
-
-            <div>
-              <label className="mb-1.5 block text-sm font-semibold text-slate-700">
-                Full Name
-              </label>
-
-              <div className="relative">
-                <User
-                  size={17}
-                  className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-[#6957DF]/50"
-                />
+          {/* Scrollable form body */}
+          <form
+            id="enquiry-form"
+            onSubmit={submit}
+            noValidate
+            className="enquiry-scroll min-h-0 flex-1 overflow-y-auto px-5 py-4 sm:px-7 sm:py-5"
+          >
+            <fieldset className="grid grid-cols-1 gap-3.5 sm:grid-cols-2">
+              {/* Name */}
+              <Field
+                label="Full Name"
+                icon={User}
+                error={showError("name")}
+              >
                 <input
+                  id="name"
                   required
                   name="name"
                   value={form.name}
                   onChange={handleChange}
+                  onBlur={handleBlur}
+                  autoComplete="name"
                   placeholder="Enter your name"
-                  className="enquiry-input w-full rounded-xl border border-slate-200 bg-white p-3 pl-10 outline-none focus:border-[#6957DF]"
+                  className={`${inputBase} ${inputState("name")}`}
                 />
-              </div>
-            </div>
+              </Field>
 
-            {/* Phone */}
-
-            <div>
-              <label className="mb-1.5 block text-sm font-semibold text-slate-700">
-                Phone Number
-              </label>
-
-              <div className="relative">
-                <Phone
-                  size={17}
-                  className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-[#6957DF]/50"
-                />
+              {/* Phone */}
+              <Field
+                label="Phone Number"
+                icon={Phone}
+                error={showError("phone")}
+              >
                 <input
+                  id="phone"
                   required
+                  type="tel"
+                  inputMode="tel"
                   name="phone"
                   value={form.phone}
                   onChange={handleChange}
-                  placeholder="Enter phone number"
-                  className="enquiry-input w-full rounded-xl border border-slate-200 bg-white p-3 pl-10 outline-none focus:border-[#6957DF]"
+                  onBlur={handleBlur}
+                  autoComplete="tel"
+                  placeholder="10-digit mobile number"
+                  className={`${inputBase} ${inputState("phone")}`}
                 />
-              </div>
-            </div>
+              </Field>
 
-            {/* Email */}
-
-            <div>
-              <label className="mb-1.5 block text-sm font-semibold text-slate-700">
-                Email Address
-              </label>
-
-              <div className="relative">
-                <Mail
-                  size={17}
-                  className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-[#6957DF]/50"
-                />
+              {/* Email */}
+              <Field
+                label="Email Address"
+                icon={Mail}
+                error={showError("email")}
+                span2
+              >
                 <input
+                  id="email"
                   required
                   type="email"
                   name="email"
                   value={form.email}
                   onChange={handleChange}
+                  onBlur={handleBlur}
+                  autoComplete="email"
                   placeholder="Enter email address"
-                  className="enquiry-input w-full rounded-xl border border-slate-200 bg-white p-3 pl-10 outline-none focus:border-[#6957DF]"
+                  className={`${inputBase} ${inputState("email")}`}
                 />
+              </Field>
+
+              {/* Address */}
+              <div className="sm:col-span-2">
+                <label
+                  htmlFor="address"
+                  className="mb-1.5 block text-sm font-semibold text-slate-700"
+                >
+                  Address
+                </label>
+
+                <div className="relative">
+                  <MapPin
+                    size={17}
+                    className="pointer-events-none absolute left-3.5 top-3.5 text-[#6957DF]/50"
+                  />
+                  <textarea
+                    id="address"
+                    required
+                    name="address"
+                    rows={2}
+                    value={form.address}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    autoComplete="street-address"
+                    placeholder="Street, area, city, state, PIN code"
+                    className={`${inputBase} resize-none rounded-2xl ${inputState("address")}`}
+                  />
+                </div>
+
+                {showError("address") && <ErrorText text={errors.address} />}
               </div>
-            </div>
+            </fieldset>
 
-            {/* Address */}
-            <div className="md:col-span-2">
-              <label className="mb-1.5 block text-sm font-semibold text-slate-700">
-                Address
-              </label>
-
-              <div className="relative">
-                <MapPin
-                  size={17}
-                  className="pointer-events-none absolute left-3.5 top-3.5 text-[#6957DF]/50"
-                />
-
-                <textarea
-                  required
-                  name="address"
-                  rows={3}
-                  value={form.address}
-                  onChange={handleChange}
-                  placeholder="Enter your full address (Street, Area, City, State, PIN Code)"
-                  className="enquiry-input w-full rounded-2xl border border-slate-200 bg-white p-3 pl-10 text-[15px] text-[#241C4B] outline-none focus:border-[#6957DF] focus:ring-4 focus:ring-[#6957DF]/10 resize-none"
-                />
-              </div>
-
-              <p className="mt-1 text-xs text-slate-500">
-                This helps us provide region-specific travel assistance.
-              </p>
-            </div>
-
-            {/* Tour Type */}
-            <div>
-              <label className="mb-1.5 block text-sm font-semibold text-slate-700">
-                Tour Type
-              </label>
-
-              <div className="relative">
-                <Compass
-                  size={17}
-                  className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-[#6957DF]/50"
-                />
-
+            <fieldset className="mt-5 grid grid-cols-1 gap-3.5 border-t border-slate-100 pt-5 sm:grid-cols-2">
+              {/* Tour Type */}
+              <Field
+                label="Tour Type"
+                icon={Compass}
+                error={showError("tourType")}
+                select
+              >
                 <select
+                  id="tourType"
                   required
                   name="tourType"
                   value={form.tourType}
                   onChange={handleChange}
-                  className="enquiry-input w-full appearance-none rounded-xl border border-slate-200 bg-white p-3 pl-10 pr-9 outline-none focus:border-[#6957DF]"
+                  onBlur={handleBlur}
+                  className={`${inputBase} appearance-none pr-9 ${inputState("tourType")}`}
                 >
-                  <option value="">Select Tour Type</option>
+                  <option value="">Select tour type</option>
                   <option value="Domestic Tour">Domestic Tour</option>
-                  <option value="International Tour">International Tour</option>
-                </select>
-
-                <ChevronDown
-                  size={17}
-                  className="pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400"
-                />
-              </div>
-            </div>
-
-            {/* Tour Package */}
-            <div>
-              <label className="mb-1.5 block text-sm font-semibold text-slate-700">
-                Select Tour Package
-              </label>
-
-              <div className="relative">
-                <PlaneTakeoff
-                  size={17}
-                  className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-[#6957DF]/50"
-                />
-
-                <select
-                  required
-                  name="tourPackage"
-                  value={form.tourPackage}
-                  onChange={handleChange}
-                  disabled={!form.tourType}
-                  className={`enquiry-input w-full appearance-none rounded-xl border p-3 pl-10 pr-9 outline-none transition-all
-        ${!form.tourType
-                      ? "border-slate-200 bg-slate-100 text-slate-400 cursor-not-allowed"
-                      : "border-slate-200 bg-white text-slate-700 focus:border-[#6957DF]"
-                    }`}
-                >
-                  <option value="">
-                    {form.tourType
-                      ? "Select Tour Package"
-                      : "Select tour type first"}
+                  <option value="International Tour">
+                    International Tour
                   </option>
-
-                  {packageOptions.map((pkg) => (
-                    <option key={pkg} value={pkg}>
-                      {pkg}
-                    </option>
-                  ))}
                 </select>
+              </Field>
 
-                <ChevronDown
-                  size={17}
-                  className="pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400"
-                />
+              {/* Tour Package */}
+              <div>
+                <label
+                  htmlFor="tourPackage"
+                  className="mb-1.5 block text-sm font-semibold text-slate-700"
+                >
+                  Tour Package
+                </label>
+
+                <div className="relative">
+                  <PlaneTakeoff
+                    size={17}
+                    className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-[#6957DF]/50"
+                  />
+                  <select
+                    id="tourPackage"
+                    required
+                    name="tourPackage"
+                    value={form.tourPackage}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    disabled={!form.tourType}
+                    className={`${inputBase} appearance-none pr-9 ${
+                      !form.tourType
+                        ? "cursor-not-allowed border-slate-200 bg-slate-100 text-slate-400"
+                        : inputState("tourPackage")
+                    }`}
+                  >
+                    <option value="">
+                      {form.tourType
+                        ? "Select tour package"
+                        : "Select tour type first"}
+                    </option>
+                    {packageOptions.map((pkg) => (
+                      <option key={pkg} value={pkg}>
+                        {pkg}
+                      </option>
+                    ))}
+                  </select>
+                  <ChevronDown
+                    size={17}
+                    className="pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400"
+                  />
+                </div>
+
+                {showError("tourPackage") && (
+                  <ErrorText text={errors.tourPackage} />
+                )}
               </div>
 
-              {!form.tourType && (
-                <p className="mt-1 text-xs text-slate-500">
-                  Please select a tour type first.
-                </p>
-              )}
-            </div>
-
-            {/* Start Date */}
-
-            <div>
-              <label className="mb-1.5 block text-sm font-semibold text-slate-700">
-                Start Date
-              </label>
-
-              <div className="relative">
-                <CalendarDays
-                  size={17}
-                  className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-[#6957DF]/50"
-                />
+              {/* Start Date */}
+              <Field
+                label="Start Date"
+                icon={CalendarDays}
+                error={showError("startDate")}
+              >
                 <input
+                  id="startDate"
                   required
                   type="date"
                   name="startDate"
+                  min={todayISO()}
                   value={form.startDate}
                   onChange={handleChange}
-                  className="enquiry-input w-full rounded-xl border border-slate-200 bg-white p-3 pl-10 outline-none focus:border-[#6957DF]"
+                  onBlur={handleBlur}
+                  className={`${inputBase} ${inputState("startDate")}`}
                 />
-              </div>
-            </div>
+              </Field>
 
-            {/* End Date */}
-
-            <div>
-              <label className="mb-1.5 block text-sm font-semibold text-slate-700">
-                End Date
-              </label>
-
-              <div className="relative">
-                <CalendarDays
-                  size={17}
-                  className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-[#6957DF]/50"
-                />
+              {/* End Date */}
+              <Field
+                label="End Date"
+                icon={CalendarDays}
+                error={showError("endDate")}
+              >
                 <input
+                  id="endDate"
                   required
                   type="date"
                   name="endDate"
+                  min={form.startDate || todayISO()}
                   value={form.endDate}
                   onChange={handleChange}
-                  className="enquiry-input w-full rounded-xl border border-slate-200 bg-white p-3 pl-10 outline-none focus:border-[#6957DF]"
+                  onBlur={handleBlur}
+                  className={`${inputBase} ${inputState("endDate")}`}
                 />
-              </div>
-            </div>
+              </Field>
+            </fieldset>
+          </form>
 
-            {/* Submit Button */}
+          {/* Sticky footer / submit */}
+          <div className="shrink-0 border-t border-slate-100 bg-[#FBFAFF] px-5 py-3.5 sm:px-7 sm:py-4">
+            <div className="flex items-center justify-end gap-3">
+              {attempted && !isValid && (
+                <p className="mr-auto flex items-center gap-1.5 text-xs font-medium text-red-500 sm:text-sm">
+                  <AlertCircle size={15} className="shrink-0" />
+                  Please fix the highlighted fields.
+                </p>
+              )}
 
-            <div className="md:col-span-2 flex justify-end">
               <button
                 type="submit"
+                form="enquiry-form"
                 disabled={loading}
-                className="enquiry-submit flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#6957DF] to-[#9F7AEA] px-10 py-3.5 font-bold text-white shadow-[0_20px_45px_rgba(105,87,223,0.35)] transition-all hover:scale-[1.01] hover:shadow-[0_25px_55px_rgba(105,87,223,0.45)] disabled:opacity-70 disabled:hover:scale-100"
+                className="enquiry-submit ml-auto flex items-center justify-center gap-1.5 rounded-full bg-gradient-to-r from-[#6957DF] to-[#9F7AEA] px-7 py-3 text-sm font-bold text-white shadow-[0_20px_45px_rgba(105,87,223,0.35)] transition-all hover:scale-[1.01] hover:shadow-[0_25px_55px_rgba(105,87,223,0.45)] disabled:opacity-70 disabled:hover:scale-100 sm:px-10 sm:py-3.5 sm:text-base"
               >
                 {loading ? (
                   <LoadingSpinner />
                 ) : (
                   <>
-                    Submit
+                    Submit Enquiry
+                    <ChevronRight size={16} />
                   </>
                 )}
               </button>
             </div>
-
-          </form>
+          </div>
         </div>
-
       </motion.div>
-
     </div>
+  );
+}
+
+/** Shared label + icon-input wrapper so every field lines up the same way. */
+function Field({ label, icon: Icon, error, children, span2 }) {
+  const id = children.props.id;
+
+  return (
+    <div className={span2 ? "sm:col-span-2" : undefined}>
+      <label
+        htmlFor={id}
+        className="mb-1.5 block text-sm font-semibold text-slate-700"
+      >
+        {label}
+      </label>
+
+      <div className="relative">
+        <Icon
+          size={17}
+          className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-[#6957DF]/50"
+        />
+        {children}
+      </div>
+
+      {error && <ErrorText text={error} />}
+    </div>
+  );
+}
+
+function ErrorText({ text }) {
+  return (
+    <p className="mt-1 flex items-center gap-1 text-xs font-medium text-red-500">
+      <AlertCircle size={12} className="shrink-0" />
+      {text}
+    </p>
   );
 }
