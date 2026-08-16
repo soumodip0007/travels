@@ -1,14 +1,14 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import { ArrowRight } from "lucide-react";
-
 import "swiper/css";
 import "swiper/css/pagination";
+import bg1 from "../assets/bg1.jpeg";
+import bg2 from "../assets/bg2.jpeg";
 
 const slides = [
   {
-    image:
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&q=80",
+    image: bg1,
     title: "Discover Paradise",
     description:
       "Escape into breathtaking destinations where turquoise waters, golden beaches and unforgettable adventures await.",
@@ -16,22 +16,12 @@ const slides = [
     button2: "Explore Tours",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1920&q=80",
+    image: bg2,
     title: "Adventure Awaits",
     description:
       "Explore majestic mountains, scenic roads and hidden gems around the world with premium travel experiences.",
     button1: "Start Journey",
     button2: "Learn More",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1920&q=80",
-    title: "Travel Beyond Limits",
-    description:
-      "Create unforgettable memories with luxury tours designed for every explorer and every dreamer.",
-    button1: "Get Started",
-    button2: "View Packages",
   },
 ];
 

@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 
 const packages = [
-  
+
   // domestic
   {
     id: 1,
@@ -20,9 +20,16 @@ const packages = [
 
     title: "Ajanta Ellora Mumbai Goa",
 
-    image: null,
+    image:
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1200&q=80",
 
-    gallery: [null, null, null, null, null],
+    gallery: [
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1200&q=80",
+    ],
 
     perPerson: true,
 
@@ -32,12 +39,36 @@ const packages = [
       "Ajanta • Ellora • Aurangabad • Mumbai • Mahabaleshwar • Goa",
 
     facilities: [
-      { id: 1, icon: Train, label: "Train Included" },
-      { id: 2, icon: Hotel, label: "Hotel Stay" },
-      { id: 3, icon: Utensils, label: "Meals Included" },
-      { id: 4, icon: Car, label: "Transport Included" },
-      { id: 5, icon: Camera, label: "Sightseeing" },
-      { id: 6, icon: MapPinned, label: "Tour Assistance" },
+      {
+        id: 1,
+        icon: Train,
+        label: "Train Included",
+      },
+      {
+        id: 2,
+        icon: Hotel,
+        label: "Hotel Stay",
+      },
+      {
+        id: 3,
+        icon: Utensils,
+        label: "Meals Included",
+      },
+      {
+        id: 4,
+        icon: Car,
+        label: "Transport Included",
+      },
+      {
+        id: 5,
+        icon: Camera,
+        label: "Sightseeing",
+      },
+      {
+        id: 6,
+        icon: MapPinned,
+        label: "Tour Assistance",
+      },
     ],
 
     overview:
@@ -55,103 +86,154 @@ const packages = [
             distance: "Train journey",
             description:
               "Board train (12262) from Howrah Railway Station for Bhusaval. Overnight stay in train.",
-            images: [null, null],
+            images: [
+              "https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=1000&q=80",
+              "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1000&q=80",
+            ],
           },
+
           {
             day: 2,
             title: "Arrival at Bhusaval → Ajanta",
             distance: "Road transfer",
             description:
               "Reach Bhusaval Railway Station and proceed to Ajanta Caves. Overnight stay at Ajanta.",
-            images: [null, null],
+            images: [
+              "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1000&q=80",
+              "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1000&q=80",
+            ],
           },
+
           {
             day: 3,
             title: "Ajanta → Ellora",
             distance: "Road transfer",
             description:
               "After breakfast proceed to Ellora via Girijamata Temple. Visit Grishneshwar Jyotirlinga and Ellora Caves. Overnight stay at Ellora.",
-            images: [null, null],
+            images: [
+              "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1000&q=80",
+              "https://images.unsplash.com/photo-1532664189809-02133fee698d?auto=format&fit=crop&w=1000&q=80",
+            ],
           },
+
           {
             day: 4,
             title: "Ellora → Aurangabad",
             distance: "Road transfer",
             description:
               "Visit Bibi Ka Maqbara, Panchakki, Chhatrapati Shivaji Maharaj Museum, and other local attractions. Overnight stay at Aurangabad.",
-            images: [null, null],
+            images: [
+              "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1000&q=80",
+              "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1000&q=80",
+            ],
           },
+
           {
             day: 5,
             title: "Aurangabad → Mumbai",
             distance: "Train journey",
             description:
               "Transfer to Chhatrapati Sambhaji Nagar Railway Station and take train to Mumbai. Transfer to hotel on arrival. Overnight stay at Mumbai.",
-            images: [null, null],
+            images: [
+              "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1000&q=80",
+              "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1000&q=80",
+            ],
           },
+
           {
             day: 6,
             title: "Mumbai Sightseeing",
             distance: "Local sightseeing",
             description:
               "Visit Gateway of India, Marine Drive, Taraporewala Aquarium, Hanging Garden, Juhu Beach, Mahalaxmi Temple, Boot House, Siddhivinayak Temple, and more. Overnight stay at Mumbai.",
-            images: [null, null],
+            images: [
+              "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1000&q=80",
+              "https://images.unsplash.com/photo-1595658658481-d53d3f999875?auto=format&fit=crop&w=1000&q=80",
+            ],
           },
+
           {
             day: 7,
             title: "Mumbai → Mahabaleshwar",
             distance: "Road transfer",
             description:
               "Drive to Mahabaleshwar and check in to the hotel. Overnight stay at Mahabaleshwar.",
-            images: [null, null],
+            images: [
+              "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=80",
+              "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1000&q=80",
+            ],
           },
+
           {
             day: 8,
             title: "Mahabaleshwar Sightseeing → Pune → Goa",
             distance: "Road + Train transfer",
             description:
               "Visit Elephant's Head Point, Mahabaleshwar Temple, Veena Lake, and nearby attractions. Later transfer to Pune Railway Station and board train for Goa. Overnight stay in train.",
-            images: [null, null],
+            images: [
+              "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=80",
+              "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1000&q=80",
+            ],
           },
+
           {
             day: 9,
             title: "Arrival at Goa",
             distance: "Railway station transfer",
             description:
               "Reach Madgaon Railway Station and transfer to hotel. Overnight stay at Goa.",
-            images: [null, null],
+            images: [
+              "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1000&q=80",
+              "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80",
+            ],
           },
+
           {
             day: 10,
             title: "North Goa Sightseeing",
             distance: "Local sightseeing",
             description:
               "Visit Dolphin Point, Aguada Fort, Baga Beach, Calangute Beach, Miramar Beach, and nearby attractions. Overnight stay at Goa.",
-            images: [null, null],
+            images: [
+              "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1000&q=80",
+              "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80",
+            ],
           },
+
           {
             day: 11,
             title: "South Goa Sightseeing",
             distance: "Local sightseeing",
             description:
               "Visit St. Xavier's Church, Mangesh Temple, Santadurga Temple, Colva Beach, and other attractions. Overnight stay at Goa.",
-            images: [null, null],
+            images: [
+              "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1000&q=80",
+              "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1000&q=80",
+            ],
           },
+
           {
             day: 12,
             title: "Goa → Kolkata",
             distance: "Train journey",
             description:
               "Check out early morning and transfer to Madgaon Railway Station. Board train (18048) for Kolkata. Overnight stay in train.",
-            images: [null, null],
+            images: [
+              "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1000&q=80",
+              "https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=1000&q=80",
+            ],
           },
+
           {
             day: 13,
             title: "Arrival at Kolkata",
             distance: "Train arrival",
             description:
               "Arrive at Shalimar Railway Station with sweet memories of the tour.",
-            images: [null, null],
+            images: [
+              "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1000&q=80",
+              "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1000&q=80",
+            ],
           },
         ],
       },
