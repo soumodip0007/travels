@@ -223,7 +223,7 @@ export default function TourPlan({
               <div
                 key={day.day}
                 data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
-                data-aos-delay={index * 100}
+                data-aos-delay={index * 10}
                 data-aos-duration="600"
                 data-aos-offset="120"
                 data-aos-easing="ease-in-out"
