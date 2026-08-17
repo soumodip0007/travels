@@ -56,7 +56,7 @@ const App = () => {
   return (
     <>
       <EnquiryProvider>
-        <PageLoader loading={loading} />
+        <PageLoader loading={loading} onComplete={() => setLoading(false)} />
 
         <Navbar />
         <Routes location={location}>
