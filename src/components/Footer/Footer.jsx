@@ -2,7 +2,7 @@ import FooterBrand from "./FooterBrand";
 import FooterLinks from "./FooterLinks";
 import FooterContact from "./FooterContact";
 import FooterGallery from "./FooterGallery";
-import Newsletter from "./Newsletter";
+// import Newsletter from "./Newsletter";
 import FooterBottom from "./FooterBottom";
 
 export default function Footer() {
@@ -25,7 +25,8 @@ export default function Footer() {
       <div className="relative z-10">
 
         {/* Top Section */}
-        <div className="mx-auto grid w-[92%] max-w-7xl gap-8 py-12 md:grid-cols-2 lg:grid-cols-4">
+        {/* Top Section */}
+<div className="mx-auto grid w-[92%] max-w-7xl gap-8 py-12 md:grid-cols-2 lg:grid-cols-4 2xl:max-w-[1600px] 2xl:gap-14 2xl:py-16">
 
           <FooterBrand />
 

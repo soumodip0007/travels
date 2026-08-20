@@ -55,13 +55,13 @@ export default function Navbar() {
         }
       `}</style>
 
-      <nav className="sticky top-0 z-50 w-full border-b border-purple-100 bg-white/85 backdrop-blur-xl">
+      <nav className="fixed top-0 z-50 w-full border-b border-purple-100 bg-white/85 backdrop-blur-xl">
         <div className="relative">
 
           {/* Background Wash */}
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#6957DF]/[0.04] via-transparent to-[#9F7AEA]/[0.04]" />
 
-          <div className="relative mx-auto flex w-[95%] max-w-7xl items-center justify-between px-4 py-4 lg:px-8">
+          <div className="relative mx-auto flex w-[95%] max-w-7xl items-center justify-between px-4 py-4 sm:py-3 lg:px-8 lg:py-2.5">
 
             {/* Logo */}
             <Link to="/" className="group flex items-center gap-3">
