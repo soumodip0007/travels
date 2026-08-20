@@ -225,7 +225,7 @@ export default function Navbar() {
               </div>
               <div>
                 <p className="text-lg font-extrabold bg-gradient-to-r from-[#6957DF] to-[#9F7AEA] bg-clip-text text-transparent">
-                  TravelX
+                  Riya Tours & Travels
                 </p>
                 <p className="text-[10px] uppercase tracking-widest text-gray-400">
                   Explore the World

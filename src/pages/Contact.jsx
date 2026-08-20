@@ -20,7 +20,7 @@ const contactDetails = [
   {
     icon: Mail,
     label: "Email",
-    value: "info@travelx.com",
+    value: "info@Riya Tours & Travels.com",
   },
   {
     icon: MapPin,

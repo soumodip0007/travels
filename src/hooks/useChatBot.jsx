@@ -8,7 +8,7 @@
 //     {
 //       id: 1,
 //       sender: "bot",
-//       text: "👋 Hello! Welcome to TravelX.",
+//       text: "👋 Hello! Welcome to Riya Tours & Travels.",
 //     },
 //     {
 //       id: 2,
