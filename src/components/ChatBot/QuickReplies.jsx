@@ -2,17 +2,64 @@ import { useState } from "react";
 import { Sparkles, ChevronDown } from "lucide-react";
 
 const DEFAULT_REPLIES = [
-  "International Tours",
-  "Domestic Tours",
-  "Tour Prices",
-  "Tour Itinerary",
-  "Sightseeing",
-  "Hotels",
-  "Flights",
-  "Contact Details",
+  {
+    label: "International Tours",
+    query: "show international tours",
+  },
+  {
+    label: "Domestic Tours",
+    query: "show domestic tours",
+  },
+  {
+    label: "Tour Packages",
+    query: "show tour packages",
+  },
+  {
+    label: "Tour Prices",
+    query: "show tour prices",
+  },
+  {
+    label: "Tour Itinerary",
+    query: "show tour itinerary",
+  },
+  {
+    label: "Sightseeing",
+    query: "show sightseeing",
+  },
+  {
+    label: "Hotels",
+    query: "show hotels",
+  },
+  {
+    label: "Flights",
+    query: "show flights",
+  },
+  {
+    label: "Meals",
+    query: "show meals",
+  },
+  {
+    label: "Inclusions",
+    query: "show inclusions",
+  },
+  {
+    label: "Exclusions",
+    query: "show exclusions",
+  },
+  {
+    label: "Booking",
+    query: "how can I book a tour",
+  },
+  {
+    label: "Contact Details",
+    query: "contact details",
+  },
 ];
 
-export default function QuickReplies({ replies = DEFAULT_REPLIES, onSelect }) {
+export default function QuickReplies({
+  replies = DEFAULT_REPLIES,
+  onSelect,
+}) {
   const [open, setOpen] = useState(false);
 
   if (!replies || replies.length === 0) return null;
@@ -35,6 +82,7 @@ export default function QuickReplies({ replies = DEFAULT_REPLIES, onSelect }) {
           0%, 100% {
             opacity: 0.35;
           }
+
           50% {
             opacity: 0.65;
           }
@@ -47,7 +95,9 @@ export default function QuickReplies({ replies = DEFAULT_REPLIES, onSelect }) {
         .qr-panel {
           display: grid;
           grid-template-rows: 0fr;
-          transition: grid-template-rows 0.32s cubic-bezier(0.2, 0.7, 0.3, 1);
+          transition:
+            grid-template-rows
+            0.32s cubic-bezier(0.2, 0.7, 0.3, 1);
         }
 
         .qr-panel.qr-open {
@@ -69,12 +119,17 @@ export default function QuickReplies({ replies = DEFAULT_REPLIES, onSelect }) {
             <span
               className="absolute inset-0 rounded-full blur-[5px]"
               style={{
-                background: "linear-gradient(135deg, #A855F7, #67E8F9)",
-                animation: "qr-glow-breathe 2.6s ease-in-out infinite",
+                background:
+                  "linear-gradient(135deg, #A855F7, #67E8F9)",
+                animation:
+                  "qr-glow-breathe 2.6s ease-in-out infinite",
               }}
             />
 
-            <Sparkles size={15} className="relative z-10 text-[#7C3AED]" />
+            <Sparkles
+              size={15}
+              className="relative z-10 text-[#7C3AED]"
+            />
           </span>
 
           <span className="text-sm font-semibold text-slate-800">
@@ -86,7 +141,9 @@ export default function QuickReplies({ replies = DEFAULT_REPLIES, onSelect }) {
           size={18}
           className="text-slate-400 transition-transform duration-300"
           style={{
-            transform: open ? "rotate(180deg)" : "rotate(0deg)",
+            transform: open
+              ? "rotate(180deg)"
+              : "rotate(0deg)",
           }}
         />
       </button>
@@ -96,11 +153,13 @@ export default function QuickReplies({ replies = DEFAULT_REPLIES, onSelect }) {
           <div className="flex flex-wrap gap-2 pt-3">
             {replies.map((reply, index) => (
               <button
-                key={reply.label}
+                key={`${reply.label}-${index}`}
                 onClick={() => onSelect(reply.query)}
                 className="qr-chip group relative overflow-hidden rounded-full border border-purple-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-transparent hover:text-white hover:shadow-[0_12px_28px_rgba(147,51,234,0.32)]"
                 style={{
-                  animationDelay: open ? `${index * 60}ms` : "0ms",
+                  animationDelay: open
+                    ? `${index * 60}ms`
+                    : "0ms",
                 }}
               >
                 <span
@@ -111,7 +170,9 @@ export default function QuickReplies({ replies = DEFAULT_REPLIES, onSelect }) {
                   }}
                 />
 
-                <span className="relative">{reply.label}</span>
+                <span className="relative">
+                  {reply.label}
+                </span>
               </button>
             ))}
           </div>

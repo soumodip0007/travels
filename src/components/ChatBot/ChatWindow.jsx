@@ -19,13 +19,7 @@ const AFFIRMATIONS = [
   "yep",
 ];
 
-const NEGATIONS = [
-  "no",
-  "nope",
-  "nah",
-  "not now",
-  "no thanks",
-];
+const NEGATIONS = ["no", "nope", "nah", "not now", "no thanks"];
 
 export default function ChatWindow() {
   const bottomRef = useRef(null);
@@ -39,8 +33,7 @@ export default function ChatWindow() {
     {
       id: 2,
       sender: "bot",
-      text:
-        "I'm your AI Travel Assistant. Ask me about tour packages, pricing, itineraries, sightseeing, hotels, flights, bookings and more.",
+      text: "I'm your AI Travel Assistant. Ask me about tour packages, pricing, itineraries, sightseeing, hotels, flights, bookings and more.",
     },
   ]);
 
@@ -72,9 +65,7 @@ export default function ChatWindow() {
     const normalized = normalizeText(text);
 
     return AFFIRMATIONS.some(
-      (word) =>
-        normalized === word ||
-        normalized.startsWith(`${word} `),
+      (word) => normalized === word || normalized.startsWith(`${word} `),
     );
   };
 
@@ -85,9 +76,7 @@ export default function ChatWindow() {
     const normalized = normalizeText(text);
 
     return NEGATIONS.some(
-      (word) =>
-        normalized === word ||
-        normalized.startsWith(`${word} `),
+      (word) => normalized === word || normalized.startsWith(`${word} `),
     );
   };
 
@@ -119,10 +108,7 @@ export default function ChatWindow() {
   const getDuration = (packageData) => {
     const packageOption = getPackageOption(packageData);
 
-    return (
-      packageOption?.duration ||
-      "Duration not available"
-    );
+    return packageOption?.duration || "Duration not available";
   };
 
   /*
@@ -153,23 +139,16 @@ export default function ChatWindow() {
       let score = 0;
 
       item.keywords.forEach((keyword) => {
-        const normalizedKeyword =
-          normalizeText(keyword);
+        const normalizedKeyword = normalizeText(keyword);
 
         if (!normalizedKeyword) {
           return;
         }
 
-        if (
-          normalizedText === normalizedKeyword
-        ) {
-          score +=
-            normalizedKeyword.split(" ").length * 5;
-        } else if (
-          normalizedText.includes(normalizedKeyword)
-        ) {
-          score +=
-            normalizedKeyword.split(" ").length;
+        if (normalizedText === normalizedKeyword) {
+          score += normalizedKeyword.split(" ").length * 5;
+        } else if (normalizedText.includes(normalizedKeyword)) {
+          score += normalizedKeyword.split(" ").length;
         }
       });
 
@@ -188,8 +167,7 @@ export default function ChatWindow() {
    * -----------------------------------------
    */
   const findPackage = (text) => {
-    const normalizedText =
-      normalizeText(text);
+    const normalizedText = normalizeText(text);
 
     let bestMatch = null;
     let bestScore = 0;
@@ -200,24 +178,18 @@ export default function ChatWindow() {
       /*
        * Package title
        */
-      const title =
-        normalizeText(packageData.title);
+      const title = normalizeText(packageData.title);
 
-      if (
-        normalizedText.includes(title)
-      ) {
+      if (normalizedText.includes(title)) {
         score += 20;
       }
 
       /*
        * Slug
        */
-      const slug =
-        normalizeText(packageData.slug);
+      const slug = normalizeText(packageData.slug);
 
-      if (
-        normalizedText.includes(slug)
-      ) {
+      if (normalizedText.includes(slug)) {
         score += 20;
       }
 
@@ -225,18 +197,12 @@ export default function ChatWindow() {
        * Location
        */
       if (packageData.location) {
-        const locations =
-          packageData.location
-            .split("•")
-            .map((item) =>
-              normalizeText(item),
-            );
+        const locations = packageData.location
+          .split("•")
+          .map((item) => normalizeText(item));
 
         locations.forEach((location) => {
-          if (
-            location &&
-            normalizedText.includes(location)
-          ) {
+          if (location && normalizedText.includes(location)) {
             score += 5;
           }
         });
@@ -245,17 +211,10 @@ export default function ChatWindow() {
       /*
        * Individual words from title
        */
-      const titleWords =
-        title
-          .split(" ")
-          .filter(
-            (word) => word.length > 2,
-          );
+      const titleWords = title.split(" ").filter((word) => word.length > 2);
 
       titleWords.forEach((word) => {
-        if (
-          normalizedText.includes(word)
-        ) {
+        if (normalizedText.includes(word)) {
           score += 1;
         }
       });
@@ -282,8 +241,7 @@ export default function ChatWindow() {
    * -----------------------------------------
    */
   const isPackageRequest = (text) => {
-    const normalizedText =
-      normalizeText(text);
+    const normalizedText = normalizeText(text);
 
     const keywords = [
       "show packages",
@@ -298,9 +256,7 @@ export default function ChatWindow() {
       "tour list",
     ];
 
-    return keywords.some((keyword) =>
-      normalizedText.includes(keyword),
-    );
+    return keywords.some((keyword) => normalizedText.includes(keyword));
   };
 
   /*
@@ -309,8 +265,7 @@ export default function ChatWindow() {
    * -----------------------------------------
    */
   const isDomesticRequest = (text) => {
-    const normalizedText =
-      normalizeText(text);
+    const normalizedText = normalizeText(text);
 
     const keywords = [
       "domestic",
@@ -322,9 +277,7 @@ export default function ChatWindow() {
       "india tours",
     ];
 
-    return keywords.some((keyword) =>
-      normalizedText.includes(keyword),
-    );
+    return keywords.some((keyword) => normalizedText.includes(keyword));
   };
 
   /*
@@ -333,8 +286,7 @@ export default function ChatWindow() {
    * -----------------------------------------
    */
   const isInternationalRequest = (text) => {
-    const normalizedText =
-      normalizeText(text);
+    const normalizedText = normalizeText(text);
 
     const keywords = [
       "international",
@@ -348,9 +300,7 @@ export default function ChatWindow() {
       "international holidays",
     ];
 
-    return keywords.some((keyword) =>
-      normalizedText.includes(keyword),
-    );
+    return keywords.some((keyword) => normalizedText.includes(keyword));
   };
 
   /*
@@ -358,13 +308,8 @@ export default function ChatWindow() {
    * Get category packages
    * -----------------------------------------
    */
-  const getCategoryPackages = (
-    category,
-  ) => {
-    return packages.filter(
-      (packageData) =>
-        packageData.category === category,
-    );
+  const getCategoryPackages = (category) => {
+    return packages.filter((packageData) => packageData.category === category);
   };
 
   /*
@@ -372,17 +317,12 @@ export default function ChatWindow() {
    * Show category packages
    * -----------------------------------------
    */
-  const getCategoryResponse = (
-    category,
-  ) => {
-    const categoryPackages =
-      getCategoryPackages(category);
+  const getCategoryResponse = (category) => {
+    const categoryPackages = getCategoryPackages(category);
 
     if (!categoryPackages.length) {
       return `Currently, no ${
-        category === "domestic"
-          ? "domestic"
-          : "international"
+        category === "domestic" ? "domestic" : "international"
       } tour packages are available.`;
     }
 
@@ -391,17 +331,12 @@ export default function ChatWindow() {
         ? "Domestic Tour Packages"
         : "International Tour Packages";
 
-    const packageList =
-      categoryPackages
-        .map(
-          (packageData, index) =>
-            `${index + 1}. ${
-              packageData.title
-            }\n   ${getDuration(
-              packageData,
-            )}`,
-        )
-        .join("\n\n");
+    const packageList = categoryPackages
+      .map(
+        (packageData, index) =>
+          `${index + 1}. ${packageData.title}\n   ${getDuration(packageData)}`,
+      )
+      .join("\n\n");
 
     return `${heading}
 
@@ -430,20 +365,14 @@ For example:
    * Package overview
    * -----------------------------------------
    */
-  const getOverviewResponse = (
-    packageData,
-  ) => {
+  const getOverviewResponse = (packageData) => {
     return `${packageData.title}
 
 ${packageData.overview}
 
-Duration: ${getDuration(
-      packageData,
-    )}
+Duration: ${getDuration(packageData)}
 
-Rating: ${
-      packageData.rating || "Not available"
-    }
+Rating: ${packageData.rating || "Not available"}
 
 Destinations:
 ${packageData.location}
@@ -467,18 +396,12 @@ What would you like to know?
    * Price
    * -----------------------------------------
    */
-  const getPriceResponse = (
-    packageData,
-  ) => {
+  const getPriceResponse = (packageData) => {
     return `${packageData.title}
 
-Price: ${getPrice(
-      packageData,
-    )}
+Price: ${getPrice(packageData)}
 
-Duration: ${getDuration(
-      packageData,
-    )}
+Duration: ${getDuration(packageData)}
 
 The package price is based on the available package option.
 
@@ -490,14 +413,10 @@ Please contact Riya Tours & Travels to confirm the latest availability and final
    * Duration
    * -----------------------------------------
    */
-  const getDurationResponse = (
-    packageData,
-  ) => {
+  const getDurationResponse = (packageData) => {
     return `${packageData.title}
 
-Duration: ${getDuration(
-      packageData,
-    )}
+Duration: ${getDuration(packageData)}
 
 Destinations:
 ${packageData.location}`;
@@ -508,27 +427,21 @@ ${packageData.location}`;
    * Itinerary
    * -----------------------------------------
    */
-  const getItineraryResponse = (
-    packageData,
-  ) => {
-    const packageOption =
-      getPackageOption(packageData);
+  const getItineraryResponse = (packageData) => {
+    const packageOption = getPackageOption(packageData);
 
-    if (
-      !packageOption?.itinerary?.length
-    ) {
+    if (!packageOption?.itinerary?.length) {
       return "The itinerary for this package is not available.";
     }
 
-    const itinerary =
-      packageOption.itinerary
-        .map(
-          (day) =>
-            `Day ${day.day}: ${day.title}
+    const itinerary = packageOption.itinerary
+      .map(
+        (day) =>
+          `Day ${day.day}: ${day.title}
 
 ${day.description}`,
-        )
-        .join("\n\n");
+      )
+      .join("\n\n");
 
     return `${packageData.title}
 
@@ -544,36 +457,26 @@ ${itinerary}`;
    * Sightseeing
    * -----------------------------------------
    */
-  const getSightseeingResponse = (
-    packageData,
-  ) => {
-    const packageOption =
-      getPackageOption(packageData);
+  const getSightseeingResponse = (packageData) => {
+    const packageOption = getPackageOption(packageData);
 
-    if (
-      !packageOption?.itinerary?.length
-    ) {
+    if (!packageOption?.itinerary?.length) {
       return "Sightseeing details are not available.";
     }
 
-    const sightseeing =
-      packageOption.itinerary
-        .filter(
-          (day) =>
-            day.title
-              ?.toLowerCase()
-              .includes("sightseeing") ||
-            day.description
-              ?.toLowerCase()
-              .includes("visit"),
-        )
-        .map(
-          (day) =>
-            `Day ${day.day}: ${day.title}
+    const sightseeing = packageOption.itinerary
+      .filter(
+        (day) =>
+          day.title?.toLowerCase().includes("sightseeing") ||
+          day.description?.toLowerCase().includes("visit"),
+      )
+      .map(
+        (day) =>
+          `Day ${day.day}: ${day.title}
 
 ${day.description}`,
-        )
-        .join("\n\n");
+      )
+      .join("\n\n");
 
     if (!sightseeing) {
       return `This tour covers:
@@ -595,9 +498,7 @@ ${sightseeing}`;
    * Included
    * -----------------------------------------
    */
-  const getIncludedResponse = (
-    packageData,
-  ) => {
+  const getIncludedResponse = (packageData) => {
     if (!packageData.included?.length) {
       return "Inclusion details are not available.";
     }
@@ -606,11 +507,7 @@ ${sightseeing}`;
 
 Included in this package:
 
-${packageData.included
-      .map(
-        (item) => `• ${item}`,
-      )
-      .join("\n")}`;
+${packageData.included.map((item) => `• ${item}`).join("\n")}`;
   };
 
   /*
@@ -618,9 +515,7 @@ ${packageData.included
    * Excluded
    * -----------------------------------------
    */
-  const getExcludedResponse = (
-    packageData,
-  ) => {
+  const getExcludedResponse = (packageData) => {
     if (!packageData.excluded?.length) {
       return "Exclusion details are not available.";
     }
@@ -629,11 +524,7 @@ ${packageData.included
 
 Not included in this package:
 
-${packageData.excluded
-      .map(
-        (item) => `• ${item}`,
-      )
-      .join("\n")}`;
+${packageData.excluded.map((item) => `• ${item}`).join("\n")}`;
   };
 
   /*
@@ -641,18 +532,10 @@ ${packageData.excluded
    * Hotels
    * -----------------------------------------
    */
-  const getHotelResponse = (
-    packageData,
-  ) => {
-    const accommodation =
-      packageData.included?.find(
-        (item) =>
-          item
-            .toLowerCase()
-            .includes(
-              "accommodation",
-            ),
-      );
+  const getHotelResponse = (packageData) => {
+    const accommodation = packageData.included?.find((item) =>
+      item.toLowerCase().includes("accommodation"),
+    );
 
     if (accommodation) {
       return `${packageData.title}
@@ -677,18 +560,10 @@ Please contact Riya Tours & Travels for hotel details.`;
    * Flights
    * -----------------------------------------
    */
-  const getFlightResponse = (
-    packageData,
-  ) => {
-    const flightExcluded =
-      packageData.excluded?.some(
-        (item) =>
-          item
-            .toLowerCase()
-            .includes(
-              "flight",
-            ),
-      );
+  const getFlightResponse = (packageData) => {
+    const flightExcluded = packageData.excluded?.some((item) =>
+      item.toLowerCase().includes("flight"),
+    );
 
     if (flightExcluded) {
       return `${packageData.title}
@@ -710,24 +585,18 @@ Please contact Riya Tours & Travels for confirmation.`;
    * Meals
    * -----------------------------------------
    */
-  const getMealResponse = (
-    packageData,
-  ) => {
-    const meals =
-      packageData.included?.filter(
-        (item) => {
-          const value =
-            item.toLowerCase();
+  const getMealResponse = (packageData) => {
+    const meals = packageData.included?.filter((item) => {
+      const value = item.toLowerCase();
 
-          return (
-            value.includes("meal") ||
-            value.includes("breakfast") ||
-            value.includes("lunch") ||
-            value.includes("dinner") ||
-            value.includes("tea")
-          );
-        },
+      return (
+        value.includes("meal") ||
+        value.includes("breakfast") ||
+        value.includes("lunch") ||
+        value.includes("dinner") ||
+        value.includes("tea")
       );
+    });
 
     if (!meals?.length) {
       return `Meal details for ${packageData.title} are not available.`;
@@ -737,11 +606,7 @@ Please contact Riya Tours & Travels for confirmation.`;
 
 Meals included:
 
-${meals
-      .map(
-        (item) => `• ${item}`,
-      )
-      .join("\n")}`;
+${meals.map((item) => `• ${item}`).join("\n")}`;
   };
 
   /*
@@ -749,12 +614,8 @@ ${meals
    * Facilities
    * -----------------------------------------
    */
-  const getFacilitiesResponse = (
-    packageData,
-  ) => {
-    if (
-      !packageData.facilities?.length
-    ) {
+  const getFacilitiesResponse = (packageData) => {
+    if (!packageData.facilities?.length) {
       return `Facility details for ${packageData.title} are not available.`;
     }
 
@@ -762,12 +623,7 @@ ${meals
 
 Facilities:
 
-${packageData.facilities
-      .map(
-        (facility) =>
-          `• ${facility.label}`,
-      )
-      .join("\n")}`;
+${packageData.facilities.map((facility) => `• ${facility.label}`).join("\n")}`;
   };
 
   /*
@@ -775,9 +631,7 @@ ${packageData.facilities
    * Booking
    * -----------------------------------------
    */
-  const getBookingResponse = (
-    packageData,
-  ) => {
+  const getBookingResponse = (packageData) => {
     return `${packageData.title}
 
 To book this tour, please contact Riya Tours & Travels.
@@ -827,13 +681,8 @@ You can contact us for:
    * Visa
    * -----------------------------------------
    */
-  const getVisaResponse = (
-    packageData,
-  ) => {
-    if (
-      packageData.category ===
-      "domestic"
-    ) {
+  const getVisaResponse = (packageData) => {
+    if (packageData.category === "domestic") {
       return `${packageData.title}
 
 This is a domestic tour within India.
@@ -853,9 +702,7 @@ Please contact Riya Tours & Travels for visa assistance and current requirements
    * Departure dates
    * -----------------------------------------
    */
-  const getDepartureResponse = (
-    packageData,
-  ) => {
+  const getDepartureResponse = (packageData) => {
     return `${packageData.title}
 
 Specific departure dates are not currently available in the package information.
@@ -873,84 +720,53 @@ Please contact Riya Tours & Travels to confirm:
    * Intent response
    * -----------------------------------------
    */
-  const getIntentResponse = (
-    packageData,
-    intent,
-  ) => {
+  const getIntentResponse = (packageData, intent) => {
     switch (intent) {
       case "price":
-        return getPriceResponse(
-          packageData,
-        );
+        return getPriceResponse(packageData);
 
       case "itinerary":
-        return getItineraryResponse(
-          packageData,
-        );
+        return getItineraryResponse(packageData);
 
       case "sightseeing":
-        return getSightseeingResponse(
-          packageData,
-        );
+        return getSightseeingResponse(packageData);
 
       case "included":
-        return getIncludedResponse(
-          packageData,
-        );
+        return getIncludedResponse(packageData);
 
       case "excluded":
-        return getExcludedResponse(
-          packageData,
-        );
+        return getExcludedResponse(packageData);
 
       case "hotels":
-        return getHotelResponse(
-          packageData,
-        );
+        return getHotelResponse(packageData);
 
       case "flights":
-        return getFlightResponse(
-          packageData,
-        );
+        return getFlightResponse(packageData);
 
       case "duration":
-        return getDurationResponse(
-          packageData,
-        );
+        return getDurationResponse(packageData);
 
       case "booking":
-        return getBookingResponse(
-          packageData,
-        );
+        return getBookingResponse(packageData);
 
       case "visa":
-        return getVisaResponse(
-          packageData,
-        );
+        return getVisaResponse(packageData);
 
       case "meals":
-        return getMealResponse(
-          packageData,
-        );
+        return getMealResponse(packageData);
 
       case "departureDates":
-        return getDepartureResponse(
-          packageData,
-        );
+        return getDepartureResponse(packageData);
 
       case "facilities":
-        return getFacilitiesResponse(
-          packageData,
-        );
+        return getFacilitiesResponse(packageData);
 
       case "contact":
         return getContactResponse();
 
       case "overview":
       default:
-        return getOverviewResponse(
-          packageData,
-        );
+        return getOverviewResponse(packageData);
     }
   };
 
@@ -960,8 +776,7 @@ Please contact Riya Tours & Travels to confirm:
    * -----------------------------------------
    */
   const getBotReply = (message) => {
-    const text =
-      normalizeText(message);
+    const text = normalizeText(message);
 
     /*
      * -------------------------------------
@@ -970,9 +785,7 @@ Please contact Riya Tours & Travels to confirm:
      */
     const greeting = findIntent(text);
 
-    if (
-      greeting?.id === 1
-    ) {
+    if (greeting?.id === 1) {
       return greeting.answer;
     }
 
@@ -981,9 +794,7 @@ Please contact Riya Tours & Travels to confirm:
      * Thank you
      * -------------------------------------
      */
-    if (
-      greeting?.id === 20
-    ) {
+    if (greeting?.id === 20) {
       return greeting.answer;
     }
 
@@ -992,9 +803,7 @@ Please contact Riya Tours & Travels to confirm:
      * Goodbye
      * -------------------------------------
      */
-    if (
-      greeting?.id === 21
-    ) {
+    if (greeting?.id === 21) {
       return greeting.answer;
     }
 
@@ -1003,13 +812,8 @@ Please contact Riya Tours & Travels to confirm:
      * YES
      * -------------------------------------
      */
-    if (
-      isAffirmation(text) &&
-      selectedPackage
-    ) {
-      return getOverviewResponse(
-        selectedPackage,
-      );
+    if (isAffirmation(text) && selectedPackage) {
+      return getOverviewResponse(selectedPackage);
     }
 
     /*
@@ -1041,9 +845,7 @@ Please choose what you would like to explore:
      * SHOW ALL PACKAGES
      * -------------------------------------
      */
-    if (
-      isPackageRequest(text)
-    ) {
+    if (isPackageRequest(text)) {
       setSelectedPackage(null);
 
       return getAllPackagesResponse();
@@ -1054,14 +856,10 @@ Please choose what you would like to explore:
      * DOMESTIC
      * -------------------------------------
      */
-    if (
-      isDomesticRequest(text)
-    ) {
+    if (isDomesticRequest(text)) {
       setSelectedPackage(null);
 
-      return getCategoryResponse(
-        "domestic",
-      );
+      return getCategoryResponse("domestic");
     }
 
     /*
@@ -1069,14 +867,10 @@ Please choose what you would like to explore:
      * INTERNATIONAL
      * -------------------------------------
      */
-    if (
-      isInternationalRequest(text)
-    ) {
+    if (isInternationalRequest(text)) {
       setSelectedPackage(null);
 
-      return getCategoryResponse(
-        "international",
-      );
+      return getCategoryResponse("international");
     }
 
     /*
@@ -1084,16 +878,14 @@ Please choose what you would like to explore:
      * Find package
      * -------------------------------------
      */
-    const matchedPackage =
-      findPackage(text);
+    const matchedPackage = findPackage(text);
 
     /*
      * -------------------------------------
      * Find intent
      * -------------------------------------
      */
-    const matchedIntent =
-      findIntent(text);
+    const matchedIntent = findIntent(text);
 
     /*
      * -------------------------------------
@@ -1101,30 +893,21 @@ Please choose what you would like to explore:
      * -------------------------------------
      */
     if (matchedPackage) {
-      setSelectedPackage(
-        matchedPackage,
-      );
+      setSelectedPackage(matchedPackage);
 
       /*
        * If user directly asks
        * package + price
        */
-      if (
-        matchedIntent?.intent
-      ) {
-        return getIntentResponse(
-          matchedPackage,
-          matchedIntent.intent,
-        );
+      if (matchedIntent?.intent) {
+        return getIntentResponse(matchedPackage, matchedIntent.intent);
       }
 
       /*
        * Otherwise show package
        * overview only
        */
-      return getOverviewResponse(
-        matchedPackage,
-      );
+      return getOverviewResponse(matchedPackage);
     }
 
     /*
@@ -1132,11 +915,7 @@ Please choose what you would like to explore:
      * Intent without package
      * -------------------------------------
      */
-    if (
-      matchedIntent?.type ===
-        "intent" &&
-      !selectedPackage
-    ) {
+    if (matchedIntent?.type === "intent" && !selectedPackage) {
       return `Please select a tour package first.
 
 Once you select a package, I can provide:
@@ -1161,15 +940,8 @@ You can start by saying "show packages".`;
      * Intent with selected package
      * -------------------------------------
      */
-    if (
-      matchedIntent?.type ===
-        "intent" &&
-      selectedPackage
-    ) {
-      return getIntentResponse(
-        selectedPackage,
-        matchedIntent.intent,
-      );
+    if (matchedIntent?.type === "intent" && selectedPackage) {
+      return getIntentResponse(selectedPackage, matchedIntent.intent);
     }
 
     /*
@@ -1177,10 +949,7 @@ You can start by saying "show packages".`;
      * Contact without package
      * -------------------------------------
      */
-    if (
-      matchedIntent?.type ===
-      "contact"
-    ) {
+    if (matchedIntent?.type === "contact") {
       return getContactResponse();
     }
 
@@ -1211,10 +980,7 @@ Please try one of these:
    * -----------------------------------------
    */
   const handleSend = (text) => {
-    if (
-      !text.trim() ||
-      typing
-    ) {
+    if (!text.trim() || typing) {
       return;
     }
 
@@ -1224,16 +990,12 @@ Please try one of these:
       text,
     };
 
-    setMessages((prev) => [
-      ...prev,
-      userMessage,
-    ]);
+    setMessages((prev) => [...prev, userMessage]);
 
     setTyping(true);
 
     setTimeout(() => {
-      const reply =
-        getBotReply(text);
+      const reply = getBotReply(text);
 
       const botMessage = {
         id: Date.now() + 1,
@@ -1243,10 +1005,7 @@ Please try one of these:
 
       setTyping(false);
 
-      setMessages((prev) => [
-        ...prev,
-        botMessage,
-      ]);
+      setMessages((prev) => [...prev, botMessage]);
     }, 700);
   };
 
@@ -1327,25 +1086,21 @@ Please try one of these:
         style={{
           background:
             "linear-gradient(120deg, #6957DF 0%, #7C3AED 35%, #A855F7 65%, #7C3AED 100%)",
-          backgroundSize:
-            "220% 220%",
-          animation:
-            "cw-header-shift 7s ease-in-out infinite",
+          backgroundSize: "220% 220%",
+          animation: "cw-header-shift 7s ease-in-out infinite",
         }}
       >
         <div
           className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-white/10 blur-md"
           style={{
-            animation:
-              "cw-orb-float 6s ease-in-out infinite",
+            animation: "cw-orb-float 6s ease-in-out infinite",
           }}
         />
 
         <div
           className="absolute -left-6 bottom-0 h-20 w-20 rounded-full bg-[#22D3EE]/20 blur-xl"
           style={{
-            animation:
-              "cw-orb-float-2 8s ease-in-out infinite",
+            animation: "cw-orb-float-2 8s ease-in-out infinite",
           }}
         />
 
@@ -1353,8 +1108,7 @@ Please try one of these:
           viewBox="0 0 400 100"
           className="pointer-events-none absolute inset-x-0 top-2 h-full w-[112%] opacity-25"
           style={{
-            animation:
-              "cw-drift 9s ease-in-out infinite alternate",
+            animation: "cw-drift 9s ease-in-out infinite alternate",
           }}
         >
           <path
@@ -1393,15 +1147,11 @@ Please try one of these:
         style={{
           background:
             "linear-gradient(180deg, #FBFAFF 0%, #F5F2FF 100%), radial-gradient(circle, rgba(124,58,237,0.10) 1px, transparent 1px)",
-          backgroundSize:
-            "auto, 22px 22px",
+          backgroundSize: "auto, 22px 22px",
         }}
       >
         {messages.map((msg) => (
-          <ChatMessage
-            key={msg.id}
-            message={msg}
-          />
+          <ChatMessage key={msg.id} message={msg} />
         ))}
 
         {typing && <Typing />}
@@ -1412,29 +1162,21 @@ Please try one of these:
       <div
         className="relative z-10"
         style={{
-          background:
-            "rgba(255,255,255,0.92)",
-          borderTop:
-            "1px solid #EDE9FE",
+          background: "rgba(255,255,255,0.92)",
+          borderTop: "1px solid #EDE9FE",
         }}
       >
-        <QuickReplies
-          onSelect={handleSend}
-        />
+        <QuickReplies onSelect={handleSend} />
       </div>
 
       <div
         className="relative z-10 p-4 backdrop-blur-md"
         style={{
-          background:
-            "rgba(255,255,255,0.97)",
-          borderTop:
-            "1px solid #EDE9FE",
+          background: "rgba(255,255,255,0.97)",
+          borderTop: "1px solid #EDE9FE",
         }}
       >
-        <ChatInput
-          onSend={handleSend}
-        />
+        <ChatInput onSend={handleSend} />
       </div>
     </div>
   );
