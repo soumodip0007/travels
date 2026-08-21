@@ -5,35 +5,39 @@ import {
 
 export default function IncludedExcluded({ tour }) {
   return (
-    <section className="rounded-[36px]
+    <section className="overflow-hidden rounded-[36px]
               border
-              border-white/70
-              bg-white/80
-              backdrop-blur-1xl
-              shadow-[0_25px_60px_rgba(105,87,223,0.12)]
+              border-purple-100
+              bg-gradient-to-br from-[#6957DF]/15 via-[#9F7AEA]/10 to-purple-100
+              shadow-lg
+              transition-all
+              duration-300
+              hover:shadow-2xl
               mt-12
-              p-8
-              md:p-10
               ">
-      <div className="mx-auto w-[92%] max-w-7xl">
 
-        {/* Heading */}
+      {/* Heading — gradient band, matches TourDayCard's header */}
 
-        <div className="mb-12 text-center">
+      <div className="border-b border-purple-50 bg-gradient-to-br from-[#7C3AED] via-purple-300 to-purple-400 p-8 text-center md:p-10">
 
-          <span className="rounded-full bg-purple-100 px-4 py-2 text-sm font-semibold text-[#6957DF]">
-            Package Details
-          </span>
+        <span className="rounded-full bg-purple-100 px-4 py-2 text-sm font-semibold text-[#6957DF]">
+          Package Details
+        </span>
 
-          <h2 className="mt-4 text-4xl font-bold text-slate-900">
-            Included & Excluded
-          </h2>
+        <h2 className="mt-4 text-4xl font-bold text-slate-900">
+          Included & Excluded
+        </h2>
 
-          <p className="mt-3 text-lg text-gray-600">
-            Please review what is included in your package and what is not.
-          </p>
+        <p className="mt-3 text-lg text-slate-700">
+          Please review what is included in your package and what is not.
+        </p>
 
-        </div>
+      </div>
+
+      {/* Body */}
+
+      <div className="p-8 md:p-10">
+        <div className="mx-auto w-[92%] max-w-7xl">
 
         <div className="grid gap-8 lg:grid-cols-2">
 
@@ -173,6 +177,7 @@ export default function IncludedExcluded({ tour }) {
 
         </div>
 
+        </div>
       </div>
     </section>
   );

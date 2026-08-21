@@ -14,7 +14,7 @@ export default function TourDayCard({ day, circleRef }) {
 
       <div
         ref={circleRef}
-        className="absolute left-0 top-2 hidden h-16 w-16 items-center justify-center rounded-full bg-gradient-to-r from-[#6957DF] to-[#9F7AEA] text-xl font-bold text-white shadow-[0_0_30px_rgba(107,90,225,0.8)] md:flex"
+        className="absolute left-0 top-2 hidden h-16 w-16 items-center justify-center rounded-full bg-gradient-to-r from-[#462edf] to-[#7941eb] text-xl font-bold text-white shadow-[0_0_30px_rgba(107,90,225,0.8)] md:flex"
       >
         {day.day}
       </div>

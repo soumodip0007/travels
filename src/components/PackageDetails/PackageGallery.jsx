@@ -35,37 +35,44 @@ export default function PackageGallery({ tour }) {
               overflow-hidden
               rounded-[36px]
               border
-              border-white/70
-              bg-white/80
-              backdrop-blur-1xl
-              shadow-[0_25px_60px_rgba(105,87,223,0.12)]
-              px-8
-              py-4
-              md:p-10
+              border-purple-100
+              bg-gradient-to-br from-[#6957DF]/15 via-[#9F7AEA]/10 to-purple-100
+              shadow-lg
+              transition-all
+              duration-300
+              hover:shadow-2xl
             "
         >
 
-          {/* Heading */}
+          {/* Heading — gradient band, matches TourDayCard's header */}
 
-          <div className="mb-6 flex items-end justify-between">
+          <div className="border-b border-purple-50 bg-gradient-to-br from-[#7C3AED] via-purple-300 to-purple-400 px-8 py-6 md:p-10">
 
-            <div>
+            <div className="flex items-end justify-between">
 
-              <h2 className="text-4xl font-black text-[#6957DF]">
-                Package Gallery
-              </h2>
+              <div>
 
-              {/* <p className="mt-2 text-slate-500">
-                Beautiful memories captured during this journey.
-              </p> */}
+                <h2 className="text-4xl font-black text-slate-900">
+                  Package Gallery
+                </h2>
 
-            </div>
+                {/* <p className="mt-2 text-slate-700">
+                  Beautiful memories captured during this journey.
+                </p> */}
 
-            <div className="hidden rounded-full bg-purple-100 px-5 py-2 text-sm font-semibold text-[#6957DF] md:block">
-              {images.length} Photos
+              </div>
+
+              <div className="hidden rounded-full bg-purple-100 px-5 py-2 text-sm font-semibold text-[#6957DF] md:block">
+                {images.length} Photos
+              </div>
+
             </div>
 
           </div>
+
+          {/* Body */}
+
+          <div className="px-8 py-4 md:p-10">
 
           {/* Images */}
 
@@ -179,6 +186,8 @@ export default function PackageGallery({ tour }) {
             </div>
 
           )}
+
+          </div>
 
         </div>
       </div>

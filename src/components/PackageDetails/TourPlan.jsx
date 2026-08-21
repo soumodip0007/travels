@@ -82,17 +82,17 @@ export default function TourPlan({
 
   return (
     <section
-      className="rounded-[36px]
-      border border-white/70
-      bg-white/80
-      backdrop-blur-1xl
-      shadow-[0_25px_60px_rgba(105,87,223,0.12)]
+      className="overflow-hidden rounded-[36px]
+      border border-purple-100
+      bg-gradient-to-br from-[#6957DF]/15 via-[#9F7AEA]/10 to-purple-100
+      shadow-lg
+      transition-all duration-300
+      hover:shadow-2xl
       mt-12"
     >
-      <div className="mx-auto w-[92%] max-w-7xl">
-
-        {/* Heading */}
-        <div className="mt-8 text-center">
+      {/* Top — Heading band, matches TourDayCard's header */}
+      <div className="border-b border-purple-50 bg-gradient-to-br from-[#7C3AED] via-purple-300 to-purple-400 p-8 md:p-10">
+        <div className="mx-auto w-[92%] max-w-7xl text-center">
           <span className="rounded-full bg-purple-100 px-4 py-2 text-sm font-semibold text-[#6957DF]">
             Tour Itinerary
           </span>
@@ -101,144 +101,151 @@ export default function TourPlan({
             Day Wise Tour Plan
           </h2>
         </div>
+      </div>
 
-        {/* Current Package Details */}
-        {currentPackage && (
-          <div className="mb-8 mt-6 flex flex-wrap justify-center gap-6">
+      {/* Bottom — Content */}
+      <div className="p-8 md:p-10">
+        <div className="mx-auto w-[92%] max-w-7xl">
 
-            <div className="rounded-2xl bg-purple-50 px-8 py-5 shadow">
-              <p className="text-sm text-gray-500">Duration</p>
-              <h3 className="text-xl font-bold text-[#6957DF]">
-                {currentDuration}
-              </h3>
+          {/* Current Package Details */}
+          {currentPackage && (
+            <div className="mb-8 flex flex-wrap justify-center gap-6">
+
+              <div className="rounded-2xl bg-white px-8 py-5 shadow-sm border border-purple-100">
+                <p className="text-sm text-gray-500">Duration</p>
+                <h3 className="text-xl font-bold text-[#6957DF]">
+                  {currentDuration}
+                </h3>
+              </div>
+
+              <div className="rounded-2xl bg-white px-8 py-5 shadow-sm border border-purple-100">
+                <p className="text-sm text-gray-500">Starting From</p>
+                <h3 className="text-xl font-bold text-[#6957DF] tabular-nums">
+                  ₹{animatedPrice.toLocaleString()}
+                </h3>
+              </div>
+
             </div>
+          )}
 
-            <div className="rounded-2xl bg-purple-50 px-8 py-5 shadow">
-              <p className="text-sm text-gray-500">Starting From</p>
-              <h3 className="text-xl font-bold text-[#6957DF] tabular-nums">
-                ₹{animatedPrice.toLocaleString()}
-              </h3>
-            </div>
+          {/* Package Buttons */}
+          <div className="mb-8 flex flex-wrap justify-center gap-4">
+            {packageOptions.map((pkg) => {
 
+              const isAvailable =
+                tour?.packages?.[pkg.key]?.itinerary?.length > 0;
+
+              const isSelected = selectedPackage === pkg.key;
+
+              return (
+                <motion.button
+                  key={pkg.key}
+                  disabled={!isAvailable}
+                  onClick={() => setSelectedPackage(pkg.key)}
+                  whileHover={isAvailable ? { scale: 1.06, y: -2 } : {}}
+                  whileTap={isAvailable ? { scale: 0.96 } : {}}
+                  animate={
+                    isSelected
+                      ? { scale: [1, 1.08, 1] }
+                      : { scale: 1 }
+                  }
+                  transition={{ duration: 0.35, ease: "easeOut" }}
+                  className={`rounded-full px-6 py-3 text-sm font-semibold transition-colors duration-300 ${isSelected
+                    ? "bg-gradient-to-r from-[#462edf] to-[#7941eb] text-white shadow-lg"
+                    : isAvailable
+                      ? "bg-white text-[#6957DF] border border-purple-100 hover:bg-purple-50"
+                      : "cursor-not-allowed bg-gray-200 text-gray-400 opacity-60"
+                    }`}
+                >
+                  {pkg.label}
+                </motion.button>
+              );
+            })}
           </div>
-        )}
 
-        {/* Package Buttons */}
-        <div className="mb-8 flex flex-wrap justify-center gap-4">
-          {packageOptions.map((pkg) => {
-
-            const isAvailable =
-              tour?.packages?.[pkg.key]?.itinerary?.length > 0;
-
-            const isSelected = selectedPackage === pkg.key;
-
-            return (
-              <motion.button
-                key={pkg.key}
-                disabled={!isAvailable}
-                onClick={() => setSelectedPackage(pkg.key)}
-                whileHover={isAvailable ? { scale: 1.06, y: -2 } : {}}
-                whileTap={isAvailable ? { scale: 0.96 } : {}}
-                animate={
-                  isSelected
-                    ? { scale: [1, 1.08, 1] }
-                    : { scale: 1 }
-                }
-                transition={{ duration: 0.35, ease: "easeOut" }}
-                className={`rounded-full px-6 py-3 text-sm font-semibold transition-colors duration-300 ${isSelected
-                  ? "bg-gradient-to-r from-[#6957DF] to-[#9F7AEA] text-white shadow-lg"
-                  : isAvailable
-                    ? "bg-purple-100 text-[#6957DF] hover:bg-purple-200"
-                    : "cursor-not-allowed bg-gray-200 text-gray-400 opacity-60"
-                  }`}
-              >
-                {pkg.label}
-              </motion.button>
-            );
-          })}
-        </div>
-
-        {/* Departure Dates */}
-        {tour?.departureDates?.length > 0 && (
-          <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.35 }}
-            className="mb-8 flex justify-center"
-          >
-            <div
-              className="relative w-full max-w-4xl overflow-hidden rounded-[30px]
-           border border-purple-100/70
-           bg-gradient-to-br from-[#FCFAFF] via-[#F7F2FF] to-[#F3EDFF]
-           px-6 py-6 backdrop-blur-xl md:px-8 md:py-7
-           shadow-[0_12px_28px_rgba(109,40,217,0.10),0_28px_60px_rgba(109,40,217,0.16),inset_0_1px_0_rgba(255,255,255,0.75)]"
+          {/* Departure Dates */}
+          {tour?.departureDates?.length > 0 && (
+            <motion.div
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.35 }}
+              className="mb-8 flex justify-center"
             >
-              {/* soft decorative circles */}
-              <div className="absolute -top-16 -left-16 h-44 w-44 rounded-full bg-[#8B5CF6]/8 blur-2xl" />
-              <div className="absolute -bottom-20 -right-16 h-52 w-52 rounded-full bg-[#A78BFA]/10 blur-2xl" />
+              <div
+                className="relative w-full max-w-4xl overflow-hidden rounded-[30px]
+             border border-purple-100/70
+             bg-gradient-to-br from-[#FCFAFF] via-[#F7F2FF] to-[#F3EDFF]
+             px-6 py-6 backdrop-blur-xl md:px-8 md:py-7
+             shadow-[0_12px_28px_rgba(109,40,217,0.10),0_28px_60px_rgba(109,40,217,0.16),inset_0_1px_0_rgba(255,255,255,0.75)]"
+              >
+                {/* soft decorative circles */}
+                <div className="absolute -top-16 -left-16 h-44 w-44 rounded-full bg-[#8B5CF6]/8 blur-2xl" />
+                <div className="absolute -bottom-20 -right-16 h-52 w-52 rounded-full bg-[#A78BFA]/10 blur-2xl" />
 
-              <div className="relative z-10 text-center">
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#6D28D9]">
-                  Departure Dates
-                </p>
+                <div className="relative z-10 text-center">
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#6D28D9]">
+                    Departure Dates
+                  </p>
 
-                <div className="mx-auto mt-3 h-[3px] w-16 rounded-full bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA]" />
+                  <div className="mx-auto mt-3 h-[3px] w-16 rounded-full bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA]" />
 
-                <div className="mt-6 flex flex-wrap justify-center gap-3">
-                  {tour.departureDates.map((date, idx) => (
-                    <motion.span
-                      key={idx}
-                      whileHover={{ y: -2, scale: 1.03 }}
-                      whileTap={{ scale: 0.98 }}
-                      className="rounded-full border border-purple-200/70
-                         bg-white/80 px-5 py-2.5 text-sm font-semibold
-                         text-[#6D28D9] shadow-sm backdrop-blur-sm
-                         transition-all duration-300
-                         hover:border-[#8B5CF6]/60
-                         hover:bg-white
-                         hover:shadow-[0_10px_24px_rgba(109,40,217,0.14)]"
-                    >
-                      {date}
-                    </motion.span>
-                  ))}
+                  <div className="mt-6 flex flex-wrap justify-center gap-3">
+                    {tour.departureDates.map((date, idx) => (
+                      <motion.span
+                        key={idx}
+                        whileHover={{ y: -2, scale: 1.03 }}
+                        whileTap={{ scale: 0.98 }}
+                        className="rounded-full border border-purple-200/70
+                           bg-white/80 px-5 py-2.5 text-sm font-semibold
+                           text-[#6D28D9] shadow-sm backdrop-blur-sm
+                           transition-all duration-300
+                           hover:border-[#8B5CF6]/60
+                           hover:bg-white
+                           hover:shadow-[0_10px_24px_rgba(109,40,217,0.14)]"
+                      >
+                        {date}
+                      </motion.span>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          </motion.div>
-        )}
+            </motion.div>
+          )}
 
-        {/* Timeline */}
-        {currentItinerary.length > 0 && (
-          <div ref={containerRef} className="relative">
+          {/* Timeline */}
+          {currentItinerary.length > 0 && (
+            <div ref={containerRef} className="relative">
 
-            <div
-              className="absolute left-8 hidden w-1 rounded-full bg-purple-300 md:block"
-              style={{
-                top: lineStyle.top,
-                height: lineStyle.height,
-              }}
-            />
-
-            {currentItinerary.map((day, index) => (
               <div
-                key={day.day}
-                data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
-                data-aos-delay={index * 10}
-                data-aos-duration="600"
-                data-aos-offset="120"
-                data-aos-easing="ease-in-out"
-              >
-                <TourDayCard
-                  day={day}
-                  circleRef={(el) => (circleRefs.current[index] = el)}
-                />
-              </div>
-            ))}
+                className="absolute left-8 hidden w-1 rounded-full bg-purple-300 md:block"
+                style={{
+                  top: lineStyle.top,
+                  height: lineStyle.height,
+                }}
+              />
 
-          </div>
-        )}
+              {currentItinerary.map((day, index) => (
+                <div
+                  key={day.day}
+                  data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
+                  data-aos-delay={index * 10}
+                  data-aos-duration="600"
+                  data-aos-offset="120"
+                  data-aos-easing="ease-in-out"
+                >
+                  <TourDayCard
+                    day={day}
+                    circleRef={(el) => (circleRefs.current[index] = el)}
+                  />
+                </div>
+              ))}
 
+            </div>
+          )}
+
+        </div>
       </div>
+
     </section>
   );
 }
