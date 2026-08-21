@@ -2,46 +2,14 @@ import { useState } from "react";
 import { Sparkles, ChevronDown } from "lucide-react";
 
 const DEFAULT_REPLIES = [
-  {
-    label: "Show tour packages",
-    query: "packages",
-  },
-  {
-    label: "Tour prices",
-    query: "price",
-  },
-  {
-    label: "Tour itinerary",
-    query: "itinerary",
-  },
-  {
-    label: "What's included?",
-    query: "included",
-  },
-  {
-    label: "What's excluded?",
-    query: "excluded",
-  },
-  {
-    label: "Destinations covered",
-    query: "destinations",
-  },
-  {
-    label: "Hotel details",
-    query: "hotel",
-  },
-  {
-    label: "Departure dates",
-    query: "departure dates",
-  },
-  {
-    label: "How to book?",
-    query: "booking",
-  },
-  {
-    label: "Contact details",
-    query: "contact",
-  },
+  "International Tours",
+  "Domestic Tours",
+  "Tour Prices",
+  "Tour Itinerary",
+  "Sightseeing",
+  "Hotels",
+  "Flights",
+  "Contact Details",
 ];
 
 export default function QuickReplies({ replies = DEFAULT_REPLIES, onSelect }) {
