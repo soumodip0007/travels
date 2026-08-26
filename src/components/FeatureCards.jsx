@@ -42,7 +42,7 @@ function FeatureItem({ item }) {
   return (
     <a
       href="#"
-      className="group flex flex-col items-center rounded-3xl border border-purple-100 bg-white/70 p-5 backdrop-blur-sm transition-all duration-500 hover:-translate-y-4 hover:border-purple-200 hover:bg-white hover:shadow-[0_25px_60px_rgba(105,87,223,0.18)]"
+      className="group flex flex-col items-center rounded-3xl border border-purple-200 bg-white/80 p-5 shadow-[0_0_25px_8px_rgba(109,90,224,0.35)] backdrop-blur-sm transition-all duration-500 hover:-translate-y-4 hover:border-purple-300 hover:bg-white hover:shadow-[0_0_40px_12px_rgba(109,90,224,0.45)]"
     >
       {/* Icon */}
       <div
