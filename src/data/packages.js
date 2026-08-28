@@ -5,11 +5,11 @@ import {
   Car,
   Camera,
   MapPinned,
-  Train
+  Train,
+  Ship,
 } from "lucide-react";
 
 const packages = [
-
   // domestic
   {
     id: 1,
@@ -35,8 +35,7 @@ const packages = [
 
     rating: 8.7,
 
-    location:
-      "Ajanta • Ellora • Aurangabad • Mumbai • Mahabaleshwar • Goa",
+    location: "Ajanta • Ellora • Aurangabad • Mumbai • Mahabaleshwar • Goa",
 
     facilities: [
       {
@@ -301,7 +300,7 @@ const packages = [
       { id: 3, icon: Utensils, label: "Meals Included" },
       { id: 4, icon: Car, label: "Transport Included" },
       { id: 5, icon: Camera, label: "Sightseeing" },
-      { id: 6, icon: MapPinned, label: "Tour Assistance" }
+      { id: 6, icon: MapPinned, label: "Tour Assistance" },
     ],
 
     overview:
@@ -318,7 +317,7 @@ const packages = [
             distance: "Train journey",
             description:
               "Board train (22830 / 20972) from Shalimar Railway Station. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 2,
@@ -326,7 +325,7 @@ const packages = [
             distance: "Road transfer",
             description:
               "Reach Pendra Road Railway Station and transfer to Amarkantak. Enjoy local sightseeing. Overnight stay at Amarkantak.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 3,
@@ -334,7 +333,7 @@ const packages = [
             distance: "Road transfer",
             description:
               "After breakfast proceed to Jabalpur and check in to the hotel. Overnight stay at Jabalpur.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 4,
@@ -342,7 +341,7 @@ const packages = [
             distance: "Road transfer",
             description:
               "Visit Dhuandhar Falls, Bhedaghat, Marble Rocks, and nearby attractions. Optional boat ride at own cost. Later proceed to Omkareshwar. Overnight stay at Omkareshwar.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 5,
@@ -350,7 +349,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Omkareshwar Jyotirlinga and the sacred Narmada River. Overnight stay at Omkareshwar.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 6,
@@ -358,7 +357,7 @@ const packages = [
             distance: "Road transfer",
             description:
               "After breakfast drive to Ujjain and check in to the hotel. Overnight stay at Ujjain.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 7,
@@ -366,7 +365,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Kaal Bhairav Temple, Maharshi Sandipani Ashram, Ram Ghat, Harsiddhi Mata Shaktipeeth, Gadh Kalika Mata Temple, and Mangalnath Temple. Overnight stay at Ujjain.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 8,
@@ -374,7 +373,7 @@ const packages = [
             distance: "Local sightseeing + train",
             description:
               "Visit Mahakaleshwar Jyotirlinga and return to the hotel. After dinner transfer to Ujjain Railway Station and board the return train. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 9,
@@ -382,7 +381,7 @@ const packages = [
             distance: "Full day train journey",
             description:
               "Continue the return train journey. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 10,
@@ -390,9 +389,9 @@ const packages = [
             distance: "Train arrival",
             description:
               "Arrive at Howrah Railway Station with sweet memories of the Madhya Pradesh tour.",
-            images: [null, null]
-          }
-        ]
+            images: [null, null],
+          },
+        ],
       },
 
       package2: {
@@ -406,7 +405,7 @@ const packages = [
             distance: "Train journey",
             description:
               "Board train from Howrah Railway Station for Satna. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 2,
@@ -414,7 +413,7 @@ const packages = [
             distance: "Road transfer",
             description:
               "Reach Satna Railway Station and transfer to Khajuraho. Overnight stay at Khajuraho.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 3,
@@ -422,7 +421,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit the famous Khajuraho Temples. Optional Light & Sound Show and cultural dance program at own cost. Overnight stay at Khajuraho.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 4,
@@ -430,7 +429,7 @@ const packages = [
             distance: "Road transfer",
             description:
               "Proceed to Bandhavgarh with packed lunch. En route visit Pandav Gupha (entry fee at own cost). Overnight stay at Bandhavgarh.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 5,
@@ -438,7 +437,7 @@ const packages = [
             distance: "Road transfer",
             description:
               "Optional morning jungle safari at own cost. After breakfast drive to Amarkantak. Overnight stay at Amarkantak.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 6,
@@ -446,7 +445,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Explore the sacred temples, Narmada Udgam, waterfalls, and local attractions of Amarkantak. Overnight stay at Amarkantak.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 7,
@@ -454,7 +453,7 @@ const packages = [
             distance: "Road transfer",
             description:
               "Enjoy additional local sightseeing in Amarkantak and later proceed to Panchmarhi. Overnight stay at Panchmarhi.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 8,
@@ -462,7 +461,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Explore Panchmarhi hill station. Optional jungle safari and local vehicle at own cost. Overnight stay at Panchmarhi.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 9,
@@ -470,7 +469,7 @@ const packages = [
             distance: "Road transfer",
             description:
               "After breakfast drive to Jabalpur and check in to the hotel. Overnight stay at Jabalpur.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 10,
@@ -478,7 +477,7 @@ const packages = [
             distance: "Local sightseeing + train",
             description:
               "Visit Dhuandhar Falls, Bhedaghat, Marble Rocks, and nearby attractions. Optional boat ride at own cost. Later transfer to Jabalpur Railway Station and board the return train. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 11,
@@ -486,9 +485,9 @@ const packages = [
             distance: "Train arrival",
             description:
               "Arrive at Howrah Railway Station with sweet memories of the tour.",
-            images: [null, null]
-          }
-        ]
+            images: [null, null],
+          },
+        ],
       },
 
       package3: {
@@ -502,7 +501,7 @@ const packages = [
             distance: "Train journey",
             description:
               "Board train from Howrah Railway Station for Satna. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 2,
@@ -510,7 +509,7 @@ const packages = [
             distance: "Road transfer",
             description:
               "Reach Satna Railway Station and transfer to Khajuraho. Overnight stay at Khajuraho.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 3,
@@ -518,7 +517,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Khajuraho Temples. Optional Light & Sound Show and cultural dance program at own cost. Overnight stay at Khajuraho.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 4,
@@ -526,7 +525,7 @@ const packages = [
             distance: "Road transfer",
             description:
               "Proceed to Bandhavgarh with packed lunch. En route visit Pandav Gupha (entry fee at own cost). Overnight stay at Bandhavgarh.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 5,
@@ -534,7 +533,7 @@ const packages = [
             distance: "Road transfer",
             description:
               "Optional morning jungle safari at own cost. After breakfast drive to Amarkantak. Overnight stay at Amarkantak.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 6,
@@ -542,7 +541,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Explore the temples, waterfalls, and sacred Narmada Udgam area of Amarkantak. Overnight stay at Amarkantak.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 7,
@@ -550,7 +549,7 @@ const packages = [
             distance: "Road transfer",
             description:
               "After breakfast enjoy additional sightseeing and later proceed to Jabalpur. Overnight stay at Jabalpur.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 8,
@@ -558,7 +557,7 @@ const packages = [
             distance: "Road transfer",
             description:
               "Visit Dhuandhar Falls, Bhedaghat, Marble Rocks, and nearby attractions. Optional boat ride at own cost. Later proceed to Panchmarhi. Overnight stay at Panchmarhi.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 9,
@@ -566,7 +565,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Explore Panchmarhi hill station. Optional jungle safari and local vehicle at own cost. Overnight stay at Panchmarhi.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 10,
@@ -574,7 +573,7 @@ const packages = [
             distance: "Road transfer",
             description:
               "After breakfast drive to Omkareshwar and check in to the hotel. Overnight stay at Omkareshwar.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 11,
@@ -582,7 +581,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Omkareshwar Jyotirlinga and the banks of the Narmada River. Overnight stay at Omkareshwar.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 12,
@@ -590,7 +589,7 @@ const packages = [
             distance: "Road transfer",
             description:
               "Proceed to Ujjain and check in to the hotel. Overnight stay at Ujjain.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 13,
@@ -598,7 +597,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Mahakaleshwar Jyotirlinga and major temples of Ujjain. Overnight stay at Ujjain.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 14,
@@ -606,7 +605,7 @@ const packages = [
             distance: "Train journey",
             description:
               "After breakfast transfer to Ujjain Railway Station and board the return train. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 15,
@@ -614,11 +613,10 @@ const packages = [
             distance: "Train arrival",
             description:
               "Arrive at Howrah Railway Station with sweet memories of the complete Madhya Pradesh tour.",
-            images: [null, null]
-          }
-        ]
-      }
-
+            images: [null, null],
+          },
+        ],
+      },
     },
 
     included: [
@@ -632,7 +630,7 @@ const packages = [
       "Transportation",
       "Parking & toll tax",
       "Pick-up & drop",
-      "All possible sightseeing as per tour schedule"
+      "All possible sightseeing as per tour schedule",
     ],
 
     excluded: [
@@ -646,7 +644,7 @@ const packages = [
       "Forest permit",
       "Personal activities",
       "Any ride or safari",
-      "Any item not mentioned above"
+      "Any item not mentioned above",
     ],
 
     whatsapp: "https://wa.me/918910555711",
@@ -655,7 +653,7 @@ const packages = [
 
     enquiryLink: "#",
 
-    detailsLink: "/packages/madhya-pradesh-tour"
+    detailsLink: "/packages/madhya-pradesh-tour",
   },
   {
     id: 3,
@@ -666,9 +664,22 @@ const packages = [
 
     title: "Andaman",
 
-    image: null,
+    image: "/images/andaman/BAY-ISLAND.webp",
 
-    gallery: [null, null, null, null, null],
+    gallery: ["/images/andaman/BARATANG.webp",
+              "/images/andaman/BAY-ISLAND.webp",
+              "/images/andaman/day-7-back-to-kolkata-airport.webp",
+              "/images/andaman/Day-7-International-Airport-in-Port-Blair.webp",
+              "/images/andaman/day-limestone.webp",
+              "/images/andaman/Day1-Cellular_Jail.webp",
+              "/images/andaman/Day1-corbyns-beach.webp",
+              "/images/andaman/Day2-north-bay-andaman.webp",
+              "/images/andaman/Day2-Ross-Island.webp",
+              "/images/andaman/DENSE.webp",
+              "/images/andaman/HAVELOCK.webp",
+              "/images/andaman/JARAWA.webp",
+              "/images/andaman/RADHANAGAR.webp",
+              "/images/andaman/ROSS-ISLAND.webp",],
 
     perPerson: true,
 
@@ -682,7 +693,7 @@ const packages = [
       { id: 3, icon: Utensils, label: "Meals Included" },
       { id: 4, icon: Car, label: "AC Transport" },
       { id: 5, icon: Camera, label: "Sightseeing" },
-      { id: 6, icon: MapPinned, label: "Cruise & Boat Included" }
+      { id: 6, icon: MapPinned, label: "Cruise & Boat Included" },
     ],
 
     overview:
@@ -695,63 +706,209 @@ const packages = [
         itinerary: [
           {
             day: 1,
-            title: "Arrival at Port Blair",
-            distance: "Airport transfer",
+
+            title: "Pick Up from Port Blair & Visit Cellular Jail",
+
+            distance: "Airport transfer • Local sightseeing",
+
             description:
-              "Pick up from Port Blair Airport and transfer to hotel. Visit Cellular Jail, Corbyn's Cove Beach, and attend the Sound & Light Show at Cellular Jail. Overnight stay at Port Blair.",
-            images: [null, null]
+              "Pick up from Port Blair Airport and transfer to the hotel. Visit Cellular Jail and explore this historic landmark of the Andaman Islands. Cellular Jail, also known as Kala Pani (Black Water), is a colonial prison in Port Blair, Andaman and Nicobar Islands. Built by the British between 1896 and 1906, it was used to exile and isolate Indian freedom fighters in brutal solitary confinement. Today, it stands as a national memorial. Later attend the Sound & Light Show at Cellular Jail. Overnight stay at Port Blair.",
+
+            images: ["/images/andaman/Day1-Cellular_Jail.webp", "/images/andaman/Day1-corbyns-beach.webp"],
+
+            facilities: [
+              {
+                id: 1,
+                icon: Car,
+                label: "Airport Transfer",
+              },
+              {
+                id: 2,
+                icon: Hotel,
+                label: "Hotel Stay",
+              },
+            ],
           },
+
           {
             day: 2,
+
             title: "Ross Island & North Bay Coral Island",
-            distance: "Boat excursion",
+
+            distance: "Boat excursion • Island sightseeing",
+
             description:
-              "After breakfast visit Ross Island and North Bay Coral Island for sightseeing and coral experiences. Overnight stay at Port Blair.",
-            images: [null, null]
+              "After breakfast proceed for an island excursion covering Ross Island and North Bay Coral Island. The history of the Andaman Islands spans thousands of years of indigenous isolation, medieval maritime trade, and a turbulent colonial era as a British penal colony known as Kala Pani, before becoming a strategic Union Territory of India. Ross Island, officially renamed Netaji Subhas Chandra Bose Island, is a tiny historical island near Port Blair in the Andamans. Named after marine surveyor Daniel Ross, it served as the elite administrative headquarters for the British penal colony from 1858 until 1941, earning the moniker 'Paris of the East' before earthquakes, war, and creeping jungle roots left it abandoned. Continue the sightseeing and coral island experience at North Bay. Return to Port Blair. Overnight stay at Port Blair.",
+
+            images: ["/images/andaman/Day2-north-bay-andaman.webp",
+              "/images/andaman/Day2-Ross-Island.webp"],
+
+            facilities: [
+              {
+                id: 1,
+                icon: Utensils,
+                label: "Breakfast",
+              },
+              {
+                id: 2,
+                icon: Ship,
+                label: "Boat Excursion",
+              },
+              {
+                id: 3,
+                icon: Hotel,
+                label: "Hotel Stay",
+              },
+            ],
           },
+
           {
             day: 3,
-            title: "Port Blair → Havelock Island",
-            distance: "Cruise transfer",
+
+            title: "Way to Havelock Island",
+
+            distance: "Cruise transfer • Beach sightseeing",
+
             description:
-              "Morning transfer to Havelock Island and visit the famous Radhanagar Beach. Overnight stay at Havelock Island.",
-            images: [null, null]
+              "After breakfast proceed towards Havelock Island. Havelock Island, officially renamed Swaraj Dweep, lies 57 kilometers northeast of Port Blair. It was originally named after British General Sir Henry Havelock. Post-independence, the island was settled by Bengali refugees, and in December 2018, Prime Minister Narendra Modi renamed it to honor Subhas Chandra Bose's freedom movement legacy. On arrival visit the famous Radhanagar Beach. Radhanagar gained global fame in 2004 when TIME magazine named it Asia's best beach. In December 2018, the island was renamed Swaraj Dweep to honor Subhas Chandra Bose. Enjoy the scenic beauty of Radhanagar Beach. Overnight stay at Havelock Island.",
+
+            images: ["/images/andaman/HAVELOCK.webp", "/images/andaman/RADHANAGAR.webp", "/images/andaman/BARATANG.webp"],
+
+            facilities: [
+              {
+                id: 1,
+                icon: Utensils,
+                label: "Breakfast",
+              },
+              {
+                id: 2,
+                icon: Ship,
+                label: "Cruise Transfer",
+              },
+              {
+                id: 3,
+                icon: Hotel,
+                label: "Hotel Stay",
+              },
+            ],
           },
+
           {
             day: 4,
+
             title: "Havelock → Neil Island",
-            distance: "Cruise transfer",
+
+            distance: "Cruise transfer • Island sightseeing",
+
             description:
-              "Morning transfer to Neil Island and visit Bharatpur Beach, Natural Bridge, and Laxmanpur Beach. Overnight stay at Neil Island.",
-            images: [null, null]
+              "After breakfast check out from Havelock Island and proceed towards Neil Island by cruise. On arrival visit Bharatpur Beach, Natural Bridge, and Laxmanpur Beach. Explore the natural beauty and peaceful surroundings of Neil Island. Overnight stay at Neil Island.",
+
+            images: ["/images/andaman/HAVELOCK.webp", "/images/andaman/ROSS-ISLAND.webp"],
+
+            facilities: [
+              {
+                id: 1,
+                icon: Utensils,
+                label: "Breakfast",
+              },
+              {
+                id: 2,
+                icon: Ship,
+                label: "Cruise Transfer",
+              },
+              {
+                id: 3,
+                icon: Hotel,
+                label: "Hotel Stay",
+              },
+            ],
           },
+
           {
             day: 5,
+
             title: "Neil Island → Port Blair",
+
             distance: "Cruise transfer",
+
             description:
-              "After breakfast check out and return to Port Blair by cruise. Overnight stay at Port Blair.",
-            images: [null, null]
+              "After breakfast check out from the hotel and return to Port Blair by cruise. Enjoy the scenic journey across the Andaman Sea. On arrival at Port Blair transfer to the hotel. Overnight stay at Port Blair.",
+
+            images: ["/images/andaman/DENSE.webp", "/images/andaman/ROSS-ISLAND.webp"],
+
+            facilities: [
+              {
+                id: 1,
+                icon: Utensils,
+                label: "Breakfast",
+              },
+              {
+                id: 2,
+                icon: Ship,
+                label: "Cruise Transfer",
+              },
+              {
+                id: 3,
+                icon: Hotel,
+                label: "Hotel Stay",
+              },
+            ],
           },
+
           {
             day: 6,
+
             title: "Baratang Island Excursion",
-            distance: "Full day excursion",
+
+            distance: "Full day excursion • Road transfer",
+
             description:
-              "Early morning excursion to Baratang Island. Explore the island and return to Port Blair in the evening. Overnight stay at Port Blair.",
-            images: [null, null]
+              "After an early morning start, proceed for a full-day excursion to Baratang Island. Baratang has a rich history tied to indigenous tribes like the Jarawa, ancient archaeological sites dating back to 420 CE, and late 19th-century settlement by laborers from Ranchi sent by the British. It served as a historical hub for colonial timber logging and agriculture. The Jarawa are an indigenous hunter-gatherer tribe living in the South and Middle Andaman Islands. Their ancestors migrated from Africa tens of thousands of years ago. They lived in strict, self-imposed isolation and fiercely defended their forest territory from outsiders until making peaceful, voluntary first contact with modern society in October 1997. Historically shaped by indigenous isolation, British penal-colony exploitation, and post-independence timber management, these isolated jungles harbor high levels of endemic flora like the Andaman Padauk. Explore Baratang Island and its natural surroundings before returning to Port Blair in the evening. Overnight stay at Port Blair.",
+
+            images: ["/images/andaman/BARATANG.webp", "/images/andaman/ROSS-ISLAND.webp"],
+
+            facilities: [
+              {
+                id: 1,
+                icon: Car,
+                label: "Road Transfer",
+              },
+              {
+                id: 2,
+                icon: Hotel,
+                label: "Hotel Stay",
+              },
+            ],
           },
+
           {
             day: 7,
-            title: "Departure from Port Blair",
-            distance: "Airport transfer",
-            description:
-              "After breakfast transfer to Port Blair Airport for your onward journey with sweet memories of the Andaman tour.",
-            images: [null, null]
-          }
-        ]
-      }
 
+            title: "Departure from Port Blair",
+
+            distance: "Airport transfer",
+
+            description:
+              "After breakfast check out from the hotel and transfer to Port Blair Airport for your onward journey with sweet memories of the Andaman tour.",
+
+            images: [ "/images/andaman/day-7-back-to-kolkata-airport.webp",
+              "/images/andaman/Day-7-International-Airport-in-Port-Blair.webp" ],
+
+            facilities: [
+              {
+                id: 1,
+                icon: Utensils,
+                label: "Breakfast",
+              },
+              {
+                id: 2,
+                icon: Car,
+                label: "Airport Transfer",
+              },
+            ],
+          },
+        ],
+      },
     },
 
     included: [
@@ -766,7 +923,7 @@ const packages = [
       "Entry fees",
       "Parking & toll tax",
       "Airport pick-up & drop",
-      "All possible sightseeing as per tour schedule"
+      "All possible sightseeing as per tour schedule",
     ],
 
     excluded: [
@@ -778,7 +935,7 @@ const packages = [
       "Camera charges",
       "Personal activities",
       "Any ride or safari",
-      "Any item not mentioned above"
+      "Any item not mentioned above",
     ],
 
     whatsapp: "https://wa.me/918910555711",
@@ -787,7 +944,7 @@ const packages = [
 
     enquiryLink: "#",
 
-    detailsLink: "/packages/andaman-tour"
+    detailsLink: "/packages/andaman-tour",
   },
   {
     id: 4,
@@ -814,7 +971,7 @@ const packages = [
       { id: 3, icon: Utensils, label: "Meals Included" },
       { id: 4, icon: Car, label: "Transportation Included" },
       { id: 5, icon: Camera, label: "Sightseeing" },
-      { id: 6, icon: MapPinned, label: "Arunachal Permit Included" }
+      { id: 6, icon: MapPinned, label: "Arunachal Permit Included" },
     ],
 
     overview:
@@ -832,7 +989,7 @@ const packages = [
             distance: "Train journey",
             description:
               "Board Vande Bharat train from Howrah Railway Station at 6:20 PM for Kamakhya. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 2,
@@ -840,7 +997,7 @@ const packages = [
             distance: "Kamakhya → Guwahati",
             description:
               "Reach Kamakhya Railway Station, transfer to hotel, visit Kamakhya Temple, and overnight stay at Guwahati.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 3,
@@ -848,7 +1005,7 @@ const packages = [
             distance: "241 km",
             description:
               "Drive to Bhalukpong and enjoy the scenic foothills of Arunachal Pradesh. Overnight stay at Bhalukpong.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 4,
@@ -856,7 +1013,7 @@ const packages = [
             distance: "93 km",
             description:
               "Proceed to Bomdila via Tipi Orchidarium and Jia Bharali River. Visit Bomdila Upper Monastery. Overnight stay at Bomdila.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 5,
@@ -864,7 +1021,7 @@ const packages = [
             distance: "170 km",
             description:
               "Drive through Hot Spring, Sela Pass, Sela Lake, and Jaswantgarh War Memorial before reaching Tawang. Overnight stay at Tawang.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 6,
@@ -872,7 +1029,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Tawang Monastery, Handicraft Centre, and attend the Light & Sound Show at Tawang War Memorial. Overnight stay at Tawang.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 7,
@@ -880,7 +1037,7 @@ const packages = [
             distance: "Optional excursion",
             description:
               "Optional excursion to Bumla Pass, Sangestar Lake, and P.T. Tso Lake (own cost and subject to army permission). Overnight stay at Tawang.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 8,
@@ -888,7 +1045,7 @@ const packages = [
             distance: "140 km",
             description:
               "Drive to Dirang via Jung Falls. Overnight stay at Dirang.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 9,
@@ -896,7 +1053,7 @@ const packages = [
             distance: "250 km",
             description:
               "Proceed to Kaziranga National Park. Optional evening tribal dance program at own cost. Overnight stay at Kaziranga.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 10,
@@ -904,7 +1061,7 @@ const packages = [
             distance: "204 km",
             description:
               "Optional early morning jungle safari at Kaziranga (own cost). After breakfast drive to Guwahati Railway Station and board the return train for Kolkata. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 11,
@@ -912,10 +1069,10 @@ const packages = [
             distance: "Train arrival",
             description:
               "Reach Howrah / Sealdah Railway Station with sweet memories of the Arunachal and Kaziranga tour.",
-            images: [null, null]
-          }
-        ]
-      }
+            images: [null, null],
+          },
+        ],
+      },
     },
 
     included: [
@@ -930,7 +1087,7 @@ const packages = [
       "Arunachal permit fees",
       "Parking & toll tax",
       "Pick-up & drop",
-      "All possible sightseeing as per tour schedule"
+      "All possible sightseeing as per tour schedule",
     ],
 
     excluded: [
@@ -944,7 +1101,7 @@ const packages = [
       "Bumla Pass & Madhuri Lake sightseeing charges",
       "Personal activities",
       "Any ride or safari",
-      "Any item not mentioned above"
+      "Any item not mentioned above",
     ],
 
     whatsapp: "https://wa.me/918910555711",
@@ -953,7 +1110,7 @@ const packages = [
 
     enquiryLink: "#",
 
-    detailsLink: "/packages/arunachal-kaziranga-tour"
+    detailsLink: "/packages/arunachal-kaziranga-tour",
   },
   {
     id: 5,
@@ -980,7 +1137,7 @@ const packages = [
       { id: 3, icon: Utensils, label: "Meals Included" },
       { id: 4, icon: Car, label: "Transportation Included" },
       { id: 5, icon: Camera, label: "Sightseeing" },
-      { id: 6, icon: MapPinned, label: "Boat Ride Included" }
+      { id: 6, icon: MapPinned, label: "Boat Ride Included" },
     ],
 
     overview:
@@ -998,7 +1155,7 @@ const packages = [
             distance: "Train journey",
             description:
               "Board Jammu Tawi Express from Kolkata Railway Station at 11:45 AM for Ayodhya. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 2,
@@ -1006,7 +1163,7 @@ const packages = [
             distance: "Railway station transfer",
             description:
               "Reach Ayodhya Railway Station, transfer to hotel, and visit Ram Janmabhoomi, the birthplace of Lord Rama. Overnight stay at Ayodhya.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 3,
@@ -1014,7 +1171,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Janki Bhawan, Kanak Bhawan, Sarayu River, and Hanuman Garhi. Overnight stay at Ayodhya.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 4,
@@ -1022,7 +1179,7 @@ const packages = [
             distance: "286 km",
             description:
               "Drive to Varanasi via Prayagraj. Visit Triveni Sangam, Khusro Bagh, Akbar Fort, Bade Hanuman Ji Temple, and Nagvasuki Temple before proceeding to Varanasi. Overnight stay at Varanasi.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 5,
@@ -1030,7 +1187,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Birla Temple, Sarnath, and Kashi Vishwanath Temple. Enjoy an optional boat ride and attend the evening Ganga Aarti. Overnight stay at Varanasi.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 6,
@@ -1038,7 +1195,7 @@ const packages = [
             distance: "Local sightseeing + train",
             description:
               "Visit Sankat Mochan Hanuman Temple, Assi Ghat, Manikarnika Ghat, Tulsi Manas Temple, and Batu Bhairav Temple. After dinner transfer to Banaras Railway Station and board the train for Kolkata. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 7,
@@ -1046,10 +1203,10 @@ const packages = [
             distance: "Train arrival",
             description:
               "Reach Sealdah / Howrah Railway Station with sweet memories of the Ayodhya, Prayagraj, and Varanasi tour.",
-            images: [null, null]
-          }
-        ]
-      }
+            images: [null, null],
+          },
+        ],
+      },
     },
 
     included: [
@@ -1064,7 +1221,7 @@ const packages = [
       "Transportation",
       "Parking & toll tax",
       "Pick-up & drop",
-      "All possible sightseeing as per tour schedule"
+      "All possible sightseeing as per tour schedule",
     ],
 
     excluded: [
@@ -1077,7 +1234,7 @@ const packages = [
       "Forest permit",
       "Personal activities",
       "Any ride or safari",
-      "Any item not mentioned above"
+      "Any item not mentioned above",
     ],
 
     whatsapp: "https://wa.me/918910555711",
@@ -1086,7 +1243,7 @@ const packages = [
 
     enquiryLink: "#",
 
-    detailsLink: "/packages/ayodhya-prayagraj-varanasi-tour"
+    detailsLink: "/packages/ayodhya-prayagraj-varanasi-tour",
   },
   {
     id: 6,
@@ -1095,8 +1252,7 @@ const packages = [
 
     slug: "panch-jyotirlinga-tour",
 
-    title:
-      "Five Joytirlinga",
+    title: "Five Joytirlinga",
 
     image: null,
 
@@ -1106,8 +1262,7 @@ const packages = [
 
     rating: 9.1,
 
-    location:
-      "Pune • Nashik • Aurangabad • Ujjain • Omkareshwar",
+    location: "Pune • Nashik • Aurangabad • Ujjain • Omkareshwar",
 
     facilities: [
       { id: 1, icon: Train, label: "Train Included" },
@@ -1115,7 +1270,7 @@ const packages = [
       { id: 3, icon: Utensils, label: "Meals Included" },
       { id: 4, icon: Car, label: "Transport Included" },
       { id: 5, icon: Camera, label: "Sightseeing" },
-      { id: 6, icon: MapPinned, label: "Temple Tour" }
+      { id: 6, icon: MapPinned, label: "Temple Tour" },
     ],
 
     overview:
@@ -1133,7 +1288,7 @@ const packages = [
             distance: "Train journey",
             description:
               "Board Azad Hind Express (12130) from Howrah Railway Station at 9:40 PM for Pune. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 2,
@@ -1141,7 +1296,7 @@ const packages = [
             distance: "Full day train journey",
             description:
               "Enjoy the scenic train journey towards Pune. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 3,
@@ -1149,7 +1304,7 @@ const packages = [
             distance: "Railway station transfer",
             description:
               "Reach Pune Railway Station and transfer to hotel. Visit Dagdusheth Halwai Ganpati Temple, Shaniwar Wada, Aga Khan Palace, Lal Mahal, and nearby attractions. Overnight stay at Pune.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 4,
@@ -1157,7 +1312,7 @@ const packages = [
             distance: "Excursion from Pune",
             description:
               "After breakfast visit Bhimashankar Jyotirlinga Temple and return to Pune hotel. Overnight stay at Pune.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 5,
@@ -1165,7 +1320,7 @@ const packages = [
             distance: "215 km",
             description:
               "Drive to Nashik and enjoy local sightseeing in the evening. Overnight stay at Nashik.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 6,
@@ -1173,7 +1328,7 @@ const packages = [
             distance: "Local excursion",
             description:
               "Visit Trimbakeshwar Jyotirlinga Temple and return to hotel. Overnight stay at Nashik.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 7,
@@ -1181,7 +1336,7 @@ const packages = [
             distance: "180 km",
             description:
               "Proceed to Aurangabad and visit Bibi Ka Maqbara, Ellora Caves, Aurangabad Caves, Daulatabad Fort, and nearby attractions depending on time. Overnight stay at Aurangabad.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 8,
@@ -1189,7 +1344,7 @@ const packages = [
             distance: "Temple visit + train journey",
             description:
               "Visit Grishneshwar Jyotirlinga Temple. After dinner transfer to Chhatrapati Sambhaji Nagar Railway Station and board Hisar Weekly Express (17020) for Ujjain. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 9,
@@ -1197,7 +1352,7 @@ const packages = [
             distance: "Railway station transfer",
             description:
               "Reach Ujjain Railway Station and transfer to hotel. Overnight stay at Ujjain.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 10,
@@ -1205,7 +1360,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Mahakaleshwar Jyotirlinga, Harsiddhi Mata Temple, Kal Bhairav Temple, Gadh Kalika Temple, Gopal Mandir, Chintaman Ganesh Temple, Jantar Mantar, Ram Ghat, Triveni Museum, and nearby attractions. Overnight stay at Ujjain.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 11,
@@ -1213,7 +1368,7 @@ const packages = [
             distance: "144 km",
             description:
               "Drive to Omkareshwar and check in at hotel. Overnight stay at Omkareshwar.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 12,
@@ -1221,7 +1376,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Omkareshwar Jyotirlinga Temple and Narmada River ghats. Overnight stay at Omkareshwar.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 13,
@@ -1229,7 +1384,7 @@ const packages = [
             distance: "80 km + train journey",
             description:
               "After breakfast drive via Maheshwar and transfer to Indore Railway Station. Board Shipra Express (22911) for Kolkata. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 14,
@@ -1237,7 +1392,7 @@ const packages = [
             distance: "Full day train journey",
             description:
               "Continue return journey towards Kolkata. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 15,
@@ -1245,10 +1400,10 @@ const packages = [
             distance: "Train arrival",
             description:
               "Arrive at Howrah Railway Station with divine memories of the Panch Jyotirlinga pilgrimage tour.",
-            images: [null, null]
-          }
-        ]
-      }
+            images: [null, null],
+          },
+        ],
+      },
     },
 
     included: [
@@ -1262,7 +1417,7 @@ const packages = [
       "Transportation",
       "Parking & toll tax",
       "Pick-up & drop",
-      "All possible sightseeing as per tour schedule"
+      "All possible sightseeing as per tour schedule",
     ],
 
     excluded: [
@@ -1276,7 +1431,7 @@ const packages = [
       "Permits",
       "Any ride or safari",
       "Personal activities",
-      "Any item not mentioned above"
+      "Any item not mentioned above",
     ],
 
     whatsapp: "https://wa.me/918910555711",
@@ -1285,7 +1440,7 @@ const packages = [
 
     enquiryLink: "#",
 
-    detailsLink: "/packages/panch-jyotirlinga-tour"
+    detailsLink: "/packages/panch-jyotirlinga-tour",
   },
   {
     id: 7,
@@ -1312,7 +1467,7 @@ const packages = [
       { id: 3, icon: Utensils, label: "Meals Included" },
       { id: 4, icon: Car, label: "Transport Included" },
       { id: 5, icon: Camera, label: "Sightseeing" },
-      { id: 6, icon: MapPinned, label: "Hill Station Tour" }
+      { id: 6, icon: MapPinned, label: "Hill Station Tour" },
     ],
 
     overview:
@@ -1330,7 +1485,7 @@ const packages = [
             distance: "Train journey",
             description:
               "Board train from Howrah Railway Station for Chandigarh / Kalka. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 2,
@@ -1338,7 +1493,7 @@ const packages = [
             distance: "Full day train journey",
             description:
               "Continue train journey towards Himachal Pradesh. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 3,
@@ -1346,7 +1501,7 @@ const packages = [
             distance: "Railway station transfer",
             description:
               "Reach Chandigarh / Kalka Railway Station and transfer to Shimla hotel. Afternoon visit to Mall Road and Kali Bari Temple by walk. Overnight stay at Shimla.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 4,
@@ -1354,7 +1509,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "After breakfast visit Kufri, Fagu, and Green Valley. Return to Shimla hotel. Overnight stay at Shimla.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 5,
@@ -1362,7 +1517,7 @@ const packages = [
             distance: "Road transfer",
             description:
               "After breakfast proceed to Manali through the scenic mountain route. Overnight stay at Manali.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 6,
@@ -1370,7 +1525,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Hadimba Temple, Tibetan Monastery, Handicraft Centre, and Old Vashisht Village. Overnight stay at Manali.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 7,
@@ -1378,7 +1533,7 @@ const packages = [
             distance: "Excursion from Manali",
             description:
               "Visit Solang Valley and Atal Tunnel – Sisu Village. Rohtang Pass excursion is optional and at own cost. Return to Manali hotel. Overnight stay at Manali.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 8,
@@ -1386,7 +1541,7 @@ const packages = [
             distance: "Road transfer",
             description:
               "After breakfast drive to Manikaran / Bhuntar and check in at hotel. Overnight stay at Manikaran / Bhuntar.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 9,
@@ -1394,7 +1549,7 @@ const packages = [
             distance: "Road transfer + train journey",
             description:
               "After breakfast transfer to Chandigarh / Kalka Railway Station for return train journey. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 10,
@@ -1402,7 +1557,7 @@ const packages = [
             distance: "Full day train journey",
             description:
               "Continue return journey towards Howrah. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 11,
@@ -1410,10 +1565,10 @@ const packages = [
             distance: "Train arrival",
             description:
               "Arrive at Howrah Railway Station with sweet memories of your Himachal tour.",
-            images: [null, null]
-          }
-        ]
-      }
+            images: [null, null],
+          },
+        ],
+      },
     },
 
     included: [
@@ -1427,7 +1582,7 @@ const packages = [
       "Transportation",
       "Parking & toll tax",
       "Pick-up & drop",
-      "All possible sightseeing as per tour schedule"
+      "All possible sightseeing as per tour schedule",
     ],
 
     excluded: [
@@ -1442,7 +1597,7 @@ const packages = [
       "Rohtang Pass excursion",
       "Personal activities",
       "Any ride or safari",
-      "Any item not mentioned above"
+      "Any item not mentioned above",
     ],
 
     whatsapp: "https://wa.me/918910555711",
@@ -1451,7 +1606,7 @@ const packages = [
 
     enquiryLink: "#",
 
-    detailsLink: "/packages/shimla-manali-bhuntar-tour"
+    detailsLink: "/packages/shimla-manali-bhuntar-tour",
   },
   {
     id: 8,
@@ -1478,7 +1633,7 @@ const packages = [
       { id: 3, icon: Utensils, label: "Meals Included" },
       { id: 4, icon: Car, label: "Transport Included" },
       { id: 5, icon: Camera, label: "Sightseeing" },
-      { id: 6, icon: MapPinned, label: "Tour Assistance" }
+      { id: 6, icon: MapPinned, label: "Tour Assistance" },
     ],
 
     overview:
@@ -1496,7 +1651,7 @@ const packages = [
             distance: "Train journey",
             description:
               "Board Train 18005 from Howrah Railway Station for Koraput. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 2,
@@ -1504,7 +1659,7 @@ const packages = [
             distance: "Railway station transfer",
             description:
               "Reach Koraput Railway Station and transfer to hotel. Overnight stay at Koraput.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 3,
@@ -1512,7 +1667,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Duduma Waterfall and Gupteswar Cave. Return to Koraput for overnight stay.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 4,
@@ -1520,7 +1675,7 @@ const packages = [
             distance: "Road transfer",
             description:
               "After breakfast proceed to Araku Valley. Visit Borra Cave, Tribal Museum, gardens, and Chapurai. Overnight stay at Araku Valley.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 5,
@@ -1528,7 +1683,7 @@ const packages = [
             distance: "Road transfer",
             description:
               "Drive to Visakhapatnam and visit Rushikonda Beach, Kailasagiri, Submarine Museum, Visakha Museum, and Fishing Harbor. Overnight stay at Vizag.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 6,
@@ -1536,7 +1691,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Simhachalam Hill. After lunch visit R.K. Beach and Yarada Beach. Overnight stay at Vizag.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 7,
@@ -1544,7 +1699,7 @@ const packages = [
             distance: "Train transfer",
             description:
               "After lunch transfer to Vizag Railway Station and board train 12727 / 17015 for Hyderabad. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 8,
@@ -1552,7 +1707,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Arrive at Hyderabad Railway Station and transfer to hotel. Visit Charminar, Golconda Fort, Salar Jung Museum, Birla Temple, Lumbini Park, Chilkur Balaji Temple, and Buddha Statue. Overnight stay at Hyderabad.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 9,
@@ -1560,7 +1715,7 @@ const packages = [
             distance: "Excursion",
             description:
               "Full-day visit to the world-famous Ramoji Film City. Overnight stay at Hyderabad.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 10,
@@ -1568,7 +1723,7 @@ const packages = [
             distance: "Train journey",
             description:
               "Check out from hotel and transfer to Hyderabad Railway Station for return train to Kolkata. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 11,
@@ -1576,10 +1731,10 @@ const packages = [
             distance: "Train arrival",
             description:
               "Arrive at Howrah Railway Station with sweet memories of your South India tour.",
-            images: [null, null]
-          }
-        ]
-      }
+            images: [null, null],
+          },
+        ],
+      },
     },
 
     included: [
@@ -1593,7 +1748,7 @@ const packages = [
       "Transportation",
       "Parking & toll tax",
       "Pick-up & drop",
-      "All possible sightseeing as per tour schedule"
+      "All possible sightseeing as per tour schedule",
     ],
 
     excluded: [
@@ -1607,7 +1762,7 @@ const packages = [
       "Permits",
       "Personal activities",
       "Any ride or safari",
-      "Any item not mentioned above"
+      "Any item not mentioned above",
     ],
 
     whatsapp: "https://wa.me/918910555711",
@@ -1616,7 +1771,7 @@ const packages = [
 
     enquiryLink: "#",
 
-    detailsLink: "/packages/koraput-vizag-hyderabad-tour"
+    detailsLink: "/packages/koraput-vizag-hyderabad-tour",
   },
   {
     id: 9,
@@ -1643,7 +1798,7 @@ const packages = [
       { id: 3, icon: Utensils, label: "Meals Included" },
       { id: 4, icon: Car, label: "Transport Included" },
       { id: 5, icon: Camera, label: "Sightseeing" },
-      { id: 6, icon: MapPinned, label: "Tour Assistance" }
+      { id: 6, icon: MapPinned, label: "Tour Assistance" },
     ],
 
     overview:
@@ -1661,7 +1816,7 @@ const packages = [
             distance: "Train journey",
             description:
               "Board Train 15959 from Howrah Railway Station for Dimapur. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 2,
@@ -1669,7 +1824,7 @@ const packages = [
             distance: "Railway station transfer",
             description:
               "Reach Dimapur Railway Station and transfer to hotel. Overnight stay at Dimapur.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 3,
@@ -1677,7 +1832,7 @@ const packages = [
             distance: "Road transfer",
             description:
               "Drive to Kohima and visit World War II Cemetery, Nagaland Museum, and Kisama Heritage Village. Overnight stay at Kohima.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 4,
@@ -1685,7 +1840,7 @@ const packages = [
             distance: "Road transfer",
             description:
               "Proceed to Imphal and, subject to time, visit Loktak Lake, Kaibul Lamjao National Park, and INA Museum. Overnight stay at Imphal.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 5,
@@ -1693,7 +1848,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit State Orchidarium, World War II Cemeteries at Dowlaland and Hatta, Manipur State Museum, Old Polo Ground, and BT Park. Overnight stay at Imphal.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 6,
@@ -1701,7 +1856,7 @@ const packages = [
             distance: "Road transfer",
             description:
               "After breakfast proceed to Silchar. Arrive in the late afternoon and check in to hotel. Overnight stay at Silchar.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 7,
@@ -1709,7 +1864,7 @@ const packages = [
             distance: "Road transfer",
             description:
               "Transfer to Aizawl and check in to hotel. Overnight stay at Aizawl.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 8,
@@ -1717,7 +1872,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Bara Bazar, Luangmual Handicraft Centre, Mizoram State Museum, Durtlang Hills, Mini Zoo, and Berawtlang Tourist Complex. Overnight stay at Aizawl.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 9,
@@ -1725,7 +1880,7 @@ const packages = [
             distance: "Road transfer",
             description:
               "Return to Silchar and arrive in the late afternoon. Overnight stay at Silchar.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 10,
@@ -1733,7 +1888,7 @@ const packages = [
             distance: "Road transfer",
             description:
               "Proceed to Agartala and visit State Museum, Ujjayanta Palace, MBB College, Jagannath Temple, Umamaheswari Temple, Heritage Park, Nagicherra Rubber Wood Processing Centre, Laxminarayan Temple, Venuban Bihar, and Durgabari Tea Garden. Overnight stay at Agartala.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 11,
@@ -1741,7 +1896,7 @@ const packages = [
             distance: "Excursion",
             description:
               "After breakfast visit the famous Unakoti Archaeological Site. Return to Agartala for overnight stay.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 12,
@@ -1749,7 +1904,7 @@ const packages = [
             distance: "Train journey",
             description:
               "After breakfast transfer to Agartala Railway Station for return train to Kolkata. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 13,
@@ -1757,10 +1912,10 @@ const packages = [
             distance: "Train arrival",
             description:
               "Arrive at Sealdah Railway Station with sweet memories of your Northeast Grand Tour.",
-            images: [null, null]
-          }
-        ]
-      }
+            images: [null, null],
+          },
+        ],
+      },
     },
 
     included: [
@@ -1774,7 +1929,7 @@ const packages = [
       "Transportation",
       "Parking & toll tax",
       "Pick-up & drop",
-      "All possible sightseeing as per tour schedule"
+      "All possible sightseeing as per tour schedule",
     ],
 
     excluded: [
@@ -1788,7 +1943,7 @@ const packages = [
       "Forest permit charges",
       "Personal activities",
       "Any ride or safari",
-      "Any item not mentioned above"
+      "Any item not mentioned above",
     ],
 
     whatsapp: "https://wa.me/918910555711",
@@ -1797,7 +1952,7 @@ const packages = [
 
     enquiryLink: "#",
 
-    detailsLink: "/packages/northeast-grand-tour"
+    detailsLink: "/packages/northeast-grand-tour",
   },
   {
     id: 10,
@@ -1824,7 +1979,7 @@ const packages = [
       { id: 3, icon: Utensils, label: "Meals Included" },
       { id: 4, icon: Car, label: "Transport Included" },
       { id: 5, icon: Camera, label: "Sightseeing" },
-      { id: 6, icon: MapPinned, label: "Tour Assistance" }
+      { id: 6, icon: MapPinned, label: "Tour Assistance" },
     ],
 
     overview:
@@ -1842,7 +1997,7 @@ const packages = [
             distance: "Train journey",
             description:
               "Board Train 13151 Jammu Tawi Express from Kolkata Railway Station. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 2,
@@ -1850,7 +2005,7 @@ const packages = [
             distance: "Full day train journey",
             description:
               "Continue train journey towards Jammu. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 3,
@@ -1858,7 +2013,7 @@ const packages = [
             distance: "Train transfer",
             description:
               "Arrive at Jammu Railway Station and board Vande Bharat for Srinagar. Transfer to hotel on arrival. Overnight stay at Srinagar.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 4,
@@ -1866,7 +2021,7 @@ const packages = [
             distance: "126 km",
             description:
               "Drive through scenic mountain roads to Gurez Valley. Check in to hotel and enjoy the valley surroundings. Overnight stay at Gurez Valley.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 5,
@@ -1874,7 +2029,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Habba Khatoon Peak, Kishanganga River, and Tulail Valley (optional and at own cost). Overnight stay at Gurez Valley.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 6,
@@ -1882,7 +2037,7 @@ const packages = [
             distance: "126 km",
             description:
               "After breakfast proceed to the picturesque Lolab Valley surrounded by dense forests and mountains. Overnight stay at Lolab Valley.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 7,
@@ -1890,7 +2045,7 @@ const packages = [
             distance: "100 km",
             description:
               "Drive to the beautiful border valley of Keran and check in to hotel. Overnight stay at Keran Valley.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 8,
@@ -1898,7 +2053,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Explore Keran Village and witness the unique settlement located along the Line of Control where houses can be seen on both Indian and Pakistan-administered sides (optional and at own cost). Overnight stay at Keran Valley.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 9,
@@ -1906,7 +2061,7 @@ const packages = [
             distance: "140 km",
             description:
               "Return to Srinagar after breakfast. Enjoy the evening at leisure. Overnight stay at Srinagar.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 10,
@@ -1914,7 +2069,7 @@ const packages = [
             distance: "Excursion",
             description:
               "Full-day excursion to the beautiful meadow destination Doodhpathri. Return to Srinagar for overnight stay.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 11,
@@ -1922,7 +2077,7 @@ const packages = [
             distance: "270 km",
             description:
               "After breakfast drive to Jammu Railway Station and board return train for Kolkata. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 12,
@@ -1930,7 +2085,7 @@ const packages = [
             distance: "Full day train journey",
             description:
               "Continue return train journey towards Kolkata. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 13,
@@ -1938,10 +2093,10 @@ const packages = [
             distance: "Train arrival",
             description:
               "Arrive at Howrah / Kolkata Railway Station with sweet memories of your Kashmir valley tour.",
-            images: [null, null]
-          }
-        ]
-      }
+            images: [null, null],
+          },
+        ],
+      },
     },
 
     included: [
@@ -1955,7 +2110,7 @@ const packages = [
       "Transportation",
       "Parking & toll tax",
       "Pick-up & drop",
-      "All possible sightseeing as per tour schedule"
+      "All possible sightseeing as per tour schedule",
     ],
 
     excluded: [
@@ -1968,7 +2123,7 @@ const packages = [
       "Permits",
       "Personal activities",
       "Any ride or safari",
-      "Any item not mentioned above"
+      "Any item not mentioned above",
     ],
 
     whatsapp: "https://wa.me/918910555711",
@@ -1977,7 +2132,7 @@ const packages = [
 
     enquiryLink: "#",
 
-    detailsLink: "/packages/kashmir-gurez-lolab-keran-tour"
+    detailsLink: "/packages/kashmir-gurez-lolab-keran-tour",
   },
   {
     id: 11,
@@ -2004,7 +2159,7 @@ const packages = [
       { id: 3, icon: Utensils, label: "Meals Included" },
       { id: 4, icon: Car, label: "Transport Included" },
       { id: 5, icon: Camera, label: "Sightseeing" },
-      { id: 6, icon: MapPinned, label: "Tour Assistance" }
+      { id: 6, icon: MapPinned, label: "Tour Assistance" },
     ],
 
     overview:
@@ -2022,7 +2177,7 @@ const packages = [
             distance: "Train journey",
             description:
               "Board Train 12343 Darjeeling Mail from Sealdah Railway Station at night. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 2,
@@ -2030,7 +2185,7 @@ const packages = [
             distance: "Road transfer",
             description:
               "Arrive at NJP Railway Station in the morning and transfer to Pelling. Evening free for leisure. Overnight stay at Pelling.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 3,
@@ -2038,7 +2193,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Kanchenjunga viewpoints, Rimbi Waterfalls, Rabdentse Ruins, Pemayangtse Monastery, Orange Garden, and the famous Sky Walk. Overnight stay at Pelling.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 4,
@@ -2046,7 +2201,7 @@ const packages = [
             distance: "Road transfer",
             description:
               "Drive to Ravangla. En route visit Namchi Char Dham and Sai Temple. After lunch visit Buddha Park. Overnight stay at Ravangla.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 5,
@@ -2054,7 +2209,7 @@ const packages = [
             distance: "Road transfer",
             description:
               "After breakfast proceed to Darjeeling. Evening free for leisure and Mall Road exploration. Overnight stay at Darjeeling.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 6,
@@ -2062,10 +2217,10 @@ const packages = [
             distance: "Local sightseeing + train journey",
             description:
               "Early morning visit Tiger Hill, Batasia Loop, and Ghoom Monastery. After breakfast visit Padmaja Naidu Himalayan Zoological Park, HMI, Tenzing Rock, Japanese Temple, and Tea Garden. Later transfer to NJP Railway Station and board Vande Bharat Express for Howrah, arriving at night with sweet memories.",
-            images: [null, null]
-          }
-        ]
-      }
+            images: [null, null],
+          },
+        ],
+      },
     },
 
     included: [
@@ -2078,7 +2233,7 @@ const packages = [
       "Transportation",
       "Parking & toll tax",
       "Pick-up & drop",
-      "All possible sightseeing as per tour schedule"
+      "All possible sightseeing as per tour schedule",
     ],
 
     excluded: [
@@ -2092,7 +2247,7 @@ const packages = [
       "Forest permit charges",
       "Personal activities",
       "Any ride or safari",
-      "Any item not mentioned above"
+      "Any item not mentioned above",
     ],
 
     whatsapp: "https://wa.me/918910555711",
@@ -2101,7 +2256,7 @@ const packages = [
 
     enquiryLink: "#",
 
-    detailsLink: "/packages/pelling-ravangla-darjeeling-tour"
+    detailsLink: "/packages/pelling-ravangla-darjeeling-tour",
   },
   {
     id: 12,
@@ -2129,7 +2284,7 @@ const packages = [
       { id: 3, icon: Utensils, label: "Meals Included" },
       { id: 4, icon: Car, label: "AC Transport" },
       { id: 5, icon: Camera, label: "Sightseeing" },
-      { id: 6, icon: MapPinned, label: "Tour Assistance" }
+      { id: 6, icon: MapPinned, label: "Tour Assistance" },
     ],
 
     overview:
@@ -2147,7 +2302,7 @@ const packages = [
             distance: "Train journey",
             description:
               "Board 12259 Duronto Express from Sealdah Railway Station in the evening for Bikaner. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 2,
@@ -2155,7 +2310,7 @@ const packages = [
             distance: "Railway station transfer",
             description:
               "Arrive at Bikaner Railway Station and transfer to hotel. Evening free for leisure. Overnight stay at Bikaner.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 3,
@@ -2163,7 +2318,7 @@ const packages = [
             distance: "Road transfer",
             description:
               "Visit Junagarh Fort and Karni Mata Temple after breakfast. Later proceed to Jaisalmer. Overnight stay at Jaisalmer.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 4,
@@ -2171,7 +2326,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Sonar Kella and other local attractions. In the evening excursion to Sam Sand Dunes for tribal dance performance and optional camel ride. Return to Jaisalmer for overnight stay.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 5,
@@ -2179,7 +2334,7 @@ const packages = [
             distance: "Road transfer",
             description:
               "After breakfast proceed to Jodhpur. Overnight stay at Jodhpur.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 6,
@@ -2187,7 +2342,7 @@ const packages = [
             distance: "Road transfer",
             description:
               "Visit Umaid Bhawan Palace and Mehrangarh Fort in the morning. Later drive to Mount Abu. Overnight stay at Mount Abu.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 7,
@@ -2195,7 +2350,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Nakki Lake, Dilwara Temples, and Sunset Point. Overnight stay at Mount Abu.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 8,
@@ -2203,7 +2358,7 @@ const packages = [
             distance: "Road transfer",
             description:
               "Drive to Udaipur en route visiting Chittorgarh Fort. Overnight stay at Udaipur.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 9,
@@ -2211,7 +2366,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Moti Magri, Fateh Sagar Lake, Udaipur City Palace, and other major attractions. Overnight stay at Udaipur.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 10,
@@ -2219,7 +2374,7 @@ const packages = [
             distance: "Road transfer",
             description:
               "Travel to Pushkar via historic Haldighati. Overnight stay at Pushkar.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 11,
@@ -2227,7 +2382,7 @@ const packages = [
             distance: "Road transfer",
             description:
               "Early morning visit Pushkar and Ajmer Sharif (auto at own cost), then proceed to Jaipur. Overnight stay at Jaipur.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 12,
@@ -2235,7 +2390,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Amber Fort, Jantar Mantar, Hawa Mahal, Jal Mahal, City Palace, Nahargarh Fort, and other attractions. Evening free for personal activities. Overnight stay at Jaipur.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 13,
@@ -2243,7 +2398,7 @@ const packages = [
             distance: "Train journey",
             description:
               "After lunch transfer to Jaipur Railway Station and board 12988 train for return journey. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 14,
@@ -2251,10 +2406,10 @@ const packages = [
             distance: "Train arrival",
             description:
               "Arrive at Sealdah Railway Station with sweet memories of your Rajasthan tour.",
-            images: [null, null]
-          }
-        ]
-      }
+            images: [null, null],
+          },
+        ],
+      },
     },
 
     included: [
@@ -2268,7 +2423,7 @@ const packages = [
       "AC transportation",
       "Parking & toll tax",
       "Pick-up & drop",
-      "All possible sightseeing as per tour schedule"
+      "All possible sightseeing as per tour schedule",
     ],
 
     excluded: [
@@ -2283,7 +2438,7 @@ const packages = [
       "Personal activities",
       "Camel ride",
       "Any ride or safari",
-      "Any item not mentioned above"
+      "Any item not mentioned above",
     ],
 
     whatsapp: "https://wa.me/918910555711",
@@ -2292,7 +2447,7 @@ const packages = [
 
     enquiryLink: "#",
 
-    detailsLink: "/packages/rajasthan-grand-tour"
+    detailsLink: "/packages/rajasthan-grand-tour",
   },
   {
     id: 13,
@@ -2320,7 +2475,7 @@ const packages = [
       { id: 3, icon: Utensils, label: "Meals Included" },
       { id: 4, icon: Car, label: "Transport Included" },
       { id: 5, icon: Camera, label: "Sightseeing" },
-      { id: 6, icon: MapPinned, label: "Tour Assistance" }
+      { id: 6, icon: MapPinned, label: "Tour Assistance" },
     ],
 
     overview:
@@ -2338,7 +2493,7 @@ const packages = [
             distance: "Train journey",
             description:
               "Board train from Howrah / Shalimar Railway Station for Tirupati. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 2,
@@ -2346,7 +2501,7 @@ const packages = [
             distance: "Railway station transfer",
             description:
               "Arrive at Tirupati Railway Station and transfer to hotel. Overnight stay at Tirupati.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 3,
@@ -2354,7 +2509,7 @@ const packages = [
             distance: "Local visit",
             description:
               "Early morning visit to Lord Tirupati Balaji Temple for darshan and puja. Return to hotel. Overnight stay at Tirupati.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 4,
@@ -2362,7 +2517,7 @@ const packages = [
             distance: "Road transfer",
             description:
               "After breakfast proceed to Chennai. Overnight stay at Chennai.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 5,
@@ -2370,7 +2525,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Marina Beach, Gandhi Ghat, and Chennai local market. Overnight stay at Chennai.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 6,
@@ -2378,7 +2533,7 @@ const packages = [
             distance: "Road transfer",
             description:
               "Travel to Puducherry and visit Seaside Promenade, Sri Aurobindo Ashram, Rock Beach, Paradise Beach, and Manakula Vinayagar Temple. Overnight stay at Puducherry.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 7,
@@ -2386,7 +2541,7 @@ const packages = [
             distance: "Road transfer",
             description:
               "After breakfast drive to Madurai. Evening visit to Meenakshi Temple. Overnight stay at Madurai.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 8,
@@ -2394,7 +2549,7 @@ const packages = [
             distance: "Road transfer",
             description:
               "Proceed to Rameshwaram and visit Ramanathaswamy Temple and Dhanushkodi. Overnight stay at Rameshwaram.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 9,
@@ -2402,7 +2557,7 @@ const packages = [
             distance: "Road transfer",
             description:
               "After breakfast travel to Kanyakumari. Overnight stay at Kanyakumari.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 10,
@@ -2410,7 +2565,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Vivekananda Rock Memorial and Kanyakumari Temple. Overnight stay at Kanyakumari.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 11,
@@ -2418,7 +2573,7 @@ const packages = [
             distance: "Train journey",
             description:
               "After breakfast transfer to Kanyakumari / Nagercoil Junction Railway Station and board train for Kolkata. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 12,
@@ -2426,7 +2581,7 @@ const packages = [
             distance: "Full day train journey",
             description:
               "Continue return train journey towards Kolkata. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 13,
@@ -2434,10 +2589,10 @@ const packages = [
             distance: "Train arrival",
             description:
               "Arrive at Howrah / Shalimar Railway Station with sweet memories of your South India tour.",
-            images: [null, null]
-          }
-        ]
-      }
+            images: [null, null],
+          },
+        ],
+      },
     },
 
     included: [
@@ -2451,7 +2606,7 @@ const packages = [
       "Transportation",
       "Parking & toll tax",
       "Pick-up & drop",
-      "All possible sightseeing as per tour schedule"
+      "All possible sightseeing as per tour schedule",
     ],
 
     excluded: [
@@ -2465,7 +2620,7 @@ const packages = [
       "Forest permit charges",
       "Personal activities",
       "Any ride or safari",
-      "Any item not mentioned above"
+      "Any item not mentioned above",
     ],
 
     whatsapp: "https://wa.me/918910555711",
@@ -2474,7 +2629,7 @@ const packages = [
 
     enquiryLink: "#",
 
-    detailsLink: "/packages/south-india-temple-tour"
+    detailsLink: "/packages/south-india-temple-tour",
   },
   {
     id: 14,
@@ -2502,7 +2657,7 @@ const packages = [
       { id: 3, icon: Utensils, label: "Meals Included" },
       { id: 4, icon: Car, label: "Transport Included" },
       { id: 5, icon: Camera, label: "Sightseeing" },
-      { id: 6, icon: MapPinned, label: "Tour Assistance" }
+      { id: 6, icon: MapPinned, label: "Tour Assistance" },
     ],
 
     overview:
@@ -2520,7 +2675,7 @@ const packages = [
             distance: "Train journey",
             description:
               "Board Train 13151 Jammu Tawi Express from Kolkata Railway Station. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 2,
@@ -2528,7 +2683,7 @@ const packages = [
             distance: "Full day train journey",
             description:
               "Continue train journey towards Jammu. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 3,
@@ -2536,7 +2691,7 @@ const packages = [
             distance: "Train transfer",
             description:
               "Arrive at Jammu Railway Station and board Vande Bharat for Srinagar. Transfer to hotel on arrival. Overnight stay at Srinagar.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 4,
@@ -2544,7 +2699,7 @@ const packages = [
             distance: "201 km",
             description:
               "Drive through Sonamarg, Zoji La Pass, Drass, and Kargil War Memorial before reaching Kargil. Overnight stay at Kargil.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 5,
@@ -2552,7 +2707,7 @@ const packages = [
             distance: "215 km",
             description:
               "Travel via Mulbek, Lamayuru, Moonland, and the confluence of Indus and Zanskar Rivers before reaching Leh. Overnight stay at Leh.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 6,
@@ -2560,7 +2715,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Leh Monastery, Leh Palace, Zorawar Fort, Shanti Stupa, Hall of Fame, Shey Palace, Shey Monastery, and Rancho School. Overnight stay at Leh.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 7,
@@ -2568,7 +2723,7 @@ const packages = [
             distance: "150 km",
             description:
               "Cross the famous Khardung La Pass and enter Nubra Valley. Optional camel ride available at own cost. Overnight stay at Nubra Valley.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 8,
@@ -2576,7 +2731,7 @@ const packages = [
             distance: "Excursion",
             description:
               "Full-day excursion to Turtuk village near the Indo-Pak border region. Return to Nubra Valley for overnight stay.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 9,
@@ -2584,7 +2739,7 @@ const packages = [
             distance: "274 km",
             description:
               "Drive via Chang La Pass to the spectacular Pangong Lake. Enjoy the lakeside scenery and overnight stay near Pangong.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 10,
@@ -2592,7 +2747,7 @@ const packages = [
             distance: "310 km",
             description:
               "Proceed to the remote Hanle region known for its vast high-altitude plains and observatory area. Overnight stay at Hanle.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 11,
@@ -2600,7 +2755,7 @@ const packages = [
             distance: "253 km",
             description:
               "Return to Leh through the scenic Ladakhi landscape. Overnight stay at Leh.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 12,
@@ -2608,7 +2763,7 @@ const packages = [
             distance: "356 km",
             description:
               "Drive via Tanglang La, Baralacha La, and the high Himalayan passes to Keylong. Overnight stay at Keylong.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 13,
@@ -2616,7 +2771,7 @@ const packages = [
             distance: "70 km",
             description:
               "Travel through Atal Tunnel and Sissu village before reaching Manali. Overnight stay at Manali.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 14,
@@ -2624,7 +2779,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Hadimba Temple, Tibetan Monastery, Handicraft Centre, and Old Vashisht Village. Overnight stay at Manali.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 15,
@@ -2632,7 +2787,7 @@ const packages = [
             distance: "266 km",
             description:
               "Drive to Kalka / Chandigarh Railway Station and board Netaji Express for Kolkata. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 16,
@@ -2640,7 +2795,7 @@ const packages = [
             distance: "Full day train journey",
             description:
               "Continue return train journey towards Kolkata. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 17,
@@ -2648,10 +2803,10 @@ const packages = [
             distance: "Train arrival",
             description:
               "Arrive at Howrah Railway Station with unforgettable memories of your Ladakh expedition.",
-            images: [null, null]
-          }
-        ]
-      }
+            images: [null, null],
+          },
+        ],
+      },
     },
 
     included: [
@@ -2665,7 +2820,7 @@ const packages = [
       "Transportation",
       "Parking & toll tax",
       "Pick-up & drop",
-      "All possible sightseeing as per tour schedule"
+      "All possible sightseeing as per tour schedule",
     ],
 
     excluded: [
@@ -2679,7 +2834,7 @@ const packages = [
       "Camel ride in Nubra Valley",
       "Personal activities",
       "Any ride or safari",
-      "Any item not mentioned above"
+      "Any item not mentioned above",
     ],
 
     whatsapp: "https://wa.me/918910555711",
@@ -2688,7 +2843,7 @@ const packages = [
 
     enquiryLink: "#",
 
-    detailsLink: "/packages/ladakh-grand-expedition"
+    detailsLink: "/packages/ladakh-grand-expedition",
   },
   {
     id: 15,
@@ -2716,7 +2871,7 @@ const packages = [
       { id: 3, icon: Utensils, label: "Meals Included" },
       { id: 4, icon: Car, label: "Transport Included" },
       { id: 5, icon: Camera, label: "Sightseeing" },
-      { id: 6, icon: MapPinned, label: "Tour Assistance" }
+      { id: 6, icon: MapPinned, label: "Tour Assistance" },
     ],
 
     overview:
@@ -2734,7 +2889,7 @@ const packages = [
             distance: "Train journey",
             description:
               "Board Train 12863 / 12839 from Howrah Railway Station for Visakhapatnam. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 2,
@@ -2742,7 +2897,7 @@ const packages = [
             distance: "Railway station transfer",
             description:
               "Arrive at Visakhapatnam Railway Station and transfer to hotel. After lunch visit Rushikonda Beach, Kailashgiri, Submarine Museum, Lighthouse, and Ramanaidu Studio. Overnight stay at Vizag.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 3,
@@ -2750,7 +2905,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Simhachalam Hill Temple in the morning. After lunch explore R.K. Beach and Yarada Beach. Overnight stay at Vizag.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 4,
@@ -2758,7 +2913,7 @@ const packages = [
             distance: "Excursion by train / car",
             description:
               "Morning excursion to Araku Valley by train or car. Visit Borra Caves, Tribal Museum, gardens, and Chaparai. Return to Vizag for overnight stay.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 5,
@@ -2766,7 +2921,7 @@ const packages = [
             distance: "Train journey",
             description:
               "After lunch transfer to Visakhapatnam Railway Station and board train for Hyderabad. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 6,
@@ -2774,7 +2929,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Arrive at Hyderabad and transfer to hotel. Visit Charminar, Golconda Fort, Salar Jung Museum, Birla Temple, Lumbini Park, Chilkur Balaji Temple, and Buddha Statue. Overnight stay at Hyderabad.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 7,
@@ -2782,7 +2937,7 @@ const packages = [
             distance: "Road transfer",
             description:
               "After breakfast proceed to Mallikarjuna Jyotirlinga temple for darshan. Overnight stay at Mallikarjuna.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 8,
@@ -2790,7 +2945,7 @@ const packages = [
             distance: "Road transfer",
             description:
               "After breakfast return to Hyderabad. Overnight stay at Hyderabad.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 9,
@@ -2798,7 +2953,7 @@ const packages = [
             distance: "Excursion",
             description:
               "Full-day excursion to the world-famous Ramoji Film City. Overnight stay at Hyderabad.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 10,
@@ -2806,7 +2961,7 @@ const packages = [
             distance: "Train journey",
             description:
               "Check out from hotel and transfer to Hyderabad Railway Station for return train journey to Kolkata. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 11,
@@ -2814,10 +2969,10 @@ const packages = [
             distance: "Train arrival",
             description:
               "Arrive at Howrah Railway Station with sweet memories of your South India tour.",
-            images: [null, null]
-          }
-        ]
-      }
+            images: [null, null],
+          },
+        ],
+      },
     },
 
     included: [
@@ -2831,7 +2986,7 @@ const packages = [
       "Transportation",
       "Parking & toll tax",
       "Pick-up & drop",
-      "All possible sightseeing as per tour schedule"
+      "All possible sightseeing as per tour schedule",
     ],
 
     excluded: [
@@ -2845,7 +3000,7 @@ const packages = [
       "Permit charges",
       "Personal activities",
       "Any ride or safari",
-      "Any item not mentioned above"
+      "Any item not mentioned above",
     ],
 
     whatsapp: "https://wa.me/918910555711",
@@ -2854,7 +3009,7 @@ const packages = [
 
     enquiryLink: "#",
 
-    detailsLink: "/packages/vizag-hyderabad-mallikarjuna-tour"
+    detailsLink: "/packages/vizag-hyderabad-mallikarjuna-tour",
   },
   {
     id: 16,
@@ -2882,7 +3037,7 @@ const packages = [
       { id: 3, icon: Utensils, label: "Meals Included" },
       { id: 4, icon: Car, label: "Transport Included" },
       { id: 5, icon: Camera, label: "Sightseeing" },
-      { id: 6, icon: MapPinned, label: "Tour Assistance" }
+      { id: 6, icon: MapPinned, label: "Tour Assistance" },
     ],
 
     overview:
@@ -2900,7 +3055,7 @@ const packages = [
             distance: "Train journey",
             description:
               "Board Train 13151 from Kolkata Railway Station for Jammu. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 2,
@@ -2908,7 +3063,7 @@ const packages = [
             distance: "Full day train journey",
             description:
               "Continue train journey towards Jammu. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 3,
@@ -2916,7 +3071,7 @@ const packages = [
             distance: "Road transfer",
             description:
               "Arrive at Jammu Railway Station and transfer to Katra. Evening Vaishno Devi yatra and darshan. Return to hotel. Overnight stay at Katra.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 4,
@@ -2924,7 +3079,7 @@ const packages = [
             distance: "Leisure",
             description:
               "Full day rest and leisure at Katra. Overnight stay at Katra.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 5,
@@ -2932,7 +3087,7 @@ const packages = [
             distance: "Road transfer",
             description:
               "Drive to Srinagar and transfer to hotel on arrival. Overnight stay at Srinagar.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 6,
@@ -2940,7 +3095,7 @@ const packages = [
             distance: "Excursion",
             description:
               "Full-day excursion to Sonamarg and return to Srinagar. Overnight stay at Srinagar.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 7,
@@ -2948,7 +3103,7 @@ const packages = [
             distance: "Excursion",
             description:
               "Visit Gulmarg and return to Srinagar in the evening. Overnight stay at Srinagar.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 8,
@@ -2956,7 +3111,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Tulip Garden, Mughal Gardens, Chashme Shahi Garden, and local attractions. Optional Shikara ride on Dal Lake at own cost. Overnight stay at Srinagar.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 9,
@@ -2964,7 +3119,7 @@ const packages = [
             distance: "Road transfer",
             description:
               "Drive to Pahalgam and enjoy the beautiful valley surroundings. Overnight stay at Pahalgam.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 10,
@@ -2972,7 +3127,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Chandanwari, Betab Valley, and Aru Valley (optional and at own cost). Overnight stay at Pahalgam.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 11,
@@ -2980,7 +3135,7 @@ const packages = [
             distance: "Road transfer",
             description:
               "Visit Patnitop, Natha Top, and Nag Temple, then proceed to Jammu Railway Station for return train journey. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 12,
@@ -2988,7 +3143,7 @@ const packages = [
             distance: "Full day train journey",
             description:
               "Continue return train journey towards Kolkata. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 13,
@@ -2996,9 +3151,9 @@ const packages = [
             distance: "Train arrival",
             description:
               "Arrive at Howrah / Sealdah Railway Station with sweet memories of your Kashmir tour.",
-            images: [null, null]
-          }
-        ]
+            images: [null, null],
+          },
+        ],
       },
 
       package2: {
@@ -3012,7 +3167,7 @@ const packages = [
             distance: "Train journey",
             description:
               "Board Train 13005 from Howrah Railway Station for Amritsar. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 2,
@@ -3020,7 +3175,7 @@ const packages = [
             distance: "Full day train journey",
             description:
               "Continue train journey towards Amritsar. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 3,
@@ -3028,7 +3183,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Golden Temple, Jallianwala Bagh, and Wagah Border ceremony. Overnight stay at Amritsar.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 4,
@@ -3036,7 +3191,7 @@ const packages = [
             distance: "Road transfer",
             description:
               "Proceed to Katra and begin Vaishno Devi yatra in the evening. Return to hotel after darshan. Overnight stay at Katra.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 5,
@@ -3044,7 +3199,7 @@ const packages = [
             distance: "Leisure",
             description:
               "Full day rest and leisure at Katra. Overnight stay at Katra.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 6,
@@ -3052,7 +3207,7 @@ const packages = [
             distance: "Road transfer",
             description:
               "Drive to Srinagar and transfer to hotel on arrival. Overnight stay at Srinagar.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 7,
@@ -3060,7 +3215,7 @@ const packages = [
             distance: "Excursion",
             description:
               "Full-day excursion to Sonamarg and return to Srinagar. Overnight stay at Srinagar.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 8,
@@ -3068,7 +3223,7 @@ const packages = [
             distance: "Excursion",
             description:
               "Visit Gulmarg and return to Srinagar in the evening. Overnight stay at Srinagar.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 9,
@@ -3076,7 +3231,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Tulip Garden, Mughal Gardens, Chashme Shahi Garden, and local attractions. Optional Shikara ride on Dal Lake at own cost. Overnight stay at Srinagar.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 10,
@@ -3084,7 +3239,7 @@ const packages = [
             distance: "Road transfer",
             description:
               "Drive to Pahalgam and enjoy the beautiful valley surroundings. Overnight stay at Pahalgam.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 11,
@@ -3092,7 +3247,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Chandanwari, Betab Valley, and Aru Valley (optional and at own cost). Overnight stay at Pahalgam.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 12,
@@ -3100,7 +3255,7 @@ const packages = [
             distance: "Road transfer",
             description:
               "Proceed to Patnitop and enjoy the hill station surroundings. Overnight stay at Patnitop.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 13,
@@ -3108,7 +3263,7 @@ const packages = [
             distance: "Road transfer",
             description:
               "Visit Natha Top and Nag Temple before proceeding to Jammu Railway Station for return train journey. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 14,
@@ -3116,7 +3271,7 @@ const packages = [
             distance: "Full day train journey",
             description:
               "Continue return train journey towards Kolkata. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 15,
@@ -3124,10 +3279,10 @@ const packages = [
             distance: "Train arrival",
             description:
               "Arrive at Howrah / Sealdah Railway Station with sweet memories of your Kashmir tour.",
-            images: [null, null]
-          }
-        ]
-      }
+            images: [null, null],
+          },
+        ],
+      },
     },
 
     included: [
@@ -3141,7 +3296,7 @@ const packages = [
       "Transportation",
       "Parking & toll tax",
       "Pick-up & drop",
-      "All possible sightseeing as per tour schedule"
+      "All possible sightseeing as per tour schedule",
     ],
 
     excluded: [
@@ -3156,7 +3311,7 @@ const packages = [
       "Pahalgam local union sightseeing",
       "Personal activities",
       "Any ride or safari",
-      "Any item not mentioned above"
+      "Any item not mentioned above",
     ],
 
     whatsapp: "https://wa.me/918910555711",
@@ -3165,7 +3320,7 @@ const packages = [
 
     enquiryLink: "#",
 
-    detailsLink: "/packages/kashmir-tour"
+    detailsLink: "/packages/kashmir-tour",
   },
   {
     id: 17,
@@ -3184,7 +3339,8 @@ const packages = [
 
     rating: 9.2,
 
-    location: "Shimla • Sarahan • Sangla • Kalpa • Tabo • Kaza • Chandratal • Manali",
+    location:
+      "Shimla • Sarahan • Sangla • Kalpa • Tabo • Kaza • Chandratal • Manali",
 
     facilities: [
       { id: 1, icon: Hotel, label: "Hotel Stay" },
@@ -3192,7 +3348,7 @@ const packages = [
       { id: 3, icon: Car, label: "Transportation" },
       { id: 4, icon: Camera, label: "Sightseeing" },
       { id: 5, icon: MapPinned, label: "Mountain Circuit" },
-      { id: 6, icon: Plane, label: "Train Included" }
+      { id: 6, icon: Plane, label: "Train Included" },
     ],
 
     overview:
@@ -3209,7 +3365,7 @@ const packages = [
             distance: "Train journey",
             description:
               "Board train from Kolkata Railway Station for Ambala. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 2,
@@ -3217,7 +3373,7 @@ const packages = [
             distance: "115 km",
             description:
               "Arrive at Ambala and transfer to Shimla. Visit Mall Road and Kali Bari by walk. Overnight stay at Shimla.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 3,
@@ -3225,7 +3381,7 @@ const packages = [
             distance: "170 km",
             description:
               "After breakfast proceed to Sarahan. Overnight stay at Sarahan.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 4,
@@ -3233,7 +3389,7 @@ const packages = [
             distance: "95 km",
             description:
               "Visit Bhimakali Temple and Rajbari, then drive to Sangla via Karcham. Overnight stay at Sangla.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 5,
@@ -3241,7 +3397,7 @@ const packages = [
             distance: "90 km",
             description:
               "Excursion to Chitkul, then continue to Kalpa via Reckong Peo. Visit Roghi Village, Chini Village, and Suicide Point. Overnight stay at Kalpa.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 6,
@@ -3249,7 +3405,7 @@ const packages = [
             distance: "150 km",
             description:
               "Drive through the dramatic Spiti landscape via Nako Lake and reach Tabo. Overnight stay at Tabo.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 7,
@@ -3257,7 +3413,7 @@ const packages = [
             distance: "50 km",
             description:
               "Visit Tabo Monastery, then proceed to Kaza via Dhankar Monastery and Kaza Monastery. Overnight stay at Kaza.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 8,
@@ -3265,7 +3421,7 @@ const packages = [
             distance: "Excursion",
             description:
               "Visit Key Monastery and Kibber Village. Return to Kaza for overnight stay.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 9,
@@ -3273,7 +3429,7 @@ const packages = [
             distance: "95 km",
             description:
               "Drive via Kunzum Pass to Chandratal Lake. Overnight stay at Chandratal.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 10,
@@ -3281,7 +3437,7 @@ const packages = [
             distance: "130 km",
             description:
               "Proceed to Manali via Sissu Village and Atal Tunnel. Overnight stay at Manali.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 11,
@@ -3289,7 +3445,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Hidimba Temple, Tibetan Monastery, Handicraft Centre, and Old Vashisht Village. Overnight stay at Manali.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 12,
@@ -3297,7 +3453,7 @@ const packages = [
             distance: "300 km",
             description:
               "After breakfast transfer to Ambala Railway Station for return train journey. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 13,
@@ -3305,9 +3461,9 @@ const packages = [
             distance: "Train arrival",
             description:
               "Arrive at Howrah Railway Station with sweet memories of Kinnaur and Spiti.",
-            images: [null, null]
-          }
-        ]
+            images: [null, null],
+          },
+        ],
       },
 
       package2: {
@@ -3320,15 +3476,14 @@ const packages = [
             distance: "Train journey",
             description:
               "Board train from Howrah for Chandigarh/Kalka. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 2,
             title: "Train Journey",
             distance: "Full day train journey",
-            description:
-              "Continue train journey. Overnight stay in train.",
-            images: [null, null]
+            description: "Continue train journey. Overnight stay in train.",
+            images: [null, null],
           },
           {
             day: 3,
@@ -3336,7 +3491,7 @@ const packages = [
             distance: "115 km",
             description:
               "Transfer to Shimla and visit Mall Road and Kali Bari. Overnight stay at Shimla.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 4,
@@ -3344,15 +3499,14 @@ const packages = [
             distance: "Excursion",
             description:
               "Visit Kufri, Fagu, and Green Valley. Overnight stay at Shimla.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 5,
             title: "Shimla → Sarahan",
             distance: "170 km",
-            description:
-              "Proceed to Sarahan. Overnight stay at Sarahan.",
-            images: [null, null]
+            description: "Proceed to Sarahan. Overnight stay at Sarahan.",
+            images: [null, null],
           },
           {
             day: 6,
@@ -3360,7 +3514,7 @@ const packages = [
             distance: "95 km",
             description:
               "Visit Bhimakali Temple and drive to Sangla via Karcham. Overnight stay at Sangla.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 7,
@@ -3368,15 +3522,14 @@ const packages = [
             distance: "90 km",
             description:
               "Visit Chitkul, then continue to Kalpa via Reckong Peo and local viewpoints. Overnight stay at Kalpa.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 8,
             title: "Kalpa → Tabo",
             distance: "150 km",
-            description:
-              "Drive to Tabo via Nako Lake. Overnight stay at Tabo.",
-            images: [null, null]
+            description: "Drive to Tabo via Nako Lake. Overnight stay at Tabo.",
+            images: [null, null],
           },
           {
             day: 9,
@@ -3384,7 +3537,7 @@ const packages = [
             distance: "50 km",
             description:
               "Visit Tabo Monastery, Dhankar Monastery, Key Monastery, Hikkim, and Kibber before reaching Kaza. Overnight stay at Kaza.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 10,
@@ -3392,7 +3545,7 @@ const packages = [
             distance: "95 km",
             description:
               "Travel via Kunzum Pass to Chandratal Lake. Overnight stay at Chandratal.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 11,
@@ -3400,7 +3553,7 @@ const packages = [
             distance: "130 km",
             description:
               "Drive to Manali via Sissu Village and Atal Tunnel. Overnight stay at Manali.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 12,
@@ -3408,7 +3561,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Hidimba Temple, Tibetan Monastery, Handicraft Centre, and Old Vashisht Village. Overnight stay at Manali.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 13,
@@ -3416,7 +3569,7 @@ const packages = [
             distance: "300 km",
             description:
               "Transfer to Chandigarh/Kalka Railway Station for return train journey. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 14,
@@ -3424,7 +3577,7 @@ const packages = [
             distance: "Full day train journey",
             description:
               "Continue return train journey. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 15,
@@ -3432,10 +3585,10 @@ const packages = [
             distance: "Train arrival",
             description:
               "Arrive at Howrah Railway Station with unforgettable memories of the Himalayan circuit.",
-            images: [null, null]
-          }
-        ]
-      }
+            images: [null, null],
+          },
+        ],
+      },
     },
 
     included: [
@@ -3450,7 +3603,7 @@ const packages = [
       "Parking charges",
       "Toll tax",
       "Pick-up & drop",
-      "All possible sightseeing as per itinerary"
+      "All possible sightseeing as per itinerary",
     ],
 
     excluded: [
@@ -3464,7 +3617,7 @@ const packages = [
       "Permits",
       "Personal activities",
       "Any ride or safari",
-      "Any item not mentioned above"
+      "Any item not mentioned above",
     ],
 
     whatsapp: "https://wa.me/918910555711",
@@ -3473,7 +3626,7 @@ const packages = [
 
     enquiryLink: "#",
 
-    detailsLink: "/packages/kinnaur-la-hul-spiti"
+    detailsLink: "/packages/kinnaur-la-hul-spiti",
   },
   {
     id: 18,
@@ -3492,7 +3645,8 @@ const packages = [
 
     rating: 9.1,
 
-    location: "Guwahati • Shillong • Cherrapunji • Dawki • Mawlynnong • Kaziranga",
+    location:
+      "Guwahati • Shillong • Cherrapunji • Dawki • Mawlynnong • Kaziranga",
 
     facilities: [
       { id: 1, icon: Hotel, label: "Hotel Stay" },
@@ -3500,7 +3654,7 @@ const packages = [
       { id: 3, icon: Car, label: "Transportation" },
       { id: 4, icon: Camera, label: "Sightseeing" },
       { id: 5, icon: MapPinned, label: "Nature & Waterfalls" },
-      { id: 6, icon: Plane, label: "Train Included" }
+      { id: 6, icon: Plane, label: "Train Included" },
     ],
 
     overview:
@@ -3517,7 +3671,7 @@ const packages = [
             distance: "Train journey",
             description:
               "Board train from Howrah Railway Station for Guwahati. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 2,
@@ -3525,7 +3679,7 @@ const packages = [
             distance: "Railway station transfer",
             description:
               "Arrive at Guwahati and transfer to hotel. Visit Vasistha Ashram, Kamakhya Temple, and Balaji Temple depending on arrival time. Overnight stay at Guwahati.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 3,
@@ -3533,7 +3687,7 @@ const packages = [
             distance: "100 km",
             description:
               "After breakfast transfer to Shillong via the scenic Borapani (Umiam) Lake. Overnight stay at Shillong.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 4,
@@ -3541,7 +3695,7 @@ const packages = [
             distance: "Full day excursion",
             description:
               "Visit Nohkalikai Falls, Seven Sisters Falls, Dainthlen Falls, Thangkharang Park, Elephanta Falls, Living Root Bridge, and Ramakrishna Mission. Return to Shillong for overnight stay.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 5,
@@ -3549,7 +3703,7 @@ const packages = [
             distance: "Full day excursion",
             description:
               "Explore Mawlynnong village and enjoy the crystal-clear Dawki River. Overnight stay at Shillong.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 6,
@@ -3557,7 +3711,7 @@ const packages = [
             distance: "100 km",
             description:
               "After breakfast return to Guwahati. Overnight stay at Guwahati.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 7,
@@ -3565,7 +3719,7 @@ const packages = [
             distance: "Railway station transfer",
             description:
               "After breakfast transfer to Guwahati Railway Station for return train journey. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 8,
@@ -3573,9 +3727,9 @@ const packages = [
             distance: "Train arrival",
             description:
               "Arrive at Howrah Railway Station with sweet memories of Meghalaya.",
-            images: [null, null]
-          }
-        ]
+            images: [null, null],
+          },
+        ],
       },
 
       package2: {
@@ -3588,7 +3742,7 @@ const packages = [
             distance: "Train journey",
             description:
               "Board train from Howrah Railway Station for Guwahati. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 2,
@@ -3596,7 +3750,7 @@ const packages = [
             distance: "Railway station transfer",
             description:
               "Arrive at Guwahati and transfer to hotel. Visit Vasistha Ashram, Kamakhya Temple, and Balaji Temple depending on arrival time. Overnight stay at Guwahati.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 3,
@@ -3604,7 +3758,7 @@ const packages = [
             distance: "100 km",
             description:
               "After breakfast transfer to Shillong via Borapani Lake. Overnight stay at Shillong.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 4,
@@ -3612,7 +3766,7 @@ const packages = [
             distance: "Full day excursion",
             description:
               "Visit Nohkalikai Falls, Seven Sisters Falls, Dainthlen Falls, Thangkharang Park, Elephanta Falls, Living Root Bridge, and Ramakrishna Mission. Return to Shillong for overnight stay.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 5,
@@ -3620,7 +3774,7 @@ const packages = [
             distance: "Full day excursion",
             description:
               "Explore Mawlynnong village and enjoy the beautiful Dawki River. Overnight stay at Shillong.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 6,
@@ -3628,7 +3782,7 @@ const packages = [
             distance: "270 km",
             description:
               "Transfer to Kaziranga National Park. Evening tribal dance (optional & own cost). Overnight stay at Kaziranga.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 7,
@@ -3636,7 +3790,7 @@ const packages = [
             distance: "220 km",
             description:
               "Early morning jungle safari (optional & own cost). After breakfast return to Guwahati. Overnight stay at Guwahati.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 8,
@@ -3644,7 +3798,7 @@ const packages = [
             distance: "Railway station transfer",
             description:
               "After breakfast transfer to Guwahati Railway Station for return train journey. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 9,
@@ -3652,10 +3806,10 @@ const packages = [
             distance: "Train arrival",
             description:
               "Arrive at Howrah Railway Station with sweet memories of Meghalaya and Kaziranga.",
-            images: [null, null]
-          }
-        ]
-      }
+            images: [null, null],
+          },
+        ],
+      },
     },
 
     included: [
@@ -3670,7 +3824,7 @@ const packages = [
       "Parking charges",
       "Toll tax",
       "Pick-up & drop",
-      "All possible sightseeing as per itinerary"
+      "All possible sightseeing as per itinerary",
     ],
 
     excluded: [
@@ -3684,7 +3838,7 @@ const packages = [
       "Forest permits",
       "Personal activities",
       "Any ride or safari",
-      "Any item not mentioned above"
+      "Any item not mentioned above",
     ],
 
     whatsapp: "https://wa.me/918910555711",
@@ -3693,7 +3847,7 @@ const packages = [
 
     enquiryLink: "#",
 
-    detailsLink: "/packages/meghalaya-tour"
+    detailsLink: "/packages/meghalaya-tour",
   },
   {
     id: 19,
@@ -3712,7 +3866,8 @@ const packages = [
 
     rating: 9.0,
 
-    location: "Agra • Mathura • Vrindavan • Delhi • Haridwar • Rishikesh • Mussoorie • Varanasi",
+    location:
+      "Agra • Mathura • Vrindavan • Delhi • Haridwar • Rishikesh • Mussoorie • Varanasi",
 
     facilities: [
       { id: 1, icon: Hotel, label: "Deluxe Hotel Stay" },
@@ -3720,7 +3875,7 @@ const packages = [
       { id: 3, icon: Car, label: "Transportation" },
       { id: 4, icon: Camera, label: "Sightseeing" },
       { id: 5, icon: MapPinned, label: "Temple & Heritage Tour" },
-      { id: 6, icon: Plane, label: "Train Included" }
+      { id: 6, icon: Plane, label: "Train Included" },
     ],
 
     overview:
@@ -3737,7 +3892,7 @@ const packages = [
             distance: "Train journey",
             description:
               "Board train from Howrah Railway Station for Agra. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 2,
@@ -3745,7 +3900,7 @@ const packages = [
             distance: "Railway station transfer",
             description:
               "Arrive at Agra Railway Station and transfer to hotel. Overnight stay at Agra.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 3,
@@ -3753,7 +3908,7 @@ const packages = [
             distance: "80 km",
             description:
               "Visit Taj Mahal, Agra Fort, and Fatehpur Sikri. Later proceed to Vrindavan. Overnight stay at Vrindavan.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 4,
@@ -3761,7 +3916,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Shri Krishna Janmabhoomi, ISKCON Temple, Madan Mohan Temple, and Shahji Temple. Overnight stay at Vrindavan.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 5,
@@ -3769,7 +3924,7 @@ const packages = [
             distance: "180 km",
             description:
               "Early morning transfer to Delhi and check in to hotel. Overnight stay at Delhi.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 6,
@@ -3777,7 +3932,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Rajghat, Qutub Minar, Red Fort, Indira Museum, Lotus Temple, and India Gate. Overnight stay at Delhi.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 7,
@@ -3785,7 +3940,7 @@ const packages = [
             distance: "Train journey",
             description:
               "Take morning train to Haridwar. Enjoy Ganga bath and evening Ganga Aarti. Overnight stay at Haridwar.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 8,
@@ -3793,7 +3948,7 @@ const packages = [
             distance: "Local excursion",
             description:
               "Visit Ram Jhula and Laxman Jhula in Rishikesh. Return to Haridwar for overnight stay.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 9,
@@ -3801,7 +3956,7 @@ const packages = [
             distance: "Local excursion + train",
             description:
               "Visit Kempty Falls and Sahastradhara in Mussoorie. Return to Haridwar and board train for Kolkata. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 10,
@@ -3809,7 +3964,7 @@ const packages = [
             distance: "Train journey",
             description:
               "Full day train journey back to Kolkata. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 11,
@@ -3817,9 +3972,9 @@ const packages = [
             distance: "Train arrival",
             description:
               "Arrive at Howrah Railway Station with sweet memories of North India.",
-            images: [null, null]
-          }
-        ]
+            images: [null, null],
+          },
+        ],
       },
       package2: {
         duration: "12 Nights / 13 Days",
@@ -3831,7 +3986,7 @@ const packages = [
             distance: "Train journey",
             description:
               "Board train from Howrah Railway Station for Agra. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 2,
@@ -3839,7 +3994,7 @@ const packages = [
             distance: "Railway station transfer",
             description:
               "Arrive at Agra Railway Station and transfer to hotel. Overnight stay at Agra.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 3,
@@ -3847,7 +4002,7 @@ const packages = [
             distance: "80 km",
             description:
               "Visit Taj Mahal, Agra Fort, and Fatehpur Sikri. Later proceed to Vrindavan. Overnight stay at Vrindavan.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 4,
@@ -3855,7 +4010,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Shri Krishna Janmabhoomi, ISKCON Temple, Madan Mohan Temple, Shahji Temple, and Prem Mandir. Overnight stay at Vrindavan.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 5,
@@ -3863,7 +4018,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Banke Bihari Temple, Nidhivan, Bharat Mata Temple, Barsana, Govardhan Hill, Radha Kund, and Shyam Kund. Overnight stay at Vrindavan.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 6,
@@ -3871,7 +4026,7 @@ const packages = [
             distance: "180 km",
             description:
               "Early morning transfer to Delhi and check in to hotel. Overnight stay at Delhi.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 7,
@@ -3879,7 +4034,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Rajghat, Qutub Minar, Red Fort, Indira Museum, Lotus Temple, and India Gate. Overnight stay at Delhi.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 8,
@@ -3887,7 +4042,7 @@ const packages = [
             distance: "Train journey",
             description:
               "Take morning train to Haridwar. Enjoy Ganga bath and evening Ganga Aarti. Overnight stay at Haridwar.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 9,
@@ -3895,7 +4050,7 @@ const packages = [
             distance: "Local excursion",
             description:
               "Visit Ram Jhula and Laxman Jhula in Rishikesh. Return to Haridwar for overnight stay.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 10,
@@ -3903,7 +4058,7 @@ const packages = [
             distance: "Local excursion + train",
             description:
               "Visit Kempty Falls and Sahastradhara in Mussoorie. Return to Haridwar and board train for Varanasi. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 11,
@@ -3911,7 +4066,7 @@ const packages = [
             distance: "Railway station transfer",
             description:
               "Arrive at Varanasi and visit Annapurna Temple, Birla Temple, and Kashi Vishwanath Temple. Evening Ganga Aarti; boat ride optional. Overnight stay at Varanasi.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 12,
@@ -3919,7 +4074,7 @@ const packages = [
             distance: "Railway station transfer",
             description:
               "After breakfast transfer to Varanasi Railway Station for return train journey. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 13,
@@ -3927,9 +4082,9 @@ const packages = [
             distance: "Train arrival",
             description:
               "Arrive at Howrah / Sealdah Railway Station with sweet memories of North India.",
-            images: [null, null]
-          }
-        ]
+            images: [null, null],
+          },
+        ],
       },
     },
 
@@ -3945,7 +4100,7 @@ const packages = [
       "Parking charges",
       "Toll tax",
       "Pick-up & drop",
-      "All possible sightseeing as per itinerary"
+      "All possible sightseeing as per itinerary",
     ],
 
     excluded: [
@@ -3958,7 +4113,7 @@ const packages = [
       "Forest permits",
       "Personal activities",
       "Any ride or safari",
-      "Any item not mentioned above"
+      "Any item not mentioned above",
     ],
 
     whatsapp: "https://wa.me/918910555711",
@@ -3967,7 +4122,7 @@ const packages = [
 
     enquiryLink: "#",
 
-    detailsLink: "/packages/north-india-tour"
+    detailsLink: "/packages/north-india-tour",
   },
   {
     id: 20,
@@ -3986,7 +4141,8 @@ const packages = [
 
     rating: 9.2,
 
-    location: "Gangtok • Lachen • Gurudongmar Lake • Lachung • Yumthang Valley • Nathula • Pelling",
+    location:
+      "Gangtok • Lachen • Gurudongmar Lake • Lachung • Yumthang Valley • Nathula • Pelling",
 
     facilities: [
       { id: 1, icon: Hotel, label: "Deluxe Hotel Stay" },
@@ -3994,7 +4150,7 @@ const packages = [
       { id: 3, icon: Car, label: "Transportation" },
       { id: 4, icon: Camera, label: "Sightseeing" },
       { id: 5, icon: MapPinned, label: "Mountain & Valley Tour" },
-      { id: 6, icon: Plane, label: "Train Included" }
+      { id: 6, icon: Plane, label: "Train Included" },
     ],
 
     overview:
@@ -4011,7 +4167,7 @@ const packages = [
             distance: "Train journey",
             description:
               "Board train from Howrah / Sealdah Railway Station for NJP. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 2,
@@ -4019,7 +4175,7 @@ const packages = [
             distance: "NJP → Gangtok",
             description:
               "Arrive at NJP Railway Station and transfer to Gangtok. Evening visit to MG Marg and Mall Road on foot. Overnight stay at Gangtok.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 3,
@@ -4027,7 +4183,7 @@ const packages = [
             distance: "Approx. 120 km",
             description:
               "After breakfast proceed to Lachen with en-route sightseeing. Overnight stay at Lachen.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 4,
@@ -4035,7 +4191,7 @@ const packages = [
             distance: "Approx. 130 km",
             description:
               "Visit Gurudongmar Lake in the morning and continue to Lachung. Overnight stay at Lachung.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 5,
@@ -4043,7 +4199,7 @@ const packages = [
             distance: "Approx. 125 km",
             description:
               "Visit Yumthang Valley and optional Zero Point. Return to Gangtok. Overnight stay at Gangtok.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 6,
@@ -4051,7 +4207,7 @@ const packages = [
             distance: "Local excursion",
             description:
               "Visit Tsomgo Lake, Baba Mandir, and Nathula Pass. Overnight stay at Gangtok.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 7,
@@ -4059,7 +4215,7 @@ const packages = [
             distance: "Approx. 115 km",
             description:
               "After breakfast transfer to Pelling. Overnight stay at Pelling.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 8,
@@ -4067,7 +4223,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Pelling local attractions including the famous 5 Points sightseeing circuit and Singshore Bridge. Overnight stay at Pelling.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 9,
@@ -4075,7 +4231,7 @@ const packages = [
             distance: "Approx. 140 km + train",
             description:
               "Transfer to NJP Railway Station and board train for Kolkata. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 10,
@@ -4083,10 +4239,10 @@ const packages = [
             distance: "Train arrival",
             description:
               "Arrive at Howrah / Sealdah Railway Station with sweet memories of North Sikkim.",
-            images: [null, null]
-          }
-        ]
-      }
+            images: [null, null],
+          },
+        ],
+      },
     },
 
     included: [
@@ -4100,7 +4256,7 @@ const packages = [
       "Parking charges",
       "Toll tax",
       "Pick-up & drop",
-      "All possible sightseeing as per itinerary"
+      "All possible sightseeing as per itinerary",
     ],
 
     excluded: [
@@ -4115,7 +4271,7 @@ const packages = [
       "Any ride",
       "Personal activities",
       "Any safari",
-      "Any item not mentioned above"
+      "Any item not mentioned above",
     ],
 
     whatsapp: "https://wa.me/918910555711",
@@ -4124,7 +4280,7 @@ const packages = [
 
     enquiryLink: "#",
 
-    detailsLink: "/packages/north-sikkim-tour"
+    detailsLink: "/packages/north-sikkim-tour",
   },
   {
     id: 21,
@@ -4151,7 +4307,7 @@ const packages = [
       { id: 3, icon: Car, label: "Transportation" },
       { id: 4, icon: Camera, label: "Sightseeing" },
       { id: 5, icon: MapPinned, label: "Beach Tour" },
-      { id: 6, icon: Plane, label: "Train Included" }
+      { id: 6, icon: Plane, label: "Train Included" },
     ],
 
     overview:
@@ -4168,15 +4324,14 @@ const packages = [
             distance: "Train journey",
             description:
               "Board train from Shalimar Railway Station for Madgaon. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 2,
             title: "Train Journey",
             distance: "Train journey",
-            description:
-              "Full day train journey. Overnight stay in train.",
-            images: [null, null]
+            description: "Full day train journey. Overnight stay in train.",
+            images: [null, null],
           },
           {
             day: 3,
@@ -4184,7 +4339,7 @@ const packages = [
             distance: "Railway station transfer",
             description:
               "Arrive at Madgaon Railway Station and transfer to hotel. Overnight stay at Goa.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 4,
@@ -4192,7 +4347,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Dolphin Point, Aguada Fort, Baga Beach, Calangute Beach, and Miramar Beach. Return to hotel for overnight stay.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 5,
@@ -4200,7 +4355,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit St. Xavier's Church, Mangesh Temple, Santadurga Temple, and Colva Beach. Return to hotel for overnight stay.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 6,
@@ -4208,7 +4363,7 @@ const packages = [
             distance: "Free day",
             description:
               "Full day free for personal activities, shopping, beach time, or optional water sports. Overnight stay at Goa.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 7,
@@ -4216,7 +4371,7 @@ const packages = [
             distance: "Train journey",
             description:
               "Early morning check-out and transfer to Madgaon Railway Station. Board train for Kolkata. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 8,
@@ -4224,9 +4379,9 @@ const packages = [
             distance: "Train arrival",
             description:
               "Arrive at Shalimar Railway Station with sweet memories of Goa.",
-            images: [null, null]
-          }
-        ]
+            images: [null, null],
+          },
+        ],
       },
 
       package2: {
@@ -4239,15 +4394,14 @@ const packages = [
             distance: "Train journey",
             description:
               "Board train from Shalimar Railway Station for Madgaon. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 2,
             title: "Train Journey",
             distance: "Train journey",
-            description:
-              "Full day train journey. Overnight stay in train.",
-            images: [null, null]
+            description: "Full day train journey. Overnight stay in train.",
+            images: [null, null],
           },
           {
             day: 3,
@@ -4255,7 +4409,7 @@ const packages = [
             distance: "Railway station transfer",
             description:
               "Arrive at Madgaon Railway Station and transfer to hotel. Overnight stay at Goa.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 4,
@@ -4263,7 +4417,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Dolphin Point, Aguada Fort, Baga Beach, Calangute Beach, and Miramar Beach. Return to hotel for overnight stay.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 5,
@@ -4271,7 +4425,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit St. Xavier's Church, Mangesh Temple, Santadurga Temple, and Colva Beach. Return to hotel for overnight stay.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 6,
@@ -4279,7 +4433,7 @@ const packages = [
             distance: "Free day",
             description:
               "Full day free for personal activities, shopping, beach time, or optional water sports. Overnight stay at Goa.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 7,
@@ -4287,7 +4441,7 @@ const packages = [
             distance: "Free day",
             description:
               "Enjoy an additional full day in Goa for relaxation, beach activities, local markets, cafés, or optional sightseeing. Overnight stay at Goa.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 8,
@@ -4295,7 +4449,7 @@ const packages = [
             distance: "Train journey",
             description:
               "Early morning check-out and transfer to Madgaon Railway Station. Board train for Kolkata. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 9,
@@ -4303,10 +4457,10 @@ const packages = [
             distance: "Train arrival",
             description:
               "Arrive at Shalimar Railway Station with sweet memories of Goa.",
-            images: [null, null]
-          }
-        ]
-      }
+            images: [null, null],
+          },
+        ],
+      },
     },
 
     included: [
@@ -4321,7 +4475,7 @@ const packages = [
       "Parking charges",
       "Toll tax",
       "Pick-up & drop",
-      "All possible sightseeing as per itinerary"
+      "All possible sightseeing as per itinerary",
     ],
 
     excluded: [
@@ -4336,7 +4490,7 @@ const packages = [
       "Permits",
       "Personal activities",
       "Any safari",
-      "Any item not mentioned above"
+      "Any item not mentioned above",
     ],
 
     whatsapp: "https://wa.me/918910555711",
@@ -4345,7 +4499,7 @@ const packages = [
 
     enquiryLink: "#",
 
-    detailsLink: "/packages/goa-tour"
+    detailsLink: "/packages/goa-tour",
   },
   {
     id: 22,
@@ -4364,7 +4518,8 @@ const packages = [
 
     rating: 9.1,
 
-    location: "Udupi • Coorg • Mysuru • Hampi • Hospet • Badami • Gokarna • Bengaluru",
+    location:
+      "Udupi • Coorg • Mysuru • Hampi • Hospet • Badami • Gokarna • Bengaluru",
 
     facilities: [
       { id: 1, icon: Hotel, label: "Deluxe Hotel Stay" },
@@ -4372,7 +4527,7 @@ const packages = [
       { id: 3, icon: Car, label: "AC Transportation" },
       { id: 4, icon: Camera, label: "Sightseeing" },
       { id: 5, icon: MapPinned, label: "Temple & Heritage Tour" },
-      { id: 6, icon: Plane, label: "Train Included" }
+      { id: 6, icon: Plane, label: "Train Included" },
     ],
 
     overview:
@@ -4389,15 +4544,14 @@ const packages = [
             distance: "Train journey",
             description:
               "Board train (22851) from Santragachi Railway Station for Mangaluru. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 2,
             title: "Train Journey",
             distance: "Train journey",
-            description:
-              "Full day train journey. Overnight stay in train.",
-            images: [null, null]
+            description: "Full day train journey. Overnight stay in train.",
+            images: [null, null],
           },
           {
             day: 3,
@@ -4405,7 +4559,7 @@ const packages = [
             distance: "Mangaluru → Udupi",
             description:
               "Arrive at Mangaluru Railway Station and transfer to Udupi hotel. Overnight stay at Udupi.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 4,
@@ -4413,7 +4567,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Shri Krishna Math, Shri Anantheshwara Temple, Pajaka Kshetra, Corporation Bank Heritage Museum, Koodlutheertha Falls, and Shri Indrani Panchadurga Parameshwari Temple. Overnight stay at Udupi.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 5,
@@ -4421,7 +4575,7 @@ const packages = [
             distance: "Approx. 190 km",
             description:
               "After breakfast proceed to Coorg. Overnight stay at Coorg.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 6,
@@ -4429,7 +4583,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Abbey Falls, Namdroling Monastery (Golden Temple), Iruppu Falls, and nearby attractions. Overnight stay at Coorg.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 7,
@@ -4437,7 +4591,7 @@ const packages = [
             distance: "Approx. 120 km",
             description:
               "Proceed to Mysuru via Buddhist Monastery and Brindavan Gardens. Visit Mysore Palace. Overnight stay at Mysuru.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 8,
@@ -4445,7 +4599,7 @@ const packages = [
             distance: "Approx. 340 km",
             description:
               "After breakfast drive to Hospet. Overnight stay at Hospet.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 9,
@@ -4453,7 +4607,7 @@ const packages = [
             distance: "Local excursion",
             description:
               "Explore Virupaksha Temple, Hampi, Stone Chariot, Hampi Archaeological Museum, Tungabhadra Dam, Shri Huligemma Devi Temple, TB Dam Zoo & Park, and Hazara Rama Temple. Overnight stay at Hospet.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 10,
@@ -4461,7 +4615,7 @@ const packages = [
             distance: "Approx. 340 km",
             description:
               "Drive to Bengaluru and check in to hotel. Evening free for leisure. Overnight stay at Bengaluru.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 11,
@@ -4469,7 +4623,7 @@ const packages = [
             distance: "Railway station transfer",
             description:
               "After breakfast transfer to Bengaluru Railway Station and board train for Kolkata. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 12,
@@ -4477,9 +4631,9 @@ const packages = [
             distance: "Train arrival",
             description:
               "Arrive at Howrah Railway Station with sweet memories of Karnataka.",
-            images: [null, null]
-          }
-        ]
+            images: [null, null],
+          },
+        ],
       },
 
       package2: {
@@ -4492,15 +4646,14 @@ const packages = [
             distance: "Train journey",
             description:
               "Board Amravati Express (18047) from Shalimar Railway Station for Hospet. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 2,
             title: "Train Journey",
             distance: "Train journey",
-            description:
-              "Full day train journey. Overnight stay in train.",
-            images: [null, null]
+            description: "Full day train journey. Overnight stay in train.",
+            images: [null, null],
           },
           {
             day: 3,
@@ -4508,7 +4661,7 @@ const packages = [
             distance: "Railway station transfer",
             description:
               "Arrive at Hospet Railway Station and transfer to hotel. Overnight stay at Hospet.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 4,
@@ -4516,7 +4669,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Virupaksha Temple, Hampi, Stone Chariot, Hampi Archaeological Museum, Tungabhadra Dam, Shri Huligemma Devi Temple, Anjanadri Betta, TB Dam Zoo & Park, and Hazara Rama Temple. Overnight stay at Hospet.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 5,
@@ -4524,7 +4677,7 @@ const packages = [
             distance: "Approx. 140 km",
             description:
               "Drive to Badami and visit Badami Cave Temples, Badami Fort, and Agastya Lake. Overnight stay at Badami.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 6,
@@ -4532,7 +4685,7 @@ const packages = [
             distance: "Approx. 255 km",
             description:
               "Proceed to Gokarna via Hubballi. Overnight stay at Gokarna.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 7,
@@ -4540,7 +4693,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Om Beach, Gokarna Main Beach, Belekan Beach, and Gorabha Shiva Cave. Overnight stay at Gokarna.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 8,
@@ -4548,7 +4701,7 @@ const packages = [
             distance: "Approx. 280 km",
             description:
               "Drive to Udupi via Jog Falls. Overnight stay at Udupi.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 9,
@@ -4556,15 +4709,14 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Shri Krishna Math, Shri Anantheshwara Temple, Pajaka Kshetra, Corporation Bank Heritage Museum, Koodlutheertha Falls, and Shri Indrani Panchadurga Parameshwari Temple. Overnight stay at Udupi.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 10,
             title: "Udupi → Coorg",
             distance: "Approx. 190 km",
-            description:
-              "Proceed to Coorg. Overnight stay at Coorg.",
-            images: [null, null]
+            description: "Proceed to Coorg. Overnight stay at Coorg.",
+            images: [null, null],
           },
           {
             day: 11,
@@ -4572,7 +4724,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Abbey Falls, Namdroling Monastery (Golden Temple), Iruppu Falls, and nearby attractions. Overnight stay at Coorg.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 12,
@@ -4580,7 +4732,7 @@ const packages = [
             distance: "Approx. 120 km",
             description:
               "Drive to Mysuru via Buddhist Monastery and Brindavan Gardens. Overnight stay at Mysuru.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 13,
@@ -4588,15 +4740,14 @@ const packages = [
             distance: "Local sightseeing + train",
             description:
               "Visit Mysuru Palace and Chamundeshwari Temple. After lunch transfer to Mysuru Railway Station and board train (22818) for Kolkata. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 14,
             title: "Train Journey",
             distance: "Train journey",
-            description:
-              "Full day train journey. Overnight stay in train.",
-            images: [null, null]
+            description: "Full day train journey. Overnight stay in train.",
+            images: [null, null],
           },
           {
             day: 15,
@@ -4604,10 +4755,10 @@ const packages = [
             distance: "Train arrival",
             description:
               "Arrive at Howrah Railway Station with sweet memories of Karnataka.",
-            images: [null, null]
-          }
-        ]
-      }
+            images: [null, null],
+          },
+        ],
+      },
     },
 
     included: [
@@ -4622,7 +4773,7 @@ const packages = [
       "Parking charges",
       "Toll tax",
       "Pick-up & drop",
-      "All possible sightseeing as per itinerary"
+      "All possible sightseeing as per itinerary",
     ],
 
     excluded: [
@@ -4636,7 +4787,7 @@ const packages = [
       "Forest permits",
       "Personal activities",
       "Any ride or safari",
-      "Any item not mentioned above"
+      "Any item not mentioned above",
     ],
 
     whatsapp: "https://wa.me/918910555711",
@@ -4645,7 +4796,7 @@ const packages = [
 
     enquiryLink: "#",
 
-    detailsLink: "/packages/karnataka-tour"
+    detailsLink: "/packages/karnataka-tour",
   },
   {
     id: 23,
@@ -4672,7 +4823,7 @@ const packages = [
       { id: 3, icon: Car, label: "Airport Transfers" },
       { id: 4, icon: Camera, label: "Island Excursions" },
       { id: 5, icon: MapPinned, label: "Beach & Lagoon Tour" },
-      { id: 6, icon: Plane, label: "Flight Included" }
+      { id: 6, icon: Plane, label: "Flight Included" },
     ],
 
     overview:
@@ -4689,7 +4840,7 @@ const packages = [
             distance: "Airport transfer",
             description:
               "Arrive at Goa or Kochi Airport and transfer to hotel. Overnight stay at Goa / Kochi.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 2,
@@ -4697,7 +4848,7 @@ const packages = [
             distance: "Flight + island transfer",
             description:
               "Fly to Agatti, receive a traditional welcome, transfer to beach resort, enjoy lunch, and explore Agatti lagoon beaches, Andan Beach, Western Jetty, Eastern Jetty, and local island life. Overnight stay at Agatti.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 3,
@@ -4705,7 +4856,7 @@ const packages = [
             distance: "Boat excursion",
             description:
               "Boat trip to Bangaram Island and Thinnakara Island. Enjoy dolphin watching, sea turtle spotting, beach exploration, snorkeling at Bangaram Lagoon and the shipwreck site, and lunch on board. Return to Agatti by evening. Alternative deep-sea snorkeling trip may operate if island access is restricted.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 4,
@@ -4713,7 +4864,7 @@ const packages = [
             distance: "Local island excursion",
             description:
               "Enjoy lagoon kayaking in the morning. Optional scuba diving available at extra cost. Evening glass-bottom boat ride to Kalpitty Island to view corals, marine life, green turtles, and hawksbill turtles, followed by sunset viewing. Overnight stay at Agatti.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 5,
@@ -4721,9 +4872,9 @@ const packages = [
             distance: "Airport transfer",
             description:
               "Breakfast at resort, transfer to Agatti Airport, and board return flight with unforgettable Lakshadweep memories.",
-            images: [null, null]
-          }
-        ]
+            images: [null, null],
+          },
+        ],
       },
 
       package2: {
@@ -4736,7 +4887,7 @@ const packages = [
             distance: "Flight journey",
             description:
               "Fly from Kolkata to Goa, transfer to hotel, enjoy an evening cruise program, and stay overnight in Goa.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 2,
@@ -4744,7 +4895,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Dolphin Point, Aguada Fort, Baga Beach, Calangute Beach, and Miramar Beach. Overnight stay at Goa.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 3,
@@ -4752,7 +4903,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit St. Xavier's Church, Mangesh Temple, Santadurga Temple, and Colva Beach. Overnight stay at Goa.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 4,
@@ -4760,7 +4911,7 @@ const packages = [
             distance: "Flight + island transfer",
             description:
               "Transfer to Goa Airport, fly to Agatti, receive welcome assistance, transfer to beach resort, enjoy lunch, and explore Agatti lagoon beaches and island attractions. Overnight stay at Agatti.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 5,
@@ -4768,7 +4919,7 @@ const packages = [
             distance: "Boat excursion",
             description:
               "Boat trip to Bangaram Sandbank and Thinnakara Island with dolphin watching, snorkeling, beach exploration, and lunch on board. Alternative deep-sea snorkeling trip may operate if island access is restricted.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 6,
@@ -4776,7 +4927,7 @@ const packages = [
             distance: "Local island excursion",
             description:
               "Enjoy kayaking, optional scuba diving, glass-bottom boat ride, coral viewing, turtle spotting, and sunset at Kalpitty Island. Overnight stay at Agatti.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 7,
@@ -4784,10 +4935,10 @@ const packages = [
             distance: "Flight journey",
             description:
               "Breakfast at resort, transfer to Agatti Airport, take return flight via Goa, and arrive in Kolkata with beautiful island memories.",
-            images: [null, null]
-          }
-        ]
-      }
+            images: [null, null],
+          },
+        ],
+      },
     },
 
     included: [
@@ -4807,7 +4958,7 @@ const packages = [
       "Kayaking",
       "Snorkeling",
       "Airport pick-up & drop",
-      "Guide assistance throughout the trip"
+      "Guide assistance throughout the trip",
     ],
 
     excluded: [
@@ -4815,7 +4966,7 @@ const packages = [
       "Personal expenses",
       "Additional beverages",
       "Extra activities not mentioned in inclusions",
-      "Any item not mentioned above"
+      "Any item not mentioned above",
     ],
 
     whatsapp: "https://wa.me/918910555711",
@@ -4824,7 +4975,7 @@ const packages = [
 
     enquiryLink: "#",
 
-    detailsLink: "/packages/goa-lakshadweep-tour"
+    detailsLink: "/packages/goa-lakshadweep-tour",
   },
   {
     id: 24,
@@ -4852,7 +5003,7 @@ const packages = [
       { id: 3, icon: Car, label: "Transportation" },
       { id: 4, icon: Camera, label: "Sightseeing" },
       { id: 5, icon: MapPinned, label: "Hill & Backwater Tour" },
-      { id: 6, icon: Plane, label: "Train Included" }
+      { id: 6, icon: Plane, label: "Train Included" },
     ],
 
     overview:
@@ -4869,7 +5020,7 @@ const packages = [
             distance: "Train journey",
             description:
               "Board Train 12665 from Howrah Railway Station at 4:15 PM for Kanyakumari. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 2,
@@ -4877,7 +5028,7 @@ const packages = [
             distance: "Train journey",
             description:
               "Full day train journey towards Kanyakumari. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 3,
@@ -4885,7 +5036,7 @@ const packages = [
             distance: "Railway station transfer",
             description:
               "Arrive at Kanyakumari Railway Station and transfer to hotel. Overnight stay at Kanyakumari.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 4,
@@ -4893,7 +5044,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Kanyakumari Temple, Vivekananda Rock Memorial, and enjoy the famous sunset at the seashore. Overnight stay at Kanyakumari.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 5,
@@ -4901,7 +5052,7 @@ const packages = [
             distance: "90 km",
             description:
               "Proceed to Kovalam. Visit Padmanabhaswamy Temple and Kovalam Beach. Overnight stay at Kovalam.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 6,
@@ -4909,7 +5060,7 @@ const packages = [
             distance: "160 km",
             description:
               "Drive to Alleppey. Optional backwater boat cruise in the afternoon at own cost. Overnight stay at Alleppey.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 7,
@@ -4917,7 +5068,7 @@ const packages = [
             distance: "140 km",
             description:
               "Travel to Thekkady, famous for spice plantations and wildlife. Overnight stay at Thekkady.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 8,
@@ -4925,7 +5076,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Periyar Lake, Periyar National Park, and Kadathanadan Kalari Centre (optional, own cost). Overnight stay at Thekkady.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 9,
@@ -4933,7 +5084,7 @@ const packages = [
             distance: "95 km",
             description:
               "Proceed to Munnar through beautiful hill roads and tea plantations. Overnight stay at Munnar.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 10,
@@ -4941,7 +5092,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Rajamalai (Eravikulam area), Mattupetty Dam, Spice Garden, coffee plantation, and surrounding viewpoints. Overnight stay at Munnar.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 11,
@@ -4949,7 +5100,7 @@ const packages = [
             distance: "130 km",
             description:
               "Travel to Kochi / Ernakulam and check in to hotel. Overnight stay at Kochi.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 12,
@@ -4957,7 +5108,7 @@ const packages = [
             distance: "Local sightseeing + train",
             description:
               "After breakfast visit Chinese Fishing Nets and Portuguese Church (boat ride optional, own cost). In the evening transfer to Ernakulam Railway Station and board train for Kolkata. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 13,
@@ -4965,7 +5116,7 @@ const packages = [
             distance: "Train journey",
             description:
               "Full day train journey back to Kolkata. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 14,
@@ -4973,10 +5124,10 @@ const packages = [
             distance: "Train arrival",
             description:
               "Arrive at Howrah Railway Station with sweet memories of Kerala and Kanyakumari.",
-            images: [null, null]
-          }
-        ]
-      }
+            images: [null, null],
+          },
+        ],
+      },
     },
 
     included: [
@@ -4991,7 +5142,7 @@ const packages = [
       "Parking charges",
       "Toll tax",
       "Pick-up & drop",
-      "All possible sightseeing as per itinerary"
+      "All possible sightseeing as per itinerary",
     ],
 
     excluded: [
@@ -5007,7 +5158,7 @@ const packages = [
       "Periyar boating charges",
       "Personal activities",
       "Any ride or safari",
-      "Any item not mentioned above"
+      "Any item not mentioned above",
     ],
 
     whatsapp: "https://wa.me/918910555711",
@@ -5016,7 +5167,7 @@ const packages = [
 
     enquiryLink: "#",
 
-    detailsLink: "/packages/kerala-kanyakumari-tour"
+    detailsLink: "/packages/kerala-kanyakumari-tour",
   },
   {
     id: 25,
@@ -5043,7 +5194,7 @@ const packages = [
       { id: 3, icon: Car, label: "Transportation" },
       { id: 4, icon: Camera, label: "Sightseeing" },
       { id: 5, icon: MapPinned, label: "Temple & Heritage Tour" },
-      { id: 6, icon: Plane, label: "Train Included" }
+      { id: 6, icon: Plane, label: "Train Included" },
     ],
 
     overview:
@@ -5060,15 +5211,14 @@ const packages = [
             distance: "Train journey",
             description:
               "Board train from Shalimar Railway Station for Ahmedabad. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 2,
             title: "Train Journey",
             distance: "Train journey",
-            description:
-              "Full day train journey. Overnight stay in train.",
-            images: [null, null]
+            description: "Full day train journey. Overnight stay in train.",
+            images: [null, null],
           },
           {
             day: 3,
@@ -5076,7 +5226,7 @@ const packages = [
             distance: "Railway station transfer",
             description:
               "Arrive at Ahmedabad Railway Station and transfer to hotel. Overnight stay at Ahmedabad.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 4,
@@ -5084,7 +5234,7 @@ const packages = [
             distance: "Local excursion",
             description:
               "Visit Lothal, the rediscovered Harappan site, followed by local sightseeing in Ahmedabad. Overnight stay at Ahmedabad.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 5,
@@ -5092,7 +5242,7 @@ const packages = [
             distance: "330 km",
             description:
               "After breakfast proceed to Bhuj. Overnight stay at Bhuj.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 6,
@@ -5100,7 +5250,7 @@ const packages = [
             distance: "Local excursion",
             description:
               "Visit the famous White Rann of Kutch and return to Bhuj. Overnight stay at Bhuj.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 7,
@@ -5108,7 +5258,7 @@ const packages = [
             distance: "450 km",
             description:
               "Proceed to the sacred city of Dwarka. Overnight stay at Dwarka.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 8,
@@ -5116,7 +5266,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Bet Dwarka, Nageshwar Temple, and Dwarkadhish Temple. Overnight stay at Dwarka.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 9,
@@ -5124,7 +5274,7 @@ const packages = [
             distance: "240 km",
             description:
               "Proceed to Gir National Park region. Overnight stay at Gir.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 10,
@@ -5132,7 +5282,7 @@ const packages = [
             distance: "100 km",
             description:
               "Optional morning Gir Forest safari (own cost). Later transfer to Diu. Overnight stay at Diu.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 11,
@@ -5140,7 +5290,7 @@ const packages = [
             distance: "90 km",
             description:
               "Visit Nagoa Beach, Diu Fort, and historic churches before proceeding to Somnath / Veraval. Overnight stay at Somnath / Veraval.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 12,
@@ -5148,7 +5298,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Somnath Temple, Prabhas Patan, and Gangeshwar Mahadev. Overnight stay at Somnath / Veraval.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 13,
@@ -5156,7 +5306,7 @@ const packages = [
             distance: "Train journey",
             description:
               "Take train from Veraval to Ahmedabad and board onward train for Kolkata. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 14,
@@ -5164,7 +5314,7 @@ const packages = [
             distance: "Train journey",
             description:
               "Full day train journey back to Kolkata. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 15,
@@ -5172,9 +5322,9 @@ const packages = [
             distance: "Train arrival",
             description:
               "Arrive at Shalimar / Howrah Railway Station with sweet memories of Gujarat.",
-            images: [null, null]
-          }
-        ]
+            images: [null, null],
+          },
+        ],
       },
 
       package2: {
@@ -5187,15 +5337,14 @@ const packages = [
             distance: "Train journey",
             description:
               "Board train from Shalimar Railway Station for Ahmedabad. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 2,
             title: "Train Journey",
             distance: "Train journey",
-            description:
-              "Full day train journey. Overnight stay in train.",
-            images: [null, null]
+            description: "Full day train journey. Overnight stay in train.",
+            images: [null, null],
           },
           {
             day: 3,
@@ -5203,7 +5352,7 @@ const packages = [
             distance: "Railway station transfer",
             description:
               "Arrive at Ahmedabad Railway Station and transfer to hotel. Overnight stay at Ahmedabad.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 4,
@@ -5211,15 +5360,14 @@ const packages = [
             distance: "Local excursion",
             description:
               "Visit the world-famous Statue of Unity and return to Ahmedabad. Overnight stay at Ahmedabad.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 5,
             title: "Ahmedabad → Bhuj",
             distance: "330 km",
-            description:
-              "Proceed to Bhuj. Overnight stay at Bhuj.",
-            images: [null, null]
+            description: "Proceed to Bhuj. Overnight stay at Bhuj.",
+            images: [null, null],
           },
           {
             day: 6,
@@ -5227,15 +5375,14 @@ const packages = [
             distance: "Local excursion",
             description:
               "Visit the White Rann of Kutch and return to Bhuj. Overnight stay at Bhuj.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 7,
             title: "Bhuj → Dwarka",
             distance: "450 km",
-            description:
-              "Proceed to Dwarka. Overnight stay at Dwarka.",
-            images: [null, null]
+            description: "Proceed to Dwarka. Overnight stay at Dwarka.",
+            images: [null, null],
           },
           {
             day: 8,
@@ -5243,7 +5390,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Bet Dwarka, Nageshwar Temple, and Dwarkadhish Temple. Overnight stay at Dwarka.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 9,
@@ -5251,7 +5398,7 @@ const packages = [
             distance: "240 km",
             description:
               "Proceed to Gir National Park region. Overnight stay at Gir.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 10,
@@ -5259,7 +5406,7 @@ const packages = [
             distance: "100 km",
             description:
               "Optional morning Gir Forest safari (own cost). Later transfer to Diu. Overnight stay at Diu.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 11,
@@ -5267,7 +5414,7 @@ const packages = [
             distance: "90 km",
             description:
               "Visit Nagoa Beach, Diu Fort, and churches before proceeding to Somnath / Veraval. Overnight stay at Somnath / Veraval.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 12,
@@ -5275,7 +5422,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Somnath Temple, Prabhas Patan, and Gangeshwar Mahadev. Overnight stay at Somnath / Veraval.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 13,
@@ -5283,7 +5430,7 @@ const packages = [
             distance: "Train journey",
             description:
               "Take train from Veraval to Ahmedabad and board onward train for Kolkata. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 14,
@@ -5291,7 +5438,7 @@ const packages = [
             distance: "Train journey",
             description:
               "Full day train journey back to Kolkata. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 15,
@@ -5299,10 +5446,10 @@ const packages = [
             distance: "Train arrival",
             description:
               "Arrive at Shalimar / Howrah Railway Station with sweet memories of Gujarat.",
-            images: [null, null]
-          }
-        ]
-      }
+            images: [null, null],
+          },
+        ],
+      },
     },
 
     included: [
@@ -5317,7 +5464,7 @@ const packages = [
       "Parking charges",
       "Toll tax",
       "Pick-up & drop",
-      "All possible sightseeing as per itinerary"
+      "All possible sightseeing as per itinerary",
     ],
 
     excluded: [
@@ -5332,7 +5479,7 @@ const packages = [
       "Any ride",
       "Personal activities",
       "Any safari",
-      "Any item not mentioned above"
+      "Any item not mentioned above",
     ],
 
     whatsapp: "https://wa.me/918910555711",
@@ -5341,7 +5488,7 @@ const packages = [
 
     enquiryLink: "#",
 
-    detailsLink: "/packages/gujarat-tour"
+    detailsLink: "/packages/gujarat-tour",
   },
 
   // international
@@ -5370,7 +5517,7 @@ const packages = [
       { id: 3, icon: Car, label: "Transportation" },
       { id: 4, icon: Camera, label: "Sightseeing" },
       { id: 5, icon: MapPinned, label: "Temple & Nature Tour" },
-      { id: 6, icon: Plane, label: "Train Included" }
+      { id: 6, icon: Plane, label: "Train Included" },
     ],
 
     overview:
@@ -5387,7 +5534,7 @@ const packages = [
             distance: "Train journey",
             description:
               "Board train (13021) from Howrah Railway Station for Raxaul. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 2,
@@ -5395,7 +5542,7 @@ const packages = [
             distance: "Approx. 140 km",
             description:
               "Arrive at Raxaul and transfer to Kathmandu. Overnight stay at Kathmandu.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 3,
@@ -5403,7 +5550,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Kathmandu Durbar Square, Boudhanath Stupa, Swayambhunath (Monkey Temple), Patan, and Pashupatinath Temple. Overnight stay at Kathmandu.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 4,
@@ -5411,7 +5558,7 @@ const packages = [
             distance: "Local excursion",
             description:
               "Visit Nagarkot and Bhaktapur and return to Kathmandu. Overnight stay at Kathmandu.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 5,
@@ -5419,7 +5566,7 @@ const packages = [
             distance: "Approx. 200 km",
             description:
               "Drive to Pokhara via Manakamana (ropeway at own cost). Overnight stay at Pokhara.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 6,
@@ -5427,7 +5574,7 @@ const packages = [
             distance: "Approx. 170 km",
             description:
               "Proceed to Muktinath and visit Muktinath Temple. Overnight stay at Muktinath.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 7,
@@ -5435,7 +5582,7 @@ const packages = [
             distance: "Approx. 170 km",
             description:
               "Return to Pokhara after breakfast. Overnight stay at Pokhara.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 8,
@@ -5443,7 +5590,7 @@ const packages = [
             distance: "Road transfer + train",
             description:
               "Transfer to Raxaul Railway Station and board train for Kolkata. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 9,
@@ -5451,9 +5598,9 @@ const packages = [
             distance: "Train arrival",
             description:
               "Arrive at Howrah Railway Station with sweet memories of Nepal.",
-            images: [null, null]
-          }
-        ]
+            images: [null, null],
+          },
+        ],
       },
 
       package2: {
@@ -5466,7 +5613,7 @@ const packages = [
             distance: "Train journey",
             description:
               "Board train from Howrah Railway Station for Raxaul. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 2,
@@ -5474,7 +5621,7 @@ const packages = [
             distance: "Approx. 160 km",
             description:
               "Arrive at Raxaul and proceed to Chitwan. Overnight stay at Chitwan.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 3,
@@ -5482,7 +5629,7 @@ const packages = [
             distance: "Approx. 150 km",
             description:
               "Early morning jungle safari, then proceed to Pokhara. Overnight stay at Pokhara.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 4,
@@ -5490,7 +5637,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Devi’s Fall, Gupteshwar Cave & Temple, Mountaineering Museum, and Tal Barahi Temple. Overnight stay at Pokhara.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 5,
@@ -5498,7 +5645,7 @@ const packages = [
             distance: "Approx. 200 km",
             description:
               "Drive to Kathmandu via Manakamana (ropeway at own cost). Overnight stay at Kathmandu.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 6,
@@ -5506,7 +5653,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Kathmandu Durbar Square, Boudhanath Stupa, Monkey Temple, Patan, and Pashupatinath Temple. Overnight stay at Kathmandu.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 7,
@@ -5514,7 +5661,7 @@ const packages = [
             distance: "Local excursion",
             description:
               "Visit Nagarkot and Bhaktapur and return to Kathmandu. Overnight stay at Kathmandu.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 8,
@@ -5522,7 +5669,7 @@ const packages = [
             distance: "Approx. 140 km",
             description:
               "Drive to Birgunj / Raxaul. Overnight stay at Birgunj / Raxaul.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 9,
@@ -5530,7 +5677,7 @@ const packages = [
             distance: "Train journey",
             description:
               "Board train from Raxaul for Kolkata. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 10,
@@ -5538,9 +5685,9 @@ const packages = [
             distance: "Train arrival",
             description:
               "Arrive at Howrah Railway Station with sweet memories of Nepal.",
-            images: [null, null]
-          }
-        ]
+            images: [null, null],
+          },
+        ],
       },
 
       package3: {
@@ -5553,7 +5700,7 @@ const packages = [
             distance: "Train journey",
             description:
               "Board train (13021) from Howrah Railway Station for Raxaul. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 2,
@@ -5561,7 +5708,7 @@ const packages = [
             distance: "Approx. 140 km",
             description:
               "Arrive at Raxaul and transfer to Kathmandu. Overnight stay at Kathmandu.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 3,
@@ -5569,7 +5716,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Kathmandu Durbar Square, Boudhanath Stupa, Monkey Temple, Patan, and Pashupatinath Temple. Overnight stay at Kathmandu.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 4,
@@ -5577,7 +5724,7 @@ const packages = [
             distance: "Local excursion",
             description:
               "Visit Nagarkot and Bhaktapur and return to Kathmandu. Overnight stay at Kathmandu.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 5,
@@ -5585,7 +5732,7 @@ const packages = [
             distance: "Approx. 200 km",
             description:
               "Drive to Pokhara via Manakamana (ropeway at own cost). Overnight stay at Pokhara.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 6,
@@ -5593,7 +5740,7 @@ const packages = [
             distance: "Approx. 170 km",
             description:
               "Proceed to Muktinath and visit Muktinath Temple. Overnight stay at Muktinath.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 7,
@@ -5601,7 +5748,7 @@ const packages = [
             distance: "Approx. 170 km",
             description:
               "Return to Pokhara after breakfast. Overnight stay at Pokhara.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 8,
@@ -5609,15 +5756,14 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Devi’s Fall, Gupteshwar Cave & Temple, Mountaineering Museum, and Tal Barahi Temple. Overnight stay at Pokhara.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 9,
             title: "Pokhara → Chitwan",
             distance: "Approx. 150 km",
-            description:
-              "Proceed to Chitwan. Overnight stay at Chitwan.",
-            images: [null, null]
+            description: "Proceed to Chitwan. Overnight stay at Chitwan.",
+            images: [null, null],
           },
           {
             day: 10,
@@ -5625,7 +5771,7 @@ const packages = [
             distance: "Road transfer + train",
             description:
               "Early morning jungle safari (optional & own cost). After breakfast transfer to Raxaul Railway Station and board train for Kolkata. Overnight stay in train.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 11,
@@ -5633,10 +5779,10 @@ const packages = [
             distance: "Train arrival",
             description:
               "Arrive at Howrah Railway Station with sweet memories of Nepal.",
-            images: [null, null]
-          }
-        ]
-      }
+            images: [null, null],
+          },
+        ],
+      },
     },
 
     included: [
@@ -5652,7 +5798,7 @@ const packages = [
       "Toll tax",
       "Pick-up & drop",
       "All possible sightseeing as per itinerary",
-      "Muktinath permit (Package 3)"
+      "Muktinath permit (Package 3)",
     ],
 
     excluded: [
@@ -5668,7 +5814,7 @@ const packages = [
       "Jungle safari charges in Chitwan (where optional)",
       "Personal activities",
       "Any ride or safari",
-      "Any item not mentioned above"
+      "Any item not mentioned above",
     ],
 
     whatsapp: "https://wa.me/918910555711",
@@ -5677,7 +5823,7 @@ const packages = [
 
     enquiryLink: "#",
 
-    detailsLink: "/packages/nepal-tour"
+    detailsLink: "/packages/nepal-tour",
   },
   {
     id: 101,
@@ -5704,7 +5850,7 @@ const packages = [
       { id: 3, icon: Car, label: "AC Transportation" },
       { id: 4, icon: Camera, label: "Sightseeing Included" },
       { id: 5, icon: MapPinned, label: "Island & City Tour" },
-      { id: 6, icon: Plane, label: "Flight Included" }
+      { id: 6, icon: Plane, label: "Flight Included" },
     ],
 
     overview:
@@ -5721,7 +5867,7 @@ const packages = [
             distance: "Flight + road transfer",
             description:
               "Fly from Kolkata to Bangkok. Transfer to Pattaya. Visit Sriracha Tiger Zoo and Big Buddha. Evening Alcazar Show and Walking Street. Overnight stay at Pattaya.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 2,
@@ -5729,7 +5875,7 @@ const packages = [
             distance: "Speed boat excursion",
             description:
               "Visit Coral Island by speed boat and enjoy beach activities. Lunch at Indian restaurant and local market visit. Overnight stay at Pattaya.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 3,
@@ -5737,7 +5883,7 @@ const packages = [
             distance: "150 km",
             description:
               "Travel to Bangkok via Gems Gallery. Visit Golden Buddha Temple and Marble Temple. Overnight stay at Bangkok.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 4,
@@ -5745,7 +5891,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Enjoy Safari World and Marine Park with buffet lunch. Evening Chaophraya Princess Cruise dinner. Overnight stay at Bangkok.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 5,
@@ -5753,7 +5899,7 @@ const packages = [
             distance: "Domestic flight",
             description:
               "Fly from Bangkok to Phuket and transfer to hotel. Overnight stay at Phuket.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 6,
@@ -5761,7 +5907,7 @@ const packages = [
             distance: "Boat excursion",
             description:
               "Full-day Phi Phi Island tour with buffet lunch. Return to hotel for overnight stay at Phuket.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 7,
@@ -5769,10 +5915,10 @@ const packages = [
             distance: "Flight journey",
             description:
               "Visit Chalong Temple, Phuket Old Town, and Promthep Cape. Fly to Bangkok and board return flight to Kolkata with wonderful memories.",
-            images: [null, null]
-          }
-        ]
-      }
+            images: [null, null],
+          },
+        ],
+      },
     },
 
     included: [
@@ -5792,7 +5938,7 @@ const packages = [
       "Coral Island tour",
       "Safari World & Marine Park",
       "Chaophraya Princess Cruise dinner",
-      "Phi Phi Island tour"
+      "Phi Phi Island tour",
     ],
 
     excluded: [
@@ -5800,13 +5946,13 @@ const packages = [
       "Tips and porter charges",
       "Travel insurance",
       "Scuba diving or optional water sports",
-      "Anything not mentioned in inclusions"
+      "Anything not mentioned in inclusions",
     ],
 
     hotelDetails: {
       Pattaya: "The Beverly Hotel Pattaya (4 Star)",
       Bangkok: "Bangkok Palace (4 Star)",
-      Phuket: "The Fishermen Harbour Beach Resort (4 Star)"
+      Phuket: "The Fishermen Harbour Beach Resort (4 Star)",
     },
 
     departureDates: [
@@ -5819,7 +5965,7 @@ const packages = [
       "21/11/2026",
       "12/12/2026",
       "22/12/2026",
-      "22/01/2027"
+      "22/01/2027",
     ],
 
     whatsapp: "https://wa.me/918910555711",
@@ -5828,7 +5974,7 @@ const packages = [
 
     enquiryLink: "#",
 
-    detailsLink: "/packages/bangkok-pattaya-phuket-tour"
+    detailsLink: "/packages/bangkok-pattaya-phuket-tour",
   },
   {
     id: 102,
@@ -5855,7 +6001,7 @@ const packages = [
       { id: 3, icon: Car, label: "Luxury AC Transport" },
       { id: 4, icon: Camera, label: "Sightseeing Included" },
       { id: 5, icon: MapPinned, label: "Island & City Tour" },
-      { id: 6, icon: Plane, label: "Flights Included" }
+      { id: 6, icon: Plane, label: "Flights Included" },
     ],
 
     overview:
@@ -5872,7 +6018,7 @@ const packages = [
             distance: "Flight + road transfer",
             description:
               "Fly from Kolkata to Bangkok, transfer to Pattaya, visit Sriracha Tiger Zoo and Big Buddha, enjoy Alcazar Show and Walking Street. Overnight stay at Pattaya.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 2,
@@ -5880,7 +6026,7 @@ const packages = [
             distance: "Speed boat excursion",
             description:
               "Visit Coral Island by speed boat, enjoy beach activities, buffet lunch, local market sightseeing, dinner, and overnight stay at Pattaya.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 3,
@@ -5888,7 +6034,7 @@ const packages = [
             distance: "150 km",
             description:
               "Travel to Bangkok via Gems Gallery, enjoy Bangkok city tour covering Golden Temple and Marble Temple. Overnight stay at Bangkok.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 4,
@@ -5896,7 +6042,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Safari World with Marine Park and buffet lunch. Evening Chao Phraya Princess Dinner Cruise. Overnight stay at Bangkok.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 5,
@@ -5904,7 +6050,7 @@ const packages = [
             distance: "Flight transfer",
             description:
               "Fly to Phuket and visit Chalong Temple, Phuket Old Town, and Promthep Cape. Overnight stay at Phuket.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 6,
@@ -5912,7 +6058,7 @@ const packages = [
             distance: "Boat excursion",
             description:
               "Full day Phi Phi Island tour with buffet lunch on boat. Return to Phuket for overnight stay.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 7,
@@ -5920,7 +6066,7 @@ const packages = [
             distance: "Approx. 160 km by road",
             description:
               "Transfer to Krabi by road and enjoy 4 Island tour with lunch. Overnight stay at Krabi.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 8,
@@ -5928,22 +6074,20 @@ const packages = [
             distance: "Flight transfer",
             description:
               "Visit Krabi local sightseeing spots and transfer to Krabi International Airport for return flight to India.",
-            images: [null, null]
-          }
-        ]
-      }
+            images: [null, null],
+          },
+        ],
+      },
     },
 
     hotels: [
       "Pattaya: The Beverly Hotel Pattaya (4 Star)",
       "Bangkok: Bangkok Palace (4 Star)",
       "Phuket: The Fisherman's Harbour Beach Resort (4 Star)",
-      "Krabi: Ibis Styles Ao Nang (4 Star)"
+      "Krabi: Ibis Styles Ao Nang (4 Star)",
     ],
 
-    departureDates: [
-      "22/12/2026"
-    ],
+    departureDates: ["22/12/2026"],
 
     included: [
       "4 Star accommodation",
@@ -5955,7 +6099,7 @@ const packages = [
       "English speaking guide",
       "Entry fees as per itinerary",
       "Airport transfers",
-      "All sightseeing mentioned in itinerary"
+      "All sightseeing mentioned in itinerary",
     ],
 
     excluded: [
@@ -5964,7 +6108,7 @@ const packages = [
       "Tips & porter charges",
       "Additional water sports",
       "Extra meals not mentioned",
-      "Anything not mentioned in inclusions"
+      "Anything not mentioned in inclusions",
     ],
 
     whatsapp: "https://wa.me/918910555711",
@@ -5973,7 +6117,7 @@ const packages = [
 
     enquiryLink: "#",
 
-    detailsLink: "/packages/bangkok-pattaya-phuket-krabi-tour"
+    detailsLink: "/packages/bangkok-pattaya-phuket-krabi-tour",
   },
   {
     id: 103,
@@ -5992,7 +6136,8 @@ const packages = [
 
     rating: 9.3,
 
-    location: "Almaty • Charyn Canyon • Kolsai Lake • Kok Tobe • Medeu • Shymbulak • Tashkent • Amirsoy • Samarkand",
+    location:
+      "Almaty • Charyn Canyon • Kolsai Lake • Kok Tobe • Medeu • Shymbulak • Tashkent • Amirsoy • Samarkand",
 
     facilities: [
       { id: 1, icon: Hotel, label: "4 Star Hotel Stay" },
@@ -6000,7 +6145,7 @@ const packages = [
       { id: 3, icon: Car, label: "Airport Transfers" },
       { id: 4, icon: Camera, label: "Sightseeing" },
       { id: 5, icon: MapPinned, label: "Mountain & Heritage Tour" },
-      { id: 6, icon: Plane, label: "Flight Included" }
+      { id: 6, icon: Plane, label: "Flight Included" },
     ],
 
     overview:
@@ -6017,7 +6162,7 @@ const packages = [
             distance: "Flight journey",
             description:
               "Arrive at Almaty International Airport, transfer to hotel, check in, and relax. Overnight stay at Almaty.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 2,
@@ -6025,7 +6170,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Golden Square, Park of 28 Panfilov Guardsmen, Eternal Flame, Ascension Cathedral, Green Bazaar, Arbat Shopping Street, and Rakhat Chocolate Factory. Overnight stay at Almaty.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 3,
@@ -6033,7 +6178,7 @@ const packages = [
             distance: "Excursion",
             description:
               "Explore Charyn Canyon, Valley of Castles, and Kolsai Lake surrounded by stunning mountain scenery. Overnight stay at Almaty.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 4,
@@ -6041,7 +6186,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Enjoy Kok Tobe cable car, visit Medeu Ice Skating Rink, and spend time at Shymbulak Mountain Resort. Overnight stay at Almaty.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 5,
@@ -6049,7 +6194,7 @@ const packages = [
             distance: "Flight journey",
             description:
               "Fly to Tashkent and visit Magic City Park in the evening. Overnight stay at Tashkent.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 6,
@@ -6057,7 +6202,7 @@ const packages = [
             distance: "Excursion",
             description:
               "Visit Amirsoy Mountain Resort, Chimgan Mountains, and Charvak Lake with panoramic mountain views. Overnight stay at Tashkent.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 7,
@@ -6065,7 +6210,7 @@ const packages = [
             distance: "Bullet train excursion",
             description:
               "Travel by bullet train to Samarkand and visit Gur-e-Amir Mausoleum, Registan Square, Ulug Beg Madrasa, Sher-Dor Madrasa, Tilla-Kari Madrasa, Bibi Khanum Mosque, Siab Bazaar, Konigil Village, Shahi Zinda (outside), and Hazrati Hizir Mosque. Return to Tashkent for overnight stay.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 8,
@@ -6073,7 +6218,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Hazrati Imam Complex, Barak Khan Madrasa, Minor Mosque, Monument of Courage, Tashkent Metro, TV Tower (outside), and Memorial Complex of Repression. Overnight stay at Tashkent.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 9,
@@ -6081,7 +6226,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Explore Chorsu Bazaar, Tashkent City Mall, and Tashkent City Park for shopping and leisure. Overnight stay at Tashkent.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 10,
@@ -6089,10 +6234,10 @@ const packages = [
             distance: "Airport transfer",
             description:
               "After breakfast transfer to the airport for your return flight with unforgettable memories of Kazakhstan and Uzbekistan.",
-            images: [null, null]
-          }
-        ]
-      }
+            images: [null, null],
+          },
+        ],
+      },
     },
 
     included: [
@@ -6112,7 +6257,7 @@ const packages = [
       "Samarkand bullet train ticket",
       "Uzbekistan visa",
       "Tips",
-      "2 bottles of water per person per day"
+      "2 bottles of water per person per day",
     ],
 
     excluded: [
@@ -6120,7 +6265,7 @@ const packages = [
       "Travel insurance",
       "Additional snacks and beverages",
       "Optional activities not mentioned in the itinerary",
-      "Any item not specifically mentioned in the inclusions"
+      "Any item not specifically mentioned in the inclusions",
     ],
 
     departureDates: [],
@@ -6131,7 +6276,7 @@ const packages = [
 
     enquiryLink: "#",
 
-    detailsLink: "/packages/kazakhstan-uzbekistan-tour"
+    detailsLink: "/packages/kazakhstan-uzbekistan-tour",
   },
   {
     id: 104,
@@ -6159,7 +6304,7 @@ const packages = [
       { id: 3, icon: Car, label: "AC Coach Transfers" },
       { id: 4, icon: Camera, label: "Sightseeing Included" },
       { id: 5, icon: MapPinned, label: "Heritage & Island Tour" },
-      { id: 6, icon: Plane, label: "Flights & Visa Included" }
+      { id: 6, icon: Plane, label: "Flights & Visa Included" },
     ],
 
     overview:
@@ -6176,7 +6321,7 @@ const packages = [
             distance: "Flight journey",
             description:
               "Board flight from Netaji Subhash Chandra Bose International Airport, arrive in Hanoi, transfer to hotel, and overnight stay at Hanoi.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 2,
@@ -6184,7 +6329,7 @@ const packages = [
             distance: "Approx. 120 km excursion",
             description:
               "Visit Hoa Lu Ancient Capital, King Dinh Temple, King Le Temple, and enjoy a scenic Trang An boat ride through caves and limestone landscapes before returning to Hanoi.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 3,
@@ -6192,7 +6337,7 @@ const packages = [
             distance: "Road transfer to Halong Bay",
             description:
               "Transfer to Halong Bay, board the cruise, visit limestone caves, enjoy cruising through emerald waters, and overnight stay on the cruise with meals onboard.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 4,
@@ -6200,7 +6345,7 @@ const packages = [
             distance: "Cruise + road transfer",
             description:
               "Enjoy morning at Halong Bay, return to Hanoi, and visit Hoa Lo Prison Museum, Hanoi Old Quarter, Hoan Kiem Lake, and Turtle Tower before overnight stay in Hanoi.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 5,
@@ -6208,7 +6353,7 @@ const packages = [
             distance: "Flight + local transfer",
             description:
               "Fly to Danang, transfer to Hoi An, explore Hoi An Ancient Town, Phuc Kien Assembly Hall, Japanese Bridge, traditional houses, and enjoy a lantern boat ride in the evening.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 6,
@@ -6216,7 +6361,7 @@ const packages = [
             distance: "Excursion from Danang",
             description:
               "Visit Ba Na Hills by cable car, see Golden Bridge, Linh Ung Pagoda, French Village, Le Jardin D’amour, and enjoy leisure time at Fantasy Park before returning to Danang.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 7,
@@ -6224,7 +6369,7 @@ const packages = [
             distance: "Flight + excursion",
             description:
               "Fly to Ho Chi Minh City and visit the historic Cu Chi Tunnels to learn about Vietnam’s wartime underground network before overnight stay in Ho Chi Minh City.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 8,
@@ -6232,10 +6377,10 @@ const packages = [
             distance: "Day excursion + airport transfer",
             description:
               "Visit My Tho and the Mekong Delta, enjoy a boat ride, local village experience, honey tea, coconut candy workshop, and city shopping before airport transfer for the return flight.",
-            images: [null, null]
-          }
-        ]
-      }
+            images: [null, null],
+          },
+        ],
+      },
     },
 
     included: [
@@ -6254,7 +6399,7 @@ const packages = [
       "Cu Chi Tunnels excursion",
       "Mekong Delta boat excursion",
       "Entry fees as mentioned in itinerary",
-      "2 bottles of water per person per day"
+      "2 bottles of water per person per day",
     ],
 
     excluded: [
@@ -6265,14 +6410,14 @@ const packages = [
       "Additional meals other than specified",
       "Early check-in / late check-out charges",
       "Expenses due to weather, flight delays, strikes, natural calamities, or force majeure",
-      "Any item not mentioned under inclusions"
+      "Any item not mentioned under inclusions",
     ],
 
     hotels: [
       "Hanoi: Muong Thanh Grand Hanoi Centre Hotel / La Casa Hanoi Hotel",
       "Halong Bay: Dragon Bay Cruise",
       "Danang: Bluesun Hotel Danang",
-      "Ho Chi Minh City: Ramana Hotel Saigon"
+      "Ho Chi Minh City: Ramana Hotel Saigon",
     ],
 
     departureDates: [],
@@ -6283,7 +6428,7 @@ const packages = [
 
     enquiryLink: "#",
 
-    detailsLink: "/packages/vietnam-tour"
+    detailsLink: "/packages/vietnam-tour",
   },
   {
     id: 105,
@@ -6311,7 +6456,7 @@ const packages = [
       { id: 3, icon: Car, label: "AC Transfers" },
       { id: 4, icon: Camera, label: "Sightseeing Included" },
       { id: 5, icon: MapPinned, label: "Island & Heritage Tour" },
-      { id: 6, icon: Plane, label: "Flights & Visa Included" }
+      { id: 6, icon: Plane, label: "Flights & Visa Included" },
     ],
 
     overview:
@@ -6328,7 +6473,7 @@ const packages = [
             distance: "Flight journey",
             description:
               "Board flight from Netaji Subhash Chandra Bose International Airport, arrive in Hanoi, transfer to hotel, and overnight stay at Hanoi.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 2,
@@ -6336,7 +6481,7 @@ const packages = [
             distance: "Approx. 120 km excursion",
             description:
               "Visit Hoa Lu Ancient Capital, King Dinh Temple, King Le Temple, and enjoy a scenic Trang An boat ride through limestone mountains, caves, and rivers before returning to Hanoi.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 3,
@@ -6344,7 +6489,7 @@ const packages = [
             distance: "Day excursion from Hanoi",
             description:
               "Enjoy a Halong Bay cruise with Sung Sot Cave, Luon Cave, kayaking or bamboo boat ride, Titop Island, swimming, hiking, sunset party, and buffet lunch before returning to Hanoi.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 4,
@@ -6352,7 +6497,7 @@ const packages = [
             distance: "Flight + local transfer",
             description:
               "Fly to Da Nang and visit Hoi An Ancient Town including Japanese Covered Bridge, Pottery Museum, Tam Ky Ancient House, Chua Ong Pagoda, local market, and lantern streets before returning to Da Nang.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 5,
@@ -6360,7 +6505,7 @@ const packages = [
             distance: "Excursion from Da Nang",
             description:
               "Visit Sun World Ba Na Hills by cable car, see the famous Golden Bridge, French Village, Fantasy Park, mountain viewpoints, and landscaped gardens before returning to Da Nang.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 6,
@@ -6368,7 +6513,7 @@ const packages = [
             distance: "Flight + local transfer",
             description:
               "Fly to Phu Quoc, check in to hotel, visit Vinpearl Safari, and enjoy free time with an optional visit to Grand World in the evening.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 7,
@@ -6376,7 +6521,7 @@ const packages = [
             distance: "Island hopping excursion",
             description:
               "Visit Coconut Prison, Mong Tay Island, Gam Ghi Island, May Rut Island, Hon Thom Island, ride the world’s longest sea cable car, and enjoy Aquatopia Water Park and theme park activities.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 8,
@@ -6384,10 +6529,10 @@ const packages = [
             distance: "Airport transfer",
             description:
               "After breakfast, enjoy free time until transfer to Phu Quoc Airport for your onward flight. Tour ends with wonderful memories.",
-            images: [null, null]
-          }
-        ]
-      }
+            images: [null, null],
+          },
+        ],
+      },
     },
 
     included: [
@@ -6410,7 +6555,7 @@ const packages = [
       "Phu Quoc island hopping tour",
       "Hon Thom cable car ride",
       "Entrance fees as per itinerary",
-      "2 bottles of mineral water per person per sightseeing day"
+      "2 bottles of mineral water per person per sightseeing day",
     ],
 
     excluded: [
@@ -6421,13 +6566,13 @@ const packages = [
       "Additional meals other than specified",
       "Early check-in / late check-out charges",
       "Expenses due to weather, flight delays, strikes, natural calamities, political disturbances, or force majeure",
-      "Any item not mentioned under inclusions"
+      "Any item not mentioned under inclusions",
     ],
 
     hotels: [
       "Hanoi: Muong Thanh Centre Hotel / Similar",
       "Da Nang: Eden Ocean Hotel / Similar",
-      "Phu Quoc: Sunset Beach Resort & Spa / Similar"
+      "Phu Quoc: Sunset Beach Resort & Spa / Similar",
     ],
 
     departureDates: [],
@@ -6438,7 +6583,7 @@ const packages = [
 
     enquiryLink: "#",
 
-    detailsLink: "/packages/vietnam-phu-quoc-tour"
+    detailsLink: "/packages/vietnam-phu-quoc-tour",
   },
   {
     id: 106,
@@ -6457,8 +6602,7 @@ const packages = [
 
     rating: 9.2,
 
-    location:
-      "Colombo • Pinnawala • Kandy • Nuwara Eliya • Bentota",
+    location: "Colombo • Pinnawala • Kandy • Nuwara Eliya • Bentota",
 
     facilities: [
       { id: 1, icon: Hotel, label: "3★ Hotel Stay" },
@@ -6466,7 +6610,7 @@ const packages = [
       { id: 3, icon: Car, label: "AC Transportation" },
       { id: 4, icon: Camera, label: "Sightseeing Included" },
       { id: 5, icon: MapPinned, label: "Cultural & Nature Tour" },
-      { id: 6, icon: Plane, label: "Flight Included" }
+      { id: 6, icon: Plane, label: "Flight Included" },
     ],
 
     overview:
@@ -6483,7 +6627,7 @@ const packages = [
             distance: "Flight journey",
             description:
               "Board flight from Netaji Subhash Chandra Bose International Airport, arrive in Colombo, transfer to hotel, and overnight stay at Colombo.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 2,
@@ -6491,7 +6635,7 @@ const packages = [
             distance: "Approx. 120 km",
             description:
               "Visit Pinnawala Elephant Orphanage and continue to Kandy. Explore Kandy city including Temple of the Tooth Relic, Gem Museum, and enjoy a traditional cultural dance show. Overnight stay at Kandy.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 3,
@@ -6499,7 +6643,7 @@ const packages = [
             distance: "Approx. 80 km",
             description:
               "Visit Peradeniya Botanical Garden, Ramboda Waterfall, Hanuman Temple, and a tea factory before proceeding to Nuwara Eliya. Enjoy a city tour covering Gregory Lake, Victoria Park, golf course area, and tea plantation surroundings. Overnight stay at Nuwara Eliya.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 4,
@@ -6507,7 +6651,7 @@ const packages = [
             distance: "Approx. 210 km",
             description:
               "Drive through scenic hill country to Bentota and relax on the beach. Overnight stay at Bentota.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 5,
@@ -6515,7 +6659,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Enjoy a Madhu River boat safari through mangrove islands and visit a Turtle Hatchery to learn about sea turtle conservation. Overnight stay at Bentota.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 6,
@@ -6523,7 +6667,7 @@ const packages = [
             distance: "Approx. 85 km",
             description:
               "Transfer to Colombo for a city tour covering Galle Face Green, Viharamahadevi Park, National Museum, Independence Square, Fort area, and shopping districts. Overnight stay at Colombo.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 7,
@@ -6531,10 +6675,10 @@ const packages = [
             distance: "Airport transfer",
             description:
               "After breakfast transfer to the airport for your return flight to India. Tour ends with sweet memories of Sri Lanka.",
-            images: [null, null]
-          }
-        ]
-      }
+            images: [null, null],
+          },
+        ],
+      },
     },
 
     included: [
@@ -6554,7 +6698,7 @@ const packages = [
       "Tea factory visit",
       "Nuwara Eliya sightseeing",
       "Madhu River boat ride",
-      "Turtle Hatchery visit"
+      "Turtle Hatchery visit",
     ],
 
     excluded: [
@@ -6565,14 +6709,14 @@ const packages = [
       "Laundry and telephone charges",
       "Additional mineral water beyond supplied quantity",
       "Travel insurance",
-      "Any item not mentioned under inclusions"
+      "Any item not mentioned under inclusions",
     ],
 
     hotels: [
       "Colombo: Ocean Edge Suite / Courtyard by Marriott Colombo",
       "Kandy: Swiss Residence Kandy",
       "Nuwara Eliya: Ramboda Falls Hotel",
-      "Bentota: Rockside Beach Hotel"
+      "Bentota: Rockside Beach Hotel",
     ],
 
     departureDates: [],
@@ -6580,7 +6724,7 @@ const packages = [
     notes: [
       "Sri Lanka follows GMT+5:30, the same time zone as India.",
       "Sri Lankan Rupee (LKR) is the local currency.",
-      "Itinerary may change depending on road, traffic, weather, or operational conditions."
+      "Itinerary may change depending on road, traffic, weather, or operational conditions.",
     ],
 
     whatsapp: "https://wa.me/919163569695",
@@ -6589,7 +6733,7 @@ const packages = [
 
     enquiryLink: "#",
 
-    detailsLink: "/packages/sri-lanka-tour"
+    detailsLink: "/packages/sri-lanka-tour",
   },
   {
     id: 107,
@@ -6617,7 +6761,7 @@ const packages = [
       { id: 3, icon: Car, label: "AC Transportation" },
       { id: 4, icon: Camera, label: "Sightseeing Included" },
       { id: 5, icon: MapPinned, label: "Theme Park & City Tour" },
-      { id: 6, icon: Plane, label: "Flights Included" }
+      { id: 6, icon: Plane, label: "Flights Included" },
     ],
 
     overview:
@@ -6634,7 +6778,7 @@ const packages = [
             distance: "Airport transfer",
             description:
               "Arrive at Singapore Airport, transfer to hotel, and in the evening visit Night Safari with Thumbuakar tribal performance, tram safari, and Creatures of the Night show. Overnight stay at Singapore.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 2,
@@ -6642,7 +6786,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Singapore Flyer photo point and Marina Bay Sands SkyPark area, then proceed to Sentosa Island for cable car ride, Images of Singapore LIVE, Madame Tussauds, Luge & Sky Ride, and Wings of Time show. Overnight stay at Singapore.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 3,
@@ -6650,7 +6794,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "After breakfast enjoy a full day at Universal Studios Singapore with thrilling rides, movie-themed attractions, entertainment zones, and shows. Overnight stay at Singapore.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 4,
@@ -6658,7 +6802,7 @@ const packages = [
             distance: "Coach transfer",
             description:
               "Travel by coach from Singapore to Kuala Lumpur, check in to hotel, and spend the evening at leisure. Overnight stay at Kuala Lumpur.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 5,
@@ -6666,7 +6810,7 @@ const packages = [
             distance: "Approx. 55 km",
             description:
               "Excursion to Genting Highlands with cable car ride, Snow World, gaming and entertainment complex, and en-route stop at Batu Caves. Overnight stay at Genting/Kuala Lumpur.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 6,
@@ -6674,7 +6818,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Petronas Twin Towers photo stop, Cocoa Centre, King’s Palace photo stop, National Monument, National Mosque, Independence Square, and enjoy local city attractions. Overnight stay at Kuala Lumpur.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 7,
@@ -6682,10 +6826,10 @@ const packages = [
             distance: "Airport transfer",
             description:
               "After breakfast check out, enjoy free time for shopping and local markets, lunch at Indian restaurant, and transfer to Kuala Lumpur Airport for your return flight to India.",
-            images: [null, null]
-          }
-        ]
-      }
+            images: [null, null],
+          },
+        ],
+      },
     },
 
     included: [
@@ -6710,7 +6854,7 @@ const packages = [
       "Genting Highlands excursion",
       "Snow World entry",
       "Batu Caves visit",
-      "Kuala Lumpur city tour"
+      "Kuala Lumpur city tour",
     ],
 
     excluded: [
@@ -6720,13 +6864,13 @@ const packages = [
       "Additional beverages",
       "Optional activities not mentioned",
       "Tips not specified",
-      "Anything not mentioned in inclusions"
+      "Anything not mentioned in inclusions",
     ],
 
     hotels: [
       "Singapore: Hilton Garden Inn Singapore (4★)",
       "Kuala Lumpur: Ramada Kuala Lumpur (4★)",
-      "Genting: First World Hotel Genting Highlands"
+      "Genting: First World Hotel Genting Highlands",
     ],
 
     departureDates: [
@@ -6734,13 +6878,13 @@ const packages = [
       "27/10/2026",
       "20/11/2026",
       "22/12/2026",
-      "22/01/2027"
+      "22/01/2027",
     ],
 
     notes: [
       "All sightseeing is subject to operational schedules and weather conditions.",
       "Hotel check-in/check-out timings are as per hotel policy.",
-      "No hidden costs as per package inclusions."
+      "No hidden costs as per package inclusions.",
     ],
 
     whatsapp: "https://wa.me/919163569695",
@@ -6749,7 +6893,7 @@ const packages = [
 
     enquiryLink: "#",
 
-    detailsLink: "/packages/singapore-malaysia-tour"
+    detailsLink: "/packages/singapore-malaysia-tour",
   },
   {
     id: 108,
@@ -6777,7 +6921,7 @@ const packages = [
       { id: 3, icon: Car, label: "Transportation Included" },
       { id: 4, icon: Camera, label: "Sightseeing Included" },
       { id: 5, icon: MapPinned, label: "Theme Park & City Tour" },
-      { id: 6, icon: Plane, label: "Flights Included" }
+      { id: 6, icon: Plane, label: "Flights Included" },
     ],
 
     overview:
@@ -6794,7 +6938,7 @@ const packages = [
             distance: "Airport transfer",
             description:
               "Arrive at Suvarnabhumi Airport, transfer to Pattaya hotel with guaranteed early check-in. Visit Pattaya Beach area, enjoy Indian buffet lunch, Alcazar Show, Walking Street, dinner, and overnight stay at Pattaya.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 2,
@@ -6802,7 +6946,7 @@ const packages = [
             distance: "Speed boat excursion",
             description:
               "Proceed to Coral Island by speed boat, enjoy beach activities, buffet lunch at Indian restaurant, Pattaya local market sightseeing, dinner, and overnight stay at Pattaya.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 3,
@@ -6810,7 +6954,7 @@ const packages = [
             distance: "Approx. 150 km",
             description:
               "Check out and transfer to Bangkok. Visit Golden Temple, Marble Temple, and city attractions. Enjoy shopping at Indira Market, dinner, and overnight stay at Bangkok.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 4,
@@ -6818,7 +6962,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Safari World with Marine Park including buffet lunch. In the evening enjoy Chao Phraya Princess Cruise dinner and overnight stay at Bangkok.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 5,
@@ -6826,7 +6970,7 @@ const packages = [
             distance: "Flight transfer",
             description:
               "Fly from Bangkok to Phuket, transfer to hotel, enjoy buffet lunch at Indian restaurant, leisure time, dinner, and overnight stay at Phuket.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 6,
@@ -6834,7 +6978,7 @@ const packages = [
             distance: "Boat excursion",
             description:
               "Full-day Phi Phi Island tour with beach visit and buffet lunch. Return to hotel for dinner and overnight stay at Phuket.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 7,
@@ -6842,7 +6986,7 @@ const packages = [
             distance: "Flight transfer",
             description:
               "Fly to Kuala Lumpur, transfer to hotel, leisure evening, and overnight stay at Kuala Lumpur.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 8,
@@ -6850,7 +6994,7 @@ const packages = [
             distance: "Approx. 55 km",
             description:
               "Excursion to Genting Highlands with cable car, Snow World, gaming complex, Batu Caves visit, photo stops, dinner, and overnight stay at Genting/Kuala Lumpur.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 9,
@@ -6858,7 +7002,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Petronas Twin Towers photo stop, Cocoa Centre, King’s Palace, National Monument, National Mosque, Independence Square, and overnight stay at Kuala Lumpur.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 10,
@@ -6866,7 +7010,7 @@ const packages = [
             distance: "Road transfer",
             description:
               "Travel by road to Singapore, check in to hotel, and in the evening enjoy Night Safari with tram ride and wildlife experience. Overnight stay at Singapore.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 11,
@@ -6874,7 +7018,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Marina Bay, SkyPark area, Sentosa Island, Mount Faber, Merlion Tower, Sky Ride, light and sound show, dinner, and overnight stay at Singapore.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 12,
@@ -6882,7 +7026,7 @@ const packages = [
             distance: "Free day",
             description:
               "Free day for leisure, shopping, or optional Universal Studios Singapore visit. Overnight stay at Singapore.",
-            images: [null, null]
+            images: [null, null],
           },
           {
             day: 13,
@@ -6890,10 +7034,10 @@ const packages = [
             distance: "Airport transfer",
             description:
               "Early morning check out and transfer to Singapore Airport for return flight to India with sweet memories of the tour.",
-            images: [null, null]
-          }
-        ]
-      }
+            images: [null, null],
+          },
+        ],
+      },
     },
 
     included: [
@@ -6916,7 +7060,7 @@ const packages = [
       "Sentosa Island tour",
       "Safari World Bangkok",
       "Phi Phi Island tour",
-      "Genting Highlands excursion"
+      "Genting Highlands excursion",
     ],
 
     excluded: [
@@ -6926,7 +7070,7 @@ const packages = [
       "Additional beverages",
       "Optional tours not mentioned",
       "Travel insurance if not included by airline/package",
-      "Any item not mentioned under inclusions"
+      "Any item not mentioned under inclusions",
     ],
 
     hotels: [
@@ -6935,7 +7079,7 @@ const packages = [
       "Phuket: The Fisherman Harbour Beach Resort (5★)",
       "Singapore: Hilton Garden Inn Singapore (4★)",
       "Kuala Lumpur: Ramada Kuala Lumpur (4★)",
-      "Genting Highlands: First World Hotel"
+      "Genting Highlands: First World Hotel",
     ],
 
     departureDates: [
@@ -6945,13 +7089,13 @@ const packages = [
       "25/10/2026",
       "20/11/2026",
       "22/12/2026",
-      "22/01/2027"
+      "22/01/2027",
     ],
 
     notes: [
       "Flights, hotel rooms, and transportation are subject to availability at the time of booking.",
       "Tour schedule may change due to operational, weather, or local conditions.",
-      "Package price to be confirmed at the time of booking."
+      "Package price to be confirmed at the time of booking.",
     ],
 
     whatsapp: "https://wa.me/918910555711",
@@ -6960,9 +7104,8 @@ const packages = [
 
     enquiryLink: "#",
 
-    detailsLink:
-      "/packages/bangkok-pattaya-phuket-kuala-lumpur-singapore-tour"
-  }
+    detailsLink: "/packages/bangkok-pattaya-phuket-kuala-lumpur-singapore-tour",
+  },
 ];
 
 export default packages;
