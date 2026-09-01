@@ -282,14 +282,6 @@ export default function TourDayCard({ day, circleRef }) {
                       0{index + 1}
                     </div> */}
 
-                    {/* Bottom Label */}
-                    <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between">
-
-                      <div className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white backdrop-blur-md transition-transform duration-300 group-hover/image:rotate-45">
-                        <ArrowUpRight size={17} />
-                      </div>
-                    </div>
-
                     {/* Shine */}
                     <div className="pointer-events-none absolute -left-[120%] top-0 h-full w-[70%] rotate-[18deg] bg-white/10 blur-xl transition-all duration-1000 group-hover/image:left-[130%]" />
                   </>
