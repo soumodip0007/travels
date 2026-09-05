@@ -1,43 +1,48 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import {
-  Camera,
-  MapPin,
-  Maximize2,
-  Minimize2,
-  X,
-} from "lucide-react";
+import { motion } from "framer-motion";
+import { Camera, MapPin, Globe, Home } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
-import gallery from '../data/gallery'
+import packages from "../data/packages";
 import ParticlesBackground from "../components/ParticlesBackground";
 
 const Gallery = () => {
-  const [selected, setSelected] = useState(null); // the clicked item
-  const [isMaximized, setIsMaximized] = useState(false);
+  const navigate = useNavigate();
+  const [activeCategory, setActiveCategory] = useState("all");
 
-  const openImage = (item) => {
-    setSelected(item);
-    setIsMaximized(false); // always open at 50% size first
-  };
+  const domesticPackages = packages.filter(
+    (item) => item.category?.toLowerCase() === "domestic"
+  );
 
-  const closeImage = () => {
-    setSelected(null);
-    setIsMaximized(false);
+  const internationalPackages = packages.filter(
+    (item) => item.category?.toLowerCase() === "international"
+  );
+
+  const displayedPackages =
+    activeCategory === "domestic"
+      ? domesticPackages
+      : activeCategory === "international"
+        ? internationalPackages
+        : packages;
+
+  const openGallery = (slug) => {
+    navigate(`/gallery/${slug}`);
   };
 
   return (
-    <div className="relative z-0">
+    <div className="relative z-0 min-h-screen">
 
       <div className="fixed inset-0 -z-10 overflow-hidden">
         <ParticlesBackground />
       </div>
-      <section className="py-10 rounded-[55px] backdrop-blur-xs relative flex min-h-[85vh] items-center justify-center overflow-hidden px-6">
+
+      <section className="relative overflow-hidden rounded-[55px] px-6 py-10">
 
         <div className="mx-auto w-[92%] max-w-7xl">
 
           {/* Heading */}
 
-          <div className="mb-16 text-center">
+          <div className="mb-14 text-center">
 
             <span className="inline-flex items-center gap-2 rounded-full bg-[#EDE9FE] px-5 py-2 text-sm font-semibold text-[#6957DF]">
               <Camera size={16} />
@@ -49,158 +54,118 @@ const Gallery = () => {
             </h1>
 
             <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-slate-600">
-              Every destination has a story. Explore breathtaking mountains,
-              crystal-clear lakes, pristine beaches, lush forests, and unforgettable
-              travel moments captured from our most popular tour packages.
+              Explore beautiful moments from our domestic and international
+              travel packages. Select a package to view its complete gallery.
             </p>
 
           </div>
 
-          {/* Gallery */}
+          {/* Category Buttons */}
 
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          <div className="mb-12 flex flex-wrap justify-center gap-4">
 
-            {gallery.map((item) => (
+            <button
+              onClick={() => setActiveCategory("all")}
+              className={`flex items-center gap-2 rounded-full px-6 py-3 font-semibold transition ${activeCategory === "all"
+                  ? "bg-[#6957DF] text-white shadow-lg"
+                  : "bg-white text-slate-700 shadow"
+                }`}
+            >
+              <Camera size={17} />
+              All Packages
+            </button>
 
-              <div
-                key={item.id}
-                onClick={() => openImage(item)}
-                className="group relative cursor-pointer overflow-hidden rounded-3xl shadow-xl"
-              >
+            <button
+              onClick={() => setActiveCategory("domestic")}
+              className={`flex items-center gap-2 rounded-full px-6 py-3 font-semibold transition ${activeCategory === "domestic"
+                  ? "bg-[#6957DF] text-white shadow-lg"
+                  : "bg-white text-slate-700 shadow"
+                }`}
+            >
+              <Home size={17} />
+              Domestic
+            </button>
 
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="h-72 w-full object-cover transition duration-700 group-hover:scale-110"
-                />
-
-                {/* Overlay */}
-
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 transition duration-500 group-hover:opacity-100"></div>
-
-                {/* Content */}
-
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-
-                  <div className="translate-y-5 transition duration-500 group-hover:translate-y-0">
-
-                    <div className="mb-3 inline-flex rounded-full bg-white/20 p-3 backdrop-blur">
-                      <Camera
-                        size={20}
-                        className="text-white"
-                      />
-                    </div>
-
-                    <h3 className="text-2xl font-bold text-white">
-                      {item.title}
-                    </h3>
-
-                    <div className="mt-2 flex items-center gap-2 text-white/90">
-
-                      <MapPin size={16} />
-
-                      <span>Explore Destination</span>
-
-                    </div>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-            ))}
+            <button
+              onClick={() => setActiveCategory("international")}
+              className={`flex items-center gap-2 rounded-full px-6 py-3 font-semibold transition ${activeCategory === "international"
+                  ? "bg-[#6957DF] text-white shadow-lg"
+                  : "bg-white text-slate-700 shadow"
+                }`}
+            >
+              <Globe size={17} />
+              International
+            </button>
 
           </div>
 
-        </div>
+          {/* Package Gallery */}
 
-        {/* Lightbox Modal */}
+          <motion.div
+            layout
+            className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+          >
 
-        <AnimatePresence>
-          {selected && (
-            <motion.div
-              className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 backdrop-blur-sm"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={closeImage}
-            >
+            {displayedPackages.map((item) => (
+
               <motion.div
+                key={item.id}
                 layout
-                onClick={(e) => e.stopPropagation()}
-                initial={{ opacity: 0, scale: 0.85 }}
-                animate={{
-                  opacity: 1,
-                  scale: 1,
-                  width: isMaximized ? "95vw" : "80vw",
-                  height: isMaximized ? "95vh" : "80vh",
-                }}
-                exit={{ opacity: 0, scale: 0.85 }}
-                transition={{ duration: 0.35, ease: "easeInOut" }}
-                className="relative overflow-hidden rounded-2xl bg-black shadow-2xl"
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                whileHover={{ y: -6 }}
+                transition={{ duration: 0.3 }}
+                onClick={() => openGallery(item.slug)}
+                className="group relative cursor-pointer overflow-hidden rounded-3xl bg-white shadow-xl"
               >
 
-                {/* Control icons */}
+                {/* Cover Image */}
 
-                {/* Control icons */}
+                <div className="relative h-72 overflow-hidden">
 
-                <div className="absolute right-4 top-4 z-10 flex gap-2">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+                  />
 
-                  <button
-                    onClick={() => setIsMaximized(true)}
-                    disabled={isMaximized}
-                    className="rounded-full bg-slate-800/90 p-2.5 text-white shadow-lg transition hover:bg-[#6957DF] disabled:cursor-not-allowed disabled:bg-slate-800/40 disabled:text-white/40"
-                    aria-label="Maximize"
-                  >
-                    <Maximize2 size={18} />
-                  </button>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
 
-                  <button
-                    onClick={() => setIsMaximized(false)}
-                    disabled={!isMaximized}
-                    className="rounded-full bg-slate-800/90 p-2.5 text-white shadow-lg transition hover:bg-[#A855F7] disabled:cursor-not-allowed disabled:bg-slate-800/40 disabled:text-white/40"
-                    aria-label="Minimize"
-                  >
-                    <Minimize2 size={18} />
-                  </button>
+                  {/* Image Count */}
 
-                  <button
-                    onClick={closeImage}
-                    className="rounded-full bg-slate-800/90 p-2.5 text-white shadow-lg transition hover:bg-red-600"
-                    aria-label="Close"
-                  >
-                    <X size={18} />
-                  </button>
-
-                </div>
-
-                {/* Image */}
-
-                <img
-                  src={selected.image}
-                  alt={selected.title}
-                  className="h-full w-full object-cover"
-                />
-
-                {/* Caption */}
-
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
-                  <h3 className="text-2xl font-bold text-white">
-                    {selected.title}
-                  </h3>
-                  <div className="mt-2 flex items-center gap-2 text-white/90">
-                    <MapPin size={16} />
-                    <span>Explore Destination</span>
+                  <div className="absolute right-4 top-4 flex items-center gap-1.5 rounded-full bg-black/50 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-md">
+                    <Camera size={14} />
+                    {item.gallery?.length || 0}
                   </div>
+
+                  {/* Package Details */}
+
+                  <div className="absolute bottom-0 left-0 right-0 p-5">
+
+                    <h3 className="text-xl font-bold text-white">
+                      {item.title}
+                    </h3>
+
+                  </div>
+
                 </div>
 
               </motion.div>
-            </motion.div>
+
+            ))}
+
+          </motion.div>
+
+          {displayedPackages.length === 0 && (
+            <div className="py-20 text-center text-slate-500">
+              No packages available.
+            </div>
           )}
-        </AnimatePresence>
+
+        </div>
 
       </section>
+
     </div>
   );
 };

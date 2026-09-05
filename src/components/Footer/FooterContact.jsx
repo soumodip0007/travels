@@ -39,11 +39,9 @@ export default function FooterContact() {
             </h4>
 
             <p className="mt-1 text-sm leading-6 text-slate-300">
-              123 Park Street,
+              57A, Mahanirban Rd, Dover Terrace, Gariahat, near City Mart, Ballygunge,
               <br />
-              Kolkata, West Bengal 700016,
-              <br />
-              India
+              Kolkata, West Bengal 700029
             </p>
 
           </div>
@@ -67,10 +65,10 @@ export default function FooterContact() {
             </h4>
 
             <a
-              href="tel:+919999999999"
+              href="tel:+919163569695"
               className="text-sm text-slate-300 transition hover:text-[#C084FC]"
             >
-              +91 99999 99999
+              +91 9163569695
             </a>
 
           </div>
@@ -94,10 +92,10 @@ export default function FooterContact() {
             </h4>
 
             <a
-              href="mailto:info@riyatravels.com"
+              href="mailto:riyatourtravels01@gmail.com"
               className="text-sm text-slate-300 transition hover:text-[#C084FC]"
             >
-              info@riyatravels.com
+              riyatourtravels01@gmail.com
             </a>
 
           </div>

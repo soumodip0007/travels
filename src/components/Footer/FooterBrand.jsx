@@ -12,15 +12,17 @@ export default function FooterBrand() {
 
       {/* Logo */}
 
-      <img
-        src="/logo.png"
-        alt="Travel Logo"
-        className="h-24 w-auto rounded-2xl border border-white/10 bg-white p-3 shadow-[0_20px_45px_rgba(105,87,223,0.25)]"
-      />
+      <div className="flex justify-center">
+        <img
+          src="/images/riya-logo.webp"
+          alt="Riya Group of Companies"
+          className="h-24 w-auto rounded-2xl border border-white/10 bg-white p-3 shadow-[0_20px_45px_rgba(105,87,223,0.25)]"
+        />
+      </div>
 
       {/* Description */}
 
-      <p className="mt-8 text-[16px] leading-8 text-slate-300">
+      <p className="mt-8 text-[16px] text-justify leading-8 text-slate-300">
         Discover the world's most beautiful destinations with premium travel
         experiences, customized holiday packages, luxury stays, and memorable
         adventures crafted especially for you.

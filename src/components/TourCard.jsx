@@ -22,8 +22,8 @@ export default function TourCard({ tour }) {
   const cheapestPackage =
     availablePackages.length > 0
       ? availablePackages.reduce((prev, current) =>
-          current.price < prev.price ? current : prev
-        )
+        current.price < prev.price ? current : prev
+      )
       : null;
 
   const startingPrice = cheapestPackage?.price || 0;
@@ -33,6 +33,14 @@ export default function TourCard({ tour }) {
 
   // Check if multiple packages exist
   const hasMultiplePackages = availablePackages.length > 1;
+
+  // Card theme: swapped — domestic tours now get the purple "Enquire Now" gradient,
+  // international tours keep the original dark theme
+    const isInternational = tour.category === "international";
+
+  const cardThemeClass = isInternational
+    ? "bg-gradient-to-br from-[#C026D3] via-[#A855F7] to-[#7C3AED]"
+    : "bg-gradient-to-br from-[#6957DF] via-[#8267E8] to-[#9F7AEA]";
 
   const handleShare = async (e) => {
     e.preventDefault();
@@ -47,7 +55,7 @@ export default function TourCard({ tour }) {
     if (navigator.share) {
       try {
         await navigator.share(shareData);
-      } catch {}
+      } catch { }
     } else {
       navigator.clipboard.writeText(shareData.url);
       alert("Package link copied!");
@@ -55,7 +63,7 @@ export default function TourCard({ tour }) {
   };
 
   return (
-    <div className="group flex h-full flex-col rounded-[28px] bg-gradient-to-br from-[#000] via-[#6D53E1] to-[#261B57] text-white shadow-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+    <div className={`group flex h-full flex-col rounded-[28px] ${cardThemeClass} text-white shadow-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl`}>
 
       {/* ================= IMAGE ================= */}
 
@@ -91,11 +99,10 @@ export default function TourCard({ tour }) {
         {/* Category */}
 
         <div
-          className={`absolute left-4 top-16 rounded-full px-4 py-1.5 text-xs font-bold text-white shadow-lg ${
-            tour.category === "international"
+          className={`absolute left-4 top-16 rounded-full px-4 py-1.5 text-xs font-bold text-white shadow-lg ${tour.category === "international"
               ? "bg-gradient-to-r from-purple-600 to-pink-600"
               : "bg-gradient-to-r from-sky-600 to-blue-700"
-          }`}
+            }`}
         >
           {tour.category} Tour
         </div>

@@ -239,20 +239,45 @@ export default function TourDayCard({
 
           <div className="relative z-10 flex items-center justify-between gap-4">
 
-            {/* DAY */}
+            {/* Day */}
+            <div className="relative z-10 flex items-center justify-between gap-4">
 
-            <div className="flex shrink-0 items-center gap-2 rounded-lg border border-white/25 bg-white/10 px-4 py-2.5 text-white backdrop-blur-md">
+            {/* Day */}
+            <div className="relative shrink-0 overflow-hidden rounded-lg p-[2px]">
 
-              <CalendarDays
-                size={15}
-                strokeWidth={2.5}
+              <div
+                className="absolute inset-[-50%] animate-[circuit-spin_3.5s_linear_infinite]"
+                style={{
+                  background:
+                    "conic-gradient(from 45deg, #f2a4fe 0%, rgba(242,164,254,0) 42%, rgba(242,164,254,0) 50%, #f2a4fe 50%, rgba(242,164,254,0) 92%, rgba(242,164,254,0) 100%)",
+                }}
               />
 
-              <span className="text-sm font-extrabold">
-                Day {day.day}
-              </span>
+              <style>{`
+    @keyframes circuit-spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+  `}</style>
+
+              {/* Actual badge content, sitting on top so only the 2px edge shows the beam */}
+              <div className="relative flex items-center gap-2 rounded-lg bg-gradient-to-r from-fuchsia-500 to-purple-600 px-4 py-2.5 text-white shadow-[0_0_30px_rgba(217,70,247,0.85)]">
+
+                <CalendarDays
+                  size={15}
+                  strokeWidth={2.5}
+                />
+
+                <span className="text-sm font-extrabold">
+                  Day {day.day}
+                </span>
+
+              </div>
 
             </div>
+
+          </div>
+
 
             {/* LOCATION */}
 
@@ -311,60 +336,74 @@ export default function TourDayCard({
         </div>
 
         {/* =====================================================
-            FACILITIES
-        ===================================================== */}
+    FACILITIES
+===================================================== */}
 
-        {day.facilities?.length > 0 && (
-          <div className="relative border-b border-white/15 bg-white/5 px-6 py-5 backdrop-blur-xl md:px-8">
+{day.facilities?.length > 0 && (
+  <div className="relative z-10 border-b border-white/15 bg-white/5 px-6 py-5 backdrop-blur-xl md:px-8">
 
-            <div className="flex flex-wrap gap-2.5">
+    <div className="flex flex-wrap gap-2.5">
 
-              {day.facilities.map((facility, index) => {
+      {day.facilities.map((facility, index) => {
 
-                const Icon = facility.icon;
+        const isObject =
+          typeof facility === "object" &&
+          facility !== null;
 
-                return (
-                  <motion.div
-                    key={facility.id}
-                    initial={{
-                      opacity: 0,
-                      y: 8,
-                    }}
-                    whileInView={{
-                      opacity: 1,
-                      y: 0,
-                    }}
-                    viewport={{
-                      once: true,
-                    }}
-                    transition={{
-                      duration: 0.3,
-                      delay: index * 0.04,
-                    }}
-                    className="group/facility flex cursor-default items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2.5 text-sm font-bold text-white shadow-sm backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-white/30 hover:bg-white/15 hover:shadow-md"
-                  >
+        const label = isObject
+          ? facility.label
+          : facility;
 
-                    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-gradient-to-br from-[#8B5CF6] to-[#C084FC] text-white shadow-md transition-colors duration-300 group-hover/facility:bg-white group-hover/facility:text-[#6D28D9]">
+        const Icon = isObject
+          ? facility.icon
+          : Sparkles;
 
-                      <Icon
-                        size={14}
-                        strokeWidth={2.5}
-                      />
+        return (
+          <motion.div
+            key={
+              isObject
+                ? facility.id || `${label}-${index}`
+                : `${label}-${index}`
+            }
+            initial={{
+              opacity: 0,
+              y: 8,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            viewport={{
+              once: true,
+            }}
+            transition={{
+              duration: 0.3,
+              delay: index * 0.04,
+            }}
+            className="group/facility flex cursor-default items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2.5 text-sm font-bold text-white shadow-sm backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-white/30 hover:bg-white/15 hover:shadow-md"
+          >
 
-                    </span>
+            <span className="flex h-6 w-6 items-center justify-center rounded-full bg-gradient-to-br from-[#8B5CF6] to-[#C084FC] text-white shadow-md">
 
-                    <span>
-                      {facility.label}
-                    </span>
+              <Icon
+                size={14}
+                strokeWidth={2.5}
+              />
 
-                  </motion.div>
-                );
-              })}
+            </span>
 
-            </div>
+            <span>
+              {label}
+            </span>
 
-          </div>
-        )}
+          </motion.div>
+        );
+      })}
+
+    </div>
+
+  </div>
+)}
 
         {/* =====================================================
             IMAGES + PAGINATION

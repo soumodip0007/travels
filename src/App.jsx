@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer/Footer";
 import ScrollTop from "./components/ScrollTop";
 import PageLoader from "./components/PageLoader";
 import Home from "./pages/Home";
 import Gallery from "./pages/Gallery";
+import PackageGallery from "./pages/PackageGallery";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import PackageDetails from "./pages/PackageDetails";
@@ -33,7 +33,7 @@ const App = () => {
     setLoading(true);
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 10000);
+    }, 1000);
     return () => clearTimeout(timer);
   }, [location.pathname]);
 
@@ -64,6 +64,10 @@ const App = () => {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route
+            path="/gallery/:slug"
+            element={<PackageGallery />}
+          />
           <Route path="/packages/:slug" element={<PackageDetails />} />
           <Route path="*" element={<Error404 />} />
         </Routes>

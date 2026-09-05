@@ -15,22 +15,22 @@ const contactDetails = [
   {
     icon: Phone,
     label: "Phone",
-    value: "+91 98765 43210",
+    value: "+91 9163569695",
   },
   {
     icon: Mail,
     label: "Email",
-    value: "info@Riya Tours & Travels.com",
+    value: "riyatourtravels01@gmail.com",
   },
   {
     icon: MapPin,
     label: "Office",
-    value: "Kolkata, West Bengal, India",
+    value: "57A, Mahanirban Rd, Dover Terrace, Gariahat, near City Mart, Ballygunge, Kolkata, West Bengal 700029",
   },
   {
     icon: Clock,
     label: "Working Hours",
-    value: "Mon - Sat : 9:00 AM - 7:00 PM",
+    value: "Mon - Sat : 9:00 AM - 10:00 PM",
   },
 ];
 
@@ -272,7 +272,7 @@ const Contact = () => {
 
           <iframe
             title="Google Map"
-            src="https://maps.google.com/maps?q=Kolkata&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            src="https://www.google.com/maps?q=Riya+Tours+and+Travels&z=17&output=embed"
             className="h-[450px] w-full border-0"
             loading="lazy"
           ></iframe>

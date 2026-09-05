@@ -45,8 +45,7 @@ export default function PackageHero({ tour, selectedPackage }) {
       <div className="absolute inset-0 z-20 flex items-end">
         <div className="mx-auto flex w-[90%] max-w-7xl items-end justify-between pb-16">
           {/* Left */}
-
-          <div className="relative overflow-hidden rounded-[28px] border border-white/15 bg-black/40 shadow-[0_20px_50px_rgba(0,0,0,0.45)] backdrop-blur-md">
+          <div className="relative translate-y-8 overflow-hidden rounded-[28px] border border-white/15 bg-black/40 shadow-[0_20px_50px_rgba(0,0,0,0.45)] backdrop-blur-md">
             {/* Subtle brand-color wash, contained inside the card only */}
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-[#6957DF]/25 via-transparent to-transparent" />
 
