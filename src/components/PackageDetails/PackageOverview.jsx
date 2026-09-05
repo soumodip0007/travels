@@ -193,7 +193,7 @@ export default function PackageOverview({
                   rounded-3xl
                   border
                   border-purple-100
-                  bg-white
+                  bg-[#9262F7]
                   px-8
                   py-6
                   shadow-[0_10px_30px_rgba(109,40,217,0.10)]
@@ -223,7 +223,7 @@ export default function PackageOverview({
                     relative
                     text-2xl
                     font-bold
-                    text-[#6957DF]
+                    text-[#fff]
                   "
                 >
                   Overview
@@ -234,7 +234,7 @@ export default function PackageOverview({
                     relative
                     mt-2
                     leading-8
-                    text-gray-600
+                    text-[#fff]
                   "
                 >
                   {tour?.overview}

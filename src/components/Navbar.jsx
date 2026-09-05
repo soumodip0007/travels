@@ -205,7 +205,7 @@ export default function Navbar() {
             <Link
               to="/"
               onClick={() => setMobileOpen(false)}
-              className="flex items-center"
+              className="flex items-center rounded-2xl"
             >
               <img
                 src="/images/riya-logo.webp"

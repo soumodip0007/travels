@@ -112,7 +112,7 @@ export default function FeatureCards() {
         <div
           data-aos="zoom-in-up"
           data-aos-duration="1200"
-          className="relative overflow-visible rounded-[40px] border border-purple-100 bg-gradient-to-br from-white via-[#F7F5FF] to-[#F3E8FF] px-4 py-8 shadow-[0_30px_90px_rgba(105,87,223,0.18)] md:rounded-[52px] md:px-6 md:py-10 lg:rounded-[64px] lg:px-10 lg:py-12"
+          className="relative overflow-visible rounded-[40px] border border-purple-100 bg-gradient-to-br from-purple-200 via-[#6957DF] to-purple-200 px-4 py-8 shadow-[0_30px_90px_rgba(105,87,223,0.18)] md:rounded-[52px] md:px-6 md:py-10 lg:rounded-[64px] lg:px-10 lg:py-12"
         >
           {/* Decorative Glows */}
           <div className="pointer-events-none absolute -right-16 -top-16 hidden h-64 w-64 rounded-full bg-[#A855F7]/15 blur-3xl lg:block"></div>
