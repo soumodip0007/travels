@@ -667,19 +667,19 @@ const packages = [
     image: "/images/andaman/BAY-ISLAND.webp",
 
     gallery: ["/images/andaman/BARATANG.webp",
-              "/images/andaman/BAY-ISLAND.webp",
-              "/images/andaman/day-7-back-to-kolkata-airport.webp",
-              "/images/andaman/Day-7-International-Airport-in-Port-Blair.webp",
-              "/images/andaman/day-limestone.webp",
-              "/images/andaman/Day1-Cellular_Jail.webp",
-              "/images/andaman/Day1-corbyns-beach.webp",
-              "/images/andaman/Day2-north-bay-andaman.webp",
-              "/images/andaman/Day2-Ross-Island.webp",
-              "/images/andaman/DENSE.webp",
-              "/images/andaman/HAVELOCK.webp",
-              "/images/andaman/JARAWA.webp",
-              "/images/andaman/RADHANAGAR.webp",
-              "/images/andaman/ROSS-ISLAND.webp",],
+      "/images/andaman/BAY-ISLAND.webp",
+      "/images/andaman/day-7-back-to-kolkata-airport.webp",
+      "/images/andaman/Day-7-International-Airport-in-Port-Blair.webp",
+      "/images/andaman/day-limestone.webp",
+      "/images/andaman/Day1-Cellular_Jail.webp",
+      "/images/andaman/Day1-corbyns-beach.webp",
+      "/images/andaman/Day2-north-bay-andaman.webp",
+      "/images/andaman/Day2-Ross-Island.webp",
+      "/images/andaman/DENSE.webp",
+      "/images/andaman/HAVELOCK.webp",
+      "/images/andaman/JARAWA.webp",
+      "/images/andaman/RADHANAGAR.webp",
+      "/images/andaman/ROSS-ISLAND.webp",],
 
     perPerson: true,
 
@@ -891,8 +891,8 @@ const packages = [
             description:
               "After breakfast check out from the hotel and transfer to Port Blair Airport for your onward journey with sweet memories of the Andaman tour.",
 
-            images: [ "/images/andaman/day-7-back-to-kolkata-airport.webp",
-              "/images/andaman/Day-7-International-Airport-in-Port-Blair.webp" ],
+            images: ["/images/andaman/day-7-back-to-kolkata-airport.webp",
+              "/images/andaman/Day-7-International-Airport-in-Port-Blair.webp"],
 
             facilities: [
               {
@@ -1782,9 +1782,33 @@ const packages = [
 
     title: "Nagaland Tripura",
 
-    image: null,
+    image: "/images/nagaland-tripura/day4_1.webp",
 
-    gallery: [null, null, null, null, null],
+    gallery: [
+      "/images/nagaland-tripura/day3_1.webp",
+      "/images/nagaland-tripura/day3_2.webp",
+      "/images/nagaland-tripura/day3_3.webp",
+      "/images/nagaland-tripura/day3_4.webp",
+      "/images/nagaland-tripura/day3.webp",
+      "/images/nagaland-tripura/day4_1.webp",
+      "/images/nagaland-tripura/day4_2.webp",
+      "/images/nagaland-tripura/day4.webp",
+      "/images/nagaland-tripura/day5_1.webp",
+      "/images/nagaland-tripura/day5_2.webp",
+      "/images/nagaland-tripura/day5.webp",
+      "/images/nagaland-tripura/day8_1.webp",
+      "/images/nagaland-tripura/day8_2.webp",
+      "/images/nagaland-tripura/day8_3.webp",
+      "/images/nagaland-tripura/day8.webp",
+      "/images/nagaland-tripura/day10_1.webp",
+      "/images/nagaland-tripura/day10_2.webp",
+      "/images/nagaland-tripura/day10_3.webp",
+      "/images/nagaland-tripura/day10_4.webp",
+      "/images/nagaland-tripura/day10_5.webp",
+      "/images/nagaland-tripura/day10_6.webp",
+      "/images/nagaland-tripura/day10.webp",
+      "/images/nagaland-tripura/day11.webp",
+    ],
 
     perPerson: true,
 
@@ -1806,7 +1830,7 @@ const packages = [
 
     packages: {
       package1: {
-        duration: "12 Nights / 13 Days",
+        duration: "10 Nights / 11 Days",
         price: 35500,
 
         itinerary: [
@@ -1818,6 +1842,7 @@ const packages = [
               "Board Train 15959 from Howrah Railway Station for Dimapur. Overnight stay in train.",
             images: [null, null],
           },
+
           {
             day: 2,
             title: "Arrival at Dimapur",
@@ -1826,93 +1851,106 @@ const packages = [
               "Reach Dimapur Railway Station and transfer to hotel. Overnight stay at Dimapur.",
             images: [null, null],
           },
+
           {
             day: 3,
             title: "Dimapur → Kohima",
-            distance: "Road transfer",
+            distance: "Road journey",
             description:
-              "Drive to Kohima and visit World War II Cemetery, Nagaland Museum, and Kisama Heritage Village. Overnight stay at Kohima.",
-            images: [null, null],
+              "Move from Dimapur to Kohima and explore some of Kohima's most important historical and cultural attractions, including the Kohima War Cemetery, Nagaland State Museum, and Kisama Heritage Village.",
+            images: [
+              "/images/nagaland-tripura/day3_1.webp",
+              "/images/nagaland-tripura/day3_2.webp",
+              "/images/nagaland-tripura/day3_3.webp",
+              "/images/nagaland-tripura/day3_4.webp",
+              "/images/nagaland-tripura/day3.webp",
+            ],
           },
+
           {
             day: 4,
             title: "Kohima → Imphal",
-            distance: "Road transfer",
+            distance: "Road journey",
             description:
-              "Proceed to Imphal and, subject to time, visit Loktak Lake, Kaibul Lamjao National Park, and INA Museum. Overnight stay at Imphal.",
-            images: [null, null],
+              "Move from Kohima to Imphal. En route and around Imphal, visit Loktak Lake, Keibul Lamjao National Park, and the INA War Museum at Moirang, an important World War II and Indian National Army historical site.",
+            images: [
+              "/images/nagaland-tripura/day4_1.webp",
+              "/images/nagaland-tripura/day4_2.webp",
+              "/images/nagaland-tripura/day4.webp",
+            ],
           },
+
           {
             day: 5,
-            title: "Imphal Local Sightseeing",
+            title: "Imphal Sightseeing",
             distance: "Local sightseeing",
             description:
-              "Visit State Orchidarium, World War II Cemeteries at Dowlaland and Hatta, Manipur State Museum, Old Polo Ground, and BT Park. Overnight stay at Imphal.",
-            images: [null, null],
+              "Explore Imphal's cultural and historical attractions, including the Khonghampat Orchidarium, Manipur State Museum, Mapal Kangjeibung (Imphal Polo Ground), and Bir Tikendrajit Park.",
+            images: [
+              "/images/nagaland-tripura/day5_1.webp",
+              "/images/nagaland-tripura/day5_2.webp",
+              "/images/nagaland-tripura/day5.webp",
+            ],
           },
+
           {
             day: 6,
             title: "Imphal → Silchar",
-            distance: "Road transfer",
+            distance: "Road journey",
             description:
-              "After breakfast proceed to Silchar. Arrive in the late afternoon and check in to hotel. Overnight stay at Silchar.",
+              "Depart from Imphal and travel towards Silchar. Enjoy the scenic journey through the landscapes of Northeast India and stay overnight in Silchar.",
             images: [null, null],
           },
+
           {
             day: 7,
             title: "Silchar → Aizawl",
-            distance: "Road transfer",
+            distance: "Road journey",
             description:
-              "Transfer to Aizawl and check in to hotel. Overnight stay at Aizawl.",
+              "Continue the journey from Silchar to Aizawl, the capital of Mizoram. Upon arrival, check in to the hotel and relax.",
             images: [null, null],
           },
+
           {
             day: 8,
             title: "Aizawl Sightseeing",
             distance: "Local sightseeing",
             description:
-              "Visit Bara Bazar, Luangmual Handicraft Centre, Mizoram State Museum, Durtlang Hills, Mini Zoo, and Berawtlang Tourist Complex. Overnight stay at Aizawl.",
-            images: [null, null],
+              "Explore Aizawl's cultural and scenic attractions, including the Luangmual Handicrafts Centre, Mizoram State Museum, Durtlang Hills, and Berawtlang Tourist Complex.",
+            images: [
+              "/images/nagaland-tripura/day8_1.webp",
+              "/images/nagaland-tripura/day8_2.webp",
+              "/images/nagaland-tripura/day8_3.webp",
+              "/images/nagaland-tripura/day8.webp",
+            ],
           },
-          {
-            day: 9,
-            title: "Aizawl → Silchar",
-            distance: "Road transfer",
-            description:
-              "Return to Silchar and arrive in the late afternoon. Overnight stay at Silchar.",
-            images: [null, null],
-          },
+
           {
             day: 10,
-            title: "Silchar → Agartala",
-            distance: "Road transfer",
+            title: "Move to Agartala & Agartala Sightseeing",
+            distance: "Road journey & local sightseeing",
             description:
-              "Proceed to Agartala and visit State Museum, Ujjayanta Palace, MBB College, Jagannath Temple, Umamaheswari Temple, Heritage Park, Nagicherra Rubber Wood Processing Centre, Laxminarayan Temple, Venuban Bihar, and Durgabari Tea Garden. Overnight stay at Agartala.",
-            images: [null, null],
+              "Travel to Agartala and explore its historical, cultural, and religious attractions, including the Tripura State Museum, Ujjayanta Palace, Purbasha, Agartala Jagannath Mandir, Uma Maheshwar Temple, Heritage Park, and Durgabari Tea Estate.",
+            images: [
+              "/images/nagaland-tripura/day10_1.webp",
+              "/images/nagaland-tripura/day10_2.webp",
+              "/images/nagaland-tripura/day10_3.webp",
+              "/images/nagaland-tripura/day10_4.webp",
+              "/images/nagaland-tripura/day10_5.webp",
+              "/images/nagaland-tripura/day10_6.webp",
+              "/images/nagaland-tripura/day10.webp",
+            ],
           },
+
           {
             day: 11,
-            title: "Unakoti Excursion",
-            distance: "Excursion",
+            title: "Visit Unakoti Archaeological Site",
+            distance: "Road journey & sightseeing",
             description:
-              "After breakfast visit the famous Unakoti Archaeological Site. Return to Agartala for overnight stay.",
-            images: [null, null],
-          },
-          {
-            day: 12,
-            title: "Agartala → Kolkata",
-            distance: "Train journey",
-            description:
-              "After breakfast transfer to Agartala Railway Station for return train to Kolkata. Overnight stay in train.",
-            images: [null, null],
-          },
-          {
-            day: 13,
-            title: "Arrival at Sealdah",
-            distance: "Train arrival",
-            description:
-              "Arrive at Sealdah Railway Station with sweet memories of your Northeast Grand Tour.",
-            images: [null, null],
+              "Visit Unakoti, an ancient Shaivite archaeological site known for its massive rock-cut sculptures and reliefs. Located approximately 178 km northeast of Agartala, Unakoti is one of Tripura's most significant historical and cultural landmarks.",
+            images: [
+              "/images/nagaland-tripura/day11.webp", null
+            ],
           },
         ],
       },
@@ -3331,9 +3369,29 @@ const packages = [
 
     title: "Kinnaur La Hul Spiti",
 
-    image: null,
+    image: "/images/kinnaur-la-hul-spiti/day4_1.webp",
 
-    gallery: [null, null, null, null, null],
+    gallery: ["/images/kinnaur-la-hul-spiti/day2.Fwebp",
+      "/images/kinnaur-la-hul-spiti/day4_1.webp",
+      "/images/kinnaur-la-hul-spiti/day4.webp",
+      "/images/kinnaur-la-hul-spiti/day5_1.webp",
+      "/images/kinnaur-la-hul-spiti/day5_2.webp",
+      "/images/kinnaur-la-hul-spiti/day5_3.webp",
+      "/images/kinnaur-la-hul-spiti/day5_4.webp",
+      "/images/kinnaur-la-hul-spiti/day5_5.webp",
+      "/images/kinnaur-la-hul-spiti/day5.webp",
+      "/images/kinnaur-la-hul-spiti/day6_1.webp",
+      "/images/kinnaur-la-hul-spiti/day6_2.webp",
+      "/images/kinnaur-la-hul-spiti/day6_3.webp",
+      "/images/kinnaur-la-hul-spiti/day6.webp",
+      "/images/kinnaur-la-hul-spiti/day8.webp",
+      "/images/kinnaur-la-hul-spiti/day9.webp",
+      "/images/kinnaur-la-hul-spiti/day10_1.webp",
+      "/images/kinnaur-la-hul-spiti/day10.webp",
+      "/images/kinnaur-la-hul-spiti/day11_1.webp",
+      "/images/kinnaur-la-hul-spiti/day11_2.webp",
+      "/images/kinnaur-la-hul-spiti/day11_3.webp",
+      "/images/kinnaur-la-hul-spiti/day11.webp"],
 
     perPerson: true,
 
@@ -3356,8 +3414,9 @@ const packages = [
 
     packages: {
       package1: {
-        duration: "12 Nights / 13 Days",
+        duration: "10 Nights / 11 Days",
         price: 30500,
+
         itinerary: [
           {
             day: 1,
@@ -3367,101 +3426,127 @@ const packages = [
               "Board train from Kolkata Railway Station for Ambala. Overnight stay in train.",
             images: [null, null],
           },
+
           {
             day: 2,
             title: "Ambala → Shimla",
             distance: "115 km",
             description:
-              "Arrive at Ambala and transfer to Shimla. Visit Mall Road and Kali Bari by walk. Overnight stay at Shimla.",
-            images: [null, null],
+              "Reach Ambala Railway Station and transfer to Shimla. Visit Kali Bari Temple and enjoy sightseeing in Shimla. The Kali Bari Temple was built in 1845 and is dedicated to Goddess Kali, also revered as Shyamala, from whose name the hill station of Shimla derives its title.",
+            images: [
+              "/images/kinnaur-la-hul-spiti/day2.webp",
+              null,
+            ],
           },
+
           {
             day: 3,
             title: "Shimla → Sarahan",
             distance: "170 km",
             description:
-              "After breakfast proceed to Sarahan. Overnight stay at Sarahan.",
+              "Move to Sarahan. Overnight stay at Sarahan.",
             images: [null, null],
           },
+
           {
             day: 4,
             title: "Sarahan → Sangla",
             distance: "95 km",
             description:
-              "Visit Bhimakali Temple and Rajbari, then drive to Sangla via Karcham. Overnight stay at Sangla.",
-            images: [null, null],
+              "In the morning visit Bhimakali Temple and Rajbari, then proceed to Sangla via Karcham. The Bhimakali Temple in Sarahan is an ancient shrine dedicated to Goddess Durga as Bhimakali, the kuldevi of the former Bushahr princely state. Sangla Valley, located in the Kinnaur district of Himachal Pradesh, has a rich history tied to ancient trade routes, regional kingdoms, and its strategic proximity to the Indo-Tibetan border. Overnight stay at Sangla.",
+            images: [
+              "/images/kinnaur-la-hul-spiti/day4_1.webp",
+              "/images/kinnaur-la-hul-spiti/day4.webp",
+            ],
           },
+
           {
             day: 5,
             title: "Sangla → Chitkul → Kalpa",
             distance: "90 km",
             description:
-              "Excursion to Chitkul, then continue to Kalpa via Reckong Peo. Visit Roghi Village, Chini Village, and Suicide Point. Overnight stay at Kalpa.",
-            images: [null, null],
+              "Sightseeing at Chitkul. Chitkul's local folklore, mythology, and its role on ancient trade routes define its past. It is known as the last village in India. After sightseeing, move to Kalpa via Reckong Peo. Reckong Peo is the administrative headquarters of Kinnaur district. Visit Roghi Village, a traditional Kinnauri settlement known for its ancient heritage, wooden architecture, and cliffside location about 8 kilometers from Kalpa. Kinnaur Kailash, also known as Kinner Kailash, is a sacred mountain in Kinnaur district standing at roughly 6,050 meters.",
+            images: [
+              "/images/kinnaur-la-hul-spiti/day5_1.webp",
+              "/images/kinnaur-la-hul-spiti/day5_2.webp",
+              "/images/kinnaur-la-hul-spiti/day5_3.webp",
+              "/images/kinnaur-la-hul-spiti/day5_4.webp",
+              "/images/kinnaur-la-hul-spiti/day5_5.webp",
+              "/images/kinnaur-la-hul-spiti/day5.webp",
+            ],
           },
+
           {
             day: 6,
             title: "Kalpa → Tabo",
             distance: "150 km",
             description:
-              "Drive through the dramatic Spiti landscape via Nako Lake and reach Tabo. Overnight stay at Tabo.",
-            images: [null, null],
+              "Move to Tabo. En route, visit Nako Lake, a high-altitude lake located at 3,662 meters above sea level in Nako village of Kinnaur district, Himachal Pradesh. Tabo Monastery was founded in 996 CE by the Tibetan king and royal lama Yeshe-Ö in the Spiti Valley of Himachal Pradesh.",
+            images: [
+              "/images/kinnaur-la-hul-spiti/day6_1.webp",
+              "/images/kinnaur-la-hul-spiti/day6_2.webp",
+              "/images/kinnaur-la-hul-spiti/day6_3.webp",
+              "/images/kinnaur-la-hul-spiti/day6.webp",
+            ],
           },
+
           {
             day: 7,
             title: "Tabo → Kaza",
             distance: "50 km",
             description:
-              "Visit Tabo Monastery, then proceed to Kaza via Dhankar Monastery and Kaza Monastery. Overnight stay at Kaza.",
+              "Proceed to Kaza. Kaza is the administrative headquarters of the remote Spiti Valley in Himachal Pradesh, with a history deeply tied to Tibetan trade, Buddhist culture, and shifting colonial borders. Visit Dhankar Monastery, a nearly 1,000-year-old cliffside fort-monastery perched at 3,894 meters. Also visit Key Monastery, Kaza's primary historical Buddhist center, located 12 kilometers north of Kaza at an altitude of 4,166 meters. Overnight stay at Kaza.",
             images: [null, null],
           },
+
           {
             day: 8,
             title: "Kaza Local Sightseeing",
             distance: "Excursion",
             description:
-              "Visit Key Monastery and Kibber Village. Return to Kaza for overnight stay.",
-            images: [null, null],
+              "Sightseeing of Kaza. Visit Kibber, an ancient Himalayan settlement located at 4,270 meters in the Spiti Valley of Himachal Pradesh. Return to Kaza for an overnight stay.",
+            images: [
+              "/images/kinnaur-la-hul-spiti/day8.webp",
+              null,
+            ],
           },
+
           {
             day: 9,
             title: "Kaza → Chandratal",
             distance: "95 km",
             description:
-              "Drive via Kunzum Pass to Chandratal Lake. Overnight stay at Chandratal.",
-            images: [null, null],
+              "After breakfast move to Chandratal. Visit Chandratal Lake, also known as the Lake of the Moon, a high-altitude glacial lake at 14,100 feet in the Spiti and Lahaul district of Himachal Pradesh. Travel via Kunzum Pass, a high-altitude mountain pass at 4,551 meters that has historically served as a trade and pilgrimage route connecting the Kullu, Lahaul, and Spiti valleys.",
+            images: [
+              "/images/kinnaur-la-hul-spiti/day9.webp",
+              null,
+            ],
           },
+
           {
             day: 10,
             title: "Chandratal → Manali",
             distance: "130 km",
             description:
-              "Proceed to Manali via Sissu Village and Atal Tunnel. Overnight stay at Manali.",
-            images: [null, null],
+              "After breakfast move to Manali. En route, visit Sissu, also known as Khwaling, a historic village located in the Lahaul Valley at an altitude of 3,120 meters on the right bank of the Chandra River. Travel through the Atal Tunnel, a 9.02-kilometer road tunnel connecting Manali to the Lahaul-Spiti Valley and bypassing the snow-bound Rohtang Pass.",
+            images: [
+              "/images/kinnaur-la-hul-spiti/day10_1.webp",
+              "/images/kinnaur-la-hul-spiti/day10.webp",
+            ],
           },
+
           {
             day: 11,
-            title: "Manali Sightseeing",
+            title: "Manali Local Sightseeing",
             distance: "Local sightseeing",
             description:
-              "Visit Hidimba Temple, Tibetan Monastery, Handicraft Centre, and Old Vashisht Village. Overnight stay at Manali.",
-            images: [null, null],
-          },
-          {
-            day: 12,
-            title: "Manali → Ambala",
-            distance: "300 km",
-            description:
-              "After breakfast transfer to Ambala Railway Station for return train journey. Overnight stay in train.",
-            images: [null, null],
-          },
-          {
-            day: 13,
-            title: "Arrival at Kolkata",
-            distance: "Train arrival",
-            description:
-              "Arrive at Howrah Railway Station with sweet memories of Kinnaur and Spiti.",
-            images: [null, null],
+              "After breakfast, enjoy Manali local sightseeing. Visit Hidimba Devi Temple, which was built in 1553 CE by Maharaja Bahadur Singh. Visit the main Tibetan monastery in Manali, Gadhan Thekchhokling Gompa, which was built in 1969 by Tibetan refugees. Also visit Old Vashisht Village, an ancient settlement located 3 kilometers from Manali, famous for its natural hot sulfur springs and the 4,000-year-old Vashisht Temple.",
+            images: [
+              "/images/kinnaur-la-hul-spiti/day11_1.webp",
+              "/images/kinnaur-la-hul-spiti/day11_2.webp",
+              "/images/kinnaur-la-hul-spiti/day11_3.webp",
+              "/images/kinnaur-la-hul-spiti/day11.webp",
+            ],
           },
         ],
       },

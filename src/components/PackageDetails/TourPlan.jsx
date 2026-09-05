@@ -19,6 +19,7 @@ export default function TourPlan({
 }) {
   const containerRef = useRef(null);
   const circleRefs = useRef([]);
+  const lineRecalcRef = useRef(() => {});
 
   const [lineStyle, setLineStyle] = useState({
     top: 0,
@@ -72,36 +73,128 @@ export default function TourPlan({
       });
     };
 
-    setTimeout(calculateLine, 100);
+    // rough initial pass — covers instant/non-animated layouts
+    const t = setTimeout(calculateLine, 100);
 
     window.addEventListener("resize", calculateLine);
 
-    return () =>
+    // expose the latest calc fn so TourDayCard can trigger a precise
+    // recalculation once its entrance animation actually settles
+    lineRecalcRef.current = calculateLine;
+
+    return () => {
+      clearTimeout(t);
       window.removeEventListener("resize", calculateLine);
+    };
   }, [selectedPackage, currentItinerary]);
 
   return (
     <section
-      className="overflow-hidden rounded-[36px]
-      border border-purple-100
-      bg-gradient-to-br from-[#6957DF]/15 via-[#9F7AEA]/10 to-purple-100
-      shadow-lg
-      transition-all duration-300
-      hover:shadow-2xl
-      mt-12"
+      className="relative mt-12 overflow-hidden rounded-[36px]
+      border border-purple-400/20
+      shadow-[0_40px_80px_rgba(109,40,217,.35)]
+      backdrop-blur-xl
+      transition-all duration-500
+      hover:shadow-[0_45px_90px_rgba(109,40,217,.45)]"
     >
-      {/* Top — Heading band, matches TourDayCard's header */}
-      <div className="border-b border-purple-50 bg-gradient-to-br from-[#7C3AED] via-purple-300 to-purple-400 p-8 md:p-10">
-        <div className="mx-auto w-[92%] max-w-7xl text-center">
-          <span className="rounded-full bg-purple-100 px-4 py-2 text-sm font-semibold text-[#6957DF]">
-            Tour Itinerary
-          </span>
+      {/* Top — Same style as Package Gallery */}
+<div
+  className="
+    relative
+    overflow-hidden
+    border-b border-white/20
+    bg-gradient-to-r
+    from-[#6D28D9]
+    via-[#9333EA]
+    to-[#C026D3]
+    px-8 py-7
+    md:px-10 md:py-9
+  "
+>
+  {/* Decorative Glow */}
+  <div
+    className="
+      pointer-events-none
+      absolute
+      -right-16
+      -top-24
+      h-64
+      w-64
+      rounded-full
+      bg-fuchsia-300/30
+      blur-3xl
+    "
+  />
 
-          <h2 className="mt-3 text-4xl font-bold text-slate-900">
-            Day Wise Tour Plan
-          </h2>
-        </div>
-      </div>
+  <div
+    className="
+      pointer-events-none
+      absolute
+      -bottom-28
+      left-1/3
+      h-56
+      w-56
+      rounded-full
+      bg-purple-300/30
+      blur-3xl
+    "
+  />
+
+  {/* Header Content */}
+  <div className="relative mx-auto flex max-w-7xl items-center justify-between">
+    
+    <div>
+      <span
+        className="
+          inline-block
+          rounded-full
+          border border-white/40
+          bg-white/20
+          px-4 py-2
+          text-sm
+          font-semibold
+          text-white
+          backdrop-blur-md
+        "
+      >
+        Tour Itinerary
+      </span>
+
+      <h2
+        className="
+          mt-3
+          text-4xl
+          font-black
+          tracking-tight
+          text-white
+          drop-shadow-[0_3px_8px_rgba(0,0,0,0.18)]
+          md:text-5xl
+        "
+      >
+        Day Wise Tour Plan
+      </h2>
+    </div>
+
+    {/* Package count / itinerary badge */}
+    <div
+      className="
+        hidden
+        rounded-full
+        border border-white/40
+        bg-white/95
+        px-5 py-2.5
+        text-sm
+        font-bold
+        text-[#7C3AED]
+        shadow-lg
+        md:block
+      "
+    >
+      {currentItinerary.length} Days
+    </div>
+
+  </div>
+</div>
 
       {/* Bottom — Content */}
       <div className="p-8 md:p-10">
@@ -111,18 +204,34 @@ export default function TourPlan({
           {currentPackage && (
             <div className="mb-8 flex flex-wrap justify-center gap-6">
 
-              <div className="rounded-2xl bg-white px-8 py-5 shadow-sm border border-purple-100">
-                <p className="text-sm text-gray-500">Duration</p>
-                <h3 className="text-xl font-bold text-[#6957DF]">
-                  {currentDuration}
-                </h3>
+              <div className="group relative flex items-center gap-4 overflow-hidden rounded-2xl border border-white/60 bg-gradient-to-br from-white via-purple-50 to-violet-100 px-8 py-5 shadow-[0_15px_35px_rgba(109,40,217,0.18)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_20px_45px_rgba(109,40,217,0.3)]">
+                <div className="pointer-events-none absolute -right-6 -top-6 h-20 w-20 rounded-full bg-fuchsia-300/30 blur-2xl" />
+                <div className="relative flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-[#A78BFA] via-[#8B5CF6] to-[#6D28D9] text-white shadow-[0_10px_18px_rgba(109,40,217,0.45),inset_0_2px_2px_rgba(255,255,255,0.65),inset_0_-4px_5px_rgba(76,29,149,0.6)]">
+                  {/* glossy highlight */}
+                  <div className="pointer-events-none absolute -top-3 left-1/2 h-8 w-10 -translate-x-1/2 rounded-full bg-white/50 blur-[6px]" />
+                  <Clock3 size={22} className="relative z-10 drop-shadow-[0_2px_1.5px_rgba(0,0,0,0.35)]" />
+                </div>
+                <div className="relative z-10">
+                  <p className="text-sm font-semibold text-purple-600">Duration</p>
+                  <h3 className="text-xl font-black text-[#4C1D95]">
+                    {currentDuration}
+                  </h3>
+                </div>
               </div>
 
-              <div className="rounded-2xl bg-white px-8 py-5 shadow-sm border border-purple-100">
-                <p className="text-sm text-gray-500">Starting From</p>
-                <h3 className="text-xl font-bold text-[#6957DF] tabular-nums">
-                  ₹{animatedPrice.toLocaleString()}
-                </h3>
+              <div className="group relative flex items-center gap-4 overflow-hidden rounded-2xl border border-white/60 bg-gradient-to-br from-white via-violet-50 to-fuchsia-100 px-8 py-5 shadow-[0_15px_35px_rgba(109,40,217,0.18)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_20px_45px_rgba(109,40,217,0.3)]">
+                <div className="pointer-events-none absolute -right-6 -top-6 h-20 w-20 rounded-full bg-violet-300/30 blur-2xl" />
+                <div className="relative flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-fuchsia-400 via-fuchsia-500 to-violet-700 text-lg font-black text-white shadow-[0_10px_18px_rgba(168,85,247,0.5),inset_0_2px_2px_rgba(255,255,255,0.65),inset_0_-4px_5px_rgba(88,28,135,0.6)]">
+                  {/* glossy highlight */}
+                  <div className="pointer-events-none absolute -top-3 left-1/2 h-8 w-10 -translate-x-1/2 rounded-full bg-white/50 blur-[6px]" />
+                  <span className="relative z-10 drop-shadow-[0_2px_1.5px_rgba(0,0,0,0.35)]">₹</span>
+                </div>
+                <div className="relative z-10">
+                  <p className="text-sm font-semibold text-purple-600">Starting From</p>
+                  <h3 className="text-xl font-black tabular-nums text-[#4C1D95]">
+                    ₹{animatedPrice.toLocaleString()}
+                  </h3>
+                </div>
               </div>
 
             </div>
@@ -150,11 +259,11 @@ export default function TourPlan({
                       : { scale: 1 }
                   }
                   transition={{ duration: 0.35, ease: "easeOut" }}
-                  className={`rounded-full px-6 py-3 text-sm font-semibold transition-colors duration-300 ${isSelected
-                    ? "bg-gradient-to-r from-[#462edf] to-[#7941eb] text-white shadow-lg"
+                  className={`rounded-full px-6 py-3 text-sm font-bold transition-all duration-300 ${isSelected
+                    ? "bg-gradient-to-r from-fuchsia-500 via-purple-500 to-violet-600 text-white shadow-[0_15px_35px_rgba(168,85,247,.45)]"
                     : isAvailable
-                      ? "bg-white text-[#6957DF] border border-purple-100 hover:bg-purple-50"
-                      : "cursor-not-allowed bg-gray-200 text-gray-400 opacity-60"
+                      ? "border-2 border-transparent bg-white text-[#6957DF] shadow-md [background:linear-gradient(white,white)_padding-box,linear-gradient(135deg,#C084FC,#8B5CF6)_border-box] hover:-translate-y-0.5 hover:shadow-lg"
+                      : "cursor-not-allowed border border-purple-100 bg-purple-50/60 text-purple-300"
                     }`}
                 >
                   {pkg.label}
@@ -217,7 +326,7 @@ export default function TourPlan({
             <div ref={containerRef} className="relative">
 
               <div
-                className="absolute left-8 hidden w-1 rounded-full bg-purple-300 md:block"
+                className="absolute left-8 hidden w-1 rounded-full bg-purple-400 md:block"
                 style={{
                   top: lineStyle.top,
                   height: lineStyle.height,
@@ -236,6 +345,7 @@ export default function TourPlan({
                   <TourDayCard
                     day={day}
                     circleRef={(el) => (circleRefs.current[index] = el)}
+                    onSettled={() => lineRecalcRef.current()}
                   />
                 </div>
               ))}

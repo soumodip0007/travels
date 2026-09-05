@@ -61,30 +61,18 @@ export default function Navbar() {
           {/* Background Wash */}
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#6957DF]/[0.04] via-transparent to-[#9F7AEA]/[0.04]" />
 
-          <div className="relative mx-auto flex w-[95%] max-w-7xl items-center justify-between px-4 py-4 sm:py-3 lg:px-8 lg:py-2.5">
+          <div className="relative mx-auto flex w-[95%] max-w-7xl items-center justify-between px-4 py-2 sm:py-2 lg:px-8 lg:py-1.5">
 
             {/* Logo */}
-            <Link to="/" className="group flex items-center gap-3">
-              <div className="relative">
-                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#6957DF] to-[#9F7AEA] opacity-0 blur-md transition duration-500 group-hover:opacity-50"></div>
-
-                <div className="relative flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-[#6957DF] to-[#9F7AEA] shadow-[0_10px_25px_rgba(105,87,223,0.35)] ring-2 ring-white transition duration-500 group-hover:rotate-12">
-                  <Plane
-                    size={22}
-                    className="text-white transition duration-500 group-hover:-rotate-12"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <h1 className="nav-display text-[22px] leading-none text-[#241c4b]">
-                  Travel<span className="text-[#6957DF]">X</span>
-                </h1>
-
-                <p className="nav-mono mt-1 text-[9px] uppercase text-slate-400">
-                  Explore the World
-                </p>
-              </div>
+            <Link
+              to="/"
+              className="group flex items-center"
+            >
+              <img
+                src="/images/riya-logo.webp"
+                alt="Riya Group of Companies"
+                className="h-14 w-auto object-contain transition-all duration-500 group-hover:scale-[1.03]"
+              />
             </Link>
 
             {/* Desktop Menu */}
@@ -195,9 +183,8 @@ export default function Navbar() {
       {/* Mobile Menu Overlay */}
       <div
         onClick={() => setMobileOpen(false)}
-        className={`fixed inset-0 z-30 bg-[#241c4b]/40 backdrop-blur-sm transition-opacity duration-500 lg:hidden ${
-          mobileOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-        }`}
+        className={`fixed inset-0 z-30 bg-[#241c4b]/40 backdrop-blur-sm transition-opacity duration-500 lg:hidden ${mobileOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          }`}
       />
 
       {/* Mobile Menu */}
@@ -218,19 +205,13 @@ export default function Navbar() {
             <Link
               to="/"
               onClick={() => setMobileOpen(false)}
-              className="flex items-center gap-2.5"
+              className="flex items-center"
             >
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-r from-[#6957DF] to-[#9F7AEA] shadow-md">
-                <Plane size={18} className="text-white" />
-              </div>
-              <div>
-                <p className="text-lg font-extrabold bg-gradient-to-r from-[#6957DF] to-[#9F7AEA] bg-clip-text text-transparent">
-                  Riya Tours & Travels
-                </p>
-                <p className="text-[10px] uppercase tracking-widest text-gray-400">
-                  Explore the World
-                </p>
-              </div>
+              <img
+                src="/images/riya-logo.webp"
+                alt="Riya Group of Companies"
+                className="h-14 w-auto object-contain transition-transform duration-300 hover:scale-[1.02]"
+              />
             </Link>
 
             <button
@@ -258,8 +239,8 @@ export default function Navbar() {
                     transitionDelay: mobileOpen ? `${index * 80 + 100}ms` : "0ms",
                   }}
                   className={`group flex items-center gap-3 rounded-2xl px-4 py-3 font-semibold text-gray-700 transition-all duration-500 hover:bg-purple-50 hover:text-[#6957DF] ${mobileOpen
-                      ? "translate-x-0 opacity-100"
-                      : "translate-x-6 opacity-0"
+                    ? "translate-x-0 opacity-100"
+                    : "translate-x-6 opacity-0"
                     }`}
                 >
                   <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-purple-100 text-[#6957DF] transition-all duration-300 group-hover:bg-gradient-to-br group-hover:from-[#6957DF] group-hover:to-[#9F7AEA] group-hover:text-white">
