@@ -9,6 +9,8 @@ import {
   ChevronDown,
 } from "lucide-react";
 
+import logo2 from "../assets/logo3.png";
+
 const features = [
   {
     title: "Flight Booking",
@@ -121,33 +123,166 @@ export default function FeatureCards() {
           {/* Desktop only: Diamond + Arrows */}
           <div className="absolute left-1/2 top-0 z-30 hidden -translate-x-1/2 -translate-y-[24%] lg:block">
             <div className="flex flex-col items-center">
-              {/* Diamond */}
+              {/* Diamond Image */}
               <div className="relative flex items-center justify-center py-2">
+                {/* Outer Glow */}
                 <div className="absolute h-32 w-32 rounded-full bg-[#A855F7]/15 blur-2xl"></div>
 
-                <div className="relative h-20 w-20 rotate-45 rounded-xl border border-white/50 bg-gradient-to-br from-white via-[#F7F5FF] to-[#E9D5FF] shadow-[0_20px_45px_rgba(105,87,223,0.28)] backdrop-blur-xl">
-                  <div className="absolute inset-[7px] rounded-lg bg-gradient-to-br from-[#6957DF] via-[#7C3AED] to-[#A855F7]"></div>
-                  <div className="absolute inset-[11px] rounded-md border border-white/35 bg-white/5"></div>
-                  <div className="absolute left-2 top-2 h-3 w-8 rounded-full bg-white/70 blur-[5px]"></div>
+                {/* Diamond */}
+                <div className="relative flex items-center justify-center py-2">
+
+                  {/* Outer Glow */}
+                  <div className="absolute h-32 w-32 rounded-full bg-[#A855F7]/15 blur-2xl" />
+
+                  {/* Diamond Shape */}
+                  {/* Diamond Shape */}
+                  <div className="relative h-20 w-20 flex items-center justify-center">
+
+                    {/* Wide ambient glow - stays outside the icon, unrotated */}
+                    <div
+                      className="
+      pointer-events-none
+      absolute
+      -inset-8
+      rounded-full
+      bg-white/40
+      blur-3xl
+      opacity-70
+    "
+                    />
+
+                    {/* Edge glow - hugs the diamond's rim (rotated to match) */}
+
+
+                    <div
+                      className="
+      relative
+      h-20
+      w-20
+      rotate-45
+      rounded-xl
+      border
+      border-white/50
+      bg-gradient-to-br
+      from-white
+      via-[#F7F5FF]
+      to-[#E9D5FF]
+      shadow-[0_0_25px_rgba(255,255,255,0.9),0_20px_45px_rgba(105,87,223,0.28)]
+      backdrop-blur-xl
+    "
+                    >
+
+                      {/* Purple Background - SAME AS PREVIOUS */}
+                      <div
+                        className="
+        absolute
+        inset-[7px]
+        rounded-lg
+        bg-gradient-to-br
+        from-[#6957DF]
+        via-[#7C3AED]
+        to-[#A855F7]
+      "
+                      />
+
+                      {/* Small Logo */}
+                      <div
+                        className="
+        absolute
+        inset-[17px]
+        z-10
+        flex
+        items-center
+        justify-center
+        -rotate-45
+      "
+                      >
+                        <div
+                          className="
+      pointer-events-none
+      absolute
+      -inset-1
+      rotate-45
+      
+      bg-white/90
+      blur-md
+      opacity-90
+    "
+                        />
+                        <img
+                          src={logo2}
+                          alt="Riya Group"
+                          className="
+          h-full
+          w-full
+          object-contain
+          z-20
+        "
+                        />
+                      </div>
+
+                      {/* Inner Border */}
+                      <div
+                        className="
+        pointer-events-none
+        absolute
+        inset-[7px]
+        rounded-lg
+        border
+        border-white/35
+      "
+                      />
+
+                      {/* Shine */}
+                      <div
+                        className="
+        pointer-events-none
+        absolute
+        left-2
+        top-2
+        z-20
+        h-3
+        w-8
+        rounded-full
+        bg-white/70
+        blur-[5px]
+      "
+                      />
+                    </div>
+                  </div>
+
+                  {/* Bottom Shadow */}
+                  <div
+                    className="
+      absolute
+      top-[86px]
+      h-3
+      w-16
+      rounded-full
+      bg-[#6957DF]/12
+      blur-md
+    "
+                  />
                 </div>
 
+                {/* Bottom Shadow */}
                 <div className="absolute top-[86px] h-3 w-16 rounded-full bg-[#6957DF]/12 blur-md"></div>
               </div>
 
               {/* Animated Arrows */}
               <div className="mt-3 flex flex-col items-center gap-1">
                 <ChevronDown
-                  className="chevron-1 h-8 w-8 text-[#6957DF]"
+                  className="chevron-1 h-8 w-8 text-[#fff]"
                   strokeWidth={3}
                 />
 
                 <ChevronDown
-                  className="chevron-2 -mt-3 h-8 w-8 text-[#7C3AED]"
+                  className="chevron-2 -mt-3 h-8 w-8 text-[#fff]"
                   strokeWidth={3}
                 />
 
                 <ChevronDown
-                  className="chevron-3 -mt-3 h-8 w-8 text-[#A855F7]"
+                  className="chevron-3 -mt-3 h-8 w-8 text-[#fff]"
                   strokeWidth={3}
                 />
               </div>

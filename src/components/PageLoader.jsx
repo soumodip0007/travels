@@ -20,7 +20,7 @@ export default function PageLoader({ loading, onComplete }) {
             playsInline
             preload="auto"
             onEnded={onComplete}
-            className="h-xl w-xl object-contain"
+            className="h-full w-full object-contain"
           />
         </motion.div>
       )}

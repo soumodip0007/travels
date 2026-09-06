@@ -8,127 +8,94 @@ const reviews = [
     location: "Goa Beach Package",
     rating: 5,
     text: "Everything from the airport pickup to the hotel checkout was seamless. Our guide knew every hidden spot on the coastline that wasn't in any guidebook.",
-    avatar:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&q=80",
   },
-  {
-    type: "video",
-    name: "Rahul Mehta",
-    location: "Ladakh Adventure Trip",
-    rating: 5,
-    text: "Watch how the team handled a last-minute route change when weather closed the pass — still one of the best trips of my life.",
-    thumbnail:
-      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop&q=80",
-    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
-  },
+
   {
     type: "image",
     name: "Ananya Sharma",
     location: "Goa Beach Package",
     rating: 5,
     text: "Everything from the airport pickup to the hotel checkout was seamless. Our guide knew every hidden spot on the coastline that wasn't in any guidebook.",
-    avatar:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&q=80",
   },
+
   {
     type: "image",
     name: "Ananya Sharma",
     location: "Goa Beach Package",
     rating: 5,
     text: "Everything from the airport pickup to the hotel checkout was seamless. Our guide knew every hidden spot on the coastline that wasn't in any guidebook.",
-    avatar:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&q=80",
   },
+
   {
     type: "image",
     name: "Ananya Sharma",
     location: "Goa Beach Package",
     rating: 5,
     text: "Everything from the airport pickup to the hotel checkout was seamless. Our guide knew every hidden spot on the coastline that wasn't in any guidebook.",
-    avatar:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&q=80",
   },
+
   {
     type: "image",
     name: "Ananya Sharma",
     location: "Goa Beach Package",
     rating: 5,
     text: "Everything from the airport pickup to the hotel checkout was seamless. Our guide knew every hidden spot on the coastline that wasn't in any guidebook.",
-    avatar:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&q=80",
   },
+
   {
     type: "image",
     name: "Ananya Sharma",
     location: "Goa Beach Package",
     rating: 5,
     text: "Everything from the airport pickup to the hotel checkout was seamless. Our guide knew every hidden spot on the coastline that wasn't in any guidebook.",
-    avatar:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&q=80",
   },
+
   {
     type: "image",
     name: "Ananya Sharma",
     location: "Goa Beach Package",
     rating: 5,
     text: "Everything from the airport pickup to the hotel checkout was seamless. Our guide knew every hidden spot on the coastline that wasn't in any guidebook.",
-    avatar:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&q=80",
   },
+
   {
     type: "image",
     name: "Ananya Sharma",
     location: "Goa Beach Package",
     rating: 5,
     text: "Everything from the airport pickup to the hotel checkout was seamless. Our guide knew every hidden spot on the coastline that wasn't in any guidebook.",
-    avatar:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&q=80",
   },
+
   {
     type: "image",
     name: "Ananya Sharma",
     location: "Goa Beach Package",
     rating: 5,
     text: "Everything from the airport pickup to the hotel checkout was seamless. Our guide knew every hidden spot on the coastline that wasn't in any guidebook.",
-    avatar:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&q=80",
   },
+
   {
     type: "image",
     name: "Ananya Sharma",
     location: "Goa Beach Package",
     rating: 5,
     text: "Everything from the airport pickup to the hotel checkout was seamless. Our guide knew every hidden spot on the coastline that wasn't in any guidebook.",
-    avatar:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&q=80",
   },
+
   {
     type: "image",
     name: "Ananya Sharma",
     location: "Goa Beach Package",
     rating: 5,
     text: "Everything from the airport pickup to the hotel checkout was seamless. Our guide knew every hidden spot on the coastline that wasn't in any guidebook.",
-    avatar:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&q=80",
   },
+
   {
     type: "image",
     name: "Priya Desai",
     location: "Kerala Backwaters",
     rating: 5,
     text: "The houseboat stay was straight out of a postcard. Booking was simple, pricing was transparent, and support replied within minutes.",
-    avatar:
-      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&fit=crop&q=80",
-  },
-  {
-    type: "video",
-    name: "Karan Singh",
-    location: "Rajasthan Heritage Tour",
-    rating: 4,
-    text: "A quick clip from our camel safari at sunset — the tour plan balanced the palaces with just enough downtime.",
-    thumbnail:
-      "https://images.unsplash.com/photo-1477587458883-47145ed94245?w=600&h=400&fit=crop&q=80",
-    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
   },
 ];
 

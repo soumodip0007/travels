@@ -21,14 +21,36 @@ const packages = [
     title: "Ajanta Ellora Mumbai Goa",
 
     image:
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1200&q=80",
+      "/images/ajanta-elora-mumbai-goa/banner.webp",
 
     gallery: [
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1200&q=80",
+      "/images/ajanta-elora-mumbai-goa/banner.webp",
+      "/images/ajanta-elora-mumbai-goa/banner2.webp",
+      "/images/ajanta-elora-mumbai-goa/day1_1.webp",
+      "/images/ajanta-elora-mumbai-goa/day1.webp",
+      "/images/ajanta-elora-mumbai-goa/day2_1.webp",
+      "/images/ajanta-elora-mumbai-goa/day2_2.webp",
+      "/images/ajanta-elora-mumbai-goa/day2.webp",
+      "/images/ajanta-elora-mumbai-goa/day3_1.webp",
+      "/images/ajanta-elora-mumbai-goa/day3_2.webp",
+      "/images/ajanta-elora-mumbai-goa/day3_3.webp",
+      "/images/ajanta-elora-mumbai-goa/day3_4.webp",
+      "/images/ajanta-elora-mumbai-goa/day3.webp",
+      "/images/ajanta-elora-mumbai-goa/day4_1.webp",
+      "/images/ajanta-elora-mumbai-goa/day4_4.webp",
+      "/images/ajanta-elora-mumbai-goa/day4.webp",
+      "/images/ajanta-elora-mumbai-goa/day5_2.webp",
+      "/images/ajanta-elora-mumbai-goa/day5_3.webp",
+      "/images/ajanta-elora-mumbai-goa/day5_4.webp",
+      "/images/ajanta-elora-mumbai-goa/day5.webp",
+      "/images/ajanta-elora-mumbai-goa/day6_1.webp",
+      "/images/ajanta-elora-mumbai-goa/day6_3.webp",
+      "/images/ajanta-elora-mumbai-goa/day6.webp",
+      "/images/ajanta-elora-mumbai-goa/day7_1.webp",
+      "/images/ajanta-elora-mumbai-goa/day7.webp",
+      "/images/ajanta-elora-mumbai-goa/day8_1.webp",
+      "/images/ajanta-elora-mumbai-goa/day8_2.webp",
+      "/images/ajanta-elora-mumbai-goa/day8.webp"
     ],
 
     perPerson: true,
@@ -86,8 +108,8 @@ const packages = [
             description:
               "Board train (12262) from Howrah Railway Station for Bhusaval. Overnight stay in train.",
             images: [
-              "https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=1000&q=80",
-              "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1000&q=80",
+              "/images/ajanta-elora-mumbai-goa/day1_1.webp",
+              "/images/ajanta-elora-mumbai-goa/day1.webp",
             ],
           },
 
@@ -98,8 +120,9 @@ const packages = [
             description:
               "Reach Bhusaval Railway Station and proceed to Ajanta Caves. Overnight stay at Ajanta.",
             images: [
-              "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1000&q=80",
-              "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1000&q=80",
+              "/images/ajanta-elora-mumbai-goa/day2_1.webp",
+              "/images/ajanta-elora-mumbai-goa/day2_2.webp",
+              "/images/ajanta-elora-mumbai-goa/day2.webp",
             ],
           },
 
@@ -110,8 +133,11 @@ const packages = [
             description:
               "After breakfast proceed to Ellora via Girijamata Temple. Visit Grishneshwar Jyotirlinga and Ellora Caves. Overnight stay at Ellora.",
             images: [
-              "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1000&q=80",
-              "https://images.unsplash.com/photo-1532664189809-02133fee698d?auto=format&fit=crop&w=1000&q=80",
+              "/images/ajanta-elora-mumbai-goa/day3_1.webp",
+              "/images/ajanta-elora-mumbai-goa/day3_2.webp",
+              "/images/ajanta-elora-mumbai-goa/day3_3.webp",
+              "/images/ajanta-elora-mumbai-goa/day3_4.webp",
+              "/images/ajanta-elora-mumbai-goa/day3.webp",
             ],
           },
 
@@ -122,8 +148,9 @@ const packages = [
             description:
               "Visit Bibi Ka Maqbara, Panchakki, Chhatrapati Shivaji Maharaj Museum, and other local attractions. Overnight stay at Aurangabad.",
             images: [
-              "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1000&q=80",
-              "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1000&q=80",
+              "/images/ajanta-elora-mumbai-goa/day4_1.webp",
+              "/images/ajanta-elora-mumbai-goa/day4_4.webp",
+              "/images/ajanta-elora-mumbai-goa/day4.webp",
             ],
           },
 
@@ -134,8 +161,10 @@ const packages = [
             description:
               "Transfer to Chhatrapati Sambhaji Nagar Railway Station and take train to Mumbai. Transfer to hotel on arrival. Overnight stay at Mumbai.",
             images: [
-              "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1000&q=80",
-              "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1000&q=80",
+              "/images/ajanta-elora-mumbai-goa/day5_2.webp",
+              "/images/ajanta-elora-mumbai-goa/day5_3.webp",
+              "/images/ajanta-elora-mumbai-goa/day5_4.webp",
+              "/images/ajanta-elora-mumbai-goa/day5.webp",
             ],
           },
 
@@ -146,8 +175,9 @@ const packages = [
             description:
               "Visit Gateway of India, Marine Drive, Taraporewala Aquarium, Hanging Garden, Juhu Beach, Mahalaxmi Temple, Boot House, Siddhivinayak Temple, and more. Overnight stay at Mumbai.",
             images: [
-              "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1000&q=80",
-              "https://images.unsplash.com/photo-1595658658481-d53d3f999875?auto=format&fit=crop&w=1000&q=80",
+              "/images/ajanta-elora-mumbai-goa/day6_1.webp",
+              "/images/ajanta-elora-mumbai-goa/day6_3.webp",
+              "/images/ajanta-elora-mumbai-goa/day6.webp",
             ],
           },
 
@@ -158,8 +188,8 @@ const packages = [
             description:
               "Drive to Mahabaleshwar and check in to the hotel. Overnight stay at Mahabaleshwar.",
             images: [
-              "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=80",
-              "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1000&q=80",
+              "/images/ajanta-elora-mumbai-goa/day7_1.webp",
+              "/images/ajanta-elora-mumbai-goa/day7.webp",
             ],
           },
 
@@ -170,8 +200,9 @@ const packages = [
             description:
               "Visit Elephant's Head Point, Mahabaleshwar Temple, Veena Lake, and nearby attractions. Later transfer to Pune Railway Station and board train for Goa. Overnight stay in train.",
             images: [
-              "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=80",
-              "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1000&q=80",
+              "/images/ajanta-elora-mumbai-goa/day8_1.webp",
+              "/images/ajanta-elora-mumbai-goa/day8_2.webp",
+              "/images/ajanta-elora-mumbai-goa/day8.webp",
             ],
           },
 
@@ -181,10 +212,7 @@ const packages = [
             distance: "Railway station transfer",
             description:
               "Reach Madgaon Railway Station and transfer to hotel. Overnight stay at Goa.",
-            images: [
-              "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1000&q=80",
-              "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80",
-            ],
+            images: [],
           },
 
           {
@@ -193,10 +221,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Dolphin Point, Aguada Fort, Baga Beach, Calangute Beach, Miramar Beach, and nearby attractions. Overnight stay at Goa.",
-            images: [
-              "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1000&q=80",
-              "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80",
-            ],
+            images: [],
           },
 
           {
@@ -205,10 +230,7 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit St. Xavier's Church, Mangesh Temple, Santadurga Temple, Colva Beach, and other attractions. Overnight stay at Goa.",
-            images: [
-              "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1000&q=80",
-              "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1000&q=80",
-            ],
+            images: [],
           },
 
           {
@@ -217,10 +239,7 @@ const packages = [
             distance: "Train journey",
             description:
               "Check out early morning and transfer to Madgaon Railway Station. Board train (18048) for Kolkata. Overnight stay in train.",
-            images: [
-              "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1000&q=80",
-              "https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=1000&q=80",
-            ],
+            images: [],
           },
 
           {
@@ -229,10 +248,7 @@ const packages = [
             distance: "Train arrival",
             description:
               "Arrive at Shalimar Railway Station with sweet memories of the tour.",
-            images: [
-              "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1000&q=80",
-              "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1000&q=80",
-            ],
+            images: [],
           },
         ],
       },
@@ -266,9 +282,9 @@ const packages = [
       "Any item not mentioned above",
     ],
 
-    whatsapp: "https://wa.me/918910555711",
+    whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+918910555711",
+    phone: "tel:+919163569695",
 
     enquiryLink: "#",
 
@@ -283,7 +299,7 @@ const packages = [
 
     title: "Madhya Pradesh",
 
-    image: null,
+    image: "/images/madhyapradesh/mp_banner.webp",
 
     gallery: [null, null, null, null, null],
 
@@ -647,9 +663,9 @@ const packages = [
       "Any item not mentioned above",
     ],
 
-    whatsapp: "https://wa.me/918910555711",
+    whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+918910555711",
+    phone: "tel:+919163569695",
 
     enquiryLink: "#",
 
@@ -664,7 +680,7 @@ const packages = [
 
     title: "Andaman",
 
-    image: "/images/andaman/BAY-ISLAND.webp",
+    image: "/images/andaman/andamanbg.webp",
 
     gallery: ["/images/andaman/BARATANG.webp",
       "/images/andaman/BAY-ISLAND.webp",
@@ -938,9 +954,9 @@ const packages = [
       "Any item not mentioned above",
     ],
 
-    whatsapp: "https://wa.me/918910555711",
+    whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+918910555711",
+    phone: "tel:+919163569695",
 
     enquiryLink: "#",
 
@@ -955,7 +971,7 @@ const packages = [
 
     title: "Arunachal Pradesh",
 
-    image: null,
+    image: "/images/arunachal-pradesh/arunachal_banner.webp",
 
     gallery: [null, null, null, null, null],
 
@@ -1104,9 +1120,9 @@ const packages = [
       "Any item not mentioned above",
     ],
 
-    whatsapp: "https://wa.me/918910555711",
+    whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+918910555711",
+    phone: "tel:+919163569695",
 
     enquiryLink: "#",
 
@@ -1237,9 +1253,9 @@ const packages = [
       "Any item not mentioned above",
     ],
 
-    whatsapp: "https://wa.me/918910555711",
+    whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+918910555711",
+    phone: "tel:+919163569695",
 
     enquiryLink: "#",
 
@@ -1434,9 +1450,9 @@ const packages = [
       "Any item not mentioned above",
     ],
 
-    whatsapp: "https://wa.me/918910555711",
+    whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+918910555711",
+    phone: "tel:+919163569695",
 
     enquiryLink: "#",
 
@@ -1600,9 +1616,9 @@ const packages = [
       "Any item not mentioned above",
     ],
 
-    whatsapp: "https://wa.me/918910555711",
+    whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+918910555711",
+    phone: "tel:+919163569695",
 
     enquiryLink: "#",
 
@@ -1765,9 +1781,9 @@ const packages = [
       "Any item not mentioned above",
     ],
 
-    whatsapp: "https://wa.me/918910555711",
+    whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+918910555711",
+    phone: "tel:+919163569695",
 
     enquiryLink: "#",
 
@@ -1984,9 +2000,9 @@ const packages = [
       "Any item not mentioned above",
     ],
 
-    whatsapp: "https://wa.me/918910555711",
+    whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+918910555711",
+    phone: "tel:+919163569695",
 
     enquiryLink: "#",
 
@@ -2164,9 +2180,9 @@ const packages = [
       "Any item not mentioned above",
     ],
 
-    whatsapp: "https://wa.me/918910555711",
+    whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+918910555711",
+    phone: "tel:+919163569695",
 
     enquiryLink: "#",
 
@@ -2288,9 +2304,9 @@ const packages = [
       "Any item not mentioned above",
     ],
 
-    whatsapp: "https://wa.me/918910555711",
+    whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+918910555711",
+    phone: "tel:+919163569695",
 
     enquiryLink: "#",
 
@@ -2479,9 +2495,9 @@ const packages = [
       "Any item not mentioned above",
     ],
 
-    whatsapp: "https://wa.me/918910555711",
+    whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+918910555711",
+    phone: "tel:+919163569695",
 
     enquiryLink: "#",
 
@@ -2661,9 +2677,9 @@ const packages = [
       "Any item not mentioned above",
     ],
 
-    whatsapp: "https://wa.me/918910555711",
+    whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+918910555711",
+    phone: "tel:+919163569695",
 
     enquiryLink: "#",
 
@@ -2875,9 +2891,9 @@ const packages = [
       "Any item not mentioned above",
     ],
 
-    whatsapp: "https://wa.me/918910555711",
+    whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+918910555711",
+    phone: "tel:+919163569695",
 
     enquiryLink: "#",
 
@@ -3041,9 +3057,9 @@ const packages = [
       "Any item not mentioned above",
     ],
 
-    whatsapp: "https://wa.me/918910555711",
+    whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+918910555711",
+    phone: "tel:+919163569695",
 
     enquiryLink: "#",
 
@@ -3352,9 +3368,9 @@ const packages = [
       "Any item not mentioned above",
     ],
 
-    whatsapp: "https://wa.me/918910555711",
+    whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+918910555711",
+    phone: "tel:+919163569695",
 
     enquiryLink: "#",
 
@@ -3705,9 +3721,9 @@ const packages = [
       "Any item not mentioned above",
     ],
 
-    whatsapp: "https://wa.me/918910555711",
+    whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+918910555711",
+    phone: "tel:+919163569695",
 
     enquiryLink: "#",
 
@@ -3926,9 +3942,9 @@ const packages = [
       "Any item not mentioned above",
     ],
 
-    whatsapp: "https://wa.me/918910555711",
+    whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+918910555711",
+    phone: "tel:+919163569695",
 
     enquiryLink: "#",
 
@@ -4201,9 +4217,9 @@ const packages = [
       "Any item not mentioned above",
     ],
 
-    whatsapp: "https://wa.me/918910555711",
+    whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+918910555711",
+    phone: "tel:+919163569695",
 
     enquiryLink: "#",
 
@@ -4359,9 +4375,9 @@ const packages = [
       "Any item not mentioned above",
     ],
 
-    whatsapp: "https://wa.me/918910555711",
+    whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+918910555711",
+    phone: "tel:+919163569695",
 
     enquiryLink: "#",
 
@@ -4578,9 +4594,9 @@ const packages = [
       "Any item not mentioned above",
     ],
 
-    whatsapp: "https://wa.me/918910555711",
+    whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+918910555711",
+    phone: "tel:+919163569695",
 
     enquiryLink: "#",
 
@@ -4875,9 +4891,9 @@ const packages = [
       "Any item not mentioned above",
     ],
 
-    whatsapp: "https://wa.me/918910555711",
+    whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+918910555711",
+    phone: "tel:+919163569695",
 
     enquiryLink: "#",
 
@@ -5054,9 +5070,9 @@ const packages = [
       "Any item not mentioned above",
     ],
 
-    whatsapp: "https://wa.me/918910555711",
+    whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+918910555711",
+    phone: "tel:+919163569695",
 
     enquiryLink: "#",
 
@@ -5246,9 +5262,9 @@ const packages = [
       "Any item not mentioned above",
     ],
 
-    whatsapp: "https://wa.me/918910555711",
+    whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+918910555711",
+    phone: "tel:+919163569695",
 
     enquiryLink: "#",
 
@@ -5567,9 +5583,9 @@ const packages = [
       "Any item not mentioned above",
     ],
 
-    whatsapp: "https://wa.me/918910555711",
+    whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+918910555711",
+    phone: "tel:+919163569695",
 
     enquiryLink: "#",
 
@@ -5902,9 +5918,9 @@ const packages = [
       "Any item not mentioned above",
     ],
 
-    whatsapp: "https://wa.me/918910555711",
+    whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+918910555711",
+    phone: "tel:+919163569695",
 
     enquiryLink: "#",
 
@@ -6053,9 +6069,9 @@ const packages = [
       "22/01/2027",
     ],
 
-    whatsapp: "https://wa.me/918910555711",
+    whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+918910555711",
+    phone: "tel:+919163569695",
 
     enquiryLink: "#",
 
@@ -6196,9 +6212,9 @@ const packages = [
       "Anything not mentioned in inclusions",
     ],
 
-    whatsapp: "https://wa.me/918910555711",
+    whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+918910555711",
+    phone: "tel:+919163569695",
 
     enquiryLink: "#",
 
@@ -6355,9 +6371,9 @@ const packages = [
 
     departureDates: [],
 
-    whatsapp: "https://wa.me/918910555711",
+    whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+918910555711",
+    phone: "tel:+919163569695",
 
     enquiryLink: "#",
 
@@ -7183,9 +7199,9 @@ const packages = [
       "Package price to be confirmed at the time of booking.",
     ],
 
-    whatsapp: "https://wa.me/918910555711",
+    whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+918910555711",
+    phone: "tel:+919163569695",
 
     enquiryLink: "#",
 

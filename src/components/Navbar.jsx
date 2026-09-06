@@ -69,7 +69,7 @@ export default function Navbar() {
               className="group flex items-center"
             >
               <img
-                src="/images/riya-logo.webp"
+                src="/images/logo2.png"
                 alt="Riya Group of Companies"
                 className="h-14 w-auto object-contain transition-all duration-500 group-hover:scale-[1.03]"
               />
@@ -142,7 +142,7 @@ export default function Navbar() {
               {/* Explore Button — reversed theme */}
               <button
                 onClick={handleExplore}
-                className="cta-shimmer-reverse group flex items-center gap-2 rounded-full border-2 border-[#6957DF] px-5 py-2 font-semibold text-[#6957DF] shadow-[0_10px_30px_rgba(105,87,223,0.18)] transition-all duration-500 hover:scale-95 hover:border-transparent hover:bg-gradient-to-l hover:from-[#6957DF] hover:to-[#9F7AEA] hover:text-white hover:shadow-[0_20px_45px_rgba(105,87,223,0.40)]"
+                className="cta-shimmer-reverse group flex items-center gap-2 rounded-full border-2 border-[#6957DF] px-5 py-2 font-semibold text-[#6957DF] shadow-[0_10px_30px_rgba(105,87,223,0.18)] transition-all duration-500 hover:scale-95 hover:border-transparent hover:bg-gradient-to-l hover:from-[#6957DF] hover:to-[#9F7AEA] hover:text-white hover:shadow-[0_20px_45px_rgba(105,87,223,0.40)] cursor-pointer"
               >
                 <MapPinned
                   className="text-[#6957DF] transition-all duration-300 group-hover:scale-90 group-hover:text-white"
@@ -154,7 +154,7 @@ export default function Navbar() {
               {/* Enquiry Button — unchanged */}
               <button
                 onClick={() => openEnquiry()}
-                className="cta-shimmer rounded-full bg-gradient-to-r from-[#6957DF] to-[#9F7AEA] px-7 py-3 font-bold text-white shadow-[0_20px_45px_rgba(105,87,223,0.35)] transition-all duration-500 hover:scale-105 hover:shadow-[0_25px_55px_rgba(105,87,223,0.45)]"
+                className="cta-shimmer rounded-full bg-gradient-to-r from-[#6957DF] to-[#9F7AEA] px-7 py-3 font-bold text-white shadow-[0_20px_45px_rgba(105,87,223,0.35)] transition-all duration-500 hover:scale-105 hover:shadow-[0_25px_55px_rgba(105,87,223,0.45)] cursor-pointer"
               >
                 Enquire Now
               </button>

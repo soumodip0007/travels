@@ -62,7 +62,7 @@ export default function FooterBottom() {
           <span>
             by{" "}
             <span className="font-semibold bg-gradient-to-r from-[#C084FC] via-[#A855F7] to-[#7C3AED] bg-clip-text text-transparent">
-              Riya Travels
+              Soumodip
             </span>
           </span>
 

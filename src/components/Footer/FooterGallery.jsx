@@ -6,42 +6,42 @@ const destinations = [
     title: "Meghalaya",
     image:
       "https://images.unsplash.com/photo-1528127269322-539801943592?w=600&q=80",
-    slug: "/packages/magical-meghalaya",
+    slug: "/packages/meghalaya-tour",
   },
   {
     id: 2,
     title: "Darjeeling",
     image:
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600&q=80",
-    slug: "/packages/darjeeling",
+    slug: "/packages/pelling-ravangla-darjeeling-tour",
   },
   {
     id: 3,
     title: "Gangtok",
     image:
       "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=80",
-    slug: "/packages/gangtok",
+    slug: "/packages/north-sikkim-tour",
   },
   {
     id: 4,
     title: "Goa",
     image:
       "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80",
-    slug: "/packages/goa",
+    slug: "/packages/goa-tour",
   },
   {
     id: 5,
     title: "Kashmir",
     image:
       "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600&q=80",
-    slug: "/packages/kashmir",
+    slug: "/packages/kashmir-tour",
   },
   {
     id: 6,
     title: "Kerala",
     image:
       "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600&q=80",
-    slug: "/packages/kerala",
+    slug: "/packages/kerala-kanyakumari-tour",
   },
 ];
 
