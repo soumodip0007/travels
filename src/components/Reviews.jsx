@@ -61,6 +61,7 @@ export default function Reviews() {
   const [activeVideo, setActiveVideo] = useState(null);
   const [page, setPage] = useState(1);
   const sectionRef = useRef(null);
+  
 
   const totalPages = Math.ceil(reviews.length / PER_PAGE);
 

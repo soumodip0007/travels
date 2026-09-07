@@ -26,36 +26,48 @@ const Home = () => {
   return (
     <div className="relative z-0">
 
+      {/* Background */}
       <div className="fixed inset-0 -z-10 overflow-hidden">
         <ParticlesBackground />
       </div>
 
       <div className="relative z-10">
 
+        {/* Hero */}
         <div data-aos="fade-up">
           <HeroSlider />
         </div>
 
+        {/* Features */}
         <div data-aos="fade-up" data-aos-delay="100">
           <FeatureCards />
         </div>
 
-        <div data-aos="fade-up" data-aos-delay="150">
+        {/* Tours */}
+        <div
+          id="tour-section"
+          data-aos="fade-up"
+          data-aos-delay="150"
+        >
           <TourSection />
         </div>
 
+        {/* Rating */}
         <div data-aos="zoom-in" data-aos-delay="200">
           <RatingBar />
         </div>
 
+        {/* Testimonials */}
         <div data-aos="fade-up" data-aos-delay="250">
           <Testimonials />
         </div>
 
+        {/* Reviews */}
         <div data-aos="fade-up" data-aos-delay="250">
           <Reviews />
         </div>
 
+        {/* Certification */}
         <div data-aos="fade-up" data-aos-delay="300">
           <Certification />
         </div>
