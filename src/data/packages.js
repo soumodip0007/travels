@@ -5602,7 +5602,7 @@ const packages = [
 
     title: "Nepal",
 
-    image: null,
+    image: "/images/nepal/nepal_banner.webp",
 
     gallery: [null, null, null, null, null],
 
@@ -5935,7 +5935,7 @@ const packages = [
 
     title: "Bangkok Pattaya Phuket",
 
-    image: null,
+    image: "/images/bangkok-pattaya-phuket/ban_banner.webp",
 
     gallery: [null, null, null, null, null],
 
@@ -6086,7 +6086,7 @@ const packages = [
 
     title: "Bangkok, Pattaya, Phuket & Krabi",
 
-    image: null,
+    image: "/images/bangkok-pattaya-phuket-and-krabi/ban_banner3.webp",
 
     gallery: [null, null, null, null, null],
 
@@ -6229,7 +6229,7 @@ const packages = [
 
     title: "Kazakhstan & Uzbekistan",
 
-    image: null,
+    image: "/images/kazakhstan-uzbekistan/kaja_banner.webp",
 
     gallery: [null, null, null, null, null],
 
