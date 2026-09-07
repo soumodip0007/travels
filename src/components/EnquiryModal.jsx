@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   X,
   User,
@@ -12,6 +12,7 @@ import {
   ChevronDown,
   ChevronRight,
   AlertCircle,
+  CheckCircle2,
 } from "lucide-react";
 
 import { submitEnquiry } from "../utils/submitEnquiry";
@@ -75,6 +76,10 @@ export default function EnquiryModal({ open, close }) {
   const [form, setForm] = useState(EMPTY_FORM);
   const [touched, setTouched] = useState({});
   const [attempted, setAttempted] = useState(false);
+  const [submitError, setSubmitError] = useState("");
+
+  // Success state: holds the submitted traveler's name for the confirmation screen
+  const [successName, setSuccessName] = useState(null);
 
   // Lock background scroll + close on Escape while the modal is open
   useEffect(() => {
@@ -93,6 +98,19 @@ export default function EnquiryModal({ open, close }) {
       window.removeEventListener("keydown", onKeyDown);
     };
   }, [open, close]);
+
+  // Reset everything (form + success screen) once the modal is fully closed
+  useEffect(() => {
+    if (open) return;
+    const t = setTimeout(() => {
+      setForm(EMPTY_FORM);
+      setTouched({});
+      setAttempted(false);
+      setSubmitError("");
+      setSuccessName(null);
+    }, 300);
+    return () => clearTimeout(t);
+  }, [open]);
 
   const packageOptions =
     form.tourType === "Domestic Tour"
@@ -159,6 +177,7 @@ export default function EnquiryModal({ open, close }) {
   const submit = async (e) => {
     e.preventDefault();
     setAttempted(true);
+    setSubmitError("");
 
     if (!isValid) {
       // Focus the first invalid field for a faster fix
@@ -171,13 +190,9 @@ export default function EnquiryModal({ open, close }) {
 
     try {
       await submitEnquiry(form);
-      alert("Enquiry sent successfully!");
-      setForm(EMPTY_FORM);
-      setTouched({});
-      setAttempted(false);
-      close();
+      setSuccessName(form.name.trim().split(" ")[0] || "there");
     } catch {
-      alert("Something went wrong. Please try again.");
+      setSubmitError("Something went wrong. Please try again.");
     }
 
     setLoading(false);
@@ -251,6 +266,17 @@ export default function EnquiryModal({ open, close }) {
             min-height: 44px;
           }
         }
+
+        /* ---- Success confirmation ---- */
+        .success-ring {
+          background: radial-gradient(circle, rgba(105,87,223,0.14) 0%, rgba(105,87,223,0) 70%);
+        }
+
+        .success-dot {
+          position: absolute;
+          border-radius: 999px;
+          background: linear-gradient(135deg, #6957DF, #A855F7);
+        }
       `}</style>
 
       {/* Background overlay */}
@@ -269,292 +295,390 @@ export default function EnquiryModal({ open, close }) {
         aria-labelledby="enquiry-title"
         className="relative z-10 flex h-[92dvh] sm:h-[42rem] w-full max-h-[92dvh] sm:max-h-[94vh] max-w-4xl flex-col overflow-hidden rounded-t-[28px] sm:rounded-[28px] bg-[#FBFAFF] shadow-[0_40px_100px_rgba(36,28,75,0.35)] sm:flex-row"
       >
-        {/* ================= Ticket Stub (desktop only) ================= */}
-        <div className="enquiry-stub-bg relative hidden w-[200px] shrink-0 flex-col justify-between p-6 text-white sm:flex">
-          <div>
-            <PlaneTakeoff size={22} className="text-white/90" />
-            <h3 className="enquiry-display mt-1.5 text-xl leading-snug">
-              Travel
-              <br />
-              Enquiry
-            </h3>
-          </div>
-
-          {/* Perforated edge */}
-          <div className="pointer-events-none absolute right-0 top-0 h-full w-px border-r-2 border-dashed border-white/25" />
-          <div className="pointer-events-none absolute -right-3 -top-3 h-6 w-6 rounded-full bg-[#FBFAFF]" />
-          <div className="pointer-events-none absolute -bottom-3 -right-3 h-6 w-6 rounded-full bg-[#FBFAFF]" />
-        </div>
-
-        {/* ================= Form Side ================= */}
-        <div className="flex min-h-0 flex-1 flex-col">
-          {/* Sticky header */}
-          <div className="flex shrink-0 items-start justify-between border-b border-slate-100 px-5 pb-3 pt-4 sm:px-7 sm:pt-6">
-            <div>
-              <h2
-                id="enquiry-title"
-                className="enquiry-display text-xl text-[#241c4b] sm:text-2xl"
-              >
-                Travel Enquiry
-              </h2>
-            </div>
-
-            <button
-              type="button"
-              onClick={close}
-              aria-label="Close enquiry form"
-              className="-mr-1.5 -mt-1 shrink-0 rounded-full p-2 text-[#241c4b] transition hover:bg-purple-50 hover:text-[#6957DF]"
+        <AnimatePresence mode="wait">
+          {successName ? (
+            <SuccessScreen key="success" name={successName} onDone={close} />
+          ) : (
+            <motion.div
+              key="form"
+              initial={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="flex min-h-0 flex-1 flex-col sm:flex-row"
             >
-              <X size={20} />
-            </button>
-          </div>
-
-          {/* Scrollable form body */}
-          <form
-            id="enquiry-form"
-            onSubmit={submit}
-            noValidate
-            className="enquiry-scroll min-h-0 flex-1 overflow-y-auto px-5 py-4 sm:px-7 sm:py-5"
-          >
-            <fieldset className="grid grid-cols-1 gap-3.5 sm:grid-cols-2">
-              {/* Name */}
-              <Field
-                label="Full Name"
-                icon={User}
-                error={showError("name")}
-              >
-                <input
-                  id="name"
-                  required
-                  name="name"
-                  value={form.name}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  autoComplete="name"
-                  placeholder="Enter your name"
-                  className={`${inputBase} ${inputState("name")}`}
-                />
-              </Field>
-
-              {/* Phone */}
-              <Field
-                label="Phone Number"
-                icon={Phone}
-                error={showError("phone")}
-              >
-                <input
-                  id="phone"
-                  required
-                  type="tel"
-                  inputMode="tel"
-                  name="phone"
-                  value={form.phone}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  autoComplete="tel"
-                  placeholder="10-digit mobile number"
-                  className={`${inputBase} ${inputState("phone")}`}
-                />
-              </Field>
-
-              {/* Email */}
-              <Field
-                label="Email Address"
-                icon={Mail}
-                error={showError("email")}
-                span2
-              >
-                <input
-                  id="email"
-                  required
-                  type="email"
-                  name="email"
-                  value={form.email}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  autoComplete="email"
-                  placeholder="Enter email address"
-                  className={`${inputBase} ${inputState("email")}`}
-                />
-              </Field>
-
-              {/* Address */}
-              <div className="sm:col-span-2">
-                <label
-                  htmlFor="address"
-                  className="mb-1.5 block text-sm font-semibold text-slate-700"
-                >
-                  Address
-                </label>
-
-                <div className="relative">
-                  <MapPin
-                    size={17}
-                    className="pointer-events-none absolute left-3.5 top-3.5 text-[#6957DF]/50"
-                  />
-                  <textarea
-                    id="address"
-                    required
-                    name="address"
-                    rows={2}
-                    value={form.address}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    autoComplete="street-address"
-                    placeholder="Street, area, city, state, PIN code"
-                    className={`${inputBase} resize-none rounded-2xl ${inputState("address")}`}
-                  />
+              {/* ================= Ticket Stub (desktop only) ================= */}
+              <div className="enquiry-stub-bg relative hidden w-[200px] shrink-0 flex-col justify-between p-6 text-white sm:flex">
+                <div>
+                  <PlaneTakeoff size={22} className="text-white/90" />
+                  <h3 className="enquiry-display mt-1.5 text-xl leading-snug">
+                    Travel
+                    <br />
+                    Enquiry
+                  </h3>
                 </div>
 
-                {showError("address") && <ErrorText text={errors.address} />}
+                {/* Perforated edge */}
+                <div className="pointer-events-none absolute right-0 top-0 h-full w-px border-r-2 border-dashed border-white/25" />
+                <div className="pointer-events-none absolute -right-3 -top-3 h-6 w-6 rounded-full bg-[#FBFAFF]" />
+                <div className="pointer-events-none absolute -bottom-3 -right-3 h-6 w-6 rounded-full bg-[#FBFAFF]" />
               </div>
-            </fieldset>
 
-            <fieldset className="mt-5 grid grid-cols-1 gap-3.5 border-t border-slate-100 pt-5 sm:grid-cols-2">
-              {/* Tour Type */}
-              <Field
-                label="Tour Type"
-                icon={Compass}
-                error={showError("tourType")}
-                select
-              >
-                <select
-                  id="tourType"
-                  required
-                  name="tourType"
-                  value={form.tourType}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  className={`${inputBase} appearance-none pr-9 ${inputState("tourType")}`}
-                >
-                  <option value="">Select tour type</option>
-                  <option value="Domestic Tour">Domestic Tour</option>
-                  <option value="International Tour">
-                    International Tour
-                  </option>
-                </select>
-              </Field>
+              {/* ================= Form Side ================= */}
+              <div className="flex min-h-0 flex-1 flex-col">
+                {/* Sticky header */}
+                <div className="flex shrink-0 items-start justify-between border-b border-slate-100 px-5 pb-3 pt-4 sm:px-7 sm:pt-6">
+                  <div>
+                    <h2
+                      id="enquiry-title"
+                      className="enquiry-display text-xl text-[#241c4b] sm:text-2xl"
+                    >
+                      Travel Enquiry
+                    </h2>
+                  </div>
 
-              {/* Tour Package */}
-              <div>
-                <label
-                  htmlFor="tourPackage"
-                  className="mb-1.5 block text-sm font-semibold text-slate-700"
-                >
-                  Tour Package
-                </label>
-
-                <div className="relative">
-                  <PlaneTakeoff
-                    size={17}
-                    className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-[#6957DF]/50"
-                  />
-                  <select
-                    id="tourPackage"
-                    required
-                    name="tourPackage"
-                    value={form.tourPackage}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    disabled={!form.tourType}
-                    className={`${inputBase} appearance-none pr-9 ${
-                      !form.tourType
-                        ? "cursor-not-allowed border-slate-200 bg-slate-100 text-slate-400"
-                        : inputState("tourPackage")
-                    }`}
+                  <button
+                    type="button"
+                    onClick={close}
+                    aria-label="Close enquiry form"
+                    className="-mr-1.5 -mt-1 shrink-0 rounded-full p-2 text-[#241c4b] transition hover:bg-purple-50 hover:text-[#6957DF]"
                   >
-                    <option value="">
-                      {form.tourType
-                        ? "Select tour package"
-                        : "Select tour type first"}
-                    </option>
-                    {packageOptions.map((pkg) => (
-                      <option key={pkg} value={pkg}>
-                        {pkg}
-                      </option>
-                    ))}
-                  </select>
-                  <ChevronDown
-                    size={17}
-                    className="pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400"
-                  />
+                    <X size={20} />
+                  </button>
                 </div>
 
-                {showError("tourPackage") && (
-                  <ErrorText text={errors.tourPackage} />
-                )}
+                {/* Scrollable form body */}
+                <form
+                  id="enquiry-form"
+                  onSubmit={submit}
+                  noValidate
+                  className="enquiry-scroll min-h-0 flex-1 overflow-y-auto px-5 py-4 sm:px-7 sm:py-5"
+                >
+                  <fieldset className="grid grid-cols-1 gap-3.5 sm:grid-cols-2">
+                    {/* Name */}
+                    <Field
+                      label="Full Name"
+                      icon={User}
+                      error={showError("name")}
+                    >
+                      <input
+                        id="name"
+                        required
+                        name="name"
+                        value={form.name}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        autoComplete="name"
+                        placeholder="Enter your name"
+                        className={`${inputBase} ${inputState("name")}`}
+                      />
+                    </Field>
+
+                    {/* Phone */}
+                    <Field
+                      label="Phone Number"
+                      icon={Phone}
+                      error={showError("phone")}
+                    >
+                      <input
+                        id="phone"
+                        required
+                        type="tel"
+                        inputMode="tel"
+                        name="phone"
+                        value={form.phone}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        autoComplete="tel"
+                        placeholder="10-digit mobile number"
+                        className={`${inputBase} ${inputState("phone")}`}
+                      />
+                    </Field>
+
+                    {/* Email */}
+                    <Field
+                      label="Email Address"
+                      icon={Mail}
+                      error={showError("email")}
+                      span2
+                    >
+                      <input
+                        id="email"
+                        required
+                        type="email"
+                        name="email"
+                        value={form.email}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        autoComplete="email"
+                        placeholder="Enter email address"
+                        className={`${inputBase} ${inputState("email")}`}
+                      />
+                    </Field>
+
+                    {/* Address */}
+                    <div className="sm:col-span-2">
+                      <label
+                        htmlFor="address"
+                        className="mb-1.5 block text-sm font-semibold text-slate-700"
+                      >
+                        Address
+                      </label>
+
+                      <div className="relative">
+                        <MapPin
+                          size={17}
+                          className="pointer-events-none absolute left-3.5 top-3.5 text-[#6957DF]/50"
+                        />
+                        <textarea
+                          id="address"
+                          required
+                          name="address"
+                          rows={2}
+                          value={form.address}
+                          onChange={handleChange}
+                          onBlur={handleBlur}
+                          autoComplete="street-address"
+                          placeholder="Street, area, city, state, PIN code"
+                          className={`${inputBase} resize-none rounded-2xl ${inputState("address")}`}
+                        />
+                      </div>
+
+                      {showError("address") && <ErrorText text={errors.address} />}
+                    </div>
+                  </fieldset>
+
+                  <fieldset className="mt-5 grid grid-cols-1 gap-3.5 border-t border-slate-100 pt-5 sm:grid-cols-2">
+                    {/* Tour Type */}
+                    <Field
+                      label="Tour Type"
+                      icon={Compass}
+                      error={showError("tourType")}
+                      select
+                    >
+                      <select
+                        id="tourType"
+                        required
+                        name="tourType"
+                        value={form.tourType}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        className={`${inputBase} appearance-none pr-9 ${inputState("tourType")}`}
+                      >
+                        <option value="">Select tour type</option>
+                        <option value="Domestic Tour">Domestic Tour</option>
+                        <option value="International Tour">
+                          International Tour
+                        </option>
+                      </select>
+                    </Field>
+
+                    {/* Tour Package */}
+                    <div>
+                      <label
+                        htmlFor="tourPackage"
+                        className="mb-1.5 block text-sm font-semibold text-slate-700"
+                      >
+                        Tour Package
+                      </label>
+
+                      <div className="relative">
+                        <PlaneTakeoff
+                          size={17}
+                          className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-[#6957DF]/50"
+                        />
+                        <select
+                          id="tourPackage"
+                          required
+                          name="tourPackage"
+                          value={form.tourPackage}
+                          onChange={handleChange}
+                          onBlur={handleBlur}
+                          disabled={!form.tourType}
+                          className={`${inputBase} appearance-none pr-9 ${
+                            !form.tourType
+                              ? "cursor-not-allowed border-slate-200 bg-slate-100 text-slate-400"
+                              : inputState("tourPackage")
+                          }`}
+                        >
+                          <option value="">
+                            {form.tourType
+                              ? "Select tour package"
+                              : "Select tour type first"}
+                          </option>
+                          {packageOptions.map((pkg) => (
+                            <option key={pkg} value={pkg}>
+                              {pkg}
+                            </option>
+                          ))}
+                        </select>
+                        <ChevronDown
+                          size={17}
+                          className="pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400"
+                        />
+                      </div>
+
+                      {showError("tourPackage") && (
+                        <ErrorText text={errors.tourPackage} />
+                      )}
+                    </div>
+
+                    {/* Start Date */}
+                    <Field
+                      label="Start Date"
+                      icon={CalendarDays}
+                      error={showError("startDate")}
+                    >
+                      <input
+                        id="startDate"
+                        required
+                        type="date"
+                        name="startDate"
+                        min={todayISO()}
+                        value={form.startDate}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        className={`${inputBase} ${inputState("startDate")}`}
+                      />
+                    </Field>
+
+                    {/* End Date */}
+                    <Field
+                      label="End Date"
+                      icon={CalendarDays}
+                      error={showError("endDate")}
+                    >
+                      <input
+                        id="endDate"
+                        required
+                        type="date"
+                        name="endDate"
+                        min={form.startDate || todayISO()}
+                        value={form.endDate}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        className={`${inputBase} ${inputState("endDate")}`}
+                      />
+                    </Field>
+                  </fieldset>
+                </form>
+
+                {/* Sticky footer / submit */}
+                <div className="shrink-0 border-t border-slate-100 bg-[#FBFAFF] px-5 py-3.5 sm:px-7 sm:py-4">
+                  <div className="flex items-center justify-end gap-3">
+                    {((attempted && !isValid) || submitError) && (
+                      <p className="mr-auto flex items-center gap-1.5 text-xs font-medium text-red-500 sm:text-sm">
+                        <AlertCircle size={15} className="shrink-0" />
+                        {submitError || "Please fix the highlighted fields."}
+                      </p>
+                    )}
+
+                    <button
+                      type="submit"
+                      form="enquiry-form"
+                      disabled={loading}
+                      className="enquiry-submit ml-auto flex items-center justify-center gap-1.5 rounded-full bg-gradient-to-r from-[#6957DF] to-[#9F7AEA] px-7 py-3 text-sm font-bold text-white shadow-[0_20px_45px_rgba(105,87,223,0.35)] transition-all hover:scale-[1.01] hover:shadow-[0_25px_55px_rgba(105,87,223,0.45)] disabled:opacity-70 disabled:hover:scale-100 sm:px-10 sm:py-3.5 sm:text-base"
+                    >
+                      {loading ? (
+                        <LoadingSpinner />
+                      ) : (
+                        <>
+                          Submit Enquiry
+                          <ChevronRight size={16} />
+                        </>
+                      )}
+                    </button>
+                  </div>
+                </div>
               </div>
-
-              {/* Start Date */}
-              <Field
-                label="Start Date"
-                icon={CalendarDays}
-                error={showError("startDate")}
-              >
-                <input
-                  id="startDate"
-                  required
-                  type="date"
-                  name="startDate"
-                  min={todayISO()}
-                  value={form.startDate}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  className={`${inputBase} ${inputState("startDate")}`}
-                />
-              </Field>
-
-              {/* End Date */}
-              <Field
-                label="End Date"
-                icon={CalendarDays}
-                error={showError("endDate")}
-              >
-                <input
-                  id="endDate"
-                  required
-                  type="date"
-                  name="endDate"
-                  min={form.startDate || todayISO()}
-                  value={form.endDate}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  className={`${inputBase} ${inputState("endDate")}`}
-                />
-              </Field>
-            </fieldset>
-          </form>
-
-          {/* Sticky footer / submit */}
-          <div className="shrink-0 border-t border-slate-100 bg-[#FBFAFF] px-5 py-3.5 sm:px-7 sm:py-4">
-            <div className="flex items-center justify-end gap-3">
-              {attempted && !isValid && (
-                <p className="mr-auto flex items-center gap-1.5 text-xs font-medium text-red-500 sm:text-sm">
-                  <AlertCircle size={15} className="shrink-0" />
-                  Please fix the highlighted fields.
-                </p>
-              )}
-
-              <button
-                type="submit"
-                form="enquiry-form"
-                disabled={loading}
-                className="enquiry-submit ml-auto flex items-center justify-center gap-1.5 rounded-full bg-gradient-to-r from-[#6957DF] to-[#9F7AEA] px-7 py-3 text-sm font-bold text-white shadow-[0_20px_45px_rgba(105,87,223,0.35)] transition-all hover:scale-[1.01] hover:shadow-[0_25px_55px_rgba(105,87,223,0.45)] disabled:opacity-70 disabled:hover:scale-100 sm:px-10 sm:py-3.5 sm:text-base"
-              >
-                {loading ? (
-                  <LoadingSpinner />
-                ) : (
-                  <>
-                    Submit Enquiry
-                    <ChevronRight size={16} />
-                  </>
-                )}
-              </button>
-            </div>
-          </div>
-        </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </motion.div>
     </div>
+  );
+}
+
+/** Full-width confirmation screen shown in place of the form after a successful submit. */
+function SuccessScreen({ name, onDone }) {
+  useEffect(() => {
+    const t = setTimeout(onDone, 4000);
+    return () => clearTimeout(t);
+  }, [onDone]);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.25 }}
+      className="relative flex min-h-0 flex-1 flex-col items-center justify-center overflow-hidden px-8 py-10 text-center sm:px-16"
+    >
+      {/* Soft radial glow behind the check */}
+      <div className="success-ring pointer-events-none absolute h-[420px] w-[420px] rounded-full" />
+
+      {/* Scattered accent dots for a little celebratory lift, no confetti libraries needed */}
+      {[
+        { top: "18%", left: "22%", size: 8, delay: 0.5 },
+        { top: "28%", left: "78%", size: 6, delay: 0.62 },
+        { top: "70%", left: "16%", size: 6, delay: 0.7 },
+        { top: "76%", left: "82%", size: 9, delay: 0.58 },
+        { top: "14%", left: "58%", size: 5, delay: 0.66 },
+      ].map((dot, i) => (
+        <motion.span
+          key={i}
+          className="success-dot"
+          style={{ top: dot.top, left: dot.left, width: dot.size, height: dot.size }}
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: [0, 1, 1, 0], scale: [0, 1, 1, 0.6], y: [0, -14, -10, -4] }}
+          transition={{ duration: 1.6, delay: dot.delay, ease: "easeOut" }}
+        />
+      ))}
+
+      <motion.div
+        initial={{ scale: 0.4, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ type: "spring", stiffness: 260, damping: 18, delay: 0.1 }}
+        className="relative flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-[#6957DF] to-[#A855F7] shadow-[0_20px_45px_rgba(105,87,223,0.4)]"
+      >
+        <motion.div
+          initial={{ pathLength: 0, opacity: 0 }}
+          animate={{ pathLength: 1, opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.35, ease: "easeInOut" }}
+        >
+          <CheckCircle2 size={40} className="text-white" strokeWidth={2.25} />
+        </motion.div>
+      </motion.div>
+
+      <motion.h2
+        initial={{ y: 10, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.35, delay: 0.3 }}
+        className="enquiry-display relative mt-6 text-2xl text-[#241c4b] sm:text-3xl"
+      >
+        Thank you, {name}!
+      </motion.h2>
+
+      <motion.p
+        initial={{ y: 10, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.35, delay: 0.4 }}
+        className="relative mt-3 max-w-sm text-[15px] leading-relaxed text-slate-500"
+      >
+        Your travel enquiry has been sent. Our team will reach out shortly to
+        help plan your trip.
+      </motion.p>
+
+      <motion.button
+        initial={{ y: 10, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.35, delay: 0.5 }}
+        type="button"
+        onClick={onDone}
+        className="relative mt-8 rounded-full bg-[#241c4b] px-8 py-3 text-sm font-bold text-white transition hover:scale-[1.02] hover:bg-[#33285f]"
+      >
+        Done
+      </motion.button>
+    </motion.div>
   );
 }
 
