@@ -5,6 +5,8 @@ import { useNavigate } from "react-router-dom";
 
 import packages from "../data/packages";
 import ParticlesBackground from "../components/ParticlesBackground";
+import LazyImage from "../components/LazyImage";
+import { getThumbnailUrl } from "../utils/imageOptimization";
 
 const Gallery = () => {
   const navigate = useNavigate();
@@ -123,10 +125,10 @@ const Gallery = () => {
 
                 <div className="relative h-72 overflow-hidden">
 
-                  <img
-                    src={item.image}
+                  <LazyImage
+                    src={getThumbnailUrl(item.image)}
                     alt={item.title}
-                    className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+                    className="h-full w-full transition duration-700 group-hover:scale-110"
                   />
 
                   <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />

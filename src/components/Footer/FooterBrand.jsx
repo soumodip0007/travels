@@ -23,9 +23,7 @@ export default function FooterBrand() {
       {/* Description */}
 
       <p className="mt-8 text-[16px] text-justify leading-8 text-slate-300">
-        Discover the world's most beautiful destinations with premium travel
-        experiences, customized holiday packages, luxury stays, and memorable
-        adventures crafted especially for you.
+        Discover extraordinary destinations with unforgettable travel experiences, beautifully designed holiday packages, luxurious stays, and exciting adventures created exclusively for your perfect getaway.
       </p>
 
       {/* Social Icons */}

@@ -9,6 +9,8 @@ import {
 } from "lucide-react";
 
 import { useEnquiry } from "../context/EnquiryContext";
+import LazyImage from "./LazyImage";
+import { getThumbnailUrl } from "../utils/imageOptimization";
 
 export default function TourCard({ tour }) {
   // Find all available packages
@@ -69,12 +71,10 @@ export default function TourCard({ tour }) {
 
       <div className="relative overflow-hidden rounded-t-[28px]">
 
-        <img
-          src={tour.image}
+        <LazyImage
+          src={getThumbnailUrl(tour.image)}
           alt={tour.title}
-          loading="lazy"
-          decoding="async"
-          className="h-60 w-full object-cover transition-transform duration-700 group-hover:scale-110"
+          className="h-60 w-full transition-transform duration-700 group-hover:scale-110"
         />
 
         {/* Gradient */}

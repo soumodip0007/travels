@@ -12,6 +12,8 @@ import { useNavigate, useParams } from "react-router-dom";
 
 import packages from "../data/packages";
 import ParticlesBackground from "../components/ParticlesBackground";
+import LazyImage from "../components/LazyImage";
+import { getThumbnailUrl, getFullQualityUrl } from "../utils/imageOptimization";
 
 const PackageGallery = () => {
     const { slug } = useParams();
@@ -151,11 +153,10 @@ const PackageGallery = () => {
                                     className="group relative h-72 cursor-pointer overflow-hidden rounded-3xl shadow-lg"
                                 >
 
-                                    <img
-                                        src={image}
+                                    <LazyImage
+                                        src={getThumbnailUrl(image)}
                                         alt={`${packageData.title} ${index + 1}`}
-                                        className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
-                                        loading="lazy"
+                                        className="h-full w-full transition duration-700 group-hover:scale-110"
                                     />
 
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 transition duration-300 group-hover:opacity-100" />
@@ -277,9 +278,10 @@ const PackageGallery = () => {
 
                             {/* Selected Image */}
                             <img
-                                src={selectedImage}
+                                src={getFullQualityUrl(selectedImage)}
                                 alt={packageData.title}
                                 className="h-full w-full object-contain"
+                                loading="eager"
                             />
 
                             {/* Caption */}

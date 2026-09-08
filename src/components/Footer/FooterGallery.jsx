@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import LazyImage from "../LazyImage";
+import { getThumbnailUrl } from "../../utils/imageOptimization";
 
 const destinations = [
   {
@@ -71,10 +73,10 @@ export default function FooterGallery() {
 
             {/* Image */}
 
-            <img
-              src={place.image}
+            <LazyImage
+              src={getThumbnailUrl(place.image)}
               alt={place.title}
-              className="h-24 w-full object-cover transition-all duration-500 group-hover:scale-110"
+              className="h-24 w-full transition-all duration-500 group-hover:scale-110"
             />
 
             {/* Overlay */}
