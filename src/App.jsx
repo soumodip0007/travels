@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer/Footer";
 import ScrollTop from "./components/ScrollTop";
 import PageLoader from "./components/PageLoader";
+import SEOMeta from "./components/SEOMeta";
 import Home from "./pages/Home";
 import Gallery from "./pages/Gallery";
 import PackageGallery from "./pages/PackageGallery";
@@ -55,6 +56,7 @@ const App = () => {
 
   return (
     <>
+      <SEOMeta />
       <EnquiryProvider>
         <PageLoader loading={loading} onComplete={() => setLoading(false)} />
 

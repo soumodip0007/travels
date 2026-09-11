@@ -3,10 +3,51 @@ import packages from "../data/packages";
 import TourCard from "./TourCard";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const CARDS_PER_PAGE = 4;
 const CARD_DELAY = 200;
 
+/*
+ * Cards-per-page tracks the same breakpoints as the
+ * results grid below (sm: 2 cols, xl: 3 cols, 2xl: 4 cols),
+ * so pagination always fills complete rows instead of
+ * leaving a lonely card dangling on the last row.
+ *
+ *   < 640px            (1 col)  -> 4 per page
+ *   640px  - 1279px    (2 cols) -> 4 per page (2 full rows)
+ *   1280px - 1535px    (3 cols) -> 6 per page (2 full rows)
+ *   >= 1536px          (4 cols) -> 4 per page (1 full row)
+ */
+const getCardsPerPage = () => {
+  if (typeof window === "undefined") return 4;
+
+  const width = window.innerWidth;
+
+  if (width >= 1536) return 4; // 2xl -> desktop/large screens
+  if (width >= 1280) return 6; // xl  -> laptop-ish / this screenshot's size
+  if (width >= 640) return 4; // sm  -> tablet
+  return 4; // base -> mobile
+};
+
+function useCardsPerPage() {
+  const [cardsPerPage, setCardsPerPage] = useState(getCardsPerPage);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setCardsPerPage((prev) => {
+        const next = getCardsPerPage();
+        return next === prev ? prev : next;
+      });
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return cardsPerPage;
+}
+
 export default function TourSection() {
+  const cardsPerPage = useCardsPerPage();
+
   const domesticPackages = useMemo(
     () => packages.filter((pkg) => pkg.category === "domestic"),
     [],
@@ -30,6 +71,29 @@ export default function TourSection() {
   const internationalButtonRef = useRef(null);
 
   const autoScrollRef = useRef(null);
+
+  /*
+   * Whenever cardsPerPage changes (window resized across a
+   * breakpoint), clamp both pages back into range so we never
+   * land on a page that no longer exists.
+   */
+  useEffect(() => {
+    setDomesticPage((prev) => {
+      const totalPages = Math.max(
+        1,
+        Math.ceil(domesticPackages.length / cardsPerPage),
+      );
+      return Math.min(prev, totalPages);
+    });
+
+    setInternationalPage((prev) => {
+      const totalPages = Math.max(
+        1,
+        Math.ceil(internationalPackages.length / cardsPerPage),
+      );
+      return Math.min(prev, totalPages);
+    });
+  }, [cardsPerPage, domesticPackages.length, internationalPackages.length]);
 
   /*
    * Stop automatic scrolling
@@ -166,10 +230,10 @@ export default function TourSection() {
     sectionRef,
     buttonRef,
   ) => {
-    const totalPages = Math.ceil(data.length / CARDS_PER_PAGE);
+    const totalPages = Math.ceil(data.length / cardsPerPage);
 
-    const startIndex = (page - 1) * CARDS_PER_PAGE;
-    const endIndex = startIndex + CARDS_PER_PAGE;
+    const startIndex = (page - 1) * cardsPerPage;
+    const endIndex = startIndex + cardsPerPage;
 
     const visiblePackages = showAll ? data : data.slice(startIndex, endIndex);
 
@@ -247,7 +311,7 @@ export default function TourSection() {
                   style={{
                     animationDelay: showAll
                       ? `${index * CARD_DELAY}ms`
-                      : `${(index % CARDS_PER_PAGE) * 80}ms`,
+                      : `${(index % cardsPerPage) * 80}ms`,
                   }}
                 >
                   <TourCard tour={tour} />
@@ -261,7 +325,7 @@ export default function TourSection() {
               renderPagination(page, totalPages, setPage)}
 
             {/* View All / Show Less */}
-            {data.length > CARDS_PER_PAGE && (
+            {data.length > cardsPerPage && (
               <div className="mt-8 flex justify-center">
                 <button
                   ref={showAll ? buttonRef : null}
