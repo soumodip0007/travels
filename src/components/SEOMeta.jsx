@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 
 export default function SEOMeta({
-  title = "Riya Tours & Travels | Domestic & International Travel Packages",
+  title = "Riya Tours & Travels",
   description = "Explore amazing travel packages to domestic and international destinations. Plan your perfect trip with Riya Tours & Travels.",
   keywords = "travel packages, tours, holidays, domestic tours, international tours, travel agency, vacation packages, Riya Tours",
   ogTitle,
