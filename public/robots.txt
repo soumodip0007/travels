@@ -1,0 +1,41 @@
+# robots.txt for Riya Tour Travels
+# Allow all search engines to crawl the site
+# Disallow crawling of sensitive pages and resources
+
+# Default rule for all bots
+User-agent: *
+Allow: /
+Disallow: /node_modules/
+Disallow: /build/
+Disallow: /dist/
+Disallow: /.git/
+Disallow: /.gitignore
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /vite.config.js
+Disallow: /eslint.config.js
+
+# Crawl-delay in seconds (optional, adjust based on server capacity)
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://riyatourtravel.com/sitemap.xml
+
+# Rules for specific bots
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Block bad bots
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
