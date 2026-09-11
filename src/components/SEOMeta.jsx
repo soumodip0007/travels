@@ -1,9 +1,9 @@
 import { Helmet } from "react-helmet-async";
 
 export default function SEOMeta({
-  title = "Riya Tour Travels | Domestic & International Travel Packages",
-  description = "Explore amazing travel packages to domestic and international destinations. Plan your perfect trip with Riya Tour Travels.",
-  keywords = "travel packages, tours, holidays, domestic tours, international tours, travel agency, vacation packages",
+  title = "Riya Tours & Travels | Domestic & International Travel Packages",
+  description = "Explore amazing travel packages to domestic and international destinations. Plan your perfect trip with Riya Tours & Travels.",
+  keywords = "travel packages, tours, holidays, domestic tours, international tours, travel agency, vacation packages, Riya Tours",
   ogTitle,
   ogDescription,
   ogImage = "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&h=630&q=80",
@@ -11,7 +11,7 @@ export default function SEOMeta({
   twitterCard = "summary_large_image",
   robots = "index, follow",
   canonical,
-  author = "Riya Tour Travels",
+  author = "Riya Tours & Travels",
 }) {
   return (
     <Helmet>
@@ -32,7 +32,7 @@ export default function SEOMeta({
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       {ogUrl && <meta property="og:url" content={ogUrl} />}
-      <meta property="og:site_name" content="Riya Tour Travels" />
+      <meta property="og:site_name" content="Riya Tours & Travels" />
 
       {/* Twitter Meta Tags */}
       <meta name="twitter:card" content={twitterCard} />
@@ -64,7 +64,7 @@ export default function SEOMeta({
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "TravelAgency",
-          "name": "Riya Tour Travels",
+          "name": "Riya Tours & Travels",
           "description": description,
           "url": window.location.origin,
           "telephone": "+91 9163569695",
