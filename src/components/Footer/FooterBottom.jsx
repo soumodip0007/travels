@@ -21,8 +21,6 @@ export default function FooterBottom() {
 
         </div>
 
-        {/* Center */}
-
         <div className="flex flex-wrap items-center justify-center gap-6">
 
           <Link
