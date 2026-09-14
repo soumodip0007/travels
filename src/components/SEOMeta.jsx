@@ -67,7 +67,7 @@ export default function SEOMeta({
           "name": "Riya Tours & Travels",
           "description": description,
           "url": window.location.origin,
-          "telephone": "+91 9163569695",
+          "telephone": "+91 8820918250, +91 9163569695, +91 7439808278, +91 033 31928889",
           "email": "riyatourtravels01@gmail.com",
           "address": {
             "@type": "PostalAddress",

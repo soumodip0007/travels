@@ -26,24 +26,10 @@ export default function FooterBottom() {
         <div className="flex flex-wrap items-center justify-center gap-6">
 
           <Link
-            to="/privacy-policy"
-            className="text-slate-400 transition duration-300 hover:text-[#C084FC]"
-          >
-            Privacy Policy
-          </Link>
-
-          <Link
             to="/terms-and-conditions"
             className="text-slate-400 transition duration-300 hover:text-[#C084FC]"
           >
             Terms & Conditions
-          </Link>
-
-          <Link
-            to="/refund-policy"
-            className="text-slate-400 transition duration-300 hover:text-[#C084FC]"
-          >
-            Refund Policy
           </Link>
 
         </div>

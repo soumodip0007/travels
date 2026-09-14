@@ -284,7 +284,7 @@ const packages = [
 
     whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+919163569695",
+    phone: "tel:+918820918250",
 
     enquiryLink: "#",
 
@@ -665,7 +665,7 @@ const packages = [
 
     whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+919163569695",
+    phone: "tel:+918820918250",
 
     enquiryLink: "#",
 
@@ -956,7 +956,7 @@ const packages = [
 
     whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+919163569695",
+    phone: "tel:+918820918250",
 
     enquiryLink: "#",
 
@@ -1122,7 +1122,7 @@ const packages = [
 
     whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+919163569695",
+    phone: "tel:+918820918250",
 
     enquiryLink: "#",
 
@@ -1255,7 +1255,7 @@ const packages = [
 
     whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+919163569695",
+    phone: "tel:+918820918250",
 
     enquiryLink: "#",
 
@@ -1452,7 +1452,7 @@ const packages = [
 
     whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+919163569695",
+    phone: "tel:+918820918250",
 
     enquiryLink: "#",
 
@@ -1618,7 +1618,7 @@ const packages = [
 
     whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+919163569695",
+    phone: "tel:+918820918250",
 
     enquiryLink: "#",
 
@@ -1783,7 +1783,7 @@ const packages = [
 
     whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+919163569695",
+    phone: "tel:+918820918250",
 
     enquiryLink: "#",
 
@@ -2002,7 +2002,7 @@ const packages = [
 
     whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+919163569695",
+    phone: "tel:+918820918250",
 
     enquiryLink: "#",
 
@@ -2182,7 +2182,7 @@ const packages = [
 
     whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+919163569695",
+    phone: "tel:+918820918250",
 
     enquiryLink: "#",
 
@@ -2306,7 +2306,7 @@ const packages = [
 
     whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+919163569695",
+    phone: "tel:+918820918250",
 
     enquiryLink: "#",
 
@@ -2497,7 +2497,7 @@ const packages = [
 
     whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+919163569695",
+    phone: "tel:+918820918250",
 
     enquiryLink: "#",
 
@@ -2679,7 +2679,7 @@ const packages = [
 
     whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+919163569695",
+    phone: "tel:+918820918250",
 
     enquiryLink: "#",
 
@@ -2893,7 +2893,7 @@ const packages = [
 
     whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+919163569695",
+    phone: "tel:+918820918250",
 
     enquiryLink: "#",
 
@@ -3059,7 +3059,7 @@ const packages = [
 
     whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+919163569695",
+    phone: "tel:+918820918250",
 
     enquiryLink: "#",
 
@@ -3370,7 +3370,7 @@ const packages = [
 
     whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+919163569695",
+    phone: "tel:+918820918250",
 
     enquiryLink: "#",
 
@@ -3723,7 +3723,7 @@ const packages = [
 
     whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+919163569695",
+    phone: "tel:+918820918250",
 
     enquiryLink: "#",
 
@@ -3944,7 +3944,7 @@ const packages = [
 
     whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+919163569695",
+    phone: "tel:+918820918250",
 
     enquiryLink: "#",
 
@@ -4219,7 +4219,7 @@ const packages = [
 
     whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+919163569695",
+    phone: "tel:+918820918250",
 
     enquiryLink: "#",
 
@@ -4377,7 +4377,7 @@ const packages = [
 
     whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+919163569695",
+    phone: "tel:+918820918250",
 
     enquiryLink: "#",
 
@@ -4596,7 +4596,7 @@ const packages = [
 
     whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+919163569695",
+    phone: "tel:+918820918250",
 
     enquiryLink: "#",
 
@@ -4893,7 +4893,7 @@ const packages = [
 
     whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+919163569695",
+    phone: "tel:+918820918250",
 
     enquiryLink: "#",
 
@@ -5072,7 +5072,7 @@ const packages = [
 
     whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+919163569695",
+    phone: "tel:+918820918250",
 
     enquiryLink: "#",
 
@@ -5264,7 +5264,7 @@ const packages = [
 
     whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+919163569695",
+    phone: "tel:+918820918250",
 
     enquiryLink: "#",
 
@@ -5585,7 +5585,7 @@ const packages = [
 
     whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+919163569695",
+    phone: "tel:+918820918250",
 
     enquiryLink: "#",
 
@@ -5920,7 +5920,7 @@ const packages = [
 
     whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+919163569695",
+    phone: "tel:+918820918250",
 
     enquiryLink: "#",
 
@@ -6071,7 +6071,7 @@ const packages = [
 
     whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+919163569695",
+    phone: "tel:+918820918250",
 
     enquiryLink: "#",
 
@@ -6214,7 +6214,7 @@ const packages = [
 
     whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+919163569695",
+    phone: "tel:+918820918250",
 
     enquiryLink: "#",
 
@@ -6373,7 +6373,7 @@ const packages = [
 
     whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+919163569695",
+    phone: "tel:+918820918250",
 
     enquiryLink: "#",
 
@@ -6525,7 +6525,7 @@ const packages = [
 
     whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+919163569695",
+    phone: "tel:+918820918250",
 
     enquiryLink: "#",
 
@@ -6680,7 +6680,7 @@ const packages = [
 
     whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+919163569695",
+    phone: "tel:+918820918250",
 
     enquiryLink: "#",
 
@@ -6830,7 +6830,7 @@ const packages = [
 
     whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+919163569695",
+    phone: "tel:+918820918250",
 
     enquiryLink: "#",
 
@@ -6990,7 +6990,7 @@ const packages = [
 
     whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+919163569695",
+    phone: "tel:+918820918250",
 
     enquiryLink: "#",
 
@@ -7201,7 +7201,7 @@ const packages = [
 
     whatsapp: "https://wa.me/919163569695",
 
-    phone: "tel:+919163569695",
+    phone: "tel:+918820918250",
 
     enquiryLink: "#",
 

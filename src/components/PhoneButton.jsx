@@ -3,7 +3,7 @@ import { Phone } from "lucide-react";
 export default function PhoneButton() {
   return (
     <a
-      href="tel:+919163569695"
+      href="tel:+918820918250"
       className="
         fixed
         bottom-50

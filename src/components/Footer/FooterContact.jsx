@@ -64,12 +64,32 @@ export default function FooterContact() {
               Phone
             </h4>
 
-            <a
-              href="tel:+919163569695"
-              className="text-sm text-slate-300 transition hover:text-[#C084FC]"
-            >
-              +91 9163569695
-            </a>
+            <div className="space-y-2">
+              <a
+                href="tel:+918820918250"
+                className="block text-sm text-slate-300 transition hover:text-[#C084FC]"
+              >
+                +91 8820918250
+              </a>
+              <a
+                href="tel:+919163569695"
+                className="block text-sm text-slate-300 transition hover:text-[#C084FC]"
+              >
+                +91 9163569695
+              </a>
+              <a
+                href="tel:+917439808278"
+                className="block text-sm text-slate-300 transition hover:text-[#C084FC]"
+              >
+                +91 7439808278
+              </a>
+              <a
+                href="tel:+913331928889"
+                className="block text-sm text-slate-300 transition hover:text-[#C084FC]"
+              >
+                +91 033 31928889
+              </a>
+            </div>
 
           </div>
 

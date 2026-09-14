@@ -12,7 +12,7 @@ const contactDetails = [
   {
     icon: Phone,
     label: "Call Us",
-    value: "+91 9163569695",
+    value: "+91 8820918250 | +91 9163569695 | +91 7439808278 | +91 033 31928889",
     description: "Speak directly with our travel experts",
   },
   {

@@ -18,69 +18,76 @@ const clientsData = [
 
 function LogoCard({ item }) {
   return (
-    <div className="mx-5 flex h-28 w-52 shrink-0 items-center justify-center rounded-xl border border-purple-200 bg-white/90 p-3 backdrop-blur-sm shadow-lg transition-all duration-500 hover:-translate-y-2 hover:border-[#6957DF] hover:shadow-[0_15px_35px_rgba(105,87,223,0.35)]">
+    <div className="group/card relative mx-4 flex h-32 w-56 shrink-0 items-center justify-center bg-[#FBF7EE] p-4 shadow-[0_10px_25px_rgba(11,29,58,0.12)] transition-all duration-500 hover:shadow-[0_18px_40px_rgba(117,49,234,0.35)]">
+      {/* Perforated ticket edge, top & bottom */}
+      <div
+        className="pointer-events-none absolute inset-x-0 -top-2 h-4 bg-[radial-gradient(circle,_#0B1D3A_2.5px,_transparent_2.5px)] bg-[length:14px_14px] bg-repeat-x opacity-90"
+        style={{ backgroundPosition: "0 100%" }}
+      />
+      <div
+        className="pointer-events-none absolute inset-x-0 -bottom-2 h-4 bg-[radial-gradient(circle,_#0B1D3A_2.5px,_transparent_2.5px)] bg-[length:14px_14px] bg-repeat-x opacity-90"
+        style={{ backgroundPosition: "0 0" }}
+      />
+
       <img
         src={item.url}
         alt={item.name}
-        className="h-full w-full object-contain transition duration-300"
+        className="h-full w-full object-contain grayscale-[15%] transition duration-500 group-hover/card:grayscale-0"
       />
+
+      {/* Wax-seal badge */}
+      <div className="absolute -right-3 -top-3 flex h-9 w-9 rotate-12 items-center justify-center rounded-full border-2 border-[#FBF7EE] bg-[#B8934A] text-[#0B1D3A] shadow-md transition-transform duration-500 group-hover/card:rotate-[24deg]">
+        <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current">
+          <path d="M12 2l2.4 6.6L21 9l-5 4.3L17.4 20 12 16.3 6.6 20 8 13.3 3 9l6.6-.4z" />
+        </svg>
+      </div>
     </div>
   );
 }
 
 export default function Partnerships() {
   return (
-    <section className="relative overflow-hidden bg-transparent py-20">
+    <section className="relative overflow-hidden bg-gradient-to-r from-[#5b2bd6] via-[#8450ff] to-[#a855f7] py-8">
       <div className="relative mx-auto w-[92%] max-w-7xl">
-
         {/* Heading */}
         <div className="mb-8 text-center">
-          <h2 className="text-5xl font-black text-slate-800">
-            <span className="bg-gradient-to-r from-[#6957DF] via-[#7C3AED] to-[#A855F7] bg-clip-text text-transparent">
-              Certifications
-            </span>
+          <h2
+            className="mt-3 text-5xl font-semibold text-[#fff]"
+            style={{ fontFamily: "'Fraunces', Georgia, serif" }}
+          >
+            Certifications
           </h2>
-
-          <p className="mx-auto mt-5 max-w-2xl text-lg text-slate-600 backdrop-blur-xs">
+          <p className="mx-auto mt-5 max-w-2xl text-lg text-[#fff]">
             Our certifications reflect our commitment to quality, professionalism,
             and excellence in every travel experience.
           </p>
         </div>
 
         {/* Marquee */}
-        <div className="group relative overflow-hidden rounded-2xl border border-sky-200 bg-white py-6 shadow-xl">
-
-          {/* Fade edges */}
-          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-white to-transparent" />
-
-          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-white to-transparent" />
-
-          {/* Certificates */}
+        <div
+          className="group relative overflow-hidden py-4"
+          style={{
+            WebkitMaskImage:
+              "linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%)",
+            maskImage:
+              "linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%)",
+          }}
+        >
           <div className="flex w-max animate-marquee group-hover:[animation-play-state:paused]">
             {[...clientsData, ...clientsData].map((item, i) => (
-              <LogoCard
-                key={`${item.id}-${i}`}
-                item={item}
-              />
+              <LogoCard key={`${item.id}-${i}`} item={item} />
             ))}
           </div>
         </div>
-
       </div>
 
       <style>{`
         @keyframes marquee {
-          from {
-            transform: translateX(0);
-          }
-
-          to {
-            transform: translateX(-50%);
-          }
+          from { transform: translateX(0); }
+          to { transform: translateX(-50%); }
         }
-
         .animate-marquee {
-          animation: marquee 25s linear infinite;
+          animation: marquee 28s linear infinite;
         }
       `}</style>
     </section>
