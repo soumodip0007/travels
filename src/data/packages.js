@@ -1306,6 +1306,7 @@ const packages = [
               "Board Azad Hind Express (12130) from Howrah Railway Station at 9:40 PM for Pune. Overnight stay in train.",
             images: [null, null],
           },
+
           {
             day: 2,
             title: "Train Journey",
@@ -1314,22 +1315,31 @@ const packages = [
               "Enjoy the scenic train journey towards Pune. Overnight stay in train.",
             images: [null, null],
           },
+
           {
             day: 3,
-            title: "Arrival at Pune",
-            distance: "Railway station transfer",
+            title: "Reach Pune",
+            distance: "Railway station transfer + local sightseeing",
             description:
-              "Reach Pune Railway Station and transfer to hotel. Visit Dagdusheth Halwai Ganpati Temple, Shaniwar Wada, Aga Khan Palace, Lal Mahal, and nearby attractions. Overnight stay at Pune.",
-            images: [null, null],
+              "Reach Pune Railway Station and transfer to the hotel. Visit Shrimant Dagdusheth Halwai Ganpati Mandir, Shaniwar Wada, Lal Mahal, and nearby attractions. Shrimant Dagdusheth Halwai Ganpati Mandir was founded in 1893 by Dagdusheth Halwai and his wife Lakshmibai. Shaniwar Wada is a historic 18th-century fortification that served as the grand seat of the Peshwa rulers of the Maratha Empire. Lal Mahal is a historic red-brick monument associated with the childhood of Chhatrapati Shivaji Maharaj. Overnight stay at Pune.",
+            images: [
+              "/images/five-jyotirlingya/day3.webp",
+              "/images/five-jyotirlingya/day31.webp",
+              "/images/five-jyotirlingya/day32.webp",
+            ],
           },
+
           {
             day: 4,
-            title: "Bhimashankar Jyotirlinga Darshan",
+            title: "Pune Stay – Bhimashankar Jyotirlinga Darshan",
             distance: "Excursion from Pune",
             description:
-              "After breakfast visit Bhimashankar Jyotirlinga Temple and return to Pune hotel. Overnight stay at Pune.",
-            images: [null, null],
+              "After breakfast, visit Bhimashankar Jyotirlinga Temple, an ancient sacred shrine dedicated to Lord Shiva located in the Sahyadri hills of Pune district, Maharashtra. Return to Pune hotel. Overnight stay at Pune.",
+            images: [
+              "/images/five-jyotirlingya/day4.webp",
+            ],
           },
+
           {
             day: 5,
             title: "Pune → Nashik",
@@ -1338,38 +1348,61 @@ const packages = [
               "Drive to Nashik and enjoy local sightseeing in the evening. Overnight stay at Nashik.",
             images: [null, null],
           },
+
           {
             day: 6,
-            title: "Trimbakeshwar Jyotirlinga Darshan",
+            title: "Nashik Stay – Trimbakeshwar Jyotirlinga Darshan",
             distance: "Local excursion",
             description:
-              "Visit Trimbakeshwar Jyotirlinga Temple and return to hotel. Overnight stay at Nashik.",
-            images: [null, null],
+              "Visit Trimbakeshwar Jyotirlinga Temple and return to hotel. The Trimbakeshwar Temple in Nashik, Maharashtra, was built by Peshwa Balaji Baji Rao (Nana Saheb) between 1755 and 1786 AD on the site of an older shrine. Overnight stay at Nashik.",
+            images: [
+              "/images/five-jyotirlingya/day6.webp",
+            ],
           },
+
           {
             day: 7,
             title: "Nashik → Aurangabad",
             distance: "180 km",
             description:
-              "Proceed to Aurangabad and visit Bibi Ka Maqbara, Ellora Caves, Aurangabad Caves, Daulatabad Fort, and nearby attractions depending on time. Overnight stay at Aurangabad.",
-            images: [null, null],
+              "Proceed to Aurangabad (Chhatrapati Sambhaji Nagar) and visit Bibi Ka Maqbara, Ellora Caves, Daulatabad Fort, Aurangabad Caves, and nearby attractions depending on time. Bibi Ka Maqbara is a 17th-century mausoleum built by Prince Azam Shah in memory of his mother, Dilras Banu Begum. The Ellora Caves are a massive rock-cut temple and monastery complex built between the 6th and 10th centuries CE. Daulatabad Fort, originally known as Deogiri, is a 12th-century hilltop fortress renowned for its medieval military architecture and complex defense systems. Overnight stay at Aurangabad.",
+            images: [
+              "/images/five-jyotirlingya/day7.webp",
+              "/images/five-jyotirlingya/day71.webp",
+              "/images/five-jyotirlingya/day72.webp",
+            ],
           },
+
           {
             day: 8,
-            title: "Grishneshwar Darshan → Train to Ujjain",
+            title: "Aurangabad → Ujjain",
             distance: "Temple visit + train journey",
             description:
-              "Visit Grishneshwar Jyotirlinga Temple. After dinner transfer to Chhatrapati Sambhaji Nagar Railway Station and board Hisar Weekly Express (17020) for Ujjain. Overnight stay in train.",
-            images: [null, null],
+              "Visit Grishneshwar Jyotirlinga Temple. Grishneshwar Jyotirlinga in Maharashtra is the twelfth and final sacred Jyotirlinga shrine of Lord Shiva. After dinner, transfer to Chhatrapati Sambhaji Nagar Railway Station and board Hisar Weekly Express (17020) for Ujjain. Overnight stay in train.",
+            images: [
+              "/images/five-jyotirlingya/day8.webp",
+            ],
           },
+
           {
             day: 9,
-            title: "Arrival at Ujjain",
-            distance: "Railway station transfer",
+            title: "Reach Ujjain – Sightseeing",
+            distance: "Railway station transfer + local sightseeing",
             description:
-              "Reach Ujjain Railway Station and transfer to hotel. Overnight stay at Ujjain.",
-            images: [null, null],
+              "Reach Ujjain Railway Station and transfer to the hotel. Visit Mahakaleshwar Jyotirlinga, Harsiddhi Mata Temple, Kal Bhairav Temple, Gadh Kalika Temple, Gopal Mandir, Chintaman Ganesh Temple, Jantar Mantar, Ram Ghat, Triveni Museum, and nearby attractions. Mahakaleshwar Jyotirlinga in Ujjain is one of the twelve sacred abodes of Lord Shiva. Harsiddhi Temple is an ancient shrine dedicated to Goddess Annapurna. Kal Bhairav Mandir is an ancient temple dedicated to Kal Bhairav. Gadh Kalika Temple is an ancient temple dedicated to Goddess Kali. Shri Dwarkadhish Gopal Mandir is a prominent shrine dedicated to Lord Krishna. Shree Chintaman Ganesh Temple is one of the oldest temples dedicated to Lord Ganesha in the region. Jantar Mantar is an 18th-century astronomical observatory. Ram Ghat is an ancient bathing place on the banks of the Kshipra River. Triveni Museum is a cultural and archaeological museum in Ujjain. Overnight stay at Ujjain.",
+            images: [
+              "/images/five-jyotirlingya/day9.webp",
+              "/images/five-jyotirlingya/day91.webp",
+              "/images/five-jyotirlingya/day92.webp",
+              "/images/five-jyotirlingya/day93.webp",
+              "/images/five-jyotirlingya/day94.webp",
+              "/images/five-jyotirlingya/day95.webp",
+              "/images/five-jyotirlingya/day96.webp",
+              "/images/five-jyotirlingya/day97.webp",
+              "/images/five-jyotirlingya/day98.webp",
+            ],
           },
+
           {
             day: 10,
             title: "Mahakaleshwar & Ujjain Sightseeing",
@@ -1378,14 +1411,19 @@ const packages = [
               "Visit Mahakaleshwar Jyotirlinga, Harsiddhi Mata Temple, Kal Bhairav Temple, Gadh Kalika Temple, Gopal Mandir, Chintaman Ganesh Temple, Jantar Mantar, Ram Ghat, Triveni Museum, and nearby attractions. Overnight stay at Ujjain.",
             images: [null, null],
           },
+
           {
             day: 11,
             title: "Ujjain → Omkareshwar",
             distance: "144 km",
             description:
-              "Drive to Omkareshwar and check in at hotel. Overnight stay at Omkareshwar.",
-            images: [null, null],
+              "Drive to Omkareshwar and check in at the hotel. Omkareshwar Jyotirlinga is an ancient Hindu shrine located on Mandhata Island in the Narmada River in Madhya Pradesh, famous for its natural Om shape and status as one of the twelve holy Jyotirlingas. Overnight stay at Omkareshwar.",
+            images: [
+              "/images/five-jyotirlingya/day11.webp",
+              "/images/five-jyotirlingya/day112.webp",
+            ],
           },
+
           {
             day: 12,
             title: "Omkareshwar Jyotirlinga Darshan",
@@ -1394,6 +1432,7 @@ const packages = [
               "Visit Omkareshwar Jyotirlinga Temple and Narmada River ghats. Overnight stay at Omkareshwar.",
             images: [null, null],
           },
+
           {
             day: 13,
             title: "Omkareshwar → Maheshwar → Indore → Train",
@@ -1402,6 +1441,7 @@ const packages = [
               "After breakfast drive via Maheshwar and transfer to Indore Railway Station. Board Shipra Express (22911) for Kolkata. Overnight stay in train.",
             images: [null, null],
           },
+
           {
             day: 14,
             title: "Train Journey",
@@ -1410,6 +1450,7 @@ const packages = [
               "Continue return journey towards Kolkata. Overnight stay in train.",
             images: [null, null],
           },
+
           {
             day: 15,
             title: "Arrival at Howrah",
@@ -1467,9 +1508,20 @@ const packages = [
 
     title: "Himachal Pradesh",
 
-    image: null,
+    image: "/images/himachal-pradesh/day4.webp",
 
-    gallery: [null, null, null, null, null],
+    gallery: [
+      "/images/himachal-pradesh/day3.webp",
+      "/images/himachal-pradesh/day4.webp",
+      "/images/himachal-pradesh/day6.webp",
+      "/images/himachal-pradesh/day7.webp",
+      "/images/himachal-pradesh/day31.webp",
+      "/images/himachal-pradesh/day41.webp",
+      "/images/himachal-pradesh/day42.webp",
+      "/images/himachal-pradesh/day61.webp",
+      "/images/himachal-pradesh/day62.webp",
+      "/images/himachal-pradesh/day71.webp",
+    ],
 
     perPerson: true,
 
@@ -1503,6 +1555,7 @@ const packages = [
               "Board train from Howrah Railway Station for Chandigarh / Kalka. Overnight stay in train.",
             images: [null, null],
           },
+
           {
             day: 2,
             title: "Train Journey",
@@ -1511,70 +1564,94 @@ const packages = [
               "Continue train journey towards Himachal Pradesh. Overnight stay in train.",
             images: [null, null],
           },
+
           {
             day: 3,
-            title: "Arrival at Shimla",
-            distance: "Railway station transfer",
+            title: "Reach Chandigarh → Shimla",
+            distance: "Railway station transfer + local sightseeing",
             description:
-              "Reach Chandigarh / Kalka Railway Station and transfer to Shimla hotel. Afternoon visit to Mall Road and Kali Bari Temple by walk. Overnight stay at Shimla.",
-            images: [null, null],
+              "Reach Chandigarh / Kalka Railway Station and transfer to Shimla hotel. After arrival, visit Mall Road and Kali Bari Temple by walk. Mall Road was developed around 1880 as an exclusive British leisure promenade when Shimla served as the summer capital of British India. Also visit Kali Bari Temple, originally built in 1845 on Jakhu Hill by Bengali Brahmin and saint Ram Charan Brahmachari. Overnight stay at Shimla.",
+            images: [
+              "/images/himachal-pradesh/day3.webp",
+              "/images/himachal-pradesh/day31.webp",
+            ],
           },
+
           {
             day: 4,
-            title: "Kufri Excursion",
+            title: "Shimla Sightseeing – Kufri, Fagu & Green Valley",
             distance: "Local sightseeing",
             description:
-              "After breakfast visit Kufri, Fagu, and Green Valley. Return to Shimla hotel. Overnight stay at Shimla.",
-            images: [null, null],
+              "After breakfast proceed for sightseeing at Shimla. Visit Kufri, a historic hill station located around 20 km from Shimla and explored by the British in 1819. Visit Fagu, a high-altitude hamlet known for its thick fog and mist, with the name believed to be derived from the local word for fog. Also visit Green Valley, a beautiful scenic viewpoint surrounded by dense and relatively untouched Himalayan forests, famous for its natural beauty. Return to Shimla hotel. Overnight stay at Shimla.",
+            images: [
+              "/images/himachal-pradesh/day4.webp",
+              "/images/himachal-pradesh/day41.webp",
+              "/images/himachal-pradesh/day42.webp",
+            ],
           },
+
           {
             day: 5,
             title: "Shimla → Manali",
             distance: "Road transfer",
             description:
-              "After breakfast proceed to Manali through the scenic mountain route. Overnight stay at Manali.",
-            images: [null, null],
+              "After breakfast move from Shimla to Manali through the scenic mountain route. Enjoy the beautiful Himalayan landscapes during the journey. On arrival, check in at the hotel. Overnight stay at Manali.",
+            images: [
+              "/images/himachal-pradesh/day6.webp",
+            ],
           },
+
           {
             day: 6,
             title: "Manali Local Sightseeing",
             distance: "Local sightseeing",
             description:
-              "Visit Hadimba Temple, Tibetan Monastery, Handicraft Centre, and Old Vashisht Village. Overnight stay at Manali.",
-            images: [null, null],
+              "After breakfast proceed for local sightseeing at Manali. Visit Hidimba Devi Temple, located in Manali and built in 1553 CE by Maharaja Bahadur Singh. Visit Vashisht Village, an ancient village situated around 3 km from Manali, famous for the Vashisht Temple and natural hot sulfur springs. Also visit the Handicraft Centre and local attractions. The itinerary document also mentions Dorje Drak Monastery in Panthaghati, Shimla, founded in 1984 by Kyabje Taklung Tsetrul Rinpoche. Return to Manali hotel. Overnight stay at Manali.",
+            images: [
+              "/images/himachal-pradesh/day61.webp",
+              "/images/himachal-pradesh/day62.webp",
+            ],
           },
+
           {
             day: 7,
-            title: "Solang Valley & Atal Tunnel Excursion",
+            title: "Manali Sightseeing – Rohtang Pass & Solang Valley",
             distance: "Excursion from Manali",
             description:
-              "Visit Solang Valley and Atal Tunnel – Sisu Village. Rohtang Pass excursion is optional and at own cost. Return to Manali hotel. Overnight stay at Manali.",
-            images: [null, null],
+              "After breakfast proceed for sightseeing at Manali. Visit Rohtang Pass, a historic high mountain pass situated at approximately 3,978 metres in the Pir Panjal range, connecting the Kullu Valley with the Lahaul and Spiti Valleys. Also visit Solang Valley, a popular destination near Manali known for adventure activities and beautiful mountain scenery. Rohtang Pass excursion is subject to permission, weather conditions, and local regulations. Return to Manali hotel. Overnight stay at Manali.",
+            images: [
+              "/images/himachal-pradesh/day7.webp",
+              "/images/himachal-pradesh/day71.webp",
+            ],
           },
+
           {
             day: 8,
             title: "Manali → Manikaran / Bhuntar",
             distance: "Road transfer",
             description:
-              "After breakfast drive to Manikaran / Bhuntar and check in at hotel. Overnight stay at Manikaran / Bhuntar.",
+              "After breakfast drive to Manikaran / Bhuntar and check in at hotel. Enjoy the scenic surroundings and local atmosphere. Overnight stay at Manikaran / Bhuntar.",
             images: [null, null],
           },
+
           {
             day: 9,
             title: "Bhuntar → Chandigarh / Kalka → Train",
             distance: "Road transfer + train journey",
             description:
-              "After breakfast transfer to Chandigarh / Kalka Railway Station for return train journey. Overnight stay in train.",
+              "After breakfast move from Bhuntar towards Chandigarh / Kalka Railway Station for the return train journey. Board the train for Howrah. Overnight stay in train.",
             images: [null, null],
           },
+
           {
             day: 10,
             title: "Train Journey",
             distance: "Full day train journey",
             description:
-              "Continue return journey towards Howrah. Overnight stay in train.",
+              "Continue the return train journey towards Howrah. Overnight stay in train.",
             images: [null, null],
           },
+
           {
             day: 11,
             title: "Arrival at Howrah",
