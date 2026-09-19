@@ -1270,9 +1270,30 @@ const packages = [
 
     title: "Five Joytirlinga",
 
-    image: null,
+    image: "/images/five-jyotirlingya/day6.webp",
 
-    gallery: [null, null, null, null, null],
+    gallery: [
+      "/images/five-jyotirlingya/day3.webp",
+      "/images/five-jyotirlingya/day31.webp",
+      "/images/five-jyotirlingya/day32.webp",
+      "/images/five-jyotirlingya/day4.webp",
+      "/images/five-jyotirlingya/day6.webp",
+      "/images/five-jyotirlingya/day7.webp",
+      "/images/five-jyotirlingya/day71.webp",
+      "/images/five-jyotirlingya/day72.webp",
+      "/images/five-jyotirlingya/day8.webp",
+      "/images/five-jyotirlingya/day9.webp",
+      "/images/five-jyotirlingya/day91.webp",
+      "/images/five-jyotirlingya/day92.webp",
+      "/images/five-jyotirlingya/day93.webp",
+      "/images/five-jyotirlingya/day94.webp",
+      "/images/five-jyotirlingya/day95.webp",
+      "/images/five-jyotirlingya/day96.webp",
+      "/images/five-jyotirlingya/day97.webp",
+      "/images/five-jyotirlingya/day98.webp",
+      "/images/five-jyotirlingya/day11.webp",
+      "/images/five-jyotirlingya/day112.webp",
+    ],
 
     perPerson: true,
 
@@ -2398,9 +2419,34 @@ const packages = [
 
     title: "Rajasthan",
 
-    image: null,
+    image: "/images/rajasthan/day114.webp",
 
-    gallery: [null, null, null, null, null],
+    gallery: [
+      "/images/rajasthan/day3.webp",
+      "/images/rajasthan/day4.webp",
+      "/images/rajasthan/day5.webp",
+      "/images/rajasthan/day6.webp",
+      "/images/rajasthan/day7.webp",
+      "/images/rajasthan/day8.webp",
+      "/images/rajasthan/day9.webp",
+      "/images/rajasthan/day10.webp",
+      "/images/rajasthan/day11.webp",
+      "/images/rajasthan/day31.webp",
+      "/images/rajasthan/day41.webp",
+      "/images/rajasthan/day42.webp",
+      "/images/rajasthan/day61.webp",
+      "/images/rajasthan/day62.webp",
+      "/images/rajasthan/day71.webp",
+      "/images/rajasthan/day81.webp",
+      "/images/rajasthan/day91.webp",
+      "/images/rajasthan/day92.webp",
+      "/images/rajasthan/day111.webp",
+      "/images/rajasthan/day112.webp",
+      "/images/rajasthan/day113.webp",
+      "/images/rajasthan/day114.webp",
+      "/images/rajasthan/day115.webp",
+      "/images/rajasthan/day116.webp",
+    ],
 
     perPerson: true,
 
@@ -2435,6 +2481,7 @@ const packages = [
               "Board 12259 Duronto Express from Sealdah Railway Station in the evening for Bikaner. Overnight stay in train.",
             images: [null, null],
           },
+
           {
             day: 2,
             title: "Arrival at Bikaner",
@@ -2443,78 +2490,121 @@ const packages = [
               "Arrive at Bikaner Railway Station and transfer to hotel. Evening free for leisure. Overnight stay at Bikaner.",
             images: [null, null],
           },
+
           {
             day: 3,
-            title: "Bikaner → Jaisalmer",
-            distance: "Road transfer",
+            title: "Bikaner Sightseeing",
+            distance: "Local sightseeing",
             description:
-              "Visit Junagarh Fort and Karni Mata Temple after breakfast. Later proceed to Jaisalmer. Overnight stay at Jaisalmer.",
-            images: [null, null],
+              "Visit Junagarh Fort, one of Bikaner's historic landmarks, originally built between 1588 and 1593. Later visit Karni Mata Temple at Deshnoke, famous for its unique religious traditions and sacred rats. Overnight stay at Bikaner.",
+            images: [
+              "/images/rajasthan/day3.webp",
+              "/images/rajasthan/day31.webp",
+            ],
           },
+
           {
             day: 4,
             title: "Jaisalmer Sightseeing & Sam Sand Dunes",
             distance: "Local sightseeing",
             description:
-              "Visit Sonar Kella and other local attractions. In the evening excursion to Sam Sand Dunes for tribal dance performance and optional camel ride. Return to Jaisalmer for overnight stay.",
-            images: [null, null],
+              "Visit Jaisalmer Fort, famously known as Sonar Kella or the Golden Fortress. Later proceed to Sam Sand Dunes, located in the Thar Desert, and enjoy the desert surroundings with traditional Kalbelia and Ghoomar dance performances. Optional camel ride can also be enjoyed at the dunes. Overnight stay at Jaisalmer.",
+            images: [
+              "/images/rajasthan/day4.webp",
+              "/images/rajasthan/day41.webp",
+              "/images/rajasthan/day42.webp",
+            ],
           },
+
           {
             day: 5,
-            title: "Jaisalmer → Jodhpur",
+            title: "Stay at Jodhpur",
             distance: "Road transfer",
             description:
-              "After breakfast proceed to Jodhpur. Overnight stay at Jodhpur.",
-            images: [null, null],
+              "After breakfast proceed to Jodhpur. Explore the historic city of Jodhpur, founded in 1459 by Rao Jodha and historically associated with the Marwar kingdom. Overnight stay at Jodhpur.",
+            images: [
+              "/images/rajasthan/day5.webp",
+            ],
           },
+
           {
             day: 6,
-            title: "Jodhpur → Mount Abu",
+            title: "Jodhpur Sightseeing → Mount Abu",
             distance: "Road transfer",
             description:
-              "Visit Umaid Bhawan Palace and Mehrangarh Fort in the morning. Later drive to Mount Abu. Overnight stay at Mount Abu.",
-            images: [null, null],
+              "Visit Umaid Bhawan Palace and Mehrangarh Fort in Jodhpur. Umaid Bhawan Palace was built between 1928 and 1943, while Mehrangarh Fort was built in 1459 by Rao Jodha and stands on a rocky hill above the city. Later drive to Mount Abu. Overnight stay at Mount Abu.",
+            images: [
+              "/images/rajasthan/day6.webp",
+              "/images/rajasthan/day61.webp",
+              "/images/rajasthan/day62.webp",
+            ],
           },
+
           {
             day: 7,
             title: "Mount Abu Sightseeing",
             distance: "Local sightseeing",
             description:
-              "Visit Nakki Lake, Dilwara Temples, and Sunset Point. Overnight stay at Mount Abu.",
-            images: [null, null],
+              "Explore Mount Abu, Rajasthan's only hill station. Visit Nakki Lake, famous for its legends and scenic surroundings, and the Dilwara Temples, a group of five renowned Svetambara Jain temples known for their intricate white-marble architecture. Overnight stay at Mount Abu.",
+            images: [
+              "/images/rajasthan/day7.webp",
+              "/images/rajasthan/day71.webp",
+            ],
           },
+
           {
             day: 8,
             title: "Mount Abu → Udaipur via Chittorgarh",
             distance: "Road transfer",
             description:
-              "Drive to Udaipur en route visiting Chittorgarh Fort. Overnight stay at Udaipur.",
-            images: [null, null],
+              "Drive towards Udaipur with a visit to the historic Chittorgarh Fort, one of India's largest fort complexes and the former capital of the Mewar Kingdom. Continue to Udaipur, founded in 1559 by Maharana Udai Singh II. Overnight stay at Udaipur.",
+            images: [
+              "/images/rajasthan/day8.webp",
+              "/images/rajasthan/day81.webp",
+            ],
           },
+
           {
             day: 9,
             title: "Udaipur Sightseeing",
             distance: "Local sightseeing",
             description:
-              "Visit Moti Magri, Fateh Sagar Lake, Udaipur City Palace, and other major attractions. Overnight stay at Udaipur.",
-            images: [null, null],
+              "Visit Moti Magri, overlooking Fateh Sagar Lake and home to the Maharana Pratap Memorial. Explore Fateh Sagar Lake, originally built in 1678 and later rebuilt by Maharana Fateh Singh. Continue to Udaipur City Palace, founded in 1559 by Maharana Udai Singh II and developed over several generations of Mewar rulers. Overnight stay at Udaipur.",
+            images: [
+              "/images/rajasthan/day9.webp",
+              "/images/rajasthan/day91.webp",
+              "/images/rajasthan/day92.webp",
+            ],
           },
+
           {
             day: 10,
             title: "Udaipur → Pushkar via Haldighati",
             distance: "Road transfer",
             description:
-              "Travel to Pushkar via historic Haldighati. Overnight stay at Pushkar.",
-            images: [null, null],
+              "Travel towards Pushkar via historic Haldighati, a mountain pass in the Aravalli Range located approximately 40 km from Udaipur and known for the historic Battle of Haldighati. Continue to Pushkar for overnight stay.",
+            images: [
+              "/images/rajasthan/day10.webp",
+            ],
           },
+
           {
             day: 11,
             title: "Pushkar & Ajmer → Jaipur",
             distance: "Road transfer",
             description:
-              "Early morning visit Pushkar and Ajmer Sharif (auto at own cost), then proceed to Jaipur. Overnight stay at Jaipur.",
-            images: [null, null],
+              "Visit Pushkar, one of India's oldest cities, followed by Ajmer Sharif Dargah, the sacred Sufi shrine of Khwaja Moinuddin Chishti. After sightseeing, proceed towards Jaipur. Jaipur sightseeing includes Amer Fort, Jantar Mantar, Hawa Mahal and Jal Mahal. Amer Fort was built in 1592, Jantar Mantar contains a collection of large astronomical instruments, Hawa Mahal is famous for its 953 windows, and Jal Mahal is situated in Man Sagar Lake. Overnight stay at Jaipur.",
+            images: [
+              "/images/rajasthan/day11.webp",
+              "/images/rajasthan/day111.webp",
+              "/images/rajasthan/day112.webp",
+              "/images/rajasthan/day113.webp",
+              "/images/rajasthan/day114.webp",
+              "/images/rajasthan/day115.webp",
+              "/images/rajasthan/day116.webp",
+            ],
           },
+
           {
             day: 12,
             title: "Jaipur Sightseeing",
@@ -2523,6 +2613,7 @@ const packages = [
               "Visit Amber Fort, Jantar Mantar, Hawa Mahal, Jal Mahal, City Palace, Nahargarh Fort, and other attractions. Evening free for personal activities. Overnight stay at Jaipur.",
             images: [null, null],
           },
+
           {
             day: 13,
             title: "Jaipur → Sealdah",
@@ -2531,6 +2622,7 @@ const packages = [
               "After lunch transfer to Jaipur Railway Station and board 12988 train for return journey. Overnight stay in train.",
             images: [null, null],
           },
+
           {
             day: 14,
             title: "Arrival at Sealdah",
@@ -4469,9 +4561,21 @@ const packages = [
 
     title: "Goa",
 
-    image: null,
+    image: "/images/goa/day43.webp",
 
-    gallery: [null, null, null, null, null],
+    gallery: [
+      "/images/goa/day3.webp",
+      "/images/goa/day4.webp",
+      "/images/goa/day5.webp",
+      "/images/goa/day6.webp",
+      "/images/goa/day41.webp",
+      "/images/goa/day42.webp",
+      "/images/goa/day43.webp",
+      "/images/goa/day44.webp",
+      "/images/goa/day51.webp",
+      "/images/goa/day52.webp",
+      "/images/goa/day53.webp",
+    ],
 
     perPerson: true,
 
@@ -4504,45 +4608,67 @@ const packages = [
               "Board train from Shalimar Railway Station for Madgaon. Overnight stay in train.",
             images: [null, null],
           },
+
           {
             day: 2,
             title: "Train Journey",
             distance: "Train journey",
-            description: "Full day train journey. Overnight stay in train.",
+            description:
+              "Full day train journey. Overnight stay in train.",
             images: [null, null],
           },
+
           {
             day: 3,
-            title: "Arrival at Goa",
+            title: "Reach at Goa",
             distance: "Railway station transfer",
             description:
-              "Arrive at Madgaon Railway Station and transfer to hotel. Overnight stay at Goa.",
-            images: [null, null],
+              "Arrive at Madgaon Railway Station and transfer to the hotel. Goa's recorded history spans over 2,000 years, evolving from ancient Hindu and Maurya rule to a vital Bijapur Sultanate port, a golden 16th-century Portuguese colonial capital, and finally its integration into India in 1961. Overnight stay at Goa.",
+            images: [
+              "/images/goa/day3.webp",
+            ],
           },
+
           {
             day: 4,
             title: "North Goa Sightseeing",
             distance: "Local sightseeing",
             description:
-              "Visit Dolphin Point, Aguada Fort, Baga Beach, Calangute Beach, and Miramar Beach. Return to hotel for overnight stay.",
-            images: [null, null],
+              "Explore North Goa starting with Dolphin Point, a popular coastal viewpoint and boat-trip staging area near Fort Aguada, known for its surrounding maritime scenery and dolphin sightings. Visit Fort Aguada, the historic Portuguese coastal fortress built between 1609 and 1612, followed by Baga Beach, known for its vibrant atmosphere and nightlife. Continue to Calangute Beach, historically a fishing village that developed into one of Goa's busiest tourist destinations. End the sightseeing at Miramar Beach, formerly known as Gaspar Dias Beach. Return to the hotel for overnight stay.",
+            images: [
+              "/images/goa/day4.webp",
+              "/images/goa/day41.webp",
+              "/images/goa/day42.webp",
+              "/images/goa/day43.webp",
+              "/images/goa/day44.webp",
+            ],
           },
+
           {
             day: 5,
             title: "South Goa Sightseeing",
             distance: "Local sightseeing",
             description:
-              "Visit St. Xavier's Church, Mangesh Temple, Santadurga Temple, and Colva Beach. Return to hotel for overnight stay.",
-            images: [null, null],
+              "Explore South Goa and Old Goa. Visit the Basilica of Bom Jesus, also known as St. Xavier's Church, famous for preserving the mortal remains of St. Francis Xavier. Continue to Mangeshi Temple in Priol, a historic shrine dedicated to Lord Shiva. Visit Shri Shantadurga Temple in Kavlem, Ponda, a major pilgrimage center dedicated to Goddess Shantadurga. Finally, visit Colva Beach, which developed from a quiet fishing village into a popular coastal destination. Return to the hotel for overnight stay.",
+            images: [
+              "/images/goa/day5.webp",
+              "/images/goa/day51.webp",
+              "/images/goa/day52.webp",
+              "/images/goa/day53.webp",
+            ],
           },
+
           {
             day: 6,
-            title: "Leisure Day",
-            distance: "Free day",
+            title: "Free Day for Personal Activities",
+            distance: "Free day / Optional activities",
             description:
-              "Full day free for personal activities, shopping, beach time, or optional water sports. Overnight stay at Goa.",
-            images: [null, null],
+              "Full day free for personal activities, shopping, beach time, or optional water sports. Guests can also enjoy a Goa cruise along the Mandovi River, offering scenic views, live music, and cultural performances. Overnight stay at Goa.",
+            images: [
+              "/images/goa/day6.webp",
+            ],
           },
+
           {
             day: 7,
             title: "Goa → Kolkata",
@@ -4551,6 +4677,7 @@ const packages = [
               "Early morning check-out and transfer to Madgaon Railway Station. Board train for Kolkata. Overnight stay in train.",
             images: [null, null],
           },
+
           {
             day: 8,
             title: "Arrival at Kolkata",
@@ -5681,7 +5808,18 @@ const packages = [
 
     image: "/images/nepal/nepal_banner.webp",
 
-    gallery: [null, null, null, null, null],
+    gallery: ["/images/nepal/Day3.webp",
+      "/images/nepal/Day4.webp",
+      "/images/nepal/Day5.webp",
+      "/images/nepal/Day6.webp",
+      "/images/nepal/Day8.webp",
+      "/images/nepal/Day10.webp",
+      "/images/nepal/Day31.webp",
+      "/images/nepal/Day32.webp",
+      "/images/nepal/Day51.webp",
+      "/images/nepal/Day81.webp",
+      "/images/nepal/Day82.webp",
+      "/images/nepal/Day83.webp"],
 
     perPerson: true,
 
@@ -5703,8 +5841,9 @@ const packages = [
 
     packages: {
       package1: {
-        duration: "08 Nights / 09 Days",
+        duration: "09 Nights / 10 Days",
         price: 26500,
+
         itinerary: [
           {
             day: 1,
@@ -5714,69 +5853,104 @@ const packages = [
               "Board train (13021) from Howrah Railway Station for Raxaul. Overnight stay in train.",
             images: [null, null],
           },
+
           {
             day: 2,
             title: "Raxaul → Kathmandu",
             distance: "Approx. 140 km",
             description:
-              "Arrive at Raxaul and transfer to Kathmandu. Overnight stay at Kathmandu.",
+              "Arrive at Raxaul Railway Station and transfer to Kathmandu. Proceed towards Kathmandu and check in at the hotel. Overnight stay at Kathmandu.",
             images: [null, null],
           },
+
           {
             day: 3,
-            title: "Kathmandu Sightseeing",
+            title: "Kathmandu Local Sightseeing",
             distance: "Local sightseeing",
             description:
-              "Visit Kathmandu Durbar Square, Boudhanath Stupa, Swayambhunath (Monkey Temple), Patan, and Pashupatinath Temple. Overnight stay at Kathmandu.",
-            images: [null, null],
+              "Visit Kathmandu Durbar Square, a historic royal plaza featuring ancient palaces, courtyards, and temples. Visit Boudhanath Stupa, one of the largest spherical stupas and an important center of Tibetan Buddhism. Also visit Pashupatinath Temple, one of the most important Hindu temples in Kathmandu dedicated to Lord Shiva. Overnight stay at Kathmandu.",
+            images: [
+              "/images/nepal/Day3.webp",
+              "/images/nepal/Day31.webp",
+              "/images/nepal/Day32.webp",
+            ],
           },
+
           {
             day: 4,
-            title: "Nagarkot & Bhaktapur",
+            title: "Sightseeing Nagarkot",
             distance: "Local excursion",
             description:
-              "Visit Nagarkot and Bhaktapur and return to Kathmandu. Overnight stay at Kathmandu.",
-            images: [null, null],
+              "Visit Nagarkot, a scenic hill station overlooking the Kathmandu Valley. Nagarkot historically served as a strategic military watchtower and later developed into a royal summer retreat and popular tourism destination. Return to Kathmandu. Overnight stay at Kathmandu.",
+            images: [
+              "/images/nepal/Day4.webp",
+            ],
           },
+
           {
             day: 5,
             title: "Kathmandu → Pokhara",
             distance: "Approx. 200 km",
             description:
-              "Drive to Pokhara via Manakamana (ropeway at own cost). Overnight stay at Pokhara.",
-            images: [null, null],
+              "Move to Pokhara via Manakamana. En route, enjoy the scenic Manakamana Cable Car ride, offering panoramic views of the green hills and Trishuli River. Visit Manakamana Temple, a sacred shrine dedicated to Goddess Bhagwati. Continue the journey to Pokhara. Overnight stay at Pokhara.",
+            images: [
+              "/images/nepal/Day5.webp",
+              "/images/nepal/Day51.webp",
+            ],
           },
+
           {
             day: 6,
             title: "Pokhara → Muktinath",
             distance: "Approx. 170 km",
             description:
-              "Proceed to Muktinath and visit Muktinath Temple. Overnight stay at Muktinath.",
-            images: [null, null],
+              "Move to Muktinath through the scenic mountain roads of Nepal. Visit Muktinath Temple, an ancient sacred site situated at an altitude of approximately 3,800 meters and revered by both Hindus and Buddhists. Overnight stay at Muktinath.",
+            images: [
+              "/images/nepal/Day6.webp",
+            ],
           },
+
           {
             day: 7,
             title: "Muktinath → Pokhara",
             distance: "Approx. 170 km",
             description:
-              "Return to Pokhara after breakfast. Overnight stay at Pokhara.",
+              "After breakfast, return from Muktinath to Pokhara. Enjoy the scenic journey through the Himalayan landscape. Overnight stay at Pokhara.",
             images: [null, null],
           },
+
           {
             day: 8,
-            title: "Pokhara → Raxaul",
-            distance: "Road transfer + train",
+            title: "Pokhara Local Sightseeing",
+            distance: "Local sightseeing",
             description:
-              "Transfer to Raxaul Railway Station and board train for Kolkata. Overnight stay in train.",
-            images: [null, null],
+              "After breakfast, proceed for Pokhara local sightseeing. Visit David Falls, also known as Devi's Falls, a unique underground waterfall. Explore Gupteshwor Mahadev Cave, a sacred underground cave temple dedicated to Lord Shiva. Visit the International Mountain Museum, which documents the history of mountaineering and mountain communities. Finally, visit Tal Barahi Temple, a sacred pagoda shrine located on an island in Phewa Lake and accessible by boat. Overnight stay at Pokhara.",
+            images: [
+              "/images/nepal/Day8.webp",
+              "/images/nepal/Day81.webp",
+              "/images/nepal/Day82.webp",
+              "/images/nepal/Day83.webp",
+            ],
           },
+
           {
             day: 9,
-            title: "Arrival at Kolkata",
-            distance: "Train arrival",
+            title: "Pokhara → Chitwan",
+            distance: "Road transfer",
             description:
-              "Arrive at Howrah Railway Station with sweet memories of Nepal.",
+              "After breakfast, move to Chitwan. Enjoy the scenic road journey through the beautiful landscapes of Nepal. On arrival, check in at the hotel/resort and relax. Overnight stay at Chitwan.",
             images: [null, null],
+          },
+
+          {
+            day: 10,
+            title: "Jungle Safari",
+            distance: "Chitwan National Park",
+            description:
+              "Enjoy a jungle safari in Chitwan National Park, exploring the dense Sal forests and natural surroundings of Nepal. Experience the wildlife, scenic beauty, and wilderness of the region before concluding the Nepal tour.",
+            images: [
+              "/images/nepal/Day10.webp",
+            ],
           },
         ],
       },
