@@ -6188,7 +6188,18 @@ const packages = [
 
     image: "/images/bangkok-pattaya-phuket/ban_banner.webp",
 
-    gallery: [null, null, null, null, null],
+    gallery: ["/images/bangkok-pattaya-phuket/day1.webp",
+      "/images/bangkok-pattaya-phuket/day2.webp",
+      "/images/bangkok-pattaya-phuket/day3.webp",
+      "/images/bangkok-pattaya-phuket/day12.webp",
+      "/images/bangkok-pattaya-phuket/day13.webp",
+      "/images/bangkok-pattaya-phuket/day14.webp",
+      "/images/bangkok-pattaya-phuket/day15.webp",
+      "/images/bangkok-pattaya-phuket/day21.webp",
+      "/images/bangkok-pattaya-phuket/day31.webp",
+      "/images/bangkok-pattaya-phuket/day32.webp",
+      "/images/bangkok-pattaya-phuket/day33.webp",
+      "/images/bangkok-pattaya-phuket/day34.webp"],
 
     perPerson: true,
 
@@ -6212,39 +6223,57 @@ const packages = [
       package1: {
         duration: "6 Nights / 7 Days",
         price: 92000,
+
         itinerary: [
           {
             day: 1,
             title: "Kolkata → Bangkok → Pattaya",
             distance: "Flight + road transfer",
             description:
-              "Fly from Kolkata to Bangkok. Transfer to Pattaya. Visit Sriracha Tiger Zoo and Big Buddha. Evening Alcazar Show and Walking Street. Overnight stay at Pattaya.",
-            images: [null, null],
+              "Upon arrival at Suvarnabhumi Airport in Bangkok, transfer to Pattaya and proceed with sightseeing. Visit Sriracha Tiger Zoo, which operated from 1997 until its permanent closure in 2021. Enjoy a delicious Indian breakfast in Pattaya and visit the Big Buddha at Wat Phra Yai on Pratumnak Hill. In the evening, enjoy the spectacular Alcazar Cabaret Show, featuring high-energy choreography, glittering costumes, and state-of-the-art lighting. Overnight stay at Pattaya.",
+            images: [
+              "/images/bangkok-pattaya-phuket/day1.webp",
+              "/images/bangkok-pattaya-phuket/day12.webp",
+              "/images/bangkok-pattaya-phuket/day13.webp",
+              "/images/bangkok-pattaya-phuket/day14.webp",
+              "/images/bangkok-pattaya-phuket/day15.webp",
+            ],
           },
+
           {
             day: 2,
             title: "Coral Island Excursion",
             distance: "Speed boat excursion",
             description:
-              "Visit Coral Island by speed boat and enjoy beach activities. Lunch at Indian restaurant and local market visit. Overnight stay at Pattaya.",
-            images: [null, null],
+              "After breakfast, proceed towards Coral Island (Koh Larn) by speedboat. Enjoy an exciting ride across clear blue waters and spend time on its beautiful white sandy beaches. Explore a local market in Pattaya and experience its vibrant street food, lively atmosphere, and rich Thai culture. Overnight stay at Pattaya.",
+            images: [
+              "/images/bangkok-pattaya-phuket/day21.webp",
+            ],
           },
+
           {
             day: 3,
             title: "Pattaya → Bangkok",
             distance: "150 km",
             description:
-              "Travel to Bangkok via Gems Gallery. Visit Golden Buddha Temple and Marble Temple. Overnight stay at Bangkok.",
-            images: [null, null],
+              "After breakfast, check out from the Pattaya hotel and proceed towards Bangkok. En route, visit Gems Gallery, established in 1987 and known for its jewellery manufacturing and retail complex. Visit the Marble Temple, officially known as Wat Benchamabophit, built in Bangkok in 1899 during the reign of King Chulalongkorn (Rama V). Overnight stay at Bangkok.",
+            images: [
+              "/images/bangkok-pattaya-phuket/day31.webp",
+              "/images/bangkok-pattaya-phuket/day32.webp",
+              "/images/bangkok-pattaya-phuket/day33.webp",
+              "/images/bangkok-pattaya-phuket/day34.webp",
+            ],
           },
+
           {
             day: 4,
             title: "Safari World & Chaophraya Cruise",
             distance: "Local sightseeing",
             description:
-              "Enjoy Safari World and Marine Park with buffet lunch. Evening Chaophraya Princess Cruise dinner. Overnight stay at Bangkok.",
+              "Enjoy Safari World Bangkok, featuring an open-air drive-through safari and live entertainment shows across its two main sections. In the evening, enjoy a dinner cruise aboard the Chao Phraya Princess, with glittering nighttime views, delicious food, and soft music. Overnight stay at Bangkok.",
             images: [null, null],
           },
+
           {
             day: 5,
             title: "Bangkok → Phuket",
@@ -6253,6 +6282,7 @@ const packages = [
               "Fly from Bangkok to Phuket and transfer to hotel. Overnight stay at Phuket.",
             images: [null, null],
           },
+
           {
             day: 6,
             title: "Phi Phi Island Tour",
@@ -6261,12 +6291,13 @@ const packages = [
               "Full-day Phi Phi Island tour with buffet lunch. Return to hotel for overnight stay at Phuket.",
             images: [null, null],
           },
+
           {
             day: 7,
             title: "Phuket → Bangkok → Kolkata",
             distance: "Flight journey",
             description:
-              "Visit Chalong Temple, Phuket Old Town, and Promthep Cape. Fly to Bangkok and board return flight to Kolkata with wonderful memories.",
+              "Visit Chalong Temple, officially known as Wat Chaiyathararam, one of the largest, most revered, and most visited Buddhist temples in Phuket, with origins dating back to around 1837. Continue to Phuket Old Town and Promthep Cape. Fly to Bangkok and board the return flight to Kolkata with wonderful memories.",
             images: [null, null],
           },
         ],
@@ -6339,7 +6370,24 @@ const packages = [
 
     image: "/images/bangkok-pattaya-phuket-and-krabi/ban_banner3.webp",
 
-    gallery: [null, null, null, null, null],
+    gallery: ["/images/bangkok-pattaya-phuket-and-krabi/day1.webp",
+      "/images/bangkok-pattaya-phuket-and-krabi/day2.webp",
+      "/images/bangkok-pattaya-phuket-and-krabi/day3.webp",
+      "/images/bangkok-pattaya-phuket-and-krabi/day4.webp",
+      "/images/bangkok-pattaya-phuket-and-krabi/day6.webp",
+      "/images/bangkok-pattaya-phuket-and-krabi/day7.webp",
+      "/images/bangkok-pattaya-phuket-and-krabi/day8.webp",
+      "/images/bangkok-pattaya-phuket-and-krabi/day12.webp",
+      "/images/bangkok-pattaya-phuket-and-krabi/day13.webp",
+      "/images/bangkok-pattaya-phuket-and-krabi/day21.webp",
+      "/images/bangkok-pattaya-phuket-and-krabi/day31.webp",
+      "/images/bangkok-pattaya-phuket-and-krabi/day41.webp",
+      "/images/bangkok-pattaya-phuket-and-krabi/day42.webp",
+      "/images/bangkok-pattaya-phuket-and-krabi/day43.webp",
+      "/images/bangkok-pattaya-phuket-and-krabi/day61.webp",
+      "/images/bangkok-pattaya-phuket-and-krabi/day81.webp",
+      "/images/bangkok-pattaya-phuket-and-krabi/day82.webp",
+      "/images/bangkok-pattaya-phuket-and-krabi/day83.webp",],
 
     perPerson: true,
 
@@ -6363,70 +6411,101 @@ const packages = [
       package1: {
         duration: "7 Nights / 8 Days",
         price: 92000,
+
         itinerary: [
           {
             day: 1,
             title: "Kolkata → Pattaya",
             distance: "Flight + road transfer",
             description:
-              "Fly from Kolkata to Bangkok, transfer to Pattaya, visit Sriracha Tiger Zoo and Big Buddha, enjoy Alcazar Show and Walking Street. Overnight stay at Pattaya.",
-            images: [null, null],
+              "After completing airport immigration, get picked up and transferred to Pattaya. Visit Sriracha Tiger Zoo for an exciting wildlife experience with close animal encounters and entertaining shows. Continue to Big Buddha Temple (Wat Phra Yai), offering cultural discovery and beautiful coastal views. In the evening, enjoy the Alcazar Cabaret Show, featuring dazzling costumes, vibrant music, and grand theatrical performances. Overnight stay at Pattaya.",
+            images: [
+              "/images/bangkok-pattaya-phuket-and-krabi/day1.webp",
+              "/images/bangkok-pattaya-phuket-and-krabi/day12.webp",
+              "/images/bangkok-pattaya-phuket-and-krabi/day13.webp",
+            ],
           },
+
           {
             day: 2,
-            title: "Coral Island Excursion",
+            title: "Coral Island & Pattaya Floating Market",
             distance: "Speed boat excursion",
             description:
-              "Visit Coral Island by speed boat, enjoy beach activities, buffet lunch, local market sightseeing, dinner, and overnight stay at Pattaya.",
-            images: [null, null],
+              "Explore Coral Island, locally known as Koh Larn, a popular destination with a history rooted in traditional fishing and local communities. Enjoy the island's beautiful beaches and turquoise waters. Later, visit Pattaya Floating Market, established in 2008 to preserve and showcase traditional Thai riverside life and architecture. Overnight stay at Pattaya.",
+            images: [
+              "/images/bangkok-pattaya-phuket-and-krabi/day2.webp",
+              "/images/bangkok-pattaya-phuket-and-krabi/day21.webp",
+            ],
           },
+
           {
             day: 3,
             title: "Pattaya → Bangkok",
             distance: "150 km",
             description:
-              "Travel to Bangkok via Gems Gallery, enjoy Bangkok city tour covering Golden Temple and Marble Temple. Overnight stay at Bangkok.",
-            images: [null, null],
+              "After breakfast, check out from the Pattaya hotel and proceed towards Bangkok. En route, visit Gems Gallery, established in 1987 and known for its global jewellery enterprise with operations in Bangkok, Chiang Mai, Phuket, and Pattaya. Also visit the famous Big Buddha Temple (Wat Phra Yai), located atop Pratumnak Hill in Pattaya. Overnight stay at Bangkok.",
+            images: [
+              "/images/bangkok-pattaya-phuket-and-krabi/day3.webp",
+              "/images/bangkok-pattaya-phuket-and-krabi/day31.webp",
+            ],
           },
+
           {
             day: 4,
-            title: "Safari World & Chao Phraya Cruise",
+            title: "Safari World & Marine Park",
             distance: "Local sightseeing",
             description:
-              "Visit Safari World with Marine Park and buffet lunch. Evening Chao Phraya Princess Dinner Cruise. Overnight stay at Bangkok.",
-            images: [null, null],
+              "After breakfast, visit Safari World and Marine Park in Bangkok. Enjoy the open-air zoo, drive past roaming lions and tigers, and watch entertaining dolphin and sea lion shows. Overnight stay at Bangkok.",
+            images: [
+              "/images/bangkok-pattaya-phuket-and-krabi/day4.webp",
+              "/images/bangkok-pattaya-phuket-and-krabi/day41.webp",
+              "/images/bangkok-pattaya-phuket-and-krabi/day42.webp",
+              "/images/bangkok-pattaya-phuket-and-krabi/day43.webp",
+            ],
           },
+
           {
             day: 5,
             title: "Bangkok → Phuket",
             distance: "Flight transfer",
             description:
-              "Fly to Phuket and visit Chalong Temple, Phuket Old Town, and Promthep Cape. Overnight stay at Phuket.",
+              "Fly to Phuket and visit Chalong Temple (Wat Chaiyathararam), the largest and most revered Buddhist temple in Phuket. Explore the colorful, historic streets of Phuket Old Town, known for their vintage charm. Continue to Promthep Cape, a historic rocky headland at the southernmost tip of Phuket, long regarded as a sacred site and navigational landmark. Overnight stay at Phuket.",
             images: [null, null],
           },
+
           {
             day: 6,
             title: "Phi Phi Island Tour",
             distance: "Boat excursion",
             description:
-              "Full day Phi Phi Island tour with buffet lunch on boat. Return to Phuket for overnight stay.",
-            images: [null, null],
+              "After breakfast, proceed for a full-day excursion to Phi Phi Island. Enjoy its turquoise waters, dramatic limestone cliffs, and tropical scenery. Return to Phuket for an overnight stay.",
+            images: [
+              "/images/bangkok-pattaya-phuket-and-krabi/day6.webp",
+              "/images/bangkok-pattaya-phuket-and-krabi/day61.webp",
+            ],
           },
+
           {
             day: 7,
             title: "Phuket → Krabi",
             distance: "Approx. 160 km by road",
             description:
-              "Transfer to Krabi by road and enjoy 4 Island tour with lunch. Overnight stay at Krabi.",
+              "Proceed towards Krabi by road. Enjoy local sightseeing and explore vibrant markets, night bazaars, authentic southern Thai street food, and cultural attractions around Krabi Town and Ao Nang. Overnight stay at Krabi.",
             images: [null, null],
           },
+
           {
             day: 8,
-            title: "Krabi → Kolkata",
-            distance: "Flight transfer",
+            title: "Krabi 4 Island Tour → Kolkata",
+            distance: "Island excursion + flight transfer",
             description:
-              "Visit Krabi local sightseeing spots and transfer to Krabi International Airport for return flight to India.",
-            images: [null, null],
+              "After breakfast, proceed for the 4 Island tour in Krabi. Enjoy the beautiful islands and surrounding coastal scenery. Following the excursion, transfer to Krabi International Airport for your return flight to India.",
+            images: [
+              "/images/bangkok-pattaya-phuket-and-krabi/day8.webp",
+              "/images/bangkok-pattaya-phuket-and-krabi/day81.webp",
+              "/images/bangkok-pattaya-phuket-and-krabi/day82.webp",
+              "/images/bangkok-pattaya-phuket-and-krabi/day83.webp",
+            ],
           },
         ],
       },
@@ -6480,9 +6559,43 @@ const packages = [
 
     title: "Kazakhstan & Uzbekistan",
 
-    image: "/images/kazakhstan-uzbekistan/kaja_banner.webp",
+    image: "/images/kazakhstan-uzbekistan/k_banner.webp",
 
-    gallery: [null, null, null, null, null],
+    gallery: ["/images/kazakhstan-uzbekistan/day2.webp",
+      "/images/kazakhstan-uzbekistan/day3.webp",
+      "/images/kazakhstan-uzbekistan/day4.webp",
+      "/images/kazakhstan-uzbekistan/day5.webp",
+      "/images/kazakhstan-uzbekistan/day6.webp",
+      "/images/kazakhstan-uzbekistan/day7.webp",
+      "/images/kazakhstan-uzbekistan/day8.webp",
+      "/images/kazakhstan-uzbekistan/day9.webp",
+      "/images/kazakhstan-uzbekistan/day21.webp",
+      "/images/kazakhstan-uzbekistan/day23.webp",
+      "/images/kazakhstan-uzbekistan/day24.webp",
+      "/images/kazakhstan-uzbekistan/day25.webp",
+      "/images/kazakhstan-uzbekistan/day26.webp",
+      "/images/kazakhstan-uzbekistan/day31.webp",
+      "/images/kazakhstan-uzbekistan/day32.webp",
+      "/images/kazakhstan-uzbekistan/day41.webp",
+      "/images/kazakhstan-uzbekistan/day42.webp",
+      "/images/kazakhstan-uzbekistan/day51.webp",
+      "/images/kazakhstan-uzbekistan/day52.webp",
+      "/images/kazakhstan-uzbekistan/day53.webp",
+      "/images/kazakhstan-uzbekistan/day54.webp",
+      "/images/kazakhstan-uzbekistan/day61.webp",
+      "/images/kazakhstan-uzbekistan/day62.webp",
+      "/images/kazakhstan-uzbekistan/day71.webp",
+      "/images/kazakhstan-uzbekistan/day72.webp",
+      "/images/kazakhstan-uzbekistan/day73.webp",
+      "/images/kazakhstan-uzbekistan/day74.webp",
+      "/images/kazakhstan-uzbekistan/day75.webp",
+      "/images/kazakhstan-uzbekistan/day81.webp",
+      "/images/kazakhstan-uzbekistan/day82.webp",
+      "/images/kazakhstan-uzbekistan/day83.webp",
+      "/images/kazakhstan-uzbekistan/day84.webp",
+      "/images/kazakhstan-uzbekistan/day91.webp",
+      "/images/kazakhstan-uzbekistan/day92.webp",
+    ],
 
     perPerson: true,
 
@@ -6507,6 +6620,7 @@ const packages = [
       package1: {
         duration: "9 Nights / 10 Days",
         price: 188000,
+
         itinerary: [
           {
             day: 1,
@@ -6521,64 +6635,106 @@ const packages = [
             title: "Almaty City Tour",
             distance: "Local sightseeing",
             description:
-              "Visit Golden Square, Park of 28 Panfilov Guardsmen, Eternal Flame, Ascension Cathedral, Green Bazaar, Arbat Shopping Street, and Rakhat Chocolate Factory. Overnight stay at Almaty.",
-            images: [null, null],
+              "Visit Golden Square, a historic downtown neighborhood developed between 1930 and 1970 for Soviet elites, poets, politicians, and artists. Explore the 28 Panfilov Guardsmen Park, an 18-hectare green space dating back to the 1870s, and see the Eternal Flame, lit on May 8, 1975, to commemorate the 30th anniversary of the Soviet victory in World War II. Visit Ascension Cathedral, also known as Zenkov Cathedral, a 56-meter-tall Russian Orthodox church in Panfilov Park. Continue to Green Bazaar, one of Central Asia's oldest public markets with trading roots dating back to the 19th century, and stroll along Arbat Shopping Street, also known as Zhibek Zholy Street, the city's oldest trading route turned pedestrian zone. Overnight stay at Almaty.",
+            images: [
+              "/images/kazakhstan-uzbekistan/day2.webp",
+              "/images/kazakhstan-uzbekistan/day21.webp",
+              "/images/kazakhstan-uzbekistan/day23.webp",
+              "/images/kazakhstan-uzbekistan/day24.webp",
+              "/images/kazakhstan-uzbekistan/day25.webp",
+              "/images/kazakhstan-uzbekistan/day26.webp",
+            ],
           },
           {
             day: 3,
             title: "Charyn Canyon & Kolsai Lake",
             distance: "Excursion",
             description:
-              "Explore Charyn Canyon, Valley of Castles, and Kolsai Lake surrounded by stunning mountain scenery. Overnight stay at Almaty.",
-            images: [null, null],
+              "Explore Charyn Canyon, a natural geological wonder dating back approximately 12 million years and located about 200 km east of Almaty. Discover the Valley of Castles, a spectacular natural rock formation estimated to be 12–14 million years old. Continue to Kolsai Lake, a beautiful system of three alpine lakes in the Northern Tian Shan mountains within Kolsai Lakes National Park. Enjoy the stunning mountain scenery. Overnight stay at Almaty.",
+            images: [
+              "/images/kazakhstan-uzbekistan/day3.webp",
+              "/images/kazakhstan-uzbekistan/day31.webp",
+              "/images/kazakhstan-uzbekistan/day32.webp",
+            ],
           },
           {
             day: 4,
             title: "Kok Tobe • Medeu • Shymbulak",
             distance: "Local sightseeing",
             description:
-              "Enjoy Kok Tobe cable car, visit Medeu Ice Skating Rink, and spend time at Shymbulak Mountain Resort. Overnight stay at Almaty.",
-            images: [null, null],
+              "Enjoy a scenic cable car journey to Kok Tobe Hill, offering breathtaking views of Almaty and the surrounding mountains. Visit Medeu Ice Skating Rink, the world's highest Olympic-sized outdoor ice skating rink, situated at 1,691 meters above sea level. Continue to Shymbulak Mountain Resort for snow-capped mountain views, cable car adventures, and a memorable alpine experience. Overnight stay at Almaty.",
+            images: [
+              "/images/kazakhstan-uzbekistan/day4.webp",
+              "/images/kazakhstan-uzbekistan/day41.webp",
+              "/images/kazakhstan-uzbekistan/day42.webp",
+            ],
           },
           {
             day: 5,
             title: "Almaty → Tashkent",
             distance: "Flight journey",
             description:
-              "Fly to Tashkent and visit Magic City Park in the evening. Overnight stay at Tashkent.",
-            images: [null, null],
+              "Fly to Tashkent and visit Magic City Park in the evening. Officially opened on June 1, 2021, to coincide with International Children's Day, the park offers an enjoyable leisure experience. Overnight stay at Tashkent.",
+            images: [
+              "/images/kazakhstan-uzbekistan/day5.webp",
+              "/images/kazakhstan-uzbekistan/day51.webp",
+              "/images/kazakhstan-uzbekistan/day52.webp",
+              "/images/kazakhstan-uzbekistan/day53.webp",
+              "/images/kazakhstan-uzbekistan/day54.webp",
+            ],
           },
           {
             day: 6,
             title: "Amirsoy Mountain Tour",
             distance: "Excursion",
             description:
-              "Visit Amirsoy Mountain Resort, Chimgan Mountains, and Charvak Lake with panoramic mountain views. Overnight stay at Tashkent.",
-            images: [null, null],
+              "Visit Amirsoy Mountain Resort, which opened on December 21, 2019, and is the largest and most modern ski resort in Uzbekistan and Central Asia. Explore the Chimgan Mountains, known for their history as an ancient green valley, a tsarist-era retreat, and a Soviet-era mountaineering and ski destination. Continue to Lake Charvak, an artificial reservoir created in 1970 through the construction of a 168-meter-high rock-fill dam across the Chirchiq River. Enjoy panoramic mountain views. Overnight stay at Tashkent.",
+            images: [
+              "/images/kazakhstan-uzbekistan/day6.webp",
+              "/images/kazakhstan-uzbekistan/day61.webp",
+              "/images/kazakhstan-uzbekistan/day62.webp",
+            ],
           },
           {
             day: 7,
             title: "Samarkand Day Excursion",
             distance: "Bullet train excursion",
             description:
-              "Travel by bullet train to Samarkand and visit Gur-e-Amir Mausoleum, Registan Square, Ulug Beg Madrasa, Sher-Dor Madrasa, Tilla-Kari Madrasa, Bibi Khanum Mosque, Siab Bazaar, Konigil Village, Shahi Zinda (outside), and Hazrati Hizir Mosque. Return to Tashkent for overnight stay.",
-            images: [null, null],
+              "Travel by bullet train to Samarkand and visit Gur-e-Amir Mausoleum, the final resting place of the 14th-century conqueror Timur, also known as Tamerlane. Explore Registan Square, the historic heart of the Timurid Empire and an important Silk Road hub. Visit Ulug Beg Madrasa, built between 1417 and 1421 by the Timurid ruler and astronomer Ulug Beg. Discover Siab Bazaar, famous for Samarkand non (traditional flatbread), fresh produce, dried fruits, and aromatic spices. Also visit Hazrat Khizr Mosque, an ancient Islamic landmark dating back to the 8th century. Other planned stops include Sher-Dor Madrasa, Tilla-Kari Madrasa, Bibi Khanum Mosque, Konigil Village, and Shahi Zinda (outside). Return to Tashkent for overnight stay.",
+            images: [
+              "/images/kazakhstan-uzbekistan/day7.webp",
+              "/images/kazakhstan-uzbekistan/day71.webp",
+              "/images/kazakhstan-uzbekistan/day72.webp",
+              "/images/kazakhstan-uzbekistan/day73.webp",
+              "/images/kazakhstan-uzbekistan/day74.webp",
+              "/images/kazakhstan-uzbekistan/day75.webp",
+            ],
           },
           {
             day: 8,
             title: "Tashkent City Tour",
             distance: "Local sightseeing",
             description:
-              "Visit Hazrati Imam Complex, Barak Khan Madrasa, Minor Mosque, Monument of Courage, Tashkent Metro, TV Tower (outside), and Memorial Complex of Repression. Overnight stay at Tashkent.",
-            images: [null, null],
+              "Visit the Hazrati Imam Complex, a historic religious and architectural ensemble dating from the 10th to the 21st centuries. Explore Barak-Khan Madrasa, a 16th-century architectural monument located on Hast-Imam Square. Visit the Minor Mosque and Monument of Courage. Experience the Tashkent Metro, which opened on November 6, 1977, as the first underground rapid transit system in Central Asia. See the Tashkent TV Tower from outside and visit the State Museum of Memory of Victims of Repression, dedicated to honoring those who suffered under tsarist colonial rule and Soviet totalitarian regimes. Overnight stay at Tashkent.",
+            images: [
+              "/images/kazakhstan-uzbekistan/day8.webp",
+              "/images/kazakhstan-uzbekistan/day81.webp",
+              "/images/kazakhstan-uzbekistan/day82.webp",
+              "/images/kazakhstan-uzbekistan/day83.webp",
+              "/images/kazakhstan-uzbekistan/day84.webp",
+            ],
           },
           {
             day: 9,
             title: "Tashkent Shopping Tour",
             distance: "Local sightseeing",
             description:
-              "Explore Chorsu Bazaar, Tashkent City Mall, and Tashkent City Park for shopping and leisure. Overnight stay at Tashkent.",
-            images: [null, null],
+              "Explore Chorsu Bazaar, famous for its vibrant central food dome, traditional Uzbek flatbreads, and local delicacies such as shashlik and kazy. Continue to Tashkent City Mall, Uzbekistan's largest and most luxurious shopping center, featuring more than 250 global fashion brands, luxury retail, and international dining options. Finish your tour at Tashkent City Park, a modern 18-hectare urban oasis featuring musical fountains, green spaces, and contemporary architecture. Overnight stay at Tashkent.",
+            images: [
+              "/images/kazakhstan-uzbekistan/day9.webp",
+              "/images/kazakhstan-uzbekistan/day91.webp",
+              "/images/kazakhstan-uzbekistan/day92.webp",
+            ],
           },
           {
             day: 10,
@@ -6586,7 +6742,9 @@ const packages = [
             distance: "Airport transfer",
             description:
               "After breakfast transfer to the airport for your return flight with unforgettable memories of Kazakhstan and Uzbekistan.",
-            images: [null, null],
+            images: [
+              null, null
+            ],
           },
         ],
       },
@@ -6639,9 +6797,35 @@ const packages = [
 
     title: "Vietnam",
 
-    image: null,
+    image: "/images/vietnam/day6.webp",
 
-    gallery: [null, null, null, null, null],
+    gallery: ["/images/vietnam/day1.webp",
+      "/images/vietnam/day2.webp",
+      "/images/vietnam/day3.webp",
+      "/images/vietnam/day4.webp",
+      "/images/vietnam/day5.webp",
+      "/images/vietnam/day6.webp",
+      "/images/vietnam/day6e4.webp",
+      "/images/vietnam/day7.webp",
+      "/images/vietnam/day8.webp",
+      "/images/vietnam/day21.webp",
+      "/images/vietnam/day22.webp",
+      "/images/vietnam/day23.webp",
+      "/images/vietnam/day24.webp",
+      "/images/vietnam/day25.webp",
+      "/images/vietnam/day26.webp",
+      "/images/vietnam/day27.webp",
+      "/images/vietnam/day28.webp",
+      "/images/vietnam/day31.webp",
+      "/images/vietnam/day41.webp",
+      "/images/vietnam/day51.webp",
+      "/images/vietnam/day52.webp",
+      "/images/vietnam/day53.webp",
+      "/images/vietnam/day61.webp",
+      "/images/vietnam/day62.webp",
+      "/images/vietnam/day63.webp",
+      "/images/vietnam/day65.webp",
+      "/images/vietnam/day81.webp",],
 
     perPerson: true,
 
@@ -6672,64 +6856,95 @@ const packages = [
             title: "Kolkata → Hanoi",
             distance: "Flight journey",
             description:
-              "Board flight from Netaji Subhash Chandra Bose International Airport, arrive in Hanoi, transfer to hotel, and overnight stay at Hanoi.",
-            images: [null, null],
+              "Depart from Netaji Subhash Chandra Bose International Airport, Kolkata, and arrive at Hanoi Airport. Transfer to the hotel, complete check-in, and relax after your journey. Overnight stay in Hanoi.",
+            images: ["/images/vietnam/day1.webp"],
           },
           {
             day: 2,
             title: "Ninh Binh • Hoa Lu • Trang An",
             distance: "Approx. 120 km excursion",
             description:
-              "Visit Hoa Lu Ancient Capital, King Dinh Temple, King Le Temple, and enjoy a scenic Trang An boat ride through caves and limestone landscapes before returning to Hanoi.",
-            images: [null, null],
+              "Explore Hoa Lu Ancient Capital, which served as Vietnam's political, economic, and cultural center for 42 years during the 10th and 11th centuries. Visit the sacred Dinh and Le Temples, dedicated to Vietnam's early independent imperial founders. Continue to the Trang An Scenic Landscape Complex, a UNESCO World Heritage Site recognized in 2014. Enjoy a scenic boat ride through spectacular limestone karsts and water-tunnel caves, including Nau Ruou Cave, also known as the Cooking Wine Cave. Return to Hanoi for an overnight stay.",
+            images: [
+              "/images/vietnam/day2.webp",
+              "/images/vietnam/day21.webp",
+              "/images/vietnam/day22.webp",
+              "/images/vietnam/day23.webp",
+              "/images/vietnam/day24.webp",
+              "/images/vietnam/day25.webp",
+              "/images/vietnam/day26.webp",
+              "/images/vietnam/day27.webp",
+              "/images/vietnam/day28.webp",
+            ],
           },
           {
             day: 3,
             title: "Hanoi → Halong Bay Cruise",
             distance: "Road transfer to Halong Bay",
             description:
-              "Transfer to Halong Bay, board the cruise, visit limestone caves, enjoy cruising through emerald waters, and overnight stay on the cruise with meals onboard.",
-            images: [null, null],
+              "Travel from Hanoi to the magnificent Halong Bay, renowned for its geological history spanning more than 500 million years and its rich cultural heritage. Board your cruise and sail through emerald waters surrounded by spectacular limestone karsts formed through ancient marine deposition, tectonic uplift, and tropical erosion. Explore limestone caves and enjoy the breathtaking natural scenery. Dinner and overnight stay aboard the cruise.",
+            images: [
+              "/images/vietnam/day3.webp",
+              "/images/vietnam/day31.webp",
+            ],
           },
           {
             day: 4,
             title: "Halong Bay → Hanoi City Tour",
             distance: "Cruise + road transfer",
             description:
-              "Enjoy morning at Halong Bay, return to Hanoi, and visit Hoa Lo Prison Museum, Hanoi Old Quarter, Hoan Kiem Lake, and Turtle Tower before overnight stay in Hanoi.",
-            images: [null, null],
+              "Enjoy the morning scenery of Halong Bay before returning to Hanoi. Visit the Hoa Lo Prison Museum, originally constructed by French colonial authorities and known as Maison Centrale. Discover its history through Vietnam's periods of colonial rule and wartime conflict. Continue to Hanoi's Old Quarter, whose origins date back to 1010, when Emperor Ly Thai To moved the capital to Thang Long and craft guilds developed outside the royal citadel. Explore the historic streets before returning to your hotel for an overnight stay in Hanoi.",
+            images: [
+              "/images/vietnam/day4.webp",
+              "/images/vietnam/day41.webp",
+            ],
           },
           {
             day: 5,
             title: "Hanoi → Danang → Hoi An",
             distance: "Flight + local transfer",
             description:
-              "Fly to Danang, transfer to Hoi An, explore Hoi An Ancient Town, Phuc Kien Assembly Hall, Japanese Bridge, traditional houses, and enjoy a lantern boat ride in the evening.",
-            images: [null, null],
+              "Fly from Hanoi to Danang and transfer to Hoi An, a historic trading port famous for its preserved architecture and cultural heritage. Visit the Phuc Kien Assembly Hall, established around 1697 by Chinese immigrants from Fujian Province. Explore the Japanese Covered Bridge, a historic landmark built by Japanese merchants around the late 16th or early 17th century, along with traditional houses and local art galleries reflecting centuries of craftsmanship. In the evening, enjoy a traditional wooden sampan boat ride on the Hoai River and release a glowing flower lantern, a beloved local tradition influenced by Buddhist spiritual practices and folklore. Overnight stay in the Hoi An/Danang area.",
+            images: [
+              "/images/vietnam/day5.webp",
+              "/images/vietnam/day51.webp",
+              "/images/vietnam/day52.webp",
+              "/images/vietnam/day53.webp",
+            ],
           },
           {
             day: 6,
             title: "Ba Na Hills & Golden Bridge",
             distance: "Excursion from Danang",
             description:
-              "Visit Ba Na Hills by cable car, see Golden Bridge, Linh Ung Pagoda, French Village, Le Jardin D’amour, and enjoy leisure time at Fantasy Park before returning to Danang.",
-            images: [null, null],
+              "Visit Sun World Ba Na Hills, famous for its spectacular cable cars, cool mountain climate, French Village, and iconic Golden Bridge, which opened in June 2018. Explore the resort's French-style architectural attractions, inspired by colonial-era architecture found in Vietnam. Visit the Golden Bridge, admire the mountain scenery and gardens, and enjoy Fantasy Park, a large indoor amusement park spanning approximately 21,000 square metres across three underground levels. Explore the attractions and enjoy leisure time before returning to Danang for an overnight stay.",
+            images: [
+              "/images/vietnam/day6.webp",
+              "/images/vietnam/day6e4.webp",
+              "/images/vietnam/day61.webp",
+              "/images/vietnam/day62.webp",
+              "/images/vietnam/day63.webp",
+              "/images/vietnam/day65.webp",
+            ],
           },
           {
             day: 7,
             title: "Danang → Ho Chi Minh City • Cu Chi Tunnels",
             distance: "Flight + excursion",
             description:
-              "Fly to Ho Chi Minh City and visit the historic Cu Chi Tunnels to learn about Vietnam’s wartime underground network before overnight stay in Ho Chi Minh City.",
-            images: [null, null],
+              "Fly from Danang to Ho Chi Minh City and travel to the historic Cu Chi Tunnels. Discover the underground network used by Vietnamese soldiers during wartime as shelter and for movement and operations. Learn about the tunnels' role in Vietnam's wartime history before returning to Ho Chi Minh City for an overnight stay.",
+            images: ["/images/vietnam/day7.webp"],
           },
           {
             day: 8,
             title: "Mekong Delta • Ho Chi Minh City • Departure",
             distance: "Day excursion + airport transfer",
             description:
-              "Visit My Tho and the Mekong Delta, enjoy a boat ride, local village experience, honey tea, coconut candy workshop, and city shopping before airport transfer for the return flight.",
-            images: [null, null],
+              "Travel to My Tho and explore the scenic Mekong Delta. Enjoy a peaceful boat ride through waterways and visit Unicorn Island (Thoi Son Islet), where you can experience narrow village canals, taste fresh tropical fruits, listen to traditional folk music, and learn about local honey tea and coconut candy production. Depending on the final sightseeing arrangements, visit Tortoise Islet (Con Quy), one of the Delta's well-known islets. Return toward Ho Chi Minh City for the planned city sightseeing and shopping, then transfer to the airport for your return flight with wonderful memories of Vietnam.",
+            images: [
+              "/images/vietnam/day8.webp",
+              "/images/vietnam/day81.webp",
+            ],
           },
         ],
       },
