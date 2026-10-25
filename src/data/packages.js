@@ -6797,7 +6797,7 @@ const packages = [
 
     title: "Vietnam",
 
-    image: "/images/vietnam/day6.webp",
+    image: "/images/vietnam/day61.webp",
 
     gallery: ["/images/vietnam/day1.webp",
       "/images/vietnam/day2.webp",
@@ -7006,9 +7006,36 @@ const packages = [
 
     title: "Vietnam Phu Quoc",
 
-    image: null,
+    image: "/images/vietnam-phu-quoc/day61.webp",
 
-    gallery: [null, null, null, null, null],
+    gallery: [
+      "/images/vietnam-phu-quoc/day1.webp",
+      "/images/vietnam-phu-quoc/day2.webp",
+      "/images/vietnam-phu-quoc/day3.webp",
+      "/images/vietnam-phu-quoc/day4.webp",
+      "/images/vietnam-phu-quoc/day5.webp",
+      "/images/vietnam-phu-quoc/day6.webp",
+      "/images/vietnam-phu-quoc/day7.webp",
+      "/images/vietnam-phu-quoc/day21.webp",
+      "/images/vietnam-phu-quoc/day22.webp",
+      "/images/vietnam-phu-quoc/day23.webp",
+      "/images/vietnam-phu-quoc/day31.webp",
+      "/images/vietnam-phu-quoc/day41.webp",
+      "/images/vietnam-phu-quoc/day42.webp",
+      "/images/vietnam-phu-quoc/day43.webp",
+      "/images/vietnam-phu-quoc/day44.webp",
+      "/images/vietnam-phu-quoc/day45.webp",
+      "/images/vietnam-phu-quoc/day51.webp",
+      "/images/vietnam-phu-quoc/day52.webp",
+      "/images/vietnam-phu-quoc/day53.webp",
+      "/images/vietnam-phu-quoc/day54.webp",
+      "/images/vietnam-phu-quoc/day61.webp",
+      "/images/vietnam-phu-quoc/day71.webp",
+      "/images/vietnam-phu-quoc/day72.webp",
+      "/images/vietnam-phu-quoc/day73.webp",
+      "/images/vietnam-phu-quoc/day74.webp",
+      "/images/vietnam-phu-quoc/day75.webp",
+    ],
 
     perPerson: true,
 
@@ -7039,64 +7066,95 @@ const packages = [
             title: "Kolkata → Hanoi",
             distance: "Flight journey",
             description:
-              "Board flight from Netaji Subhash Chandra Bose International Airport, arrive in Hanoi, transfer to hotel, and overnight stay at Hanoi.",
-            images: [null, null],
+              "Depart from Netaji Subhash Chandra Bose International Airport, Kolkata, and arrive at Noi Bai International Airport in Hanoi. Transfer to your hotel, complete check-in, and relax after your journey. Overnight stay in Hanoi.",
+            images: ["/images/vietnam-phu-quoc/day1.webp"],
           },
           {
             day: 2,
-            title: "Ninh Binh Excursion",
+            title: "Hanoi → Ninh Binh → Hanoi",
             distance: "Approx. 120 km excursion",
             description:
-              "Visit Hoa Lu Ancient Capital, King Dinh Temple, King Le Temple, and enjoy a scenic Trang An boat ride through limestone mountains, caves, and rivers before returning to Hanoi.",
-            images: [null, null],
+              "Visit Hoa Lu Ancient Capital, which served as Vietnam's political and economic capital from 968 to 1010 AD. Explore the Temple of King Dinh Tien Hoang, dedicated to the founder of the Dinh Dynasty, and the Temple of King Le Dai Hanh, honoring the founder of the Early Le Dynasty. Continue to the Trang An Scenic Landscape Complex and enjoy a peaceful boat ride through emerald waters, towering limestone karsts, and spectacular natural caves. Return to Hanoi for an overnight stay.",
+            images: [
+              "/images/vietnam-phu-quoc/day2.webp",
+              "/images/vietnam-phu-quoc/day21.webp",
+              "/images/vietnam-phu-quoc/day22.webp",
+              "/images/vietnam-phu-quoc/day23.webp",
+            ],
           },
           {
             day: 3,
-            title: "Halong Bay Day Cruise",
+            title: "Hanoi → Halong Bay Day Cruise → Hanoi",
             distance: "Day excursion from Hanoi",
             description:
-              "Enjoy a Halong Bay cruise with Sung Sot Cave, Luon Cave, kayaking or bamboo boat ride, Titop Island, swimming, hiking, sunset party, and buffet lunch before returning to Hanoi.",
-            images: [null, null],
+              "Travel from Hanoi to the spectacular Halong Bay, renowned for its emerald waters and limestone karsts shaped by millions of years of geological activity. Enjoy a scenic day cruise through the bay, admire the dramatic rock formations, and explore the natural beauty of this famous coastal destination. Enjoy the cruise experience and buffet lunch before returning to Hanoi for an overnight stay.",
+            images: [
+              "/images/vietnam-phu-quoc/day3.webp",
+              "/images/vietnam-phu-quoc/day31.webp",
+            ],
           },
           {
             day: 4,
             title: "Hanoi → Da Nang → Hoi An",
             distance: "Flight + local transfer",
             description:
-              "Fly to Da Nang and visit Hoi An Ancient Town including Japanese Covered Bridge, Pottery Museum, Tam Ky Ancient House, Chua Ong Pagoda, local market, and lantern streets before returning to Da Nang.",
-            images: [null, null],
+              "Fly from Hanoi to Da Nang and continue to Hoi An Ancient Town, a historic trading port celebrated for its preserved architecture and cultural heritage. Visit the Japanese Covered Bridge, a historic landmark built by Japanese merchants around the late 16th century. Explore the Pottery Museum, Tam Ky Ancient House, Chua Ong Pagoda, and the lively local market. Discover traditional architecture, local craftsmanship, and charming lantern-lit streets before returning to Da Nang for an overnight stay.",
+            images: [
+              "/images/vietnam-phu-quoc/day4.webp",
+              "/images/vietnam-phu-quoc/day41.webp",
+              "/images/vietnam-phu-quoc/day42.webp",
+              "/images/vietnam-phu-quoc/day43.webp",
+              "/images/vietnam-phu-quoc/day44.webp",
+              "/images/vietnam-phu-quoc/day45.webp",
+            ],
           },
           {
             day: 5,
             title: "Ba Na Hills & Golden Bridge",
             distance: "Excursion from Da Nang",
             description:
-              "Visit Sun World Ba Na Hills by cable car, see the famous Golden Bridge, French Village, Fantasy Park, mountain viewpoints, and landscaped gardens before returning to Da Nang.",
-            images: [null, null],
+              "Visit Sun World Ba Na Hills and enjoy a spectacular cable car journey over lush forests and mist-covered mountains. Walk across the famous Golden Bridge, a 150-meter pedestrian walkway supported by enormous sculpted hands. Explore the French Village, admire the mountain viewpoints and landscaped gardens, and enjoy entertainment at Fantasy Park, one of Vietnam's largest indoor amusement parks. Return to Da Nang for an overnight stay.",
+            images: [
+              "/images/vietnam-phu-quoc/day5.webp",
+              "/images/vietnam-phu-quoc/day51.webp",
+              "/images/vietnam-phu-quoc/day52.webp",
+              "/images/vietnam-phu-quoc/day53.webp",
+              "/images/vietnam-phu-quoc/day54.webp",
+            ],
           },
           {
             day: 6,
             title: "Da Nang → Phu Quoc",
             distance: "Flight + local transfer",
             description:
-              "Fly to Phu Quoc, check in to hotel, visit Vinpearl Safari, and enjoy free time with an optional visit to Grand World in the evening.",
-            images: [null, null],
+              "Fly from Da Nang to Phu Quoc Island and transfer to your hotel for check-in. Visit Vinpearl Safari, Vietnam's first and largest open-zoo wildlife conservation park, which officially opened on December 24, 2015. Later, enjoy free time or optionally visit Grand World Phu Quoc, an expansive entertainment and shopping complex known as the 'Sleepless City.' Overnight stay in Phu Quoc.",
+            images: [
+              "/images/vietnam-phu-quoc/day6.webp",
+              "/images/vietnam-phu-quoc/day61.webp",
+            ],
           },
           {
             day: 7,
-            title: "Phu Quoc Island Tour & Hon Thom",
+            title: "Phu Quoc Island Tour – Hon Thom Island",
             distance: "Island hopping excursion",
             description:
-              "Visit Coconut Prison, Mong Tay Island, Gam Ghi Island, May Rut Island, Hon Thom Island, ride the world’s longest sea cable car, and enjoy Aquatopia Water Park and theme park activities.",
-            images: [null, null],
+              "Discover the beautiful islands of the An Thoi Archipelago, beginning with a speedboat excursion to Mong Tay Island, known for its pristine beaches and turquoise waters. Continue to Gam Ghi Island, celebrated for its natural coastal scenery and marine environment, followed by May Rut Island, a popular island destination with beautiful beaches and a relaxed tropical atmosphere. Visit Hon Thom Island via the spectacular sea-crossing cable car, measuring approximately 7,899.9 meters. Enjoy Aquatopia Water Park's exciting slides and water attractions, along with available theme park activities, before returning to your hotel for an overnight stay.",
+            images: [
+              "/images/vietnam-phu-quoc/day7.webp",
+              "/images/vietnam-phu-quoc/day71.webp",
+              "/images/vietnam-phu-quoc/day72.webp",
+              "/images/vietnam-phu-quoc/day73.webp",
+              "/images/vietnam-phu-quoc/day74.webp",
+              "/images/vietnam-phu-quoc/day75.webp",
+            ],
           },
           {
             day: 8,
             title: "Phu Quoc Departure",
             distance: "Airport transfer",
             description:
-              "After breakfast, enjoy free time until transfer to Phu Quoc Airport for your onward flight. Tour ends with wonderful memories.",
-            images: [null, null],
+              "After breakfast, enjoy free time until your scheduled transfer to Phu Quoc Airport for your onward flight. Depart with wonderful memories of Vietnam's historic cities, spectacular limestone landscapes, cultural attractions, and beautiful tropical islands.",
+            images: [],
           },
         ],
       },
@@ -7161,9 +7219,28 @@ const packages = [
 
     title: "Srilanka",
 
-    image: null,
+    image: "/images/srilanka/day2.webp",
 
-    gallery: [null, null, null, null, null],
+    gallery: ["/images/srilanka/day1.webp",
+      "/images/srilanka/day2.webp",
+      "/images/srilanka/day5.webp",
+      "/images/srilanka/day6.webp",
+      "/images/srilanka/day7.webp",
+      "/images/srilanka/day12.webp",
+      "/images/srilanka/day21.webp",
+      "/images/srilanka/day22.webp",
+      "/images/srilanka/day23.webp",
+      "/images/srilanka/day24.webp",
+      "/images/srilanka/day25.webp",
+      "/images/srilanka/day26.webp",
+      "/images/srilanka/day27.webp",
+      "/images/srilanka/day28.webp",
+      "/images/srilanka/day29.webp",
+      "/images/srilanka/day61.webp",
+      "/images/srilanka/day62.webp",
+      "/images/srilanka/day71.webp",
+      "/images/srilanka/day210.webp",
+      "/images/srilanka/day211.webp",],
 
     perPerson: true,
 
@@ -7184,32 +7261,48 @@ const packages = [
       "Discover the tropical beauty and cultural heritage of Sri Lanka with this 7-day journey covering Colombo, Pinnawala, Kandy, Nuwara Eliya, and Bentota. Experience ancient temples, tea plantations, waterfalls, elephant encounters, scenic hill stations, river cruises, and golden beaches with guided sightseeing throughout the tour.",
 
     packages: {
+
       package1: {
         duration: "6 Nights / 7 Days",
         price: "Not Available",
         itinerary: [
           {
             day: 1,
-            title: "Kolkata → Colombo",
+            title: "Arrival – Sigiriya",
             distance: "Flight journey",
             description:
-              "Board flight from Netaji Subhash Chandra Bose International Airport, arrive in Colombo, transfer to hotel, and overnight stay at Colombo.",
-            images: [null, null],
+              "Board your flight from Netaji Subhash Chandra Bose International Airport and arrive in Sri Lanka. Visit Pinnawala Elephant Orphanage, established in 1975 to protect and care for orphaned, abandoned, and injured wild baby elephants. Also visit Dambulla Cave Temple, the largest and best-preserved cave temple complex in Sri Lanka. Transfer to the hotel and enjoy an overnight stay.",
+            images: [
+              "/images/srilanka/day1.webp",
+            ],
           },
           {
             day: 2,
-            title: "Colombo → Pinnawala → Kandy",
+            title: "Sigiriya – Kandy",
             distance: "Approx. 120 km",
             description:
-              "Visit Pinnawala Elephant Orphanage and continue to Kandy. Explore Kandy city including Temple of the Tooth Relic, Gem Museum, and enjoy a traditional cultural dance show. Overnight stay at Kandy.",
-            images: [null, null],
+              "Visit Sigiriya, a 5th-century palace and fortress built atop a massive granite rock. Explore Sri Lanka's traditional spice gardens and continue to Kandy. Visit the Temple of the Sacred Tooth Relic, which houses the left canine tooth of Gautama Buddha, and enjoy the panoramic views from Kandy View Point, also known as Arthur's Seat. Overnight stay at Kandy.",
+            images: [
+              "/images/srilanka/day2.webp",
+              "/images/srilanka/day21.webp",
+              "/images/srilanka/day22.webp",
+              "/images/srilanka/day23.webp",
+              "/images/srilanka/day24.webp",
+              "/images/srilanka/day25.webp",
+              "/images/srilanka/day26.webp",
+              "/images/srilanka/day27.webp",
+              "/images/srilanka/day28.webp",
+              "/images/srilanka/day29.webp",
+              "/images/srilanka/day210.webp",
+              "/images/srilanka/day211.webp",
+            ],
           },
           {
             day: 3,
-            title: "Kandy → Nuwara Eliya",
+            title: "Kandy – Nuwara Eliya",
             distance: "Approx. 80 km",
             description:
-              "Visit Peradeniya Botanical Garden, Ramboda Waterfall, Hanuman Temple, and a tea factory before proceeding to Nuwara Eliya. Enjoy a city tour covering Gregory Lake, Victoria Park, golf course area, and tea plantation surroundings. Overnight stay at Nuwara Eliya.",
+              "Visit the beautiful waterfalls of Sri Lanka and the Sri Bhakta Hanuman Temple in Ramboda, built in 1999 by the Chinmaya Mission of Sri Lanka. Explore a tea plantation and learn about Sri Lanka's tea industry, which began in 1867. Continue to Nuwara Eliya, a historic hill station founded during the British colonial period. Visit Hakgala Botanical Garden, Seetha Amman Temple, and Gregory Lake. Overnight stay at Nuwara Eliya.",
             images: [null, null],
           },
           {
@@ -7217,35 +7310,45 @@ const packages = [
             title: "Nuwara Eliya → Bentota",
             distance: "Approx. 210 km",
             description:
-              "Drive through scenic hill country to Bentota and relax on the beach. Overnight stay at Bentota.",
+              "Drive through scenic hill country to Bentota and relax on its golden beaches, calm lagoons, and beautiful coastal surroundings. Overnight stay at Bentota.",
             images: [null, null],
           },
           {
             day: 5,
-            title: "Bentota Sightseeing",
-            distance: "Local sightseeing",
+            title: "Nuwara Eliya – Bentota",
+            distance: "Approx. 210 km",
             description:
-              "Enjoy a Madhu River boat safari through mangrove islands and visit a Turtle Hatchery to learn about sea turtle conservation. Overnight stay at Bentota.",
-            images: [null, null],
+              "Travel from Nuwara Eliya to Bentota, enjoying the scenic landscapes along the way. Bentota is a coastal resort town known for its golden beaches, calm lagoons, and relaxing atmosphere. Overnight stay at Bentota.",
+            images: [
+              "/images/srilanka/day5.webp",
+            ],
           },
           {
             day: 6,
-            title: "Bentota → Colombo",
-            distance: "Approx. 85 km",
+            title: "Bentota Excursion",
+            distance: "Local sightseeing",
             description:
-              "Transfer to Colombo for a city tour covering Galle Face Green, Viharamahadevi Park, National Museum, Independence Square, Fort area, and shopping districts. Overnight stay at Colombo.",
-            images: [null, null],
+              "Visit a sea turtle hatchery dedicated to protecting endangered marine species. Enjoy a relaxing Madu River boat safari through winding mangrove tunnels and explore the area's rich wildlife habitats. Spend your free time enjoying optional water sports at Bentota Beach. Overnight stay at Bentota.",
+            images: [
+              "/images/srilanka/day6.webp",
+              "/images/srilanka/day61.webp",
+              "/images/srilanka/day62.webp",
+            ],
           },
           {
             day: 7,
-            title: "Colombo Departure",
-            distance: "Airport transfer",
+            title: "Bentota – Colombo",
+            distance: "Approx. 85 km",
             description:
-              "After breakfast transfer to the airport for your return flight to India. Tour ends with sweet memories of Sri Lanka.",
-            images: [null, null],
+              "Transfer from Bentota to Colombo for a guided city tour featuring the city's history, culture, and coastal beauty. Explore popular shopping destinations, including One Galle Face and Colombo City Centre, offering shopping, dining, and leisure experiences. After sightseeing, transfer to the airport for your return flight to India. Tour ends with sweet memories of Sri Lanka.",
+            images: [
+              "/images/srilanka/day7.webp",
+              "/images/srilanka/day71.webp",
+            ],
           },
         ],
       },
+
     },
 
     included: [
