@@ -1137,9 +1137,22 @@ const packages = [
 
     title: "Ayodhya",
 
-    image: null,
+    image: "/images/ayodhya/day2.webp",
 
-    gallery: [null, null, null, null, null],
+    gallery: [
+      "/images/ayodhya/day2.webp",
+      "/images/ayodhya/day3.webp",
+      "/images/ayodhya/day4.webp",
+      "/images/ayodhya/day5.webp",
+      "/images/ayodhya/day31.webp",
+      "/images/ayodhya/day32.webp",
+      "/images/ayodhya/day41.webp",
+      "/images/ayodhya/day42.webp",
+      "/images/ayodhya/day43.webp",
+      "/images/ayodhya/day44.webp",
+      "/images/ayodhya/day51.webp",
+      "/images/ayodhya/day52.webp",
+    ],
 
     perPerson: true,
 
@@ -1178,39 +1191,56 @@ const packages = [
             title: "Arrival at Ayodhya",
             distance: "Railway station transfer",
             description:
-              "Reach Ayodhya Railway Station, transfer to hotel, and visit Ram Janmabhoomi, the birthplace of Lord Rama. Overnight stay at Ayodhya.",
-            images: [null, null],
+              "Reach Ayodhya Railway Station and transfer to the hotel. Visit Ram Janmabhoomi, the sacred site in Ayodhya, Uttar Pradesh, revered by Hindus as the birthplace of Lord Rama, the seventh avatar of Vishnu. Overnight stay at Ayodhya.",
+            images: [
+              "/images/ayodhya/day2.webp",
+              null,
+            ],
           },
           {
             day: 3,
             title: "Ayodhya Local Sightseeing",
             distance: "Local sightseeing",
             description:
-              "Visit Janki Bhawan, Kanak Bhawan, Sarayu River, and Hanuman Garhi. Overnight stay at Ayodhya.",
-            images: [null, null],
+              "Visit Janki Bhawan, also known as Sone-ka-Ghar, a famous temple dedicated to Lord Rama and Goddess Sita, believed to have been gifted to Sita by Queen Kaikeyi as a wedding present. Explore Kanak Bhawan, a historic golden palace-temple dedicated to Lord Rama and Goddess Sita. Visit the sacred Sarayu River and Hanuman Garhi. Overnight stay at Ayodhya.",
+            images: [
+              "/images/ayodhya/day3.webp",
+              "/images/ayodhya/day31.webp",
+              "/images/ayodhya/day32.webp",
+            ],
           },
           {
             day: 4,
             title: "Ayodhya → Prayagraj → Varanasi",
             distance: "286 km",
             description:
-              "Drive to Varanasi via Prayagraj. Visit Triveni Sangam, Khusro Bagh, Akbar Fort, Bade Hanuman Ji Temple, and Nagvasuki Temple before proceeding to Varanasi. Overnight stay at Varanasi.",
-            images: [null, null],
+              "Travel from Ayodhya to Varanasi via Prayagraj. Visit Triveni Sangam, the sacred confluence of the Ganga, Yamuna, and the invisible Saraswati rivers, where taking a holy bath is believed to wash away sins and grant liberation. Explore Khusro Bagh, a historic 40-acre walled garden and Mughal burial complex near Prayagraj Junction. Visit Allahabad Fort, also known as Akbar Fort, built by Mughal Emperor Akbar in 1583 near Triveni Sangam. See Shri Bade Hanuman Ji Mandir, famous for its unique 20-foot-long reclining idol of Lord Hanuman, and visit Nagvasuki Temple, an ancient Hindu shrine dedicated to Vasuki, the king of serpents. Proceed to Varanasi for an overnight stay.",
+            images: [
+              "/images/ayodhya/day4.webp",
+              "/images/ayodhya/day41.webp",
+              "/images/ayodhya/day42.webp",
+              "/images/ayodhya/day43.webp",
+              "/images/ayodhya/day44.webp",
+            ],
           },
           {
             day: 5,
             title: "Varanasi Sightseeing & Ganga Aarti",
             distance: "Local sightseeing",
             description:
-              "Visit Birla Temple, Sarnath, and Kashi Vishwanath Temple. Enjoy an optional boat ride and attend the evening Ganga Aarti. Overnight stay at Varanasi.",
-            images: [null, null],
+              "Visit Birla Temple in Varanasi, also known as the New Kashi Vishwanath Temple or Vishwanath Mandir, located inside the Banaras Hindu University campus. Visit the sacred Kashi Vishwanath Temple, dedicated to Lord Shiva and home to one of the twelve Jyotirlingas. Explore Sarnath and enjoy an optional boat ride on the Ganga. In the evening, attend the grand Ganga Aarti at Dashashwamedh Ghat, whose modern synchronized format was started in 1997 by the Gangotri Seva Samiti. Overnight stay at Varanasi.",
+            images: [
+              "/images/ayodhya/day5.webp",
+              "/images/ayodhya/day51.webp",
+              "/images/ayodhya/day52.webp",
+            ],
           },
           {
             day: 6,
             title: "Varanasi Local Sightseeing → Departure",
             distance: "Local sightseeing + train",
             description:
-              "Visit Sankat Mochan Hanuman Temple, Assi Ghat, Manikarnika Ghat, Tulsi Manas Temple, and Batu Bhairav Temple. After dinner transfer to Banaras Railway Station and board the train for Kolkata. Overnight stay in train.",
+              "Visit Sankat Mochan Hanuman Temple, Assi Ghat, Manikarnika Ghat, Tulsi Manas Temple, and Batu Bhairav Temple. After sightseeing and dinner, transfer to the railway station and board Train 22588 – Amrit Bharat Express or Train 13048 – Vibhuti Express for Kolkata. Overnight stay in train.",
             images: [null, null],
           },
           {
@@ -2115,9 +2145,18 @@ const packages = [
 
     title: "Offbeat Kashmir",
 
-    image: null,
+    image: "/images/offbeat-kashmir/day5.webp",
 
-    gallery: [null, null, null, null, null],
+    gallery: [[
+      "/images/offbeat-kashmir/day4.webp",
+      "/images/offbeat-kashmir/day5.webp",
+      "/images/offbeat-kashmir/day6.webp",
+      "/images/offbeat-kashmir/day7.webp",
+      "/images/offbeat-kashmir/day9.webp",
+      "/images/offbeat-kashmir/day51.webp",
+      "/images/offbeat-kashmir/day52.webp",
+      "/images/offbeat-kashmir/day71.webp",
+    ]],
 
     perPerson: true,
 
@@ -2172,39 +2211,52 @@ const packages = [
             title: "Srinagar → Gurez Valley",
             distance: "126 km",
             description:
-              "Drive through scenic mountain roads to Gurez Valley. Check in to hotel and enjoy the valley surroundings. Overnight stay at Gurez Valley.",
-            images: [null, null],
+              "Drive through scenic mountain roads from Srinagar to Gurez Valley, an ancient and remote Himalayan region with a rich history connected to the Silk Route, early Buddhism, and the indigenous Dard-Shin tribe. Check in to the hotel, enjoy the beautiful valley surroundings, and stay overnight at Gurez Valley.",
+            images: [
+              "/images/offbeat-kashmir/day4.webp",
+              null,
+            ],
           },
           {
             day: 5,
             title: "Gurez Valley Exploration",
             distance: "Local sightseeing",
             description:
-              "Visit Habba Khatoon Peak, Kishanganga River, and Tulail Valley (optional and at own cost). Overnight stay at Gurez Valley.",
-            images: [null, null],
+              "Explore Gurez Valley and visit Habba Khatoon Peak, a majestic pyramid-shaped mountain approximately 13,000 feet high, named after the legendary 16th-century poetess and queen Habba Khatoon. Visit the Kishanganga River, also known as the Neelum River in Pakistan, a historic waterway associated with ancient trade routes and the region's modern geopolitical significance. Explore Tulail Valley, a remote Himalayan sub-valley with a rich history connected to ancient Dardistan, the Silk Road, and the Shina-speaking Dard-Shin community. Tulail Valley is optional and at your own cost. Overnight stay at Gurez Valley.",
+            images: [
+              "/images/offbeat-kashmir/day5.webp",
+              "/images/offbeat-kashmir/day51.webp",
+              "/images/offbeat-kashmir/day52.webp",
+            ],
           },
           {
             day: 6,
             title: "Gurez Valley → Lolab Valley",
             distance: "126 km",
             description:
-              "After breakfast proceed to the picturesque Lolab Valley surrounded by dense forests and mountains. Overnight stay at Lolab Valley.",
-            images: [null, null],
+              "After breakfast, proceed to the picturesque Lolab Valley, surrounded by dense forests and mountains. According to local folklore, the valley gets its name from an ancient ruler named Maharaja Lolo, and its ancient rock-cut caves are linked to epic-era legends. Overnight stay at Lolab Valley.",
+            images: [
+              "/images/offbeat-kashmir/day6.webp",
+              null,
+            ],
           },
           {
             day: 7,
             title: "Lolab Valley → Keran Valley",
             distance: "100 km",
             description:
-              "Drive to the beautiful border valley of Keran and check in to hotel. Overnight stay at Keran Valley.",
-            images: [null, null],
+              "Drive to the beautiful Keran Valley, a historic border region along the Kishanganga River and the Line of Control between India and Pakistan. Check in to the hotel and enjoy the scenic surroundings. Overnight stay at Keran Valley.",
+            images: [
+              "/images/offbeat-kashmir/day7.webp",
+              "/images/offbeat-kashmir/day71.webp",
+            ],
           },
           {
             day: 8,
             title: "Keran Valley Sightseeing",
             distance: "Local sightseeing",
             description:
-              "Explore Keran Village and witness the unique settlement located along the Line of Control where houses can be seen on both Indian and Pakistan-administered sides (optional and at own cost). Overnight stay at Keran Valley.",
+              "Explore Keran Village, a scenic border settlement in the Kupwara district of Jammu and Kashmir. The village is divided into two parts by the Kishanganga River across the Line of Control between India and Pakistan. Enjoy the unique landscape and border-region surroundings. This visit is optional and at your own cost. Overnight stay at Keran Valley.",
             images: [null, null],
           },
           {
@@ -2213,14 +2265,17 @@ const packages = [
             distance: "140 km",
             description:
               "Return to Srinagar after breakfast. Enjoy the evening at leisure. Overnight stay at Srinagar.",
-            images: [null, null],
+            images: [
+              "/images/offbeat-kashmir/day9.webp",
+              null,
+            ],
           },
           {
             day: 10,
             title: "Doodhpathri Excursion",
             distance: "Excursion",
             description:
-              "Full-day excursion to the beautiful meadow destination Doodhpathri. Return to Srinagar for overnight stay.",
+              "Enjoy a full-day excursion to Doodhpathri, a beautiful meadow destination whose name means 'Valley of Milk.' According to local legend, its name is associated with the revered 14th-century Kashmiri saint Sheikh Noor-ud-din Noorani, also known as Nund Rishi. Return to Srinagar for an overnight stay.",
             images: [null, null],
           },
           {
@@ -2228,7 +2283,7 @@ const packages = [
             title: "Srinagar → Jammu",
             distance: "270 km",
             description:
-              "After breakfast drive to Jammu Railway Station and board return train for Kolkata. Overnight stay in train.",
+              "After breakfast, drive to Jammu Railway Station and board the return train for Kolkata. Overnight stay in train.",
             images: [null, null],
           },
           {
@@ -2236,7 +2291,7 @@ const packages = [
             title: "Train Journey",
             distance: "Full day train journey",
             description:
-              "Continue return train journey towards Kolkata. Overnight stay in train.",
+              "Continue the return train journey towards Kolkata. Overnight stay in train.",
             images: [null, null],
           },
           {
@@ -2295,9 +2350,28 @@ const packages = [
 
     title: "Pelling Ravangla Darjeeling",
 
-    image: null,
+    image: "/images/pelling-ravangla-darjeeling/day41.webp",
 
-    gallery: [null, null, null, null, null],
+    gallery: [
+      "/images/pelling-ravangla-darjeeling/day2.webp",
+      "/images/pelling-ravangla-darjeeling/day3.webp",
+      "/images/pelling-ravangla-darjeeling/day4.webp",
+      "/images/pelling-ravangla-darjeeling/day5.webp",
+      "/images/pelling-ravangla-darjeeling/day31.webp",
+      "/images/pelling-ravangla-darjeeling/day32.webp",
+      "/images/pelling-ravangla-darjeeling/day33.webp",
+      "/images/pelling-ravangla-darjeeling/day34.webp",
+      "/images/pelling-ravangla-darjeeling/day35.webp",
+      "/images/pelling-ravangla-darjeeling/day41.webp",
+      "/images/pelling-ravangla-darjeeling/day42.webp",
+      "/images/pelling-ravangla-darjeeling/day51.webp",
+      "/images/pelling-ravangla-darjeeling/day52.webp",
+      "/images/pelling-ravangla-darjeeling/day53.webp",
+      "/images/pelling-ravangla-darjeeling/day54.webp",
+      "/images/pelling-ravangla-darjeeling/day56.webp",
+      "/images/pelling-ravangla-darjeeling/day57.webp",
+      "/images/pelling-ravangla-darjeeling/day58.webp",
+    ],
 
     perPerson: true,
 
@@ -2336,39 +2410,62 @@ const packages = [
             title: "NJP → Pelling",
             distance: "Road transfer",
             description:
-              "Arrive at NJP Railway Station in the morning and transfer to Pelling. Evening free for leisure. Overnight stay at Pelling.",
-            images: [null, null],
+              "Arrive at NJP Railway Station in the morning and transfer to Pelling, a scenic town in West Sikkim. Enjoy the beautiful mountain surroundings. Evening free for leisure. Overnight stay at Pelling.",
+            images: [
+              "/images/pelling-ravangla-darjeeling/day2.webp",
+              null,
+            ],
           },
           {
             day: 3,
             title: "Pelling Sightseeing",
             distance: "Local sightseeing",
             description:
-              "Visit Kanchenjunga viewpoints, Rimbi Waterfalls, Rabdentse Ruins, Pemayangtse Monastery, Orange Garden, and the famous Sky Walk. Overnight stay at Pelling.",
-            images: [null, null],
+              "Visit Kanchenjunga viewpoints and explore the beautiful attractions around Pelling. Visit Kanchenjunga Waterfalls, a major perennial cascade approximately 24 km from Pelling on the road to Yuksom. Explore Rabdentse Ruins, the second capital of the Kingdom of Sikkim from 1670 to 1814, established by the second Chogyal, Tensung Namgyal, and later destroyed during Gurkha invasions. Visit Rimbi Waterfalls, located approximately 12 km from Pelling near Darap Village, formed by the Rimbi River. Its local history is associated with one of Sikkim's oldest small hydropower stations, installed in the early 1970s. Explore Pemayangtse Monastery, one of Sikkim's oldest and premier Nyingma monasteries, originally founded as a small shrine in 1647 and rebuilt in 1705. Visit the Pelling Skywalk, India's first glass-bottomed walkway, opened on November 1, 2018, beside the 137-foot Chenrezig statue. Overnight stay at Pelling.",
+            images: [
+              "/images/pelling-ravangla-darjeeling/day3.webp",
+              "/images/pelling-ravangla-darjeeling/day31.webp",
+              "/images/pelling-ravangla-darjeeling/day32.webp",
+              "/images/pelling-ravangla-darjeeling/day33.webp",
+              "/images/pelling-ravangla-darjeeling/day34.webp",
+              "/images/pelling-ravangla-darjeeling/day35.webp",
+            ],
           },
           {
             day: 4,
-            title: "Pelling → Ravangla",
-            distance: "Road transfer",
+            title: "Pelling → Ravangla Sightseeing",
+            distance: "Road transfer + sightseeing",
             description:
-              "Drive to Ravangla. En route visit Namchi Char Dham and Sai Temple. After lunch visit Buddha Park. Overnight stay at Ravangla.",
-            images: [null, null],
+              "Drive from Pelling towards Ravangla. En route, visit Namchi Char Dham, officially known as Siddheshwar Dham, a pilgrimage and cultural complex on Solophok Hill, approximately 5 km from Namchi. Inaugurated on November 8, 2011, it features a 108-foot Lord Shiva statue, replicas of the four sacred Char Dhams—Badrinath, Dwarka, Puri, and Rameshwaram—and 12 Jyotirlingas. Also visit Sai Temple. After lunch, explore Buddha Park of Ravangla, also known as Tathagata Tsal. Built between 2006 and 2013 to mark the 2550th birth anniversary of Gautama Buddha, the park features a 130-foot copper statue consecrated by the 14th Dalai Lama on March 25, 2013. Overnight stay at Ravangla.",
+            images: [
+              "/images/pelling-ravangla-darjeeling/day4.webp",
+              "/images/pelling-ravangla-darjeeling/day41.webp",
+              "/images/pelling-ravangla-darjeeling/day42.webp",
+            ],
           },
           {
             day: 5,
             title: "Ravangla → Darjeeling",
             distance: "Road transfer",
             description:
-              "After breakfast proceed to Darjeeling. Evening free for leisure and Mall Road exploration. Overnight stay at Darjeeling.",
-            images: [null, null],
+              "After breakfast, proceed to Darjeeling. Learn about Darjeeling's history, which includes its earlier association with Sikkim, its transfer to the British in 1835, the development of the hill station, and the introduction of tea cultivation. Explore Mall Road and enjoy the evening at leisure. Overnight stay at Darjeeling.",
+            images: [
+              "/images/pelling-ravangla-darjeeling/day5.webp",
+              "/images/pelling-ravangla-darjeeling/day51.webp",
+              "/images/pelling-ravangla-darjeeling/day52.webp",
+              "/images/pelling-ravangla-darjeeling/day53.webp",
+              "/images/pelling-ravangla-darjeeling/day54.webp",
+              "/images/pelling-ravangla-darjeeling/day56.webp",
+              "/images/pelling-ravangla-darjeeling/day57.webp",
+              "/images/pelling-ravangla-darjeeling/day58.webp",
+            ],
           },
           {
             day: 6,
             title: "Darjeeling Sightseeing → NJP → Howrah",
             distance: "Local sightseeing + train journey",
             description:
-              "Early morning visit Tiger Hill, Batasia Loop, and Ghoom Monastery. After breakfast visit Padmaja Naidu Himalayan Zoological Park, HMI, Tenzing Rock, Japanese Temple, and Tea Garden. Later transfer to NJP Railway Station and board Vande Bharat Express for Howrah, arriving at night with sweet memories.",
+              "Early in the morning, visit Tiger Hill, situated at approximately 2,590 metres and famous for its sunrise views over the Himalayas. Explore Batasia Loop, a spiral railway loop commissioned in 1919 to help the Darjeeling Himalayan Railway manage a steep descent, and visit its Gorkha war memorial, added in 1995. Visit Ghoom Monastery, officially known as Yiga Choeling Monastery, built in 1850 and known for its 15-foot statue of Maitreya Buddha. After breakfast, visit Padmaja Naidu Himalayan Zoological Park, established on August 14, 1958, and known for conserving high-altitude wildlife. Explore Tenzing Rock, a natural rock formation named after Tenzing Norgay, who summited Mount Everest with Sir Edmund Hillary in 1953. Visit the Japanese Temple, also known as Nipponzan Myohoji Buddhist Temple, built in 1972, and the nearby Japanese Peace Pagoda, inaugurated in 1992. End the sightseeing tour with a visit to a Darjeeling tea garden, where commercial tea cultivation developed during the mid-19th century. Later, transfer to NJP Railway Station and board the Vande Bharat Express for Howrah, arriving at night with sweet memories.",
             images: [null, null],
           },
         ],
@@ -2863,9 +2960,50 @@ const packages = [
 
     title: "Valley of Leh Ladakh",
 
-    image: null,
+    image: "/images/valley-of-leh-ladakh/LEH LADAKH MAIN PHOTO.webp",
 
-    gallery: [null, null, null, null, null],
+    gallery: [
+      "/images/valley-of-leh-ladakh/Day 1 at train.webp",
+      "/images/valley-of-leh-ladakh/Day 1 kolkata station.webp",
+      "/images/valley-of-leh-ladakh/Day 2 train journey.webp",
+      "/images/valley-of-leh-ladakh/Day 2.webp",
+      "/images/valley-of-leh-ladakh/Day 3 reach jammu.webp",
+      "/images/valley-of-leh-ladakh/Day 3 srinagar.webp",
+      "/images/valley-of-leh-ladakh/Day 4 kargil memorial.webp",
+      "/images/valley-of-leh-ladakh/day 5 kargir.webp",
+      "/images/valley-of-leh-ladakh/day 5 lamayaru monastry.webp",
+      "/images/valley-of-leh-ladakh/day 5 moon loand.webp",
+      "/images/valley-of-leh-ladakh/day 6 shantistoop.webp",
+      "/images/valley-of-leh-ladakh/day 6 leh monastry.webp",
+      "/images/valley-of-leh-ladakh/day 6 leh palace.webp",
+      "/images/valley-of-leh-ladakh/day 6 rancho school.webp",
+      "/images/valley-of-leh-ladakh/DAY 7 KHARDUNGLA PASS.webp",
+      "/images/valley-of-leh-ladakh/DAY 7 NUBRA CAMEL RIDE.webp",
+      "/images/valley-of-leh-ladakh/DAY 8 NUBRA VALLEY.webp",
+      "/images/valley-of-leh-ladakh/DAY 8 Turtuk.webp",
+      "/images/valley-of-leh-ladakh/DAY 9 PANGONG 2.webp",
+      "/images/valley-of-leh-ladakh/DAY 9 PANGONG LAKE.webp",
+      "/images/valley-of-leh-ladakh/DAY 9 PANGONG PHOTO.webp",
+      "/images/valley-of-leh-ladakh/DAY 9 PANGONG.webp",
+      "/images/valley-of-leh-ladakh/DAY 10 HANLE NIGHT LOOK.webp",
+      "/images/valley-of-leh-ladakh/DAY 10 HANLE.webp",
+      "/images/valley-of-leh-ladakh/DAY 10 NIGHT LOOK HANLE.webp",
+      "/images/valley-of-leh-ladakh/DAY 11 LEH.webp",
+      "/images/valley-of-leh-ladakh/ATAL TUNNEL.webp",
+      "/images/valley-of-leh-ladakh/DAY 12 KELONG 2.webp",
+      "/images/valley-of-leh-ladakh/DAY 12 KELONG.webp",
+      "/images/valley-of-leh-ladakh/DAY 13 SISU VILLAGE.webp",
+      "/images/valley-of-leh-ladakh/DAY 14 HIDIMBA TEMPLE 2.webp",
+      "/images/valley-of-leh-ladakh/DAY 14 HIDIMBA TEMPLE.webp",
+      "/images/valley-of-leh-ladakh/DAY 14 MANALI MALL.webp",
+      "/images/valley-of-leh-ladakh/DAY 15 KALKA STATION.webp",
+      "/images/valley-of-leh-ladakh/DAY 16.webp",
+      "/images/valley-of-leh-ladakh/DAY NUBRA VALLEY.webp",
+      "/images/valley-of-leh-ladakh/Day4 sonmarg.webp",
+      "/images/valley-of-leh-ladakh/DAY11 LEH.webp",
+      "/images/valley-of-leh-ladakh/DAY15 KALKA STATION 2.webp",
+      "/images/valley-of-leh-ladakh/LEH LADAKH MAIN PHOTO.webp",
+    ],
 
     perPerson: true,
 
@@ -2898,7 +3036,10 @@ const packages = [
             distance: "Train journey",
             description:
               "Board Train 13151 Jammu Tawi Express from Kolkata Railway Station. Overnight stay in train.",
-            images: [null, null],
+            images: [
+              "/images/valley-of-leh-ladakh/Day 1 kolkata station.webp",
+              "/images/valley-of-leh-ladakh/Day 1 at train.webp",
+            ],
           },
           {
             day: 2,
@@ -2906,7 +3047,10 @@ const packages = [
             distance: "Full day train journey",
             description:
               "Continue train journey towards Jammu. Overnight stay in train.",
-            images: [null, null],
+            images: [
+              "/images/valley-of-leh-ladakh/Day 2 train journey.webp",
+              "/images/valley-of-leh-ladakh/Day 2.webp",
+            ],
           },
           {
             day: 3,
@@ -2914,7 +3058,10 @@ const packages = [
             distance: "Train transfer",
             description:
               "Arrive at Jammu Railway Station and board Vande Bharat for Srinagar. Transfer to hotel on arrival. Overnight stay at Srinagar.",
-            images: [null, null],
+            images: [
+              "/images/valley-of-leh-ladakh/Day 3 reach jammu.webp",
+              "/images/valley-of-leh-ladakh/Day 3 srinagar.webp",
+            ],
           },
           {
             day: 4,
@@ -2922,7 +3069,10 @@ const packages = [
             distance: "201 km",
             description:
               "Drive through Sonamarg, Zoji La Pass, Drass, and Kargil War Memorial before reaching Kargil. Overnight stay at Kargil.",
-            images: [null, null],
+            images: [
+              "/images/valley-of-leh-ladakh/Day4 sonmarg.webp",
+              "/images/valley-of-leh-ladakh/Day 4 kargil memorial.webp",
+            ],
           },
           {
             day: 5,
@@ -2930,7 +3080,11 @@ const packages = [
             distance: "215 km",
             description:
               "Travel via Mulbek, Lamayuru, Moonland, and the confluence of Indus and Zanskar Rivers before reaching Leh. Overnight stay at Leh.",
-            images: [null, null],
+            images: [
+              "/images/valley-of-leh-ladakh/day 5 kargir.webp",
+              "/images/valley-of-leh-ladakh/day 5 lamayaru monastry.webp",
+              "/images/valley-of-leh-ladakh/day 5 moon loand.webp",
+            ],
           },
           {
             day: 6,
@@ -2938,7 +3092,12 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Leh Monastery, Leh Palace, Zorawar Fort, Shanti Stupa, Hall of Fame, Shey Palace, Shey Monastery, and Rancho School. Overnight stay at Leh.",
-            images: [null, null],
+            images: [
+              "/images/valley-of-leh-ladakh/day 6 shantistoop.webp",
+              "/images/valley-of-leh-ladakh/day 6 leh monastry.webp",
+              "/images/valley-of-leh-ladakh/day 6 leh palace.webp",
+              "/images/valley-of-leh-ladakh/day 6 rancho school.webp",
+            ],
           },
           {
             day: 7,
@@ -2946,7 +3105,11 @@ const packages = [
             distance: "150 km",
             description:
               "Cross the famous Khardung La Pass and enter Nubra Valley. Optional camel ride available at own cost. Overnight stay at Nubra Valley.",
-            images: [null, null],
+            images: [
+              "/images/valley-of-leh-ladakh/DAY 7 KHARDUNGLA PASS.webp",
+              "/images/valley-of-leh-ladakh/DAY 7 NUBRA CAMEL RIDE.webp",
+              "/images/valley-of-leh-ladakh/DAY NUBRA VALLEY.webp",
+            ],
           },
           {
             day: 8,
@@ -2954,7 +3117,10 @@ const packages = [
             distance: "Excursion",
             description:
               "Full-day excursion to Turtuk village near the Indo-Pak border region. Return to Nubra Valley for overnight stay.",
-            images: [null, null],
+            images: [
+              "/images/valley-of-leh-ladakh/DAY 8 NUBRA VALLEY.webp",
+              "/images/valley-of-leh-ladakh/DAY 8 Turtuk.webp",
+            ],
           },
           {
             day: 9,
@@ -2962,7 +3128,12 @@ const packages = [
             distance: "274 km",
             description:
               "Drive via Chang La Pass to the spectacular Pangong Lake. Enjoy the lakeside scenery and overnight stay near Pangong.",
-            images: [null, null],
+            images: [
+              "/images/valley-of-leh-ladakh/DAY 9 PANGONG.webp",
+              "/images/valley-of-leh-ladakh/DAY 9 PANGONG 2.webp",
+              "/images/valley-of-leh-ladakh/DAY 9 PANGONG LAKE.webp",
+              "/images/valley-of-leh-ladakh/DAY 9 PANGONG PHOTO.webp",
+            ],
           },
           {
             day: 10,
@@ -2970,7 +3141,11 @@ const packages = [
             distance: "310 km",
             description:
               "Proceed to the remote Hanle region known for its vast high-altitude plains and observatory area. Overnight stay at Hanle.",
-            images: [null, null],
+            images: [
+              "/images/valley-of-leh-ladakh/DAY 10 HANLE.webp",
+              "/images/valley-of-leh-ladakh/DAY 10 HANLE NIGHT LOOK.webp",
+              "/images/valley-of-leh-ladakh/DAY 10 NIGHT LOOK HANLE.webp",
+            ],
           },
           {
             day: 11,
@@ -2978,7 +3153,10 @@ const packages = [
             distance: "253 km",
             description:
               "Return to Leh through the scenic Ladakhi landscape. Overnight stay at Leh.",
-            images: [null, null],
+            images: [
+              "/images/valley-of-leh-ladakh/DAY 11 LEH.webp",
+              "/images/valley-of-leh-ladakh/DAY11 LEH.webp",
+            ],
           },
           {
             day: 12,
@@ -2986,7 +3164,11 @@ const packages = [
             distance: "356 km",
             description:
               "Drive via Tanglang La, Baralacha La, and the high Himalayan passes to Keylong. Overnight stay at Keylong.",
-            images: [null, null],
+            images: [
+              "/images/valley-of-leh-ladakh/DAY 12 KELONG.webp",
+              "/images/valley-of-leh-ladakh/DAY 12 KELONG 2.webp",
+              "/images/valley-of-leh-ladakh/DAY 12 ATAL TUNNEL.webp",
+            ],
           },
           {
             day: 13,
@@ -2994,7 +3176,10 @@ const packages = [
             distance: "70 km",
             description:
               "Travel through Atal Tunnel and Sissu village before reaching Manali. Overnight stay at Manali.",
-            images: [null, null],
+            images: [
+              "/images/valley-of-leh-ladakh/DAY 13 SISU VILLAGE.webp",
+              "/images/valley-of-leh-ladakh/DAY 12 ATAL TUNNEL.webp",
+            ],
           },
           {
             day: 14,
@@ -3002,7 +3187,11 @@ const packages = [
             distance: "Local sightseeing",
             description:
               "Visit Hadimba Temple, Tibetan Monastery, Handicraft Centre, and Old Vashisht Village. Overnight stay at Manali.",
-            images: [null, null],
+            images: [
+              "/images/valley-of-leh-ladakh/DAY 14 HIDIMBA TEMPLE.webp",
+              "/images/valley-of-leh-ladakh/DAY 14 HIDIMBA TEMPLE 2.webp",
+              "/images/valley-of-leh-ladakh/DAY 14 MANALI MALL.webp",
+            ],
           },
           {
             day: 15,
@@ -3010,7 +3199,10 @@ const packages = [
             distance: "266 km",
             description:
               "Drive to Kalka / Chandigarh Railway Station and board Netaji Express for Kolkata. Overnight stay in train.",
-            images: [null, null],
+            images: [
+              "/images/valley-of-leh-ladakh/DAY 15 KALKA STATION.webp",
+              "/images/valley-of-leh-ladakh/DAY15 KALKA STATION 2.webp",
+            ],
           },
           {
             day: 16,
@@ -3018,7 +3210,10 @@ const packages = [
             distance: "Full day train journey",
             description:
               "Continue return train journey towards Kolkata. Overnight stay in train.",
-            images: [null, null],
+            images: [
+              "/images/valley-of-leh-ladakh/DAY 16.webp",
+              null,
+            ],
           },
           {
             day: 17,
@@ -7574,9 +7769,39 @@ const packages = [
 
     title: "Thailand Singapore Malyasia",
 
-    image: null,
+    image: "/images/thailand-singapore-malyasia/day9.webp",
 
-    gallery: [null, null, null, null, null],
+    gallery: [
+      "/images/thailand-singapore-malyasia/day1.webp",
+      "/images/thailand-singapore-malyasia/day2.webp",
+      "/images/thailand-singapore-malyasia/day3.webp",
+      "/images/thailand-singapore-malyasia/day4.webp",
+      "/images/thailand-singapore-malyasia/day6.webp",
+      "/images/thailand-singapore-malyasia/day7.webp",
+      "/images/thailand-singapore-malyasia/day8.webp",
+      "/images/thailand-singapore-malyasia/day9.webp",
+      "/images/thailand-singapore-malyasia/day10.webp",
+      "/images/thailand-singapore-malyasia/day11.webp",
+      "/images/thailand-singapore-malyasia/day12 _.webp",
+      "/images/thailand-singapore-malyasia/day12.webp",
+      "/images/thailand-singapore-malyasia/day13.webp",
+      "/images/thailand-singapore-malyasia/day41.webp",
+      "/images/thailand-singapore-malyasia/day42.webp",
+      "/images/thailand-singapore-malyasia/day81.webp",
+      "/images/thailand-singapore-malyasia/day82.webp",
+      "/images/thailand-singapore-malyasia/day91.webp",
+      "/images/thailand-singapore-malyasia/day92.webp",
+      "/images/thailand-singapore-malyasia/day93.webp",
+      "/images/thailand-singapore-malyasia/day94.webp",
+      "/images/thailand-singapore-malyasia/day95.webp",
+      "/images/thailand-singapore-malyasia/day111.webp",
+      "/images/thailand-singapore-malyasia/day112.webp",
+      "/images/thailand-singapore-malyasia/day113.webp",
+      "/images/thailand-singapore-malyasia/day114.webp",
+      "/images/thailand-singapore-malyasia/day115.webp",
+      "/images/thailand-singapore-malyasia/day116.webp",
+      "/images/thailand-singapore-malyasia/day117.webp",
+    ],
 
     perPerson: true,
 
@@ -7604,107 +7829,154 @@ const packages = [
         itinerary: [
           {
             day: 1,
-            title: "Arrival Bangkok → Pattaya",
+            title: "Arrival in Pattaya",
             distance: "Airport transfer",
             description:
-              "Arrive at Suvarnabhumi Airport, transfer to Pattaya hotel with guaranteed early check-in. Visit Pattaya Beach area, enjoy Indian buffet lunch, Alcazar Show, Walking Street, dinner, and overnight stay at Pattaya.",
-            images: [null, null],
+              "Arrive at Suvarnabhumi Airport and transfer to the Pattaya hotel with guaranteed early check-in. Enjoy Pattaya Beach, known for its sparkling waters and tropical atmosphere. Enjoy an Indian buffet lunch and watch the Alcazar Cabaret Show, which opened on November 8, 1981. Explore Walking Street, enjoy dinner, and stay overnight at Pattaya.",
+            images: [
+              "/images/thailand-singapore-malyasia/day1.webp",
+              "/images/thailand-singapore-malyasia/day12.webp",
+            ],
           },
           {
             day: 2,
             title: "Pattaya Coral Island Tour",
             distance: "Speed boat excursion",
             description:
-              "Proceed to Coral Island by speed boat, enjoy beach activities, buffet lunch at Indian restaurant, Pattaya local market sightseeing, dinner, and overnight stay at Pattaya.",
-            images: [null, null],
+              "Proceed to Coral Island, officially known as Ko Lan or Koh Larn, located approximately 7.5 km off the coast of Pattaya in the Gulf of Thailand. Enjoy a speedboat excursion, beach activities, and a buffet lunch at an Indian restaurant. Explore the local market, enjoy dinner, and stay overnight at Pattaya.",
+            images: [
+              "/images/thailand-singapore-malyasia/day2.webp",
+              null,
+            ],
           },
           {
             day: 3,
             title: "Pattaya → Bangkok City Tour",
             distance: "Approx. 150 km",
             description:
-              "Check out and transfer to Bangkok. Visit Golden Temple, Marble Temple, and city attractions. Enjoy shopping at Indira Market, dinner, and overnight stay at Bangkok.",
-            images: [null, null],
+              "Check out from the Pattaya hotel and transfer to Bangkok. Visit the Marble Temple, officially known as Wat Benchamabophit Dusitvanaram, along with the Golden Temple and other city attractions. Enjoy shopping at Indira Market, dinner, and an overnight stay at Bangkok.",
+            images: [
+              "/images/thailand-singapore-malyasia/day3.webp",
+              null,
+            ],
           },
           {
             day: 4,
-            title: "Safari World & Chao Phraya Cruise",
+            title: "Safari World & Chao Phraya Princess Cruise",
             distance: "Local sightseeing",
             description:
-              "Visit Safari World with Marine Park including buffet lunch. In the evening enjoy Chao Phraya Princess Cruise dinner and overnight stay at Bangkok.",
-            images: [null, null],
+              "Visit Safari World and Marine Park in Bangkok, which opened on February 17, 1988. Enjoy the park attractions and buffet lunch. In the evening, experience a buffet dinner aboard the Chao Phraya Princess Cruise while viewing Bangkok's illuminated riverside landmarks, including Wat Arun and the Grand Palace. Overnight stay at Bangkok.",
+            images: [
+              "/images/thailand-singapore-malyasia/day4.webp",
+              "/images/thailand-singapore-malyasia/day41.webp",
+              "/images/thailand-singapore-malyasia/day42.webp",
+            ],
           },
           {
             day: 5,
             title: "Bangkok → Phuket",
             distance: "Flight transfer",
             description:
-              "Fly from Bangkok to Phuket, transfer to hotel, enjoy buffet lunch at Indian restaurant, leisure time, dinner, and overnight stay at Phuket.",
+              "Fly from Bangkok to Phuket and transfer to the hotel. Enjoy a buffet lunch at an Indian restaurant, leisure time, dinner, and an overnight stay at Phuket.",
             images: [null, null],
           },
           {
             day: 6,
-            title: "Phi Phi Island Excursion",
+            title: "Phuket & Phi Phi Island Excursion",
             distance: "Boat excursion",
             description:
-              "Full-day Phi Phi Island tour with beach visit and buffet lunch. Return to hotel for dinner and overnight stay at Phuket.",
-            images: [null, null],
+              "Enjoy a full-day excursion to the Phi Phi Islands, a famous tropical destination with a history as a seasonal shelter for Malay seafarers and sea nomads. Enjoy the island scenery, beach visits, and buffet lunch. Return to the hotel for dinner and an overnight stay at Phuket.",
+            images: [
+              "/images/thailand-singapore-malyasia/day6.webp",
+              null,
+            ],
           },
           {
             day: 7,
             title: "Phuket → Kuala Lumpur",
             distance: "Flight transfer",
             description:
-              "Fly to Kuala Lumpur, transfer to hotel, leisure evening, and overnight stay at Kuala Lumpur.",
-            images: [null, null],
+              "Take a flight from Phuket to Kuala Lumpur, Malaysia. Upon arrival, transfer to the hotel, enjoy the evening at leisure, and stay overnight at Kuala Lumpur.",
+            images: [
+              "/images/thailand-singapore-malyasia/day7.webp",
+              null,
+            ],
           },
           {
             day: 8,
             title: "Genting Highlands & Batu Caves",
             distance: "Approx. 55 km",
             description:
-              "Excursion to Genting Highlands with cable car, Snow World, gaming complex, Batu Caves visit, photo stops, dinner, and overnight stay at Genting/Kuala Lumpur.",
-            images: [null, null],
+              "Enjoy an excursion to Genting Highlands. Explore Genting SkyWorlds, which opened in February 2022, and experience Snow World, an indoor winter attraction offering a sub-zero alpine environment. Visit Batu Caves, a famous Hindu pilgrimage site formed within approximately 400-million-year-old limestone hills. Enjoy photo stops, dinner, and an overnight stay at Genting/Kuala Lumpur.",
+            images: [
+              "/images/thailand-singapore-malyasia/day8.webp",
+              "/images/thailand-singapore-malyasia/day81.webp",
+              "/images/thailand-singapore-malyasia/day82.webp",
+            ],
           },
           {
             day: 9,
             title: "Kuala Lumpur City Tour",
             distance: "Local sightseeing",
             description:
-              "Visit Petronas Twin Towers photo stop, Cocoa Centre, King’s Palace, National Monument, National Mosque, Independence Square, and overnight stay at Kuala Lumpur.",
-            images: [null, null],
+              "Explore Kuala Lumpur's major attractions. Enjoy a photo stop at the Petronas Twin Towers, visit the Cocoa Centre to learn about Malaysia's cocoa and chocolate industry, and see Istana Negara, the official residence of the King of Malaysia. Continue to the National Monument, National Mosque, and Independence Square, where Malaya proclaimed independence from British rule on August 31, 1957. Overnight stay at Kuala Lumpur.",
+            images: [
+              "/images/thailand-singapore-malyasia/day9.webp",
+              "/images/thailand-singapore-malyasia/day91.webp",
+              "/images/thailand-singapore-malyasia/day92.webp",
+              "/images/thailand-singapore-malyasia/day93.webp",
+              "/images/thailand-singapore-malyasia/day94.webp",
+              "/images/thailand-singapore-malyasia/day95.webp",
+            ],
           },
           {
             day: 10,
             title: "Kuala Lumpur → Singapore & Night Safari",
             distance: "Road transfer",
             description:
-              "Travel by road to Singapore, check in to hotel, and in the evening enjoy Night Safari with tram ride and wildlife experience. Overnight stay at Singapore.",
-            images: [null, null],
+              "Travel by road from Kuala Lumpur to Singapore and check in to the hotel. In the evening, visit Singapore Night Safari, the world's first nocturnal wildlife park, and enjoy a tram ride and wildlife experience. Overnight stay at Singapore.",
+            images: [
+              "/images/thailand-singapore-malyasia/day10.webp",
+              null,
+            ],
           },
           {
             day: 11,
-            title: "Singapore City & Sentosa Island",
+            title: "Singapore City Tour & Sentosa Island",
             distance: "Local sightseeing",
             description:
-              "Visit Marina Bay, SkyPark area, Sentosa Island, Mount Faber, Merlion Tower, Sky Ride, light and sound show, dinner, and overnight stay at Singapore.",
-            images: [null, null],
+              "Explore Marina Bay and the iconic Marina Bay Sands integrated resort, which officially opened in 2010. Visit the Sands SkyPark, located 56 storeys above the resort. Continue to Sentosa Island, a modern resort destination with a history as a military fortress. Visit Mount Faber, formerly known as Telok Blangah Hill, and explore the island's attractions. Learn about the former Sentosa Merlion, which stood from 1995 until 2019. Enjoy the Skyline Luge and Skyride chairlift, along with Singapore's spectacular light and sound shows. Dinner and overnight stay at Singapore.",
+            images: [
+              "/images/thailand-singapore-malyasia/day11.webp",
+              "/images/thailand-singapore-malyasia/day111.webp",
+              "/images/thailand-singapore-malyasia/day112.webp",
+              "/images/thailand-singapore-malyasia/day113.webp",
+              "/images/thailand-singapore-malyasia/day114.webp",
+              "/images/thailand-singapore-malyasia/day115.webp",
+              "/images/thailand-singapore-malyasia/day116.webp",
+              "/images/thailand-singapore-malyasia/day117.webp",
+            ],
           },
           {
             day: 12,
-            title: "Singapore Leisure / Universal Studios",
+            title: "Explore Singapore City / Universal Studios",
             distance: "Free day",
             description:
-              "Free day for leisure, shopping, or optional Universal Studios Singapore visit. Overnight stay at Singapore.",
-            images: [null, null],
+              "Enjoy a day exploring Singapore at your own pace, with time for leisure and shopping. Optionally, visit Universal Studios Singapore, which began its soft-opening phase on March 18, 2010, at Resorts World Sentosa. Overnight stay at Singapore.",
+            images: [
+              "/images/thailand-singapore-malyasia/day12 _.webp",
+            ],
           },
           {
             day: 13,
-            title: "Singapore Departure",
+            title: "Singapore Departure – Return to India",
             distance: "Airport transfer",
             description:
-              "Early morning check out and transfer to Singapore Airport for return flight to India with sweet memories of the tour.",
-            images: [null, null],
+              "Check out early in the morning and transfer to Singapore Airport for your return flight to India. The tour concludes with sweet memories of Thailand, Malaysia, and Singapore.",
+            images: [
+              "/images/thailand-singapore-malyasia/day13.webp",
+              null,
+            ],
           },
         ],
       },
