@@ -20,6 +20,15 @@ export default function PackageDetails() {
 
   const [selectedPackage, setSelectedPackage] = useState("");
 
+  const location =
+    typeof tour?.location === "string"
+      ? tour.location
+      : tour?.location?.[
+      selectedPackage.replace("package", "location")
+      ] ||
+      tour?.location?.location1 ||
+      "";
+
   useEffect(() => {
     window.scrollTo({
       top: 0,

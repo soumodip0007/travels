@@ -181,7 +181,13 @@ export default function BookingCard({
               </p>
 
               <p className="font-semibold text-white leading-relaxed break-words">
-                {tour.location}
+                {typeof tour.location === "string"
+                  ? tour.location
+                  : tour.location?.[
+                  selectedPackage.replace("package", "location")
+                  ] ||
+                  tour.location?.location1 ||
+                  ""}
               </p>
             </div>
 

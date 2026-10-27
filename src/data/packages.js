@@ -2778,16 +2778,55 @@ const packages = [
 
     title: "South India",
 
-    image: null,
+    image: "/images/kerala-kanyakumari/day5.webp",
 
-    gallery: [null, null, null, null, null],
+    gallery: ["/images/kerala-kanyakumari/day3.webp",
+      "/images/kerala-kanyakumari/day4.webp",
+      "/images/kerala-kanyakumari/day5.webp",
+      "/images/kerala-kanyakumari/day6.webp",
+      "/images/kerala-kanyakumari/day7.webp",
+      "/images/kerala-kanyakumari/day8.webp",
+      "/images/kerala-kanyakumari/day9.webp",
+      "/images/kerala-kanyakumari/day10.webp",
+      "/images/kerala-kanyakumari/day11.webp",
+      "/images/kerala-kanyakumari/day12.webp",
+      "/images/kerala-kanyakumari/day41.webp",
+      "/images/kerala-kanyakumari/day42.webp",
+      "/images/kerala-kanyakumari/day51.webp",
+      "/images/kerala-kanyakumari/day81.webp",
+      "/images/kerala-kanyakumari/day82.webp",
+      "/images/kerala-kanyakumari/day101.webp",
+      "/images/kerala-kanyakumari/day102.webp",
+      "/images/kerala-kanyakumari/day103.webp",
+      "/images/kerala-kanyakumari/day121.webp",
+      "/images/andhra-pradesh/day2.webp",
+      "/images/andhra-pradesh/day3.webp",
+      "/images/andhra-pradesh/day4.webp",
+      "/images/andhra-pradesh/day6.webp",
+      "/images/andhra-pradesh/day21.webp",
+      "/images/andhra-pradesh/day22.webp",
+      "/images/andhra-pradesh/day23.webp",
+      "/images/andhra-pradesh/day24.webp",
+      "/images/andhra-pradesh/day31.webp",
+      "/images/andhra-pradesh/day32.webp",
+      "/images/andhra-pradesh/day41.webp",
+      "/images/andhra-pradesh/day61.webp",
+      "/images/andhra-pradesh/day62.webp",
+      "/images/andhra-pradesh/day63.webp",
+      "/images/andhra-pradesh/day64.webp",
+    ],
 
     perPerson: true,
 
     rating: 8.7,
 
-    location:
-      "Tirupati • Chennai • Puducherry • Madurai • Rameshwaram • Kanyakumari",
+    // location:
+    //   "Tirupati • Chennai • Puducherry • Madurai • Rameshwaram • Kanyakumari",
+    location: {
+      location1: "Tirupati • Chennai • Puducherry • Madurai • Rameshwaram • Kanyakumari",
+      location2:
+        "Visakhapatnam • Rushikonda Beach • Kailasagiri • Araku Valley • Hyderabad • Charminar • Golconda Fort",
+    },
 
     facilities: [
       { id: 1, icon: Train, label: "Train Included" },
@@ -2825,90 +2864,195 @@ const packages = [
           },
           {
             day: 3,
-            title: "Tirupati Balaji Darshan",
-            distance: "Local visit",
+            title: "Reach Kanyakumari",
+            distance: "Local transfer",
             description:
-              "Early morning visit to Lord Tirupati Balaji Temple for darshan and puja. Return to hotel. Overnight stay at Tirupati.",
-            images: [null, null],
+              "Kanyakumari is the southernmost tip of mainland India, featuring a rich history shaped by ancient dynasties, maritime trade, and cultural shifts.",
+            images: [
+              "/images/kerala-kanyakumari/day3.webp",
+              null,
+            ],
           },
           {
             day: 4,
-            title: "Tirupati → Chennai",
-            distance: "Road transfer",
+            title: "Kanyakumari Sightseeing",
+            distance: "Local sightseeing",
             description:
-              "After breakfast proceed to Chennai. Overnight stay at Chennai.",
-            images: [null, null],
+              "Visit the Arulmigu Devi Kanyakumari Bhagavati Amman Temple, a 3,000-year-old shrine at India's southern tip in Tamil Nadu. Dedicated to the virgin goddess Devi Kanya Kumari, an incarnation of Parvati, it is revered as one of the 51 sacred Shakti Peethas where the spine of Goddess Sati is believed to have fallen. Also visit the Vivekananda Rock Memorial, built in 1970 to honor Swami Vivekananda's meditation at this sacred ocean rock in December 1892. Enjoy the beautiful ocean horizon and sunset views near the Triveni Sangam.",
+            images: [
+              "/images/kerala-kanyakumari/day4.webp",
+              "/images/kerala-kanyakumari/day41.webp",
+            ],
           },
           {
             day: 5,
-            title: "Chennai Sightseeing",
+            title: "Move to Kovalam with Sightseeing",
+            distance: "Road transfer",
+            description:
+              "Proceed to Kovalam and enjoy sightseeing. Visit Sree Padmanabhaswamy Temple in Thiruvananthapuram, located approximately 15 kilometres from Kovalam. Explore Kovalam Beach, which transformed from a quiet fishing village and royal retreat into one of India's most famous international beach destinations.",
+            images: [
+              "/images/kerala-kanyakumari/day5.webp",
+              "/images/kerala-kanyakumari/day51.webp",
+            ],
+          },
+          {
+            day: 6,
+            title: "Move to Alleppey",
+            distance: "Road transfer",
+            description:
+              "Proceed to Alappuzha, popularly known as Alleppey. Visit Alappuzha Beach, a historic maritime destination that developed as a bustling trading port during the 19th century and helped earn the city its title as the 'Venice of the East'.",
+            images: [
+              "/images/kerala-kanyakumari/day6.webp",
+              null,
+            ],
+          },
+          {
+            day: 7,
+            title: "Move to Thekkady",
+            distance: "Road transfer",
+            description:
+              "Travel to Thekkady, a destination known for its forests, wildlife, and spice plantations. Its history spans early tribal settlements, royal hunting grounds, British colonial spice plantations, and the establishment of the famous Periyar Tiger Reserve.",
+            images: [
+              "/images/kerala-kanyakumari/day7.webp",
+              null,
+            ],
+          },
+          {
+            day: 8,
+            title: "Thekkady Sightseeing",
             distance: "Local sightseeing",
             description:
-              "Visit Marina Beach, Gandhi Ghat, and Chennai local market. Overnight stay at Chennai.",
+              "Explore Periyar Lake, an artificial reservoir created in 1895 by the construction of the Mullaperiyar Dam across the Periyar River. Visit Periyar National Park, which began as a private game reserve in 1934, and the Kadathanadan Kalari Centre, established to preserve and promote Kalaripayattu, an ancient Indian martial art.",
+            images: [
+              "/images/kerala-kanyakumari/day8.webp",
+              "/images/kerala-kanyakumari/day81.webp",
+            ],
+          },
+          {
+            day: 9,
+            title: "Proceed to Munnar",
+            distance: "Road transfer",
+            description:
+              "Proceed to Munnar, a beautiful hill station in Kerala. The name Munnar means 'three rivers' in Malayalam, reflecting its location at the meeting point of the Mudrapuzha, Nallathanni, and Kundala streams.",
+            images: [
+              "/images/kerala-kanyakumari/day9.webp",
+              null,
+            ],
+          },
+          {
+            day: 10,
+            title: "Munnar Sightseeing",
+            distance: "Local sightseeing",
+            description:
+              "Visit Rajamalai in Eravikulam National Park, known for its protected habitat for the endangered Nilgiri tahr. Explore Mattupetty Dam, built between 1949 and 1953 for water storage and hydroelectric power. Also visit spice gardens and tea plantations. Munnar's plantation history began with coffee before disease affected the crops and led to a permanent shift towards tea cultivation.",
+            images: [
+              "/images/kerala-kanyakumari/day10.webp",
+              "/images/kerala-kanyakumari/day101.webp",
+            ],
+          },
+          {
+            day: 11,
+            title: "Move to Ernakulam",
+            distance: "Road transfer",
+            description:
+              "Proceed to Ernakulam, the central business district and commercial hub of Kochi in Kerala. Its history traces back to ancient maritime trade, early kingdoms, and changing colonial powers, evolving from a temple town into a modern urban centre.",
+            images: [
+              "/images/kerala-kanyakumari/day11.webp",
+              null,
+            ],
+          },
+          {
+            day: 12,
+            title: "Sightseeing in Ernakulam",
+            distance: "Local sightseeing",
+            description:
+              "Explore the historic attractions of Ernakulam and Fort Kochi. See the traditional Chinese fishing nets, known as Cheena vala, which are believed to have been introduced to the Kerala coast between 1350 and 1450 AD by traders from the court of Kublai Khan or the Chinese explorer Zheng He. Visit St. Francis Church in Fort Kochi, originally built in wood by Portuguese friars in 1503 and recognised as the oldest European church in India.",
+            images: [
+              "/images/kerala-kanyakumari/day12.webp",
+              "/images/kerala-kanyakumari/day121.webp",
+            ],
+          },
+          {
+            day: 13,
+            title: "Departure",
+            distance: "Departure transfer",
+            description:
+              "Complete your Kerala tour and proceed for your onward journey.",
+            images: [null, null],
+          },
+        ],
+      },
+      package2: {
+        duration: "6 Nights / 7 Days",
+        price: "Not Available",
+
+        itinerary: [
+          {
+            day: 1,
+            title: "Kolkata → Visakhapatnam",
+            distance: "Train journey",
+            description:
+              "Board a train from Howrah Railway Station to Visakhapatnam. Enjoy the overnight train journey towards Andhra Pradesh.",
+            images: [null, null],
+          },
+          {
+            day: 2,
+            title: "Visakhapatnam Sightseeing",
+            distance: "Local sightseeing",
+            description:
+              "Arrive in Visakhapatnam and begin sightseeing. Visit Rushikonda Beach, known for its scenic coastline and local legends; Kailasagiri Hill Park, offering panoramic views of the Bay of Bengal and its iconic Shiva-Parvati statue; INS Kursura Submarine Museum on RK Beach; a local lighthouse; and Ramanaidu Studios. Overnight stay at Visakhapatnam.",
+            images: [
+              "/images/andhra-pradesh/day2.webp",
+              "/images/andhra-pradesh/day21.webp",
+            ],
+          },
+          {
+            day: 3,
+            title: "Visakhapatnam Sightseeing",
+            distance: "Local sightseeing",
+            description:
+              "Visit Simhachalam Hill and the famous Sri Varaha Lakshmi Narasimha Temple, dedicated to an incarnation of Lord Vishnu. Continue to Ramakrishna Beach (RK Beach) and Yarada Beach, known for its natural beauty, fishing communities, and views near Dolphin's Nose. Overnight stay at Visakhapatnam.",
+            images: [
+              "/images/andhra-pradesh/day3.webp",
+              "/images/andhra-pradesh/day31.webp",
+            ],
+          },
+          {
+            day: 4,
+            title: "Visakhapatnam Sightseeing",
+            distance: "Excursion to Araku Valley",
+            description:
+              "Enjoy an excursion towards the Araku region. Explore Borra Caves, famous for their natural limestone formations shaped over millions of years by the Gosthani River. Visit the Araku Tribal Museum, established in 1996 to preserve and showcase the indigenous culture of the Eastern Ghats. Return to Visakhapatnam for an overnight stay.",
+            images: [
+              "/images/andhra-pradesh/day4.webp",
+              "/images/andhra-pradesh/day41.webp",
+            ],
+          },
+          {
+            day: 5,
+            title: "Visakhapatnam → Hyderabad",
+            distance: "Train journey",
+            description:
+              "After breakfast, proceed to Visakhapatnam Railway Station and board a train to Hyderabad. Arrive in Hyderabad and transfer to your hotel. Overnight stay at Hyderabad.",
             images: [null, null],
           },
           {
             day: 6,
-            title: "Chennai → Puducherry",
-            distance: "Road transfer",
+            title: "Hyderabad Sightseeing",
+            distance: "Local sightseeing",
             description:
-              "Travel to Puducherry and visit Seaside Promenade, Sri Aurobindo Ashram, Rock Beach, Paradise Beach, and Manakula Vinayagar Temple. Overnight stay at Puducherry.",
-            images: [null, null],
+              "Explore the historic and cultural attractions of Hyderabad. Visit Charminar, built in 1591 by Sultan Muhammad Quli Qutb Shah; Golconda Fort, which developed from a 12th-century mud fort into a granite citadel; Salar Jung Museum, renowned for its extensive art and antique collection; Birla Mandir, built between 1966 and 1976; and Lumbini Park, located beside Hussain Sagar Lake. Overnight stay at Hyderabad.",
+            images: [
+              "/images/andhra-pradesh/day6.webp",
+              "/images/andhra-pradesh/day61.webp",
+            ],
           },
           {
             day: 7,
-            title: "Puducherry → Madurai",
-            distance: "Road transfer",
-            description:
-              "After breakfast drive to Madurai. Evening visit to Meenakshi Temple. Overnight stay at Madurai.",
-            images: [null, null],
-          },
-          {
-            day: 8,
-            title: "Madurai → Rameshwaram",
-            distance: "Road transfer",
-            description:
-              "Proceed to Rameshwaram and visit Ramanathaswamy Temple and Dhanushkodi. Overnight stay at Rameshwaram.",
-            images: [null, null],
-          },
-          {
-            day: 9,
-            title: "Rameshwaram → Kanyakumari",
-            distance: "Road transfer",
-            description:
-              "After breakfast travel to Kanyakumari. Overnight stay at Kanyakumari.",
-            images: [null, null],
-          },
-          {
-            day: 10,
-            title: "Kanyakumari Sightseeing",
-            distance: "Local sightseeing",
-            description:
-              "Visit Vivekananda Rock Memorial and Kanyakumari Temple. Overnight stay at Kanyakumari.",
-            images: [null, null],
-          },
-          {
-            day: 11,
-            title: "Kanyakumari / Nagercoil → Kolkata",
+            title: "Hyderabad → Kolkata",
             distance: "Train journey",
             description:
-              "After breakfast transfer to Kanyakumari / Nagercoil Junction Railway Station and board train for Kolkata. Overnight stay in train.",
-            images: [null, null],
-          },
-          {
-            day: 12,
-            title: "Train Journey",
-            distance: "Full day train journey",
-            description:
-              "Continue return train journey towards Kolkata. Overnight stay in train.",
-            images: [null, null],
-          },
-          {
-            day: 13,
-            title: "Arrival at Howrah / Shalimar",
-            distance: "Train arrival",
-            description:
-              "Arrive at Howrah / Shalimar Railway Station with sweet memories of your South India tour.",
+              "After breakfast, transfer to Hyderabad Railway Station and board your return train to Kolkata. Your Andhra Pradesh and Telangana tour concludes with wonderful memories.",
             images: [null, null],
           },
         ],
@@ -3751,7 +3895,7 @@ const packages = [
 
     image: "/images/kinnaur-la-hul-spiti/day4_1.webp",
 
-    gallery: ["/images/kinnaur-la-hul-spiti/day2.Fwebp",
+    gallery: ["/images/kinnaur-la-hul-spiti/day2.webp",
       "/images/kinnaur-la-hul-spiti/day4_1.webp",
       "/images/kinnaur-la-hul-spiti/day4.webp",
       "/images/kinnaur-la-hul-spiti/day5_1.webp",
@@ -5486,9 +5630,27 @@ const packages = [
 
     title: "Kerala with Kanyakumari",
 
-    image: null,
+    image: "/images/kerala-kanyakumari/day6.webp",
 
-    gallery: [null, null, null, null, null],
+    gallery: ["/images/kerala-kanyakumari/day3.webp",
+      "/images/kerala-kanyakumari/day4.webp",
+      "/images/kerala-kanyakumari/day5.webp",
+      "/images/kerala-kanyakumari/day6.webp",
+      "/images/kerala-kanyakumari/day7.webp",
+      "/images/kerala-kanyakumari/day8.webp",
+      "/images/kerala-kanyakumari/day9.webp",
+      "/images/kerala-kanyakumari/day10.webp",
+      "/images/kerala-kanyakumari/day11.webp",
+      "/images/kerala-kanyakumari/day12.webp",
+      "/images/kerala-kanyakumari/day41.webp",
+      "/images/kerala-kanyakumari/day42.webp",
+      "/images/kerala-kanyakumari/day51.webp",
+      "/images/kerala-kanyakumari/day81.webp",
+      "/images/kerala-kanyakumari/day82.webp",
+      "/images/kerala-kanyakumari/day101.webp",
+      "/images/kerala-kanyakumari/day102.webp",
+      "/images/kerala-kanyakumari/day103.webp",
+      "/images/kerala-kanyakumari/day121.webp"],
 
     perPerson: true,
 
@@ -5511,119 +5673,142 @@ const packages = [
 
     packages: {
       package1: {
-        duration: "11 Nights / 14 Days",
-        price: 28500,
+        duration: "10 Nights / 13 Days",
+        price: 27500,
+
         itinerary: [
           {
             day: 1,
-            title: "Kolkata → Kanyakumari",
+            title: "Howrah / Shalimar → Tirupati",
             distance: "Train journey",
             description:
-              "Board Train 12665 from Howrah Railway Station at 4:15 PM for Kanyakumari. Overnight stay in train.",
+              "Board train from Howrah / Shalimar Railway Station for Tirupati. Overnight stay in train.",
             images: [null, null],
           },
           {
             day: 2,
-            title: "Train Journey",
-            distance: "Train journey",
+            title: "Arrival at Tirupati",
+            distance: "Railway station transfer",
             description:
-              "Full day train journey towards Kanyakumari. Overnight stay in train.",
+              "Arrive at Tirupati Railway Station and transfer to hotel. Overnight stay at Tirupati.",
             images: [null, null],
           },
           {
             day: 3,
-            title: "Arrival at Kanyakumari",
-            distance: "Railway station transfer",
+            title: "Reach Kanyakumari",
+            distance: "Local transfer",
             description:
-              "Arrive at Kanyakumari Railway Station and transfer to hotel. Overnight stay at Kanyakumari.",
-            images: [null, null],
+              "Kanyakumari is the southernmost tip of mainland India, featuring a rich history shaped by ancient dynasties, maritime trade, and cultural shifts.",
+            images: [
+              "/images/kerala-kanyakumari/day3.webp",
+              null,
+            ],
           },
           {
             day: 4,
             title: "Kanyakumari Sightseeing",
             distance: "Local sightseeing",
             description:
-              "Visit Kanyakumari Temple, Vivekananda Rock Memorial, and enjoy the famous sunset at the seashore. Overnight stay at Kanyakumari.",
-            images: [null, null],
+              "Visit the Arulmigu Devi Kanyakumari Bhagavati Amman Temple, a 3,000-year-old shrine at India's southern tip in Tamil Nadu. Dedicated to the virgin goddess Devi Kanya Kumari, an incarnation of Parvati, it is revered as one of the 51 sacred Shakti Peethas where the spine of Goddess Sati is believed to have fallen. Also visit the Vivekananda Rock Memorial, built in 1970 to honor Swami Vivekananda's meditation at this sacred ocean rock in December 1892. Enjoy the beautiful ocean horizon and sunset views near the Triveni Sangam.",
+            images: [
+              "/images/kerala-kanyakumari/day4.webp",
+              "/images/kerala-kanyakumari/day41.webp",
+            ],
           },
           {
             day: 5,
-            title: "Kanyakumari → Kovalam",
-            distance: "90 km",
+            title: "Move to Kovalam with Sightseeing",
+            distance: "Road transfer",
             description:
-              "Proceed to Kovalam. Visit Padmanabhaswamy Temple and Kovalam Beach. Overnight stay at Kovalam.",
-            images: [null, null],
+              "Proceed to Kovalam and enjoy sightseeing. Visit Sree Padmanabhaswamy Temple in Thiruvananthapuram, located approximately 15 kilometres from Kovalam. Explore Kovalam Beach, which transformed from a quiet fishing village and royal retreat into one of India's most famous international beach destinations.",
+            images: [
+              "/images/kerala-kanyakumari/day5.webp",
+              "/images/kerala-kanyakumari/day51.webp",
+            ],
           },
           {
             day: 6,
-            title: "Kovalam → Alleppey",
-            distance: "160 km",
+            title: "Move to Alleppey",
+            distance: "Road transfer",
             description:
-              "Drive to Alleppey. Optional backwater boat cruise in the afternoon at own cost. Overnight stay at Alleppey.",
-            images: [null, null],
+              "Proceed to Alappuzha, popularly known as Alleppey. Visit Alappuzha Beach, a historic maritime destination that developed as a bustling trading port during the 19th century and helped earn the city its title as the 'Venice of the East'.",
+            images: [
+              "/images/kerala-kanyakumari/day6.webp",
+              null,
+            ],
           },
           {
             day: 7,
-            title: "Alleppey → Thekkady",
-            distance: "140 km",
+            title: "Move to Thekkady",
+            distance: "Road transfer",
             description:
-              "Travel to Thekkady, famous for spice plantations and wildlife. Overnight stay at Thekkady.",
-            images: [null, null],
+              "Travel to Thekkady, a destination known for its forests, wildlife, and spice plantations. Its history spans early tribal settlements, royal hunting grounds, British colonial spice plantations, and the establishment of the famous Periyar Tiger Reserve.",
+            images: [
+              "/images/kerala-kanyakumari/day7.webp",
+              null,
+            ],
           },
           {
             day: 8,
             title: "Thekkady Sightseeing",
             distance: "Local sightseeing",
             description:
-              "Visit Periyar Lake, Periyar National Park, and Kadathanadan Kalari Centre (optional, own cost). Overnight stay at Thekkady.",
-            images: [null, null],
+              "Explore Periyar Lake, an artificial reservoir created in 1895 by the construction of the Mullaperiyar Dam across the Periyar River. Visit Periyar National Park, which began as a private game reserve in 1934, and the Kadathanadan Kalari Centre, established to preserve and promote Kalaripayattu, an ancient Indian martial art.",
+            images: [
+              "/images/kerala-kanyakumari/day8.webp",
+              "/images/kerala-kanyakumari/day81.webp",
+            ],
           },
           {
             day: 9,
-            title: "Thekkady → Munnar",
-            distance: "95 km",
+            title: "Proceed to Munnar",
+            distance: "Road transfer",
             description:
-              "Proceed to Munnar through beautiful hill roads and tea plantations. Overnight stay at Munnar.",
-            images: [null, null],
+              "Proceed to Munnar, a beautiful hill station in Kerala. The name Munnar means 'three rivers' in Malayalam, reflecting its location at the meeting point of the Mudrapuzha, Nallathanni, and Kundala streams.",
+            images: [
+              "/images/kerala-kanyakumari/day9.webp",
+              null,
+            ],
           },
           {
             day: 10,
             title: "Munnar Sightseeing",
             distance: "Local sightseeing",
             description:
-              "Visit Rajamalai (Eravikulam area), Mattupetty Dam, Spice Garden, coffee plantation, and surrounding viewpoints. Overnight stay at Munnar.",
-            images: [null, null],
+              "Visit Rajamalai in Eravikulam National Park, known for its protected habitat for the endangered Nilgiri tahr. Explore Mattupetty Dam, built between 1949 and 1953 for water storage and hydroelectric power. Also visit spice gardens and tea plantations. Munnar's plantation history began with coffee before disease affected the crops and led to a permanent shift towards tea cultivation.",
+            images: [
+              "/images/kerala-kanyakumari/day10.webp",
+              "/images/kerala-kanyakumari/day101.webp",
+            ],
           },
           {
             day: 11,
-            title: "Munnar → Kochi (Ernakulam)",
-            distance: "130 km",
+            title: "Move to Ernakulam",
+            distance: "Road transfer",
             description:
-              "Travel to Kochi / Ernakulam and check in to hotel. Overnight stay at Kochi.",
-            images: [null, null],
+              "Proceed to Ernakulam, the central business district and commercial hub of Kochi in Kerala. Its history traces back to ancient maritime trade, early kingdoms, and changing colonial powers, evolving from a temple town into a modern urban centre.",
+            images: [
+              "/images/kerala-kanyakumari/day11.webp",
+              null,
+            ],
           },
           {
             day: 12,
-            title: "Kochi Sightseeing & Departure",
-            distance: "Local sightseeing + train",
+            title: "Sightseeing in Ernakulam",
+            distance: "Local sightseeing",
             description:
-              "After breakfast visit Chinese Fishing Nets and Portuguese Church (boat ride optional, own cost). In the evening transfer to Ernakulam Railway Station and board train for Kolkata. Overnight stay in train.",
-            images: [null, null],
+              "Explore the historic attractions of Ernakulam and Fort Kochi. See the traditional Chinese fishing nets, known as Cheena vala, which are believed to have been introduced to the Kerala coast between 1350 and 1450 AD by traders from the court of Kublai Khan or the Chinese explorer Zheng He. Visit St. Francis Church in Fort Kochi, originally built in wood by Portuguese friars in 1503 and recognised as the oldest European church in India.",
+            images: [
+              "/images/kerala-kanyakumari/day12.webp",
+              "/images/kerala-kanyakumari/day121.webp",
+            ],
           },
           {
             day: 13,
-            title: "Train Journey",
-            distance: "Train journey",
+            title: "Departure",
+            distance: "Departure transfer",
             description:
-              "Full day train journey back to Kolkata. Overnight stay in train.",
-            images: [null, null],
-          },
-          {
-            day: 14,
-            title: "Arrival at Kolkata",
-            distance: "Train arrival",
-            description:
-              "Arrive at Howrah Railway Station with sweet memories of Kerala and Kanyakumari.",
+              "Complete your Kerala tour and proceed for your onward journey.",
             images: [null, null],
           },
         ],

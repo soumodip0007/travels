@@ -38,7 +38,7 @@ export default function TourCard({ tour }) {
 
   // Card theme: swapped — domestic tours now get the purple "Enquire Now" gradient,
   // international tours keep the original dark theme
-    const isInternational = tour.category === "international";
+  const isInternational = tour.category === "international";
 
   const cardThemeClass = isInternational
     ? "bg-gradient-to-br from-[#C026D3] via-[#A855F7] to-[#7C3AED]"
@@ -100,8 +100,8 @@ export default function TourCard({ tour }) {
 
         <div
           className={`absolute left-4 top-16 rounded-full px-4 py-1.5 text-xs font-bold text-white shadow-lg ${tour.category === "international"
-              ? "bg-gradient-to-r from-purple-600 to-pink-600"
-              : "bg-gradient-to-r from-sky-600 to-blue-700"
+            ? "bg-gradient-to-r from-purple-600 to-pink-600"
+            : "bg-gradient-to-r from-sky-600 to-blue-700"
             }`}
         >
           {tour.category} Tour
@@ -182,7 +182,14 @@ export default function TourCard({ tour }) {
 
             <div className="flex items-center gap-2">
               <MapPin size={16} className="flex-shrink-0 text-white/90" />
-              <span className="truncate font-medium">{tour.location}</span>
+
+              <span className="truncate font-medium">
+                {typeof tour.location === "string"
+                  ? tour.location
+                  : Object.values(tour.location || {}).find(
+                    (value) => typeof value === "string" && value.trim()
+                  ) || ""}
+              </span>
             </div>
 
           </div>
