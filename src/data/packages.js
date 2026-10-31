@@ -3582,9 +3582,21 @@ const packages = [
 
     title: "Kashmir",
 
-    image: null,
+    image: "/images/kashmir/kash_bg.webp",
 
-    gallery: [null, null, null, null, null],
+    gallery: [
+      "/images/kashmir/day3.webp",
+      "/images/kashmir/day5.webp",
+      "/images/kashmir/day6.webp",
+      "/images/kashmir/day7.webp",
+      "/images/kashmir/day8.webp",
+      "/images/kashmir/day9.webp",
+      "/images/kashmir/day10.webp",
+      "/images/kashmir/day1.webp",
+      "/images/kashmir/day101.webp",
+      "/images/kashmir/day102.webp",
+      "/images/kashmir/kash_bg.webp",
+    ],
 
     perPerson: true,
 
@@ -3632,8 +3644,8 @@ const packages = [
             title: "Jammu → Katra (Vaishno Devi)",
             distance: "Road transfer",
             description:
-              "Arrive at Jammu Railway Station and transfer to Katra. Evening Vaishno Devi yatra and darshan. Return to hotel. Overnight stay at Katra.",
-            images: [null, null],
+              "Arrive at Jammu Railway Station and transfer to Katra. Evening Vaishno Devi yatra and darshan. Return to hotel. Overnight stay at Katra.\n\nVaishno Devi shrine blends ancient Hindu mythology with regional traditions dating back hundreds of years. Geological studies of the holy cave estimate it to be nearly a million years old, while historical and scriptural roots trace the goddess's legend back to the Treta Yuga and the time of Lord Rama.",
+            images: ["/images/kashmir/day3.webp", null],
           },
           {
             day: 4,
@@ -3648,48 +3660,55 @@ const packages = [
             title: "Katra → Srinagar",
             distance: "Road transfer",
             description:
-              "Drive to Srinagar and transfer to hotel on arrival. Overnight stay at Srinagar.",
-            images: [null, null],
+              "Drive to Srinagar and transfer to hotel on arrival. Overnight stay at Srinagar.\n\nDal Lake in Srinagar evolved from ancient Hindu sacred sites to a royal Mughal pleasure resort, and later a distinct houseboat culture under British influence. Spanning about 18 square kilometers, it remains the vibrant \"Jewel in the Crown of Kashmir\".",
+            images: ["/images/kashmir/day5.webp", null],
           },
           {
             day: 6,
             title: "Sonamarg Excursion",
             distance: "Excursion",
             description:
-              "Full-day excursion to Sonamarg and return to Srinagar. Overnight stay at Srinagar.",
-            images: [null, null],
+              "Full-day excursion to Sonamarg and return to Srinagar. Overnight stay at Srinagar.\n\nSonamarg, meaning \"Meadow of Gold\", is a historic alpine valley in Jammu and Kashmir, India, sitting at 2,740 meters. For centuries, it served as a vital trade gateway on the ancient Silk Road connecting Kashmir to Tibet and China. It has transitioned from a royal hunting ground to a modern strategic military and tourist hub.",
+            images: ["/images/kashmir/day6.webp", null],
           },
           {
             day: 7,
             title: "Gulmarg Excursion",
             distance: "Excursion",
             description:
-              "Visit Gulmarg and return to Srinagar in the evening. Overnight stay at Srinagar.",
-            images: [null, null],
+              "Visit Gulmarg and return to Srinagar in the evening. Overnight stay at Srinagar.\n\nGulmarg, meaning \"Meadow of Flowers\", was originally named Gaurimarg by shepherds to honor the Hindu goddess Parvati. In the 16th century, Sultan Yusuf Shah Chak renamed it to Gulmarg. It later served as a royal retreat for Mughal emperors, a British summer and winter sports hub, and a modern ski destination.",
+            images: ["/images/kashmir/day7.webp", null],
           },
           {
             day: 8,
             title: "Srinagar Sightseeing",
             distance: "Local sightseeing",
             description:
-              "Visit Tulip Garden, Mughal Gardens, Chashme Shahi Garden, and local attractions. Optional Shikara ride on Dal Lake at own cost. Overnight stay at Srinagar.",
-            images: [null, null],
+              "Visit Tulip Garden, Mughal Gardens, Chashme Shahi Garden, and local attractions. Optional Shikara ride on Dal Lake at own cost. Overnight stay at Srinagar.\n\nThe Indira Gandhi Memorial Tulip Garden in Srinagar opened in 2007 to boost spring tourism in Kashmir. Formerly called Siraj Bagh or the Model Floriculture Center, this 74-acre site features seven terraced levels at the foot of the Zabarwan Range overlooking Dal Lake.\n\nChashme Shahi, meaning \"Royal Spring,\" was built in 1632 AD by Ali Mardan Khan, the governor of Mughal Emperor Shah Jahan. Shah Jahan ordered the construction as a gift for his eldest son, Prince Dara Shikoh. Set in the Zabarwan Range overlooking Dal Lake in Srinagar, it is the smallest of the famous Mughal gardens.",
+            images: [
+              "/images/kashmir/day8.webp",
+              "/images/kashmir/day81.webp",
+            ],
           },
           {
             day: 9,
             title: "Srinagar → Pahalgam",
             distance: "Road transfer",
             description:
-              "Drive to Pahalgam and enjoy the beautiful valley surroundings. Overnight stay at Pahalgam.",
-            images: [null, null],
+              "Drive to Pahalgam and enjoy the beautiful valley surroundings. Overnight stay at Pahalgam.\n\nPahalgam, located on the Lidder River in Anantnag, Jammu and Kashmir, evolved from a humble shepherd’s village—derived from pahal (shepherd) and gam (village)—into a prominent hill station and spiritual hub. Its history spans ancient pastoral roots, medieval rules, British colonial popularity, and modern geopolitical significance.",
+            images: ["/images/kashmir/day9.webp", null],
           },
           {
             day: 10,
             title: "Pahalgam Sightseeing",
             distance: "Local sightseeing",
             description:
-              "Visit Chandanwari, Betab Valley, and Aru Valley (optional and at own cost). Overnight stay at Pahalgam.",
-            images: [null, null],
+              "Visit Chandanwari, Betab Valley, and Aru Valley (optional and at own cost). Overnight stay at Pahalgam.\n\nChandanwari is a high-altitude mountain hamlet located 16 kilometers from Pahalgam in Jammu and Kashmir, sitting at an elevation of 2,895 meters. Historically, it is most famous as the gateway and traditional base camp for the sacred Amarnath Yatra pilgrimage.\n\nBetaab Valley, located 15 kilometers from Pahalgam in Jammu and Kashmir, was originally called Hajan or Hagan Valley. For generations, it was a remote, untouched alpine meadow used by local shepherds and a transit stop for Amarnath Yatra pilgrims. It gained nationwide fame and its current name after the 1983 blockbuster Bollywood film Betaab was shot there.\n\nAru Valley, located 12 kilometers upstream from Pahalgam in Jammu and Kashmir at 2,408 meters (7,900 feet), historically served as a high-altitude pastureland for local shepherds and semi-nomadic Gujjar and Bakarwal communities. In the early 20th century, British colonizers and European alpinists used it as a base for trekking and trout fishing. Today, it remains a serene village and a key gateway to Himalayan glaciers.",
+            images: [
+              "/images/kashmir/day10.webp",
+              "/images/kashmir/day101.webp",
+              "/images/kashmir/day102.webp",
+            ],
           },
           {
             day: 11,
@@ -4246,9 +4265,22 @@ const packages = [
 
     title: "Meghalaya",
 
-    image: null,
+    image: "/images/meghalaya/day4.webp",
 
-    gallery: [null, null, null, null, null],
+    gallery: [
+      "/images/meghalaya/day2.webp",
+      "/images/meghalaya/day3.webp",
+      "/images/meghalaya/day4.webp",
+      "/images/meghalaya/day5.webp",
+      "/images/meghalaya/day21.webp",
+      "/images/meghalaya/day31.webp",
+      "/images/meghalaya/day41.webp",
+      "/images/meghalaya/day42.webp",
+      "/images/meghalaya/day43.webp",
+      "/images/meghalaya/day44.webp",
+      "/images/meghalaya/day51.webp",
+      "/images/meghalaya/day52.webp",
+    ],
 
     perPerson: true,
 
@@ -4284,35 +4316,51 @@ const packages = [
           },
           {
             day: 2,
-            title: "Arrival at Guwahati",
-            distance: "Railway station transfer",
+            title: "Guwahati → Kamakhya & Baglamukhi Mandir",
+            distance: "Local sightseeing",
             description:
-              "Arrive at Guwahati and transfer to hotel. Visit Vasistha Ashram, Kamakhya Temple, and Balaji Temple depending on arrival time. Overnight stay at Guwahati.",
-            images: [null, null],
+              "Arrive at Guwahati and transfer to hotel. Visit Kamakhya Temple and Baglamukhi Mandir. Overnight stay at Guwahati.\n\nThe Kamakhya Temple, located on the Nilachal Hill in Guwahati, Assam, is one of the oldest and most revered Shakti Pithas. Dating back structurally to the 8th–9th century, it honors the mother goddess Kamakhya, symbolizing creation and divine feminine energy through a natural stone in the shape of a yoni.\n\nThe history of the Baglamukhi temples is rooted in Hindu mythology from the Satya Yuga, when Lord Vishnu performed penance by a turmeric lake (Haridra Sarovar) to appease the Divine Mother, who manifested as Goddess Baglamukhi to calm a destructive cosmic storm. Several prominent ancient and modern shrines are dedicated to her across India.",
+            images: [
+              "/images/meghalaya/day2.webp",
+              "/images/meghalaya/day21.webp",
+            ],
           },
           {
             day: 3,
             title: "Guwahati → Shillong",
             distance: "100 km",
             description:
-              "After breakfast transfer to Shillong via the scenic Borapani (Umiam) Lake. Overnight stay at Shillong.",
-            images: [null, null],
+              "After breakfast transfer to Shillong via the scenic Borapani (Umiam) Lake. Overnight stay at Shillong.\n\nBorapani Lake, officially known as Umiam Lake, is a vast man-made reservoir located 15 km north of Shillong in Meghalaya, India. Created in the early 1960s by the Assam State Electricity Board by damming the Umiam River, it served as Northeast India's first major reservoir-based hydroelectric project.\n\nShillong, the capital of Meghalaya, started as a small Khasi village. It got its name from the local deity, Lei Shyllong. The British made it a civil station in 1864 and the capital of undivided Assam in 1874 because of its cool weather. People call it the \"Scotland of the East\".",
+            images: [
+              "/images/meghalaya/day3.webp",
+              "/images/meghalaya/day31.webp",
+            ],
           },
           {
             day: 4,
-            title: "Cherrapunji Excursion",
+            title: "Shillong → Cherrapunji",
             distance: "Full day excursion",
             description:
-              "Visit Nohkalikai Falls, Seven Sisters Falls, Dainthlen Falls, Thangkharang Park, Elephanta Falls, Living Root Bridge, and Ramakrishna Mission. Return to Shillong for overnight stay.",
-            images: [null, null],
+              "Visit Nohkalikai Falls, Seven Sisters Falls, Dainthlen Falls, Thangkharang Park, Elephant Falls, Living Root Bridge, and Ramakrishna Mission. Return to Shillong for overnight stay.\n\nThe Seven Sisters Waterfalls near Cherrapunji (Sohra), Meghalaya, drop 315 meters (1,033 feet) over limestone cliffs. Its name honors the seven northeastern states of India, while local Khasi folklore tells a tragic tale of seven sisters who transformed into cascading streams.\n\nCherrapunji, officially named Sohra, is a historic clifftop cluster of villages in Meghalaya, India.\n\nElephant Falls was originally named Ka Kshaid Lai Pateng Khohsiew (\"The Three-Step Waterfall\") by the indigenous Khasi people. British colonial officers renamed it after a giant elephant-shaped rock near the base. This landmark rock was destroyed in the massive 1897 Assam earthquake, but the English name remained.\n\nEstablished in the late 20th century by the State Forest Department, Thangkharang Park in Sohra (Cherrapunji), Meghalaya, was developed to conserve local biodiversity and promote ecological tourism. Its name translates to \"Garden of the Sky,\" rooted in Khasi folklore depicting the site as a divine resting place.\n\nDainthlen Falls gets its name from a powerful Khasi legend about a giant, evil serpent called the Thlen. The name \"Daiñthlen\" translates to \"the place where the Thlen was cut\", marking the site where local villagers finally slew the creature to end its reign of terror.",
+            images: [
+              "/images/meghalaya/day4.webp",
+              "/images/meghalaya/day41.webp",
+              "/images/meghalaya/day42.webp",
+              "/images/meghalaya/day43.webp",
+              "/images/meghalaya/day44.webp",
+            ],
           },
           {
             day: 5,
-            title: "Mawlynnong & Dawki",
+            title: "Shillong Stay – Mawlynnong & Dawki",
             distance: "Full day excursion",
             description:
-              "Explore Mawlynnong village and enjoy the crystal-clear Dawki River. Overnight stay at Shillong.",
-            images: [null, null],
+              "Explore Mawlynnong village and enjoy the crystal-clear Dawki River. Visit the Living Root Bridge. Overnight stay at Shillong.\n\nThe Dawki River, officially named the Umngot River, originates near Shillong Peak in Meghalaya and flows past the border town of Dawki. Historically, it served as a vital trade link between the Khasi-Jaintia Hills and the plains of Bangladesh. In 1932, the British built the Dawki Suspension Bridge to connect trade routes.\n\nThe living root bridges of Meghalaya were invented centuries ago by the indigenous Khasi and Jaintia tribes. Faced with fierce monsoon torrents that washed away standard wood or bamboo footbridges, these communities learned to guide the aerial roots of the rubber fig tree (Ficus elastica) across rivers to grow organic, flood-resilient suspension spans.\n\nMawlynnong in the East Khasi Hills of Meghalaya was founded as a traditional Khasi tribal farming community. It gained international fame in 2003 when Discover India magazine declared it Asia's Cleanest Village, earning it the affectionate nickname \"God's Own Garden\" for its deep-rooted conservation and pristine lifestyle.",
+            images: [
+              "/images/meghalaya/day5.webp",
+              "/images/meghalaya/day51.webp",
+              "/images/meghalaya/day52.webp",
+            ],
           },
           {
             day: 6,
@@ -4467,9 +4515,25 @@ const packages = [
 
     title: "North India",
 
-    image: null,
+    image: "/images/north-india/day3.webp",
 
-    gallery: [null, null, null, null, null],
+    gallery: [
+      "/images/north-india/day3.webp",
+      "/images/north-india/day4.webp",
+      "/images/north-india/day6.webp",
+      "/images/north-india/day7.webp",
+      "/images/north-india/day8.webp",
+      "/images/north-india/day9.webp",
+      "/images/north-india/day31.webp",
+      "/images/north-india/day32.webp",
+      "/images/north-india/day41.webp",
+      "/images/north-india/day42.webp",
+      "/images/north-india/day43.webp",
+      "/images/north-india/day61.webp",
+      "/images/north-india/day62.webp",
+      "/images/north-india/day63.webp",
+      "/images/north-india/day91.webp",
+    ],
 
     perPerson: true,
 
@@ -4513,19 +4577,28 @@ const packages = [
           },
           {
             day: 3,
-            title: "Agra → Vrindavan",
+            title: "Agra Local Sightseeing → Vrindavan",
             distance: "80 km",
             description:
-              "Visit Taj Mahal, Agra Fort, and Fatehpur Sikri. Later proceed to Vrindavan. Overnight stay at Vrindavan.",
-            images: [null, null],
+              "Visit Taj Mahal, Agra Fort, and Fatehpur Sikri. Later proceed to Vrindavan. Overnight stay at Vrindavan.\n\nTaj Mahal was commissioned in 1631 by the fifth Mughal emperor, Shah Jahan, as a majestic mausoleum for his beloved wife, Mumtaz Mahal.\n\nAgra Fort is a 16th-century historical UNESCO World Heritage Site in Agra, India, that served as the main residence of the Mughal emperors until 1638.\n\nFatehpur Sikri is a 16th-century planned city in India built by Mughal Emperor Akbar that served as the empire's capital from 1571 to 1585.",
+            images: [
+              "/images/north-india/day3.webp",
+              "/images/north-india/day31.webp",
+              "/images/north-india/day32.webp",
+            ],
           },
           {
             day: 4,
-            title: "Mathura & Vrindavan",
+            title: "Mathura & Vrindavan Sightseeing",
             distance: "Local sightseeing",
             description:
-              "Visit Shri Krishna Janmabhoomi, ISKCON Temple, Madan Mohan Temple, and Shahji Temple. Overnight stay at Vrindavan.",
-            images: [null, null],
+              "Visit Shri Krishna Janmabhoomi, ISKCON Temple, Madan Mohan Temple, and Shahji Temple. Overnight stay at Vrindavan.\n\nLord Krishna's birthplace is the Shri Krishna Janmabhoomi temple complex located in the historic city of Mathura, Uttar Pradesh, India.\n\nThe ISKCON Temple in Vrindavan (Sri Krishna-Balarama Mandir) was built in 1975 by A.C. Bhaktivedanta Swami Prabhupada, the founder-acharya of the International Society for Krishna Consciousness.\n\nThe historic Madan Mohan Temple in Bishnupur, West Bengal, was built in 1694 CE by King Durjan Singha Dev of the Malla dynasty.\n\nThe Shahji Temple (formally known as Lalit Nikunj and colloquially referred to by some Bengali pilgrims as Sonar Talgach due to its legendary opulence and golden treasures) is one of the most structurally unique and historic temples in Vrindavan, Uttar Pradesh. Completed in 1868 (with final enhancements lasting until 1876), it stands out as a striking blend of Awadhi, Mughal, European, and traditional Rajasthani architecture.",
+            images: [
+              "/images/north-india/day4.webp",
+              "/images/north-india/day41.webp",
+              "/images/north-india/day42.webp",
+              "/images/north-india/day43.webp",
+            ],
           },
           {
             day: 5,
@@ -4540,32 +4613,40 @@ const packages = [
             title: "Delhi Sightseeing",
             distance: "Local sightseeing",
             description:
-              "Visit Rajghat, Qutub Minar, Red Fort, Indira Museum, Lotus Temple, and India Gate. Overnight stay at Delhi.",
-            images: [null, null],
+              "Visit Rajghat, Qutub Minar, Red Fort, Indira Museum, Lotus Temple, and India Gate. Overnight stay at Delhi.\n\nRaj Ghat in Delhi is a serene black marble memorial marking the spot where Mahatma Gandhi was cremated on January 31, 1948.\n\nThe Qutub Minar is a 72.5-meter (238-foot) tall brick minaret in Delhi, India, built as a victory tower and a landmark of early Indo-Islamic architecture.\n\nThe Lotus Temple in New Delhi was completed in December 1986 as a Baháʼí House of Worship open to people of all religions and backgrounds.\n\nIndia Gate is a 42-meter-high war memorial in New Delhi built to honor soldiers who died in World War I and the Third Anglo-Afghan War.",
+            images: [
+              "/images/north-india/day6.webp",
+              "/images/north-india/day61.webp",
+              "/images/north-india/day62.webp",
+              "/images/north-india/day63.webp",
+            ],
           },
           {
             day: 7,
             title: "Delhi → Haridwar",
             distance: "Train journey",
             description:
-              "Take morning train to Haridwar. Enjoy Ganga bath and evening Ganga Aarti. Overnight stay at Haridwar.",
-            images: [null, null],
+              "Take morning train to Haridwar. Enjoy Ganga bath and evening Ganga Aarti. Overnight stay at Haridwar.\n\nThe evening Ganga Aarti at Haridwar's Har Ki Pauri ghat is a daily devotional ritual thanking the River Ganga that was formally started in 1916 by freedom fighter Pandit Madan Mohan Malviya.",
+            images: ["/images/north-india/day7.webp", null],
           },
           {
             day: 8,
             title: "Rishikesh Excursion",
             distance: "Local excursion",
             description:
-              "Visit Ram Jhula and Laxman Jhula in Rishikesh. Return to Haridwar for overnight stay.",
-            images: [null, null],
+              "Visit Ram Jhula and Laxman Jhula in Rishikesh. Return to Haridwar for overnight stay.\n\nRam Jhula in Rishikesh is an iconic 750-foot (230-meter) iron suspension bridge built in 1986 that spans the holy Ganges River.",
+            images: ["/images/north-india/day8.webp", null],
           },
           {
             day: 9,
             title: "Mussoorie Excursion & Departure",
             distance: "Local excursion + train",
             description:
-              "Visit Kempty Falls and Sahastradhara in Mussoorie. Return to Haridwar and board train for Kolkata. Overnight stay in train.",
-            images: [null, null],
+              "Visit Kempty Falls and Sahastradhara in Mussoorie. Return to Haridwar and board train for Kolkata. Overnight stay in train.\n\nKempty Falls near Mussoorie was developed as a popular colonial picnic and tourist spot around 1835 by British officer John Mekinan.\n\nSahastradhara (meaning \"thousand-fold spring\") is a famous natural sulfur spring located on the outskirts of Dehradun, Uttarakhand, rather than in Mussoorie itself, though it sits on the scenic route leading up toward the Mussoorie hills.",
+            images: [
+              "/images/north-india/day9.webp",
+              "/images/north-india/day91.webp",
+            ],
           },
           {
             day: 10,
@@ -5154,9 +5235,38 @@ const packages = [
 
     title: "Karnataka",
 
-    image: null,
+    image: "/images/karnataka/day44.webp",
 
-    gallery: [null, null, null, null, null],
+    gallery: [
+      "/images/karnataka/day3.webp",
+      "/images/karnataka/day4.webp",
+      "/images/karnataka/day5.webp",
+      "/images/karnataka/day6.webp",
+      "/images/karnataka/day7.webp",
+      "/images/karnataka/day8.webp",
+      "/images/karnataka/day9.webp",
+      "/images/karnataka/day11.webp",
+      "/images/karnataka/day12.webp",
+      "/images/karnataka/day13.webp",
+      "/images/karnataka/day41.webp",
+      "/images/karnataka/day42.webp",
+      "/images/karnataka/day43.webp",
+      "/images/karnataka/day44.webp",
+      "/images/karnataka/day45.webp",
+      "/images/karnataka/day46.webp",
+      "/images/karnataka/day47.webp",
+      "/images/karnataka/day51.webp",
+      "/images/karnataka/day71.webp",
+      "/images/karnataka/day72.webp",
+      "/images/karnataka/day73.webp",
+      "/images/karnataka/day91.webp",
+      "/images/karnataka/day92.webp",
+      "/images/karnataka/day93.webp",
+      "/images/karnataka/day94.webp",
+      "/images/karnataka/day111.webp",
+      "/images/karnataka/day112.webp",
+      "/images/karnataka/day121.webp",
+    ],
 
     perPerson: true,
 
@@ -5179,7 +5289,7 @@ const packages = [
 
     packages: {
       package1: {
-        duration: "11 Nights / 12 Days",
+        duration: "12 Nights / 13 Days",
         price: 28500,
         itinerary: [
           {
@@ -5194,88 +5304,139 @@ const packages = [
             day: 2,
             title: "Train Journey",
             distance: "Train journey",
-            description: "Full day train journey. Overnight stay in train.",
+            description:
+              "Full day train journey towards Mangaluru. Overnight stay in train.",
             images: [null, null],
           },
           {
             day: 3,
-            title: "Arrival at Udupi",
-            distance: "Mangaluru → Udupi",
+            title: "Reach at Hospete",
+            distance: "Mangaluru → Hospete",
             description:
-              "Arrive at Mangaluru Railway Station and transfer to Udupi hotel. Overnight stay at Udupi.",
-            images: [null, null],
+              "Arrive at Mangaluru and proceed towards Hospete. Hosapete (officially renamed from Hospet in 2014) was founded in 1520 CE by Krishna Deva Raya, the legendary ruler of the Vijayanagara Empire. Overnight stay at Hospete.",
+            images: [
+              "/images/karnataka/day3.webp",
+              null,
+            ],
           },
           {
             day: 4,
-            title: "Udupi Sightseeing",
+            title: "Hampi Sightseeing – Hospet Stay",
             distance: "Local sightseeing",
             description:
-              "Visit Shri Krishna Math, Shri Anantheshwara Temple, Pajaka Kshetra, Corporation Bank Heritage Museum, Koodlutheertha Falls, and Shri Indrani Panchadurga Parameshwari Temple. Overnight stay at Udupi.",
-            images: [null, null],
+              "Explore the historical city of Hampi and its remarkable monuments.Virupaksha Temple: The Virupaksha Temple in Hampi, Karnataka, is a 7th-century sanctuary dedicated to Lord Shiva. It grew from a small shrine into a vast complex under the Vijayanagara Empire, and it remains one of India's oldest continuously functioning places of worship. Hampi: Hampi was the grand and wealthy capital of the Vijayanagara Empire from 1336 to 1565. Set along the Tungabhadra River in Karnataka, it grew into one of the largest and richest medieval cities in the world before invading sultanates sacked and abandoned it. Hampi Archaeological Museum: The Hampi Archaeological Museum in Kamalapura was first established in 1956 and later moved to its current dedicated building in 1972 by the Archaeological Survey of India (ASI) to preserve and display artifacts from the Vijayanagara Empire. Tungabhadra Dam: The Tungabhadra Dam, also called Pampa Sagar, was built across the Tungabhadra River in Hosapete, Karnataka. Construction began in 1949 as a joint project between the Madras Presidency and the Kingdom of Hyderabad, and was completed in 1953 under chief architect Dr. M. S. Tirumale Iyengar. Shri Huligemma Devi Temple: The historic Shri Huligemma Devi Temple in Huligi village near Munirabad, Koppal District, Karnataka, dates back over 800 to 1,000 years. Situated on the Tungabhadra River banks, its origins tie to the Chalukya dynasty and local legends of ardent devotees who established the self-manifested (swayambhu) deity of Adi Shakti. Anjanadri Betta: Anjanadri Betta (Anjanadri Hill) is a sacred hill in Hanumanahalli near Hampi in Karnataka, India. It is revered in Hindu tradition as the mythical birthplace of Lord Hanuman. Named after Hanuman's mother, Anjana Devi, the site sits in the historic Kishkinda region and features a hilltop temple with a rock-carved idol. Tungabhadra Dam Park and Mini-Zoo: The Tungabhadra Dam and its adjacent park and mini-zoo in Hospet, Karnataka, were built alongside the major reservoir project initiated in 1949 and completed in 1953. Hazara Rama Temple: The Hazara Rama Temple in Hampi, Karnataka, was built in the early 15th century by King Devaraya II of the Vijayanagara Empire. It served as the private, royal place of worship for the kings and their families, featuring exquisite bas-relief stone carvings of the epic Ramayana. Overnight stay at Hospete.",
+            images: [
+              "/images/karnataka/day4.webp",
+              "/images/karnataka/day41.webp",
+              "/images/karnataka/day42.webp",
+              "/images/karnataka/day43.webp",
+              "/images/karnataka/day44.webp",
+              "/images/karnataka/day45.webp",
+              "/images/karnataka/day46.webp",
+              "/images/karnataka/day47.webp",
+            ],
           },
           {
             day: 5,
-            title: "Udupi → Coorg",
-            distance: "Approx. 190 km",
+            title: "Hospet → Badami",
+            distance: "Approx. 140 km",
             description:
-              "After breakfast proceed to Coorg. Overnight stay at Coorg.",
-            images: [null, null],
+              "After breakfast, proceed towards Badami. Visit the famous Badami Cave Temples and Agastya Lake. Badami Cave Temples: The Badami Cave Temples in northern Karnataka, India, were carved out of red sandstone cliffs between the 6th and 7th centuries. They served as a cultural and architectural marvel for the early Chalukya dynasty, when the city was known as Vatapi.  Agastya Lake: Agastya Lake is an ancient, man-made reservoir in Badami, Karnataka, built between the 5th and 7th centuries during the early Chalukya dynasty. Overnight stay at Badami.",
+            images: [
+              "/images/karnataka/day5.webp",
+              "/images/karnataka/day51.webp",
+            ],
           },
           {
             day: 6,
-            title: "Coorg Sightseeing",
-            distance: "Local sightseeing",
+            title: "Badami → Gokarna",
+            distance: "Via Hubballi",
             description:
-              "Visit Abbey Falls, Namdroling Monastery (Golden Temple), Iruppu Falls, and nearby attractions. Overnight stay at Coorg.",
-            images: [null, null],
+              "After breakfast, proceed towards Gokarna via Hubballi. Hubballi: Hubballi, officially known as Hubli, is a major commercial and industrial city in the Indian state of Karnataka with origins dating back to the 11th and 12th century under the Chalukya dynasty. On arrival, check in to the hotel. Overnight stay at Gokarna.",
+            images: [
+              "/images/karnataka/day6.webp",
+              null,
+            ],
           },
           {
             day: 7,
-            title: "Coorg → Mysuru",
-            distance: "Approx. 120 km",
+            title: "Gokarna Sightseeing",
+            distance: "Local sightseeing",
             description:
-              "Proceed to Mysuru via Buddhist Monastery and Brindavan Gardens. Visit Mysore Palace. Overnight stay at Mysuru.",
-            images: [null, null],
+              "Explore the beautiful beaches and spiritual attractions of Gokarna. Om Beach: Om Beach in Gokarna, Karnataka, gets its name from its naturally formed coastline that mirrors the sacred spiritual symbol Om (ॐ). Gokarna Main Beach: Gokarna Main Beach is a sacred coastal stretch in Karnataka tied to ancient Hindu mythology and the founding history of the Shree Mahabaleshwara Temple. Belekan Beach: Belekan Beach does not have a major recorded ancient history of its own, but has long served as a quiet fishing hamlet near Tadadi Port in Karnataka. Gogarbha Shiva Cave: A sacred underground meditation site located in the hills near Kudle Beach in Shiva Cave Gokarna. Overnight stay at Gokarna.",
+            images: [
+              "/images/karnataka/day7.webp",
+              "/images/karnataka/day71.webp",
+              "/images/karnataka/day72.webp",
+              "/images/karnataka/day73.webp",
+            ],
           },
           {
             day: 8,
-            title: "Mysuru → Hospet",
-            distance: "Approx. 340 km",
+            title: "Gokarna → Udupi",
+            distance: "Via Jog Falls",
             description:
-              "After breakfast drive to Hospet. Overnight stay at Hospet.",
-            images: [null, null],
+              "After breakfast, proceed towards Udupi via Jog Falls. Jog Falls: Jog Falls has a rich history tied to the geological evolution of the Western Ghats, ancient Hindu legends, and its development as one of India's earliest hydroelectric power centers. Continue the journey towards Udupi. On arrival, check in to the hotel. Overnight stay at Udupi.",
+            images: [
+              "/images/karnataka/day8.webp",
+              null,
+            ],
           },
           {
             day: 9,
-            title: "Hampi Excursion",
-            distance: "Local excursion",
+            title: "Udupi Sightseeing",
+            distance: "Local sightseeing",
             description:
-              "Explore Virupaksha Temple, Hampi, Stone Chariot, Hampi Archaeological Museum, Tungabhadra Dam, Shri Huligemma Devi Temple, TB Dam Zoo & Park, and Hazara Rama Temple. Overnight stay at Hospet.",
-            images: [null, null],
+              "Visit the famous temples and attractions of Udupi. Udupi Sri Krishna Matha: Founded in the 13th century by the philosopher Madhvacharya, the Udupi Sri Krishna Matha is a renowned Hindu pilgrimage site. Legend states Madhvacharya rescued the idol of Lord Krishna from a sinking ship near Malpe and enshrined it, eventually setting up eight unique monasteries to run its daily worship. Anandeshwar Temple: The Anandeshwar Temple in Permat, Kanpur, is an ancient Lord Shiva temple on the Ganges River. Its origins date back to the Mahabharata era, where a self-manifested (Swayambhu) Shivling was discovered after a cow named Anandi offered her milk there. The current structure underwent major 18th-century renovations. Corporation Bank Heritage Museum: The Corporation Bank Heritage Museum in Udupi, Karnataka, showcases the rich history of Indian currency and banking. It was dedicated to the nation in 2011. Koodlutheertha Falls: Koodlutheertha Falls is a sacred and scenic natural waterfall in Karnataka's Udupi district formed by the River Sita. Shri Indrani Panchadurga Parameshwari Temple: The Shri Indrani Panchadurga Parameshwari Temple is an ancient 11th-century shrine located in Udupi, Karnataka, dedicated to Goddess Durga. Overnight stay at Udupi.",
+            images: [
+              "/images/karnataka/day9.webp",
+              "/images/karnataka/day91.webp",
+              "/images/karnataka/day92.webp",
+              "/images/karnataka/day93.webp",
+              "/images/karnataka/day94.webp",
+            ],
           },
           {
             day: 10,
-            title: "Hospet → Bengaluru",
-            distance: "Approx. 340 km",
+            title: "Udupi → Coorg",
+            distance: "Approx. 180–200 km",
             description:
-              "Drive to Bengaluru and check in to hotel. Evening free for leisure. Overnight stay at Bengaluru.",
+              "After breakfast, proceed to Coorg from Udupi. Enjoy the scenic journey through the Western Ghats. Upon arrival, check in to the hotel and spend the rest of the day at leisure. Overnight stay at Coorg.",
             images: [null, null],
           },
           {
             day: 11,
-            title: "Bengaluru Departure",
-            distance: "Railway station transfer",
+            title: "Coorg Sightseeing",
+            distance: "Local sightseeing",
             description:
-              "After breakfast transfer to Bengaluru Railway Station and board train for Kolkata. Overnight stay in train.",
-            images: [null, null],
+              "Explore the beautiful waterfalls and cultural attractions of Coorg. Abbey Falls: Abbi Falls, also known as Abbey Falls, is a 70-foot waterfall located 8 kilometers from Madikeri in the Kodagu district of Karnataka, India. Namdroling Monastery: The Namdroling Monastery, widely known as the Golden Temple in Coorg, Karnataka, was established in 1963 by His Holiness Drubwang Padma Norbu Rinpoche. Iruppu Falls: Iruppu Falls (also known as Irpu Falls or Lakshmana Tirtha Falls) is a sacred cascading waterfall in the Brahmagiri Range of Kodagu district, Karnataka, India. Overnight stay at Coorg.",
+            images: [
+              "/images/karnataka/day11.webp",
+              "/images/karnataka/day111.webp",
+              "/images/karnataka/day112.webp",
+            ],
           },
           {
             day: 12,
-            title: "Arrival at Kolkata",
-            distance: "Train arrival",
+            title: "Coorg → Mysuru",
+            distance: "Approx. 120 km",
             description:
-              "Arrive at Howrah Railway Station with sweet memories of Karnataka.",
-            images: [null, null],
+              "After breakfast, proceed towards Mysuru via the Buddhist Monastery and Brindavan Gardens. Buddhist History: Karnataka has a rich Buddhist history that spans from ancient royal empires to modern Tibetan settlements housing major contemporary monasteries. Brindavan Gardens: The Brindavan Gardens were built between 1927 and 1932 to beautify the area surrounding the newly constructed Krishnarajasagara (KRS) Dam across the Kaveri River in Karnataka. On arrival, check in to the hotel. Overnight stay at Mysuru.",
+            images: [
+              "/images/karnataka/day12.webp",
+              "/images/karnataka/day121.webp",
+            ],
+          },
+          {
+            day: 13,
+            title: "Mysuru Sightseeing – Departure",
+            distance: "Local sightseeing / Railway station transfer",
+            description:
+              "Visit the famous Sri Chamundeshwari Temple before proceeding to the railway station to board the train for Kolkata. Sri Chamundeshwari Temple: The Sri Chamundeshwari Temple is an ancient hilltop shrine located on the Chamundi Hills, about 13 km from Mysuru, Karnataka. Board the train for Kolkata. Overnight stay in train.",
+            images: [
+              "/images/karnataka/day13.webp",
+              null,
+            ],
           },
         ],
       },
@@ -6175,6 +6336,244 @@ const packages = [
 
     detailsLink: "/packages/gujarat-tour",
   },
+
+  {
+    id: 26,
+    category: "domestic",
+    slug: "dwarka-jyotirlinga",
+    title: "Dwarka Jyotirlinga",
+    image: "/images/dwarka-jyotirlinga/day42.webp",
+    gallery: [
+      "/images/dwarka-jyotirlinga/day4.webp",
+      "/images/dwarka-jyotirlinga/day6.webp",
+      "/images/dwarka-jyotirlinga/day8.webp",
+      "/images/dwarka-jyotirlinga/day9.webp",
+      "/images/dwarka-jyotirlinga/day11.webp",
+      "/images/dwarka-jyotirlinga/day41.webp",
+      "/images/dwarka-jyotirlinga/day42.webp",
+      "/images/dwarka-jyotirlinga/day61.webp",
+      "/images/dwarka-jyotirlinga/day62.webp",
+      "/images/dwarka-jyotirlinga/day91.webp",
+      "/images/dwarka-jyotirlinga/day92.webp",
+      "/images/dwarka-jyotirlinga/day93.webp",
+      "/images/dwarka-jyotirlinga/day111.webp",
+      "/images/dwarka-jyotirlinga/day112.webp",
+    ],
+    perPerson: true,
+    rating: 9.0,
+
+    location: "Dwarka • Somnath • Veraval • Ujjain • Omkareshwar • Indore",
+
+    facilities: [
+      { id: 1, icon: Hotel, label: "Deluxe Hotel Stay" },
+      { id: 2, icon: Utensils, label: "Meals Included" },
+      { id: 3, icon: Car, label: "Transportation" },
+      { id: 4, icon: Camera, label: "Sightseeing" },
+      { id: 5, icon: MapPinned, label: "Jyotirlinga & Temple Tour" },
+      { id: 6, icon: Plane, label: "Train Included" },
+    ],
+
+    overview:
+      "Experience a spiritual journey through the sacred temples of western and central India. Visit Dwarkadhish Temple and Nageshwar Jyotirlinga in Dwarka, seek blessings at Somnath Jyotirlinga, explore the ancient temples of Ujjain including Mahakaleshwar Jyotirlinga, and visit Omkareshwar Jyotirlinga on the holy Narmada River. Complete your pilgrimage with a visit to Indore.",
+
+    packages: {
+      package1: {
+        duration: "14 Nights / 15 Days",
+        price: "Not Available",
+
+        itinerary: [
+          {
+            day: 1,
+            title: "Kolkata → Dwarka",
+            distance: "Train journey",
+            description:
+              "Board the train from Kolkata for Dwarka. Begin your spiritual journey towards Gujarat. Overnight stay in train.",
+            images: [null, null],
+          },
+
+          {
+            day: 2,
+            title: "Train Journey",
+            distance: "Train journey",
+            description:
+              "Continue your train journey towards Dwarka. Overnight stay in train.",
+            images: [null, null],
+          },
+
+          {
+            day: 3,
+            title: "Arrival at Dwarka",
+            distance: "Railway station transfer",
+            description:
+              "Arrive at Dwarka Railway Station and transfer to the hotel. Complete the check-in process and spend the rest of the day at leisure. Overnight stay at Dwarka.",
+            images: [null, null],
+          },
+
+          {
+            day: 4,
+            title: "Dwarka Sightseeing",
+            distance: "Local sightseeing",
+            description:
+              "Visit the important religious and historical attractions of Dwarka. Bet Dwarka: Bet Dwarka is a historic and sacred island in Gujarat, traditionally associated with Lord Krishna and ancient Hindu epics. Marine archaeological discoveries around the island have also attracted historical interest. Nageshwar Jyotirlinga Temple: The Nageshwar Jyotirlinga Temple in Gujarat is one of the twelve Jyotirlinga shrines dedicated to Lord Shiva. According to the Shiva Purana legend, the temple is associated with the demon Daruka and the devoted merchant Supriya. Dwarkadhish Temple: The Dwarkadhish Temple, also known as Jagat Mandir, is dedicated to Lord Krishna. Its traditional origins are associated with the ancient city of Dwarka, while the present temple structure largely dates from the medieval period, with major architectural development and rebuilding during the 15th and 16th centuries. Overnight stay at Dwarka.",
+            images: [
+              "/images/dwarka-jyotirlinga/day4.webp",
+              "/images/dwarka-jyotirlinga/day41.webp",
+              "/images/dwarka-jyotirlinga/day42.webp",
+            ],
+          },
+
+          {
+            day: 5,
+            title: "Dwarka → Somnath",
+            distance: "Approx. 230 km",
+            description:
+              "After breakfast, check out from the hotel and proceed towards Somnath. Enjoy the journey through the coastal region of Gujarat. On arrival, check in to the hotel. Overnight stay at Somnath / Veraval.",
+            images: [null, null],
+          },
+
+          {
+            day: 6,
+            title: "Somnath Sightseeing",
+            distance: "Local sightseeing / Diu excursion",
+            description:
+              "Visit the sacred Somnath Temple and nearby religious attractions. Somnath Temple: The Somnath Temple at Prabhas Patan, near Veraval in Gujarat, is one of the twelve sacred Jyotirlinga shrines dedicated to Lord Shiva. It is traditionally revered as the first among the twelve Jyotirlingas. The temple has been destroyed and rebuilt several times throughout history. Prabhas Patan: Prabhas Patan is the historic pilgrimage area surrounding Somnath Temple. It is associated with important events in Hindu religious traditions and is located on the western coast of Gujarat. Gangeshwar Mahadev Temple: The Gangeshwar Mahadev Temple is a seaside shrine dedicated to Lord Shiva, located near Fudam village in Diu, approximately 3 km from Diu town. It is known for its five Shiva lingas situated among the rocks near the Arabian Sea. After sightseeing, return to the hotel. Overnight stay at Somnath / Veraval.",
+            images: [
+              "/images/dwarka-jyotirlinga/day6.webp",
+              "/images/dwarka-jyotirlinga/day61.webp",
+              "/images/dwarka-jyotirlinga/day62.webp",
+            ],
+          },
+
+          {
+            day: 7,
+            title: "Veraval → Ujjain",
+            distance: "Train journey",
+            description:
+              "After breakfast, transfer to Veraval Railway Station and board train number 11463 / 11465 at approximately 10:10 AM for Ujjain. Enjoy the train journey towards Madhya Pradesh. Overnight stay in train.",
+            images: [null, null],
+          },
+
+          {
+            day: 8,
+            title: "Arrival at Ujjain",
+            distance: "Railway station transfer",
+            description:
+              "Arrive at Ujjain Railway Station, expected early in the morning. Transfer to the hotel and complete the check-in process. After some rest, spend the day at leisure or explore the nearby surroundings. Overnight stay at Ujjain.",
+            images: [
+              "/images/dwarka-jyotirlinga/day8.webp",
+              null,
+            ],
+          },
+
+          {
+            day: 9,
+            title: "Ujjain Local Sightseeing",
+            distance: "Local sightseeing",
+            description:
+              "Explore the sacred temples and religious attractions of Ujjain. Mahakaleshwar Jyotirlinga Temple: The Mahakaleshwar Temple in Ujjain, Madhya Pradesh, is one of the twelve sacred Jyotirlingas dedicated to Lord Shiva. It is renowned for its self-manifested (swayambhu) lingam and its south-facing form, known as Dakshinamurti. Kaal Bhairav Temple: The Kaal Bhairav Temple is an ancient Hindu temple in Ujjain dedicated to Kaal Bhairav, a fierce manifestation of Lord Shiva. Kaal Bhairav is traditionally regarded as the guardian of the sacred city of Ujjain. Harsiddhi Temple: The Harsiddhi Temple in Ujjain is an important ancient shrine dedicated to Goddess Harsiddhi. It is also traditionally associated with the Shakti Peetha tradition. mGadkalika Temple: The Gadkalika Temple is an ancient temple in Ujjain dedicated to Goddess Kalika. It is traditionally associated with the legendary poet Kalidasa, who is believed to have worshipped the goddess here.mShri Gopal Mandir: Shri Gopal Mandir is a prominent temple in Ujjain dedicated to Lord Krishna. It was constructed in the 19th century by Bayajibai Shinde and is one of the important religious landmarks in the city. Overnight stay at Ujjain.",
+            images: [
+              "/images/dwarka-jyotirlinga/day9.webp",
+              "/images/dwarka-jyotirlinga/day91.webp",
+              "/images/dwarka-jyotirlinga/day92.webp",
+              "/images/dwarka-jyotirlinga/day93.webp",
+            ],
+          },
+
+          {
+            day: 10,
+            title: "Ujjain → Omkareshwar",
+            distance: "Approx. 140 km",
+            description:
+              "After breakfast, check out from the hotel and proceed towards Omkareshwar. On arrival, visit the sacred Omkareshwar Jyotirlinga Temple. Omkareshwar Jyotirlinga: Omkareshwar Jyotirlinga is an ancient Hindu shrine located on Mandhata Island in the Narmada River in Madhya Pradesh. The island is traditionally believed to resemble the sacred symbol ॐ (Om). Omkareshwar is one of the twelve Jyotirlingas dedicated to Lord Shiva. The temple is situated on the banks of the holy Narmada River, where the river divides around Mandhata Island. The nearby Mamleshwar Temple is also an important part of the pilgrimage. Check in to the hotel. Overnight stay at Omkareshwar.",
+            images: [null, null],
+          },
+
+          {
+            day: 11,
+            title: "Omkareshwar → Indore",
+            distance: "Approx. 80 km",
+            description:
+              "After breakfast, visit the nearby religious attractions of Omkareshwar, if time permits. Later, proceed towards Indore. The Narmada River is closely associated with Omkareshwar and its religious heritage, while Ujjain is situated on the banks of the Shipra River. On arrival at Indore, check in to the hotel. Spend the rest of the day at leisure. Overnight stay at Indore.",
+            images: [
+              "/images/dwarka-jyotirlinga/day11.webp",
+              "/images/dwarka-jyotirlinga/day111.webp",
+              "/images/dwarka-jyotirlinga/day112.webp",
+            ],
+          },
+
+          {
+            day: 12,
+            title: "Indore Local Sightseeing",
+            distance: "Local sightseeing",
+            description:
+              "After breakfast, explore the historical and cultural attractions of Indore. Rajwada Palace: Rajwada Palace is a historic royal palace in the heart of Indore, built by the Holkar rulers of the Maratha Empire. It is known for its distinctive blend of Maratha and Mughal architectural styles. Lal Bagh Palace: Lal Bagh Palace was the former residence of the Holkar royal family. It is known for its grand architecture, European-inspired interiors, and historical collections. Khajrana Ganesh Temple: Khajrana Ganesh Temple is a famous Hindu temple in Indore dedicated to Lord Ganesha. It is an important pilgrimage destination for devotees visiting the city. Annapurna Temple: Annapurna Temple is a prominent Hindu temple in Indore dedicated to Goddess Annapurna, the goddess of nourishment. Return to the hotel. Overnight stay at Indore.",
+            images: [null, null],
+          },
+
+          {
+            day: 13,
+            title: "Indore Sightseeing / Leisure",
+            distance: "Local sightseeing",
+            description:
+              "After breakfast, enjoy the remaining time in Indore. You may explore local markets, purchase souvenirs, or visit nearby attractions depending on the available time and train schedule. Overnight stay at Indore.",
+            images: [null, null],
+          },
+
+          {
+            day: 14,
+            title: "Indore → Kolkata",
+            distance: "Train journey",
+            description:
+              "After breakfast, transfer to Indore Railway Station and board the train for Kolkata. Begin your return journey with wonderful memories of the Dwarka, Somnath, Ujjain, and Omkareshwar pilgrimage. Overnight stay in train.",
+            images: [null, null],
+          },
+
+          {
+            day: 15,
+            title: "Arrival at Kolkata",
+            distance: "Train arrival",
+            description:
+              "Arrive at Kolkata Railway Station with the blessings and sweet memories of your spiritual journey through Gujarat and Madhya Pradesh.",
+            images: [null, null],
+          },
+        ],
+      },
+    },
+
+    included: [
+      "Deluxe accommodation",
+      "Train ticket (Sleeper Class)",
+      "Train food (Lunch & Dinner)",
+      "Breakfast",
+      "Lunch",
+      "Evening tea & snacks",
+      "Dinner",
+      "AC transportation",
+      "Parking charges",
+      "Toll tax",
+      "Pick-up & drop",
+      "All possible sightseeing as per itinerary",
+    ],
+
+    excluded: [
+      "Flight ticket",
+      "Single supplement cost",
+      "Mineral water / soft drinks / hard drinks",
+      "Guide charges",
+      "Porter charges",
+      "Entry fees",
+      "Camera charges",
+      "Any ride",
+      "Personal activities",
+      "Any item not mentioned above",
+    ],
+
+    whatsapp: "https://wa.me/919163569695",
+    phone: "tel:+918820918250",
+    enquiryLink: "#",
+    detailsLink: "/packages/dwarka-jyotirlinga",
+  },
+
 
   // international
   {
