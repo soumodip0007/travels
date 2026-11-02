@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import {
   Star,
   Quote,
@@ -12,6 +12,7 @@ import {
 import reviews from "../data/reviews";
 
 const PER_PAGE = 4;
+const MAX_DOTS = 5;
 
 function StarRating({ rating }) {
   return (
@@ -35,9 +36,7 @@ function ProfileImage({ src }) {
   const [imageError, setImageError] = useState(false);
 
   const hasValidSource =
-    typeof src === "string" &&
-    src.trim() !== "" &&
-    !imageError;
+    typeof src === "string" && src.trim() !== "" && !imageError;
 
   return (
     <div className="h-16 w-16 shrink-0 overflow-hidden rounded-2xl bg-slate-100 shadow-lg">
@@ -60,47 +59,49 @@ function ProfileImage({ src }) {
 export default function Reviews() {
   const [activeVideo, setActiveVideo] = useState(null);
   const [page, setPage] = useState(1);
-  const sectionRef = useRef(null);
-  
 
   const totalPages = Math.ceil(reviews.length / PER_PAGE);
-
   const start = (page - 1) * PER_PAGE;
+  const visibleReviews = reviews.slice(start, start + PER_PAGE);
 
-  const visibleReviews = reviews.slice(
-    start,
-    start + PER_PAGE
-  );
-
+  // Changes the page without scrolling
   const goToPage = (p) => {
     if (p < 1 || p > totalPages || p === page) return;
-
     setPage(p);
+  };
 
-    sectionRef.current?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
+  // Sliding window of page dots (max MAX_DOTS) so it fits on mobile
+  const getVisiblePages = () => {
+    if (totalPages <= MAX_DOTS) {
+      return Array.from({ length: totalPages }, (_, i) => i + 1);
+    }
+
+    const first = Math.max(
+      1,
+      Math.min(page - Math.floor(MAX_DOTS / 2), totalPages - MAX_DOTS + 1)
+    );
+
+    return Array.from({ length: MAX_DOTS }, (_, i) => first + i);
   };
 
   return (
     <section
-      ref={sectionRef}
       className="
         relative
         mt-12
-        scroll-mt-24
-        rounded-[36px]
+        rounded-[28px]
+        border
         border-white/70
         bg-white/80
-        p-8
+        p-4
         shadow-[0_25px_60px_rgba(105,87,223,0.12)]
-        backdrop-blur-1xl
+        backdrop-blur-xl
+        sm:rounded-[36px]
+        sm:p-8
         md:p-10
       "
     >
-      <div className="mx-auto w-[92%] max-w-7xl">
-
+      <div className="mx-auto w-full max-w-7xl sm:w-[92%]">
         {/* Header */}
         <div className="mx-auto mb-8 max-w-2xl text-center">
           <span
@@ -124,17 +125,13 @@ export default function Reviews() {
           </span>
 
           <h2 className="mt-4 text-4xl font-extrabold text-slate-800 md:text-5xl">
-            Loved by{" "}
-            <span className="text-[#6957DF]">
-              thousands
-            </span>{" "}
-            of travelers
+            Loved by <span className="text-[#6957DF]">thousands</span> of
+            travelers
           </h2>
         </div>
 
         {/* Reviews Grid */}
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-
           {visibleReviews.map((review, index) => (
             <div
               key={start + index}
@@ -170,7 +167,6 @@ export default function Reviews() {
               {/* Image Review */}
               {review.type === "image" ? (
                 <div className="relative flex items-start gap-4">
-
                   <ProfileImage src={review.avatar} />
 
                   <div>
@@ -178,9 +174,7 @@ export default function Reviews() {
                       {review.name}
                     </h3>
 
-                    <p className="text-sm text-gray-500">
-                      {review.location}
-                    </p>
+                    <p className="text-sm text-gray-500">{review.location}</p>
 
                     <div className="mt-1">
                       <StarRating rating={review.rating} />
@@ -188,14 +182,11 @@ export default function Reviews() {
                   </div>
                 </div>
               ) : (
-
                 /* Video Review */
                 <div className="relative flex items-center gap-4">
-
                   <button
-                    onClick={() =>
-                      setActiveVideo(review.videoUrl)
-                    }
+                    onClick={() => setActiveVideo(review.videoUrl)}
+                    aria-label={`Play video review by ${review.name}`}
                     className="
                       group/play
                       relative
@@ -263,9 +254,7 @@ export default function Reviews() {
                       {review.name}
                     </h3>
 
-                    <p className="text-sm text-gray-500">
-                      {review.location}
-                    </p>
+                    <p className="text-sm text-gray-500">{review.location}</p>
 
                     <div className="mt-1">
                       <StarRating rating={review.rating} />
@@ -290,9 +279,8 @@ export default function Reviews() {
               {/* Video Link */}
               {review.type === "video" && (
                 <button
-                  onClick={() =>
-                    setActiveVideo(review.videoUrl)
-                  }
+                  onClick={() => setActiveVideo(review.videoUrl)}
+                  aria-label={`Watch full review by ${review.name}`}
                   className="
                     relative
                     mt-4
@@ -308,7 +296,6 @@ export default function Reviews() {
                   "
                 >
                   Watch full review
-
                   <span className="transition-transform group-hover:translate-x-1">
                     →
                   </span>
@@ -316,26 +303,19 @@ export default function Reviews() {
               )}
             </div>
           ))}
-
         </div>
 
         {/* Pagination */}
         {totalPages > 1 && (
-          <div className="mt-14 flex items-center justify-center gap-6">
-
-            {/* Previous Button */}
+          <div className="mt-8 flex items-center justify-center gap-3 sm:mt-14 sm:gap-6">
+            {/* Previous */}
             <button
               onClick={() => goToPage(page - 1)}
               disabled={page === 1}
+              aria-label="Previous page"
               className={`
-                flex
-                h-16
-                w-16
-                items-center
-                justify-center
-                rounded-full
-                transition-all
-                duration-300
+                flex h-11 w-11 shrink-0 items-center justify-center rounded-full
+                transition-all duration-300 sm:h-16 sm:w-16
                 ${
                   page === 1
                     ? "bg-[#EAEAF4] text-[#94A3B8]"
@@ -343,51 +323,37 @@ export default function Reviews() {
                 }
               `}
             >
-              <ChevronLeft
-                size={26}
-                strokeWidth={2.4}
-              />
+              <ChevronLeft className="h-5 w-5 sm:h-7 sm:w-7" strokeWidth={2.4} />
             </button>
 
-            {/* Page Indicators */}
-            <div className="flex items-center gap-4">
-
-              {Array.from({ length: totalPages }).map(
-                (_, index) => (
-                  <button
-                    key={index}
-                    onClick={() =>
-                      goToPage(index + 1)
+            {/* Dots (windowed) */}
+            <div className="flex items-center gap-2 sm:gap-4">
+              {getVisiblePages().map((p) => (
+                <button
+                  key={p}
+                  onClick={() => goToPage(p)}
+                  aria-label={`Go to page ${p}`}
+                  aria-current={page === p ? "page" : undefined}
+                  className={`
+                    shrink-0 transition-all duration-500
+                    ${
+                      page === p
+                        ? "h-3 w-10 rounded-full bg-gradient-to-r from-[#6957DF] to-[#9B5CF7] shadow-[0_6px_18px_rgba(105,87,223,.35)] sm:h-4 sm:w-20"
+                        : "h-3 w-3 rounded-full bg-[#C7D2E2] hover:scale-125 hover:bg-[#9B5CF7] sm:h-4 sm:w-4"
                     }
-                    aria-label={`Go to page ${index + 1}`}
-                    className={`
-                      transition-all
-                      duration-500
-                      ${
-                        page === index + 1
-                          ? "h-4 w-20 rounded-full bg-gradient-to-r from-[#6957DF] to-[#9B5CF7] shadow-[0_6px_18px_rgba(105,87,223,.35)]"
-                          : "h-4 w-4 rounded-full bg-[#C7D2E2] hover:scale-125 hover:bg-[#9B5CF7]"
-                      }
-                    `}
-                  />
-                )
-              )}
-
+                  `}
+                />
+              ))}
             </div>
 
-            {/* Next Button */}
+            {/* Next */}
             <button
               onClick={() => goToPage(page + 1)}
               disabled={page === totalPages}
+              aria-label="Next page"
               className={`
-                flex
-                h-16
-                w-16
-                items-center
-                justify-center
-                rounded-full
-                transition-all
-                duration-300
+                flex h-11 w-11 shrink-0 items-center justify-center rounded-full
+                transition-all duration-300 sm:h-16 sm:w-16
                 ${
                   page === totalPages
                     ? "bg-[#EAEAF4] text-[#94A3B8]"
@@ -395,15 +361,10 @@ export default function Reviews() {
                 }
               `}
             >
-              <ChevronRight
-                size={26}
-                strokeWidth={2.4}
-              />
+              <ChevronRight className="h-5 w-5 sm:h-7 sm:w-7" strokeWidth={2.4} />
             </button>
-
           </div>
         )}
-
       </div>
 
       {/* Video Modal */}
@@ -432,15 +393,12 @@ export default function Reviews() {
               bg-black
               shadow-2xl
             "
-            onClick={(e) =>
-              e.stopPropagation()
-            }
+            onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button */}
             <button
-              onClick={() =>
-                setActiveVideo(null)
-              }
+              onClick={() => setActiveVideo(null)}
+              aria-label="Close video"
               className="
                 absolute
                 right-4
@@ -463,16 +421,10 @@ export default function Reviews() {
             </button>
 
             {/* Video */}
-            <video
-              src={activeVideo}
-              controls
-              autoPlay
-              className="w-full"
-            />
+            <video src={activeVideo} controls autoPlay className="w-full" />
           </div>
         </div>
       )}
-
     </section>
   );
 }
