@@ -301,7 +301,20 @@ const packages = [
 
     image: "/images/madhyapradesh/mp_banner.webp",
 
-    gallery: [null, null, null, null, null],
+    gallery: ["/images/madhyapradesh/day2.webp",
+      "/images/madhyapradesh/day3.webp",
+      "/images/madhyapradesh/day4.webp",
+      "/images/madhyapradesh/day5.webp",
+      "/images/madhyapradesh/day6.webp",
+      "/images/madhyapradesh/day7.webp",
+      "/images/madhyapradesh/day8.webp",
+      "/images/madhyapradesh/day41.webp",
+      "/images/madhyapradesh/day51.webp",
+      "/images/madhyapradesh/day71.webp",
+      "/images/madhyapradesh/day72.webp",
+      "/images/madhyapradesh/day73.webp",
+      "/images/madhyapradesh/day74.webp",
+      "/images/madhyapradesh/day75.webp",],
 
     perPerson: true,
 
@@ -337,59 +350,84 @@ const packages = [
           },
           {
             day: 2,
-            title: "Arrival at Pendra Road → Amarkantak",
-            distance: "Road transfer",
+            title: "Amarkantak Sightseeing",
+            distance: "Local sightseeing",
             description:
-              "Reach Pendra Road Railway Station and transfer to Amarkantak. Enjoy local sightseeing. Overnight stay at Amarkantak.",
-            images: [null, null],
+              "Explore Amarkantak, known as Tirthraj (the King of Pilgrimages), a sacred hill town in Madhya Pradesh where the Vindhya and Satpura ranges meet. Visit its ancient temples, primarily built by the Kalachuri dynasty in the 12th century CE and later renovated by Maharani Ahilyabai Holkar. Discover the sacred origin of the holy Narmada River and experience the spiritual atmosphere of this pilgrimage destination. Overnight stay at Amarkantak.",
+            images: [
+              "/images/madhyapradesh/day2.webp",
+              null,
+            ],
           },
           {
             day: 3,
-            title: "Amarkantak → Jabalpur",
-            distance: "Road transfer",
+            title: "Move to Jabalpur → Bhedaghat Sightseeing",
+            distance: "Road transfer + sightseeing",
             description:
-              "After breakfast proceed to Jabalpur and check in to the hotel. Overnight stay at Jabalpur.",
-            images: [null, null],
+              "After breakfast, proceed to Jabalpur and explore Bhedaghat, a historic town famous for its spectacular natural marble gorge carved by the Narmada River. Visit the ancient Chausath Yogini Temple and enjoy the scenic beauty of this famous destination. Overnight stay at Jabalpur.",
+            images: [
+              "/images/madhyapradesh/day3.webp",
+              null,
+            ],
           },
           {
             day: 4,
-            title: "Jabalpur Sightseeing → Omkareshwar",
-            distance: "Road transfer",
+            title: "Jabalpur Sightseeing → Move to Omkareshwar",
+            distance: "Local sightseeing + road transfer",
             description:
-              "Visit Dhuandhar Falls, Bhedaghat, Marble Rocks, and nearby attractions. Optional boat ride at own cost. Later proceed to Omkareshwar. Overnight stay at Omkareshwar.",
-            images: [null, null],
+              "Visit the magnificent Marble Rocks of Bhedaghat, an approximately 8-kilometer-long gorge where the Narmada River flows between towering marble cliffs. Explore Dhuandhar Falls and nearby attractions. Optional boat ride at your own cost. Later, proceed to Omkareshwar, home to one of the 12 sacred Jyotirlingas of Lord Shiva. Located on Mandhata Island in the Narmada River, the ancient Omkareshwar Temple is famous for its island's natural Om-shaped formation. Overnight stay at Omkareshwar.",
+            images: [
+              "/images/madhyapradesh/day4.webp",
+              "/images/madhyapradesh/day41.webp",
+            ],
           },
           {
             day: 5,
-            title: "Omkareshwar Sightseeing",
+            title: "Omkareshwar Jyotirlinga Darshan",
             distance: "Local sightseeing",
             description:
-              "Visit Omkareshwar Jyotirlinga and the sacred Narmada River. Overnight stay at Omkareshwar.",
-            images: [null, null],
+              "Visit the sacred Omkareshwar Jyotirlinga Temple, one of the 12 holy Jyotirlingas dedicated to Lord Shiva. Located on Mandhata Island in the Narmada River, the island is naturally shaped like the sacred Devanagari symbol 'ॐ' (Om). Explore the temple's rich history, ancient architecture, and spiritual significance. Also enjoy the peaceful surroundings of the holy Narmada River, one of India's major west-flowing rivers, originating from the Amarkantak Plateau. Overnight stay at Omkareshwar.",
+            images: [
+              "/images/madhyapradesh/day5.webp",
+              "/images/madhyapradesh/day51.webp",
+            ],
           },
           {
             day: 6,
-            title: "Omkareshwar → Ujjain",
+            title: "Move to Ujjain",
             distance: "Road transfer",
             description:
-              "After breakfast drive to Ujjain and check in to the hotel. Overnight stay at Ujjain.",
-            images: [null, null],
+              "After breakfast, proceed to Ujjain, historically known as Avantika and Ujjayini. Located on the banks of the sacred Shipra River, Ujjain is one of India's oldest continuously inhabited cities. It was once the capital of the ancient Avanti Mahajanapada and served as an important center of Indian culture, astronomy, spirituality, and history. Check in to the hotel. Overnight stay at Ujjain.",
+            images: [
+              "/images/madhyapradesh/day6.webp",
+              null,
+            ],
           },
           {
             day: 7,
-            title: "Ujjain Temple Circuit",
+            title: "Ujjain Sightseeing",
             distance: "Local sightseeing",
             description:
-              "Visit Kaal Bhairav Temple, Maharshi Sandipani Ashram, Ram Ghat, Harsiddhi Mata Shaktipeeth, Gadh Kalika Mata Temple, and Mangalnath Temple. Overnight stay at Ujjain.",
-            images: [null, null],
+              "Explore the famous temples and spiritual attractions of Ujjain. Visit Kaal Bhairav Temple, dedicated to a fierce form of Lord Shiva and regarded as the protector of the city. Explore Sandipani Ashram, believed to be the ancient gurukul where Lord Krishna, Balarama, and Sudama studied. Visit Ram Ghat, one of the oldest and most sacred bathing ghats on the Shipra River. Continue to Harsiddhi Mata Temple, one of the revered Shakti Peethas dedicated to Goddess Sati. Also visit Gadkalika Mata Temple, an ancient shrine dedicated to Goddess Kali, and Mangalnath Temple, traditionally regarded as the birthplace of the planet Mars (Mangala) and an important center of Hindu astrology. Overnight stay at Ujjain.",
+            images: [
+              "/images/madhyapradesh/day7.webp",
+              "/images/madhyapradesh/day71.webp",
+              "/images/madhyapradesh/day72.webp",
+              "/images/madhyapradesh/day73.webp",
+              "/images/madhyapradesh/day74.webp",
+              "/images/madhyapradesh/day75.webp",
+            ],
           },
           {
             day: 8,
-            title: "Mahakaleshwar Darshan → Return Train",
-            distance: "Local sightseeing + train",
+            title: "Mahakaleshwar Jyotirlinga Darshan → Return Train",
+            distance: "Temple visit + train journey",
             description:
-              "Visit Mahakaleshwar Jyotirlinga and return to the hotel. After dinner transfer to Ujjain Railway Station and board the return train. Overnight stay in train.",
-            images: [null, null],
+              "Visit the sacred Mahakaleshwar Jyotirlinga Temple, one of the 12 Jyotirlingas dedicated to Lord Shiva. Mahakaleshwar is believed to be a Swayambhu (self-manifested) form of Lord Shiva, worshipped as Mahakal, the supreme ruler of time and death. After darshan, return to the hotel. After dinner, transfer to Ujjain Railway Station and board the return train. Overnight stay in train.",
+            images: [
+              "/images/madhyapradesh/day8.webp",
+              null,
+            ],
           },
           {
             day: 9,
